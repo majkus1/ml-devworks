@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 interface HeroProps {
   lang?: "pl" | "en";
@@ -9,6 +9,7 @@ interface HeroProps {
 
 export default function Hero({ lang = "pl" }: HeroProps) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -21,6 +22,14 @@ export default function Hero({ lang = "pl" }: HeroProps) {
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
+
+  // Force play on mobile after metadata loaded
+  const handleLoadedMetadata = (e: React.SyntheticEvent<HTMLVideoElement>) => {
+    const video = e.currentTarget;
+    video.play().catch(() => {
+      // Silently fail if autoplay is blocked
+    });
+  };
 
   const content = {
     pl: {
@@ -44,13 +53,16 @@ export default function Hero({ lang = "pl" }: HeroProps) {
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full" aria-hidden="true">
         <video
+          ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
+          webkit-playsinline="true"
           preload="auto"
           disablePictureInPicture
           disableRemotePlayback
+          onLoadedMetadata={handleLoadedMetadata}
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: "brightness(0.5)" }}
         >

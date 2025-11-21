@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useRef } from "react";
 
 interface FooterProps {
   lang?: "pl" | "en";
@@ -8,19 +9,31 @@ interface FooterProps {
 
 export default function Footer({ lang = "pl" }: FooterProps) {
   const currentYear = new Date().getFullYear();
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Force play on mobile after metadata loaded
+  const handleLoadedMetadata = (e: React.SyntheticEvent<HTMLVideoElement>) => {
+    const video = e.currentTarget;
+    video.play().catch(() => {
+      // Silently fail if autoplay is blocked
+    });
+  };
 
   return (
     <footer className="relative border-t border-primary/20 py-12 px-4 overflow-hidden" role="contentinfo">
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full" aria-hidden="true">
         <video
+          ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
+          webkit-playsinline="true"
           preload="auto"
           disablePictureInPicture
           disableRemotePlayback
+          onLoadedMetadata={handleLoadedMetadata}
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: "brightness(0.5)" }}
         >
