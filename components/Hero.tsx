@@ -102,8 +102,8 @@ export default function Hero({ lang = "pl" }: HeroProps) {
         >
           <source src="/iStock-1262670453-compress-more.mp4" type="video/mp4" />
         </video>
-        {/* Green overlay */}
-        <div className="absolute inset-0 bg-primary/20 mix-blend-screen" />
+          {/* Green overlay */}
+          <div className="absolute inset-0 bg-primary/30 mix-blend-screen" />
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/30 to-background/50" />
       </div>
