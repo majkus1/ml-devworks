@@ -48,6 +48,9 @@ export default function Hero({ lang = "pl" }: HeroProps) {
           loop
           muted
           playsInline
+          preload="auto"
+          disablePictureInPicture
+          disableRemotePlayback
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: "brightness(0.5)" }}
         >
