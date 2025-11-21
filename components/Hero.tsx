@@ -66,13 +66,25 @@ export default function Hero({ lang = "pl" }: HeroProps) {
     pl: {
       title: "ML Devworks",
       subtitle: "Quality by Us. Speed by AI.",
-      description: "Tworzymy profesjonalne rozwiązania cyfrowe dla Twojego biznesu. Od prostych stron internetowych po zaawansowane aplikacje i wdrożenia w chmurze.",
+      description: (
+        <>
+          Tworzymy profesjonalne rozwiązania cyfrowe dla Twojego biznesu.
+          <br />
+          Od prostych stron internetowych po zaawansowane aplikacje i wdrożenia w chmurze.
+        </>
+      ),
       cta: "Rozpocznij Projekt",
     },
     en: {
       title: "ML Devworks",
       subtitle: "Quality by Us. Speed by AI.",
-      description: "We create professional digital solutions for your business. From simple websites to advanced applications and cloud deployments.",
+      description: (
+        <>
+          We create professional digital solutions for your business.
+          <br />
+          From simple websites to advanced applications and cloud deployments.
+        </>
+      ),
       cta: "Start Your Project",
     },
   };
