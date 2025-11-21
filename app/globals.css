@@ -55,3 +55,33 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Hide native video play button and controls */
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+video::-webkit-media-controls-play-button {
+  display: none !important;
+}
+
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+
+/* Hide video controls on all browsers */
+video {
+  pointer-events: none;
+}
+
+video::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+}
+

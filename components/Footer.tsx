@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 interface FooterProps {
   lang?: "pl" | "en";
@@ -9,6 +9,7 @@ interface FooterProps {
 
 export default function Footer({ lang = "pl" }: FooterProps) {
   const currentYear = new Date().getFullYear();
+  const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   // Spróbuj odpalić autoplay po załadowaniu danych
@@ -16,13 +17,24 @@ export default function Footer({ lang = "pl" }: FooterProps) {
     const video = videoRef.current;
     if (!video) return;
 
+    const updatePlayingState = () => {
+      setIsPlaying(!video.paused && !video.ended);
+    };
+
     const tryPlay = async () => {
       try {
         await video.play();
+        updatePlayingState();
       } catch {
-        // autoplay zablokowany – tutaj możesz kiedyś dodać fallback (np. pokazanie przycisku Play)
+        // autoplay zablokowany - video będzie wyglądać jak statyczne tło
+        updatePlayingState();
       }
     };
+
+    // Sprawdzaj stan odtwarzania
+    video.addEventListener("play", updatePlayingState);
+    video.addEventListener("pause", updatePlayingState);
+    video.addEventListener("ended", updatePlayingState);
 
     if (video.readyState >= 2) {
       // metadata już załadowane
@@ -30,6 +42,12 @@ export default function Footer({ lang = "pl" }: FooterProps) {
     } else {
       video.addEventListener("loadeddata", tryPlay, { once: true });
     }
+
+    return () => {
+      video.removeEventListener("play", updatePlayingState);
+      video.removeEventListener("pause", updatePlayingState);
+      video.removeEventListener("ended", updatePlayingState);
+    };
   }, []);
 
   return (
@@ -48,9 +66,12 @@ export default function Footer({ lang = "pl" }: FooterProps) {
           disablePictureInPicture
           disableRemotePlayback
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: "brightness(0.5)" }}
+          style={{ 
+            filter: "brightness(0.5)",
+            opacity: isPlaying ? 1 : 0,
+          }}
         >
-          <source src="/iStock-1262670453-compress.mp4" type="video/mp4" />
+          <source src="/iStock-1262670453-compress-more.mp4" type="video/mp4" />
         </video>
         {/* Green overlay */}
         <div className="absolute inset-0 bg-primary/20 mix-blend-screen" />
