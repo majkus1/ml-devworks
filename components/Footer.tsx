@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 interface FooterProps {
   lang?: "pl" | "en";
@@ -9,15 +9,28 @@ interface FooterProps {
 
 export default function Footer({ lang = "pl" }: FooterProps) {
   const currentYear = new Date().getFullYear();
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
-  // Force play on mobile after metadata loaded
-  const handleLoadedMetadata = (e: React.SyntheticEvent<HTMLVideoElement>) => {
-    const video = e.currentTarget;
-    video.play().catch(() => {
-      // Silently fail if autoplay is blocked
-    });
-  };
+  // Spróbuj odpalić autoplay po załadowaniu danych
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const tryPlay = async () => {
+      try {
+        await video.play();
+      } catch {
+        // autoplay zablokowany – tutaj możesz kiedyś dodać fallback (np. pokazanie przycisku Play)
+      }
+    };
+
+    if (video.readyState >= 2) {
+      // metadata już załadowane
+      tryPlay();
+    } else {
+      video.addEventListener("loadeddata", tryPlay, { once: true });
+    }
+  }, []);
 
   return (
     <footer className="relative border-t border-primary/20 py-12 px-4 overflow-hidden" role="contentinfo">
@@ -29,15 +42,15 @@ export default function Footer({ lang = "pl" }: FooterProps) {
           loop
           muted
           playsInline
+          // @ts-ignore – dodajemy atrybut dla iOS
           webkit-playsinline="true"
           preload="auto"
           disablePictureInPicture
           disableRemotePlayback
-          onLoadedMetadata={handleLoadedMetadata}
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: "brightness(0.5)" }}
         >
-          <source src="/iStock-1262670453.mp4" type="video/mp4" />
+          <source src="/iStock-1262670453-compress.mp4" type="video/mp4" />
         </video>
         {/* Green overlay */}
         <div className="absolute inset-0 bg-primary/20 mix-blend-screen" />
