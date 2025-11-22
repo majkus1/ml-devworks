@@ -71,7 +71,7 @@ export default function Footer({ lang = "pl" }: FooterProps) {
             opacity: isPlaying ? 1 : 0,
           }}
         >
-          <source src="/iStock-1262670453-compress-more.mp4" type="video/mp4" />
+          <source src="/iStock-1262670453-compress-moreandmore.mp4" type="video/mp4" />
         </video>
           {/* Green overlay */}
           <div className="absolute inset-0 bg-primary/30 mix-blend-screen" />
