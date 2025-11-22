@@ -96,7 +96,7 @@ export default function Services({ lang = "pl" }: ServicesProps) {
   const serviceList = services[lang];
 
   return (
-    <section id="services" className="pt-20 px-4 relative" aria-labelledby="services-heading">
+    <section id="services" className="pt-20 px-4 relative scroll-mt-[20px]" aria-labelledby="services-heading">
       <div className="max-w-7xl mx-auto">
         <motion.h2
           id="services-heading"

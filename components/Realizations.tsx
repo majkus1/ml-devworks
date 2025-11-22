@@ -170,7 +170,7 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
 
   return (
     <>
-      <section id="realizations" className="pt-20 px-4 relative" aria-labelledby="realizations-heading">
+      <section id="realizations" className="pt-20 px-4 relative scroll-mt-[20px]" aria-labelledby="realizations-heading">
         <div className="max-w-7xl mx-auto">
           <motion.h2
             id="realizations-heading"

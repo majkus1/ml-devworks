@@ -53,7 +53,7 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
     e.preventDefault();
     const element = document.querySelector(href);
     if (element) {
-      const offset = 80;
+      const offset = 20;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
 
