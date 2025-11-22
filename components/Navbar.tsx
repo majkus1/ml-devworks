@@ -114,7 +114,7 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
                 aria-label={lang === "pl" ? "Przejdź do strony głównej" : "Go to homepage"}
               >
                 <img
-                  src="/primary-on-transparent-logo.png"
+                  src="/primary-on-transparent-logo.webp"
                   alt="ML Devworks Logo"
                   width={215}
                   

@@ -88,7 +88,7 @@ export default function Footer({ lang = "pl" }: FooterProps) {
             transition={{ duration: 0.6 }}
           >
             <img
-              src="/primary-on-transparent-logo.png"
+              src="/primary-on-transparent-logo.webp"
               alt="ML Devworks - Logo firmy"
               width={300}
               className="opacity-80"

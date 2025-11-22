@@ -65,10 +65,10 @@ const projects: Project[] = [
       { name: "OpenAI" },
     ],
     images: [
-      "/czatsportowy.png",
-      "/czatsportowy1.png",
-      "/czatsportowy-mobile.png",
-      "/czatsportowy-mobile2.png",
+      "/czatsportowy.webp",
+      "/czatsportowy1.webp",
+      "/czatsportowy-mobile.webp",
+      "/czatsportowy-mobile2.webp",
     ],
     inDevelopment: true,
     projectType: {
@@ -97,10 +97,10 @@ const projects: Project[] = [
       { name: "PHP" },
     ],
     images: [
-      "/sweetsteviam-desktop-main.png",
-      "/sweetsteviam-desktop-products.png",
-      "/sweetsteviam-mobile.png",
-      "/sweetsteviam-page-speed.png",
+      "/sweetsteviam-desktop-main.webp",
+      "/sweetsteviam-desktop-products.webp",
+      "/sweetsteviam-mobile.webp",
+      "/sweetsteviam-page-speed.webp",
     ],
     inDevelopment: false,
     projectType: {
@@ -131,10 +131,10 @@ const projects: Project[] = [
       { name: "JavaScript" },
     ],
     images: [
-      "/planopia-dekstop.png",
-      "/planopia-app-desktop.png",
-      "/planopia-app-mobile.png",
-      "/planopia-app-mobile2.png",
+      "/planopia-dekstop.webp",
+      "/planopia-app-desktop.webp",
+      "/planopia-app-mobile.webp",
+      "/planopia-app-mobile2.webp",
     ],
     inDevelopment: false,
     projectType: {
