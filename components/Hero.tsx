@@ -126,8 +126,8 @@ export default function Hero({ lang = "pl" }: HeroProps) {
           className="absolute inset-0"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(0, 255, 136, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(0, 255, 136, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(0, 255, 136, 0.2) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(0, 255, 136, 0.2) 1px, transparent 1px)
             `,
             backgroundSize: "50px 50px",
             transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,

@@ -90,8 +90,17 @@ const services = {
 };
 
 export default function Services({ lang = "pl" }: ServicesProps) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const headingRef = useRef(null);
+  const subtitleRef = useRef(null);
+  const description1Ref = useRef(null);
+  const description2Ref = useRef(null);
+  const footerRef = useRef(null);
+  
+  const isHeadingInView = useInView(headingRef, { once: true, margin: "-100px" });
+  const isSubtitleInView = useInView(subtitleRef, { once: true, margin: "-100px" });
+  const isDescription1InView = useInView(description1Ref, { once: true, margin: "-100px" });
+  const isDescription2InView = useInView(description2Ref, { once: true, margin: "-100px" });
+  const isFooterInView = useInView(footerRef, { once: true, margin: "-100px" });
 
   const serviceList = services[lang];
 
@@ -100,18 +109,19 @@ export default function Services({ lang = "pl" }: ServicesProps) {
       <div className="max-w-7xl mx-auto">
         <motion.h2
           id="services-heading"
-          ref={ref}
+          ref={headingRef}
           initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
           className="text-4xl md:text-5xl font-bold text-center mb-4"
         >
           {lang === "pl" ? "Nasze Usługi" : "Our Services"}
         </motion.h2>
         <motion.p
+          ref={subtitleRef}
           initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          animate={isSubtitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          transition={{ duration: 0.8 }}
           className="text-xl text-gray-400 text-center mb-4 max-w-3xl mx-auto"
         >
           {lang === "pl"
@@ -120,9 +130,10 @@ export default function Services({ lang = "pl" }: ServicesProps) {
         </motion.p>
         
         <motion.p
+          ref={description1Ref}
           initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          animate={isDescription1InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          transition={{ duration: 0.8 }}
           className="text-base text-gray-300 text-center mb-4 max-w-3xl mx-auto"
         >
           {lang === "pl" ? (
@@ -141,9 +152,10 @@ export default function Services({ lang = "pl" }: ServicesProps) {
         </motion.p>
         
         <motion.p
+          ref={description2Ref}
           initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          animate={isDescription2InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          transition={{ duration: 0.8 }}
           className="text-base text-gray-300 text-center mb-8 max-w-3xl mx-auto"
         >
           {lang === "pl"
@@ -157,15 +169,15 @@ export default function Services({ lang = "pl" }: ServicesProps) {
               key={index}
               service={service}
               index={index}
-              isInView={isInView}
             />
           ))}
         </div>
         
         <motion.div
+          ref={footerRef}
           initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          animate={isFooterInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          transition={{ duration: 0.8 }}
           className="text-center mt-16 max-w-4xl mx-auto"
         >
           <p className="text-lg text-gray-300 leading-relaxed mb-4">
@@ -193,19 +205,20 @@ export default function Services({ lang = "pl" }: ServicesProps) {
 function ServiceCard({
   service,
   index,
-  isInView,
 }: {
   service: Service;
   index: number;
-  isInView: boolean;
 }) {
   const IconComponent = service.icon;
+  const cardRef = useRef(null);
+  const isCardInView = useInView(cardRef, { once: true, margin: "-50px" });
   
   return (
     <motion.article
+      ref={cardRef}
       initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
+      animate={isCardInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 0.6 }}
       whileHover={{ scale: 1.05, y: -10 }}
       className="bg-background-lighter border border-primary/20 rounded-xl p-6 hover:border-primary/50 transition-all cursor-pointer group"
       role="listitem"

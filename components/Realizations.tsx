@@ -145,8 +145,10 @@ const projects: Project[] = [
 ];
 
 export default function Realizations({ lang = "pl" }: RealizationsProps) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const headingRef = useRef(null);
+  const subtitleRef = useRef(null);
+  const isHeadingInView = useInView(headingRef, { once: true, margin: "-100px" });
+  const isSubtitleInView = useInView(subtitleRef, { once: true, margin: "-100px" });
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -174,18 +176,19 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
         <div className="max-w-7xl mx-auto">
           <motion.h2
             id="realizations-heading"
-            ref={ref}
+            ref={headingRef}
             initial={{ opacity: 0, y: 50 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold text-center mb-4"
           >
             {lang === "pl" ? "Realizacje" : "Realizations"}
           </motion.h2>
           <motion.p
+            ref={subtitleRef}
             initial={{ opacity: 0, y: 50 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            animate={isSubtitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.8 }}
             className="text-xl text-gray-400 text-center mb-8 max-w-2xl mx-auto"
           >
             {lang === "pl"
@@ -195,97 +198,13 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
             {projects.map((project, index) => (
-              <motion.article
+              <ProjectCard
                 key={project.id}
-                initial={{ opacity: 0, y: 50 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                className="bg-background-lighter border border-primary/20 rounded-xl p-6 hover:border-primary/40 transition-all duration-300 cursor-pointer group"
-                onClick={() => openModal(project)}
-                role="listitem"
-              >
-                {/* Badges */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {/* Project Type Badge */}
-                  <span className="px-3 py-1 text-xs font-semibold rounded-full bg-primary/20 text-primary border border-primary/30">
-                    {project.projectType[lang]}
-                  </span>
-                  {/* Development Status Badge */}
-                  {project.inDevelopment && (
-                    <span className="px-3 py-1 text-xs font-semibold rounded-full bg-primary/20 text-primary border border-primary/30">
-                      {lang === "pl" ? "W rozwoju" : "In Development"}
-                    </span>
-                  )}
-                </div>
-
-                {/* Project Name */}
-                <h3 className="text-2xl font-bold mb-3 text-primary group-hover:text-primary-light transition-colors">
-                  {project.name[lang]}
-                </h3>
-
-                {/* Short Description */}
-                <p className="text-gray-300 mb-4 line-clamp-3">
-                  {project.shortDescription[lang]}
-                </p>
-
-                {/* Link */}
-                <a
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => e.stopPropagation()}
-                  className="text-primary hover:text-primary-light transition-colors text-sm font-medium inline-flex items-center gap-2 mb-4"
-                >
-                  {project.url.replace("https://", "")}
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-
-                {/* Screenshots - miniaturki */}
-                {project.images && project.images.length > 0 && (
-                  <div className="flex flex-wrap gap-2 mb-4" onClick={(e) => e.stopPropagation()}>
-                    {project.images.map((image, index) => (
-                      <div
-                        key={index}
-                        className="relative rounded-lg overflow-hidden border border-primary/20 hover:border-primary/40 transition-all cursor-pointer hover:scale-105"
-                        onClick={() => openImageModal(image)}
-                      >
-                        <img
-                          src={image}
-                          alt={`${project.name[lang]} - ${lang === "pl" ? "Zrzut ekranu" : "Screenshot"} ${index + 1}`}
-                          className="w-16 h-16 md:w-20 md:h-20 object-cover"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                )}
-
-                {/* Technologies */}
-                <div className="flex flex-wrap gap-3 mt-4">
-                  {project.technologies.slice(0, 6).map((tech) => (
-                    <div
-                      key={tech.name}
-                      className="flex items-center gap-1.5 px-2 py-1 bg-background rounded border border-primary/10"
-                      title={tech.name}
-                    >
-                      {/* TODO: Dodaj ikonę technologii - ustaw src na ścieżkę do obrazka */}
-                      {/* Przykład: <img src="/technologies/nextjs.svg" alt={tech.name} className="w-4 h-4" /> */}
-                      {/* <img 
-                        src="/technologies/nextjs.svg" 
-                        alt={tech.name} 
-                        className="w-4 h-4"
-                      /> */}
-                      <span className="text-xs text-gray-400">{tech.name}</span>
-                    </div>
-                  ))}
-                  {project.technologies.length > 6 && (
-                    <div className="px-2 py-1 bg-background rounded border border-primary/10 text-xs text-gray-400">
-                      +{project.technologies.length - 6}
-                    </div>
-                  )}
-                </div>
-              </motion.article>
+                project={project}
+                lang={lang}
+                onOpenModal={() => openModal(project)}
+                onOpenImageModal={openImageModal}
+              />
             ))}
           </div>
         </div>
@@ -459,5 +378,114 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
         )}
       </AnimatePresence>
     </>
+  );
+}
+
+function ProjectCard({
+  project,
+  lang,
+  onOpenModal,
+  onOpenImageModal,
+}: {
+  project: Project;
+  lang: "pl" | "en";
+  onOpenModal: () => void;
+  onOpenImageModal: (image: string) => void;
+}) {
+  const cardRef = useRef(null);
+  const isCardInView = useInView(cardRef, { once: true, margin: "-50px" });
+
+  return (
+    <motion.article
+      ref={cardRef}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isCardInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 0.6 }}
+      className="bg-background-lighter border border-primary/20 rounded-xl p-6 hover:border-primary/40 transition-all duration-300 cursor-pointer group"
+      onClick={onOpenModal}
+      role="listitem"
+    >
+      {/* Badges */}
+      <div className="flex flex-wrap gap-2 mb-4">
+        {/* Project Type Badge */}
+        <span className="px-3 py-1 text-xs font-semibold rounded-full bg-primary/20 text-primary border border-primary/30">
+          {project.projectType[lang]}
+        </span>
+        {/* Development Status Badge */}
+        {project.inDevelopment && (
+          <span className="px-3 py-1 text-xs font-semibold rounded-full bg-primary/20 text-primary border border-primary/30">
+            {lang === "pl" ? "W rozwoju" : "In Development"}
+          </span>
+        )}
+      </div>
+
+      {/* Project Name */}
+      <h3 className="text-2xl font-bold mb-3 text-primary group-hover:text-primary-light transition-colors">
+        {project.name[lang]}
+      </h3>
+
+      {/* Short Description */}
+      <p className="text-gray-300 mb-4 line-clamp-3">
+        {project.shortDescription[lang]}
+      </p>
+
+      {/* Link */}
+      <a
+        href={project.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={(e) => e.stopPropagation()}
+        className="text-primary hover:text-primary-light transition-colors text-sm font-medium inline-flex items-center gap-2 mb-4"
+      >
+        {project.url.replace("https://", "")}
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        </svg>
+      </a>
+
+      {/* Screenshots - miniaturki */}
+      {project.images && project.images.length > 0 && (
+        <div className="flex flex-wrap gap-2 mb-4" onClick={(e) => e.stopPropagation()}>
+          {project.images.map((image, index) => (
+            <div
+              key={index}
+              className="relative rounded-lg overflow-hidden border border-primary/20 hover:border-primary/40 transition-all cursor-pointer hover:scale-105"
+              onClick={() => onOpenImageModal(image)}
+            >
+              <img
+                src={image}
+                alt={`${project.name[lang]} - ${lang === "pl" ? "Zrzut ekranu" : "Screenshot"} ${index + 1}`}
+                className="w-16 h-16 md:w-20 md:h-20 object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Technologies */}
+      <div className="flex flex-wrap gap-3 mt-4">
+        {project.technologies.slice(0, 6).map((tech) => (
+          <div
+            key={tech.name}
+            className="flex items-center gap-1.5 px-2 py-1 bg-background rounded border border-primary/10"
+            title={tech.name}
+          >
+            {/* TODO: Dodaj ikonę technologii - ustaw src na ścieżkę do obrazka */}
+            {/* Przykład: <img src="/technologies/nextjs.svg" alt={tech.name} className="w-4 h-4" /> */}
+            {/* <img 
+              src="/technologies/nextjs.svg" 
+              alt={tech.name} 
+              className="w-4 h-4"
+            /> */}
+            <span className="text-xs text-gray-400">{tech.name}</span>
+          </div>
+        ))}
+        {project.technologies.length > 6 && (
+          <div className="px-2 py-1 bg-background rounded border border-primary/10 text-xs text-gray-400">
+            +{project.technologies.length - 6}
+          </div>
+        )}
+      </div>
+    </motion.article>
   );
 }

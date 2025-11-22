@@ -8,8 +8,14 @@ interface ContactProps {
 }
 
 export default function Contact({ lang = "pl" }: ContactProps) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const headerRef = useRef(null);
+  const formRef = useRef(null);
+  const contactInfoRef = useRef(null);
+  
+  const isHeaderInView = useInView(headerRef, { once: true, margin: "-100px" });
+  const isFormInView = useInView(formRef, { once: true, margin: "-50px" });
+  const isContactInfoInView = useInView(contactInfoRef, { once: true, margin: "-50px" });
+  
   const [formData, setFormData] = useState({
     email: "",
     description: "",
@@ -96,9 +102,9 @@ export default function Contact({ lang = "pl" }: ContactProps) {
     <section id="contact" className="pt-20 pb-20 px-4 relative scroll-mt-[20px]" aria-labelledby="contact-heading">
       <div className="max-w-4xl mx-auto">
         <motion.header
-          ref={ref}
+          ref={headerRef}
           initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          animate={isHeaderInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-8"
         >
@@ -109,9 +115,10 @@ export default function Contact({ lang = "pl" }: ContactProps) {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Form - First on mobile, second on desktop */}
           <motion.form
+            ref={formRef}
             initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            animate={isFormInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+            transition={{ duration: 0.8 }}
             onSubmit={handleSubmit}
             className="bg-background-lighter border border-primary/20 rounded-xl p-6 space-y-6 order-1 md:order-2"
             aria-label={lang === "pl" ? "Formularz kontaktowy" : "Contact form"}
@@ -219,9 +226,10 @@ export default function Contact({ lang = "pl" }: ContactProps) {
 
           {/* Contact Info - Second on mobile, first on desktop */}
           <motion.address
+            ref={contactInfoRef}
             initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            animate={isContactInfoInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            transition={{ duration: 0.8 }}
             className="space-y-6 not-italic order-2 md:order-1"
           >
             <div className="bg-background-lighter border border-primary/20 rounded-xl p-6">

@@ -218,10 +218,6 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
                 mass: 0.8
               }}
               className="absolute top-20 right-0 bottom-0 bg-background shadow-2xl overflow-y-auto relative"
-            style={{
-              borderLeft: "2px solid transparent",
-              borderImage: "linear-gradient(to bottom, white 0%, white 50%, rgb(0, 255, 136) 50%, rgb(0, 255, 136) 100%) 1",
-            }}
             >
               <div className="flex flex-col p-6 space-y-3">
                 <AnimatePresence>
