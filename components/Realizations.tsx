@@ -393,14 +393,14 @@ function ProjectCard({
   onOpenImageModal: (image: string) => void;
 }) {
   const cardRef = useRef(null);
-  const isCardInView = useInView(cardRef, { once: true, margin: "-50px" });
+  const isCardInView = useInView(cardRef, { once: true, margin: "-100px" });
 
   return (
     <motion.article
       ref={cardRef}
-      initial={{ opacity: 0, y: 50 }}
-      animate={isCardInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.6 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={isCardInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.9, ease: [0.25, 0.1, 0.25, 1] }}
       className="bg-background-lighter border border-primary/20 rounded-xl p-6 hover:border-primary/40 transition-all duration-300 cursor-pointer group"
       onClick={onOpenModal}
       role="listitem"
