@@ -220,66 +220,49 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
               className="absolute top-20 right-0 bottom-0 bg-background shadow-2xl overflow-y-auto relative"
             >
               <div className="flex flex-col p-6 space-y-3">
-                <AnimatePresence>
-                  {items.map((item, index) => (
-                    <motion.a
-                      key={item.href}
-                      href={item.href}
-                      onClick={(e) => handleLinkClick(e, item.href)}
-                      initial={{ 
-                        opacity: 0, 
-                        x: 60,
-                        scale: 0.95
-                      }}
-                      animate={{ 
-                        opacity: 1, 
-                        x: 0,
-                        scale: 1
-                      }}
-                      exit={{
-                        opacity: 0,
-                        x: 30,
-                        scale: 0.95,
-                        transition: {
-                          duration: 0.2,
-                          delay: (items.length - index - 1) * 0.05
-                        }
-                      }}
-                      transition={{ 
-                        duration: 0.5, 
-                        delay: index * 0.1,
-                        ease: [0.25, 0.46, 0.45, 0.94]
-                      }}
-                      className="text-white hover:text-primary transition-all font-medium text-lg py-4 px-5 rounded-lg hover:bg-primary/20 border border-primary/30 hover:border-primary"
-                    >
-                      {item.label}
-                    </motion.a>
-                  ))}
-                </AnimatePresence>
+                {items.map((item, index) => (
+                  <motion.a
+                    key={item.href}
+                    href={item.href}
+                    onClick={(e) => handleLinkClick(e, item.href)}
+                    initial={{ 
+                      opacity: 0, 
+                      x: 50
+                    }}
+                    animate={{ 
+                      opacity: 1, 
+                      x: 0
+                    }}
+                    transition={{ 
+                      duration: 1.0, 
+                      delay: index * 0.2,
+                      ease: [0.16, 1, 0.3, 1]
+                    }}
+                    whileHover={{
+                      scale: 1.02,
+                      x: 5,
+                      transition: { duration: 0.2, ease: "easeOut" }
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                    className="text-white hover:text-primary transition-colors duration-200 font-medium text-lg py-4 px-5 rounded-lg hover:bg-primary/20 border border-primary/30 hover:border-primary"
+                  >
+                    {item.label}
+                  </motion.a>
+                ))}
 
                 <motion.div
                   initial={{ 
                     opacity: 0, 
-                    y: 20,
-                    scale: 0.95
+                    y: 20
                   }}
                   animate={{ 
                     opacity: 1, 
-                    y: 0,
-                    scale: 1
-                  }}
-                  exit={{
-                    opacity: 0,
-                    y: 10,
-                    scale: 0.95,
-                    transition: {
-                      duration: 0.2
-                    }
+                    y: 0
                   }}
                   transition={{ 
-                    duration: 0.5, 
-                    delay: items.length * 0.1 + 0.15,
-                    ease: [0.25, 0.46, 0.45, 0.94]
+                    duration: 1.0, 
+                    delay: items.length * 0.2 + 0.3,
+                    ease: [0.16, 1, 0.3, 1]
                   }}
                   className="pt-4 mt-4 border-t border-primary/30"
                 >

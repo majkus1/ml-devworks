@@ -202,6 +202,7 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
                 key={project.id}
                 project={project}
                 lang={lang}
+                index={index}
                 onOpenModal={() => openModal(project)}
                 onOpenImageModal={openImageModal}
               />
@@ -384,24 +385,35 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
 function ProjectCard({
   project,
   lang,
+  index,
   onOpenModal,
   onOpenImageModal,
 }: {
   project: Project;
   lang: "pl" | "en";
+  index: number;
   onOpenModal: () => void;
   onOpenImageModal: (image: string) => void;
 }) {
   const cardRef = useRef(null);
-  const isCardInView = useInView(cardRef, { once: true, margin: "-100px" });
+  const isCardInView = useInView(cardRef, { once: true, margin: "-50px" });
 
   return (
     <motion.article
       ref={cardRef}
-      initial={{ opacity: 0, y: 20 }}
-      animate={isCardInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-      transition={{ duration: 0.9, ease: [0.25, 0.1, 0.25, 1] }}
-      className="bg-background-lighter border border-primary/20 rounded-xl p-6 hover:border-primary/40 transition-all duration-300 cursor-pointer group"
+      initial={{ opacity: 0, y: 30 }}
+      animate={isCardInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ 
+        duration: 0.6,
+        delay: index * 0.1,
+        ease: [0.16, 1, 0.3, 1]
+      }}
+      whileHover={{ 
+        scale: 1.02,
+        y: -5,
+        transition: { duration: 0.2, ease: "easeOut" }
+      }}
+      className="bg-background-lighter border border-primary/20 rounded-xl p-6 hover:border-primary/40 transition-colors duration-200 cursor-pointer group"
       onClick={onOpenModal}
       role="listitem"
     >

@@ -211,24 +211,32 @@ function ServiceCard({
 }) {
   const IconComponent = service.icon;
   const cardRef = useRef(null);
-  const isCardInView = useInView(cardRef, { once: true, margin: "-100px" });
+  const isCardInView = useInView(cardRef, { once: true, margin: "-50px" });
   
   return (
     <motion.article
       ref={cardRef}
-      initial={{ opacity: 0, y: 20 }}
-      animate={isCardInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-      transition={{ duration: 0.9, ease: [0.25, 0.1, 0.25, 1] }}
-      whileHover={{ scale: 1.05, y: -10 }}
-      className="bg-background-lighter border border-primary/20 rounded-xl p-6 hover:border-primary/50 transition-all cursor-pointer group"
+      initial={{ opacity: 0, y: 30 }}
+      animate={isCardInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ 
+        duration: 0.6,
+        delay: index * 0.1,
+        ease: [0.16, 1, 0.3, 1]
+      }}
+      whileHover={{ 
+        scale: 1.02,
+        y: -5,
+        transition: { duration: 0.2, ease: "easeOut" }
+      }}
+      className="bg-background-lighter border border-primary/20 rounded-xl p-6 hover:border-primary/50 transition-colors cursor-pointer group"
       role="listitem"
     >
-      <div className="mb-4 transform group-hover:scale-110 transition-transform" aria-hidden="true">
+      <div className="mb-4 transform group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
         <IconComponent 
-          className="w-12 h-12 text-primary group-hover:text-primary-light transition-colors" 
+          className="w-12 h-12 text-primary group-hover:text-primary-light transition-colors duration-200" 
         />
       </div>
-      <h3 className="text-2xl font-bold mb-3 text-primary group-hover:text-primary-light transition-colors">
+      <h3 className="text-2xl font-bold mb-3 text-primary group-hover:text-primary-light transition-colors duration-200">
         {service.title}
       </h3>
       <p className="text-gray-400 leading-relaxed">{service.description}</p>
