@@ -211,16 +211,16 @@ function ServiceCard({
 }) {
   const IconComponent = service.icon;
   const cardRef = useRef(null);
-  const isCardInView = useInView(cardRef, { once: true, margin: "-50px" });
+  const isCardInView = useInView(cardRef, { once: true, margin: "-100px" });
   
   return (
     <motion.article
       ref={cardRef}
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 50 }}
       animate={isCardInView ? { opacity: 1, y: 0 } : {}}
       transition={{ 
-        duration: 0.6,
-        delay: index * 0.1,
+        duration: 0.8,
+        delay: 0.3 + index * 0.1,
         ease: [0.16, 1, 0.3, 1]
       }}
       whileHover={{ 

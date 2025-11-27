@@ -261,7 +261,7 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
                   }}
                   transition={{ 
                     duration: 1.0, 
-                    delay: items.length * 0.2 + 0.3,
+                    delay: (items.length - 1) * 0.2,
                     ease: [0.16, 1, 0.3, 1]
                   }}
                   className="pt-4 mt-4 border-t border-primary/30"
