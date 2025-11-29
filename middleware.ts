@@ -1,0 +1,27 @@
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
+
+export function middleware(request: NextRequest) {
+  const pathname = request.nextUrl.pathname;
+  const response = NextResponse.next();
+  
+  // Ustaw header z pathname dla root layout
+  response.headers.set("x-pathname", pathname);
+  
+  return response;
+}
+
+export const config = {
+  matcher: [
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     * - files with extensions (images, videos, etc.)
+     */
+    "/((?!api|_next/static|_next/image|favicon.ico|.*\\.(ico|png|jpg|jpeg|gif|svg|webp|mp4|webm|woff|woff2|ttf|eot|css|js|json|xml|txt|pdf|zip)).*)",
+  ],
+};
+
