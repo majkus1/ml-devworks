@@ -272,8 +272,8 @@ export default function Contact({ lang = "pl" }: ContactProps) {
                 <div>
                   <p className="text-sm text-gray-400 mb-1">{t.address}</p>
                   <address className="text-white not-italic">
-                    00-000 Warszawa<br />
-                    ul. Przykładowa 123
+                  31-010 Kraków<br />
+                  Rynek Główny 34/15
                   </address>
                 </div>
               </div>
