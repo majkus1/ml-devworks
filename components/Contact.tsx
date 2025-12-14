@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
+import BookingCalendar from "./BookingCalendar";
 
 interface ContactProps {
   lang?: "pl" | "en";
@@ -280,6 +281,9 @@ export default function Contact({ lang = "pl" }: ContactProps) {
             </div>
           </motion.address>
         </div>
+
+        {/* Booking Calendar */}
+        <BookingCalendar lang={lang} />
       </div>
     </section>
   );

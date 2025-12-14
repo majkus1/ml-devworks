@@ -10,6 +10,7 @@ import {
   ShoppingCartIcon,
   CloudIcon,
   WrenchIcon,
+  AutomationIcon,
 } from "@/components/icons/ServiceIcons";
 
 interface Service {
@@ -31,13 +32,13 @@ const services = {
     },
     {
       icon: CodeIcon,
-      title: "Aplikacje Internetowe",
-      description: "Nowoczesne aplikacje webowe z wykorzystaniem najnowszych technologii. Szybkie, bezpieczne i skalowalne rozwiązania.",
+      title: "Aplikacje Internetowe i Mobilne",
+      description: "Nowoczesne aplikacje webowe z wykorzystaniem najnowszych technologii. Szybkie, bezpieczne i skalowalne rozwiązania. Aplikacje mobilne na iOS i Android. Natywne i cross-platform rozwiązania dla Twojego biznesu.",
     },
     {
-      icon: SmartphoneIcon,
-      title: "Aplikacje Mobilne",
-      description: "Aplikacje mobilne na iOS i Android. Natywne i cross-platform rozwiązania dla Twojego biznesu.",
+      icon: AutomationIcon,
+      title: "Automatyzacja i AI",
+      description: "Inteligentne agent AI i systemy automatyzacji procesów biznesowych. Zautomatyzuj powtarzalne zadania i zwiększ efektywność swojego biznesu.",
     },
     {
       icon: ShoppingCartIcon,
@@ -51,8 +52,8 @@ const services = {
     },
     {
       icon: WrenchIcon,
-      title: "Naprawa i Optymalizacja",
-      description: "Naprawa błędów w istniejących projektach, optymalizacja wydajności, SEO i konwersji. Przywróć pełną funkcjonalność swojej strony lub aplikacji.",
+      title: "Naprawa, Optymalizacja i Utrzymanie",
+      description: "Naprawa błędów w istniejących projektach, optymalizacja wydajności, SEO i konwersji. Przywróć pełną funkcjonalność swojej strony lub aplikacji. Kompleksowe utrzymanie i wsparcie techniczne dla Twoich projektów.",
     },
   ],
   en: [
@@ -63,13 +64,13 @@ const services = {
     },
     {
       icon: CodeIcon,
-      title: "Web Applications",
-      description: "Modern web applications using the latest technologies. Fast, secure, and scalable solutions.",
+      title: "Web and Mobile Applications",
+      description: "Modern web applications using the latest technologies. Fast, secure, and scalable solutions. Mobile applications for iOS and Android. Native and cross-platform solutions for your business.",
     },
     {
-      icon: SmartphoneIcon,
-      title: "Mobile Applications",
-      description: "Mobile applications for iOS and Android. Native and cross-platform solutions for your business.",
+      icon: AutomationIcon,
+      title: "Automation & AI",
+      description: "Intelligent AI agents and business process automation systems. Automate repetitive tasks and increase your business efficiency.",
     },
     {
       icon: ShoppingCartIcon,
@@ -83,8 +84,8 @@ const services = {
     },
     {
       icon: WrenchIcon,
-      title: "Fixes & Optimization",
-      description: "Bug fixes in existing projects, performance optimization, SEO, and conversion optimization. Restore full functionality of your website or application.",
+      title: "Fixes, Optimization & Maintenance",
+      description: "Bug fixes in existing projects, performance optimization, SEO, and conversion optimization. Restore full functionality of your website or application. Comprehensive maintenance and technical support for your projects.",
     },
   ],
 };
