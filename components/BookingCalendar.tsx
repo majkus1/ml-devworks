@@ -214,6 +214,11 @@ export default function BookingCalendar({ lang = "pl" }: BookingCalendarProps) {
       className="mt-16 bg-background-lighter border border-primary/20 rounded-xl p-6 md:p-8"
     >
       <div className="mb-6">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-left text-white">
+          {lang === "pl" 
+            ? "Wolisz porozmawiać online?"
+            : "Prefer to talk online?"}
+        </h2>
         <h3 className="text-2xl md:text-3xl font-bold mb-2 text-primary">{t.title}</h3>
         <p className="text-gray-400">{t.subtitle}</p>
       </div>
