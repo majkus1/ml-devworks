@@ -36,7 +36,7 @@ export default function BookingCalendar({ lang = "pl" }: BookingCalendarProps) {
 
   const content = {
     pl: {
-      title: "Zarezerwuj Darmową Konsultację",
+      title: "Zarezerwuj bezpłatną konsultację (30 min)",
       subtitle: "Wybierz dogodny termin na rozmowę o Twoim projekcie",
       dateLabel: "Wybierz datę",
       timeLabel: "Wybierz godzinę",
@@ -50,7 +50,7 @@ export default function BookingCalendar({ lang = "pl" }: BookingCalendarProps) {
       selectDateFirst: "Najpierw wybierz datę",
     },
     en: {
-      title: "Book a Free Consultation",
+      title: "Book a free consultation (30 min)",
       subtitle: "Choose a convenient time to discuss your project",
       dateLabel: "Select date",
       timeLabel: "Select time",

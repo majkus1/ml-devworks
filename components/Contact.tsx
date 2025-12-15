@@ -28,34 +28,38 @@ export default function Contact({ lang = "pl" }: ContactProps) {
   const content = {
     pl: {
       title: "Skontaktuj Się Z Nami",
-      subtitle: "Opisz swój projekt, a my przygotujemy najlepszą ofertę",
+      subtitle: "Opisz krótko swój problem lub pomysł – wrócimy z konkretną propozycją.",
       email: "Email",
       phone: "Telefon",
       address: "Adres",
       form: {
         email: "Twój Email",
-        description: "Opisz swój projekt",
-        budget: "Budżet / Środki",
+        description: "Opisz swój problem lub pomysł",
+        descriptionPlaceholder: "Np. automatyzacja procesów, aplikacja webowa, integracja AI, usprawnienie systemu…",
+        budget: "Szacunkowy budżet (opcjonalnie)",
         submit: "Wyślij",
         submitting: "Wysyłanie...",
         success: "Wiadomość wysłana! Skontaktujemy się wkrótce.",
         error: "Wystąpił błąd. Spróbuj ponownie lub skontaktuj się bezpośrednio.",
+        responseTime: "Odpowiadamy zazwyczaj w ciągu 24h roboczych.",
       },
     },
     en: {
       title: "Get In Touch",
-      subtitle: "Describe your project and we'll prepare the best offer",
+      subtitle: "Briefly describe your problem or idea – we'll come back with a concrete proposal.",
       email: "Email",
       phone: "Phone",
       address: "Address",
       form: {
         email: "Your Email",
-        description: "Describe your project",
-        budget: "Budget / Resources",
+        description: "Describe your problem or idea",
+        descriptionPlaceholder: "E.g. process automation, web application, AI integration, system optimization…",
+        budget: "Estimated budget (optional)",
         submit: "Send",
         submitting: "Sending...",
         success: "Message sent! We'll contact you soon.",
         error: "An error occurred. Please try again or contact us directly.",
+        responseTime: "We typically respond within 24 business hours.",
       },
     },
   };
@@ -161,7 +165,7 @@ export default function Contact({ lang = "pl" }: ContactProps) {
                 value={formData.description}
                 onChange={handleChange}
                 className="w-full px-4 py-3 text-base bg-background border border-primary/20 rounded-lg focus:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-colors resize-none"
-                placeholder={lang === "pl" ? "Opisz swój projekt..." : "Describe your project..."}
+                placeholder={t.form.descriptionPlaceholder}
                 aria-required="true"
                 aria-describedby="description-description"
               />
@@ -223,6 +227,9 @@ export default function Contact({ lang = "pl" }: ContactProps) {
             >
               {isSubmitting ? t.form.submitting : t.form.submit}
             </button>
+            <p className="text-sm text-gray-400 text-center mt-2">
+              {t.form.responseTime}
+            </p>
           </motion.form>
 
           {/* Contact Info - Second on mobile, first on desktop */}
