@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   classification: "Web Development Services",
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.ico", sizes: "any" },
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
