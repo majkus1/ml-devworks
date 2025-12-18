@@ -214,6 +214,9 @@ function ServiceCard({
   const cardRef = useRef(null);
   const isCardInView = useInView(cardRef, { once: true, margin: "-50px" });
   
+  // Sprawdź czy to usługa "Automatyzacja i AI" / "Automation & AI"
+  const isAutomationAI = service.title === "Automatyzacja i AI" || service.title === "Automation & AI";
+  
   return (
     <motion.article
       ref={cardRef}
@@ -229,15 +232,27 @@ function ServiceCard({
         y: -5,
         transition: { duration: 0.2, ease: "easeOut" }
       }}
-      className="bg-background-lighter border border-primary/20 rounded-xl p-6 hover:border-primary/50 transition-colors cursor-pointer group"
+      className={`bg-background-lighter rounded-xl p-6 transition-colors cursor-pointer group ${
+        isAutomationAI
+          ? "border-2 border-amber-400/60 hover:border-amber-400 shadow-lg shadow-amber-500/20"
+          : "border border-primary/20 hover:border-primary/50"
+      }`}
       role="listitem"
     >
       <div className="mb-4 transform group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
         <IconComponent 
-          className="w-12 h-12 text-primary group-hover:text-primary-light transition-colors duration-200" 
+          className={`w-12 h-12 transition-colors duration-200 ${
+            isAutomationAI
+              ? "text-amber-400 group-hover:text-amber-300"
+              : "text-primary group-hover:text-primary-light"
+          }`}
         />
       </div>
-      <h3 className="text-2xl font-bold mb-3 text-primary group-hover:text-primary-light transition-colors duration-200">
+      <h3 className={`text-2xl font-bold mb-3 transition-colors duration-200 ${
+        isAutomationAI
+          ? "text-amber-400 group-hover:text-amber-300"
+          : "text-primary group-hover:text-primary-light"
+      }`}>
         {service.title}
       </h3>
       <p className="text-gray-400 leading-relaxed">{service.description}</p>
