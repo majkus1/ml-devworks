@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import Link from "next/link";
 import {
   GlobeIcon,
   CodeIcon,
@@ -17,6 +18,7 @@ interface Service {
   icon: React.ComponentType<{ className?: string }>;
   title: string;
   description: string;
+  href?: string;
 }
 
 interface ServicesProps {
@@ -29,31 +31,37 @@ const services = {
       icon: GlobeIcon,
       title: "Strony Internetowe",
       description: "Proste i zaawansowane strony internetowe dostosowane do Twoich potrzeb. Responsywne, szybkie i zoptymalizowane pod podstawy SEO.",
+      href: "/uslugi/strony-internetowe",
     },
     {
       icon: CodeIcon,
       title: "Aplikacje Internetowe i Mobilne",
       description: "Nowoczesne aplikacje webowe z wykorzystaniem najnowszych technologii. Szybkie, bezpieczne i skalowalne rozwiązania. Aplikacje mobilne na iOS i Android. Natywne i cross-platform rozwiązania dla Twojego biznesu.",
+      href: "/uslugi/aplikacje-internetowe-i-mobilne",
     },
     {
       icon: AutomationIcon,
       title: "Automatyzacja i AI",
       description: "Inteligentne agent AI i systemy automatyzacji procesów biznesowych. Zautomatyzuj powtarzalne zadania i zwiększ efektywność swojego biznesu.",
+      href: "/uslugi/automatyzacja-i-ai",
     },
     {
       icon: ShoppingCartIcon,
       title: "Sklepy Internetowe / Systemy Rezerwacji",
       description: "Kompletne rozwiązania e-commerce i systemy rezerwacji z integracją płatności, zarządzaniem produktami i analityką sprzedaży.",
+      href: "/uslugi/sklepy-internetowe-systemy-rezerwacji",
     },
     {
       icon: CloudIcon,
       title: "DevOps & Wdrożenia",
       description: "Wdrożenie aplikacji w chmurze, konfiguracja CI/CD, monitoring, backup i pełne utrzymanie infrastruktury. Od developmentu do produkcji.",
+      href: "/uslugi/devops-wdrozenia",
     },
     {
       icon: WrenchIcon,
       title: "Naprawa, Optymalizacja i Utrzymanie",
       description: "Naprawa błędów w istniejących projektach, optymalizacja wydajności, SEO i konwersji. Przywróć pełną funkcjonalność swojej strony lub aplikacji. Kompleksowe utrzymanie i wsparcie techniczne dla Twoich projektów.",
+      href: "/uslugi/naprawa-optymalizacja-utrzymanie",
     },
   ],
   en: [
@@ -61,31 +69,37 @@ const services = {
       icon: GlobeIcon,
       title: "Websites",
       description: "Simple and advanced websites tailored to your needs. Responsive, fast, and optimized for SEO basics.",
+      href: "/en/services/web-development",
     },
     {
       icon: CodeIcon,
       title: "Web and Mobile Applications",
       description: "Modern web applications using the latest technologies. Fast, secure, and scalable solutions. Mobile applications for iOS and Android. Native and cross-platform solutions for your business.",
+      href: "/en/services/web-and-mobile-applications",
     },
     {
       icon: AutomationIcon,
       title: "Automation & AI",
       description: "Intelligent AI agents and business process automation systems. Automate repetitive tasks and increase your business efficiency.",
+      href: "/en/services/automation-and-ai",
     },
     {
       icon: ShoppingCartIcon,
       title: "Online Stores / Booking Systems",
       description: "Complete e-commerce solutions and booking systems with payment integration, product management, and sales analytics.",
+      href: "/en/services/online-stores-booking-systems",
     },
     {
       icon: CloudIcon,
       title: "DevOps & Deployment",
       description: "Cloud application deployment, CI/CD configuration, monitoring, backup, and full infrastructure maintenance. From development to production.",
+      href: "/en/services/devops-deployment",
     },
     {
       icon: WrenchIcon,
       title: "Fixes, Optimization & Maintenance",
       description: "Bug fixes in existing projects, performance optimization, SEO, and conversion optimization. Restore full functionality of your website or application. Comprehensive maintenance and technical support for your projects.",
+      href: "/en/services/fixes-optimization-maintenance",
     },
   ],
 };
@@ -217,28 +231,8 @@ function ServiceCard({
   // Sprawdź czy to usługa "Automatyzacja i AI" / "Automation & AI"
   const isAutomationAI = service.title === "Automatyzacja i AI" || service.title === "Automation & AI";
   
-  return (
-    <motion.article
-      ref={cardRef}
-      initial={{ opacity: 0, y: 50 }}
-      animate={isCardInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ 
-        duration: 0.5,
-        delay: 0.1 + index * 0.05,
-        ease: [0.16, 1, 0.3, 1]
-      }}
-      whileHover={{ 
-        scale: 1.02,
-        y: -5,
-        transition: { duration: 0.2, ease: "easeOut" }
-      }}
-      className={`bg-background-lighter rounded-xl p-6 transition-colors cursor-pointer group ${
-        isAutomationAI
-          ? "border-2 border-amber-400/60 hover:border-amber-400 shadow-lg shadow-amber-500/20"
-          : "border border-primary/20 hover:border-primary/50"
-      }`}
-      role="listitem"
-    >
+  const cardContent = (
+    <>
       <div className="mb-4 transform group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
         <IconComponent 
           className={`w-12 h-12 transition-colors duration-200 ${
@@ -256,6 +250,63 @@ function ServiceCard({
         {service.title}
       </h3>
       <p className="text-gray-400 leading-relaxed">{service.description}</p>
+    </>
+  );
+
+  const cardClassName = `bg-background-lighter rounded-xl p-6 transition-colors cursor-pointer group ${
+    isAutomationAI
+      ? "border-2 border-amber-400/60 hover:border-amber-400 shadow-lg shadow-amber-500/20"
+      : "border border-primary/20 hover:border-primary/50"
+  }`;
+
+  if (service.href) {
+    return (
+      <motion.article
+        ref={cardRef}
+        initial={{ opacity: 0, y: 50 }}
+        animate={isCardInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ 
+          duration: 0.5,
+          delay: 0.1 + index * 0.05,
+          ease: [0.16, 1, 0.3, 1]
+        }}
+        whileHover={{ 
+          scale: 1.02,
+          y: -5,
+          transition: { duration: 0.2, ease: "easeOut" }
+        }}
+        className={cardClassName}
+        role="listitem"
+      >
+        <Link 
+          href={service.href} 
+          className="block h-full w-full no-underline"
+        >
+          {cardContent}
+        </Link>
+      </motion.article>
+    );
+  }
+
+  return (
+    <motion.article
+      ref={cardRef}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isCardInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ 
+        duration: 0.5,
+        delay: 0.1 + index * 0.05,
+        ease: [0.16, 1, 0.3, 1]
+      }}
+      whileHover={{ 
+        scale: 1.02,
+        y: -5,
+        transition: { duration: 0.2, ease: "easeOut" }
+      }}
+      className={cardClassName}
+      role="listitem"
+    >
+      {cardContent}
     </motion.article>
   );
 }

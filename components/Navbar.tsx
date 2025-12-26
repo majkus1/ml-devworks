@@ -103,13 +103,9 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
               transition={{ duration: 0.5 }}
               className="flex-shrink-0 z-50"
             >
-              <a
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                  setIsMobileMenuOpen(false);
-                }}
+              <Link
+                href={isEnglish ? "/en" : "/"}
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="flex items-center"
                 aria-label={lang === "pl" ? "Przejdź do strony głównej" : "Go to homepage"}
               >
@@ -117,10 +113,10 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
                   src="/primary-on-transparent-logo.webp"
                   alt="ML Devworks Logo"
                   width={215}
-                  
+                  height={60}
                   className="hover:opacity-80 transition-opacity"
                 />
-              </a>
+              </Link>
             </motion.div>
 
             {/* Desktop Menu */}
