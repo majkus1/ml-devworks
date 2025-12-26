@@ -51,16 +51,27 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      const offset = 20;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
+    
+    // Check if we're on the homepage or a subpage
+    const isHomePage = pathname === "/" || pathname === "/en";
+    const homePath = isEnglish ? "/en" : "/";
+    
+    if (isHomePage) {
+      // On homepage, scroll to section
+      const element = document.querySelector(href);
+      if (element) {
+        const offset = 20;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    } else {
+      // On subpage, navigate to homepage with hash
+      window.location.href = `${homePath}${href}`;
     }
     setIsMobileMenuOpen(false);
   };
@@ -121,20 +132,26 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8">
-              {items.map((item, index) => (
-                <motion.a
-                  key={item.href}
-                  href={item.href}
-                  onClick={(e) => handleLinkClick(e, item.href)}
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-white hover:text-primary transition-colors font-medium relative group"
-                >
-                  {item.label}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
-                </motion.a>
-              ))}
+              {items.map((item, index) => {
+                const isHomePage = pathname === "/" || pathname === "/en";
+                const homePath = isEnglish ? "/en" : "/";
+                const linkHref = isHomePage ? item.href : `${homePath}${item.href}`;
+                
+                return (
+                  <motion.a
+                    key={item.href}
+                    href={linkHref}
+                    onClick={(e) => handleLinkClick(e, item.href)}
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="text-white hover:text-primary transition-colors font-medium relative group"
+                  >
+                    {item.label}
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
+                  </motion.a>
+                );
+              })}
 
               {/* Language Switcher */}
               <motion.div
@@ -216,35 +233,41 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
               className="absolute top-20 right-0 bottom-0 bg-background shadow-2xl overflow-y-auto relative"
             >
               <div className="flex flex-col p-6 space-y-3">
-                {items.map((item, index) => (
-                  <motion.a
-                    key={item.href}
-                    href={item.href}
-                    onClick={(e) => handleLinkClick(e, item.href)}
-                    initial={{ 
-                      opacity: 0, 
-                      x: 50
-                    }}
-                    animate={{ 
-                      opacity: 1, 
-                      x: 0
-                    }}
-                    transition={{ 
-                      duration: 1.0, 
-                      delay: index * 0.2,
-                      ease: [0.16, 1, 0.3, 1]
-                    }}
-                    whileHover={{
-                      scale: 1.02,
-                      x: 5,
-                      transition: { duration: 0.2, ease: "easeOut" }
-                    }}
-                    whileTap={{ scale: 0.98 }}
-                    className="text-white hover:text-primary transition-colors duration-200 font-medium text-lg py-4 px-5 rounded-lg hover:bg-primary/20 border border-primary/30 hover:border-primary"
-                  >
-                    {item.label}
-                  </motion.a>
-                ))}
+                {items.map((item, index) => {
+                  const isHomePage = pathname === "/" || pathname === "/en";
+                  const homePath = isEnglish ? "/en" : "/";
+                  const linkHref = isHomePage ? item.href : `${homePath}${item.href}`;
+                  
+                  return (
+                    <motion.a
+                      key={item.href}
+                      href={linkHref}
+                      onClick={(e) => handleLinkClick(e, item.href)}
+                      initial={{ 
+                        opacity: 0, 
+                        x: 50
+                      }}
+                      animate={{ 
+                        opacity: 1, 
+                        x: 0
+                      }}
+                      transition={{ 
+                        duration: 1.0, 
+                        delay: index * 0.2,
+                        ease: [0.16, 1, 0.3, 1]
+                      }}
+                      whileHover={{
+                        scale: 1.02,
+                        x: 5,
+                        transition: { duration: 0.2, ease: "easeOut" }
+                      }}
+                      whileTap={{ scale: 0.98 }}
+                      className="text-white hover:text-primary transition-colors duration-200 font-medium text-lg py-4 px-5 rounded-lg hover:bg-primary/20 border border-primary/30 hover:border-primary"
+                    >
+                      {item.label}
+                    </motion.a>
+                  );
+                })}
 
                 <motion.div
                   initial={{ 
