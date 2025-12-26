@@ -11,10 +11,10 @@ export const metadata: Metadata = {
   title: "ML Devworks - Quality by Us. Speed by AI. | Web Development & Applications",
   description: "We create professional digital solutions for your business. From simple websites to advanced applications and cloud deployments. Quality by Us. Speed by AI.",
   alternates: {
-    canonical: "https://ml-devworks.com/en",
+    canonical: "https://www.ml-devworks.com/en",
     languages: {
-      "pl": "https://ml-devworks.com",
-      "en": "https://ml-devworks.com/en",
+      "pl": "https://www.ml-devworks.com",
+      "en": "https://www.ml-devworks.com/en",
     },
   },
 };
