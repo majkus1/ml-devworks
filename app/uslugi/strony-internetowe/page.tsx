@@ -34,11 +34,20 @@ export const metadata: Metadata = {
     url: "https://www.ml-devworks.com/uslugi/strony-internetowe",
     type: "website",
     locale: "pl_PL",
+    images: [
+      {
+        url: "https://www.ml-devworks.com/profesjonalne-strony-internetowe.png",
+        width: 1200,
+        height: 630,
+        alt: "ML Devworks - Strony Internetowe",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Strony Internetowe - Profesjonalne Strony WWW | ML Devworks",
     description: "Tworzymy profesjonalne strony internetowe dostosowane do Twoich potrzeb. Responsywne, szybkie i zoptymalizowane pod SEO.",
+    images: ["https://www.ml-devworks.com/profesjonalne-strony-internetowe.png"],
   },
 };
 
