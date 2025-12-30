@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     locale: "pl_PL",
     images: [
       {
-        url: "https://www.ml-devworks.com/profesjonalne-strony-internetowe.png",
+        url: "https://www.ml-devworks.com/psi.png",
         width: 1200,
         height: 630,
         alt: "ML Devworks - Strony Internetowe",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Strony Internetowe - Profesjonalne Strony WWW | ML Devworks",
     description: "Tworzymy profesjonalne strony internetowe dostosowane do Twoich potrzeb. Responsywne, szybkie i zoptymalizowane pod SEO.",
-    images: ["https://www.ml-devworks.com/profesjonalne-strony-internetowe.png"],
+    images: ["https://www.ml-devworks.com/psi.png"],
   },
 };
 
