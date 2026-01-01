@@ -28,16 +28,16 @@ export const metadata: Metadata = {
     "optymalizacja Kraków",
   ],
   alternates: {
-    canonical: "https://www.ml-devworks.com/uslugi/naprawa-optymalizacja-utrzymanie",
+    canonical: "https://ml-devworks.com/uslugi/naprawa-optymalizacja-utrzymanie",
     languages: {
-      "pl": "https://www.ml-devworks.com/uslugi/naprawa-optymalizacja-utrzymanie",
-      "en": "https://www.ml-devworks.com/en/services/fixes-optimization-maintenance",
+      "pl": "https://ml-devworks.com/uslugi/naprawa-optymalizacja-utrzymanie",
+      "en": "https://ml-devworks.com/en/services/fixes-optimization-maintenance",
     },
   },
   openGraph: {
     title: "Naprawa, Optymalizacja i Utrzymanie - Wsparcie Techniczne Projektów | ML Devworks",
     description: "Naprawa błędów w istniejących projektach, optymalizacja wydajności, SEO i konwersji. Przywróć pełną funkcjonalność swojej strony lub aplikacji.",
-    url: "https://www.ml-devworks.com/uslugi/naprawa-optymalizacja-utrzymanie",
+    url: "https://ml-devworks.com/uslugi/naprawa-optymalizacja-utrzymanie",
     type: "website",
     locale: "pl_PL",
   },
@@ -57,8 +57,8 @@ export default function NaprawaOptymalizacjaUtrzymaniePage() {
     "provider": {
       "@type": "Organization",
       "name": "ML Devworks",
-      "url": "https://www.ml-devworks.com",
-      "logo": "https://www.ml-devworks.com/primary-on-transparent-logo.png",
+      "url": "https://ml-devworks.com",
+      "logo": "https://ml-devworks.com/primary-on-transparent-logo.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+48-516-598-792",
@@ -83,13 +83,13 @@ export default function NaprawaOptymalizacjaUtrzymaniePage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Strona główna",
-        "item": "https://www.ml-devworks.com"
+        "item": "https://ml-devworks.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Naprawa, Optymalizacja i Utrzymanie",
-        "item": "https://www.ml-devworks.com/uslugi/naprawa-optymalizacja-utrzymanie"
+        "item": "https://ml-devworks.com/uslugi/naprawa-optymalizacja-utrzymanie"
       }
     ]
   };

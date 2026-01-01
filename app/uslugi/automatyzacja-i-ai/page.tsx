@@ -26,16 +26,16 @@ export const metadata: Metadata = {
     "inteligentna automatyzacja",
   ],
   alternates: {
-    canonical: "https://www.ml-devworks.com/uslugi/automatyzacja-i-ai",
+    canonical: "https://ml-devworks.com/uslugi/automatyzacja-i-ai",
     languages: {
-      "pl": "https://www.ml-devworks.com/uslugi/automatyzacja-i-ai",
-      "en": "https://www.ml-devworks.com/en/services/automation-and-ai",
+      "pl": "https://ml-devworks.com/uslugi/automatyzacja-i-ai",
+      "en": "https://ml-devworks.com/en/services/automation-and-ai",
     },
   },
   openGraph: {
     title: "Automatyzacja i AI - Inteligentne Systemy Automatyzacji | ML Devworks",
     description: "Inteligentne agent AI i systemy automatyzacji procesów biznesowych. Zautomatyzuj powtarzalne zadania i zwiększ efektywność swojego biznesu.",
-    url: "https://www.ml-devworks.com/uslugi/automatyzacja-i-ai",
+    url: "https://ml-devworks.com/uslugi/automatyzacja-i-ai",
     type: "website",
     locale: "pl_PL",
   },
@@ -55,8 +55,8 @@ export default function AutomatyzacjaIAIPage() {
     "provider": {
       "@type": "Organization",
       "name": "ML Devworks",
-      "url": "https://www.ml-devworks.com",
-      "logo": "https://www.ml-devworks.com/primary-on-transparent-logo.png",
+      "url": "https://ml-devworks.com",
+      "logo": "https://ml-devworks.com/primary-on-transparent-logo.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+48-516-598-792",
@@ -81,13 +81,13 @@ export default function AutomatyzacjaIAIPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Strona główna",
-        "item": "https://www.ml-devworks.com"
+        "item": "https://ml-devworks.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Automatyzacja i AI",
-        "item": "https://www.ml-devworks.com/uslugi/automatyzacja-i-ai"
+        "item": "https://ml-devworks.com/uslugi/automatyzacja-i-ai"
       }
     ]
   };

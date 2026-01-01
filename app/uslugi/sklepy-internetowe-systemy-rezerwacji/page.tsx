@@ -27,16 +27,16 @@ export const metadata: Metadata = {
     "online store",
   ],
   alternates: {
-    canonical: "https://www.ml-devworks.com/uslugi/sklepy-internetowe-systemy-rezerwacji",
+    canonical: "https://ml-devworks.com/uslugi/sklepy-internetowe-systemy-rezerwacji",
     languages: {
-      "pl": "https://www.ml-devworks.com/uslugi/sklepy-internetowe-systemy-rezerwacji",
-      "en": "https://www.ml-devworks.com/en/services/online-stores-booking-systems",
+      "pl": "https://ml-devworks.com/uslugi/sklepy-internetowe-systemy-rezerwacji",
+      "en": "https://ml-devworks.com/en/services/online-stores-booking-systems",
     },
   },
   openGraph: {
     title: "Sklepy Internetowe i Systemy Rezerwacji - E-commerce i Rezerwacje Online | ML Devworks",
     description: "Kompletne rozwiązania e-commerce i systemy rezerwacji z integracją płatności, zarządzaniem produktami i analityką sprzedaży.",
-    url: "https://www.ml-devworks.com/uslugi/sklepy-internetowe-systemy-rezerwacji",
+    url: "https://ml-devworks.com/uslugi/sklepy-internetowe-systemy-rezerwacji",
     type: "website",
     locale: "pl_PL",
   },
@@ -56,8 +56,8 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
     "provider": {
       "@type": "Organization",
       "name": "ML Devworks",
-      "url": "https://www.ml-devworks.com",
-      "logo": "https://www.ml-devworks.com/primary-on-transparent-logo.png",
+      "url": "https://ml-devworks.com",
+      "logo": "https://ml-devworks.com/primary-on-transparent-logo.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+48-516-598-792",
@@ -82,13 +82,13 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Strona główna",
-        "item": "https://www.ml-devworks.com"
+        "item": "https://ml-devworks.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Sklepy Internetowe i Systemy Rezerwacji",
-        "item": "https://www.ml-devworks.com/uslugi/sklepy-internetowe-systemy-rezerwacji"
+        "item": "https://ml-devworks.com/uslugi/sklepy-internetowe-systemy-rezerwacji"
       }
     ]
   };

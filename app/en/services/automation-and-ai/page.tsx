@@ -26,16 +26,16 @@ export const metadata: Metadata = {
     "intelligent automation",
   ],
   alternates: {
-    canonical: "https://www.ml-devworks.com/en/services/automation-and-ai",
+    canonical: "https://ml-devworks.com/en/services/automation-and-ai",
     languages: {
-      "pl": "https://www.ml-devworks.com/uslugi/automatyzacja-i-ai",
-      "en": "https://www.ml-devworks.com/en/services/automation-and-ai",
+      "pl": "https://ml-devworks.com/uslugi/automatyzacja-i-ai",
+      "en": "https://ml-devworks.com/en/services/automation-and-ai",
     },
   },
   openGraph: {
     title: "Automation & AI - Intelligent Automation Systems | ML Devworks",
     description: "Intelligent AI agents and business process automation systems. Automate repetitive tasks and increase your business efficiency.",
-    url: "https://www.ml-devworks.com/en/services/automation-and-ai",
+    url: "https://ml-devworks.com/en/services/automation-and-ai",
     type: "website",
     locale: "en_US",
   },
@@ -55,8 +55,8 @@ export default function AutomationAndAIPage() {
     "provider": {
       "@type": "Organization",
       "name": "ML Devworks",
-      "url": "https://www.ml-devworks.com",
-      "logo": "https://www.ml-devworks.com/primary-on-transparent-logo.png",
+      "url": "https://ml-devworks.com",
+      "logo": "https://ml-devworks.com/primary-on-transparent-logo.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+48-516-598-792",
@@ -81,13 +81,13 @@ export default function AutomationAndAIPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.ml-devworks.com/en"
+        "item": "https://ml-devworks.com/en"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Automation & AI",
-        "item": "https://www.ml-devworks.com/en/services/automation-and-ai"
+        "item": "https://ml-devworks.com/en/services/automation-and-ai"
       }
     ]
   };

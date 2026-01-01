@@ -27,16 +27,16 @@ export const metadata: Metadata = {
     "website maintenance",
   ],
   alternates: {
-    canonical: "https://www.ml-devworks.com/en/services/fixes-optimization-maintenance",
+    canonical: "https://ml-devworks.com/en/services/fixes-optimization-maintenance",
     languages: {
-      "pl": "https://www.ml-devworks.com/uslugi/naprawa-optymalizacja-utrzymanie",
-      "en": "https://www.ml-devworks.com/en/services/fixes-optimization-maintenance",
+      "pl": "https://ml-devworks.com/uslugi/naprawa-optymalizacja-utrzymanie",
+      "en": "https://ml-devworks.com/en/services/fixes-optimization-maintenance",
     },
   },
   openGraph: {
     title: "Fixes, Optimization & Maintenance - Technical Support for Projects | ML Devworks",
     description: "Bug fixes in existing projects, performance optimization, SEO, and conversion optimization. Restore full functionality of your website or application.",
-    url: "https://www.ml-devworks.com/en/services/fixes-optimization-maintenance",
+    url: "https://ml-devworks.com/en/services/fixes-optimization-maintenance",
     type: "website",
     locale: "en_US",
   },
@@ -56,8 +56,8 @@ export default function FixesOptimizationMaintenancePage() {
     "provider": {
       "@type": "Organization",
       "name": "ML Devworks",
-      "url": "https://www.ml-devworks.com",
-      "logo": "https://www.ml-devworks.com/primary-on-transparent-logo.png",
+      "url": "https://ml-devworks.com",
+      "logo": "https://ml-devworks.com/primary-on-transparent-logo.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+48-516-598-792",
@@ -82,13 +82,13 @@ export default function FixesOptimizationMaintenancePage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.ml-devworks.com/en"
+        "item": "https://ml-devworks.com/en"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Fixes, Optimization & Maintenance",
-        "item": "https://www.ml-devworks.com/en/services/fixes-optimization-maintenance"
+        "item": "https://ml-devworks.com/en/services/fixes-optimization-maintenance"
       }
     ]
   };

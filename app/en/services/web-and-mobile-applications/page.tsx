@@ -26,16 +26,16 @@ export const metadata: Metadata = {
     "mobile apps",
   ],
   alternates: {
-    canonical: "https://www.ml-devworks.com/en/services/web-and-mobile-applications",
+    canonical: "https://ml-devworks.com/en/services/web-and-mobile-applications",
     languages: {
-      "pl": "https://www.ml-devworks.com/uslugi/aplikacje-internetowe-i-mobilne",
-      "en": "https://www.ml-devworks.com/en/services/web-and-mobile-applications",
+      "pl": "https://ml-devworks.com/uslugi/aplikacje-internetowe-i-mobilne",
+      "en": "https://ml-devworks.com/en/services/web-and-mobile-applications",
     },
   },
   openGraph: {
     title: "Web and Mobile Applications - Modern Web & Mobile Apps | ML Devworks",
     description: "We create modern web and mobile applications using the latest technologies. Fast, secure, and scalable solutions.",
-    url: "https://www.ml-devworks.com/en/services/web-and-mobile-applications",
+    url: "https://ml-devworks.com/en/services/web-and-mobile-applications",
     type: "website",
     locale: "en_US",
   },
@@ -55,8 +55,8 @@ export default function WebAndMobileApplicationsPage() {
     "provider": {
       "@type": "Organization",
       "name": "ML Devworks",
-      "url": "https://www.ml-devworks.com",
-      "logo": "https://www.ml-devworks.com/primary-on-transparent-logo.png",
+      "url": "https://ml-devworks.com",
+      "logo": "https://ml-devworks.com/primary-on-transparent-logo.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+48-516-598-792",
@@ -81,13 +81,13 @@ export default function WebAndMobileApplicationsPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.ml-devworks.com/en"
+        "item": "https://ml-devworks.com/en"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Web and Mobile Applications",
-        "item": "https://www.ml-devworks.com/en/services/web-and-mobile-applications"
+        "item": "https://ml-devworks.com/en/services/web-and-mobile-applications"
       }
     ]
   };

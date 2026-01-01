@@ -7,8 +7,8 @@ export default function StructuredData({ lang = "pl" }: StructuredDataProps) {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "ML Devworks",
-    url: "https://www.ml-devworks.com",
-    logo: "https://www.ml-devworks.com/primary-on-transparent-logo.png",
+    url: "https://ml-devworks.com",
+    logo: "https://ml-devworks.com/primary-on-transparent-logo.png",
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+48-516-598-792",
@@ -27,7 +27,7 @@ export default function StructuredData({ lang = "pl" }: StructuredDataProps) {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "ML Devworks",
-    url: "https://www.ml-devworks.com",
+    url: "https://ml-devworks.com",
     description:
       lang === "pl"
         ? "Profesjonalne rozwiązania cyfrowe - strony internetowe, aplikacje, sklepy online"
@@ -35,7 +35,7 @@ export default function StructuredData({ lang = "pl" }: StructuredDataProps) {
     inLanguage: lang === "pl" ? "pl-PL" : "en-US",
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://www.ml-devworks.com/search?q={search_term_string}",
+      target: "https://ml-devworks.com/search?q={search_term_string}",
       "query-input": "required name=search_term_string",
     },
   };
@@ -54,7 +54,7 @@ export default function StructuredData({ lang = "pl" }: StructuredDataProps) {
     },
     availableChannel: {
       "@type": "ServiceChannel",
-      serviceUrl: "https://www.ml-devworks.com",
+      serviceUrl: "https://ml-devworks.com",
       servicePhone: "+48-516-598-792",
     },
     description:
@@ -71,7 +71,7 @@ export default function StructuredData({ lang = "pl" }: StructuredDataProps) {
         "@type": "ListItem",
         position: 1,
         name: lang === "pl" ? "Strona główna" : "Home",
-        item: "https://www.ml-devworks.com" + (lang === "en" ? "/en" : ""),
+        item: "https://ml-devworks.com" + (lang === "en" ? "/en" : ""),
       },
     ],
   };

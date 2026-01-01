@@ -28,16 +28,16 @@ export const metadata: Metadata = {
     "server management",
   ],
   alternates: {
-    canonical: "https://www.ml-devworks.com/en/services/devops-deployment",
+    canonical: "https://ml-devworks.com/en/services/devops-deployment",
     languages: {
-      "pl": "https://www.ml-devworks.com/uslugi/devops-wdrozenia",
-      "en": "https://www.ml-devworks.com/en/services/devops-deployment",
+      "pl": "https://ml-devworks.com/uslugi/devops-wdrozenia",
+      "en": "https://ml-devworks.com/en/services/devops-deployment",
     },
   },
   openGraph: {
     title: "DevOps & Deployment - Cloud Deployment & CI/CD | ML Devworks",
     description: "Cloud application deployment, CI/CD configuration, monitoring, backup, and full infrastructure maintenance. From development to production.",
-    url: "https://www.ml-devworks.com/en/services/devops-deployment",
+    url: "https://ml-devworks.com/en/services/devops-deployment",
     type: "website",
     locale: "en_US",
   },
@@ -57,8 +57,8 @@ export default function DevOpsDeploymentPage() {
     "provider": {
       "@type": "Organization",
       "name": "ML Devworks",
-      "url": "https://www.ml-devworks.com",
-      "logo": "https://www.ml-devworks.com/primary-on-transparent-logo.png",
+      "url": "https://ml-devworks.com",
+      "logo": "https://ml-devworks.com/primary-on-transparent-logo.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+48-516-598-792",
@@ -83,13 +83,13 @@ export default function DevOpsDeploymentPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.ml-devworks.com/en"
+        "item": "https://ml-devworks.com/en"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "DevOps & Deployment",
-        "item": "https://www.ml-devworks.com/en/services/devops-deployment"
+        "item": "https://ml-devworks.com/en/services/devops-deployment"
       }
     ]
   };

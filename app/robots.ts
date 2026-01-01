@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.ml-devworks.com/sitemap.xml",
+    sitemap: "https://ml-devworks.com/sitemap.xml",
   };
 }
 

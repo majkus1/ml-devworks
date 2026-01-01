@@ -27,16 +27,16 @@ export const metadata: Metadata = {
     "online store development",
   ],
   alternates: {
-    canonical: "https://www.ml-devworks.com/en/services/online-stores-booking-systems",
+    canonical: "https://ml-devworks.com/en/services/online-stores-booking-systems",
     languages: {
-      "pl": "https://www.ml-devworks.com/uslugi/sklepy-internetowe-systemy-rezerwacji",
-      "en": "https://www.ml-devworks.com/en/services/online-stores-booking-systems",
+      "pl": "https://ml-devworks.com/uslugi/sklepy-internetowe-systemy-rezerwacji",
+      "en": "https://ml-devworks.com/en/services/online-stores-booking-systems",
     },
   },
   openGraph: {
     title: "Online Stores & Booking Systems - E-commerce & Online Booking | ML Devworks",
     description: "Complete e-commerce solutions and booking systems with payment integration, product management, and sales analytics.",
-    url: "https://www.ml-devworks.com/en/services/online-stores-booking-systems",
+    url: "https://ml-devworks.com/en/services/online-stores-booking-systems",
     type: "website",
     locale: "en_US",
   },
@@ -56,8 +56,8 @@ export default function OnlineStoresBookingSystemsPage() {
     "provider": {
       "@type": "Organization",
       "name": "ML Devworks",
-      "url": "https://www.ml-devworks.com",
-      "logo": "https://www.ml-devworks.com/primary-on-transparent-logo.png",
+      "url": "https://ml-devworks.com",
+      "logo": "https://ml-devworks.com/primary-on-transparent-logo.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+48-516-598-792",
@@ -82,13 +82,13 @@ export default function OnlineStoresBookingSystemsPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.ml-devworks.com/en"
+        "item": "https://ml-devworks.com/en"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Online Stores & Booking Systems",
-        "item": "https://www.ml-devworks.com/en/services/online-stores-booking-systems"
+        "item": "https://ml-devworks.com/en/services/online-stores-booking-systems"
       }
     ]
   };

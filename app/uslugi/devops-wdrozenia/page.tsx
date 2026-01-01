@@ -29,16 +29,16 @@ export const metadata: Metadata = {
     "server management",
   ],
   alternates: {
-    canonical: "https://www.ml-devworks.com/uslugi/devops-wdrozenia",
+    canonical: "https://ml-devworks.com/uslugi/devops-wdrozenia",
     languages: {
-      "pl": "https://www.ml-devworks.com/uslugi/devops-wdrozenia",
-      "en": "https://www.ml-devworks.com/en/services/devops-deployment",
+      "pl": "https://ml-devworks.com/uslugi/devops-wdrozenia",
+      "en": "https://ml-devworks.com/en/services/devops-deployment",
     },
   },
   openGraph: {
     title: "DevOps & Wdrożenia - Wdrożenia w Chmurze i CI/CD | ML Devworks",
     description: "Wdrożenie aplikacji w chmurze, konfiguracja CI/CD, monitoring, backup i pełne utrzymanie infrastruktury. Od developmentu do produkcji.",
-    url: "https://www.ml-devworks.com/uslugi/devops-wdrozenia",
+    url: "https://ml-devworks.com/uslugi/devops-wdrozenia",
     type: "website",
     locale: "pl_PL",
   },
@@ -58,8 +58,8 @@ export default function DevOpsWdrozeniaPage() {
     "provider": {
       "@type": "Organization",
       "name": "ML Devworks",
-      "url": "https://www.ml-devworks.com",
-      "logo": "https://www.ml-devworks.com/primary-on-transparent-logo.png",
+      "url": "https://ml-devworks.com",
+      "logo": "https://ml-devworks.com/primary-on-transparent-logo.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+48-516-598-792",
@@ -84,13 +84,13 @@ export default function DevOpsWdrozeniaPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Strona główna",
-        "item": "https://www.ml-devworks.com"
+        "item": "https://ml-devworks.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "DevOps & Wdrożenia",
-        "item": "https://www.ml-devworks.com/uslugi/devops-wdrozenia"
+        "item": "https://ml-devworks.com/uslugi/devops-wdrozenia"
       }
     ]
   };

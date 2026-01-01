@@ -22,16 +22,16 @@ export const metadata: Metadata = {
     "custom websites",
   ],
   alternates: {
-    canonical: "https://www.ml-devworks.com/en/services/web-development",
+    canonical: "https://ml-devworks.com/en/services/web-development",
     languages: {
-      "pl": "https://www.ml-devworks.com/uslugi/strony-internetowe",
-      "en": "https://www.ml-devworks.com/en/services/web-development",
+      "pl": "https://ml-devworks.com/uslugi/strony-internetowe",
+      "en": "https://ml-devworks.com/en/services/web-development",
     },
   },
   openGraph: {
     title: "Web Development - Professional Websites | ML Devworks",
     description: "We create professional websites tailored to your needs. Responsive, fast, and SEO-optimized.",
-    url: "https://www.ml-devworks.com/en/services/web-development",
+    url: "https://ml-devworks.com/en/services/web-development",
     type: "website",
     locale: "en_US",
   },
@@ -51,8 +51,8 @@ export default function WebDevelopmentPage() {
     "provider": {
       "@type": "Organization",
       "name": "ML Devworks",
-      "url": "https://www.ml-devworks.com",
-      "logo": "https://www.ml-devworks.com/primary-on-transparent-logo.png",
+      "url": "https://ml-devworks.com",
+      "logo": "https://ml-devworks.com/primary-on-transparent-logo.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+48-516-598-792",
@@ -77,13 +77,13 @@ export default function WebDevelopmentPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.ml-devworks.com/en"
+        "item": "https://ml-devworks.com/en"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Web Development",
-        "item": "https://www.ml-devworks.com/en/services/web-development"
+        "item": "https://ml-devworks.com/en/services/web-development"
       }
     ]
   };

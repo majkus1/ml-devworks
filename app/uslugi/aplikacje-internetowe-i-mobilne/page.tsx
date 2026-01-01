@@ -26,16 +26,16 @@ export const metadata: Metadata = {
     "mobile applications",
   ],
   alternates: {
-    canonical: "https://www.ml-devworks.com/uslugi/aplikacje-internetowe-i-mobilne",
+    canonical: "https://ml-devworks.com/uslugi/aplikacje-internetowe-i-mobilne",
     languages: {
-      "pl": "https://www.ml-devworks.com/uslugi/aplikacje-internetowe-i-mobilne",
-      "en": "https://www.ml-devworks.com/en/services/web-and-mobile-applications",
+      "pl": "https://ml-devworks.com/uslugi/aplikacje-internetowe-i-mobilne",
+      "en": "https://ml-devworks.com/en/services/web-and-mobile-applications",
     },
   },
   openGraph: {
     title: "Aplikacje Internetowe i Mobilne - Nowoczesne Aplikacje Webowe i Mobilne | ML Devworks",
     description: "Tworzymy nowoczesne aplikacje webowe i mobilne z wykorzystaniem najnowszych technologii. Szybkie, bezpieczne i skalowalne rozwiązania.",
-    url: "https://www.ml-devworks.com/uslugi/aplikacje-internetowe-i-mobilne",
+    url: "https://ml-devworks.com/uslugi/aplikacje-internetowe-i-mobilne",
     type: "website",
     locale: "pl_PL",
   },
@@ -55,8 +55,8 @@ export default function AplikacjeInternetoweIMobilnePage() {
     "provider": {
       "@type": "Organization",
       "name": "ML Devworks",
-      "url": "https://www.ml-devworks.com",
-      "logo": "https://www.ml-devworks.com/primary-on-transparent-logo.png",
+      "url": "https://ml-devworks.com",
+      "logo": "https://ml-devworks.com/primary-on-transparent-logo.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+48-516-598-792",
@@ -81,13 +81,13 @@ export default function AplikacjeInternetoweIMobilnePage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Strona główna",
-        "item": "https://www.ml-devworks.com"
+        "item": "https://ml-devworks.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Aplikacje Internetowe i Mobilne",
-        "item": "https://www.ml-devworks.com/uslugi/aplikacje-internetowe-i-mobilne"
+        "item": "https://ml-devworks.com/uslugi/aplikacje-internetowe-i-mobilne"
       }
     ]
   };

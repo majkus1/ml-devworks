@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.ml-devworks.com/sitemap.xml
+Sitemap: https://ml-devworks.com/sitemap.xml
 

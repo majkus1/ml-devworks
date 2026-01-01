@@ -3,6 +3,15 @@ import type { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
+  const hostname = request.headers.get("host") || "";
+  
+  // Wymuś przekierowanie z www na non-www (301 Permanent Redirect)
+  if (hostname === "www.ml-devworks.com" || hostname.startsWith("www.ml-devworks.com:")) {
+    const url = request.nextUrl.clone();
+    url.host = "ml-devworks.com";
+    return NextResponse.redirect(url, 301);
+  }
+  
   const response = NextResponse.next();
   
   // Ustaw header z pathname dla root layout

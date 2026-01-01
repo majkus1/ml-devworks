@@ -8,7 +8,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin", "latin-ext"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.ml-devworks.com"),
+  metadataBase: new URL("https://ml-devworks.com"),
   title: "ML Devworks - Quality by Us. Speed by AI.",
   description: "Tworzymy profesjonalne rozwiązania cyfrowe dla Twojego biznesu. Od prostych stron internetowych po zaawansowane aplikacje i wdrożenia w chmurze. Quality by Us. Speed by AI.",
   keywords: ["strony internetowe", "aplikacje webowe", "aplikacje mobilne", "sklepy internetowe", "devops", "wdrożenia w chmurze", "cloud deployment", "development"],
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pl_PL",
-    url: "https://www.ml-devworks.com",
+    url: "https://ml-devworks.com",
     siteName: "ML Devworks",
     title: "ML Devworks - Quality by Us. Speed by AI.",
     description: "Tworzymy profesjonalne rozwiązania cyfrowe dla Twojego biznesu. Od prostych stron internetowych po zaawansowane aplikacje i wdrożenia w chmurze. Quality by Us. Speed by AI.",
@@ -40,26 +40,26 @@ export const metadata: Metadata = {
     description: "Tworzymy profesjonalne rozwiązania cyfrowe dla Twojego biznesu. Od prostych stron internetowych po zaawansowane aplikacje i wdrożenia w chmurze. Quality by Us. Speed by AI.",
   },
   alternates: {
-    canonical: "https://www.ml-devworks.com",
+    canonical: "https://ml-devworks.com",
     languages: {
-      "pl": "https://www.ml-devworks.com",
-      "en": "https://www.ml-devworks.com/en",
+      "pl": "https://ml-devworks.com",
+      "en": "https://ml-devworks.com/en",
     },
   },
   category: "Technology",
   classification: "Web Development Services",
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.ico", sizes: "any" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "https://ml-devworks.com/favicon.ico", sizes: "any" },
+      { url: "https://ml-devworks.com/icon.ico", sizes: "any" },
+      { url: "https://ml-devworks.com/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "https://ml-devworks.com/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "https://ml-devworks.com/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
     ],
     apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "https://ml-devworks.com/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
-    shortcut: "/favicon.ico",
+    shortcut: "https://ml-devworks.com/favicon.ico",
   },
   manifest: "/site.webmanifest",
   other: {

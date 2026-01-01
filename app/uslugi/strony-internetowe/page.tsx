@@ -22,21 +22,21 @@ export const metadata: Metadata = {
     "strony internetowe dla firm",
   ],
   alternates: {
-    canonical: "https://www.ml-devworks.com/uslugi/strony-internetowe",
+    canonical: "https://ml-devworks.com/uslugi/strony-internetowe",
     languages: {
-      "pl": "https://www.ml-devworks.com/uslugi/strony-internetowe",
-      "en": "https://www.ml-devworks.com/en/services/web-development",
+      "pl": "https://ml-devworks.com/uslugi/strony-internetowe",
+      "en": "https://ml-devworks.com/en/services/web-development",
     },
   },
   openGraph: {
     title: "Strony Internetowe - Profesjonalne Strony WWW | ML Devworks",
     description: "Tworzymy profesjonalne strony internetowe dostosowane do Twoich potrzeb. Responsywne, szybkie i zoptymalizowane pod SEO.",
-    url: "https://www.ml-devworks.com/uslugi/strony-internetowe",
+    url: "https://ml-devworks.com/uslugi/strony-internetowe",
     type: "website",
     locale: "pl_PL",
     images: [
       {
-        url: "https://www.ml-devworks.com/psi.png",
+        url: "https://ml-devworks.com/psi.png",
         width: 1200,
         height: 630,
         alt: "ML Devworks - Strony Internetowe",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Strony Internetowe - Profesjonalne Strony WWW | ML Devworks",
     description: "Tworzymy profesjonalne strony internetowe dostosowane do Twoich potrzeb. Responsywne, szybkie i zoptymalizowane pod SEO.",
-    images: ["https://www.ml-devworks.com/psi.png"],
+    images: ["https://ml-devworks.com/psi.png"],
   },
 };
 
@@ -60,8 +60,8 @@ export default function StronyInternetowePage() {
     "provider": {
       "@type": "Organization",
       "name": "ML Devworks",
-      "url": "https://www.ml-devworks.com",
-      "logo": "https://www.ml-devworks.com/primary-on-transparent-logo.png",
+      "url": "https://ml-devworks.com",
+      "logo": "https://ml-devworks.com/primary-on-transparent-logo.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+48-516-598-792",
@@ -86,13 +86,13 @@ export default function StronyInternetowePage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Strona główna",
-        "item": "https://www.ml-devworks.com"
+        "item": "https://ml-devworks.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Strony Internetowe",
-        "item": "https://www.ml-devworks.com/uslugi/strony-internetowe"
+        "item": "https://ml-devworks.com/uslugi/strony-internetowe"
       }
     ]
   };
