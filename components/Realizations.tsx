@@ -295,7 +295,7 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
                 </div>
               </div>
             </div>
-            <p className="text-gray-300 text-sm leading-relaxed line-clamp-3">{review.text}</p>
+            <p className="text-gray-300 text-sm leading-relaxed">{review.text}</p>
             <span className="text-xs text-gray-500 mt-2 block">{review.relativeTime}</span>
           </motion.article>
         ))}

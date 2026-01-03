@@ -225,7 +225,7 @@ function ReviewCard({
           </div>
         </div>
       </div>
-      <p className="text-gray-300 leading-relaxed line-clamp-4">{review.text}</p>
+      <p className="text-gray-300 leading-relaxed">{review.text}</p>
       {review.authorUrl && (
         <a
           href={review.authorUrl}
