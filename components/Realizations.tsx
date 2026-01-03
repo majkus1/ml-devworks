@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 // Ikony technologii zostały usunięte - użyj <img> tagów w miejscach oznaczonych TODO
 
 interface RealizationsProps {
@@ -46,12 +46,12 @@ const projects: Project[] = [
     },
     url: "https://czatsportowy.pl",
     shortDescription: {
-      pl: "Platforma czatu sportowego z analizą meczów wspieraną przez AI. Czat na żywo, przewidywania AI, statystyki piłkarskie w czasie rzeczywistym.",
-      en: "Live sports chat platform with AI-powered match analysis. Real-time chat, AI predictions, live football statistics.",
+      pl: "Platforma czatu sportowego z analizą meczów wspieraną przez AI. Czat na żywo, przewidywania AI, raport AI analizujący najbliższe mecze oraz statystyki piłkarskie w czasie rzeczywistym.",
+      en: "Live sports chat platform with AI-powered match analysis. Real-time chat, AI predictions, AI report analyzing upcoming matches, and live football statistics.",
     },
     longDescription: {
-      pl: "Platforma czatu sportowego z analizą meczów wspieraną przez AI. Czat na żywo, przewidywania AI, statystyki piłkarskie w czasie rzeczywistym. Oferuje czat na żywo podczas meczów i przed meczami, prywatną komunikację między użytkownikami oraz wielojęzyczne wsparcie (PL/EN). Integracja z AI zapewnia szczegółową analizę meczów i przewidywania. Aplikacja zawiera interaktywne widgety ze statystykami meczów, wyszukiwanie meczów oraz dynamiczny wybór daty.",
-      en: "Live sports chat platform with AI-powered match analysis. Real-time chat, AI predictions, live football statistics. Offers live chat during and before matches, private user-to-user communication, and multi-language support (PL/EN). AI integration provides detailed match analysis and predictions. The app includes interactive widgets with match statistics, match search, and dynamic date selection.",
+      pl: "Platforma czatu sportowego z analizą meczów wspieraną przez AI. Oferuje czat na żywo podczas meczów i przed meczami, prywatną komunikację między użytkownikami oraz wielojęzyczne wsparcie (PL/EN). Integracja z AI zapewnia szczegółową analizę meczów i przewidywania. System oferuje raport AI, który analizuje najbliższe mecze i na podstawie statystyk drużyn generuje szczegółową analizę najbliższych 15 meczów. Aplikacja zawiera interaktywne widgety ze statystykami meczów, wyszukiwanie meczów oraz dynamiczny wybór daty.",
+      en: "Live sports chat platform with AI-powered match analysis. Offers live chat during and before matches, private user-to-user communication, and multi-language support (PL/EN). AI integration provides detailed match analysis and predictions. The system features an AI report that analyzes upcoming matches and generates detailed analysis of the next 15 matches based on team statistics. The app includes interactive widgets with match statistics, match search, and dynamic date selection.",
     },
     technologies: [
       { name: "Next.js" },
@@ -116,12 +116,12 @@ const projects: Project[] = [
     },
     url: "https://planopia.pl",
     shortDescription: {
-      pl: "Kompleksowy system SaaS do zarządzania czasem pracy i urlopami dla przedsiębiorstw. Śledzenie czasu, zarządzanie urlopami, koordynacja zespołu z architekturą multi-tenant i kontrolą dostępu opartą na rolach.",
-      en: "Comprehensive SaaS solution for enterprise time tracking, leave management, and team coordination with multi-tenant architecture and role-based access control.",
+      pl: "Kompleksowy system SaaS do zarządzania czasem pracy i urlopami dla przedsiębiorstw. Śledzenie czasu, zarządzanie urlopami, czat zespołowy i działowy, tablica zadań, grafik pracy oraz kontrola dostępu oparta na rolach z dużą swobodą konfiguracji.",
+      en: "Comprehensive SaaS solution for enterprise time tracking, leave management, and team coordination. Team and department chat, task board, work schedule management, role-based access control with high configuration flexibility.",
     },
     longDescription: {
-      pl: "Kompleksowy system SaaS do zarządzania czasem pracy i urlopami dla przedsiębiorstw. Śledzenie czasu, zarządzanie urlopami, koordynacja zespołu z architekturą multi-tenant i kontrolą dostępu opartą na rolach. System składa się z zoptymalizowanych pod SEO stron marketingowych z blogiem oraz aplikacji biznesowej do śledzenia czasu pracy i zarządzania urlopami. Funkcje obejmują codzienne logowanie czasu z nadgodzinami, widok kalendarza miesięcznego, eksport PDF raportów, system wniosków urlopowych z zatwierdzaniem, planowanie urlopów w kalendarzu zespołu oraz zarządzanie użytkownikami i działami. Pełna responsywność i wsparcie dla wszystkich urządzeń.",
-      en: "Comprehensive SaaS solution for enterprise time tracking, leave management, and team coordination with multi-tenant architecture and role-based access control. The system consists of SEO-optimized marketing pages with blog and a business application for time tracking and leave management. Features include daily time logging with overtime, monthly calendar view, PDF export for reports, leave request system with approvals, team leave planning calendar, and user and department management. Fully responsive with support for all devices.",
+      pl: "Kompleksowy system SaaS do zarządzania czasem pracy i urlopami dla przedsiębiorstw. System składa się z zoptymalizowanych pod SEO stron marketingowych z blogiem oraz aplikacji biznesowej do śledzenia czasu pracy i zarządzania urlopami. Funkcje obejmują codzienne logowanie czasu z nadgodzinami, widok kalendarza miesięcznego, eksport PDF wniosków urlopowych, generowanie ewidencji czasu pracy do pliku Excela, system wniosków urlopowych z zatwierdzaniem i powiadomieniami oraz planowanie urlopów w kalendarzu zespołu. System oferuje również czat zespołowy i działowy do komunikacji, tablicę zadań do zarządzania projektami oraz grafik pracy. Podział na role (pracownik, przełożony, admin, HR) z dużą swobodą konfiguracji i prostym interfejsem zapewnia elastyczne zarządzanie dostępem i uprawnieniami. Pełna responsywność i wsparcie dla wszystkich urządzeń.",
+      en: "Comprehensive SaaS solution for enterprise time tracking, leave management, and team coordination. The system consists of SEO-optimized marketing pages with blog and a business application for time tracking and leave management. Features include daily time logging with overtime, monthly calendar view, PDF export for leave requests, Excel export for time records, leave request system with approvals and notifications, and team leave planning calendar. The system also offers team and department chat for communication, task board for project management, and work schedule management. Role-based division (employee, supervisor, admin, HR) with high configuration flexibility and simple interface ensures flexible access and permission management. Fully responsive with support for all devices.",
     },
     technologies: [
       { name: "React" },
@@ -143,6 +143,180 @@ const projects: Project[] = [
     },
   },
 ];
+
+// Simple Star Icon Component for reviews
+function StarIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+    </svg>
+  );
+}
+
+interface Review {
+  authorName: string;
+  authorUrl?: string;
+  profilePhotoUrl?: string;
+  rating: number;
+  relativeTime: string;
+  text: string;
+  time: number;
+}
+
+// Compact Google Reviews Component for Realizations section
+function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
+  const [reviews, setReviews] = useState<Review[]>([]);
+  const [overallRating, setOverallRating] = useState<number | null>(null);
+  const [totalRatings, setTotalRatings] = useState<number | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const reviewsRef = useRef(null);
+  const isReviewsInView = useInView(reviewsRef, { once: true, margin: "-100px" });
+
+  useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        // Pass language parameter to API
+        const response = await fetch(`/api/google-reviews?lang=${lang}`);
+        const data = await response.json();
+        
+        if (response.ok && data.reviews && data.reviews.length > 0) {
+          setReviews(data.reviews.slice(0, 3)); // Show only 3 reviews
+          setOverallRating(data.overallRating);
+          setTotalRatings(data.totalRatings);
+        } else {
+          // No reviews or error - component will hide itself
+          console.log("No reviews found or API error:", data);
+        }
+      } catch (err) {
+        console.error("Error fetching reviews:", err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchReviews();
+  }, [lang]);
+
+  if (isLoading || reviews.length === 0) {
+    return null;
+  }
+
+  const content = {
+    pl: {
+      title: "Opinie Klientów",
+      viewOnGoogle: "Zobacz wszystkie opinie na Google",
+      reviews: "opinii",
+    },
+    en: {
+      title: "Client Reviews",
+      viewOnGoogle: "View all reviews on Google",
+      reviews: "reviews",
+    },
+  };
+
+  const t = content[lang];
+
+  return (
+    <motion.div
+      id="reviews"
+      ref={reviewsRef}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8, delay: 0.3 }}
+      className="mt-16 border-primary/20 scroll-mt-[100px]"
+      style={{ scrollMarginTop: "100px" }}
+    >
+      <h3 className="text-3xl font-bold text-center mb-6">{t.title}</h3>
+      
+      {overallRating && totalRatings && (
+        <div className="flex items-center justify-center gap-4 mb-8">
+          <div className="flex items-center gap-2">
+            <div className="flex">
+              {[...Array(5)].map((_, i) => (
+                <StarIcon
+                  key={i}
+                  className={`w-5 h-5 ${
+                    i < Math.round(overallRating)
+                      ? "text-yellow-400"
+                      : "text-gray-600"
+                  }`}
+                />
+              ))}
+            </div>
+            <span className="text-xl font-bold">{overallRating.toFixed(1)}</span>
+          </div>
+          <span className="text-gray-400">
+            ({totalRatings} {t.reviews})
+          </span>
+        </div>
+      )}
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        {reviews.map((review, index) => (
+          <motion.article
+            key={review.time}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+            className="bg-background-lighter border border-primary/20 rounded-xl p-5"
+          >
+            <div className="flex items-start gap-3 mb-3">
+              {review.profilePhotoUrl ? (
+                <img
+                  src={review.profilePhotoUrl}
+                  alt={review.authorName}
+                  className="w-10 h-10 rounded-full object-cover"
+                />
+              ) : (
+                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                  <span className="text-primary font-semibold text-sm">
+                    {review.authorName.charAt(0).toUpperCase()}
+                  </span>
+                </div>
+              )}
+              <div className="flex-1">
+                <h4 className="font-semibold text-white text-sm mb-1">{review.authorName}</h4>
+                <div className="flex items-center gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <StarIcon
+                      key={i}
+                      className={`w-3 h-3 ${
+                        i < review.rating ? "text-yellow-400" : "text-gray-600"
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+            <p className="text-gray-300 text-sm leading-relaxed line-clamp-3">{review.text}</p>
+            <span className="text-xs text-gray-500 mt-2 block">{review.relativeTime}</span>
+          </motion.article>
+        ))}
+      </div>
+
+      <div className="text-center">
+        <a
+          href="https://www.google.com/maps/place/ML+Devworks/@50.0624834,19.9337611,17z/data=!3m1!4b1!4m6!3m5!1s0x425626465742ffe9:0xa1672c4591c41c29!8m2!3d50.06248!4d19.936336!16s%2Fg%2F11yrt8l9fl?entry=ttu"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-primary hover:text-primary-light transition-colors text-sm"
+        >
+          {t.viewOnGoogle}
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </div>
+    </motion.div>
+  );
+}
 
 export default function Realizations({ lang = "pl" }: RealizationsProps) {
   const headingRef = useRef(null);
@@ -208,6 +382,9 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
               />
             ))}
           </div>
+
+          {/* Google Reviews Section */}
+          <GoogleReviewsInline lang={lang} />
         </div>
       </section>
 
