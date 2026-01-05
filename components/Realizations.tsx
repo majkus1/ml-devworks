@@ -257,7 +257,7 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
         </div>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+      <div className="flex flex-wrap justify-center gap-6 mb-6">
         {reviews.map((review, index) => (
           <motion.article
             key={review.time}
@@ -265,7 +265,7 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-            className="bg-background-lighter border border-primary/20 rounded-xl p-5"
+            className="bg-background-lighter border border-primary/20 rounded-xl p-5 flex-1 min-w-[280px] max-w-[380px]"
           >
             <div className="flex items-start gap-3 mb-3">
               {review.profilePhotoUrl ? (

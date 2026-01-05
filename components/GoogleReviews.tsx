@@ -139,7 +139,7 @@ export default function GoogleReviews({ lang = "pl", googleMapsUrl }: GoogleRevi
           )}
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {reviews.map((review, index) => (
             <ReviewCard key={review.time} review={review} index={index} lang={lang} />
           ))}
@@ -192,7 +192,7 @@ function ReviewCard({
         delay: index * 0.1,
         ease: [0.16, 1, 0.3, 1],
       }}
-      className="bg-background-lighter border border-primary/20 rounded-xl p-6 hover:border-primary/40 transition-colors"
+      className="bg-background-lighter border border-primary/20 rounded-xl p-6 hover:border-primary/40 transition-colors flex-1 min-w-[280px] max-w-[380px]"
     >
       <div className="flex items-start gap-4 mb-4">
         {review.profilePhotoUrl ? (
