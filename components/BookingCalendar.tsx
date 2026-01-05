@@ -39,7 +39,7 @@ export default function BookingCalendar({ lang = "pl" }: BookingCalendarProps) {
             : "Prefer to talk online?"}
         </h2>
         <h3 className="text-2xl md:text-3xl font-bold mb-2 text-left text-primary">{t.title}</h3>
-        <p className="text-xl text-gray-400 text-left">{t.subtitle}</p>
+        <p className="text-base text-gray-400 text-left" style={{ fontSize: '16px' }}>{t.subtitle}</p>
       </div>
     </motion.section>
   );
