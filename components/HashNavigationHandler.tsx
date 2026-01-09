@@ -191,7 +191,7 @@ export default function HashNavigationHandler() {
       (window as any).__pendingHash = null;
       // Restore hash in URL
       if (window.history.replaceState) {
-        window.history.replaceState(null, null, pendingHash);
+        window.history.replaceState(null, "", pendingHash);
       }
       // Handle navigation with pending hash
       setTimeout(() => {
