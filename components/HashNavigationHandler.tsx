@@ -42,8 +42,8 @@ export default function HashNavigationHandler() {
         const scrollToHash = () => {
           const targetId = hash.substring(1);
           
-          // Only scroll to contact, not to reviews
-          if (targetId !== "contact") {
+          // Block only old #reviews (if it still exists), allow all other sections
+          if (targetId === "reviews") {
             // Restore scroll behavior
             html.style.scrollBehavior = originalHtmlScrollBehavior || "";
             body.style.scrollBehavior = originalBodyScrollBehavior || "";
@@ -83,10 +83,11 @@ export default function HashNavigationHandler() {
           clearTimeout(scrollTimeoutRef.current);
         }
 
-        // Watch for DOM changes (e.g., when reviews section loads)
+        // Watch for DOM changes (e.g., when reviews section loads and affects contact section)
         const realizationsSection = document.getElementById("realizations");
         let observer: MutationObserver | null = null;
         
+        // Only watch for reviews loading if we're targeting contact section
         if (realizationsSection && hash === "#contact") {
           observer = new MutationObserver(() => {
             // If we're targeting contact and reviews section just appeared, re-scroll
