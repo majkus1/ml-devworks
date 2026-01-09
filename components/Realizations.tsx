@@ -50,8 +50,8 @@ const projects: Project[] = [
       en: "Live sports chat platform with AI-powered match analysis. Real-time chat, AI predictions, AI report analyzing upcoming matches, and live football statistics.",
     },
     longDescription: {
-      pl: "Platforma czatu sportowego z analizą meczów wspieraną przez AI. Oferuje czat na żywo podczas meczów i przed meczami, prywatną komunikację między użytkownikami oraz wielojęzyczne wsparcie (PL/EN). Integracja z AI zapewnia szczegółową analizę meczów i przewidywania. System oferuje raport AI, który analizuje najbliższe mecze i na podstawie statystyk drużyn generuje szczegółową analizę najbliższych 15 meczów. Aplikacja zawiera interaktywne widgety ze statystykami meczów, wyszukiwanie meczów oraz dynamiczny wybór daty.",
-      en: "Live sports chat platform with AI-powered match analysis. Offers live chat during and before matches, private user-to-user communication, and multi-language support (PL/EN). AI integration provides detailed match analysis and predictions. The system features an AI report that analyzes upcoming matches and generates detailed analysis of the next 15 matches based on team statistics. The app includes interactive widgets with match statistics, match search, and dynamic date selection.",
+      pl: "Platforma czatu sportowego z analizą meczów wspieraną przez AI. Czat na żywo, przewidywania AI, raport AI analizujący najbliższe mecze oraz statystyki piłkarskie w czasie rzeczywistym. Oferuje czat na żywo podczas meczów i przed meczami, prywatną komunikację między użytkownikami oraz wielojęzyczne wsparcie (PL/EN). Integracja z AI zapewnia szczegółową analizę meczów i przewidywania. System oferuje raport AI, który analizuje najbliższe mecze i na podstawie statystyk drużyn generuje szczegółową analizę najbliższych 15 meczów. Aplikacja zawiera interaktywne widgety ze statystykami meczów, wyszukiwanie meczów oraz dynamiczny wybór daty.",
+      en: "Live sports chat platform with AI-powered match analysis. Real-time chat, AI predictions, AI report analyzing upcoming matches, and live football statistics. Offers live chat during and before matches, private user-to-user communication, and multi-language support (PL/EN). AI integration provides detailed match analysis and predictions. The system features an AI report that analyzes upcoming matches and generates detailed analysis of the next 15 matches based on team statistics. The app includes interactive widgets with match statistics, match search, and dynamic date selection.",
     },
     technologies: [
       { name: "Next.js" },
@@ -202,7 +202,20 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
     fetchReviews();
   }, [lang]);
 
-  if (isLoading || reviews.length === 0) {
+  // Reserve space for reviews section even when loading to prevent layout shift
+  if (isLoading) {
+    return (
+      <motion.div
+        id="client-reviews"
+        ref={reviewsRef}
+        className="mt-16 border-primary/20 scroll-mt-[100px] min-h-[400px]"
+        style={{ scrollMarginTop: "100px" }}
+        aria-label={lang === "pl" ? "Ładowanie opinii klientów" : "Loading client reviews"}
+      />
+    );
+  }
+
+  if (reviews.length === 0) {
     return null;
   }
 
@@ -223,7 +236,7 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
 
   return (
     <motion.div
-      id="reviews"
+      id="client-reviews"
       ref={reviewsRef}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}

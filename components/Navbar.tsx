@@ -49,53 +49,7 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
     }
   }, [isMobileMenuOpen]);
 
-  // Handle hash navigation after page load (when coming from subpage)
-  useEffect(() => {
-    const handleHashNavigation = () => {
-      const hash = window.location.hash;
-      const isHomePage = pathname === "/" || pathname === "/en";
-      
-      if (hash && isHomePage) {
-        // Wait for page to fully load and animations to start
-        const scrollToHash = () => {
-          const element = document.querySelector(hash);
-          if (element) {
-            const navbarHeight = 80;
-            const offset = navbarHeight + 20; // 100px total offset
-            const elementPosition = element.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: "smooth",
-            });
-            return true; // Element found and scrolled
-          }
-          return false; // Element not found yet
-        };
-
-        // Try immediately
-        if (scrollToHash()) return;
-
-        // Retry after a short delay (for animations to initialize)
-        const timeout1 = setTimeout(() => {
-          if (scrollToHash()) return;
-          
-          // Retry again after longer delay (for lazy-loaded content)
-          const timeout2 = setTimeout(() => {
-            scrollToHash();
-          }, 500);
-          
-          return () => clearTimeout(timeout2);
-        }, 200);
-
-        return () => clearTimeout(timeout1);
-      }
-    };
-
-    // Run on mount and when pathname changes
-    handleHashNavigation();
-  }, [pathname]);
+  // Hash navigation is now handled by HashNavigationHandler component
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -121,6 +75,9 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
       }
     } else {
       // On subpage, navigate to homepage with hash
+      // Store hash to prevent browser auto-scroll before navigation
+      (window as any).__pendingHash = href;
+      // Navigate to homepage - hash will be handled by HashNavigationHandler
       window.location.href = `${homePath}${href}`;
     }
     setIsMobileMenuOpen(false);
@@ -130,13 +87,13 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
     pl: [
       { href: "#services", label: "Usługi" },
       { href: "#realizations", label: "Realizacje" },
-      { href: "#reviews", label: "Opinie" },
+      { href: "#client-reviews", label: "Opinie" },
       { href: "#contact", label: "Kontakt" },
     ],
     en: [
       { href: "#services", label: "Services" },
       { href: "#realizations", label: "Realizations" },
-      { href: "#reviews", label: "Reviews" },
+      { href: "#client-reviews", label: "Reviews" },
       { href: "#contact", label: "Contact" },
     ],
   };

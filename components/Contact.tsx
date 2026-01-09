@@ -104,7 +104,7 @@ export default function Contact({ lang = "pl" }: ContactProps) {
   };
 
   return (
-    <section id="contact" className="pt-20 pb-20 px-4 relative scroll-mt-[20px]" aria-labelledby="contact-heading">
+    <section id="contact" className="pt-20 pb-20 px-4 relative scroll-mt-[100px]" style={{ scrollMarginTop: '100px' }} aria-labelledby="contact-heading">
       <div className="max-w-4xl mx-auto">
         <motion.header
           ref={headerRef}

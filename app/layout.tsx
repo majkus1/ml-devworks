@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import CookieBanner from "@/components/CookieBanner";
+import HashNavigationHandler from "@/components/HashNavigationHandler";
 import { headers } from "next/headers";
 import "./globals.css";
 
@@ -79,6 +80,33 @@ export default async function RootLayout({
   return (
     <html lang={lang} className="scroll-smooth overflow-x-hidden">
       <body className={`${inter.className} overflow-x-hidden`}>
+        {/* Prevent default hash scroll behavior - runs before React hydration */}
+        <Script
+          id="prevent-hash-scroll"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                // Only run on client side
+                if (typeof window === 'undefined') return;
+                
+                // Force scroll to top immediately - do this multiple times to ensure it sticks
+                window.scrollTo(0, 0);
+                setTimeout(function() { window.scrollTo(0, 0); }, 0);
+                setTimeout(function() { window.scrollTo(0, 0); }, 10);
+                
+                if (window.location.hash) {
+                  // Store hash for later use (will be handled by HashNavigationHandler after hydration)
+                  window.__pendingHash = window.location.hash;
+                  // Remove hash temporarily to prevent browser scroll
+                  if (window.history && window.history.replaceState) {
+                    window.history.replaceState(null, null, window.location.pathname);
+                  }
+                }
+              })();
+            `,
+          }}
+        />
         {/* Google Consent Mode - musi być pierwszy, przed GTM i GA */}
         <Script
           id="google-consent-mode"
@@ -122,6 +150,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         
         {children}
+        <HashNavigationHandler />
         <CookieBanner />
       </body>
     </html>
