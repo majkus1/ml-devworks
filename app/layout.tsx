@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description: "Tworzymy profesjonalne rozwiązania cyfrowe dla Twojego biznesu. Od prostych stron internetowych po zaawansowane aplikacje i wdrożenia w chmurze. Quality by Us. Speed by AI.",
     images: [
       {
-        url: "https://ml-devworks.com/psi.png",
+        url: "https://ml-devworks.com/ogimg.png",
         width: 1200,
         height: 630,
         alt: "ML Devworks - strony internetowe i aplikacje",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ML Devworks - Quality by Us. Speed by AI.",
     description: "Tworzymy profesjonalne rozwiązania cyfrowe dla Twojego biznesu. Od prostych stron internetowych po zaawansowane aplikacje i wdrożenia w chmurze. Quality by Us. Speed by AI.",
-    images: ["https://ml-devworks.com/psi.png"],
+    images: ["https://ml-devworks.com/ogimg.png"],
   },
   alternates: {
     canonical: "https://ml-devworks.com",

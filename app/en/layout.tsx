@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description: "We create professional digital solutions for your business. From simple websites to advanced applications and cloud deployments. Quality by Us. Speed by AI.",
     images: [
       {
-        url: "https://ml-devworks.com/psi.png",
+        url: "https://ml-devworks.com/ogimg.png",
         width: 1200,
         height: 630,
         alt: "ML Devworks - web development and apps",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ML Devworks - Quality by Us. Speed by AI.",
     description: "We create professional digital solutions for your business. From simple websites to advanced applications and cloud deployments. Quality by Us. Speed by AI.",
-    images: ["https://ml-devworks.com/psi.png"],
+    images: ["https://ml-devworks.com/ogimg.png"],
   },
   alternates: {
     canonical: "https://ml-devworks.com/en",
