@@ -15,6 +15,50 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "kompleksowe-uslugi-programistyczne-dla-firm-jak-dobrac-rozwiazanie-do-branzy",
+    slugEn: "comprehensive-software-services-for-businesses-how-to-match-solutions-to-industry",
+    title: {
+      pl: "Kompleksowe usługi programistyczne dla firm - jak dobrać rozwiązanie do branży?",
+      en: "Comprehensive Software Services for Businesses - How to Match Solutions to Your Industry?",
+    },
+    excerpt: {
+      pl: "Przewodnik dla firm, które chcą wyjść poza ogólną stronę WWW. Sprawdź, jak dobrać rozwiązania programistyczne do branży: aplikacje dla firm budowlanych, strony dla salonów fryzjerskich, systemy dla medycyny, transportu i usług.",
+      en: "A practical guide for companies that need more than a generic website. Learn how to match software solutions to industry needs: apps for construction firms, websites for salons, and systems for healthcare, logistics, and services.",
+    },
+    publishedAt: "2026-03-11",
+    readingTime: { pl: "11 min", en: "11 min" },
+    keywords: {
+      pl: [
+        "kompleksowe uslugi programistyczne dla firm",
+        "aplikacja dla firm budowlanych",
+        "strona dla salonu fryzjerskiego",
+        "system rezerwacji dla salonu beauty",
+        "aplikacja dla firmy transportowej",
+        "system zarzadzania klientami dla firmy uslugowej",
+        "panel administracyjny dla firmy",
+        "panel klienta dla firmy",
+        "strona internetowa dla gabinetu medycznego",
+        "oprogramowanie dla malych i srednich firm",
+        "dedykowane rozwiazania it dla biznesu",
+        "software house dla firm z roznych branż",
+      ],
+      en: [
+        "comprehensive software services for businesses",
+        "app for construction company",
+        "website for hair salon business",
+        "online booking system for beauty salon",
+        "software for transport and logistics company",
+        "customer management system for service business",
+        "admin dashboard for business operations",
+        "client portal development for companies",
+        "website for medical clinic",
+        "custom software solutions for small business",
+        "industry specific web application development",
+        "software agency for business digital transformation",
+      ],
+    },
+  },
+  {
     slug: "social-media-czy-wlasna-strona-firmowa-co-bardziej-sie-oplaca",
     slugEn: "social-media-vs-business-website-what-brings-better-results",
     title: {
