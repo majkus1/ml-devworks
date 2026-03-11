@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createServerClient } from "@/lib/supabase";
+import { getAvailableSlotsForDate, bookingConfig } from "@/lib/bookingConfig";
 
 export async function GET(request: NextRequest) {
   try {
@@ -13,7 +14,7 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    const date = new Date(dateStr);
+    const date = new Date(dateStr + "T12:00:00");
     if (isNaN(date.getTime())) {
       return NextResponse.json(
         { error: "Invalid date format" },
@@ -46,11 +47,21 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    const bookedSlots = (bookings || []).map((booking) => booking.datetime);
+    const bookedSlotsRaw = (bookings || []).map((b) => b.datetime);
+    const bookedSlots = bookedSlotsRaw.map((dt) => new Date(dt));
+    let availableSlots = getAvailableSlotsForDate(date, bookedSlots);
+
+    // Ukryj sloty, które są za wcześnie (min. 2h przed rezerwacją)
+    const now = new Date();
+    const minTime = new Date(
+      now.getTime() + bookingConfig.minHoursBeforeBooking * 60 * 60 * 1000
+    );
+    availableSlots = availableSlots.filter((slot) => slot > minTime);
 
     return NextResponse.json({
       date: dateStr,
-      bookedSlots,
+      availableSlots: availableSlots.map((s) => s.toISOString()),
+      bookedSlots: bookedSlotsRaw,
     });
   } catch (error) {
     console.error("Availability check error:", error);
