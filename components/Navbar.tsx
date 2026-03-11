@@ -47,7 +47,7 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
 
     const updateActiveSection = () => {
       const offset = 120;
-      let current = `#${SECTION_IDS[0]}`;
+      let current = "";
 
       for (const id of SECTION_IDS) {
         const el = document.getElementById(id);
