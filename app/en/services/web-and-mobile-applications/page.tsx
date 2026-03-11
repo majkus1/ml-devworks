@@ -5,44 +5,44 @@ import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Web and Mobile Applications - Modern Web & Mobile Apps | ML Devworks",
-  description: "We create modern web and mobile applications using the latest technologies. Fast, secure, and scalable solutions. iOS and Android apps. Native and cross-platform solutions for your business.",
+  title: "Web and Mobile App Development for Companies | ML Devworks",
+  description:
+    "We build custom web and mobile applications for business operations, customer portals, and digital products. iOS/Android and web delivery with secure architecture, scalable backend, and rapid iterations.",
   keywords: [
-    "web applications",
-    "mobile applications",
-    "mobile apps",
-    "iOS applications",
-    "Android applications",
-    "cross-platform apps",
-    "native apps",
-    "mobile app development",
-    "web app development",
-    "React Native",
-    "Next.js",
-    "business applications",
-    "enterprise apps",
-    "mobile app development Krakow",
-    "web apps",
-    "mobile apps",
+    "web application development company",
+    "mobile app development for business",
+    "custom web app development",
+    "ios android app development",
+    "customer portal development",
+    "internal business app development",
+    "mvp app development for startup",
+    "react native app development",
+    "next js web application",
+    "scalable software development",
+    "mobile app development krakow",
+    "secure web and mobile apps",
   ],
   alternates: {
     canonical: "https://ml-devworks.com/en/services/web-and-mobile-applications",
     languages: {
       "pl": "https://ml-devworks.com/uslugi/aplikacje-internetowe-i-mobilne",
       "en": "https://ml-devworks.com/en/services/web-and-mobile-applications",
+      "x-default": "https://ml-devworks.com/uslugi/aplikacje-internetowe-i-mobilne",
     },
   },
   openGraph: {
-    title: "Web and Mobile Applications - Modern Web & Mobile Apps | ML Devworks",
-    description: "We create modern web and mobile applications using the latest technologies. Fast, secure, and scalable solutions.",
+    title: "Web and Mobile App Development | ML Devworks",
+    description:
+      "Custom applications for business growth, built with scalable architecture and fast delivery.",
     url: "https://ml-devworks.com/en/services/web-and-mobile-applications",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web and Mobile Applications - Modern Web & Mobile Apps | ML Devworks",
-    description: "We create modern web and mobile applications using the latest technologies. Fast, secure, and scalable solutions.",
+    title: "Web and Mobile App Development | ML Devworks",
+    description:
+      "Custom applications for business growth, built with scalable architecture and fast delivery.",
   },
 };
 
@@ -303,9 +303,9 @@ export default function WebAndMobileApplicationsPage() {
                     2
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">UX/UI Design</h3>
+                    <h3 className="text-xl font-bold mb-2">UX/UI Implementation</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We create wireframes, mockups, and interface prototypes. We design user experience that is intuitive and user-friendly.
+                      We build intuitive, user-friendly interfaces. We focus on quality user experience.
                     </p>
                   </div>
                 </div>

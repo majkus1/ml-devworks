@@ -5,45 +5,44 @@ import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Fixes, Optimization & Maintenance - Technical Support for Projects | ML Devworks",
-  description: "Bug fixes in existing projects, performance optimization, SEO, and conversion optimization. Restore full functionality of your website or application. Comprehensive maintenance and technical support for your projects.",
+  title: "Website and App Fixes, Performance Optimization, Maintenance | ML Devworks",
+  description:
+    "We fix broken websites and web apps, improve Core Web Vitals, resolve SEO technical issues, and provide ongoing maintenance. Fast diagnostics, clear repair scope, and stable long-term support.",
   keywords: [
-    "bug fixing",
-    "website fixes",
-    "app fixes",
-    "performance optimization",
-    "SEO optimization",
-    "conversion optimization",
-    "maintenance",
-    "technical support",
-    "bug fixes",
-    "performance optimization",
-    "SEO optimization",
-    "maintenance services",
-    "app maintenance",
-    "IT support",
-    "project fixes",
-    "optimization Krakow",
-    "website maintenance",
+    "website bug fixing service",
+    "web app troubleshooting",
+    "core web vitals optimization service",
+    "technical seo fixes",
+    "website speed optimization",
+    "ongoing website maintenance",
+    "application maintenance support",
+    "legacy project rescue",
+    "post launch technical support",
+    "conversion rate optimization technical",
+    "software maintenance services krakow",
+    "production incident fixes",
   ],
   alternates: {
     canonical: "https://ml-devworks.com/en/services/fixes-optimization-maintenance",
     languages: {
       "pl": "https://ml-devworks.com/uslugi/naprawa-optymalizacja-utrzymanie",
       "en": "https://ml-devworks.com/en/services/fixes-optimization-maintenance",
+      "x-default": "https://ml-devworks.com/uslugi/naprawa-optymalizacja-utrzymanie",
     },
   },
   openGraph: {
-    title: "Fixes, Optimization & Maintenance - Technical Support for Projects | ML Devworks",
-    description: "Bug fixes in existing projects, performance optimization, SEO, and conversion optimization. Restore full functionality of your website or application.",
+    title: "Website and App Fixes, Optimization, Maintenance | ML Devworks",
+    description:
+      "Bug fixing, performance tuning, technical SEO repairs, and reliable ongoing support.",
     url: "https://ml-devworks.com/en/services/fixes-optimization-maintenance",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fixes, Optimization & Maintenance - Technical Support for Projects | ML Devworks",
-    description: "Bug fixes in existing projects, performance optimization, SEO, and conversion optimization. Restore full functionality of your website or application.",
+    title: "Website and App Fixes, Optimization, Maintenance | ML Devworks",
+    description:
+      "Bug fixing, performance tuning, technical SEO repairs, and reliable ongoing support.",
   },
 };
 

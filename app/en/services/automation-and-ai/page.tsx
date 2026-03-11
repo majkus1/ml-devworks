@@ -5,44 +5,44 @@ import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Automation & AI - Intelligent Automation Systems | ML Devworks",
-  description: "Intelligent AI agents and business process automation systems. Automate repetitive tasks and increase your business efficiency. Modern AI solutions for your company.",
+  title: "Business Process Automation and AI Agents | ML Devworks",
+  description:
+    "We implement AI agents and business process automation: workflow automations, customer support automation, and smart integrations across your stack. Reduce manual work and increase operational speed.",
   keywords: [
-    "automation",
-    "process automation",
-    "AI",
-    "artificial intelligence",
-    "AI agent",
-    "business automation",
-    "task automation",
-    "automation systems",
-    "AI chatbot",
-    "machine learning",
-    "workflow automation",
-    "RPA",
-    "robotic process automation",
-    "automation Krakow",
-    "AI for business",
-    "intelligent automation",
+    "business process automation",
+    "ai agents for business",
+    "workflow automation services",
+    "customer support automation",
+    "ai chatbot for website",
+    "rpa implementation services",
+    "integration automation for teams",
+    "ai automation consulting",
+    "automated lead qualification",
+    "operations automation with ai",
+    "automation services krakow",
+    "ai solutions for companies",
   ],
   alternates: {
     canonical: "https://ml-devworks.com/en/services/automation-and-ai",
     languages: {
       "pl": "https://ml-devworks.com/uslugi/automatyzacja-i-ai",
       "en": "https://ml-devworks.com/en/services/automation-and-ai",
+      "x-default": "https://ml-devworks.com/uslugi/automatyzacja-i-ai",
     },
   },
   openGraph: {
-    title: "Automation & AI - Intelligent Automation Systems | ML Devworks",
-    description: "Intelligent AI agents and business process automation systems. Automate repetitive tasks and increase your business efficiency.",
+    title: "Business Process Automation and AI Agents | ML Devworks",
+    description:
+      "AI-powered automation that reduces costs and accelerates your business workflows.",
     url: "https://ml-devworks.com/en/services/automation-and-ai",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Automation & AI - Intelligent Automation Systems | ML Devworks",
-    description: "Intelligent AI agents and business process automation systems. Automate repetitive tasks and increase your business efficiency.",
+    title: "Business Process Automation and AI Agents | ML Devworks",
+    description:
+      "AI-powered automation that reduces costs and accelerates your business workflows.",
   },
 };
 

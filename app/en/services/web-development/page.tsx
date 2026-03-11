@@ -5,40 +5,44 @@ import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Web Development - Professional Websites | ML Devworks",
-  description: "We create professional websites tailored to your needs. Responsive, fast, and SEO-optimized. From simple business cards to advanced portals. Check out our offer!",
+  title: "Web Development for Businesses - Fast, SEO-Ready Websites | ML Devworks",
+  description:
+    "We design and build business websites, service pages, and conversion-focused landing pages. Fast loading, technical SEO, clear structure, and contact flows that turn traffic into qualified leads.",
   keywords: [
-    "web development",
-    "website development",
-    "website design",
-    "business websites",
-    "corporate websites",
-    "responsive design",
-    "SEO websites",
-    "SEO optimization",
-    "web development Krakow",
+    "web development for businesses",
     "website development company",
-    "professional websites",
-    "custom websites",
+    "business website design and development",
+    "service company website",
+    "conversion focused landing page",
+    "technical seo website setup",
+    "responsive website development",
+    "fast loading website development",
+    "small business web development",
+    "custom website development agency",
+    "web development krakow",
+    "lead generation website development",
   ],
   alternates: {
     canonical: "https://ml-devworks.com/en/services/web-development",
     languages: {
       "pl": "https://ml-devworks.com/uslugi/strony-internetowe",
       "en": "https://ml-devworks.com/en/services/web-development",
+      "x-default": "https://ml-devworks.com/uslugi/strony-internetowe",
     },
   },
   openGraph: {
-    title: "Web Development - Professional Websites | ML Devworks",
-    description: "We create professional websites tailored to your needs. Responsive, fast, and SEO-optimized.",
+    title: "Web Development for Businesses | ML Devworks",
+    description:
+      "High-performing websites built for SEO, speed, and lead generation.",
     url: "https://ml-devworks.com/en/services/web-development",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Development - Professional Websites | ML Devworks",
-    description: "We create professional websites tailored to your needs. Responsive, fast, and SEO-optimized.",
+    title: "Web Development for Businesses | ML Devworks",
+    description:
+      "High-performing websites built for SEO, speed, and lead generation.",
   },
 };
 
@@ -263,18 +267,6 @@ export default function WebDevelopmentPage() {
                     2
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">Design</h3>
-                    <p className="text-gray-300 leading-relaxed">
-                      We create a graphic design and website structure. We present the concept and refine details according to your feedback.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-background font-bold text-xl">
-                    3
-                  </div>
-                  <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Development</h3>
                     <p className="text-gray-300 leading-relaxed">
                       We implement the project using the latest technologies. We create high-quality, optimized, and maintainable code.
@@ -284,7 +276,7 @@ export default function WebDevelopmentPage() {
 
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-background font-bold text-xl">
-                    4
+                    3
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Testing & Optimization</h3>
@@ -296,7 +288,7 @@ export default function WebDevelopmentPage() {
 
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-background font-bold text-xl">
-                    5
+                    4
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Deployment & Support</h3>

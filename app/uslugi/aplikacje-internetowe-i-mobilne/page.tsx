@@ -5,44 +5,44 @@ import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Aplikacje Internetowe i Mobilne - Nowoczesne Aplikacje Webowe i Mobilne | ML Devworks",
-  description: "Tworzymy nowoczesne aplikacje webowe i mobilne z wykorzystaniem najnowszych technologii. Szybkie, bezpieczne i skalowalne rozwiązania. Aplikacje na iOS i Android. Natywne i cross-platform rozwiązania dla Twojego biznesu.",
+  title: "Aplikacje Webowe i Mobilne dla Firm - Projektowanie i Wdrozenie | ML Devworks",
+  description:
+    "Tworzymy aplikacje internetowe i mobilne dla biznesu: panele klienta, systemy zamowien, aplikacje iOS/Android i MVP startup. Stawiamy na skalowalnosc, bezpieczenstwo i szybkie wdrozenie.",
   keywords: [
-    "aplikacje internetowe",
-    "aplikacje mobilne",
-    "aplikacje webowe",
-    "aplikacje iOS",
-    "aplikacje Android",
-    "aplikacje cross-platform",
-    "aplikacje natywne",
-    "tworzenie aplikacji mobilnych",
-    "tworzenie aplikacji webowych",
-    "React Native",
-    "Next.js",
-    "aplikacje biznesowe",
-    "aplikacje dla firm",
-    "aplikacje mobilne Kraków",
-    "web applications",
-    "mobile applications",
+    "aplikacje webowe dla firm",
+    "aplikacje mobilne dla biznesu",
+    "tworzenie aplikacji internetowych",
+    "tworzenie aplikacji ios android",
+    "aplikacja do obslugi klientow",
+    "system zamowien online",
+    "panel administracyjny aplikacji",
+    "mvp dla startupu",
+    "aplikacje react native",
+    "aplikacje next js",
+    "skalowalne aplikacje biznesowe",
+    "aplikacje mobilne krakow",
   ],
   alternates: {
     canonical: "https://ml-devworks.com/uslugi/aplikacje-internetowe-i-mobilne",
     languages: {
       "pl": "https://ml-devworks.com/uslugi/aplikacje-internetowe-i-mobilne",
       "en": "https://ml-devworks.com/en/services/web-and-mobile-applications",
+      "x-default": "https://ml-devworks.com/uslugi/aplikacje-internetowe-i-mobilne",
     },
   },
   openGraph: {
-    title: "Aplikacje Internetowe i Mobilne - Nowoczesne Aplikacje Webowe i Mobilne | ML Devworks",
-    description: "Tworzymy nowoczesne aplikacje webowe i mobilne z wykorzystaniem najnowszych technologii. Szybkie, bezpieczne i skalowalne rozwiązania.",
+    title: "Aplikacje Webowe i Mobilne dla Firm | ML Devworks",
+    description:
+      "Projektujemy i wdrazamy aplikacje web/mobile dla biznesu: od MVP po rozwoj gotowego produktu.",
     url: "https://ml-devworks.com/uslugi/aplikacje-internetowe-i-mobilne",
     type: "website",
     locale: "pl_PL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aplikacje Internetowe i Mobilne - Nowoczesne Aplikacje Webowe i Mobilne | ML Devworks",
-    description: "Tworzymy nowoczesne aplikacje webowe i mobilne z wykorzystaniem najnowszych technologii. Szybkie, bezpieczne i skalowalne rozwiązania.",
+    title: "Aplikacje Webowe i Mobilne dla Firm | ML Devworks",
+    description:
+      "Projektujemy i wdrazamy aplikacje web/mobile dla biznesu: od MVP po rozwoj gotowego produktu.",
   },
 };
 
@@ -303,9 +303,9 @@ export default function AplikacjeInternetoweIMobilnePage() {
                     2
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">Projektowanie UX/UI</h3>
+                    <h3 className="text-xl font-bold mb-2">Implementacja UX/UI</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Tworzymy wireframe&apos;y, mockupy i prototypy interfejsu. Projektujemy user experience, który jest intuicyjny i przyjazny dla użytkownika.
+                      Budujemy interfejs, który jest intuicyjny i przyjazny dla użytkownika. Dbamy o wysoką jakość doświadczenia użytkownika.
                     </p>
                   </div>
                 </div>

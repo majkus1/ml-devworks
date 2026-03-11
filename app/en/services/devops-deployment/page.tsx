@@ -5,46 +5,44 @@ import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title: "DevOps & Deployment - Cloud Deployment & CI/CD | ML Devworks",
-  description: "Cloud application deployment, CI/CD configuration, monitoring, backup, and full infrastructure maintenance. From development to production. Professional DevOps services for your project.",
+  title: "DevOps Services and Cloud Deployment (CI/CD) | ML Devworks",
+  description:
+    "We improve release reliability with DevOps services: CI/CD pipelines, Docker/Kubernetes, cloud deployment, monitoring, backups, and infrastructure hardening. Faster releases with fewer production incidents.",
   keywords: [
-    "devops",
-    "deployment",
-    "cloud deployment",
-    "CI/CD",
-    "continuous integration",
-    "continuous deployment",
-    "monitoring",
-    "backup",
-    "infrastructure",
-    "AWS",
-    "Azure",
-    "Google Cloud",
-    "Docker",
-    "Kubernetes",
-    "infrastructure as code",
-    "devops Krakow",
-    "cloud services",
-    "server management",
+    "devops services for companies",
+    "cloud deployment services",
+    "ci cd pipeline setup",
+    "docker kubernetes deployment",
+    "aws azure gcp infrastructure",
+    "infrastructure as code terraform",
+    "production monitoring setup",
+    "backup and disaster recovery setup",
+    "platform reliability engineering",
+    "server and infrastructure management",
+    "devops consulting krakow",
+    "secure cloud infrastructure",
   ],
   alternates: {
     canonical: "https://ml-devworks.com/en/services/devops-deployment",
     languages: {
       "pl": "https://ml-devworks.com/uslugi/devops-wdrozenia",
       "en": "https://ml-devworks.com/en/services/devops-deployment",
+      "x-default": "https://ml-devworks.com/uslugi/devops-wdrozenia",
     },
   },
   openGraph: {
-    title: "DevOps & Deployment - Cloud Deployment & CI/CD | ML Devworks",
-    description: "Cloud application deployment, CI/CD configuration, monitoring, backup, and full infrastructure maintenance. From development to production.",
+    title: "DevOps Services and Cloud Deployment | ML Devworks",
+    description:
+      "CI/CD, cloud infrastructure, monitoring, and stable production deployments.",
     url: "https://ml-devworks.com/en/services/devops-deployment",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "DevOps & Deployment - Cloud Deployment & CI/CD | ML Devworks",
-    description: "Cloud application deployment, CI/CD configuration, monitoring, backup, and full infrastructure maintenance. From development to production.",
+    title: "DevOps Services and Cloud Deployment | ML Devworks",
+    description:
+      "CI/CD, cloud infrastructure, monitoring, and stable production deployments.",
   },
 };
 

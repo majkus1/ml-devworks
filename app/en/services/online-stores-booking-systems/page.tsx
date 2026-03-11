@@ -5,45 +5,44 @@ import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Online Stores & Booking Systems - E-commerce & Online Booking | ML Devworks",
-  description: "Complete e-commerce solutions and booking systems with payment integration, product management, and sales analytics. Professional online stores and booking systems for your business.",
+  title: "E-commerce Development and Booking Systems | ML Devworks",
+  description:
+    "We build online stores and booking systems with payment gateways, delivery setup, ERP/CRM integrations, and sales automation. Ideal for service businesses, B2C brands, and B2B commerce.",
   keywords: [
-    "online stores",
-    "e-commerce",
-    "online shop",
-    "booking systems",
-    "online booking",
-    "e-commerce platform",
-    "online store",
-    "payment integration",
-    "product management",
-    "sales analytics",
-    "woocommerce",
-    "shopify",
-    "booking system",
-    "reservation system",
-    "online stores Krakow",
-    "e-commerce development",
+    "ecommerce development company",
     "online store development",
+    "booking system development",
+    "woocommerce development services",
+    "shopify store development",
+    "payment gateway integration",
+    "shipping and fulfillment integration",
+    "erp crm integration for ecommerce",
+    "b2b ecommerce platform development",
+    "online reservation system for services",
+    "ecommerce development krakow",
+    "conversion focused online store",
   ],
   alternates: {
     canonical: "https://ml-devworks.com/en/services/online-stores-booking-systems",
     languages: {
       "pl": "https://ml-devworks.com/uslugi/sklepy-internetowe-systemy-rezerwacji",
       "en": "https://ml-devworks.com/en/services/online-stores-booking-systems",
+      "x-default": "https://ml-devworks.com/uslugi/sklepy-internetowe-systemy-rezerwacji",
     },
   },
   openGraph: {
-    title: "Online Stores & Booking Systems - E-commerce & Online Booking | ML Devworks",
-    description: "Complete e-commerce solutions and booking systems with payment integration, product management, and sales analytics.",
+    title: "E-commerce Development and Booking Systems | ML Devworks",
+    description:
+      "Online stores and booking products built for growth, integrations, and conversion.",
     url: "https://ml-devworks.com/en/services/online-stores-booking-systems",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Online Stores & Booking Systems - E-commerce & Online Booking | ML Devworks",
-    description: "Complete e-commerce solutions and booking systems with payment integration, product management, and sales analytics.",
+    title: "E-commerce Development and Booking Systems | ML Devworks",
+    description:
+      "Online stores and booking products built for growth, integrations, and conversion.",
   },
 };
 
@@ -320,9 +319,9 @@ export default function OnlineStoresBookingSystemsPage() {
                     2
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">UX/UI Design</h3>
+                    <h3 className="text-xl font-bold mb-2">UX/UI Implementation</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We design the user interface with conversion in mind. We create wireframes, mockups, and prototypes. We optimize user experience for maximum sales.
+                      We build the user interface with conversion in mind. We optimize user experience for maximum sales.
                     </p>
                   </div>
                 </div>

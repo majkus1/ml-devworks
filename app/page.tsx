@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     languages: {
       "pl": "https://ml-devworks.com",
       "en": "https://ml-devworks.com/en",
+      "x-default": "https://ml-devworks.com",
     },
   },
 };

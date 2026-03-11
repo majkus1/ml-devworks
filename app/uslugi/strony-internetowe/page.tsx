@@ -5,32 +5,35 @@ import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Strony Internetowe - Profesjonalne Strony WWW | ML Devworks",
-  description: "Tworzymy profesjonalne strony internetowe dostosowane do Twoich potrzeb. Responsywne, szybkie i zoptymalizowane pod SEO. Od prostych stron wizytówkowych po zaawansowane portale. Sprawdź naszą ofertę!",
+  title: "Tworzenie Stron Internetowych dla Firm - Szybkie i Skuteczne WWW | ML Devworks",
+  description:
+    "Projektujemy i wdrazamy strony internetowe dla firm: strony uslugowe, landing page i strony ofertowe. Szybkie ladowanie, SEO techniczne, formularze kontaktowe i realne wsparcie sprzedazy online.",
   keywords: [
-    "strony internetowe",
-    "strony www",
-    "tworzenie stron internetowych",
-    "projektowanie stron www",
-    "strony wizytówkowe",
-    "strony firmowe",
-    "responsive design",
-    "strony SEO",
-    "optymalizacja SEO",
-    "strony internetowe Kraków",
-    "web development",
-    "strony internetowe dla firm",
+    "tworzenie stron internetowych dla firm",
+    "strona internetowa dla firmy uslugowej",
+    "strony www dla malych firm",
+    "projektowanie i wdrazanie stron www",
+    "landing page dla firmy",
+    "strona ofertowa dla biznesu",
+    "strona internetowa z formularzem kontaktowym",
+    "responsywna strona internetowa",
+    "strona internetowa SEO",
+    "optymalizacja techniczna strony www",
+    "strony internetowe krakow",
+    "wykonanie strony internetowej cena",
   ],
   alternates: {
     canonical: "https://ml-devworks.com/uslugi/strony-internetowe",
     languages: {
       "pl": "https://ml-devworks.com/uslugi/strony-internetowe",
       "en": "https://ml-devworks.com/en/services/web-development",
+      "x-default": "https://ml-devworks.com/uslugi/strony-internetowe",
     },
   },
   openGraph: {
-    title: "Strony Internetowe - Profesjonalne Strony WWW | ML Devworks",
-    description: "Tworzymy profesjonalne strony internetowe dostosowane do Twoich potrzeb. Responsywne, szybkie i zoptymalizowane pod SEO.",
+    title: "Tworzenie Stron Internetowych dla Firm | ML Devworks",
+    description:
+      "Skuteczne strony WWW dla firm: szybkie, responsywne i przygotowane pod SEO oraz pozyskiwanie zapytan.",
     url: "https://ml-devworks.com/uslugi/strony-internetowe",
     type: "website",
     locale: "pl_PL",
@@ -45,8 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Strony Internetowe - Profesjonalne Strony WWW | ML Devworks",
-    description: "Tworzymy profesjonalne strony internetowe dostosowane do Twoich potrzeb. Responsywne, szybkie i zoptymalizowane pod SEO.",
+    title: "Tworzenie Stron Internetowych dla Firm | ML Devworks",
+    description:
+      "Skuteczne strony WWW dla firm: szybkie, responsywne i przygotowane pod SEO oraz pozyskiwanie zapytan.",
     images: ["https://ml-devworks.com/psi.png"],
   },
 };
@@ -272,18 +276,6 @@ export default function StronyInternetowePage() {
                     2
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">Projektowanie</h3>
-                    <p className="text-gray-300 leading-relaxed">
-                      Tworzymy projekt graficzny i strukturę strony. Prezentujemy koncepcję i dopracowujemy szczegóły zgodnie z Twoimi uwagami.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-background font-bold text-xl">
-                    3
-                  </div>
-                  <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Programowanie</h3>
                     <p className="text-gray-300 leading-relaxed">
                       Implementujemy projekt używając najnowszych technologii. Tworzymy kod wysokiej jakości, zoptymalizowany i łatwy w utrzymaniu.
@@ -293,7 +285,7 @@ export default function StronyInternetowePage() {
 
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-background font-bold text-xl">
-                    4
+                    3
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Testowanie i Optymalizacja</h3>
@@ -305,7 +297,7 @@ export default function StronyInternetowePage() {
 
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-background font-bold text-xl">
-                    5
+                    4
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Wdrożenie i Wsparcie</h3>

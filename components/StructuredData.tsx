@@ -33,11 +33,6 @@ export default function StructuredData({ lang = "pl" }: StructuredDataProps) {
         ? "Profesjonalne rozwiązania cyfrowe - strony internetowe, aplikacje, sklepy online"
         : "Professional digital solutions - websites, applications, online stores",
     inLanguage: lang === "pl" ? "pl-PL" : "en-US",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://ml-devworks.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string",
-    },
   };
 
   const service = {

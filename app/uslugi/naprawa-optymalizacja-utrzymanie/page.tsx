@@ -5,46 +5,44 @@ import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Naprawa, Optymalizacja i Utrzymanie - Wsparcie Techniczne Projektów | ML Devworks",
-  description: "Naprawa błędów w istniejących projektach, optymalizacja wydajności, SEO i konwersji. Przywróć pełną funkcjonalność swojej strony lub aplikacji. Kompleksowe utrzymanie i wsparcie techniczne dla Twoich projektów.",
+  title: "Naprawa Stron i Aplikacji - Optymalizacja Wydajnosci i Utrzymanie | ML Devworks",
+  description:
+    "Naprawiamy strony i aplikacje po innych wykonawcach: bugfixing, optymalizacja Core Web Vitals, techniczne SEO, poprawa konwersji i stale utrzymanie. Szybka diagnoza problemu i plan naprawczy.",
   keywords: [
-    "naprawa stron",
-    "naprawa aplikacji",
-    "optymalizacja wydajności",
-    "optymalizacja SEO",
-    "optymalizacja konwersji",
-    "utrzymanie stron",
-    "wsparcie techniczne",
-    "bug fixing",
-    "performance optimization",
-    "SEO optimization",
-    "maintenance",
-    "technical support",
-    "naprawa błędów",
-    "optymalizacja strony",
-    "utrzymanie aplikacji",
-    "wsparcie IT",
-    "naprawa projektów",
-    "optymalizacja Kraków",
+    "naprawa strony internetowej",
+    "naprawa aplikacji webowej",
+    "bug fixing dla stron i aplikacji",
+    "optymalizacja core web vitals",
+    "optymalizacja wydajnosci strony",
+    "techniczne seo naprawa",
+    "utrzymanie strony internetowej",
+    "utrzymanie aplikacji produkcyjnej",
+    "wsparcie techniczne dla firm",
+    "audyt i plan naprawczy projektu",
+    "naprawa strony po agencji",
+    "optymalizacja krakow",
   ],
   alternates: {
     canonical: "https://ml-devworks.com/uslugi/naprawa-optymalizacja-utrzymanie",
     languages: {
       "pl": "https://ml-devworks.com/uslugi/naprawa-optymalizacja-utrzymanie",
       "en": "https://ml-devworks.com/en/services/fixes-optimization-maintenance",
+      "x-default": "https://ml-devworks.com/uslugi/naprawa-optymalizacja-utrzymanie",
     },
   },
   openGraph: {
-    title: "Naprawa, Optymalizacja i Utrzymanie - Wsparcie Techniczne Projektów | ML Devworks",
-    description: "Naprawa błędów w istniejących projektach, optymalizacja wydajności, SEO i konwersji. Przywróć pełną funkcjonalność swojej strony lub aplikacji.",
+    title: "Naprawa Stron i Aplikacji | ML Devworks",
+    description:
+      "Bugfixing, Core Web Vitals, techniczne SEO i utrzymanie projektow produkcyjnych.",
     url: "https://ml-devworks.com/uslugi/naprawa-optymalizacja-utrzymanie",
     type: "website",
     locale: "pl_PL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Naprawa, Optymalizacja i Utrzymanie - Wsparcie Techniczne Projektów | ML Devworks",
-    description: "Naprawa błędów w istniejących projektach, optymalizacja wydajności, SEO i konwersji. Przywróć pełną funkcjonalność swojej strony lub aplikacji.",
+    title: "Naprawa Stron i Aplikacji | ML Devworks",
+    description:
+      "Bugfixing, Core Web Vitals, techniczne SEO i utrzymanie projektow produkcyjnych.",
   },
 };
 

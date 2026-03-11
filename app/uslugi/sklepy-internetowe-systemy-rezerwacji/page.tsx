@@ -5,45 +5,44 @@ import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Sklepy Internetowe i Systemy Rezerwacji - E-commerce i Rezerwacje Online | ML Devworks",
-  description: "Kompletne rozwiązania e-commerce i systemy rezerwacji z integracją płatności, zarządzaniem produktami i analityką sprzedaży. Profesjonalne sklepy internetowe i systemy rezerwacji dla Twojego biznesu.",
+  title: "Sklepy Internetowe i Systemy Rezerwacji - E-commerce, Platnosci, Integracje | ML Devworks",
+  description:
+    "Budujemy sklepy internetowe i systemy rezerwacji online: platnosci, dostawy, kalendarze wizyt, integracje z ERP/CRM i automatyzacje sprzedazy. Rozwiazania dla uslug, e-commerce B2C i B2B.",
   keywords: [
-    "sklepy internetowe",
-    "e-commerce",
-    "sklep online",
-    "systemy rezerwacji",
-    "rezerwacje online",
-    "platforma e-commerce",
-    "sklep internetowy",
-    "integracja płatności",
-    "zarządzanie produktami",
-    "analityka sprzedaży",
-    "woocommerce",
-    "shopify",
-    "system rezerwacji",
-    "booking system",
-    "sklepy internetowe Kraków",
-    "e-commerce development",
-    "online store",
+    "sklep internetowy dla firmy",
+    "tworzenie sklepu internetowego",
+    "system rezerwacji online dla uslug",
+    "platforma e commerce b2b b2c",
+    "integracja platnosci online",
+    "integracja dostaw kurier paczkomat",
+    "kalendarz rezerwacji wizyt",
+    "woocommerce sklep internetowy",
+    "shopify sklep internetowy",
+    "integracja sklepu z erp crm",
+    "sklepy internetowe krakow",
+    "automatyzacja sprzedazy online",
   ],
   alternates: {
     canonical: "https://ml-devworks.com/uslugi/sklepy-internetowe-systemy-rezerwacji",
     languages: {
       "pl": "https://ml-devworks.com/uslugi/sklepy-internetowe-systemy-rezerwacji",
       "en": "https://ml-devworks.com/en/services/online-stores-booking-systems",
+      "x-default": "https://ml-devworks.com/uslugi/sklepy-internetowe-systemy-rezerwacji",
     },
   },
   openGraph: {
-    title: "Sklepy Internetowe i Systemy Rezerwacji - E-commerce i Rezerwacje Online | ML Devworks",
-    description: "Kompletne rozwiązania e-commerce i systemy rezerwacji z integracją płatności, zarządzaniem produktami i analityką sprzedaży.",
+    title: "Sklepy Internetowe i Systemy Rezerwacji | ML Devworks",
+    description:
+      "E-commerce i rezerwacje online z integracjami platnosci, dostaw i systemow zaplecza.",
     url: "https://ml-devworks.com/uslugi/sklepy-internetowe-systemy-rezerwacji",
     type: "website",
     locale: "pl_PL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sklepy Internetowe i Systemy Rezerwacji - E-commerce i Rezerwacje Online | ML Devworks",
-    description: "Kompletne rozwiązania e-commerce i systemy rezerwacji z integracją płatności, zarządzaniem produktami i analityką sprzedaży.",
+    title: "Sklepy Internetowe i Systemy Rezerwacji | ML Devworks",
+    description:
+      "E-commerce i rezerwacje online z integracjami platnosci, dostaw i systemow zaplecza.",
   },
 };
 
@@ -320,9 +319,9 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
                     2
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">Projektowanie UX/UI</h3>
+                    <h3 className="text-xl font-bold mb-2">Implementacja UX/UI</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Projektujemy interfejs użytkownika z myślą o konwersji. Tworzymy wireframe&apos;y, mockupy i prototypy. Optymalizujemy user experience dla maksymalnej sprzedaży.
+                      Budujemy interfejs użytkownika z myślą o konwersji. Optymalizujemy doświadczenie użytkownika dla maksymalnej sprzedaży.
                     </p>
                   </div>
                 </div>

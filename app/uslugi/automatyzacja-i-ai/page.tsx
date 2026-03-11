@@ -5,44 +5,44 @@ import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Automatyzacja i AI - Inteligentne Systemy Automatyzacji | ML Devworks",
-  description: "Inteligentne agent AI i systemy automatyzacji procesów biznesowych. Zautomatyzuj powtarzalne zadania i zwiększ efektywność swojego biznesu. Nowoczesne rozwiązania AI dla Twojej firmy.",
+  title: "Automatyzacja Procesow i AI dla Firm - Integracje i Agenci AI | ML Devworks",
+  description:
+    "Wdrażamy automatyzacje procesow biznesowych i rozwiazania AI: agenci AI, automatyzacja obslugi klienta, workflow i integracje narzedzi. Mniej pracy manualnej, wiecej leadow i szybsza obsluga.",
   keywords: [
-    "automatyzacja",
-    "automatyzacja procesów",
-    "AI",
-    "sztuczna inteligencja",
-    "agent AI",
-    "automatyzacja biznesowa",
-    "automatyzacja zadań",
-    "systemy automatyzacji",
-    "chatbot AI",
-    "machine learning",
-    "automatyzacja workflow",
-    "RPA",
-    "robotic process automation",
-    "automatyzacja Kraków",
-    "AI dla biznesu",
-    "inteligentna automatyzacja",
+    "automatyzacja procesow biznesowych",
+    "ai dla firm",
+    "agenci ai dla biznesu",
+    "automatyzacja obslugi klienta",
+    "automatyzacja workflow firmy",
+    "integracje systemow i narzedzi",
+    "chatbot ai dla strony",
+    "automatyzacja leadow i sprzedazy",
+    "rpa dla firm",
+    "wdrozenie sztucznej inteligencji",
+    "automatyzacja krakow",
+    "inteligentna automatyzacja procesow",
   ],
   alternates: {
     canonical: "https://ml-devworks.com/uslugi/automatyzacja-i-ai",
     languages: {
       "pl": "https://ml-devworks.com/uslugi/automatyzacja-i-ai",
       "en": "https://ml-devworks.com/en/services/automation-and-ai",
+      "x-default": "https://ml-devworks.com/uslugi/automatyzacja-i-ai",
     },
   },
   openGraph: {
-    title: "Automatyzacja i AI - Inteligentne Systemy Automatyzacji | ML Devworks",
-    description: "Inteligentne agent AI i systemy automatyzacji procesów biznesowych. Zautomatyzuj powtarzalne zadania i zwiększ efektywność swojego biznesu.",
+    title: "Automatyzacja Procesow i AI dla Firm | ML Devworks",
+    description:
+      "Agenci AI i automatyzacje procesow, ktore obnizaja koszty operacyjne i przyspieszaja obsluge klienta.",
     url: "https://ml-devworks.com/uslugi/automatyzacja-i-ai",
     type: "website",
     locale: "pl_PL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Automatyzacja i AI - Inteligentne Systemy Automatyzacji | ML Devworks",
-    description: "Inteligentne agent AI i systemy automatyzacji procesów biznesowych. Zautomatyzuj powtarzalne zadania i zwiększ efektywność swojego biznesu.",
+    title: "Automatyzacja Procesow i AI dla Firm | ML Devworks",
+    description:
+      "Agenci AI i automatyzacje procesow, ktore obnizaja koszty operacyjne i przyspieszaja obsluge klienta.",
   },
 };
 

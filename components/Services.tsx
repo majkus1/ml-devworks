@@ -253,7 +253,7 @@ function ServiceCard({
     </>
   );
 
-  const cardClassName = `bg-background-lighter rounded-xl p-6 transition-colors cursor-pointer group ${
+  const cardClassName = `bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-6 transition-colors cursor-pointer group ${
     isAutomationAI
       ? "border-2 border-amber-400/60 hover:border-amber-400 shadow-lg shadow-amber-500/20"
       : "border border-primary/20 hover:border-primary/50"

@@ -30,7 +30,7 @@ export default function BookingCalendar({ lang = "pl" }: BookingCalendarProps) {
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.8 }}
-      className="mt-12 bg-background-lighter border border-primary/20 rounded-xl p-6 md:p-8"
+      className="mt-12 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 md:p-8"
     >
       <div>
         <h2 className="text-2xl md:text-3xl font-bold mb-4 text-left text-white">

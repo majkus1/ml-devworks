@@ -4,9 +4,27 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { getAlternateLangPath } from "@/lib/i18n-routes";
 
 interface NavbarProps {
   lang?: "pl" | "en";
+}
+
+const SECTION_IDS = ["services", "realizations", "client-reviews", "contact"] as const;
+
+function getActiveNavItem(pathname: string | null): string {
+  if (!pathname) return "";
+
+  // Podstrony – aktywny item na podstawie ścieżki
+  if (pathname === "/blog" || pathname === "/en/blog" || pathname.startsWith("/blog/") || pathname.startsWith("/en/blog/")) {
+    return "blog";
+  }
+  if (pathname.startsWith("/uslugi/") || pathname.startsWith("/en/services/")) {
+    return "#services";
+  }
+
+  // Strona główna – używamy scroll-spy (ustawiane w useEffect)
+  return "";
 }
 
 export default function Navbar({ lang = "pl" }: NavbarProps) {
@@ -14,8 +32,39 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("");
   const pathname = usePathname();
   const isEnglish = pathname?.startsWith("/en");
+
+  const isHomePage = pathname === "/" || pathname === "/en";
+
+  // Scroll-spy: wykrywanie aktywnej sekcji na stronie głównej
+  useEffect(() => {
+    if (!isHomePage) {
+      setActiveSection(getActiveNavItem(pathname || ""));
+      return;
+    }
+
+    const updateActiveSection = () => {
+      const offset = 120;
+      let current = `#${SECTION_IDS[0]}`;
+
+      for (const id of SECTION_IDS) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= offset) {
+          current = `#${id}`;
+        }
+      }
+      setActiveSection(current);
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    return () => window.removeEventListener("scroll", updateActiveSection);
+  }, [isHomePage, pathname]);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -89,12 +138,14 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
       { href: "#realizations", label: "Realizacje" },
       { href: "#client-reviews", label: "Opinie" },
       { href: "#contact", label: "Kontakt" },
+      { href: "/blog", label: "Blog" },
     ],
     en: [
       { href: "#services", label: "Services" },
       { href: "#realizations", label: "Realizations" },
       { href: "#client-reviews", label: "Reviews" },
       { href: "#contact", label: "Contact" },
+      { href: "/en/blog", label: "Blog" },
     ],
   };
 
@@ -142,10 +193,43 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8">
               {items.map((item, index) => {
-                const isHomePage = pathname === "/" || pathname === "/en";
+                const isPageLink = item.href.startsWith("/");
                 const homePath = isEnglish ? "/en" : "/";
-                const linkHref = isHomePage ? item.href : `${homePath}${item.href}`;
-                
+                const linkHref = isPageLink
+                  ? item.href
+                  : isHomePage
+                    ? item.href
+                    : `${homePath}${item.href}`;
+                const itemKey = isPageLink ? "blog" : item.href;
+                const isActive = activeSection === itemKey;
+
+                if (isPageLink) {
+                  return (
+                    <motion.div
+                      key={item.href}
+                      initial={{ opacity: 0, y: -20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                    >
+                      <Link
+                        href={linkHref}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className={`font-medium relative group block transition-colors ${
+                          isActive ? "text-primary" : "text-white hover:text-primary"
+                        }`}
+                        aria-current={isActive ? "page" : undefined}
+                      >
+                        {item.label}
+                        <span
+                          className={`absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-300 ${
+                            isActive ? "w-full" : "w-0 group-hover:w-full"
+                          }`}
+                        />
+                      </Link>
+                    </motion.div>
+                  );
+                }
+
                 return (
                   <motion.a
                     key={item.href}
@@ -154,10 +238,17 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="text-white hover:text-primary transition-colors font-medium relative group"
+                    className={`font-medium relative group transition-colors ${
+                      isActive ? "text-primary" : "text-white hover:text-primary"
+                    }`}
+                    aria-current={isActive ? "page" : undefined}
                   >
                     {item.label}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
+                    <span
+                      className={`absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-300 ${
+                        isActive ? "w-full" : "w-0 group-hover:w-full"
+                      }`}
+                    />
                   </motion.a>
                 );
               })}
@@ -169,7 +260,7 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
                 transition={{ duration: 0.5, delay: items.length * 0.1 }}
               >
                 <Link
-                  href={isEnglish ? "/" : "/en"}
+                  href={getAlternateLangPath(pathname || "/")}
                   className="px-4 py-2 bg-background-lighter border border-primary/30 rounded-lg hover:border-primary transition-colors text-sm font-medium"
                   aria-label={isEnglish ? "Przełącz na język polski" : "Switch to English"}
                   hrefLang={isEnglish ? "pl" : "en"}
@@ -243,35 +334,66 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
             >
               <div className="flex flex-col p-6 space-y-3">
                 {items.map((item, index) => {
-                  const isHomePage = pathname === "/" || pathname === "/en";
+                  const isPageLink = item.href.startsWith("/");
                   const homePath = isEnglish ? "/en" : "/";
-                  const linkHref = isHomePage ? item.href : `${homePath}${item.href}`;
-                  
+                  const linkHref = isPageLink
+                    ? item.href
+                    : isHomePage
+                      ? item.href
+                      : `${homePath}${item.href}`;
+                  const itemKey = isPageLink ? "blog" : item.href;
+                  const isActive = activeSection === itemKey;
+
+                  const activeClasses = isActive
+                    ? "text-primary bg-primary/10 border-primary"
+                    : "text-white hover:text-primary border-primary/30 hover:border-primary";
+
+                  if (isPageLink) {
+                    return (
+                      <Link key={item.href} href={linkHref} onClick={() => setIsMobileMenuOpen(false)}>
+                        <motion.div
+                          initial={{ opacity: 0, x: 50 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{
+                            duration: 1.0,
+                            delay: index * 0.2,
+                            ease: [0.16, 1, 0.3, 1],
+                          }}
+                          whileHover={{
+                            scale: 1.02,
+                            x: 5,
+                            transition: { duration: 0.2, ease: "easeOut" },
+                          }}
+                          whileTap={{ scale: 0.98 }}
+                          className={`transition-colors duration-200 font-medium text-lg py-4 px-5 rounded-lg hover:bg-primary/20 border ${activeClasses}`}
+                          aria-current={isActive ? "page" : undefined}
+                        >
+                          {item.label}
+                        </motion.div>
+                      </Link>
+                    );
+                  }
+
                   return (
                     <motion.a
                       key={item.href}
                       href={linkHref}
                       onClick={(e) => handleLinkClick(e, item.href)}
-                      initial={{ 
-                        opacity: 0, 
-                        x: 50
-                      }}
-                      animate={{ 
-                        opacity: 1, 
-                        x: 0
-                      }}
-                      transition={{ 
-                        duration: 1.0, 
+                      initial={{ opacity: 0, x: 50 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{
+                        duration: 1.0,
                         delay: index * 0.2,
-                        ease: [0.16, 1, 0.3, 1]
+                        ease: [0.16, 1, 0.3, 1],
                       }}
                       whileHover={{
                         scale: 1.02,
                         x: 5,
-                        transition: { duration: 0.2, ease: "easeOut" }
+                        transition: { duration: 0.2, ease: "easeOut" },
                       }}
                       whileTap={{ scale: 0.98 }}
-                      className="text-white hover:text-primary transition-colors duration-200 font-medium text-lg py-4 px-5 rounded-lg hover:bg-primary/20 border border-primary/30 hover:border-primary"
+                      className={`transition-colors duration-200 font-medium text-lg py-4 px-5 rounded-lg hover:bg-primary/20 border ${activeClasses}`}
+                      aria-current={isActive ? "page" : undefined}
                     >
                       {item.label}
                     </motion.a>
@@ -295,7 +417,7 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
                   className="pt-4 mt-4 border-t border-primary/30"
                 >
                   <Link
-                    href={isEnglish ? "/" : "/en"}
+                    href={getAlternateLangPath(pathname || "/")}
                     className="block w-full text-center px-4 py-3 bg-background-lighter border-2 border-primary/50 rounded-lg hover:border-primary hover:bg-primary/10 transition-colors text-sm font-medium text-white hover:text-primary"
                     aria-label={isEnglish ? "Przełącz na język polski" : "Switch to English"}
                     hrefLang={isEnglish ? "pl" : "en"}

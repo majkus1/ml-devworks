@@ -109,6 +109,40 @@ const projects: Project[] = [
     },
   },
   {
+    id: "agmar-paliwa",
+    name: {
+      pl: "AGMAR Paliwa",
+      en: "AGMAR Paliwa",
+    },
+    url: "https://agmar-paliwa.pl",
+    shortDescription: {
+      pl: "Strona internetowa dla firmy dostarczającej paliwo. Next.js 15 z panelem administracyjnym do zarządzania cenami. Responsywny design, formularz kontaktowy i wyświetlanie cen w czasie rzeczywistym.",
+      en: "Website for a fuel delivery company. Built with Next.js 15, includes an admin dashboard for managing fuel prices. Responsive design, contact form, and real-time price display.",
+    },
+    longDescription: {
+      pl: "Profesjonalna strona internetowa dla firmy dostarczającej paliwo. Aplikacja zbudowana w Next.js 15 oferuje panel administracyjny do zarządzania cenami paliwa oraz wyświetlanie aktualnych cen w czasie rzeczywistym na stronie głównej. Pełna responsywność, formularz kontaktowy z wysyłką e-mail, zabezpieczona autentykacja oraz walidacja i ochrona danych. Strona dostosowana do potrzeb firm z branży paliwowej.",
+      en: "Professional website for a fuel delivery company. The application built with Next.js 15 features an admin dashboard for fuel price management and real-time price display on the main page. Fully responsive, contact form with email sending, secured authentication, and input validation with data protection. Tailored to the needs of companies in the fuel industry.",
+    },
+    technologies: [
+      { name: "Next.js" },
+      { name: "React" },
+      { name: "MongoDB" },
+      { name: "Node.js" },
+      { name: "SCSS" },
+      { name: "JWT" },
+    ],
+    images: [
+      "/agmar.webp",
+      "/agmar2.webp",
+      "/agmar3.webp",
+    ],
+    inDevelopment: false,
+    projectType: {
+      pl: "Strona internetowa",
+      en: "Website",
+    },
+  },
+  {
     id: "planopia",
     name: {
       pl: "Planopia",
@@ -278,7 +312,7 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-            className="bg-background-lighter border border-primary/20 rounded-xl p-5 flex-1 min-w-[280px] max-w-[380px]"
+            className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-5 flex-1 min-w-[280px] max-w-[380px]"
           >
             <div className="flex items-start gap-3 mb-3">
               {review.profilePhotoUrl ? (
@@ -383,7 +417,7 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
               : "See our completed projects"}
           </motion.p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
+          <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 ${projects.length === 4 ? "lg:grid-cols-2" : "lg:grid-cols-3"}`} role="list">
             {projects.map((project, index) => (
               <ProjectCard
                 key={project.id}
@@ -421,7 +455,7 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                className="bg-background border border-primary/20 rounded-xl shadow-2xl overflow-hidden max-h-[90vh] w-full max-w-3xl flex flex-col pointer-events-auto"
+                className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl shadow-2xl overflow-hidden max-h-[90vh] w-full max-w-3xl flex flex-col pointer-events-auto"
                 onClick={(e) => e.stopPropagation()}
               >
               {/* Modal Header */}
@@ -603,7 +637,7 @@ function ProjectCard({
         y: -5,
         transition: { duration: 0.2, ease: "easeOut" }
       }}
-      className="bg-background-lighter border border-primary/20 rounded-xl p-6 hover:border-primary/40 transition-colors duration-200 cursor-pointer group"
+      className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 hover:border-primary/40 transition-colors duration-200 cursor-pointer group"
       onClick={onOpenModal}
       role="listitem"
     >

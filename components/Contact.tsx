@@ -125,7 +125,7 @@ export default function Contact({ lang = "pl" }: ContactProps) {
             animate={isFormInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.8 }}
             onSubmit={handleSubmit}
-            className="bg-background-lighter border border-primary/20 rounded-xl p-6 space-y-6 order-1 md:order-2"
+            className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 space-y-6 order-1 md:order-2"
             aria-label={lang === "pl" ? "Formularz kontaktowy" : "Contact form"}
             noValidate
           >
@@ -240,7 +240,7 @@ export default function Contact({ lang = "pl" }: ContactProps) {
             transition={{ duration: 0.8 }}
             className="space-y-6 not-italic order-2 md:order-1"
           >
-            <div className="bg-background-lighter border border-primary/20 rounded-xl p-6">
+            <div className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6">
               <h3 className="text-xl font-bold mb-4 text-primary">{lang === "pl" ? "Kontakt" : "Contact"}</h3>
               
               {/* Profile Photo and Name */}

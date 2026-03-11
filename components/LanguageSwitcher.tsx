@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { getAlternateLangPath } from "@/lib/i18n-routes";
 
 export default function LanguageSwitcher() {
   const pathname = usePathname();
@@ -18,7 +19,7 @@ export default function LanguageSwitcher() {
         animate={{ opacity: 1, y: 0 }}
       >
         <Link
-          href={isEnglish ? "/" : "/en"}
+          href={getAlternateLangPath(pathname || "/")}
           className="px-4 py-2 bg-background-lighter border border-primary/30 rounded-lg hover:border-primary transition-colors text-sm font-medium"
           aria-label={isEnglish ? "Przełącz na język polski" : "Switch to English"}
           hrefLang={isEnglish ? "pl" : "en"}

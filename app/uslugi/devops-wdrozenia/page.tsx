@@ -5,47 +5,44 @@ import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title: "DevOps & Wdrożenia - Wdrożenia w Chmurze i CI/CD | ML Devworks",
-  description: "Wdrożenie aplikacji w chmurze, konfiguracja CI/CD, monitoring, backup i pełne utrzymanie infrastruktury. Od developmentu do produkcji. Profesjonalne usługi DevOps dla Twojego projektu.",
+  title: "DevOps i Wdrozenia Chmurowe - CI/CD, Monitoring, Skalowanie | ML Devworks",
+  description:
+    "Wdrażamy aplikacje w chmurze i porzadkujemy DevOps: CI/CD, Docker, monitoring, backup, bezpieczenstwo i utrzymanie infrastruktury. Stabilne deploymenty i szybsze wydania dla zespolow produktowych.",
   keywords: [
-    "devops",
-    "wdrożenia",
-    "wdrożenia w chmurze",
-    "cloud deployment",
-    "CI/CD",
-    "continuous integration",
-    "continuous deployment",
-    "monitoring",
-    "backup",
-    "infrastruktura",
-    "AWS",
-    "Azure",
-    "Google Cloud",
-    "Docker",
-    "Kubernetes",
-    "infrastructure as code",
-    "devops Kraków",
-    "cloud services",
-    "server management",
+    "devops dla firm",
+    "wdrozenia chmurowe aplikacji",
+    "konfiguracja ci cd",
+    "docker kubernetes wdrozenie",
+    "monitoring infrastruktury produkcyjnej",
+    "backup i disaster recovery",
+    "aws azure google cloud deployment",
+    "infrastructure as code terraform",
+    "utrzymanie serwerow i aplikacji",
+    "automatyzacja deploymentu",
+    "devops krakow",
+    "optymalizacja kosztow chmury",
   ],
   alternates: {
     canonical: "https://ml-devworks.com/uslugi/devops-wdrozenia",
     languages: {
       "pl": "https://ml-devworks.com/uslugi/devops-wdrozenia",
       "en": "https://ml-devworks.com/en/services/devops-deployment",
+      "x-default": "https://ml-devworks.com/uslugi/devops-wdrozenia",
     },
   },
   openGraph: {
-    title: "DevOps & Wdrożenia - Wdrożenia w Chmurze i CI/CD | ML Devworks",
-    description: "Wdrożenie aplikacji w chmurze, konfiguracja CI/CD, monitoring, backup i pełne utrzymanie infrastruktury. Od developmentu do produkcji.",
+    title: "DevOps i Wdrozenia Chmurowe | ML Devworks",
+    description:
+      "CI/CD, monitoring, bezpieczenstwo i stabilne wdrozenia chmurowe dla aplikacji webowych.",
     url: "https://ml-devworks.com/uslugi/devops-wdrozenia",
     type: "website",
     locale: "pl_PL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "DevOps & Wdrożenia - Wdrożenia w Chmurze i CI/CD | ML Devworks",
-    description: "Wdrożenie aplikacji w chmurze, konfiguracja CI/CD, monitoring, backup i pełne utrzymanie infrastruktury. Od developmentu do produkcji.",
+    title: "DevOps i Wdrozenia Chmurowe | ML Devworks",
+    description:
+      "CI/CD, monitoring, bezpieczenstwo i stabilne wdrozenia chmurowe dla aplikacji webowych.",
   },
 };
 
