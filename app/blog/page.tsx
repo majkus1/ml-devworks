@@ -8,9 +8,9 @@ import { blogPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ml-devworks.com"),
-  title: "Blog o Stronach WWW, SEO i Automatyzacji dla Firm | ML Devworks",
+  title: "Blog o Biznesie, Stronach WWW, SEO i Automatyzacji | ML Devworks",
   description:
-    "Praktyczne poradniki dla firm: strony internetowe, SEO, aplikacje webowe, automatyzacja procesow i rozwoj sprzedazy online. Konkretne wskazowki wdrozeniowe od ML Devworks.",
+    "Praktyczne poradniki biznesowe dla firm: strony internetowe, SEO, aplikacje webowe, automatyzacja procesow i rozwoj sprzedazy online. Konkretne wskazowki wdrozeniowe od ML Devworks.",
   keywords: [
     "blog o stronach internetowych dla firm",
     "jak pozyskiwac klientow przez strone www",
@@ -30,18 +30,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Blog o Stronach WWW, SEO i Automatyzacji | ML Devworks",
+    title: "Blog o Biznesie, Stronach WWW, SEO i Automatyzacji | ML Devworks",
     description:
-      "Praktyczna wiedza o stronach, SEO i automatyzacji dla wlascicieli firm i managerow.",
+      "Praktyczna wiedza biznesowa o stronach, SEO i automatyzacji dla wlascicieli firm i managerow.",
     url: "https://ml-devworks.com/blog",
     type: "website",
     locale: "pl_PL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog o Stronach WWW i SEO | ML Devworks",
+    title: "Blog o Biznesie, Stronach WWW i SEO | ML Devworks",
     description:
-      "Praktyczne poradniki o stronach internetowych, SEO i automatyzacji dla biznesu.",
+      "Praktyczne poradniki biznesowe o stronach internetowych, SEO i automatyzacji.",
   },
   robots: {
     index: true,

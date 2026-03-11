@@ -15,6 +15,46 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "social-media-czy-wlasna-strona-firmowa-co-bardziej-sie-oplaca",
+    slugEn: "social-media-vs-business-website-what-brings-better-results",
+    title: {
+      pl: "Social media czy własna strona firmowa - co bardziej się opłaca?",
+      en: "Social Media vs Business Website - What Brings Better Results?",
+    },
+    excerpt: {
+      pl: "Wiele firm stawia tylko na Instagram, TikTok i Facebook. Sprawdź, dlaczego to ryzykowne i jak własna strona internetowa zwiększa konwersję, SEO oraz stabilność pozyskiwania klientów.",
+      en: "Many companies focus only on Instagram, TikTok, and Facebook. Learn why this is risky and how your own business website improves conversion, SEO, and long-term customer acquisition stability.",
+    },
+    publishedAt: "2026-03-11",
+    readingTime: { pl: "9 min", en: "9 min" },
+    keywords: {
+      pl: [
+        "social media czy strona internetowa dla firmy",
+        "czy firma potrzebuje strony www majac instagram",
+        "instagram vs strona internetowa",
+        "facebook tiktok a wlasna strona firmowa",
+        "dlaczego strona internetowa jest wazna dla firmy",
+        "pozyskiwanie klientow z google i social media",
+        "seo dla firm uslugowych",
+        "konwersja na stronie internetowej firmy",
+        "marketing firmy social media i strona",
+        "jak promowac firme w internecie skutecznie",
+      ],
+      en: [
+        "social media vs business website",
+        "does a business need a website if it has instagram",
+        "instagram vs website for lead generation",
+        "facebook tiktok and company website strategy",
+        "why every business needs a website",
+        "google seo and social media marketing together",
+        "how to get clients from website and social media",
+        "business website conversion optimization",
+        "digital marketing strategy for small business",
+        "owned channel vs rented platform marketing",
+      ],
+    },
+  },
+  {
     slug: "czy-ai-wystarczy-do-stworzenia-strony-lub-aplikacji",
     slugEn: "is-ai-enough-to-build-a-website-or-app",
     title: {

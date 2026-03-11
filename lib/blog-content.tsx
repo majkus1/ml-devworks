@@ -4,6 +4,7 @@ import StronaInternetowaDlaFirmyContent from "@/components/blog-posts/StronaInte
 import SystemRezerwacjiDlaSalonuContent from "@/components/blog-posts/SystemRezerwacjiDlaSalonuContent";
 import AutomatyzacjaProcesowAIContent from "@/components/blog-posts/AutomatyzacjaProcesowAIContent";
 import CzyAIWystarczyDoStronyContent from "@/components/blog-posts/CzyAIWystarczyDoStronyContent";
+import SocialMediaVsStronaFirmowaContent from "@/components/blog-posts/SocialMediaVsStronaFirmowaContent";
 
 const POST_CONTENT: Record<string, (lang: "pl" | "en") => ReactNode> = {
   "strona-internetowa-dla-firmy-jak-wybrac-wykonawce": (lang) => (
@@ -17,6 +18,9 @@ const POST_CONTENT: Record<string, (lang: "pl" | "en") => ReactNode> = {
   ),
   "czy-ai-wystarczy-do-stworzenia-strony-lub-aplikacji": (lang) => (
     <CzyAIWystarczyDoStronyContent lang={lang} />
+  ),
+  "social-media-czy-wlasna-strona-firmowa-co-bardziej-sie-oplaca": (lang) => (
+    <SocialMediaVsStronaFirmowaContent lang={lang} />
   ),
 };
 

@@ -134,7 +134,6 @@ const projects: Project[] = [
     images: [
       "/agmar.webp",
       "/agmar2.webp",
-      "/agmar3.webp",
     ],
     inDevelopment: false,
     projectType: {
@@ -455,7 +454,7 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl shadow-2xl overflow-hidden max-h-[90vh] w-full max-w-3xl flex flex-col pointer-events-auto"
+                className="bg-gradient-to-r from-background/95 to-background-lighter/95 backdrop-blur-md border border-primary/25 rounded-xl shadow-2xl overflow-hidden max-h-[90vh] w-full max-w-3xl flex flex-col pointer-events-auto"
                 onClick={(e) => e.stopPropagation()}
               >
               {/* Modal Header */}
@@ -501,7 +500,7 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
               {/* Modal Body */}
               <div className="p-6 overflow-y-auto flex-1">
                 {/* Long Description */}
-                <p className="text-gray-300 mb-6 leading-relaxed">
+                <p className="text-gray-200 mb-6 leading-relaxed">
                   {selectedProject.longDescription[lang]}
                 </p>
 
