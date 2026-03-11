@@ -11,20 +11,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: {
         languages: {
           pl: `https://ml-devworks.com/blog/${post.slug}`,
-          en: `https://ml-devworks.com/en/blog/${post.slug}`,
+          en: `https://ml-devworks.com/en/blog/${post.slugEn}`,
           "x-default": `https://ml-devworks.com/blog/${post.slug}`,
         },
       },
     },
     {
-      url: `https://ml-devworks.com/en/blog/${post.slug}`,
+      url: `https://ml-devworks.com/en/blog/${post.slugEn}`,
       lastModified: new Date(post.publishedAt),
       changeFrequency: "monthly" as const,
       priority: 0.7,
       alternates: {
         languages: {
           pl: `https://ml-devworks.com/blog/${post.slug}`,
-          en: `https://ml-devworks.com/en/blog/${post.slug}`,
+          en: `https://ml-devworks.com/en/blog/${post.slugEn}`,
           "x-default": `https://ml-devworks.com/blog/${post.slug}`,
         },
       },

@@ -56,7 +56,7 @@ function BlogCard({
 }) {
   const cardRef = useRef(null);
   const isCardInView = useInView(cardRef, { once: true, margin: "-80px" });
-  const href = lang === "pl" ? `/blog/${post.slug}` : `/en/blog/${post.slug}`;
+  const href = lang === "pl" ? `/blog/${post.slug}` : `/en/blog/${post.slugEn}`;
 
   return (
     <motion.article

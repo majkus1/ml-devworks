@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { blogPosts } from "@/lib/blog";
 import StronaInternetowaDlaFirmyContent from "@/components/blog-posts/StronaInternetowaDlaFirmyContent";
 import SystemRezerwacjiDlaSalonuContent from "@/components/blog-posts/SystemRezerwacjiDlaSalonuContent";
 import AutomatyzacjaProcesowAIContent from "@/components/blog-posts/AutomatyzacjaProcesowAIContent";
@@ -20,6 +21,8 @@ const POST_CONTENT: Record<string, (lang: "pl" | "en") => ReactNode> = {
 };
 
 export function getPostContent(slug: string, lang: "pl" | "en"): ReactNode | null {
-  const render = POST_CONTENT[slug];
+  const plSlug =
+    blogPosts.find((post) => post.slug === slug || post.slugEn === slug)?.slug ?? slug;
+  const render = POST_CONTENT[plSlug];
   return render ? render(lang) : null;
 }

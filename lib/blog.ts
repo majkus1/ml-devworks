@@ -4,6 +4,7 @@
  */
 export interface BlogPost {
   slug: string;
+  slugEn: string;
   title: { pl: string; en: string };
   excerpt: { pl: string; en: string };
   image?: string;
@@ -15,6 +16,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "czy-ai-wystarczy-do-stworzenia-strony-lub-aplikacji",
+    slugEn: "is-ai-enough-to-build-a-website-or-app",
     title: {
       pl: "Czy AI wystarczy do stworzenia strony lub aplikacji? Dług technologiczny, bezpieczeństwo i architektura",
       en: "Is AI Enough to Build a Website or App? Technical Debt, Security, and Architecture",
@@ -54,6 +56,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "system-rezerwacji-online-dla-salonu-kosmetycznego-co-wybrac-i-ile-to-trwa",
+    slugEn: "online-booking-system-for-beauty-salon-what-to-choose-and-how-long-it-takes",
     title: {
       pl: "System rezerwacji online dla salonu kosmetycznego - co wybrać i ile to trwa",
       en: "Online Booking System for a Beauty Salon - What to Choose and How Long It Takes",
@@ -93,6 +96,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "kiedy-firmie-oplaca-sie-automatyzacja-procesow-z-ai",
+    slugEn: "when-ai-process-automation-is-worth-it-for-business",
     title: {
       pl: "Kiedy firmie opłaca się automatyzacja procesów z AI?",
       en: "When Is AI Process Automation Worth It for a Company?",
@@ -132,6 +136,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "strona-internetowa-dla-firmy-jak-wybrac-wykonawce",
+    slugEn: "business-website-how-to-choose-a-developer",
     title: {
       pl: "Strona internetowa dla firmy – jak wybrać wykonawcę i na co zwrócić uwagę",
       en: "Business Website – How to Choose a Developer and What to Look For",

@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const baseUrl = "https://ml-devworks.com";
   const postUrl = `${baseUrl}/blog/${slug}`;
-  const postUrlEn = `${baseUrl}/en/blog/${slug}`;
+  const postUrlEn = `${baseUrl}/en/blog/${post.slugEn}`;
 
   return {
     metadataBase: new URL(baseUrl),

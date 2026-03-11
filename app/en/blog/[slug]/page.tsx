@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -12,17 +12,17 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
+  return blogPosts.map((post) => ({ slug: post.slugEn }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const post = blogPosts.find((p) => p.slug === slug);
+  const post = blogPosts.find((p) => p.slugEn === slug || p.slug === slug);
   if (!post) return { title: "Not found" };
 
   const baseUrl = "https://ml-devworks.com";
-  const postUrl = `${baseUrl}/blog/${slug}`;
-  const postUrlEn = `${baseUrl}/en/blog/${slug}`;
+  const postUrl = `${baseUrl}/blog/${post.slug}`;
+  const postUrlEn = `${baseUrl}/en/blog/${post.slugEn}`;
 
   return {
     metadataBase: new URL(baseUrl),
@@ -71,20 +71,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-function BreadcrumbSchema({ slug, title }: { slug: string; title: string }) {
+function BreadcrumbSchema({ slugEn, title }: { slugEn: string; title: string }) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://ml-devworks.com/en" },
       { "@type": "ListItem", position: 2, name: "Blog", item: "https://ml-devworks.com/en/blog" },
-      { "@type": "ListItem", position: 3, name: title, item: `https://ml-devworks.com/en/blog/${slug}` },
+      { "@type": "ListItem", position: 3, name: title, item: `https://ml-devworks.com/en/blog/${slugEn}` },
     ],
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
 }
 
-function ArticleSchema({ post, slug }: { post: BlogPost; slug: string }) {
+function ArticleSchema({ post }: { post: BlogPost }) {
   const baseUrl = "https://ml-devworks.com";
   const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -108,8 +108,8 @@ function ArticleSchema({ post, slug }: { post: BlogPost; slug: string }) {
       url: baseUrl,
       logo: { "@type": "ImageObject", url: `${baseUrl}/primary-on-transparent-logo.png` },
     },
-    mainEntityOfPage: { "@type": "WebPage", "@id": `${baseUrl}/en/blog/${slug}` },
-    url: `${baseUrl}/en/blog/${slug}`,
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${baseUrl}/en/blog/${post.slugEn}` },
+    url: `${baseUrl}/en/blog/${post.slugEn}`,
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
 }
@@ -150,16 +150,19 @@ function FAQSchema() {
 
 export default async function BlogPostPageEn({ params }: Props) {
   const { slug } = await params;
-  const post = blogPosts.find((p) => p.slug === slug);
+  const post = blogPosts.find((p) => p.slugEn === slug || p.slug === slug);
   if (!post) notFound();
+  if (slug === post.slug && slug !== post.slugEn) {
+    permanentRedirect(`/en/blog/${post.slugEn}`);
+  }
 
-  const content = getPostContent(slug, "en");
+  const content = getPostContent(post.slug, "en");
 
   return (
     <>
       <StructuredData lang="en" />
-      <BreadcrumbSchema slug={slug} title={post.title.en} />
-      <ArticleSchema post={post} slug={slug} />
+      <BreadcrumbSchema slugEn={post.slugEn} title={post.title.en} />
+      <ArticleSchema post={post} />
       <FAQSchema />
       <Navbar lang="en" />
       <main className="min-h-screen pt-20">

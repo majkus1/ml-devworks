@@ -2,6 +2,8 @@
  * Route mapping PL ↔ EN for language switcher.
  * Add new routes here when adding new pages.
  */
+import { blogPosts } from "@/lib/blog";
+
 const ROUTE_MAP: Record<string, string> = {
   "/": "/en",
   "/en": "/",
@@ -37,11 +39,13 @@ export function getAlternateLangPath(currentPath: string): string {
   // Dynamic routes: /blog/[slug] ↔ /en/blog/[slug]
   if (path.startsWith("/blog/")) {
     const slug = path.slice(6); // everything after "/blog/"
-    return `/en/blog/${slug}`;
+    const post = blogPosts.find((entry) => entry.slug === slug);
+    return post ? `/en/blog/${post.slugEn}` : `/en/blog/${slug}`;
   }
   if (path.startsWith("/en/blog/")) {
     const slug = path.slice(9); // everything after "/en/blog/"
-    return `/blog/${slug}`;
+    const post = blogPosts.find((entry) => entry.slugEn === slug || entry.slug === slug);
+    return post ? `/blog/${post.slug}` : `/blog/${slug}`;
   }
 
   // Fallback to homepage
