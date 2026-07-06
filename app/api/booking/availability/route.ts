@@ -29,25 +29,28 @@ export async function GET(request: NextRequest) {
     const endOfDay = new Date(date);
     endOfDay.setHours(23, 59, 59, 999);
 
-    const supabase = createServerClient();
+    // Pobierz zarezerwowane terminy z bazy. Jeśli Supabase nie jest skonfigurowany
+    // lub zapytanie się nie powiedzie, traktujemy dzień jako bez rezerwacji, aby
+    // sloty i tak były widoczne (zamiast zwracać 500 i pustą listę).
+    let bookedSlotsRaw: string[] = [];
+    try {
+      const supabase = createServerClient();
+      const { data: bookings, error } = await supabase
+        .from("bookings")
+        .select("datetime")
+        .gte("datetime", startOfDay.toISOString())
+        .lte("datetime", endOfDay.toISOString())
+        .eq("cancelled", false);
 
-    // Pobierz wszystkie rezerwacje dla danego dnia (nie anulowane)
-    const { data: bookings, error } = await supabase
-      .from("bookings")
-      .select("datetime")
-      .gte("datetime", startOfDay.toISOString())
-      .lte("datetime", endOfDay.toISOString())
-      .eq("cancelled", false);
-
-    if (error) {
-      console.error("Error fetching bookings:", error);
-      return NextResponse.json(
-        { error: "Failed to fetch availability" },
-        { status: 500 }
-      );
+      if (error) {
+        console.error("Error fetching bookings:", error);
+      } else {
+        bookedSlotsRaw = (bookings || []).map((b) => b.datetime);
+      }
+    } catch (dbError) {
+      console.error("Supabase unavailable, returning slots without booked filter:", dbError);
     }
 
-    const bookedSlotsRaw = (bookings || []).map((b) => b.datetime);
     const bookedSlots = bookedSlotsRaw.map((dt) => new Date(dt));
     let availableSlots = getAvailableSlotsForDate(date, bookedSlots);
 

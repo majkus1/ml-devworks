@@ -43,9 +43,9 @@ export const bookingConfig: BookingConfig = {
   // Dostępne od poniedziałku do piątku
   availableDaysOfWeek: [1, 2, 3, 4, 5], // 1=pon, 2=wt, 3=śr, 4=czw, 5=pt
   
-  // Godziny pracy: 9:00 - 17:00
-  startTime: { hour: 9, minute: 0 },
-  endTime: { hour: 17, minute: 0 },
+  // Godziny pracy: 17:00 - 22:00
+  startTime: { hour: 17, minute: 0 },
+  endTime: { hour: 22, minute: 0 },
   
   // Spotkanie trwa 30 minut
   meetingDuration: 30,
@@ -68,52 +68,74 @@ export const bookingConfig: BookingConfig = {
 };
 
 /**
+ * Zwraca datę YYYY-MM-DD (na podstawie kalendarzowego dnia przekazanej daty).
+ */
+function toDateStr(date: Date): string {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+/**
+ * Tworzy instant (Date) odpowiadający podanej godzinie ściennej w danej strefie czasowej.
+ * Dzięki temu godziny są takie same niezależnie od strefy serwera (np. UTC na produkcji).
+ */
+function zonedTimeToUtc(dateStr: string, hour: number, minute: number, timeZone: string): Date {
+  const hh = String(hour).padStart(2, '0');
+  const mm = String(minute).padStart(2, '0');
+  // Interpretujemy godzinę ścienną jako UTC, a następnie korygujemy o offset strefy.
+  const naive = new Date(`${dateStr}T${hh}:${mm}:00Z`);
+  const tzTime = new Date(naive.toLocaleString('en-US', { timeZone }));
+  const utcTime = new Date(naive.toLocaleString('en-US', { timeZone: 'UTC' }));
+  const offset = tzTime.getTime() - utcTime.getTime();
+  return new Date(naive.getTime() - offset);
+}
+
+/**
  * Generuje dostępne sloty czasowe dla danego dnia
  */
 export function getAvailableSlotsForDate(date: Date, bookedSlots: Date[]): Date[] {
   const slots: Date[] = [];
   const config = bookingConfig;
-  
+
   // Sprawdź czy dzień jest wykluczony
-  const dateStr = date.toISOString().split('T')[0];
+  const dateStr = toDateStr(date);
   if (config.excludedDates.includes(dateStr)) {
     return [];
   }
-  
+
   // Sprawdź czy dzień tygodnia jest dostępny
   const dayOfWeek = date.getDay() === 0 ? 7 : date.getDay(); // Konwersja: niedziela = 7
   if (!config.availableDaysOfWeek.includes(dayOfWeek)) {
     return [];
   }
-  
-  // Utwórz sloty od startTime do endTime
-  const currentSlot = new Date(date);
-  currentSlot.setHours(config.startTime.hour, config.startTime.minute, 0, 0);
-  
-  const endTime = new Date(date);
-  endTime.setHours(config.endTime.hour, config.endTime.minute, 0, 0);
-  
+
+  // Utwórz sloty od startTime do endTime (w skonfigurowanej strefie czasowej)
+  let currentSlot = zonedTimeToUtc(dateStr, config.startTime.hour, config.startTime.minute, config.timezone);
+  const endTime = zonedTimeToUtc(dateStr, config.endTime.hour, config.endTime.minute, config.timezone);
+  const stepMs = config.meetingDuration * 60 * 1000;
+
   while (currentSlot < endTime) {
-    const slotEnd = new Date(currentSlot);
-    slotEnd.setMinutes(slotEnd.getMinutes() + config.meetingDuration);
-    
+    const slotEnd = new Date(currentSlot.getTime() + stepMs);
+
     // Sprawdź czy slot nie wykracza poza godzinę zakończenia
     if (slotEnd <= endTime) {
       // Sprawdź czy slot nie jest już zarezerwowany
       const isBooked = bookedSlots.some(booked => {
         const diff = Math.abs(booked.getTime() - currentSlot.getTime());
-        return diff < config.meetingDuration * 60 * 1000; // W tym samym przedziale czasowym
+        return diff < stepMs; // W tym samym przedziale czasowym
       });
-      
+
       if (!isBooked) {
         slots.push(new Date(currentSlot));
       }
     }
-    
+
     // Przejdź do następnego slotu
-    currentSlot.setMinutes(currentSlot.getMinutes() + config.meetingDuration);
+    currentSlot = new Date(currentSlot.getTime() + stepMs);
   }
-  
+
   return slots;
 }
 

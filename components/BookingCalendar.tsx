@@ -10,6 +10,9 @@ interface BookingCalendarProps {
 const AVAILABLE_DAYS = [1, 2, 3, 4, 5]; // poniedziałek-piątek
 const DAYS_TO_SHOW = 21;
 
+// Ustaw na false, aby ponownie włączyć wybór terminów i rezerwację online.
+const COMING_SOON = true;
+
 function getNextWeekdays(count: number): Date[] {
   const result: Date[] = [];
   const now = new Date();
@@ -44,6 +47,7 @@ function formatTime(iso: string, lang: "pl" | "en"): string {
     hour: "2-digit",
     minute: "2-digit",
     hour12: false,
+    timeZone: "Europe/Warsaw",
   });
 }
 
@@ -67,6 +71,7 @@ export default function BookingCalendar({ lang = "pl" }: BookingCalendarProps) {
     pl: {
       title: "Zarezerwuj bezpłatną konsultację (30 min)",
       subtitle: "Wybierz dogodny termin i umów bezpłatne 30-minutowe spotkanie online.",
+      comingSoon: "Wkrótce udostępnimy terminy rezerwacji online. W międzyczasie napisz do nas przez formularz powyżej — odpowiemy i zaproponujemy dogodny termin.",
       pickDate: "Wybierz dzień",
       pickTime: "Wybierz godzinę",
       noSlots: "Brak dostępnych terminów tego dnia.",
@@ -80,6 +85,7 @@ export default function BookingCalendar({ lang = "pl" }: BookingCalendarProps) {
     en: {
       title: "Book a free consultation (30 min)",
       subtitle: "Choose a convenient time and schedule a free 30-minute online meeting.",
+      comingSoon: "Online booking slots will be available soon. In the meantime, send us a message using the form above — we'll get back to you and arrange a convenient time.",
       pickDate: "Pick a day",
       pickTime: "Pick a time",
       noSlots: "No available slots for this day.",
@@ -191,10 +197,18 @@ export default function BookingCalendar({ lang = "pl" }: BookingCalendarProps) {
           {t.title}
         </h3>
         <p className="text-base text-gray-400 text-left mb-6" style={{ fontSize: "16px" }}>
-          {t.subtitle}
+          {COMING_SOON ? t.comingSoon : t.subtitle}
         </p>
 
-        {submitStatus === "success" ? (
+        {COMING_SOON ? (
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 border border-primary/30 text-primary font-medium">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary" />
+            </span>
+            {lang === "pl" ? "Terminy dostępne wkrótce" : "Slots available soon"}
+          </div>
+        ) : submitStatus === "success" ? (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
