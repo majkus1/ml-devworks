@@ -8,9 +8,9 @@ import { getServices } from "@/lib/services";
 const services = getServices("pl");
 
 export const metadata: Metadata = {
-  title: "Usługi programistyczne dla firm - strony, aplikacje, automatyzacja AI | ML DevWorks",
+  title: "Usługi programistyczne dla firm | ML DevWorks",
   description:
-    "Usługi programistyczne ML DevWorks: strony internetowe, aplikacje webowe i mobilne, automatyzacja procesów AI, sklepy internetowe, systemy rezerwacji, DevOps i utrzymanie.",
+    "Strony, aplikacje webowe i mobilne, automatyzacja AI, sklepy, systemy rezerwacji, DevOps i utrzymanie. Kompleksowe usługi programistyczne dla firm.",
   alternates: {
     canonical: "https://ml-devworks.com/uslugi",
     languages: {

@@ -6,9 +6,9 @@ import StructuredData from "@/components/StructuredData";
 import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
-  title: "Website and App Fixes, Performance Optimization, Maintenance | ML Devworks",
+  title: "Website & app fixes and optimization | ML Devworks",
   description:
-    "We fix broken websites and web apps, improve Core Web Vitals, resolve SEO technical issues, and provide ongoing maintenance. Fast diagnostics, clear repair scope, and stable long-term support.",
+    "We fix broken websites and web apps, improve Core Web Vitals and technical SEO, and provide ongoing maintenance. Fast diagnostics and clear scope.",
   keywords: [
     "website bug fixing service",
     "web app troubleshooting",

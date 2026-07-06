@@ -8,9 +8,9 @@ import { blogPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ml-devworks.com"),
-  title: "Blog o Biznesie, Stronach WWW, SEO i Automatyzacji | ML Devworks",
+  title: "Blog o biznesie, stronach WWW i automatyzacji | ML DevWorks",
   description:
-    "Praktyczne poradniki biznesowe dla firm: strony internetowe, SEO, aplikacje webowe, automatyzacja procesow i rozwoj sprzedazy online. Konkretne wskazowki wdrozeniowe od ML Devworks.",
+    "Praktyczne poradniki dla firm: strony internetowe, SEO, aplikacje webowe, automatyzacja procesów i rozwój sprzedaży online. Konkretne wskazówki wdrożeniowe.",
   keywords: [
     "blog o stronach internetowych dla firm",
     "jak pozyskiwac klientow przez strone www",

@@ -25,9 +25,9 @@ const faq = [
 ];
 
 export const metadata: Metadata = {
-  title: "System rezerwacji online dla firm - klienci, płatności, kalendarz | ML DevWorks",
+  title: "System rezerwacji online dla firm | ML DevWorks",
   description:
-    "Budujemy systemy rezerwacji klientów: kalendarz dostępności, płatności online, zaliczki, przypomnienia, panel administracyjny i integracje CRM. Wdrożenia dla firm usługowych.",
+    "Systemy rezerwacji klientów z kalendarzem, płatnościami online, zaliczkami, przypomnieniami i integracją CRM. Dla firm usługowych — umów bezpłatną wycenę.",
   alternates: {
     canonical: "https://ml-devworks.com/uslugi/systemy-rezerwacji-online",
     languages: {

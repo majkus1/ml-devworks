@@ -6,9 +6,9 @@ import StructuredData from "@/components/StructuredData";
 import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
-  title: "Automatyzacja procesów i AI dla firm - integracje i agenci AI | ML DevWorks",
+  title: "Automatyzacja procesów i AI dla firm | ML DevWorks",
   description:
-    "Wdrażamy automatyzację procesów biznesowych i rozwiązania AI: agenci AI, automatyzacja obsługi klienta, workflow i integracje narzędzi. Mniej pracy manualnej, więcej leadów i szybsza obsługa.",
+    "Wdrażamy agentów AI i automatyzację procesów: obsługa klienta, workflow i integracje narzędzi. Mniej pracy ręcznej, więcej leadów — umów bezpłatną wycenę.",
   keywords: [
     "automatyzacja procesow biznesowych",
     "ai dla firm",

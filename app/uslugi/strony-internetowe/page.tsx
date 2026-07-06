@@ -6,9 +6,9 @@ import StructuredData from "@/components/StructuredData";
 import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
-  title: "Tworzenie stron internetowych dla firm - szybkie i skuteczne WWW | ML DevWorks",
+  title: "Tworzenie stron internetowych dla firm | ML DevWorks",
   description:
-    "Projektujemy i wdrażamy strony internetowe dla firm: strony usługowe, landing page i strony ofertowe. Szybkie ładowanie, SEO techniczne, formularze kontaktowe i realne wsparcie sprzedaży online.",
+    "Projektujemy szybkie strony firmowe, landing page i strony ofertowe pod SEO i pozyskiwanie klientów. Zespół z Krakowa — umów bezpłatną wycenę.",
   keywords: [
     "tworzenie stron internetowych dla firm",
     "strona internetowa dla firmy uslugowej",

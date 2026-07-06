@@ -6,9 +6,9 @@ import StructuredData from "@/components/StructuredData";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Software house Kraków - strony, aplikacje, automatyzacja AI | ML DevWorks",
+  title: "Software house Kraków – aplikacje, strony, AI | ML DevWorks",
   description:
-    "ML DevWorks to software house z Krakowa. Tworzymy strony internetowe, aplikacje webowe i mobilne, systemy rezerwacji, automatyzacje AI, integracje i DevOps dla firm.",
+    "Software house z Krakowa. Tworzymy strony, aplikacje webowe i mobilne, automatyzacje AI, systemy rezerwacji i integracje dla firm. Umów bezpłatną wycenę.",
   alternates: {
     canonical: "https://ml-devworks.com/software-house-krakow",
     languages: {

@@ -25,7 +25,7 @@ const faq = [
 ];
 
 export const metadata: Metadata = {
-  title: "Online booking system for companies - clients, payments, calendar | ML DevWorks",
+  title: "Online booking systems for companies | ML DevWorks",
   description:
     "We build customer booking systems with availability calendars, online payments, deposits, reminders, admin panels, and CRM integrations for service companies.",
   alternates: {

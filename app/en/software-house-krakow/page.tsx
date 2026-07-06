@@ -6,9 +6,9 @@ import StructuredData from "@/components/StructuredData";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Software house Krakow - websites, apps, AI automation | ML DevWorks",
+  title: "Software house Krakow – apps, websites, AI | ML DevWorks",
   description:
-    "ML DevWorks is a software house from Krakow, Poland. We build websites, web and mobile apps, booking systems, AI automation, integrations, and DevOps for companies.",
+    "Software house from Krakow, Poland. We build websites, web and mobile apps, booking systems, AI automation and integrations for companies. Get a free quote.",
   alternates: {
     canonical: "https://ml-devworks.com/en/software-house-krakow",
     languages: {

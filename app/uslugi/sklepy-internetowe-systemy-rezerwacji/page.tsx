@@ -6,9 +6,9 @@ import StructuredData from "@/components/StructuredData";
 import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
-  title: "Sklepy internetowe dla firm - e-commerce, płatności, integracje | ML DevWorks",
+  title: "Sklepy internetowe i e-commerce dla firm | ML DevWorks",
   description:
-    "Budujemy sklepy internetowe B2C i B2B: katalog produktów, koszyk, płatności online, dostawy kurierskie, integracje ERP/CRM i automatyzacje sprzedaży.",
+    "Budujemy sklepy internetowe B2C i B2B: katalog, koszyk, płatności online, dostawy, integracje ERP/CRM i automatyzacje sprzedaży. Umów bezpłatną wycenę.",
   keywords: [
     "sklep internetowy dla firmy",
     "tworzenie sklepu internetowego",

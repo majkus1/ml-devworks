@@ -8,7 +8,7 @@ import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from 
 export const metadata: Metadata = {
   title: "Web and Mobile App Development for Companies | ML Devworks",
   description:
-    "We build custom web and mobile applications for business operations, customer portals, and digital products. iOS/Android and web delivery with secure architecture, scalable backend, and rapid iterations.",
+    "We build custom web and mobile apps: business tools, customer portals, iOS/Android and MVPs. Secure, scalable architecture with fast delivery.",
   keywords: [
     "web application development company",
     "mobile app development for business",

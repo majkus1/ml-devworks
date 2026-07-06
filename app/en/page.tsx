@@ -10,8 +10,8 @@ import AboutIntro from "@/components/AboutIntro";
 import GoogleReviewsSchema from "@/components/GoogleReviewsSchema";
 
 export const metadata: Metadata = {
-  title: "ML Devworks - Quality by Us. Speed by AI. | Web Development & Applications",
-  description: "We create professional digital solutions for your business. From simple websites to advanced applications and cloud deployments. Quality by Us. Speed by AI.",
+  title: "Websites, apps & AI automation for companies | ML DevWorks",
+  description: "We build websites, applications and AI automation for companies. Fast, scalable and SEO-ready. Software house from Krakow — get a free quote.",
   alternates: {
     canonical: "https://ml-devworks.com/en",
     languages: {

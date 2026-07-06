@@ -10,8 +10,8 @@ import AboutIntro from "@/components/AboutIntro";
 import GoogleReviewsSchema from "@/components/GoogleReviewsSchema";
 
 export const metadata: Metadata = {
-  title: "ML Devworks - Quality by Us. Speed by AI. | Strony Internetowe i Aplikacje",
-  description: "Tworzymy profesjonalne rozwiązania cyfrowe dla Twojego biznesu. Od prostych stron internetowych po zaawansowane aplikacje i wdrożenia w chmurze. Quality by Us. Speed by AI.",
+  title: "Strony, aplikacje i automatyzacje AI dla firm | ML DevWorks",
+  description: "Projektujemy strony internetowe, aplikacje i automatyzacje AI dla firm. Szybko, skalowalnie i pod SEO. Zespół z Krakowa — umów bezpłatną wycenę.",
   alternates: {
     canonical: "https://ml-devworks.com",
     languages: {

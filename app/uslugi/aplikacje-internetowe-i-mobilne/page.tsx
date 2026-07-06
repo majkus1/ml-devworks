@@ -6,9 +6,9 @@ import StructuredData from "@/components/StructuredData";
 import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
-  title: "Aplikacje webowe i mobilne dla firm - projektowanie i wdrożenie | ML DevWorks",
+  title: "Aplikacje webowe i mobilne dla firm | ML DevWorks",
   description:
-    "Tworzymy aplikacje internetowe i mobilne dla biznesu: panele klienta, systemy zamówień, aplikacje iOS/Android i MVP startup. Stawiamy na skalowalność, bezpieczeństwo i szybkie wdrożenie.",
+    "Tworzymy aplikacje webowe i mobilne dla firm: panele klienta, systemy zamówień, aplikacje iOS/Android i MVP. Skalowalnie i bezpiecznie — wyceń projekt.",
   keywords: [
     "aplikacje webowe dla firm",
     "aplikacje mobilne dla biznesu",

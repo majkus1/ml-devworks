@@ -8,7 +8,7 @@ import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from 
 export const metadata: Metadata = {
   title: "Business Process Automation and AI Agents | ML Devworks",
   description:
-    "We implement AI agents and business process automation: workflow automations, customer support automation, and smart integrations across your stack. Reduce manual work and increase operational speed.",
+    "We implement AI agents and business process automation: customer support, workflows and integrations. Reduce manual work and speed up operations.",
   keywords: [
     "business process automation",
     "ai agents for business",

@@ -6,9 +6,9 @@ import StructuredData from "@/components/StructuredData";
 import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
-  title: "Web Development for Businesses - Fast, SEO-Ready Websites | ML Devworks",
+  title: "Web development for businesses | ML Devworks",
   description:
-    "We design and build business websites, service pages, and conversion-focused landing pages. Fast loading, technical SEO, clear structure, and contact flows that turn traffic into qualified leads.",
+    "We build fast business websites, service pages and conversion-focused landing pages with technical SEO that turn traffic into qualified leads.",
   keywords: [
     "web development for businesses",
     "website development company",

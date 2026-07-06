@@ -8,9 +8,9 @@ import { getServices } from "@/lib/services";
 const services = getServices("en");
 
 export const metadata: Metadata = {
-  title: "Software development services - websites, apps, AI automation | ML DevWorks",
+  title: "Software development services for companies | ML DevWorks",
   description:
-    "ML DevWorks software development services: websites, web and mobile apps, AI process automation, online stores, booking systems, DevOps, fixes, and maintenance.",
+    "Websites, web and mobile apps, AI automation, online stores, booking systems, DevOps and maintenance. Software development services for companies.",
   alternates: {
     canonical: "https://ml-devworks.com/en/services",
     languages: {

@@ -6,9 +6,9 @@ import StructuredData from "@/components/StructuredData";
 import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
-  title: "Naprawa stron i aplikacji - optymalizacja wydajności i utrzymanie | ML DevWorks",
+  title: "Naprawa i optymalizacja stron i aplikacji | ML DevWorks",
   description:
-    "Naprawiamy strony i aplikacje po innych wykonawcach: bugfixing, optymalizacja Core Web Vitals, techniczne SEO, poprawa konwersji i stałe utrzymanie. Szybka diagnoza problemu i plan naprawczy.",
+    "Naprawiamy strony i aplikacje po innych wykonawcach: bugfixing, Core Web Vitals, techniczne SEO i utrzymanie. Szybka diagnoza problemu i plan naprawczy.",
   keywords: [
     "naprawa strony internetowej",
     "naprawa aplikacji webowej",

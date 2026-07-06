@@ -6,9 +6,9 @@ import StructuredData from "@/components/StructuredData";
 import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
-  title: "DevOps i wdrożenia chmurowe - CI/CD, monitoring, skalowanie | ML DevWorks",
+  title: "DevOps i wdrożenia chmurowe dla firm | ML DevWorks",
   description:
-    "Wdrażamy aplikacje w chmurze i porządkujemy DevOps: CI/CD, Docker, monitoring, backup, bezpieczeństwo i utrzymanie infrastruktury. Stabilne deploymenty i szybsze wydania dla zespołów produktowych.",
+    "Wdrożenia w chmurze i DevOps: CI/CD, Docker, monitoring, backup i bezpieczeństwo. Stabilne deploymenty i szybsze wydania dla zespołów produktowych.",
   keywords: [
     "devops dla firm",
     "wdrozenia chmurowe aplikacji",
