@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import type { BlogPost } from "@/lib/blog";
 
 interface BlogCardListProps {
@@ -78,11 +79,13 @@ function BlogCard({
       <Link href={href} className="block h-full">
         {post.image && (
           <div className="aspect-video overflow-hidden">
-            <img
+            <Image
               src={post.image}
               alt={post.title[lang]}
+              width={640}
+              height={360}
+              sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              loading="lazy"
             />
           </div>
         )}

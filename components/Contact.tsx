@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
+import Image from "next/image";
 import BookingCalendar from "./BookingCalendar";
 
 interface ContactProps {
@@ -245,9 +246,11 @@ export default function Contact({ lang = "pl" }: ContactProps) {
               
               {/* Profile Photo and Name */}
               <div className="flex items-center gap-4 mb-6 pb-6 border-b border-primary/20">
-                <img
-                  src="/IM.jpeg"
+                <Image
+                  src="/IM.webp"
                   alt="Michał Lipka"
+                  width={64}
+                  height={64}
                   className="w-16 h-16 rounded-full object-cover border-2 border-primary/30"
                 />
                 <div>

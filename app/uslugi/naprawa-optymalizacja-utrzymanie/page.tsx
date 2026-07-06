@@ -3,11 +3,12 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
+import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
-  title: "Naprawa Stron i Aplikacji - Optymalizacja Wydajnosci i Utrzymanie | ML Devworks",
+  title: "Naprawa stron i aplikacji - optymalizacja wydajności i utrzymanie | ML DevWorks",
   description:
-    "Naprawiamy strony i aplikacje po innych wykonawcach: bugfixing, optymalizacja Core Web Vitals, techniczne SEO, poprawa konwersji i stale utrzymanie. Szybka diagnoza problemu i plan naprawczy.",
+    "Naprawiamy strony i aplikacje po innych wykonawcach: bugfixing, optymalizacja Core Web Vitals, techniczne SEO, poprawa konwersji i stałe utrzymanie. Szybka diagnoza problemu i plan naprawczy.",
   keywords: [
     "naprawa strony internetowej",
     "naprawa aplikacji webowej",
@@ -31,18 +32,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Naprawa Stron i Aplikacji | ML Devworks",
+    title: "Naprawa stron i aplikacji | ML DevWorks",
     description:
-      "Bugfixing, Core Web Vitals, techniczne SEO i utrzymanie projektow produkcyjnych.",
+      "Bugfixing, Core Web Vitals, techniczne SEO i utrzymanie projektów produkcyjnych.",
     url: "https://ml-devworks.com/uslugi/naprawa-optymalizacja-utrzymanie",
     type: "website",
     locale: "pl_PL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Naprawa Stron i Aplikacji | ML Devworks",
+    title: "Naprawa stron i aplikacji | ML DevWorks",
     description:
-      "Bugfixing, Core Web Vitals, techniczne SEO i utrzymanie projektow produkcyjnych.",
+      "Bugfixing, Core Web Vitals, techniczne SEO i utrzymanie projektów produkcyjnych.",
   },
 };
 
@@ -103,13 +104,15 @@ export default function NaprawaOptymalizacjaUtrzymaniePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
+      <ServiceFaqSchema serviceId="maintenance" lang="pl" />
+      <ServiceOfferCatalogSchema serviceId="maintenance" lang="pl" />
       <Navbar lang="pl" />
       <main className="min-h-screen pt-20">
         {/* Hero Section */}
         <section className="px-4 py-16 md:py-24 bg-gradient-to-b from-background to-background-lighter">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Naprawa, <span className="text-primary">Optymalizacja</span> i <span className="text-primary">Utrzymanie</span>
+              Naprawa, optymalizacja i utrzymanie <span className="text-primary">stron oraz aplikacji</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Przywróć pełną funkcjonalność swojej strony lub aplikacji. Optymalizuj wydajność, SEO i konwersję. Kompleksowe wsparcie techniczne dla Twoich projektów.
@@ -122,7 +125,7 @@ export default function NaprawaOptymalizacjaUtrzymaniePage() {
                 Bezpłatna Wycena
               </Link>
               <Link
-                href="/#services"
+                href="/uslugi"
                 className="px-8 py-4 bg-background-lighter border border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-colors"
               >
                 Zobacz Wszystkie Usługi
@@ -130,6 +133,7 @@ export default function NaprawaOptymalizacjaUtrzymaniePage() {
             </div>
           </div>
         </section>
+        <ServiceSeoSections serviceId="maintenance" lang="pl" />
 
         {/* Main Content */}
         <section className="px-4 py-16">
@@ -208,7 +212,7 @@ export default function NaprawaOptymalizacjaUtrzymaniePage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">⚡ Optymalizacja Wydajności</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Optymalizacja wydajności</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Analiza i optymalizacja czasu ładowania strony, optymalizacja kodu (minifikacja, bundling), optymalizacja obrazów (kompresja, formaty nowoczesne), optymalizacja bazy danych, caching, CDN. Zwiększenie PageSpeed Score.
                   </p>
@@ -222,14 +226,14 @@ export default function NaprawaOptymalizacjaUtrzymaniePage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">📈 Optymalizacja Konwersji</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Optymalizacja konwersji</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Analiza zachowań użytkowników, identyfikacja punktów spadku konwersji, optymalizacja procesu zakupowego, formularzy, CTA, landing pages. A/B testing i ciągłe ulepszanie wyników.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">🔄 Aktualizacje i Modernizacja</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Aktualizacje i modernizacja</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Aktualizacja frameworków, bibliotek, zależności, systemów CMS. Modernizacja kodu, migracja do nowszych technologii, refaktoryzacja. Utrzymanie zgodności z najnowszymi standardami.
                   </p>
@@ -243,7 +247,7 @@ export default function NaprawaOptymalizacjaUtrzymaniePage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">💼 Utrzymanie i Wsparcie</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Utrzymanie i wsparcie</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Ciągłe monitorowanie, regularne aktualizacje, backup, wsparcie techniczne, szybka reakcja na problemy, konsultacje i doradztwo. Pełna obsługa utrzymaniowa Twojego projektu.
                   </p>
@@ -258,14 +262,14 @@ export default function NaprawaOptymalizacjaUtrzymaniePage() {
               </h2>
               <div className="space-y-6">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">⚡ Szybka Reakcja</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Szybka reakcja</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Szybka diagnoza problemów i natychmiastowa naprawa. Priorytetyzujemy krytyczne błędy i zapewniamy szybką reakcję na problemy, które wpływają na działanie Twojego biznesu.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">📊 Mierzalne Rezultaty</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Mierzalne rezultaty</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Wszystkie optymalizacje są mierzalne. Przed i po analizie, raporty z wynikami, monitoring metryk. Widzisz realne poprawy w wydajności, SEO i konwersji.
                   </p>
@@ -286,14 +290,14 @@ export default function NaprawaOptymalizacjaUtrzymaniePage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">🔄 Ciągłe Ulepszanie</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Ciągłe ulepszanie</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Nie tylko naprawiamy, ale także ciągle optymalizujemy. Monitorujemy wyniki, zbieramy feedback i wprowadzamy ulepszenia, aby Twój projekt był coraz lepszy.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">💼 Elastyczne Podejście</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Elastyczne podejście</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Dostosowujemy się do Twoich potrzeb - od jednorazowych napraw po długoterminowe umowy utrzymaniowe. Pracujemy z projektami w różnych technologiach i rozmiarach.
                   </p>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
+import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
   title: "Web Development for Businesses - Fast, SEO-Ready Websites | ML Devworks",
@@ -103,13 +104,15 @@ export default function WebDevelopmentPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
+      <ServiceFaqSchema serviceId="web-development" lang="en" />
+      <ServiceOfferCatalogSchema serviceId="web-development" lang="en" />
       <Navbar lang="en" />
       <main className="min-h-screen pt-20">
         {/* Hero Section */}
         <section className="px-4 py-16 md:py-24 bg-gradient-to-b from-background to-background-lighter">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Professional <span className="text-primary">Web Development</span>
+              Business websites that <span className="text-primary">generate leads</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               We create websites that not only look great but also deliver real results for your business.
@@ -122,7 +125,7 @@ export default function WebDevelopmentPage() {
                 Get Free Quote
               </Link>
               <Link
-                href="/en#services"
+                href="/en/services"
                 className="px-8 py-4 bg-background-lighter border border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-colors"
               >
                 View All Services
@@ -130,6 +133,7 @@ export default function WebDevelopmentPage() {
             </div>
           </div>
         </section>
+        <ServiceSeoSections serviceId="web-development" lang="en" />
 
         {/* Main Content */}
         <section className="px-4 py-16">
@@ -236,7 +240,7 @@ export default function WebDevelopmentPage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">💼 Comprehensive Service</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Comprehensive service</h3>
                   <p className="text-gray-300 leading-relaxed">
                     From concept, through design, implementation, to maintenance - we provide full service at every stage. We focus on long-term partnerships.
                   </p>
@@ -322,4 +326,3 @@ export default function WebDevelopmentPage() {
     </>
   );
 }
-

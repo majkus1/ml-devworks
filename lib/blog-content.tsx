@@ -6,8 +6,24 @@ import AutomatyzacjaProcesowAIContent from "@/components/blog-posts/Automatyzacj
 import CzyAIWystarczyDoStronyContent from "@/components/blog-posts/CzyAIWystarczyDoStronyContent";
 import SocialMediaVsStronaFirmowaContent from "@/components/blog-posts/SocialMediaVsStronaFirmowaContent";
 import KompleksoweUslugiProgramistyczneContent from "@/components/blog-posts/KompleksoweUslugiProgramistyczneContent";
+import KosztAutomatyzacjiROIContent from "@/components/blog-posts/KosztAutomatyzacjiROIContent";
+import SystemRezerwacjiDlaFirmyUslugowejContent from "@/components/blog-posts/SystemRezerwacjiDlaFirmyUslugowejContent";
+import AgenciAIObslugaKlientaContent from "@/components/blog-posts/AgenciAIObslugaKlientaContent";
+import IntegracjaSystemowContent from "@/components/blog-posts/IntegracjaSystemowContent";
 
 const POST_CONTENT: Record<string, (lang: "pl" | "en") => ReactNode> = {
+  "ile-kosztuje-automatyzacja-procesow-w-firmie-i-jak-liczyc-roi": (lang) => (
+    <KosztAutomatyzacjiROIContent lang={lang} />
+  ),
+  "system-rezerwacji-dla-firmy-uslugowej-funkcje-integracje-platnosci-wdrozenie": (lang) => (
+    <SystemRezerwacjiDlaFirmyUslugowejContent lang={lang} />
+  ),
+  "agenci-ai-w-obsludze-klienta-kiedy-sie-oplacaja": (lang) => (
+    <AgenciAIObslugaKlientaContent lang={lang} />
+  ),
+  "integracja-systemow-w-firmie-api-crm-erp-jak-zaczac": (lang) => (
+    <IntegracjaSystemowContent lang={lang} />
+  ),
   "strona-internetowa-dla-firmy-jak-wybrac-wykonawce": (lang) => (
     <StronaInternetowaDlaFirmyContent lang={lang} />
   ),

@@ -3,19 +3,20 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
+import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
-  title: "Sklepy Internetowe i Systemy Rezerwacji - E-commerce, Platnosci, Integracje | ML Devworks",
+  title: "Sklepy internetowe dla firm - e-commerce, płatności, integracje | ML DevWorks",
   description:
-    "Budujemy sklepy internetowe i systemy rezerwacji online: platnosci, dostawy, kalendarze wizyt, integracje z ERP/CRM i automatyzacje sprzedazy. Rozwiazania dla uslug, e-commerce B2C i B2B.",
+    "Budujemy sklepy internetowe B2C i B2B: katalog produktów, koszyk, płatności online, dostawy kurierskie, integracje ERP/CRM i automatyzacje sprzedaży.",
   keywords: [
     "sklep internetowy dla firmy",
     "tworzenie sklepu internetowego",
-    "system rezerwacji online dla uslug",
+    "wdrozenie woocommerce",
+    "wdrozenie shopify",
     "platforma e commerce b2b b2c",
     "integracja platnosci online",
-    "integracja dostaw kurier paczkomat",
-    "kalendarz rezerwacji wizyt",
+    "integracja kurier paczkomat",
     "woocommerce sklep internetowy",
     "shopify sklep internetowy",
     "integracja sklepu z erp crm",
@@ -31,18 +32,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Sklepy Internetowe i Systemy Rezerwacji | ML Devworks",
+    title: "Sklepy internetowe dla firm | ML DevWorks",
     description:
-      "E-commerce i rezerwacje online z integracjami platnosci, dostaw i systemow zaplecza.",
+      "E-commerce z integracjami płatności, dostaw, ERP/CRM, katalogu produktów i analityki sprzedaży.",
     url: "https://ml-devworks.com/uslugi/sklepy-internetowe-systemy-rezerwacji",
     type: "website",
     locale: "pl_PL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sklepy Internetowe i Systemy Rezerwacji | ML Devworks",
+    title: "Sklepy internetowe dla firm | ML DevWorks",
     description:
-      "E-commerce i rezerwacje online z integracjami platnosci, dostaw i systemow zaplecza.",
+      "E-commerce z integracjami płatności, dostaw, ERP/CRM, katalogu produktów i analityki sprzedaży.",
   },
 };
 
@@ -50,8 +51,8 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
   const serviceStructuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Sklepy Internetowe i Systemy Rezerwacji",
-    "description": "Kompletne rozwiązania e-commerce i systemy rezerwacji z integracją płatności, zarządzaniem produktami i analityką sprzedaży.",
+    "name": "Sklepy internetowe i e-commerce dla firm",
+    "description": "Kompletne rozwiązania e-commerce z integracją płatności, dostaw, katalogu produktów, ERP/CRM i analityki sprzedaży.",
     "provider": {
       "@type": "Organization",
       "name": "ML Devworks",
@@ -69,8 +70,8 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
       "@type": "Country",
       "name": "Poland"
     },
-    "serviceType": "E-commerce Development, Booking System Development",
-    "category": "E-commerce, Online Booking"
+    "serviceType": "E-commerce Development",
+    "category": "E-commerce"
   };
 
   const breadcrumbStructuredData = {
@@ -86,7 +87,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Sklepy Internetowe i Systemy Rezerwacji",
+        "name": "Sklepy internetowe",
         "item": "https://ml-devworks.com/uslugi/sklepy-internetowe-systemy-rezerwacji"
       }
     ]
@@ -103,16 +104,18 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
+      <ServiceFaqSchema serviceId="ecommerce-booking" lang="pl" />
+      <ServiceOfferCatalogSchema serviceId="ecommerce-booking" lang="pl" />
       <Navbar lang="pl" />
       <main className="min-h-screen pt-20">
         {/* Hero Section */}
         <section className="px-4 py-16 md:py-24 bg-gradient-to-b from-background to-background-lighter">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Sklepy Internetowe i <span className="text-primary">Systemy Rezerwacji</span>
+              Sklepy internetowe i <span className="text-primary">e-commerce dla firm</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Kompletne rozwiązania e-commerce i systemy rezerwacji, które zwiększają sprzedaż i ułatwiają zarządzanie Twoim biznesem online.
+              Projektujemy sklepy B2C i B2B z koszykiem, płatnościami, dostawami, katalogiem produktów, integracjami ERP/CRM i analityką sprzedaży.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -122,7 +125,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
                 Bezpłatna Wycena
               </Link>
               <Link
-                href="/#services"
+                href="/uslugi"
                 className="px-8 py-4 bg-background-lighter border border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-colors"
               >
                 Zobacz Wszystkie Usługi
@@ -130,6 +133,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
             </div>
           </div>
         </section>
+        <ServiceSeoSections serviceId="ecommerce-booking" lang="pl" />
 
         {/* Main Content */}
         <section className="px-4 py-16">
@@ -155,16 +159,16 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-2xl font-bold mb-4 text-primary">Systemy Rezerwacji</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-primary">Integracje dostaw i zaplecza</h3>
                   <p className="text-gray-300 leading-relaxed mb-4">
-                    Zaawansowane systemy rezerwacji online dla hoteli, restauracji, usług, wydarzeń i innych biznesów wymagających rezerwacji terminów.
+                    Łączymy sklep z kurierami, paczkomatami, fakturowaniem, magazynem, CRM i ERP, żeby zamówienia nie wymagały ręcznego przepisywania danych.
                   </p>
                   <ul className="list-disc list-inside text-gray-400 space-y-2">
-                    <li>Kalendarz dostępności</li>
-                    <li>Rezerwacja terminów online</li>
-                    <li>Płatności i potwierdzenia</li>
-                    <li>Powiadomienia email/SMS</li>
-                    <li>Zarządzanie zasobami</li>
+                    <li>Integracje kurierskie i paczkomaty</li>
+                    <li>Faktury i dokumenty sprzedaży</li>
+                    <li>Synchronizacja stanów magazynowych</li>
+                    <li>Eksport zamówień do ERP/CRM</li>
+                    <li>Automatyzacje statusów zamówień</li>
                   </ul>
                 </div>
 
@@ -224,9 +228,9 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">📅 System Rezerwacji</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Inny typ projektu?</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Zaawansowany kalendarz z widokiem dostępności, blokowaniem terminów, zarządzaniem zasobami (pokoje, stoliki, usługi), automatycznymi przypomnieniami i anulowaniem rezerwacji.
+                    Potrzebujesz rezerwacji online zamiast sklepu? Mamy osobną usługę dla kalendarzy, terminów, przypomnień i zaliczek: <Link href="/uslugi/systemy-rezerwacji-online" className="text-primary hover:text-primary-light underline">Systemy rezerwacji online dla firm</Link>.
                   </p>
                 </div>
 
@@ -238,7 +242,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">📊 Analityka i Optymalizacja</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Analityka i optymalizacja</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Szczegółowe raporty sprzedaży, analiza konwersji, śledzenie zachowań użytkowników, A/B testing, optymalizacja procesu zakupowego i zwiększanie sprzedaży.
                   </p>
@@ -255,7 +259,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">🚀 Szybka Implementacja</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Dzięki wykorzystaniu sprawdzonych rozwiązań i narzędzi AI, wdrażamy sklepy i systemy rezerwacji szybko. Od koncepcji do uruchomienia w kilka tygodni.
+                    Dzięki wykorzystaniu sprawdzonych rozwiązań i narzędzi AI, wdrażamy sklepy internetowe szybko. Od koncepcji do uruchomienia w kilka tygodni.
                   </p>
                 </div>
 
@@ -269,12 +273,12 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">📱 Pełna Responsywność</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Każdy sklep i system rezerwacji jest w pełni responsywny i doskonale działa na wszystkich urządzeniach. Mobile-first approach - większość użytkowników przegląda na telefonach.
+                    Każdy sklep internetowy jest w pełni responsywny i doskonale działa na wszystkich urządzeniach. Mobile-first approach - większość użytkowników kupuje na telefonach.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">🔒 Bezpieczeństwo</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Bezpieczeństwo</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Najwyższe standardy bezpieczeństwa: szyfrowanie SSL, zgodność z RODO, bezpieczne przechowywanie danych, ochrona przed atakami. Twoje dane i dane klientów są bezpieczne.
                   </p>
@@ -288,7 +292,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">💼 Kompleksowa Obsługa</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Kompleksowa obsługa</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Od analizy potrzeb, przez projektowanie, rozwój, wdrożenie, szkolenie, aż po utrzymanie i wsparcie - zapewniamy pełną obsługę na każdym etapie.
                   </p>
@@ -333,7 +337,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Rozwój i Integracje</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Programujemy sklep lub system rezerwacji, integrujemy płatności, systemy kurierskie, fakturowanie i inne niezbędne narzędzia. Tworzymy panel administracyjny.
+                      Programujemy sklep, integrujemy płatności, systemy kurierskie, fakturowanie i inne niezbędne narzędzia. Tworzymy panel administracyjny.
                     </p>
                   </div>
                 </div>
@@ -345,7 +349,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Testowanie i Optymalizacja</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Testujemy wszystkie funkcjonalności, procesy płatności, rezerwacje, integracje. Optymalizujemy wydajność, bezpieczeństwo i user experience.
+                      Testujemy wszystkie funkcjonalności, proces płatności, zamówienia, integracje i statusy. Optymalizujemy wydajność, bezpieczeństwo i user experience.
                     </p>
                   </div>
                 </div>
@@ -379,10 +383,10 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
             {/* CTA Section */}
             <div className="bg-gradient-to-r from-primary/20 to-primary/10 rounded-xl p-8 md:p-12 text-center border border-primary/30">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Gotowy na Profesjonalny Sklep lub System Rezerwacji?
+                Gotowy na profesjonalny sklep internetowy?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Skontaktuj się z nami i otrzymaj bezpłatną wycenę dla Twojego projektu e-commerce lub systemu rezerwacji.
+                Skontaktuj się z nami i otrzymaj bezpłatną wycenę sklepu internetowego, platformy B2B lub integracji e-commerce.
               </p>
               <Link
                 href="/#contact"
@@ -398,4 +402,3 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
     </>
   );
 }
-

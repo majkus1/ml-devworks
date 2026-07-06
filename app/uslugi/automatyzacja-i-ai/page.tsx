@@ -3,11 +3,12 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
+import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
-  title: "Automatyzacja Procesow i AI dla Firm - Integracje i Agenci AI | ML Devworks",
+  title: "Automatyzacja procesów i AI dla firm - integracje i agenci AI | ML DevWorks",
   description:
-    "Wdrażamy automatyzacje procesow biznesowych i rozwiazania AI: agenci AI, automatyzacja obslugi klienta, workflow i integracje narzedzi. Mniej pracy manualnej, wiecej leadow i szybsza obsluga.",
+    "Wdrażamy automatyzację procesów biznesowych i rozwiązania AI: agenci AI, automatyzacja obsługi klienta, workflow i integracje narzędzi. Mniej pracy manualnej, więcej leadów i szybsza obsługa.",
   keywords: [
     "automatyzacja procesow biznesowych",
     "ai dla firm",
@@ -31,18 +32,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Automatyzacja Procesow i AI dla Firm | ML Devworks",
+    title: "Automatyzacja procesów i AI dla firm | ML DevWorks",
     description:
-      "Agenci AI i automatyzacje procesow, ktore obnizaja koszty operacyjne i przyspieszaja obsluge klienta.",
+      "Agenci AI i automatyzacje procesów, które obniżają koszty operacyjne i przyspieszają obsługę klienta.",
     url: "https://ml-devworks.com/uslugi/automatyzacja-i-ai",
     type: "website",
     locale: "pl_PL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Automatyzacja Procesow i AI dla Firm | ML Devworks",
+    title: "Automatyzacja procesów i AI dla firm | ML DevWorks",
     description:
-      "Agenci AI i automatyzacje procesow, ktore obnizaja koszty operacyjne i przyspieszaja obsluge klienta.",
+      "Agenci AI i automatyzacje procesów, które obniżają koszty operacyjne i przyspieszają obsługę klienta.",
   },
 };
 
@@ -103,13 +104,15 @@ export default function AutomatyzacjaIAIPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
+      <ServiceFaqSchema serviceId="automation-ai" lang="pl" />
+      <ServiceOfferCatalogSchema serviceId="automation-ai" lang="pl" />
       <Navbar lang="pl" />
       <main className="min-h-screen pt-20">
         {/* Hero Section */}
         <section className="px-4 py-16 md:py-24 bg-gradient-to-b from-background to-background-lighter">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              <span className="text-amber-400">Automatyzacja</span> i <span className="text-amber-400">AI</span>
+              Automatyzacja procesów i <span className="text-amber-400">AI dla firm</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Inteligentne systemy automatyzacji i agent AI, które przekształcają Twój biznes, eliminując powtarzalne zadania i zwiększając efektywność.
@@ -122,7 +125,7 @@ export default function AutomatyzacjaIAIPage() {
                 Bezpłatna Wycena
               </Link>
               <Link
-                href="/#services"
+                href="/uslugi"
                 className="px-8 py-4 bg-background-lighter border border-amber-400/50 text-amber-400 font-semibold rounded-lg hover:bg-amber-400/10 transition-colors"
               >
                 Zobacz Wszystkie Usługi
@@ -130,6 +133,7 @@ export default function AutomatyzacjaIAIPage() {
             </div>
           </div>
         </section>
+        <ServiceSeoSections serviceId="automation-ai" lang="pl" />
 
         {/* Main Content */}
         <section className="px-4 py-16">
@@ -201,35 +205,35 @@ export default function AutomatyzacjaIAIPage() {
               </h2>
               <div className="space-y-6">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">💬 Obsługa Klienta</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Obsługa klienta</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Chatboty AI, które odpowiadają na pytania klientów 24/7, rozwiązują problemy i przekazują złożone sprawy do ludzi. Zmniejszają obciążenie działu obsługi klienta i poprawiają satysfakcję.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">📊 Przetwarzanie Dokumentów</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Przetwarzanie dokumentów</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Automatyczne ekstrakcja danych z faktur, umów, formularzy i innych dokumentów. AI rozpoznaje tekst, klasyfikuje dokumenty i wprowadza dane do systemów.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">📈 Analiza i Raportowanie</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Analiza i raportowanie</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Automatyczne generowanie raportów, analiza danych biznesowych, wykrywanie trendów i anomalii. Systemy, które same monitorują KPI i alertują o ważnych zmianach.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">🔄 Integracje i Synchronizacja</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Integracje i synchronizacja</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Automatyczna synchronizacja danych między różnymi systemami, integracje API, automatyczne aktualizacje. Eliminacja ręcznego wprowadzania danych.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">🎯 Personalizacja i Rekomendacje</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Personalizacja i rekomendacje</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Systemy rekomendacji produktów, personalizowane oferty, dynamiczne ceny. AI analizuje zachowania użytkowników i dostosowuje doświadczenie do ich potrzeb.
                   </p>
@@ -244,42 +248,42 @@ export default function AutomatyzacjaIAIPage() {
               </h2>
               <div className="space-y-6">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-amber-400">🤖 Najnowsze Technologie AI</h3>
+                  <h3 className="text-xl font-bold mb-3 text-amber-400">Najnowsze technologie AI</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Wykorzystujemy najnowsze modele AI, w tym GPT, Claude i inne zaawansowane systemy. Zawsze wybieramy najlepsze narzędzie dla konkretnego przypadku użycia.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">⚡ Szybka Implementacja</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Szybka implementacja</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Dzięki wykorzystaniu gotowych rozwiązań AI i sprawdzonych frameworków, wdrażamy automatyzację szybko. Pierwsze efekty widoczne już po kilku tygodniach.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">📊 Mierzalne Rezultaty</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Mierzalne rezultaty</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Każda automatyzacja jest projektowana z myślą o mierzalnych korzyściach. Oszczędność czasu, redukcja błędów, zwiększenie wydajności - wszystko to monitorujemy i raportujemy.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">🔒 Bezpieczeństwo i Prywatność</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Bezpieczeństwo i prywatność</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Bezpieczeństwo danych to priorytet. Implementujemy najlepsze praktyki, szyfrowanie, kontrolę dostępu i zgodność z RODO. Twoje dane są bezpieczne.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">🔄 Ciągłe Uczenie i Rozwój</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Ciągłe uczenie i rozwój</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Systemy AI uczą się i poprawiają z czasem. Monitorujemy wydajność, zbieramy feedback i ciągle optymalizujemy rozwiązania, aby były coraz lepsze.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">💼 Kompleksowa Obsługa</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Kompleksowa obsługa</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Od analizy procesów, przez projektowanie, implementację, testowanie, wdrożenie, aż po utrzymanie i rozwój - zapewniamy pełną obsługę na każdym etapie.
                   </p>

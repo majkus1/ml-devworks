@@ -2,6 +2,7 @@
 
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
+import Image from "next/image";
 // Ikony technologii zostały usunięte - użyj <img> tagów w miejscach oznaczonych TODO
 
 interface RealizationsProps {
@@ -35,6 +36,13 @@ interface Project {
     pl: string;
     en: string;
   };
+}
+
+function truncateDescription(text: string, maxLength = 120) {
+  if (text.length <= maxLength) return text;
+  const trimmed = text.slice(0, maxLength).trimEnd();
+  const lastSpace = trimmed.lastIndexOf(" ");
+  return `${trimmed.slice(0, lastSpace > 80 ? lastSpace : trimmed.length)}...`;
 }
 
 const projects: Project[] = [
@@ -278,7 +286,7 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
       className="mt-16 border-primary/20 scroll-mt-[100px]"
       style={{ scrollMarginTop: "100px" }}
     >
-      <h3 className="text-3xl font-bold text-center mb-6">{t.title}</h3>
+      <h2 className="text-3xl font-bold text-center mb-6">{t.title}</h2>
       
       {overallRating && totalRatings && (
         <div className="flex items-center justify-center gap-4 mb-8">
@@ -315,9 +323,11 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
           >
             <div className="flex items-start gap-3 mb-3">
               {review.profilePhotoUrl ? (
-                <img
+                <Image
                   src={review.profilePhotoUrl}
                   alt={review.authorName}
+                  width={40}
+                  height={40}
                   className="w-10 h-10 rounded-full object-cover"
                 />
               ) : (
@@ -328,7 +338,7 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
                 </div>
               )}
               <div className="flex-1">
-                <h4 className="font-semibold text-white text-sm mb-1">{review.authorName}</h4>
+                <h3 className="font-semibold text-white text-sm mb-1">{review.authorName}</h3>
                 <div className="flex items-center gap-1">
                   {[...Array(5)].map((_, i) => (
                     <StarIcon
@@ -517,11 +527,13 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
                           className="relative rounded-lg overflow-hidden border border-primary/20 hover:border-primary/40 transition-colors cursor-pointer"
                           onClick={() => openImageModal(image)}
                         >
-                          <img
-                            src={image}
-                            alt={`${selectedProject.name[lang]} - ${lang === "pl" ? "Zrzut ekranu" : "Screenshot"} ${index + 1}`}
-                            className="w-24 h-24 md:w-32 md:h-32 object-cover"
-                          />
+                <Image
+                  src={image}
+                  alt={`${selectedProject.name[lang]} - ${lang === "pl" ? "Zrzut ekranu" : "Screenshot"} ${index + 1}`}
+                  width={128}
+                  height={128}
+                  className="w-24 h-24 md:w-32 md:h-32 object-cover"
+                />
                         </div>
                       ))}
                     </div>
@@ -582,9 +594,12 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
                 className="relative max-w-full max-h-full pointer-events-auto"
                 onClick={(e) => e.stopPropagation()}
               >
-                <img
+                <Image
                   src={selectedImage}
                   alt={lang === "pl" ? "Zrzut ekranu projektu" : "Project screenshot"}
+                  width={1200}
+                  height={800}
+                  sizes="100vw"
                   className="max-w-full max-h-[90vh] object-contain rounded-lg"
                 />
                 <button
@@ -661,7 +676,7 @@ function ProjectCard({
 
       {/* Short Description */}
       <p className="text-gray-300 mb-4 line-clamp-3">
-        {project.shortDescription[lang]}
+        {truncateDescription(project.shortDescription[lang])}
       </p>
 
       {/* Link */}
@@ -687,9 +702,11 @@ function ProjectCard({
               className="relative rounded-lg overflow-hidden border border-primary/20 hover:border-primary/40 transition-all cursor-pointer hover:scale-105"
               onClick={() => onOpenImageModal(image)}
             >
-              <img
+              <Image
                 src={image}
                 alt={`${project.name[lang]} - ${lang === "pl" ? "Zrzut ekranu" : "Screenshot"} ${index + 1}`}
+                width={80}
+                height={80}
                 className="w-16 h-16 md:w-20 md:h-20 object-cover"
               />
             </div>

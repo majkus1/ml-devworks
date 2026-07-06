@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
+import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
   title: "DevOps Services and Cloud Deployment (CI/CD) | ML Devworks",
@@ -103,13 +104,15 @@ export default function DevOpsDeploymentPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
+      <ServiceFaqSchema serviceId="devops" lang="en" />
+      <ServiceOfferCatalogSchema serviceId="devops" lang="en" />
       <Navbar lang="en" />
       <main className="min-h-screen pt-20">
         {/* Hero Section */}
         <section className="px-4 py-16 md:py-24 bg-gradient-to-b from-background to-background-lighter">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              <span className="text-primary">DevOps</span> & Deployment
+              DevOps and cloud deployment <span className="text-primary">for production apps</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Professional cloud deployments, process automation, and full infrastructure maintenance. From development to production - comprehensive DevOps services.
@@ -122,7 +125,7 @@ export default function DevOpsDeploymentPage() {
                 Get Free Quote
               </Link>
               <Link
-                href="/en#services"
+                href="/en/services"
                 className="px-8 py-4 bg-background-lighter border border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-colors"
               >
                 View All Services
@@ -130,6 +133,7 @@ export default function DevOpsDeploymentPage() {
             </div>
           </div>
         </section>
+        <ServiceSeoSections serviceId="devops" lang="en" />
 
         {/* Main Content */}
         <section className="px-4 py-16">
@@ -244,14 +248,14 @@ export default function DevOpsDeploymentPage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">🔒 Security</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Security</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Highest security standards: encryption, access control, security scanning, compliance with best practices. Your infrastructure is secure.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">📈 Scalability</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Scalability</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Architecture that automatically scales based on load. Cloud-native solutions that grow with your business.
                   </p>
@@ -265,14 +269,14 @@ export default function DevOpsDeploymentPage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">📊 24/7 Monitoring</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">24/7 monitoring</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Continuous monitoring of infrastructure and applications. Alerts about problems, proactive response, and ensuring high availability.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">💼 Comprehensive Service</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Comprehensive service</h3>
                   <p className="text-gray-300 leading-relaxed">
                     From infrastructure planning, through configuration, deployment, monitoring, to maintenance and development - we provide full DevOps service.
                   </p>

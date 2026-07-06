@@ -166,7 +166,7 @@ export default function SystemRezerwacjiDlaSalonuContent({ lang }: Props) {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href={isPl ? "/uslugi/sklepy-internetowe-systemy-rezerwacji" : "/en/services/online-stores-booking-systems"}
+            href={isPl ? "/uslugi/systemy-rezerwacji-online" : "/en/services/online-booking-systems"}
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary font-semibold rounded-lg hover:bg-primary-dark transition-colors !text-black"
           >
             {isPl ? "Zobacz ofertę wdrożeń" : "View implementation services"}

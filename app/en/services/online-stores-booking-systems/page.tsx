@@ -3,22 +3,21 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
+import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
-  title: "E-commerce Development and Booking Systems | ML Devworks",
+  title: "E-commerce Development for Businesses | ML Devworks",
   description:
-    "We build online stores and booking systems with payment gateways, delivery setup, ERP/CRM integrations, and sales automation. Ideal for service businesses, B2C brands, and B2B commerce.",
+    "We build B2C and B2B online stores with product catalogs, checkout, payment gateways, shipping integrations, ERP/CRM integrations, and sales automation.",
   keywords: [
     "ecommerce development company",
     "online store development",
-    "booking system development",
     "woocommerce development services",
     "shopify store development",
     "payment gateway integration",
     "shipping and fulfillment integration",
     "erp crm integration for ecommerce",
     "b2b ecommerce platform development",
-    "online reservation system for services",
     "ecommerce development krakow",
     "conversion focused online store",
   ],
@@ -31,18 +30,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "E-commerce Development and Booking Systems | ML Devworks",
+    title: "E-commerce Development for Businesses | ML Devworks",
     description:
-      "Online stores and booking products built for growth, integrations, and conversion.",
+      "Online stores built for product sales, integrations, checkout conversion, and scalable operations.",
     url: "https://ml-devworks.com/en/services/online-stores-booking-systems",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "E-commerce Development and Booking Systems | ML Devworks",
+    title: "E-commerce Development for Businesses | ML Devworks",
     description:
-      "Online stores and booking products built for growth, integrations, and conversion.",
+      "Online stores built for product sales, integrations, checkout conversion, and scalable operations.",
   },
 };
 
@@ -50,8 +49,8 @@ export default function OnlineStoresBookingSystemsPage() {
   const serviceStructuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Online Stores & Booking Systems",
-    "description": "Complete e-commerce solutions and booking systems with payment integration, product management, and sales analytics.",
+    "name": "E-commerce development for businesses",
+    "description": "Complete e-commerce solutions with payment gateways, shipping integrations, product management, ERP/CRM integrations, and sales analytics.",
     "provider": {
       "@type": "Organization",
       "name": "ML Devworks",
@@ -69,8 +68,8 @@ export default function OnlineStoresBookingSystemsPage() {
       "@type": "Country",
       "name": "Poland"
     },
-    "serviceType": "E-commerce Development, Booking System Development",
-    "category": "E-commerce, Online Booking"
+    "serviceType": "E-commerce Development",
+    "category": "E-commerce"
   };
 
   const breadcrumbStructuredData = {
@@ -86,7 +85,7 @@ export default function OnlineStoresBookingSystemsPage() {
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Online Stores & Booking Systems",
+        "name": "Online Stores",
         "item": "https://ml-devworks.com/en/services/online-stores-booking-systems"
       }
     ]
@@ -103,16 +102,18 @@ export default function OnlineStoresBookingSystemsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
+      <ServiceFaqSchema serviceId="ecommerce-booking" lang="en" />
+      <ServiceOfferCatalogSchema serviceId="ecommerce-booking" lang="en" />
       <Navbar lang="en" />
       <main className="min-h-screen pt-20">
         {/* Hero Section */}
         <section className="px-4 py-16 md:py-24 bg-gradient-to-b from-background to-background-lighter">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Online Stores & <span className="text-primary">Booking Systems</span>
+              Online stores and <span className="text-primary">e-commerce development</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Complete e-commerce solutions and booking systems that increase sales and simplify managing your online business.
+              We design B2C and B2B stores with checkout, payment gateways, shipping integrations, product catalogs, ERP/CRM integrations, and sales analytics.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -122,7 +123,7 @@ export default function OnlineStoresBookingSystemsPage() {
                 Get Free Quote
               </Link>
               <Link
-                href="/en#services"
+                href="/en/services"
                 className="px-8 py-4 bg-background-lighter border border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-colors"
               >
                 View All Services
@@ -130,6 +131,7 @@ export default function OnlineStoresBookingSystemsPage() {
             </div>
           </div>
         </section>
+        <ServiceSeoSections serviceId="ecommerce-booking" lang="en" />
 
         {/* Main Content */}
         <section className="px-4 py-16">
@@ -155,16 +157,16 @@ export default function OnlineStoresBookingSystemsPage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-2xl font-bold mb-4 text-primary">Booking Systems</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-primary">Shipping and back-office integrations</h3>
                   <p className="text-gray-300 leading-relaxed mb-4">
-                    Advanced online booking systems for hotels, restaurants, services, events, and other businesses requiring appointment scheduling.
+                    We connect your store with couriers, parcel lockers, invoicing, inventory, CRM, and ERP so orders do not require manual data entry.
                   </p>
                   <ul className="list-disc list-inside text-gray-400 space-y-2">
-                    <li>Availability calendar</li>
-                    <li>Online appointment booking</li>
-                    <li>Payments and confirmations</li>
-                    <li>Email/SMS notifications</li>
-                    <li>Resource management</li>
+                    <li>Courier and parcel locker integrations</li>
+                    <li>Invoices and sales documents</li>
+                    <li>Inventory synchronization</li>
+                    <li>Order exports to ERP/CRM</li>
+                    <li>Order status automations</li>
                   </ul>
                 </div>
 
@@ -224,9 +226,9 @@ export default function OnlineStoresBookingSystemsPage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">📅 Booking System</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Different project type?</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Advanced calendar with availability view, time slot blocking, resource management (rooms, tables, services), automatic reminders, and booking cancellation.
+                    Need online booking instead of a store? We have a separate service for calendars, appointments, reminders, and deposits: <Link href="/en/services/online-booking-systems" className="text-primary hover:text-primary-light underline">Online booking systems for companies</Link>.
                   </p>
                 </div>
 
@@ -238,7 +240,7 @@ export default function OnlineStoresBookingSystemsPage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">📊 Analytics & Optimization</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Analytics and optimization</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Detailed sales reports, conversion analysis, user behavior tracking, A/B testing, checkout process optimization, and sales increase.
                   </p>
@@ -255,7 +257,7 @@ export default function OnlineStoresBookingSystemsPage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">🚀 Fast Implementation</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Thanks to the use of proven solutions and AI tools, we deploy stores and booking systems quickly. From concept to launch in a few weeks.
+                    Thanks to proven solutions and AI tools, we deploy online stores quickly. From concept to launch in a few weeks.
                   </p>
                 </div>
 
@@ -269,12 +271,12 @@ export default function OnlineStoresBookingSystemsPage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">📱 Full Responsiveness</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Every store and booking system is fully responsive and works perfectly on all devices. Mobile-first approach - most users browse on phones.
+                    Every online store is fully responsive and works perfectly on all devices. Mobile-first approach - most buyers browse on phones.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">🔒 Security</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Security</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Highest security standards: SSL encryption, GDPR compliance, secure data storage, attack protection. Your data and customer data are safe.
                   </p>
@@ -288,7 +290,7 @@ export default function OnlineStoresBookingSystemsPage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">💼 Comprehensive Service</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Comprehensive service</h3>
                   <p className="text-gray-300 leading-relaxed">
                     From needs analysis, through design, development, deployment, training, to maintenance and support - we provide full service at every stage.
                   </p>
@@ -333,7 +335,7 @@ export default function OnlineStoresBookingSystemsPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Development & Integrations</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We program the store or booking system, integrate payments, courier systems, invoicing, and other necessary tools. We create an admin panel.
+                      We program the store, integrate payments, courier systems, invoicing, and other necessary tools. We create an admin panel.
                     </p>
                   </div>
                 </div>
@@ -345,7 +347,7 @@ export default function OnlineStoresBookingSystemsPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Testing & Optimization</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We test all functionalities, payment processes, bookings, integrations. We optimize performance, security, and user experience.
+                      We test all features, payment flows, orders, integrations, and statuses. We optimize performance, security, and user experience.
                     </p>
                   </div>
                 </div>
@@ -379,10 +381,10 @@ export default function OnlineStoresBookingSystemsPage() {
             {/* CTA Section */}
             <div className="bg-gradient-to-r from-primary/20 to-primary/10 rounded-xl p-8 md:p-12 text-center border border-primary/30">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Ready for a Professional Store or Booking System?
+                Ready for a professional online store?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Contact us and get a free quote for your e-commerce or booking system project.
+                Contact us and get a free quote for your online store, B2B platform, or e-commerce integration.
               </p>
               <Link
                 href="/en#contact"
@@ -398,4 +400,3 @@ export default function OnlineStoresBookingSystemsPage() {
     </>
   );
 }
-

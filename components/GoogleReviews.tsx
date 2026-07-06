@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
+import Image from "next/image";
 
 // Simple Star Icon Component
 function StarIcon({ className }: { className?: string }) {
@@ -196,9 +197,11 @@ function ReviewCard({
     >
       <div className="flex items-start gap-4 mb-4">
         {review.profilePhotoUrl ? (
-          <img
+          <Image
             src={review.profilePhotoUrl}
             alt={review.authorName}
+            width={48}
+            height={48}
             className="w-12 h-12 rounded-full object-cover"
           />
         ) : (

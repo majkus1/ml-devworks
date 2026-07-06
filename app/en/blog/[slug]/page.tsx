@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { blogPosts, type BlogPost } from "@/lib/blog";
 import { getPostContent } from "@/lib/blog-content";
 
@@ -48,6 +49,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: postUrlEn,
       type: "article",
       publishedTime: post.publishedAt,
+      modifiedTime: post.dateModified ?? post.publishedAt,
       locale: "en_US",
       siteName: "ML Devworks",
       ...(post.image && {
@@ -92,7 +94,7 @@ function ArticleSchema({ post }: { post: BlogPost }) {
     headline: post.title.en,
     description: post.excerpt.en,
     datePublished: post.publishedAt,
-    dateModified: post.publishedAt,
+    dateModified: post.dateModified ?? post.publishedAt,
     ...(post.image && {
       image: { "@type": "ImageObject", url: post.image.startsWith("http") ? post.image : `${baseUrl}${post.image}` },
     }),
@@ -114,38 +116,110 @@ function ArticleSchema({ post }: { post: BlogPost }) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
 }
 
-function FAQSchema() {
+const RELATED_SERVICE_BY_SLUG: Record<string, { title: string; href: string; label: string }> = {
+  "how-much-does-business-process-automation-cost-and-how-to-calculate-roi": {
+    title: "Business process automation and AI",
+    href: "/en/services/automation-and-ai",
+    label: "View AI automation service",
+  },
+  "booking-system-for-service-business-features-payment-integrations-implementation": {
+    title: "Online booking systems for companies",
+    href: "/en/services/online-booking-systems",
+    label: "View online booking systems",
+  },
+  "ai-agents-in-customer-service-when-they-are-worth-it": {
+    title: "Business process automation and AI",
+    href: "/en/services/automation-and-ai",
+    label: "View AI automation service",
+  },
+  "business-system-integration-api-crm-erp-how-to-start": {
+    title: "Web and mobile applications",
+    href: "/en/services/web-and-mobile-applications",
+    label: "View apps and integrations",
+  },
+  "when-ai-process-automation-is-worth-it-for-business": {
+    title: "Business process automation and AI",
+    href: "/en/services/automation-and-ai",
+    label: "View AI automation service",
+  },
+  "online-booking-system-for-beauty-salon-what-to-choose-and-how-long-it-takes": {
+    title: "Online booking systems for companies",
+    href: "/en/services/online-booking-systems",
+    label: "View online booking systems",
+  },
+  "business-website-how-to-choose-a-developer": {
+    title: "Web development for businesses",
+    href: "/en/services/web-development",
+    label: "View web development service",
+  },
+  "social-media-vs-business-website-what-brings-better-results": {
+    title: "Web development for businesses",
+    href: "/en/services/web-development",
+    label: "View web development service",
+  },
+  "is-ai-enough-to-build-a-website-or-app": {
+    title: "Web and mobile applications",
+    href: "/en/services/web-and-mobile-applications",
+    label: "View app development service",
+  },
+  "comprehensive-software-services-for-businesses-how-to-match-solutions-to-industry": {
+    title: "ML DevWorks software development services",
+    href: "/en/services",
+    label: "View all services",
+  },
+};
+
+function RelatedService({ slug }: { slug: string }) {
+  const service = RELATED_SERVICE_BY_SLUG[slug];
+  if (!service) return null;
+
+  return (
+    <aside className="mt-12 bg-gradient-to-r from-primary/15 to-primary/5 border border-primary/25 rounded-xl p-6">
+      <p className="text-gray-400 mb-2">Related service</p>
+      <h2 className="text-2xl font-bold mb-4">{service.title}</h2>
+      <Link href={service.href} className="inline-flex text-primary hover:text-primary-light font-semibold">
+        {service.label}
+      </Link>
+    </aside>
+  );
+}
+
+function FAQSchema({ post }: { post: BlogPost }) {
+  if (!post.faq?.en?.length) return null;
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "Does a small business need a website?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes. Even a one-person business benefits from a professional website – it builds trust, facilitates contact and allows customers to find you on Google. Customers search for services online – without a website you lose the chance for orders.",
-        },
+    mainEntity: post.faq.en.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
       },
-      {
-        "@type": "Question",
-        name: "How long does it take to create a website?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "A simple business card site – usually 2–4 weeks. A more extensive site or store – 4–12 weeks. The timeline depends on scope and availability of content (texts, images) on your side.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What makes a good website different from a bad one?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "A good site: loads quickly, is SEO optimized, works on all devices and is easy to update. A bad site: slow, unreadable on mobile, invisible on Google and built on outdated technologies.",
-        },
-      },
-    ],
+    })),
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
+}
+
+function FAQSection({ post }: { post: BlogPost }) {
+  if (!post.faq?.en?.length) return null;
+
+  return (
+    <section className="mt-12" aria-labelledby="post-faq-heading">
+      <h2 id="post-faq-heading" className="text-3xl font-bold mb-6">
+        Frequently Asked Questions
+      </h2>
+      <div className="space-y-4">
+        {post.faq.en.map((item) => (
+          <article key={item.q} className="bg-background-lighter border border-primary/20 rounded-xl p-6">
+            <h3 className="text-xl font-bold text-primary mb-3">{item.q}</h3>
+            <p className="text-gray-300 leading-relaxed">{item.a}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
 }
 
 export default async function BlogPostPageEn({ params }: Props) {
@@ -163,10 +237,18 @@ export default async function BlogPostPageEn({ params }: Props) {
       <StructuredData lang="en" />
       <BreadcrumbSchema slugEn={post.slugEn} title={post.title.en} />
       <ArticleSchema post={post} />
-      <FAQSchema />
+      <FAQSchema post={post} />
       <Navbar lang="en" />
       <main className="min-h-screen pt-20">
         <article className="px-4 py-16 max-w-3xl mx-auto" itemScope itemType="https://schema.org/BlogPosting">
+          <Breadcrumbs
+            className="mb-6"
+            items={[
+              { label: "Home", href: "/en" },
+              { label: "Blog", href: "/en/blog" },
+              { label: post.title.en },
+            ]}
+          />
           <Link
             href="/en/blog"
             className="text-primary hover:text-primary-light text-sm font-medium mb-6 inline-block"
@@ -195,6 +277,8 @@ export default async function BlogPostPageEn({ params }: Props) {
           <div className="max-w-none text-gray-300 [&_a]:text-primary [&_a]:hover:text-primary-light [&_a]:underline">
             {content ?? <p>{post.excerpt.en}</p>}
           </div>
+          <FAQSection post={post} />
+          <RelatedService slug={post.slugEn} />
         </article>
       </main>
       <Footer lang="en" />

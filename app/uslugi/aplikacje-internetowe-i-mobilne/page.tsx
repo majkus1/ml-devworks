@@ -3,11 +3,12 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
+import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
-  title: "Aplikacje Webowe i Mobilne dla Firm - Projektowanie i Wdrozenie | ML Devworks",
+  title: "Aplikacje webowe i mobilne dla firm - projektowanie i wdrożenie | ML DevWorks",
   description:
-    "Tworzymy aplikacje internetowe i mobilne dla biznesu: panele klienta, systemy zamowien, aplikacje iOS/Android i MVP startup. Stawiamy na skalowalnosc, bezpieczenstwo i szybkie wdrozenie.",
+    "Tworzymy aplikacje internetowe i mobilne dla biznesu: panele klienta, systemy zamówień, aplikacje iOS/Android i MVP startup. Stawiamy na skalowalność, bezpieczeństwo i szybkie wdrożenie.",
   keywords: [
     "aplikacje webowe dla firm",
     "aplikacje mobilne dla biznesu",
@@ -31,18 +32,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Aplikacje Webowe i Mobilne dla Firm | ML Devworks",
+    title: "Aplikacje webowe i mobilne dla firm | ML DevWorks",
     description:
-      "Projektujemy i wdrazamy aplikacje web/mobile dla biznesu: od MVP po rozwoj gotowego produktu.",
+      "Projektujemy i wdrażamy aplikacje web/mobile dla biznesu: od MVP po rozwój gotowego produktu.",
     url: "https://ml-devworks.com/uslugi/aplikacje-internetowe-i-mobilne",
     type: "website",
     locale: "pl_PL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aplikacje Webowe i Mobilne dla Firm | ML Devworks",
+    title: "Aplikacje webowe i mobilne dla firm | ML DevWorks",
     description:
-      "Projektujemy i wdrazamy aplikacje web/mobile dla biznesu: od MVP po rozwoj gotowego produktu.",
+      "Projektujemy i wdrażamy aplikacje web/mobile dla biznesu: od MVP po rozwój gotowego produktu.",
   },
 };
 
@@ -103,13 +104,15 @@ export default function AplikacjeInternetoweIMobilnePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
+      <ServiceFaqSchema serviceId="apps" lang="pl" />
+      <ServiceOfferCatalogSchema serviceId="apps" lang="pl" />
       <Navbar lang="pl" />
       <main className="min-h-screen pt-20">
         {/* Hero Section */}
         <section className="px-4 py-16 md:py-24 bg-gradient-to-b from-background to-background-lighter">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Aplikacje <span className="text-primary">Internetowe i Mobilne</span>
+              Aplikacje webowe i mobilne <span className="text-primary">dla firm</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Nowoczesne aplikacje webowe i mobilne, które przyspieszają rozwój Twojego biznesu i zapewniają doskonałe doświadczenie użytkownika.
@@ -122,7 +125,7 @@ export default function AplikacjeInternetoweIMobilnePage() {
                 Bezpłatna Wycena
               </Link>
               <Link
-                href="/#services"
+                href="/uslugi"
                 className="px-8 py-4 bg-background-lighter border border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-colors"
               >
                 Zobacz Wszystkie Usługi
@@ -130,6 +133,7 @@ export default function AplikacjeInternetoweIMobilnePage() {
             </div>
           </div>
         </section>
+        <ServiceSeoSections serviceId="apps" lang="pl" />
 
         {/* Main Content */}
         <section className="px-4 py-16">
@@ -237,21 +241,21 @@ export default function AplikacjeInternetoweIMobilnePage() {
               </h2>
               <div className="space-y-6">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">⚡ Najnowsze Technologie</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Najnowsze technologie</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Wykorzystujemy najnowsze frameworki i narzędzia, które zapewniają najlepszą wydajność, bezpieczeństwo i skalowalność. Zawsze wybieramy najlepsze rozwiązanie dla Twojego projektu.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">🔒 Bezpieczeństwo</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Bezpieczeństwo</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Bezpieczeństwo to priorytet. Implementujemy najlepsze praktyki bezpieczeństwa, szyfrowanie danych, autoryzację i uwierzytelnianie zgodne z najwyższymi standardami.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">📈 Skalowalność</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Skalowalność</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Projektujemy aplikacje z myślą o przyszłości. Architektura, która rośnie wraz z Twoim biznesem. Cloud-native rozwiązania, które automatycznie skalują się w zależności od obciążenia.
                   </p>
@@ -272,7 +276,7 @@ export default function AplikacjeInternetoweIMobilnePage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">💼 Kompleksowa Obsługa</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Kompleksowa obsługa</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Od koncepcji, przez projektowanie, rozwój, testowanie, wdrożenie, aż po utrzymanie - zapewniamy pełną obsługę na każdym etapie. Wsparcie techniczne i aktualizacje.
                   </p>
@@ -382,4 +386,3 @@ export default function AplikacjeInternetoweIMobilnePage() {
     </>
   );
 }
-

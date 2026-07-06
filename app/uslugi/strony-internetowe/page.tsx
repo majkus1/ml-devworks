@@ -3,11 +3,12 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
+import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
-  title: "Tworzenie Stron Internetowych dla Firm - Szybkie i Skuteczne WWW | ML Devworks",
+  title: "Tworzenie stron internetowych dla firm - szybkie i skuteczne WWW | ML DevWorks",
   description:
-    "Projektujemy i wdrazamy strony internetowe dla firm: strony uslugowe, landing page i strony ofertowe. Szybkie ladowanie, SEO techniczne, formularze kontaktowe i realne wsparcie sprzedazy online.",
+    "Projektujemy i wdrażamy strony internetowe dla firm: strony usługowe, landing page i strony ofertowe. Szybkie ładowanie, SEO techniczne, formularze kontaktowe i realne wsparcie sprzedaży online.",
   keywords: [
     "tworzenie stron internetowych dla firm",
     "strona internetowa dla firmy uslugowej",
@@ -31,9 +32,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Tworzenie Stron Internetowych dla Firm | ML Devworks",
+    title: "Tworzenie stron internetowych dla firm | ML DevWorks",
     description:
-      "Skuteczne strony WWW dla firm: szybkie, responsywne i przygotowane pod SEO oraz pozyskiwanie zapytan.",
+      "Skuteczne strony WWW dla firm: szybkie, responsywne i przygotowane pod SEO oraz pozyskiwanie zapytań.",
     url: "https://ml-devworks.com/uslugi/strony-internetowe",
     type: "website",
     locale: "pl_PL",
@@ -48,9 +49,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tworzenie Stron Internetowych dla Firm | ML Devworks",
+    title: "Tworzenie stron internetowych dla firm | ML DevWorks",
     description:
-      "Skuteczne strony WWW dla firm: szybkie, responsywne i przygotowane pod SEO oraz pozyskiwanie zapytan.",
+      "Skuteczne strony WWW dla firm: szybkie, responsywne i przygotowane pod SEO oraz pozyskiwanie zapytań.",
     images: ["https://ml-devworks.com/psi.png"],
   },
 };
@@ -112,13 +113,15 @@ export default function StronyInternetowePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
+      <ServiceFaqSchema serviceId="web-development" lang="pl" />
+      <ServiceOfferCatalogSchema serviceId="web-development" lang="pl" />
       <Navbar lang="pl" />
       <main className="min-h-screen pt-20">
         {/* Hero Section */}
         <section className="px-4 py-16 md:py-24 bg-gradient-to-b from-background to-background-lighter">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Profesjonalne <span className="text-primary">Strony Internetowe</span>
+              Strony internetowe dla firm, które <span className="text-primary">pozyskują klientów</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Tworzymy strony internetowe, które nie tylko wyglądają świetnie, ale także przynoszą realne rezultaty dla Twojego biznesu.
@@ -131,7 +134,7 @@ export default function StronyInternetowePage() {
                 Bezpłatna Wycena
               </Link>
               <Link
-                href="/#services"
+                href="/uslugi"
                 className="px-8 py-4 bg-background-lighter border border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-colors"
               >
                 Zobacz Wszystkie Usługi
@@ -139,6 +142,7 @@ export default function StronyInternetowePage() {
             </div>
           </div>
         </section>
+        <ServiceSeoSections serviceId="web-development" lang="pl" />
 
         {/* Main Content */}
         <section className="px-4 py-16">
@@ -245,7 +249,7 @@ export default function StronyInternetowePage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">💼 Kompleksowa Obsługa</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Kompleksowa obsługa</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Od koncepcji, przez projektowanie, wdrożenie, aż po utrzymanie - zapewniamy pełną obsługę na każdym etapie. Stawiamy na długotrwałą współpracę.
                   </p>
@@ -331,4 +335,3 @@ export default function StronyInternetowePage() {
     </>
   );
 }
-

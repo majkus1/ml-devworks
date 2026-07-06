@@ -3,11 +3,12 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
+import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
-  title: "DevOps i Wdrozenia Chmurowe - CI/CD, Monitoring, Skalowanie | ML Devworks",
+  title: "DevOps i wdrożenia chmurowe - CI/CD, monitoring, skalowanie | ML DevWorks",
   description:
-    "Wdrażamy aplikacje w chmurze i porzadkujemy DevOps: CI/CD, Docker, monitoring, backup, bezpieczenstwo i utrzymanie infrastruktury. Stabilne deploymenty i szybsze wydania dla zespolow produktowych.",
+    "Wdrażamy aplikacje w chmurze i porządkujemy DevOps: CI/CD, Docker, monitoring, backup, bezpieczeństwo i utrzymanie infrastruktury. Stabilne deploymenty i szybsze wydania dla zespołów produktowych.",
   keywords: [
     "devops dla firm",
     "wdrozenia chmurowe aplikacji",
@@ -31,18 +32,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "DevOps i Wdrozenia Chmurowe | ML Devworks",
+    title: "DevOps i wdrożenia chmurowe | ML DevWorks",
     description:
-      "CI/CD, monitoring, bezpieczenstwo i stabilne wdrozenia chmurowe dla aplikacji webowych.",
+      "CI/CD, monitoring, bezpieczeństwo i stabilne wdrożenia chmurowe dla aplikacji webowych.",
     url: "https://ml-devworks.com/uslugi/devops-wdrozenia",
     type: "website",
     locale: "pl_PL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "DevOps i Wdrozenia Chmurowe | ML Devworks",
+    title: "DevOps i wdrożenia chmurowe | ML DevWorks",
     description:
-      "CI/CD, monitoring, bezpieczenstwo i stabilne wdrozenia chmurowe dla aplikacji webowych.",
+      "CI/CD, monitoring, bezpieczeństwo i stabilne wdrożenia chmurowe dla aplikacji webowych.",
   },
 };
 
@@ -103,13 +104,15 @@ export default function DevOpsWdrozeniaPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
+      <ServiceFaqSchema serviceId="devops" lang="pl" />
+      <ServiceOfferCatalogSchema serviceId="devops" lang="pl" />
       <Navbar lang="pl" />
       <main className="min-h-screen pt-20">
         {/* Hero Section */}
         <section className="px-4 py-16 md:py-24 bg-gradient-to-b from-background to-background-lighter">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              <span className="text-primary">DevOps</span> & Wdrożenia
+              DevOps i wdrożenia w chmurze <span className="text-primary">dla firm</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Profesjonalne wdrożenia w chmurze, automatyzacja procesów i pełne utrzymanie infrastruktury. Od developmentu do produkcji - kompleksowa obsługa DevOps.
@@ -122,7 +125,7 @@ export default function DevOpsWdrozeniaPage() {
                 Bezpłatna Wycena
               </Link>
               <Link
-                href="/#services"
+                href="/uslugi"
                 className="px-8 py-4 bg-background-lighter border border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-colors"
               >
                 Zobacz Wszystkie Usługi
@@ -130,6 +133,7 @@ export default function DevOpsWdrozeniaPage() {
             </div>
           </div>
         </section>
+        <ServiceSeoSections serviceId="devops" lang="pl" />
 
         {/* Main Content */}
         <section className="px-4 py-16">
@@ -244,14 +248,14 @@ export default function DevOpsWdrozeniaPage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">🔒 Bezpieczeństwo</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Bezpieczeństwo</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Najwyższe standardy bezpieczeństwa: szyfrowanie, kontrola dostępu, security scanning, compliance z najlepszymi praktykami. Twoja infrastruktura jest bezpieczna.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">📈 Skalowalność</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Skalowalność</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Architektura, która automatycznie skaluje się w zależności od obciążenia. Cloud-native rozwiązania, które rosną wraz z Twoim biznesem.
                   </p>
@@ -265,14 +269,14 @@ export default function DevOpsWdrozeniaPage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">📊 Monitoring 24/7</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Monitoring 24/7</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Ciągłe monitorowanie infrastruktury i aplikacji. Alerty o problemach, proaktywne reagowanie i zapewnienie wysokiej dostępności.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">💼 Kompleksowa Obsługa</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Kompleksowa obsługa</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Od planowania infrastruktury, przez konfigurację, wdrożenie, monitoring, aż po utrzymanie i rozwój - zapewniamy pełną obsługę DevOps.
                   </p>

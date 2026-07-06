@@ -1,244 +1,108 @@
 import { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog";
+import { serviceItems } from "@/lib/services";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const blogPostEntries: MetadataRoute.Sitemap = blogPosts.flatMap((post) => [
-    {
-      url: `https://ml-devworks.com/blog/${post.slug}`,
-      lastModified: new Date(post.publishedAt),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-      alternates: {
-        languages: {
-          pl: `https://ml-devworks.com/blog/${post.slug}`,
-          en: `https://ml-devworks.com/en/blog/${post.slugEn}`,
-          "x-default": `https://ml-devworks.com/blog/${post.slug}`,
-        },
-      },
-    },
-    {
-      url: `https://ml-devworks.com/en/blog/${post.slugEn}`,
-      lastModified: new Date(post.publishedAt),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-      alternates: {
-        languages: {
-          pl: `https://ml-devworks.com/blog/${post.slug}`,
-          en: `https://ml-devworks.com/en/blog/${post.slugEn}`,
-          "x-default": `https://ml-devworks.com/blog/${post.slug}`,
-        },
-      },
-    },
-  ]);
+const BASE_URL = "https://ml-devworks.com";
+const SITE_LAST_MODIFIED = new Date("2026-07-06");
 
+function localizedEntry({
+  plPath,
+  enPath,
+  lastModified,
+  priority,
+  changeFrequency,
+}: {
+  plPath: string;
+  enPath: string;
+  lastModified: Date;
+  priority: number;
+  changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
+}): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://ml-devworks.com",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 1,
+      url: `${BASE_URL}${plPath}`,
+      lastModified,
+      changeFrequency,
+      priority,
       alternates: {
         languages: {
-          pl: "https://ml-devworks.com",
-          en: "https://ml-devworks.com/en",
-          "x-default": "https://ml-devworks.com",
+          pl: `${BASE_URL}${plPath}`,
+          en: `${BASE_URL}${enPath}`,
+          "x-default": `${BASE_URL}${plPath}`,
         },
       },
     },
     {
-      url: "https://ml-devworks.com/en",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
+      url: `${BASE_URL}${enPath}`,
+      lastModified,
+      changeFrequency,
+      priority: Math.min(priority, 0.9),
       alternates: {
         languages: {
-          pl: "https://ml-devworks.com",
-          en: "https://ml-devworks.com/en",
-          "x-default": "https://ml-devworks.com",
+          pl: `${BASE_URL}${plPath}`,
+          en: `${BASE_URL}${enPath}`,
+          "x-default": `${BASE_URL}${plPath}`,
         },
       },
     },
-    {
-      url: "https://ml-devworks.com/uslugi/strony-internetowe",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-      alternates: {
-        languages: {
-          pl: "https://ml-devworks.com/uslugi/strony-internetowe",
-          en: "https://ml-devworks.com/en/services/web-development",
-          "x-default": "https://ml-devworks.com/uslugi/strony-internetowe",
-        },
-      },
-    },
-    {
-      url: "https://ml-devworks.com/en/services/web-development",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-      alternates: {
-        languages: {
-          pl: "https://ml-devworks.com/uslugi/strony-internetowe",
-          en: "https://ml-devworks.com/en/services/web-development",
-          "x-default": "https://ml-devworks.com/uslugi/strony-internetowe",
-        },
-      },
-    },
-    {
-      url: "https://ml-devworks.com/uslugi/aplikacje-internetowe-i-mobilne",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-      alternates: {
-        languages: {
-          pl: "https://ml-devworks.com/uslugi/aplikacje-internetowe-i-mobilne",
-          en: "https://ml-devworks.com/en/services/web-and-mobile-applications",
-          "x-default": "https://ml-devworks.com/uslugi/aplikacje-internetowe-i-mobilne",
-        },
-      },
-    },
-    {
-      url: "https://ml-devworks.com/en/services/web-and-mobile-applications",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-      alternates: {
-        languages: {
-          pl: "https://ml-devworks.com/uslugi/aplikacje-internetowe-i-mobilne",
-          en: "https://ml-devworks.com/en/services/web-and-mobile-applications",
-          "x-default": "https://ml-devworks.com/uslugi/aplikacje-internetowe-i-mobilne",
-        },
-      },
-    },
-    {
-      url: "https://ml-devworks.com/uslugi/automatyzacja-i-ai",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-      alternates: {
-        languages: {
-          pl: "https://ml-devworks.com/uslugi/automatyzacja-i-ai",
-          en: "https://ml-devworks.com/en/services/automation-and-ai",
-          "x-default": "https://ml-devworks.com/uslugi/automatyzacja-i-ai",
-        },
-      },
-    },
-    {
-      url: "https://ml-devworks.com/en/services/automation-and-ai",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-      alternates: {
-        languages: {
-          pl: "https://ml-devworks.com/uslugi/automatyzacja-i-ai",
-          en: "https://ml-devworks.com/en/services/automation-and-ai",
-          "x-default": "https://ml-devworks.com/uslugi/automatyzacja-i-ai",
-        },
-      },
-    },
-    {
-      url: "https://ml-devworks.com/uslugi/sklepy-internetowe-systemy-rezerwacji",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-      alternates: {
-        languages: {
-          pl: "https://ml-devworks.com/uslugi/sklepy-internetowe-systemy-rezerwacji",
-          en: "https://ml-devworks.com/en/services/online-stores-booking-systems",
-          "x-default": "https://ml-devworks.com/uslugi/sklepy-internetowe-systemy-rezerwacji",
-        },
-      },
-    },
-    {
-      url: "https://ml-devworks.com/en/services/online-stores-booking-systems",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-      alternates: {
-        languages: {
-          pl: "https://ml-devworks.com/uslugi/sklepy-internetowe-systemy-rezerwacji",
-          en: "https://ml-devworks.com/en/services/online-stores-booking-systems",
-        },
-      },
-    },
-    {
-      url: "https://ml-devworks.com/uslugi/devops-wdrozenia",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-      alternates: {
-        languages: {
-          pl: "https://ml-devworks.com/uslugi/devops-wdrozenia",
-          en: "https://ml-devworks.com/en/services/devops-deployment",
-          "x-default": "https://ml-devworks.com/uslugi/devops-wdrozenia",
-        },
-      },
-    },
-    {
-      url: "https://ml-devworks.com/en/services/devops-deployment",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-      alternates: {
-        languages: {
-          pl: "https://ml-devworks.com/uslugi/devops-wdrozenia",
-          en: "https://ml-devworks.com/en/services/devops-deployment",
-          "x-default": "https://ml-devworks.com/uslugi/devops-wdrozenia",
-        },
-      },
-    },
-    {
-      url: "https://ml-devworks.com/uslugi/naprawa-optymalizacja-utrzymanie",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-      alternates: {
-        languages: {
-          pl: "https://ml-devworks.com/uslugi/naprawa-optymalizacja-utrzymanie",
-          en: "https://ml-devworks.com/en/services/fixes-optimization-maintenance",
-          "x-default": "https://ml-devworks.com/uslugi/naprawa-optymalizacja-utrzymanie",
-        },
-      },
-    },
-    {
-      url: "https://ml-devworks.com/en/services/fixes-optimization-maintenance",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-      alternates: {
-        languages: {
-          pl: "https://ml-devworks.com/uslugi/naprawa-optymalizacja-utrzymanie",
-          en: "https://ml-devworks.com/en/services/fixes-optimization-maintenance",
-        },
-      },
-    },
-    {
-      url: "https://ml-devworks.com/blog",
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-      alternates: {
-        languages: {
-          pl: "https://ml-devworks.com/blog",
-          en: "https://ml-devworks.com/en/blog",
-          "x-default": "https://ml-devworks.com/blog",
-        },
-      },
-    },
-    {
-      url: "https://ml-devworks.com/en/blog",
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-      alternates: {
-        languages: {
-          pl: "https://ml-devworks.com/blog",
-          en: "https://ml-devworks.com/en/blog",
-          "x-default": "https://ml-devworks.com/blog",
-        },
-      },
-    },
-    ...blogPostEntries,
   ];
 }
 
+export default function sitemap(): MetadataRoute.Sitemap {
+  const serviceEntries = serviceItems.flatMap((service) =>
+    localizedEntry({
+      plPath: service.href.pl,
+      enPath: service.href.en,
+      lastModified: SITE_LAST_MODIFIED,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    }),
+  );
+
+  const blogPostEntries = blogPosts.flatMap((post) =>
+    localizedEntry({
+      plPath: `/blog/${post.slug}`,
+      enPath: `/en/blog/${post.slugEn}`,
+      lastModified: new Date(post.dateModified ?? post.publishedAt),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    }),
+  );
+
+  const latestBlogModification = new Date(
+    Math.max(...blogPosts.map((post) => new Date(post.dateModified ?? post.publishedAt).getTime())),
+  );
+
+  return [
+    ...localizedEntry({
+      plPath: "",
+      enPath: "/en",
+      lastModified: SITE_LAST_MODIFIED,
+      changeFrequency: "monthly",
+      priority: 1,
+    }),
+    ...localizedEntry({
+      plPath: "/uslugi",
+      enPath: "/en/services",
+      lastModified: SITE_LAST_MODIFIED,
+      changeFrequency: "monthly",
+      priority: 0.95,
+    }),
+    ...localizedEntry({
+      plPath: "/software-house-krakow",
+      enPath: "/en/software-house-krakow",
+      lastModified: SITE_LAST_MODIFIED,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    }),
+    ...serviceEntries,
+    ...localizedEntry({
+      plPath: "/blog",
+      enPath: "/en/blog",
+      lastModified: latestBlogModification,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    }),
+    ...blogPostEntries,
+  ];
+}

@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { blogPosts, type BlogPost } from "@/lib/blog";
 import { getPostContent } from "@/lib/blog-content";
 
@@ -48,6 +49,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: postUrl,
       type: "article",
       publishedTime: post.publishedAt,
+      modifiedTime: post.dateModified ?? post.publishedAt,
       locale: "pl_PL",
       siteName: "ML Devworks",
       ...(post.image && {
@@ -92,7 +94,7 @@ function ArticleSchema({ post, slug }: { post: BlogPost; slug: string }) {
     headline: post.title.pl,
     description: post.excerpt.pl,
     datePublished: post.publishedAt,
-    dateModified: post.publishedAt,
+    dateModified: post.dateModified ?? post.publishedAt,
     ...(post.image && {
       image: { "@type": "ImageObject", url: post.image.startsWith("http") ? post.image : `${baseUrl}${post.image}` },
     }),
@@ -114,38 +116,110 @@ function ArticleSchema({ post, slug }: { post: BlogPost; slug: string }) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
 }
 
-function FAQSchema() {
+const RELATED_SERVICE_BY_SLUG: Record<string, { title: string; href: string; label: string }> = {
+  "ile-kosztuje-automatyzacja-procesow-w-firmie-i-jak-liczyc-roi": {
+    title: "Automatyzacja procesów i AI dla firm",
+    href: "/uslugi/automatyzacja-i-ai",
+    label: "Zobacz usługę automatyzacji AI",
+  },
+  "system-rezerwacji-dla-firmy-uslugowej-funkcje-integracje-platnosci-wdrozenie": {
+    title: "Systemy rezerwacji online dla firm",
+    href: "/uslugi/systemy-rezerwacji-online",
+    label: "Zobacz systemy rezerwacji online",
+  },
+  "agenci-ai-w-obsludze-klienta-kiedy-sie-oplacaja": {
+    title: "Automatyzacja procesów i AI dla firm",
+    href: "/uslugi/automatyzacja-i-ai",
+    label: "Zobacz usługę automatyzacji AI",
+  },
+  "integracja-systemow-w-firmie-api-crm-erp-jak-zaczac": {
+    title: "Aplikacje webowe i mobilne dla firm",
+    href: "/uslugi/aplikacje-internetowe-i-mobilne",
+    label: "Zobacz aplikacje i integracje",
+  },
+  "kiedy-firmie-oplaca-sie-automatyzacja-procesow-z-ai": {
+    title: "Automatyzacja procesów i AI dla firm",
+    href: "/uslugi/automatyzacja-i-ai",
+    label: "Zobacz usługę automatyzacji AI",
+  },
+  "system-rezerwacji-online-dla-salonu-kosmetycznego-co-wybrac-i-ile-to-trwa": {
+    title: "Systemy rezerwacji online dla firm",
+    href: "/uslugi/systemy-rezerwacji-online",
+    label: "Zobacz systemy rezerwacji online",
+  },
+  "strona-internetowa-dla-firmy-jak-wybrac-wykonawce": {
+    title: "Tworzenie stron internetowych dla firm",
+    href: "/uslugi/strony-internetowe",
+    label: "Zobacz usługę tworzenia stron",
+  },
+  "social-media-czy-wlasna-strona-firmowa-co-bardziej-sie-oplaca": {
+    title: "Tworzenie stron internetowych dla firm",
+    href: "/uslugi/strony-internetowe",
+    label: "Zobacz usługę tworzenia stron",
+  },
+  "czy-ai-wystarczy-do-stworzenia-strony-lub-aplikacji": {
+    title: "Aplikacje webowe i mobilne dla firm",
+    href: "/uslugi/aplikacje-internetowe-i-mobilne",
+    label: "Zobacz tworzenie aplikacji",
+  },
+  "kompleksowe-uslugi-programistyczne-dla-firm-jak-dobrac-rozwiazanie-do-branzy": {
+    title: "Usługi programistyczne ML DevWorks",
+    href: "/uslugi",
+    label: "Zobacz wszystkie usługi",
+  },
+};
+
+function RelatedService({ slug }: { slug: string }) {
+  const service = RELATED_SERVICE_BY_SLUG[slug];
+  if (!service) return null;
+
+  return (
+    <aside className="mt-12 bg-gradient-to-r from-primary/15 to-primary/5 border border-primary/25 rounded-xl p-6">
+      <p className="text-gray-400 mb-2">Powiązana usługa</p>
+      <h2 className="text-2xl font-bold mb-4">{service.title}</h2>
+      <Link href={service.href} className="inline-flex text-primary hover:text-primary-light font-semibold">
+        {service.label}
+      </Link>
+    </aside>
+  );
+}
+
+function FAQSchema({ post }: { post: BlogPost }) {
+  if (!post.faq?.pl?.length) return null;
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "Czy mała firma potrzebuje strony internetowej?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Tak. Nawet jednoosobowa działalność zyskuje na profesjonalnej stronie – buduje zaufanie, ułatwia kontakt i umożliwia znalezienie Cię w Google. Klienci szukają usług online – bez strony tracisz szansę na zlecenia.",
-        },
+    mainEntity: post.faq.pl.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
       },
-      {
-        "@type": "Question",
-        name: "Jak długo trwa stworzenie strony internetowej?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Prosta strona wizytówka – zwykle 2–4 tygodnie. Bardziej rozbudowana strona lub sklep – 4–12 tygodni. Termin zależy od zakresu i dostępności treści (teksty, zdjęcia) po Twojej stronie.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Czym różni się dobra strona od słabej?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Dobra strona: szybko się ładuje, jest zoptymalizowana pod SEO, działa na wszystkich urządzeniach i jest łatwa w aktualizacji. Słaba strona: wolna, nieczytelna na telefonie, niewidoczna w Google i oparta na przestarzałych technologiach.",
-        },
-      },
-    ],
+    })),
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
+}
+
+function FAQSection({ post }: { post: BlogPost }) {
+  if (!post.faq?.pl?.length) return null;
+
+  return (
+    <section className="mt-12" aria-labelledby="post-faq-heading">
+      <h2 id="post-faq-heading" className="text-3xl font-bold mb-6">
+        Najczęstsze pytania
+      </h2>
+      <div className="space-y-4">
+        {post.faq.pl.map((item) => (
+          <article key={item.q} className="bg-background-lighter border border-primary/20 rounded-xl p-6">
+            <h3 className="text-xl font-bold text-primary mb-3">{item.q}</h3>
+            <p className="text-gray-300 leading-relaxed">{item.a}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
 }
 
 export default async function BlogPostPage({ params }: Props) {
@@ -160,10 +234,18 @@ export default async function BlogPostPage({ params }: Props) {
       <StructuredData lang="pl" />
       <BreadcrumbSchema slug={slug} title={post.title.pl} />
       <ArticleSchema post={post} slug={slug} />
-      <FAQSchema />
+      <FAQSchema post={post} />
       <Navbar lang="pl" />
       <main className="min-h-screen pt-20">
         <article className="px-4 py-16 max-w-3xl mx-auto" itemScope itemType="https://schema.org/BlogPosting">
+          <Breadcrumbs
+            className="mb-6"
+            items={[
+              { label: "Strona główna", href: "/" },
+              { label: "Blog", href: "/blog" },
+              { label: post.title.pl },
+            ]}
+          />
           <Link
             href="/blog"
             className="text-primary hover:text-primary-light text-sm font-medium mb-6 inline-block"
@@ -192,6 +274,8 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="max-w-none text-gray-300 [&_a]:text-primary [&_a]:hover:text-primary-light [&_a]:underline">
             {content ?? <p>{post.excerpt.pl}</p>}
           </div>
+          <FAQSection post={post} />
+          <RelatedService slug={slug} />
         </article>
       </main>
       <Footer lang="pl" />

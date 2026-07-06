@@ -6,6 +6,8 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import StructuredData from "@/components/StructuredData";
+import AboutIntro from "@/components/AboutIntro";
+import GoogleReviewsSchema from "@/components/GoogleReviewsSchema";
 
 export const metadata: Metadata = {
   title: "ML Devworks - Quality by Us. Speed by AI. | Strony Internetowe i Aplikacje",
@@ -24,10 +26,12 @@ export default function HomePage() {
   return (
     <>
       <StructuredData lang="pl" />
+      <GoogleReviewsSchema lang="pl" />
       <Navbar lang="pl" />
       <main className="min-h-screen">
         <Hero />
         <Services />
+        <AboutIntro />
         <Realizations />
         <Contact />
       </main>

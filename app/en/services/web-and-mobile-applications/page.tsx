@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
+import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
   title: "Web and Mobile App Development for Companies | ML Devworks",
@@ -103,13 +104,15 @@ export default function WebAndMobileApplicationsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
+      <ServiceFaqSchema serviceId="apps" lang="en" />
+      <ServiceOfferCatalogSchema serviceId="apps" lang="en" />
       <Navbar lang="en" />
       <main className="min-h-screen pt-20">
         {/* Hero Section */}
         <section className="px-4 py-16 md:py-24 bg-gradient-to-b from-background to-background-lighter">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Web and <span className="text-primary">Mobile Applications</span>
+              Web and mobile applications <span className="text-primary">for companies</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Modern web and mobile applications that accelerate your business growth and provide an excellent user experience.
@@ -122,7 +125,7 @@ export default function WebAndMobileApplicationsPage() {
                 Get Free Quote
               </Link>
               <Link
-                href="/en#services"
+                href="/en/services"
                 className="px-8 py-4 bg-background-lighter border border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-colors"
               >
                 View All Services
@@ -130,6 +133,7 @@ export default function WebAndMobileApplicationsPage() {
             </div>
           </div>
         </section>
+        <ServiceSeoSections serviceId="apps" lang="en" />
 
         {/* Main Content */}
         <section className="px-4 py-16">
@@ -237,21 +241,21 @@ export default function WebAndMobileApplicationsPage() {
               </h2>
               <div className="space-y-6">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">⚡ Latest Technologies</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Latest technologies</h3>
                   <p className="text-gray-300 leading-relaxed">
                     We use the latest frameworks and tools that ensure the best performance, security, and scalability. We always choose the best solution for your project.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">🔒 Security</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Security</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Security is a priority. We implement best security practices, data encryption, authorization, and authentication in line with the highest standards.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">📈 Scalability</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Scalability</h3>
                   <p className="text-gray-300 leading-relaxed">
                     We design applications with the future in mind. Architecture that grows with your business. Cloud-native solutions that automatically scale based on load.
                   </p>
@@ -272,7 +276,7 @@ export default function WebAndMobileApplicationsPage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">💼 Comprehensive Service</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Comprehensive service</h3>
                   <p className="text-gray-300 leading-relaxed">
                     From concept, through design, development, testing, deployment, to maintenance - we provide full service at every stage. Technical support and updates.
                   </p>
@@ -382,4 +386,3 @@ export default function WebAndMobileApplicationsPage() {
     </>
   );
 }
-

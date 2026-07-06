@@ -3,12 +3,24 @@ interface StructuredDataProps {
 }
 
 export default function StructuredData({ lang = "pl" }: StructuredDataProps) {
+  const googleMapsUrl =
+    "https://www.google.com/maps/place/ML+Devworks/@50.0624834,19.9337611,17z/data=!3m1!4b1!4m6!3m5!1s0x425626465742ffe9:0xa1672c4591c41c29!8m2!3d50.06248!4d19.936336!16s%2Fg%2F11yrt8l9fl?entry=ttu";
+
   const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "ML Devworks",
+    name: "ML DevWorks",
     url: "https://ml-devworks.com",
     logo: "https://ml-devworks.com/primary-on-transparent-logo.png",
+    email: "office@ml-devworks.com",
+    telephone: "+48-516-598-792",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Rynek Główny 34/15",
+      postalCode: "31-010",
+      addressLocality: "Kraków",
+      addressCountry: "PL",
+    },
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+48-516-598-792",
@@ -16,11 +28,52 @@ export default function StructuredData({ lang = "pl" }: StructuredDataProps) {
       email: "office@ml-devworks.com",
       availableLanguage: ["Polish", "English"],
     },
-    sameAs: [],
+    sameAs: [googleMapsUrl],
     description:
       lang === "pl"
-        ? "ML Devworks - Tworzymy profesjonalne rozwiązania cyfrowe dla Twojego biznesu. Od prostych stron internetowych po zaawansowane aplikacje i wdrożenia w chmurze. Quality by Us. Speed by AI."
-        : "ML Devworks - We create professional digital solutions for your business. From simple websites to advanced applications and cloud deployments. Quality by Us. Speed by AI.",
+        ? "ML DevWorks to software house z Krakowa tworzący strony internetowe, aplikacje webowe i mobilne, automatyzacje AI, sklepy internetowe, systemy rezerwacji, wdrożenia DevOps oraz utrzymanie projektów dla firm."
+        : "ML DevWorks is a software house from Krakow that builds websites, web and mobile applications, AI automation, online stores, booking systems, DevOps deployments, and maintenance for companies.",
+  };
+
+  const localBusiness = {
+    "@context": "https://schema.org",
+    "@id": "https://ml-devworks.com/#localbusiness",
+    "@type": ["ProfessionalService", "LocalBusiness"],
+    name: "ML DevWorks",
+    url: "https://ml-devworks.com",
+    image: "https://ml-devworks.com/ogimg.png",
+    logo: "https://ml-devworks.com/primary-on-transparent-logo.png",
+    telephone: "+48-516-598-792",
+    email: "office@ml-devworks.com",
+    priceRange: "$$",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Rynek Główny 34/15",
+      postalCode: "31-010",
+      addressLocality: "Kraków",
+      addressRegion: "Małopolskie",
+      addressCountry: "PL",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 50.06248,
+      longitude: 19.936336,
+    },
+    areaServed: [
+      { "@type": "City", name: "Kraków" },
+      { "@type": "Country", name: "Poland" },
+      { "@type": "AdministrativeArea", name: "European Union" },
+    ],
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:00",
+        closes: "17:00",
+      },
+    ],
+    sameAs: [googleMapsUrl],
+    description: organization.description,
   };
 
   const website = {
@@ -76,6 +129,10 @@ export default function StructuredData({ lang = "pl" }: StructuredDataProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }}
       />
       <script
         type="application/ld+json"

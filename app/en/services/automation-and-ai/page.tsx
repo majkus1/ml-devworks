@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
+import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
   title: "Business Process Automation and AI Agents | ML Devworks",
@@ -103,13 +104,15 @@ export default function AutomationAndAIPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
+      <ServiceFaqSchema serviceId="automation-ai" lang="en" />
+      <ServiceOfferCatalogSchema serviceId="automation-ai" lang="en" />
       <Navbar lang="en" />
       <main className="min-h-screen pt-20">
         {/* Hero Section */}
         <section className="px-4 py-16 md:py-24 bg-gradient-to-b from-background to-background-lighter">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              <span className="text-amber-400">Automation</span> & <span className="text-amber-400">AI</span>
+              Business process automation and <span className="text-amber-400">AI</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Intelligent automation systems and AI agents that transform your business by eliminating repetitive tasks and increasing efficiency.
@@ -122,7 +125,7 @@ export default function AutomationAndAIPage() {
                 Get Free Quote
               </Link>
               <Link
-                href="/en#services"
+                href="/en/services"
                 className="px-8 py-4 bg-background-lighter border border-amber-400/50 text-amber-400 font-semibold rounded-lg hover:bg-amber-400/10 transition-colors"
               >
                 View All Services
@@ -130,6 +133,7 @@ export default function AutomationAndAIPage() {
             </div>
           </div>
         </section>
+        <ServiceSeoSections serviceId="automation-ai" lang="en" />
 
         {/* Main Content */}
         <section className="px-4 py-16">
@@ -201,35 +205,35 @@ export default function AutomationAndAIPage() {
               </h2>
               <div className="space-y-6">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">💬 Customer Service</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Customer service</h3>
                   <p className="text-gray-300 leading-relaxed">
                     AI chatbots that answer customer questions 24/7, solve problems, and escalate complex issues to humans. They reduce customer service workload and improve satisfaction.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">📊 Document Processing</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Document processing</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Automatic data extraction from invoices, contracts, forms, and other documents. AI recognizes text, classifies documents, and enters data into systems.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">📈 Analysis & Reporting</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Analysis and reporting</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Automatic report generation, business data analysis, trend and anomaly detection. Systems that monitor KPIs and alert about important changes.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">🔄 Integrations & Synchronization</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Integrations and synchronization</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Automatic data synchronization between different systems, API integrations, automatic updates. Elimination of manual data entry.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">🎯 Personalization & Recommendations</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Personalization and recommendations</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Product recommendation systems, personalized offers, dynamic pricing. AI analyzes user behavior and adapts the experience to their needs.
                   </p>
@@ -244,42 +248,42 @@ export default function AutomationAndAIPage() {
               </h2>
               <div className="space-y-6">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-amber-400">🤖 Latest AI Technologies</h3>
+                  <h3 className="text-xl font-bold mb-3 text-amber-400">Latest AI technologies</h3>
                   <p className="text-gray-300 leading-relaxed">
                     We use the latest AI models, including GPT, Claude, and other advanced systems. We always choose the best tool for a specific use case.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">⚡ Fast Implementation</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Fast implementation</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Thanks to the use of ready-made AI solutions and proven frameworks, we deploy automation quickly. First results visible within a few weeks.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">📊 Measurable Results</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Measurable results</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Every automation is designed with measurable benefits in mind. Time savings, error reduction, increased efficiency - we monitor and report everything.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">🔒 Security & Privacy</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Security and privacy</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Data security is a priority. We implement best practices, encryption, access control, and GDPR compliance. Your data is safe.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">🔄 Continuous Learning & Development</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Continuous learning and development</h3>
                   <p className="text-gray-300 leading-relaxed">
                     AI systems learn and improve over time. We monitor performance, collect feedback, and continuously optimize solutions to make them better.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">💼 Comprehensive Service</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Comprehensive service</h3>
                   <p className="text-gray-300 leading-relaxed">
                     From process analysis, through design, implementation, testing, deployment, to maintenance and development - we provide full service at every stage.
                   </p>

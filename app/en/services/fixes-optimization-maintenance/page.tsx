@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
+import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
   title: "Website and App Fixes, Performance Optimization, Maintenance | ML Devworks",
@@ -103,13 +104,15 @@ export default function FixesOptimizationMaintenancePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
       />
+      <ServiceFaqSchema serviceId="maintenance" lang="en" />
+      <ServiceOfferCatalogSchema serviceId="maintenance" lang="en" />
       <Navbar lang="en" />
       <main className="min-h-screen pt-20">
         {/* Hero Section */}
         <section className="px-4 py-16 md:py-24 bg-gradient-to-b from-background to-background-lighter">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Fixes, <span className="text-primary">Optimization</span> & <span className="text-primary">Maintenance</span>
+              Fixes, optimization and maintenance <span className="text-primary">for websites and apps</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Restore full functionality of your website or application. Optimize performance, SEO, and conversion. Comprehensive technical support for your projects.
@@ -122,7 +125,7 @@ export default function FixesOptimizationMaintenancePage() {
                 Get Free Quote
               </Link>
               <Link
-                href="/en#services"
+                href="/en/services"
                 className="px-8 py-4 bg-background-lighter border border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-colors"
               >
                 View All Services
@@ -130,6 +133,7 @@ export default function FixesOptimizationMaintenancePage() {
             </div>
           </div>
         </section>
+        <ServiceSeoSections serviceId="maintenance" lang="en" />
 
         {/* Main Content */}
         <section className="px-4 py-16">
@@ -208,7 +212,7 @@ export default function FixesOptimizationMaintenancePage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">⚡ Performance Optimization</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Performance optimization</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Analysis and optimization of page load time, code optimization (minification, bundling), image optimization (compression, modern formats), database optimization, caching, CDN. Increasing PageSpeed Score.
                   </p>
@@ -222,14 +226,14 @@ export default function FixesOptimizationMaintenancePage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">📈 Conversion Optimization</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Conversion optimization</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Analysis of user behavior, identification of conversion drop points, checkout process optimization, forms, CTAs, landing pages. A/B testing and continuous improvement of results.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">🔄 Updates & Modernization</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Updates and modernization</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Updating frameworks, libraries, dependencies, CMS systems. Code modernization, migration to newer technologies, refactoring. Maintaining compliance with latest standards.
                   </p>
@@ -243,7 +247,7 @@ export default function FixesOptimizationMaintenancePage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">💼 Maintenance & Support</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Maintenance and support</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Continuous monitoring, regular updates, backup, technical support, quick response to problems, consultations and advice. Full maintenance service for your project.
                   </p>
@@ -258,14 +262,14 @@ export default function FixesOptimizationMaintenancePage() {
               </h2>
               <div className="space-y-6">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">⚡ Quick Response</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Quick response</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Quick problem diagnosis and immediate fixes. We prioritize critical bugs and ensure quick response to issues that affect your business operations.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">📊 Measurable Results</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Measurable results</h3>
                   <p className="text-gray-300 leading-relaxed">
                     All optimizations are measurable. Before and after analysis, results reports, metrics monitoring. You see real improvements in performance, SEO, and conversion.
                   </p>
@@ -286,14 +290,14 @@ export default function FixesOptimizationMaintenancePage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">🔄 Continuous Improvement</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Continuous improvement</h3>
                   <p className="text-gray-300 leading-relaxed">
                     We don&apos;t just fix, but also continuously optimize. We monitor results, collect feedback, and make improvements to make your project better and better.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">💼 Flexible Approach</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Flexible approach</h3>
                   <p className="text-gray-300 leading-relaxed">
                     We adapt to your needs - from one-time fixes to long-term maintenance contracts. We work with projects in various technologies and sizes.
                   </p>

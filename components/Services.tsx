@@ -42,13 +42,13 @@ const services = {
     {
       icon: AutomationIcon,
       title: "Automatyzacja i AI",
-      description: "Inteligentne agent AI i systemy automatyzacji procesów biznesowych. Zautomatyzuj powtarzalne zadania i zwiększ efektywność swojego biznesu.",
+      description: "Inteligentni agenci AI i systemy automatyzacji procesów biznesowych. Zautomatyzuj powtarzalne zadania i zwiększ efektywność swojego biznesu.",
       href: "/uslugi/automatyzacja-i-ai",
     },
     {
       icon: ShoppingCartIcon,
-      title: "Sklepy Internetowe / Systemy Rezerwacji",
-      description: "Kompletne rozwiązania e-commerce i systemy rezerwacji z integracją płatności, zarządzaniem produktami i analityką sprzedaży.",
+      title: "Sklepy Internetowe",
+      description: "Kompletne rozwiązania e-commerce z integracją płatności, dostaw, katalogu produktów, ERP/CRM i analityki sprzedaży.",
       href: "/uslugi/sklepy-internetowe-systemy-rezerwacji",
     },
     {
@@ -85,8 +85,8 @@ const services = {
     },
     {
       icon: ShoppingCartIcon,
-      title: "Online Stores / Booking Systems",
-      description: "Complete e-commerce solutions and booking systems with payment integration, product management, and sales analytics.",
+      title: "Online Stores",
+      description: "Complete e-commerce solutions with payment, delivery, product catalog, ERP/CRM, and sales analytics integrations.",
       href: "/en/services/online-stores-booking-systems",
     },
     {
@@ -130,7 +130,7 @@ export default function Services({ lang = "pl" }: ServicesProps) {
           transition={{ duration: 0.5 }}
           className="text-4xl md:text-5xl font-bold text-center mb-4"
         >
-          {lang === "pl" ? "Nasze Usługi" : "Our Services"}
+          {lang === "pl" ? "Usługi programistyczne dla firm" : "Software services for businesses"}
         </motion.h2>
         <motion.p
           ref={subtitleRef}
