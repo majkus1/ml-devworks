@@ -6,7 +6,7 @@ import StructuredData from "@/components/StructuredData";
 import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
-  title: "Web development for businesses | ML Devworks",
+  title: "Web development for businesses | ML DevWorks",
   description:
     "We build fast business websites, service pages and conversion-focused landing pages with technical SEO that turn traffic into qualified leads.",
   keywords: [
@@ -32,18 +32,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Web Development for Businesses | ML Devworks",
+    title: "Web Development for Businesses | ML DevWorks",
     description:
-      "High-performing websites built for SEO, speed, and lead generation.",
+      "Fast business websites built for technical SEO, clear offers, lead generation, and strong Core Web Vitals.",
     url: "https://ml-devworks.com/en/services/web-development",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Development for Businesses | ML Devworks",
+    title: "Web Development for Businesses | ML DevWorks",
     description:
-      "High-performing websites built for SEO, speed, and lead generation.",
+      "Fast business websites built for technical SEO, clear offers, lead generation, and strong Core Web Vitals.",
   },
 };
 
@@ -55,7 +55,7 @@ export default function WebDevelopmentPage() {
     "description": "We create professional websites tailored to your needs. Responsive, fast, and SEO-optimized. From simple business cards to advanced portals.",
     "provider": {
       "@type": "Organization",
-      "name": "ML Devworks",
+      "name": "ML DevWorks",
       "url": "https://ml-devworks.com",
       "logo": "https://ml-devworks.com/primary-on-transparent-logo.png",
       "contactPoint": {
@@ -138,10 +138,10 @@ export default function WebDevelopmentPage() {
         {/* Main Content */}
         <section className="px-4 py-16">
           <div className="max-w-4xl mx-auto">
-            {/* What We Offer */}
+            {/* What I Offer */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                What We Offer?
+                What I offer
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
@@ -198,10 +198,10 @@ export default function WebDevelopmentPage() {
               </div>
             </div>
 
-            {/* Why Choose Us */}
+            {/* Why Work With Me */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                Why Choose Us?
+                Why work with me?
               </h2>
               <div className="space-y-6">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
@@ -214,7 +214,7 @@ export default function WebDevelopmentPage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">📱 Full Responsiveness</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Every website is fully responsive and looks perfect on all devices - from smartphones, through tablets, to large monitors. Mobile-first approach is our standard.
+                    Every website is fully responsive and looks good on all devices - from smartphones, through tablets, to large monitors. Mobile-first approach is my standard.
                   </p>
                 </div>
 
@@ -242,7 +242,7 @@ export default function WebDevelopmentPage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Comprehensive service</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    From concept, through design, implementation, to maintenance - we provide full service at every stage. We focus on long-term partnerships.
+                    From concept, through design, implementation, to maintenance - I cover the full workflow. I focus on practical, long-term cooperation.
                   </p>
                 </div>
               </div>
@@ -310,7 +310,7 @@ export default function WebDevelopmentPage() {
                 Ready for a Professional Website?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Contact us and get a free quote for your project.
+                Contact me and get a free quote for your project.
               </p>
               <Link
                 href="/en#contact"

@@ -34,15 +34,15 @@ export default function BlogCardList({ posts, lang }: BlogCardListProps) {
   }
 
   return (
-    <div
+    <ul
       ref={listRef}
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 list-none p-0 m-0"
       role="list"
     >
       {posts.map((post, index) => (
         <BlogCard key={post.slug} post={post} lang={lang} index={index} />
       ))}
-    </div>
+    </ul>
   );
 }
 
@@ -60,7 +60,7 @@ function BlogCard({
   const href = lang === "pl" ? `/blog/${post.slug}` : `/en/blog/${post.slugEn}`;
 
   return (
-    <motion.article
+    <motion.li
       ref={cardRef}
       initial={{ opacity: 0, y: 40 }}
       animate={isCardInView ? { opacity: 1, y: 0 } : {}}
@@ -74,48 +74,49 @@ function BlogCard({
         transition: { duration: 0.2, ease: "easeOut" },
       }}
       className="bg-background-lighter border border-primary/20 rounded-xl overflow-hidden hover:border-primary/40 transition-colors duration-200 group"
-      role="listitem"
     >
       <Link href={href} className="block h-full">
-        {post.image && (
-          <div className="aspect-video overflow-hidden">
-            <Image
-              src={post.image}
-              alt={post.title[lang]}
-              width={640}
-              height={360}
-              sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-        )}
-        <div className="p-6">
-          <time
-            dateTime={post.publishedAt}
-            className="text-sm text-primary/80 font-medium block mb-2"
-          >
-            {new Date(post.publishedAt).toLocaleDateString(
-              lang === "pl" ? "pl-PL" : "en-US",
-              {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              }
-            )}
-          </time>
-          <h2 className="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors line-clamp-2">
-            {post.title[lang]}
-          </h2>
-          <p className="text-gray-400 text-sm leading-relaxed line-clamp-3">
-            {post.excerpt[lang]}
-          </p>
-          {post.readingTime && (
-            <span className="text-xs text-gray-500 mt-2 inline-block">
-              {post.readingTime[lang]}
-            </span>
+        <article>
+          {post.image && (
+            <div className="aspect-video overflow-hidden">
+              <Image
+                src={post.image}
+                alt={post.title[lang]}
+                width={640}
+                height={360}
+                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
           )}
-        </div>
+          <div className="p-6">
+            <time
+              dateTime={post.publishedAt}
+              className="text-sm text-primary/80 font-medium block mb-2"
+            >
+              {new Date(post.publishedAt).toLocaleDateString(
+                lang === "pl" ? "pl-PL" : "en-US",
+                {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                }
+              )}
+            </time>
+            <h2 className="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors line-clamp-2">
+              {post.title[lang]}
+            </h2>
+            <p className="text-gray-400 text-sm leading-relaxed line-clamp-3">
+              {post.excerpt[lang]}
+            </p>
+            {post.readingTime && (
+              <span className="text-xs text-gray-500 mt-2 inline-block">
+                {post.readingTime[lang]}
+              </span>
+            )}
+          </div>
+        </article>
       </Link>
-    </motion.article>
+    </motion.li>
   );
 }

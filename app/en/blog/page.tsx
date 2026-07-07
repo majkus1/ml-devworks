@@ -8,7 +8,7 @@ import { blogPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ml-devworks.com"),
-  title: "Business blog: websites, SEO & automation | ML Devworks",
+  title: "Business blog: websites, SEO & automation | ML DevWorks",
   description:
     "Actionable articles for owners and managers: strategy, website development, technical SEO, web apps, automation and conversion-focused digital growth.",
   keywords: [
@@ -30,18 +30,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Business Blog: Strategy, Websites, SEO, Automation | ML Devworks",
+    title: "Blog: websites, SEO and automation | ML DevWorks",
     description:
-      "Practical, business-focused content on strategy, websites, SEO, automation, and digital growth.",
+      "Practical articles about websites, SEO, apps, automation, and digital growth for business owners and managers.",
     url: "https://ml-devworks.com/en/blog",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Business Strategy, Website & SEO Blog | ML Devworks",
+    title: "Business Strategy, Website & SEO Blog | ML DevWorks",
     description:
-      "Practical business strategy, website, SEO, and automation articles for growth.",
+      "Practical articles about websites, SEO, apps, automation, and digital growth, focused on implementation and leads.",
   },
   robots: {
     index: true,

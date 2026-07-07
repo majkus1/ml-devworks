@@ -6,7 +6,7 @@ import StructuredData from "@/components/StructuredData";
 import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
-  title: "DevOps Services and Cloud Deployment (CI/CD) | ML Devworks",
+  title: "DevOps Services and Cloud Deployment (CI/CD) | ML DevWorks",
   description:
     "DevOps services: CI/CD pipelines, Docker/Kubernetes, cloud deployment, monitoring and backups. Faster releases with fewer production incidents.",
   keywords: [
@@ -32,18 +32,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "DevOps Services and Cloud Deployment | ML Devworks",
+    title: "DevOps Services and Cloud Deployment | ML DevWorks",
     description:
-      "CI/CD, cloud infrastructure, monitoring, and stable production deployments.",
+      "CI/CD pipelines, cloud deployment, monitoring, backups, and stable production releases for business applications.",
     url: "https://ml-devworks.com/en/services/devops-deployment",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "DevOps Services and Cloud Deployment | ML Devworks",
+    title: "DevOps Services and Cloud Deployment | ML DevWorks",
     description:
-      "CI/CD, cloud infrastructure, monitoring, and stable production deployments.",
+      "CI/CD pipelines, cloud deployment, monitoring, backups, and stable production releases for business applications.",
   },
 };
 
@@ -55,7 +55,7 @@ export default function DevOpsDeploymentPage() {
     "description": "Cloud application deployment, CI/CD configuration, monitoring, backup, and full infrastructure maintenance. From development to production.",
     "provider": {
       "@type": "Organization",
-      "name": "ML Devworks",
+      "name": "ML DevWorks",
       "url": "https://ml-devworks.com",
       "logo": "https://ml-devworks.com/primary-on-transparent-logo.png",
       "contactPoint": {
@@ -138,10 +138,10 @@ export default function DevOpsDeploymentPage() {
         {/* Main Content */}
         <section className="px-4 py-16">
           <div className="max-w-4xl mx-auto">
-            {/* What We Offer */}
+            {/* What I Offer */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                What We Offer?
+                What I offer
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
@@ -234,16 +234,16 @@ export default function DevOpsDeploymentPage() {
               </div>
             </div>
 
-            {/* Why Choose Us */}
+            {/* Why Work With Me */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                Why Choose Us?
+                Why work with me?
               </h2>
               <div className="space-y-6">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">🚀 Fast Deployments</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Thanks to automation and proven processes, we deploy applications quickly and safely. From development to production in hours, not weeks.
+                    Thanks to automation and proven processes, I deploy applications quickly and safely. From development to production in hours, not weeks.
                   </p>
                 </div>
 
@@ -278,7 +278,7 @@ export default function DevOpsDeploymentPage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Comprehensive service</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    From infrastructure planning, through configuration, deployment, monitoring, to maintenance and development - we provide full DevOps service.
+                    From infrastructure planning, through configuration, deployment, monitoring, to maintenance and development - I cover the full DevOps workflow.
                   </p>
                 </div>
               </div>
@@ -370,7 +370,7 @@ export default function DevOpsDeploymentPage() {
                 Ready for Professional DevOps Deployment?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Contact us and get a free quote for your DevOps project.
+                Contact me and get a free quote for your DevOps project.
               </p>
               <Link
                 href="/en#contact"

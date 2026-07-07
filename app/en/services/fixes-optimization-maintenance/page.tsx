@@ -6,7 +6,7 @@ import StructuredData from "@/components/StructuredData";
 import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
-  title: "Website & app fixes and optimization | ML Devworks",
+  title: "Website & app fixes and optimization | ML DevWorks",
   description:
     "We fix broken websites and web apps, improve Core Web Vitals and technical SEO, and provide ongoing maintenance. Fast diagnostics and clear scope.",
   keywords: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Website and App Fixes, Optimization, Maintenance | ML Devworks",
+    title: "Website & App Fixes | ML DevWorks",
     description:
       "Bug fixing, performance tuning, technical SEO repairs, and reliable ongoing support.",
     url: "https://ml-devworks.com/en/services/fixes-optimization-maintenance",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website and App Fixes, Optimization, Maintenance | ML Devworks",
+    title: "Website & App Fixes | ML DevWorks",
     description:
       "Bug fixing, performance tuning, technical SEO repairs, and reliable ongoing support.",
   },
@@ -55,7 +55,7 @@ export default function FixesOptimizationMaintenancePage() {
     "description": "Bug fixes in existing projects, performance optimization, SEO, and conversion optimization. Restore full functionality of your website or application. Comprehensive maintenance and technical support for your projects.",
     "provider": {
       "@type": "Organization",
-      "name": "ML Devworks",
+      "name": "ML DevWorks",
       "url": "https://ml-devworks.com",
       "logo": "https://ml-devworks.com/primary-on-transparent-logo.png",
       "contactPoint": {
@@ -138,10 +138,10 @@ export default function FixesOptimizationMaintenancePage() {
         {/* Main Content */}
         <section className="px-4 py-16">
           <div className="max-w-4xl mx-auto">
-            {/* What We Offer */}
+            {/* What I Offer */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                What We Offer?
+                What I offer
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
@@ -255,10 +255,10 @@ export default function FixesOptimizationMaintenancePage() {
               </div>
             </div>
 
-            {/* Why Choose Us */}
+            {/* Why Work With Me */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                Why Choose Us?
+                Why work with me?
               </h2>
               <div className="space-y-6">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
@@ -391,7 +391,7 @@ export default function FixesOptimizationMaintenancePage() {
                 Need Fixes or Optimization?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Contact us and get a free analysis of your project and a quote for the work.
+                Contact me and get a free analysis of your project and a quote for the work.
               </p>
               <Link
                 href="/en#contact"

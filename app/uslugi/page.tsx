@@ -95,7 +95,7 @@ export default function ServicesHubPage() {
               Usługi programistyczne dla firm
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed">
-              ML DevWorks projektuje i wdraża rozwiązania cyfrowe dla biznesu: od stron i aplikacji, przez automatyzację AI, po DevOps, e-commerce, systemy rezerwacji i utrzymanie projektów.
+              ML DevWorks to bezpośrednia współpraca z doświadczonym programistą: projektuję i wdrażam strony, aplikacje, automatyzacje AI, DevOps, e-commerce, systemy rezerwacji i utrzymanie projektów.
             </p>
           </div>
         </section>
@@ -121,7 +121,7 @@ export default function ServicesHubPage() {
           <div className="max-w-5xl mx-auto bg-gradient-to-r from-primary/20 to-primary/10 border border-primary/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Nie wiesz, od czego zacząć?</h2>
             <p className="text-gray-300 text-lg mb-8">
-              Opisz problem biznesowy, a dobierzemy zakres: stronę, aplikację, integrację, automatyzację albo plan naprawczy dla istniejącego projektu.
+              Opisz problem biznesowy, a pomogę dobrać zakres: stronę, aplikację, integrację, automatyzację albo plan naprawczy dla istniejącego projektu.
             </p>
             <Link href="/#contact" className="inline-block px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors">
               Skontaktuj się

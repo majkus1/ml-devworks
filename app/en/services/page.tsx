@@ -95,7 +95,7 @@ export default function ServicesHubPageEn() {
               Software development services for companies
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed">
-              ML DevWorks designs and implements digital products for business: from websites and applications to AI automation, DevOps, e-commerce, booking systems, fixes, and maintenance.
+              ML DevWorks means direct cooperation with an experienced developer: I design and implement websites, applications, AI automation, DevOps, e-commerce, booking systems, fixes, and maintenance.
             </p>
           </div>
         </section>
@@ -121,7 +121,7 @@ export default function ServicesHubPageEn() {
           <div className="max-w-5xl mx-auto bg-gradient-to-r from-primary/20 to-primary/10 border border-primary/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Not sure where to start?</h2>
             <p className="text-gray-300 text-lg mb-8">
-              Describe the business problem and we will recommend the right scope: website, application, integration, automation, or a recovery plan for an existing project.
+              Describe the business problem and I will recommend the right scope: website, application, integration, automation, or a recovery plan for an existing project.
             </p>
             <Link href="/en#contact" className="inline-block px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors">
               Get in touch

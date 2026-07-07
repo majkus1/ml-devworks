@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     metadataBase: new URL(baseUrl),
-    title: `${post.title.pl} | Blog ML Devworks`,
+    title: post.title.pl,
     description: post.excerpt.pl,
     keywords: [
       ...(post.keywords?.pl ?? []),
@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: post.publishedAt,
       modifiedTime: post.dateModified ?? post.publishedAt,
       locale: "pl_PL",
-      siteName: "ML Devworks",
+      siteName: "ML DevWorks",
       ...(post.image && {
         images: [
           {
@@ -100,13 +100,13 @@ function ArticleSchema({ post, slug }: { post: BlogPost; slug: string }) {
     }),
     author: {
       "@type": "Organization",
-      name: "ML Devworks",
+      name: "ML DevWorks",
       url: baseUrl,
       logo: { "@type": "ImageObject", url: `${baseUrl}/primary-on-transparent-logo.png` },
     },
     publisher: {
       "@type": "Organization",
-      name: "ML Devworks",
+      name: "ML DevWorks",
       url: baseUrl,
       logo: { "@type": "ImageObject", url: `${baseUrl}/primary-on-transparent-logo.png` },
     },

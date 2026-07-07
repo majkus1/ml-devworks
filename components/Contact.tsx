@@ -28,39 +28,45 @@ export default function Contact({ lang = "pl" }: ContactProps) {
 
   const content = {
     pl: {
-      title: "Skontaktuj Się Z Nami",
-      subtitle: "Opisz krótko swój problem lub pomysł – wrócimy z konkretną propozycją.",
+      title: "Opisz swój pomysł albo problem do rozwiązania",
+      subtitle: "Napisz, czy chodzi o aplikację, automatyzację, stronę, system rezerwacji, integrację albo naprawę istniejącego projektu.",
       email: "Email",
       phone: "Telefon",
       address: "Adres",
+      role: "Programista / AI-assisted development",
       form: {
         email: "Twój Email",
-        description: "Opisz swój problem lub pomysł",
-        descriptionPlaceholder: "Np. automatyzacja procesów, aplikacja webowa, integracja AI, usprawnienie systemu…",
+        description: "Opisz dokładnie pomysł, proces albo problem",
+        descriptionPlaceholder: "Np. aplikacja, automatyzacja, CRM/API, rezerwacje albo problem w projekcie...",
         budget: "Szacunkowy budżet (opcjonalnie)",
         submit: "Wyślij",
         submitting: "Wysyłanie...",
-        success: "Wiadomość wysłana! Skontaktujemy się wkrótce.",
+        success: "Wiadomość wysłana! Skontaktuję się wkrótce.",
         error: "Wystąpił błąd. Spróbuj ponownie lub skontaktuj się bezpośrednio.",
-        responseTime: "Odpowiadamy zazwyczaj w ciągu 24h roboczych.",
+        responseTime: "Po dokładnym opisie pomysłu na aplikację lub automatyzację wrócę zwykle w ciągu 2-5 dni z bezpłatnym, interaktywnym prototypem albo konkretną propozycją kolejnych kroków.",
+        prototypeTitle: "Bezpłatny prototyp po dobrym opisie",
+        prototypeText: "Jeśli opiszesz cel, użytkowników, obecny proces i oczekiwany efekt, mogę przygotować pierwszy interaktywny prototyp aplikacji lub automatyzacji za darmo. Dzięki temu szybciej zobaczysz, czy kierunek ma sens.",
       },
     },
     en: {
-      title: "Get In Touch",
-      subtitle: "Briefly describe your problem or idea – we'll come back with a concrete proposal.",
+      title: "Describe your idea or the problem you want to solve",
+      subtitle: "Tell me whether it is an app, automation, website, booking system, integration, or an existing project that needs fixing.",
       email: "Email",
       phone: "Phone",
       address: "Address",
+      role: "Developer / AI-assisted development",
       form: {
         email: "Your Email",
-        description: "Describe your problem or idea",
-        descriptionPlaceholder: "E.g. process automation, web application, AI integration, system optimization…",
+        description: "Describe your idea, process, or problem in detail",
+        descriptionPlaceholder: "E.g. app, automation, CRM/API, bookings, or a project issue...",
         budget: "Estimated budget (optional)",
         submit: "Send",
         submitting: "Sending...",
-        success: "Message sent! We'll contact you soon.",
-        error: "An error occurred. Please try again or contact us directly.",
-        responseTime: "We typically respond within 24 business hours.",
+        success: "Message sent! I will contact you soon.",
+        error: "An error occurred. Please try again or contact me directly.",
+        responseTime: "After a detailed description of an app or automation idea, I usually come back within 2-5 days with a free interactive prototype or a concrete proposal for next steps.",
+        prototypeTitle: "Free prototype after a clear brief",
+        prototypeText: "If you describe the goal, users, current process, and expected result, I can prepare a first interactive prototype for your app or automation for free. This helps you quickly see whether the direction makes sense.",
       },
     },
   };
@@ -105,28 +111,90 @@ export default function Contact({ lang = "pl" }: ContactProps) {
   };
 
   return (
-    <section id="contact" className="pt-20 pb-20 px-4 relative scroll-mt-[100px]" style={{ scrollMarginTop: '100px' }} aria-labelledby="contact-heading">
-      <div className="max-w-4xl mx-auto">
+    <section id="contact" className="py-28 md:py-32 px-4 relative scroll-mt-[100px]" style={{ scrollMarginTop: '100px' }} aria-labelledby="contact-heading">
+      <div className="max-w-7xl mx-auto">
         <motion.header
           ref={headerRef}
           initial={{ opacity: 0, y: 50 }}
           animate={isHeaderInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-8"
+          className="text-left mb-8"
         >
           <h2 id="contact-heading" className="text-4xl md:text-5xl font-bold mb-4">{t.title}</h2>
           <p className="text-xl text-gray-400">{t.subtitle}</p>
         </motion.header>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Contact Form - First on mobile, second on desktop */}
+        <div className="space-y-8">
+          {/* Contact Info */}
+          <motion.address
+            ref={contactInfoRef}
+            initial={{ opacity: 0, y: 40 }}
+            animate={isContactInfoInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-6 not-italic"
+          >
+            <div className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6">
+              <h3 className="text-xl font-bold mb-4 text-primary">{lang === "pl" ? "Dane kontaktowe" : "Contact details"}</h3>
+              
+              <div className="flex items-center gap-4 mb-6 pb-6 border-b border-primary/20">
+                <Image
+                  src="/IM.webp"
+                  alt="Michał Lipka"
+                  width={64}
+                  height={64}
+                  className="w-16 h-16 rounded-full object-cover border-2 border-primary/30"
+                />
+                <div>
+                  <p className="text-white font-semibold text-lg">Michał Lipka</p>
+                  <p className="text-gray-400 text-sm">{t.role}</p>
+                </div>
+              </div>
+              
+              <div className="grid gap-4 md:grid-cols-3">
+                <div>
+                  <p className="text-sm text-gray-400 mb-1">{t.email}</p>
+                  <a
+                    href="mailto:office@ml-devworks.com"
+                    className="text-white hover:text-primary transition-colors"
+                    aria-label={lang === "pl" ? "Wyślij email do ML DevWorks" : "Send email to ML DevWorks"}
+                  >
+                    office@ml-devworks.com
+                  </a>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-400 mb-1">{t.phone}</p>
+                  <a
+                    href="tel:+48516598792"
+                    className="text-white hover:text-primary transition-colors"
+                    aria-label={lang === "pl" ? "Zadzwoń do ML DevWorks" : "Call ML DevWorks"}
+                  >
+                    +48 516 598 792
+                  </a>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-400 mb-1">{t.address}</p>
+                  <address className="text-white not-italic">
+                    31-010 Kraków<br />
+                    Rynek Główny 34/15
+                  </address>
+                </div>
+              </div>
+            </div>
+          </motion.address>
+
+          <div className="bg-primary/10 border border-primary/30 rounded-xl p-6">
+            <h3 className="text-xl font-bold text-primary mb-3">{t.form.prototypeTitle}</h3>
+            <p className="text-gray-300 leading-relaxed">{t.form.prototypeText}</p>
+          </div>
+
+          {/* Contact Form */}
           <motion.form
             ref={formRef}
-            initial={{ opacity: 0, x: 50 }}
-            animate={isFormInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+            initial={{ opacity: 0, y: 40 }}
+            animate={isFormInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
             transition={{ duration: 0.8 }}
             onSubmit={handleSubmit}
-            className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 space-y-6 order-1 md:order-2"
+            className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 space-y-6"
             aria-label={lang === "pl" ? "Formularz kontaktowy" : "Contact form"}
             noValidate
           >
@@ -228,68 +296,10 @@ export default function Contact({ lang = "pl" }: ContactProps) {
             >
               {isSubmitting ? t.form.submitting : t.form.submit}
             </button>
-            <p className="text-sm text-gray-400 text-center mt-2">
+            <p className="text-sm text-gray-400 text-left mt-2">
               {t.form.responseTime}
             </p>
           </motion.form>
-
-          {/* Contact Info - Second on mobile, first on desktop */}
-          <motion.address
-            ref={contactInfoRef}
-            initial={{ opacity: 0, x: -50 }}
-            animate={isContactInfoInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-6 not-italic order-2 md:order-1"
-          >
-            <div className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6">
-              <h3 className="text-xl font-bold mb-4 text-primary">{lang === "pl" ? "Kontakt" : "Contact"}</h3>
-              
-              {/* Profile Photo and Name */}
-              <div className="flex items-center gap-4 mb-6 pb-6 border-b border-primary/20">
-                <Image
-                  src="/IM.webp"
-                  alt="Michał Lipka"
-                  width={64}
-                  height={64}
-                  className="w-16 h-16 rounded-full object-cover border-2 border-primary/30"
-                />
-                <div>
-                  <p className="text-white font-semibold text-lg">Michał Lipka</p>
-                  <p className="text-gray-400 text-sm">{lang === "pl" ? "Założyciel" : "Founder"}</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4">
-                <div>
-                  <p className="text-sm text-gray-400 mb-1">{t.email}</p>
-                  <a
-                    href="mailto:office@ml-devworks.com"
-                    className="text-white hover:text-primary transition-colors"
-                    aria-label={lang === "pl" ? "Wyślij email do ML Devworks" : "Send email to ML Devworks"}
-                  >
-                    office@ml-devworks.com
-                  </a>
-                </div>
-                <div>
-                  <p className="text-sm text-gray-400 mb-1">{t.phone}</p>
-                  <a
-                    href="tel:+48516598792"
-                    className="text-white hover:text-primary transition-colors"
-                    aria-label={lang === "pl" ? "Zadzwoń do ML Devworks" : "Call ML Devworks"}
-                  >
-                    +48 516 598 792
-                  </a>
-                </div>
-                <div>
-                  <p className="text-sm text-gray-400 mb-1">{t.address}</p>
-                  <address className="text-white not-italic">
-                  31-010 Kraków<br />
-                  Rynek Główny 34/15
-                  </address>
-                </div>
-              </div>
-            </div>
-          </motion.address>
         </div>
 
         {/* Booking Calendar */}

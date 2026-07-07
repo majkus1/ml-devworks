@@ -30,18 +30,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Blog o Biznesie, Stronach WWW, SEO i Automatyzacji | ML Devworks",
+    title: "Blog: strony, SEO i automatyzacja | ML DevWorks",
     description:
-      "Praktyczna wiedza biznesowa o stronach, SEO i automatyzacji dla wlascicieli firm i managerow.",
+      "Praktyczna wiedza o stronach, SEO, aplikacjach i automatyzacji dla firm, pisana z perspektywy wdrożeń.",
     url: "https://ml-devworks.com/blog",
     type: "website",
     locale: "pl_PL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog o Biznesie, Stronach WWW i SEO | ML Devworks",
+    title: "Blog o Biznesie, Stronach WWW i SEO | ML DevWorks",
     description:
-      "Praktyczne poradniki biznesowe o stronach internetowych, SEO i automatyzacji.",
+      "Poradniki o stronach, SEO, aplikacjach i automatyzacji procesów dla firm, z naciskiem na wdrożenia i sprzedaż.",
   },
   robots: {
     index: true,

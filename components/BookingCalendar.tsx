@@ -85,7 +85,7 @@ export default function BookingCalendar({ lang = "pl" }: BookingCalendarProps) {
     en: {
       title: "Book a free consultation (30 min)",
       subtitle: "Choose a convenient time and schedule a free 30-minute online meeting.",
-      comingSoon: "Online booking slots will be available soon. In the meantime, send us a message using the form above — we'll get back to you and arrange a convenient time.",
+      comingSoon: "Online booking slots will be available soon. In the meantime, send me a message using the form above — I will get back to you and arrange a convenient time.",
       pickDate: "Pick a day",
       pickTime: "Pick a time",
       noSlots: "No available slots for this day.",

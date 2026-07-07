@@ -44,7 +44,7 @@ export default function Footer({ lang = "pl" }: FooterProps) {
   const homeHref = isEnglish ? "/en" : "/";
   const blogHref = isEnglish ? "/en/blog" : "/blog";
   const servicesHref = isEnglish ? "/en/services" : "/uslugi";
-  const localHref = isEnglish ? "/en/software-house-krakow" : "/software-house-krakow";
+  const localHref = isEnglish ? "/en/software-developer-krakow" : "/programista-krakow";
   const contactHref = isEnglish ? "/en#contact" : "/#contact";
   const alternateHref = isEnglish ? "/" : "/en";
 
@@ -65,7 +65,9 @@ export default function Footer({ lang = "pl" }: FooterProps) {
                 className="opacity-90"
               />
             </Link>
-            <p className="text-primary font-semibold text-lg mb-2">Quality by Us. Speed by AI.</p>
+            <p className="text-primary font-semibold text-lg mb-2">
+              {isEnglish ? "Experienced developer supported by AI tools." : "Doświadczony programista wspierany narzędziami AI."}
+            </p>
             <p className="text-gray-400 max-w-sm">
               {isEnglish
                 ? "Websites, applications, AI automation, e-commerce, booking systems, DevOps, and maintenance for companies."
@@ -106,7 +108,7 @@ export default function Footer({ lang = "pl" }: FooterProps) {
               </li>
               <li>
                 <Link href={localHref} className="text-gray-300 hover:text-primary transition-colors">
-                  {isEnglish ? "Software house Krakow" : "Software house Kraków"}
+                  {isEnglish ? "Software developer Krakow" : "Programista Kraków"}
                 </Link>
               </li>
               <li>

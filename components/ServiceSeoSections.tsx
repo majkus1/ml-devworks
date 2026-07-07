@@ -108,7 +108,7 @@ export default function ServiceSeoSections({ serviceId, lang = "pl" }: ServiceSe
         <div className="grid gap-6 md:grid-cols-2">
           <div className="bg-background-lighter border border-primary/20 rounded-xl p-6">
             <h3 className="text-2xl font-bold text-primary mb-4">
-              {isEnglish ? "Problems we solve" : "Problemy, które rozwiązujemy"}
+              {isEnglish ? "Problems I solve" : "Problemy, które rozwiązuję"}
             </h3>
             <ul className="space-y-3 text-gray-300">
               {detail.pains.map((pain) => (
@@ -144,16 +144,16 @@ export default function ServiceSeoSections({ serviceId, lang = "pl" }: ServiceSe
         </div>
 
         <div className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6">
-          <h3 className="text-2xl font-bold mb-3">{isEnglish ? "How we prove value" : "Jak pokazujemy wartość"}</h3>
+          <h2 className="text-2xl font-bold mb-3">{isEnglish ? "How I prove value" : "Jak pokazuję wartość"}</h2>
           <p className="text-gray-300 leading-relaxed">{detail.proof}</p>
         </div>
 
         <div>
-          <h3 className="text-3xl font-bold mb-6">{isEnglish ? "FAQ" : "Najczęstsze pytania"}</h3>
+          <h2 className="text-3xl font-bold mb-6">{isEnglish ? "FAQ" : "Najczęstsze pytania"}</h2>
           <div className="space-y-4">
             {detail.faq.map((item) => (
               <article key={item.q} className="bg-background-lighter border border-primary/20 rounded-xl p-6">
-                <h4 className="text-xl font-bold text-primary mb-3">{item.q}</h4>
+                <h3 className="text-xl font-bold text-primary mb-3">{item.q}</h3>
                 <p className="text-gray-300 leading-relaxed">{item.a}</p>
               </article>
             ))}
@@ -162,9 +162,9 @@ export default function ServiceSeoSections({ serviceId, lang = "pl" }: ServiceSe
 
         {detail.relatedPosts.length > 0 && (
           <div>
-            <h3 className="text-2xl font-bold mb-4">
+            <h2 className="text-2xl font-bold mb-4">
               {isEnglish ? "Related articles" : "Powiązane artykuły"}
-            </h3>
+            </h2>
             <div className="flex flex-wrap gap-3">
               {detail.relatedPosts.map((post) => (
                 <Link key={post.href} href={post.href} className="px-4 py-3 bg-background-lighter border border-primary/20 rounded-lg text-primary hover:border-primary transition-colors">

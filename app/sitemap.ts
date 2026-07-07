@@ -89,8 +89,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     }),
     ...localizedEntry({
-      plPath: "/software-house-krakow",
-      enPath: "/en/software-house-krakow",
+      plPath: "/programista-krakow",
+      enPath: "/en/software-developer-krakow",
       lastModified: SITE_LAST_MODIFIED,
       changeFrequency: "monthly",
       priority: 0.85,

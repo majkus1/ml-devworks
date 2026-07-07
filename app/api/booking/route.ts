@@ -184,9 +184,9 @@ async function sendConfirmationEmail(
   }).format(datetime);
 
   const mailOptions = {
-    from: `"ML Devworks" <${gmailEmail}>`,
+    from: `"ML DevWorks" <${gmailEmail}>`,
     to: email,
-    subject: "Potwierdzenie rezerwacji konsultacji - ML Devworks",
+    subject: "Potwierdzenie rezerwacji konsultacji - ML DevWorks",
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #00ff88; border-bottom: 2px solid #00ff88; padding-bottom: 10px;">
@@ -207,12 +207,12 @@ async function sendConfirmationEmail(
         </div>
         
         <p style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; color: #666; font-size: 12px;">
-          Jeśli masz pytania, skontaktuj się z nami: office@ml-devworks.com
+          Jeśli masz pytania, skontaktuj się ze mną: office@ml-devworks.com
         </p>
       </div>
     `,
     text: `
-Potwierdzenie rezerwacji konsultacji - ML Devworks
+Potwierdzenie rezerwacji konsultacji - ML DevWorks
 
 Witaj${name ? ` ${name}` : ""}!
 
@@ -224,7 +224,7 @@ Link do spotkania Google Meet:
 Wkrótce wyślemy Ci link do spotkania Google Meet na ten adres email.
 
 ---
-Jeśli masz pytania, skontaktuj się z nami: office@ml-devworks.com
+Jeśli masz pytania, skontaktuj się ze mną: office@ml-devworks.com
     `,
   };
 
@@ -265,7 +265,7 @@ async function sendOwnerNotificationEmail(
   }).format(datetime);
 
   const mailOptions = {
-    from: `"ML Devworks Booking System" <${gmailEmail}>`,
+    from: `"ML DevWorks Booking System" <${gmailEmail}>`,
     to: ownerEmail,
     subject: `🔔 Nowa rezerwacja konsultacji - ${formattedDate}`,
     html: `
@@ -294,12 +294,12 @@ async function sendOwnerNotificationEmail(
         </div>
         
         <p style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; color: #666; font-size: 12px;">
-          To powiadomienie zostało wysłane automatycznie z systemu rezerwacji ML Devworks.
+          To powiadomienie zostało wysłane automatycznie z systemu rezerwacji ML DevWorks.
         </p>
       </div>
     `,
     text: `
-🔔 Nowa rezerwacja konsultacji - ML Devworks
+🔔 Nowa rezerwacja konsultacji - ML DevWorks
 
 Masz nową rezerwację konsultacji!
 
@@ -312,7 +312,7 @@ ${clientName ? `👤 Imię klienta: ${clientName}` : ""}
 ⚠️ Pamiętaj: Dodaj link do Google Meet do wydarzenia w kalendarzu, a następnie wyślij go klientowi na email: ${clientEmail}
 
 ---
-To powiadomienie zostało wysłane automatycznie z systemu rezerwacji ML Devworks.
+To powiadomienie zostało wysłane automatycznie z systemu rezerwacji ML DevWorks.
     `,
   };
 

@@ -93,7 +93,7 @@ export default function KosztAutomatyzacjiROIContent({ lang }: Props) {
         </h2>
         <p className="mb-4">
           {isPl
-            ? "Zaczynamy od krótkiego audytu procesu, kosztu czasu i potencjału zwrotu. Dzięki temu wdrażamy automatyzację tam, gdzie ma największy sens biznesowy."
+            ? "Zaczynam od krótkiego audytu procesu, kosztu czasu i potencjału zwrotu. Dzięki temu wdrażam automatyzację tam, gdzie ma największy sens biznesowy."
             : "We start with a short audit of the process, time cost, and return potential. This helps implement automation where it makes the strongest business sense."}
         </p>
         <Link

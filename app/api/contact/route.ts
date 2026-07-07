@@ -48,10 +48,10 @@ export async function POST(request: NextRequest) {
 
     // Email content
     const mailOptions = {
-      from: `"ML Devworks Contact Form" <${gmailEmail}>`,
+      from: `"ML DevWorks Contact Form" <${gmailEmail}>`,
       to: gmailEmail, // Send to your email
       replyTo: email, // Reply to will be the form submitter's email
-      subject: "Nowa wiadomość z formularza kontaktowego - ML Devworks",
+      subject: "Nowa wiadomość z formularza kontaktowego - ML DevWorks",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #00ff88; border-bottom: 2px solid #00ff88; padding-bottom: 10px;">
@@ -75,7 +75,7 @@ export async function POST(request: NextRequest) {
         </div>
       `,
       text: `
-Nowa wiadomość z formularza kontaktowego - ML Devworks
+Nowa wiadomość z formularza kontaktowego - ML DevWorks
 
 Email klienta: ${email}
 ${budget ? `Budżet: ${budget}` : ""}

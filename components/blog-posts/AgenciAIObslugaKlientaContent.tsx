@@ -81,8 +81,8 @@ export default function AgenciAIObslugaKlientaContent({ lang }: Props) {
         </h2>
         <p className="mb-4">
           {isPl
-            ? "Zaczynamy od mapy pytań, źródeł wiedzy i punktów eskalacji. Dopiero potem projektujemy agenta lub prostszą automatyzację."
-            : "We start with a map of questions, knowledge sources, and escalation points. Only then do we design an agent or a simpler automation."}
+            ? "Zaczynam od mapy pytań, źródeł wiedzy i punktów eskalacji. Dopiero potem projektuję agenta lub prostszą automatyzację."
+            : "I start with a map of questions, knowledge sources, and escalation points. Only then do I design an agent or a simpler automation."}
         </p>
         <Link
           href={isPl ? "/uslugi/automatyzacja-i-ai" : "/en/services/automation-and-ai"}

@@ -6,7 +6,7 @@ import StructuredData from "@/components/StructuredData";
 import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
-  title: "E-commerce Development for Businesses | ML Devworks",
+  title: "E-commerce Development for Businesses | ML DevWorks",
   description:
     "We build B2C and B2B online stores with product catalogs, checkout, payment gateways, shipping integrations, ERP/CRM integrations, and sales automation.",
   keywords: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "E-commerce Development for Businesses | ML Devworks",
+    title: "E-commerce Development for Businesses | ML DevWorks",
     description:
       "Online stores built for product sales, integrations, checkout conversion, and scalable operations.",
     url: "https://ml-devworks.com/en/services/online-stores-booking-systems",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "E-commerce Development for Businesses | ML Devworks",
+    title: "E-commerce Development for Businesses | ML DevWorks",
     description:
       "Online stores built for product sales, integrations, checkout conversion, and scalable operations.",
   },
@@ -53,7 +53,7 @@ export default function OnlineStoresBookingSystemsPage() {
     "description": "Complete e-commerce solutions with payment gateways, shipping integrations, product management, ERP/CRM integrations, and sales analytics.",
     "provider": {
       "@type": "Organization",
-      "name": "ML Devworks",
+      "name": "ML DevWorks",
       "url": "https://ml-devworks.com",
       "logo": "https://ml-devworks.com/primary-on-transparent-logo.png",
       "contactPoint": {
@@ -136,10 +136,10 @@ export default function OnlineStoresBookingSystemsPage() {
         {/* Main Content */}
         <section className="px-4 py-16">
           <div className="max-w-4xl mx-auto">
-            {/* What We Offer */}
+            {/* What I Offer */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                What We Offer?
+                What I offer
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
@@ -248,16 +248,16 @@ export default function OnlineStoresBookingSystemsPage() {
               </div>
             </div>
 
-            {/* Why Choose Us */}
+            {/* Why Work With Me */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                Why Choose Us?
+                Why work with me?
               </h2>
               <div className="space-y-6">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">🚀 Fast Implementation</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Thanks to proven solutions and AI tools, we deploy online stores quickly. From concept to launch in a few weeks.
+                    Thanks to proven solutions and AI tools, I deploy online stores quickly. From concept to launch in a few weeks.
                   </p>
                 </div>
 
@@ -292,7 +292,7 @@ export default function OnlineStoresBookingSystemsPage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Comprehensive service</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    From needs analysis, through design, development, deployment, training, to maintenance and support - we provide full service at every stage.
+                    From needs analysis, through design, development, deployment, training, to maintenance and support - I cover the full e-commerce workflow.
                   </p>
                 </div>
               </div>
@@ -384,7 +384,7 @@ export default function OnlineStoresBookingSystemsPage() {
                 Ready for a professional online store?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Contact us and get a free quote for your online store, B2B platform, or e-commerce integration.
+                Contact me and get a free quote for your online store, B2B platform, or e-commerce integration.
               </p>
               <Link
                 href="/en#contact"

@@ -55,7 +55,7 @@ export default function DevOpsWdrozeniaPage() {
     "description": "Wdrożenie aplikacji w chmurze, konfiguracja CI/CD, monitoring, backup i pełne utrzymanie infrastruktury. Od developmentu do produkcji.",
     "provider": {
       "@type": "Organization",
-      "name": "ML Devworks",
+      "name": "ML DevWorks",
       "url": "https://ml-devworks.com",
       "logo": "https://ml-devworks.com/primary-on-transparent-logo.png",
       "contactPoint": {
@@ -138,10 +138,10 @@ export default function DevOpsWdrozeniaPage() {
         {/* Main Content */}
         <section className="px-4 py-16">
           <div className="max-w-4xl mx-auto">
-            {/* What We Offer */}
+            {/* What I Offer */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                Co Oferujemy?
+                Co oferuję?
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
@@ -234,16 +234,16 @@ export default function DevOpsWdrozeniaPage() {
               </div>
             </div>
 
-            {/* Why Choose Us */}
+            {/* Why Work With Me */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                Dlaczego Warto Wybrać Nas?
+                Dlaczego warto pracować ze mną?
               </h2>
               <div className="space-y-6">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">🚀 Szybkie Wdrożenia</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Dzięki automatyzacji i sprawdzonym procesom, wdrażamy aplikacje szybko i bezpiecznie. Od developmentu do produkcji w ciągu godzin, nie tygodni.
+                    Dzięki automatyzacji i sprawdzonym procesom wdrażam aplikacje szybko i bezpiecznie. Od developmentu do produkcji w ciągu godzin, nie tygodni.
                   </p>
                 </div>
 
@@ -370,7 +370,7 @@ export default function DevOpsWdrozeniaPage() {
                 Gotowy na Profesjonalne Wdrożenie DevOps?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Skontaktuj się z nami i otrzymaj bezpłatną wycenę dla Twojego projektu DevOps.
+                Skontaktuj się ze mną i otrzymaj bezpłatną wycenę dla Twojego projektu DevOps.
               </p>
               <Link
                 href="/#contact"

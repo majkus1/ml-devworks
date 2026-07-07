@@ -6,82 +6,43 @@ import StructuredData from "@/components/StructuredData";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Software house Kraków – aplikacje, strony, AI | ML DevWorks",
+  title: "Programista Kraków | Aplikacje i automatyzacje AI",
   description:
-    "Software house z Krakowa. Tworzymy strony, aplikacje webowe i mobilne, automatyzacje AI, systemy rezerwacji i integracje dla firm. Umów bezpłatną wycenę.",
+    "Programista z Krakowa z biznesowym podejściem: strony, aplikacje, systemy rezerwacji, integracje i automatyzacje AI dopasowane do celu firmy.",
   alternates: {
-    canonical: "https://ml-devworks.com/software-house-krakow",
+    canonical: "https://ml-devworks.com/programista-krakow",
     languages: {
-      pl: "https://ml-devworks.com/software-house-krakow",
-      en: "https://ml-devworks.com/en/software-house-krakow",
-      "x-default": "https://ml-devworks.com/software-house-krakow",
+      pl: "https://ml-devworks.com/programista-krakow",
+      en: "https://ml-devworks.com/en/software-developer-krakow",
+      "x-default": "https://ml-devworks.com/programista-krakow",
     },
   },
   openGraph: {
-    title: "Software house Kraków | ML DevWorks",
+    title: "Programista Kraków | ML DevWorks",
     description:
       "Strony, aplikacje, automatyzacje AI, systemy rezerwacji, integracje i DevOps dla firm z Krakowa i całej Polski.",
-    url: "https://ml-devworks.com/software-house-krakow",
+    url: "https://ml-devworks.com/programista-krakow",
     type: "website",
     locale: "pl_PL",
   },
 };
 
 function LocalSchema() {
-  const localBusiness = {
-    "@context": "https://schema.org",
-    "@id": "https://ml-devworks.com/#localbusiness",
-    "@type": ["ProfessionalService", "LocalBusiness"],
-    name: "ML DevWorks",
-    url: "https://ml-devworks.com",
-    image: "https://ml-devworks.com/ogimg.png",
-    logo: "https://ml-devworks.com/primary-on-transparent-logo.png",
-    telephone: "+48 516 598 792",
-    email: "office@ml-devworks.com",
-    priceRange: "$$",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Rynek Główny 34/15",
-      postalCode: "31-010",
-      addressLocality: "Kraków",
-      addressCountry: "PL",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 50.06248,
-      longitude: 19.936336,
-    },
-    areaServed: [
-      { "@type": "City", name: "Kraków" },
-      { "@type": "Country", name: "Polska" },
-    ],
-    makesOffer: [
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Tworzenie stron internetowych dla firm" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Aplikacje webowe i mobilne dla firm" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Automatyzacja procesów i AI dla firm" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Systemy rezerwacji online dla firm" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "DevOps i wdrożenia w chmurze" } },
-    ],
-  };
-
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Strona główna", item: "https://ml-devworks.com" },
-      { "@type": "ListItem", position: 2, name: "Software house Kraków", item: "https://ml-devworks.com/software-house-krakow" },
+      { "@type": "ListItem", position: 2, name: "Programista Kraków", item: "https://ml-devworks.com/programista-krakow" },
     ],
   };
 
   return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-    </>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
   );
 }
 
-export default function SoftwareHouseKrakowPage() {
+export default function ProgramistaKrakowPage() {
   return (
     <>
       <StructuredData lang="pl" />
@@ -94,14 +55,14 @@ export default function SoftwareHouseKrakowPage() {
               className="mb-8"
               items={[
                 { label: "Strona główna", href: "/" },
-                { label: "Software house Kraków" },
+                { label: "Programista Kraków" },
               ]}
             />
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Software house Kraków dla firm, które chcą pozyskiwać klientów i automatyzować pracę
+              Programista z Krakowa, który rozumie technologię i biznes
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed mb-8">
-              ML DevWorks projektuje i wdraża strony internetowe, aplikacje, systemy rezerwacji, integracje, automatyzacje AI i DevOps dla firm z Krakowa oraz klientów pracujących zdalnie w całej Polsce.
+              Projektuję strony internetowe, aplikacje, systemy rezerwacji, integracje i automatyzacje AI dla firm. Najpierw rozumiem cel, proces i klienta, potem dobieram rozwiązanie techniczne.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/#contact" className="px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors text-center">
@@ -114,10 +75,30 @@ export default function SoftwareHouseKrakowPage() {
           </div>
         </section>
 
+        <section className="px-4 py-12 bg-background-lighter/40" aria-labelledby="business-approach-heading">
+          <div className="max-w-6xl mx-auto">
+            <h2 id="business-approach-heading" className="text-3xl md:text-4xl font-bold mb-6">
+              Biznesowe podejście do programowania
+            </h2>
+            <div className="grid gap-6 md:grid-cols-3">
+              {[
+                ["Analiza celu", "Ustalam, co rozwiązanie ma realnie poprawić: sprzedaż, obsługę klienta, czas pracy albo jakość procesu."],
+                ["Priorytety wdrożenia", "Pomagam wybrać funkcje, które mają największy sens biznesowy na start, zamiast budować wszystko naraz."],
+                ["Technologia pod wynik", "Dobieram stronę, aplikację, integrację albo automatyzację AI do problemu, nie odwrotnie."],
+              ].map(([title, description]) => (
+                <article key={title} className="bg-background border border-primary/20 rounded-xl p-6">
+                  <h3 className="text-xl font-bold text-primary mb-3">{title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="px-4 py-16" aria-labelledby="local-services-heading">
           <div className="max-w-6xl mx-auto">
             <h2 id="local-services-heading" className="text-3xl md:text-4xl font-bold mb-8">
-              Co robimy dla firm z Krakowa i okolic
+              Co tworzę dla firm z Krakowa i okolic
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {[
@@ -143,10 +124,10 @@ export default function SoftwareHouseKrakowPage() {
               Lokalnie w Krakowie, technicznie end-to-end
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              Pracujemy z firmami, które potrzebują nie tylko wykonawcy strony, ale partnera technicznego: od analizy celu biznesowego, przez architekturę i wdrożenie, po utrzymanie, optymalizację i rozwój.
+              Pracuję z firmami, które potrzebują nie tylko wykonawcy strony, ale partnera technicznego: od analizy celu biznesowego, przez architekturę i wdrożenie, po utrzymanie, optymalizację i rozwój.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              Dzięki połączeniu senior developmentu, SEO technicznego i automatyzacji AI pomagamy budować rozwiązania, które są szybkie, czytelne dla Google i realnie użyteczne dla zespołu.
+              Dzięki połączeniu doświadczenia programistycznego, SEO technicznego i automatyzacji AI pomagam budować rozwiązania, które są szybkie, czytelne dla Google i realnie użyteczne dla zespołu.
             </p>
           </div>
         </section>

@@ -7,11 +7,11 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import StructuredData from "@/components/StructuredData";
 import AboutIntro from "@/components/AboutIntro";
-import GoogleReviewsSchema from "@/components/GoogleReviewsSchema";
+import HomeFAQ from "@/components/HomeFAQ";
 
 export const metadata: Metadata = {
   title: "Websites, apps & AI automation for companies | ML DevWorks",
-  description: "We build websites, applications and AI automation for companies. Fast, scalable and SEO-ready. Software house from Krakow — get a free quote.",
+  description: "Krakow developer building websites, apps, booking systems, and AI automation for companies. Direct cooperation and fast prototypes.",
   alternates: {
     canonical: "https://ml-devworks.com/en",
     languages: {
@@ -26,13 +26,13 @@ export default function EnglishPage() {
   return (
     <>
       <StructuredData lang="en" />
-      <GoogleReviewsSchema lang="en" />
       <Navbar lang="en" />
       <main className="min-h-screen">
         <Hero lang="en" />
-        <Services lang="en" />
         <AboutIntro lang="en" />
+        <Services lang="en" />
         <Realizations lang="en" />
+        <HomeFAQ lang="en" />
         <Contact lang="en" />
       </main>
       <Footer lang="en" />

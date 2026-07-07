@@ -68,7 +68,7 @@ export default function GoogleReviews({ lang = "pl", googleMapsUrl }: GoogleRevi
   const content = {
     pl: {
       title: "Opinie Klientów",
-      subtitle: "Zobacz, co mówią o nas nasi klienci",
+      subtitle: "Zobacz, co mówią klienci po współpracy",
       loading: "Ładowanie opinii...",
       error: "Nie udało się załadować opinii",
       viewOnGoogle: "Zobacz na Google",
@@ -77,7 +77,7 @@ export default function GoogleReviews({ lang = "pl", googleMapsUrl }: GoogleRevi
     },
     en: {
       title: "Client Reviews",
-      subtitle: "See what our clients say about us",
+      subtitle: "See what clients say after working together",
       loading: "Loading reviews...",
       error: "Failed to load reviews",
       viewOnGoogle: "View on Google",

@@ -167,8 +167,8 @@ export default function SocialMediaVsStronaFirmowaContent({ lang }: Props) {
         </h2>
         <p className="mb-4">
           {isPl
-            ? "W ML Devworks projektujemy strony i aplikacje, które wspierają marketing w social media i zwiększają liczbę realnych zapytań. Tworzymy rozwiązania pod SEO, konwersję i dalszy rozwój biznesu."
-            : "At ML Devworks, we design websites and apps that amplify social media efforts and increase real qualified inquiries. We build for SEO, conversion, and long-term business growth."}
+            ? "W ML DevWorks projektuję strony i aplikacje, które wspierają marketing w social media i zwiększają liczbę realnych zapytań. Tworzę rozwiązania pod SEO, konwersję i dalszy rozwój biznesu."
+            : "At ML DevWorks, I design websites and apps that amplify social media efforts and increase real qualified inquiries. I build for SEO, conversion, and long-term business growth."}
         </p>
         <div className="flex flex-wrap gap-4">
           <Link

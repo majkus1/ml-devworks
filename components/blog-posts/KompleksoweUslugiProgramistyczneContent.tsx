@@ -111,13 +111,13 @@ export default function KompleksoweUslugiProgramistyczneContent({ lang }: Props)
           <div>
             <h3 className="text-lg font-semibold text-white mb-2">
               {isPl
-                ? "Jak wybrac software house dla projektu branżowego?"
+                ? "Jak wybrać wykonawcę technicznego dla projektu branżowego?"
                 : "How to choose a software partner for an industry-specific project?"}
             </h3>
             <p>
               {isPl
-                ? "Szukaj zespolu, ktory pyta o procesy i KPI, a nie tylko o wyglad strony. Kluczowe sa: architektura, bezpieczenstwo, integracje i plan rozwoju po wdrozeniu."
-                : "Choose a team that asks about processes and KPIs, not only visual design. Key factors: architecture, security, integrations, and post-launch growth plan."}
+                ? "Szukaj osoby lub zespołu, który pyta o procesy i KPI, a nie tylko o wygląd strony. Kluczowe są: architektura, bezpieczeństwo, integracje i plan rozwoju po wdrożeniu."
+                : "Choose a technical partner who asks about processes and KPIs, not only visual design. Key factors: architecture, security, integrations, and post-launch growth plan."}
             </p>
           </div>
           <div>
@@ -143,8 +143,8 @@ export default function KompleksoweUslugiProgramistyczneContent({ lang }: Props)
         </h2>
         <p className="mb-4">
           {isPl
-            ? "W ML Devworks projektujemy strony i aplikacje, ktore wspieraja sprzedaz, obsluge klienta i codzienne procesy operacyjne. Od audytu potrzeb po wdrozenie i dalszy rozwoj produktu."
-            : "At ML Devworks, we design websites and apps that support sales, customer service, and daily operations. From discovery and architecture to launch and long-term product growth."}
+            ? "W ML DevWorks projektuję strony i aplikacje, które wspierają sprzedaż, obsługę klienta i codzienne procesy operacyjne. Od audytu potrzeb po wdrożenie i dalszy rozwój produktu."
+            : "At ML DevWorks, I design websites and apps that support sales, customer service, and daily operations. From discovery and architecture to launch and long-term product growth."}
         </p>
         <div className="flex flex-wrap gap-4">
           <Link

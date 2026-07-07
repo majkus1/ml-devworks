@@ -210,7 +210,7 @@ export default function OnlineBookingSystemsPageEn() {
             </div>
             <div>
               <h2 className="text-2xl font-bold mb-3">Timeline</h2>
-              <p className="text-gray-300">Usually 3-8 weeks for the first production version.</p>
+              <p className="text-gray-300">Usually 1-4 weeks for the first production version.</p>
             </div>
             <div>
               <h2 className="text-2xl font-bold mb-3">Best fit</h2>

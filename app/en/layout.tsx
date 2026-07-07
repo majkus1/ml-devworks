@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ml-devworks.com"),
-  title: "ML Devworks - Quality by Us. Speed by AI.",
-    description: "We create professional digital solutions for your business. From simple websites to advanced applications and cloud deployments. Quality by Us. Speed by AI.",
+  title: "Websites, apps and AI automation | ML DevWorks",
+  description: "Developer building websites, apps, booking systems, and AI automation for companies. Direct cooperation and fast prototypes.",
   keywords: ["web development", "web applications", "mobile applications", "online stores", "devops", "cloud deployment", "cloud deployments", "development"],
-  authors: [{ name: "ML Devworks" }],
-  creator: "ML Devworks",
-  publisher: "ML Devworks",
+  authors: [{ name: "ML DevWorks" }],
+  creator: "ML DevWorks",
+  publisher: "ML DevWorks",
   robots: {
     index: true,
     follow: true,
@@ -23,22 +23,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://ml-devworks.com/en",
-    siteName: "ML Devworks",
-    title: "ML Devworks - Quality by Us. Speed by AI.",
-    description: "We create professional digital solutions for your business. From simple websites to advanced applications and cloud deployments. Quality by Us. Speed by AI.",
+    siteName: "ML DevWorks",
+    title: "Websites, apps and AI automation | ML DevWorks",
+    description: "Developer building websites, apps, booking systems, and AI automation for companies. Direct cooperation and fast prototypes.",
     images: [
       {
         url: "https://ml-devworks.com/ogimg.png",
         width: 1200,
         height: 630,
-        alt: "ML Devworks - web development and apps",
+        alt: "ML DevWorks - web development and apps",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ML Devworks - Quality by Us. Speed by AI.",
-    description: "We create professional digital solutions for your business. From simple websites to advanced applications and cloud deployments. Quality by Us. Speed by AI.",
+    title: "Websites, apps and AI automation | ML DevWorks",
+    description: "Developer building websites, apps, booking systems, and AI automation for companies. Direct cooperation and fast prototypes.",
     images: ["https://ml-devworks.com/ogimg.png"],
   },
   alternates: {

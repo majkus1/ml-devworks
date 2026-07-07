@@ -12,7 +12,7 @@ export default function StronaInternetowaDlaFirmyContent({ lang }: Props) {
       <p className="text-lg">
         {isPl
           ? "Strona internetowa to dziś fundament obecności każdej firmy – niezależnie od branży. Niezależnie od tego, czy prowadzisz mały lokal, sklep online, czy firmę usługową – klienci najpierw szukają Cię w sieci. W tym przewodniku wyjaśniamy, kiedy strona internetowa dla firmy jest naprawdę potrzebna, jak wybrać wykonawcę oraz na co zwrócić uwagę przed podpisaniem umowy."
-          : "A website is today the foundation of every company's presence – regardless of industry. Whether you run a small local business, an online store, or a service company – customers look for you online first. In this guide, we explain when a business website is truly needed, how to choose a developer, and what to look for before signing a contract."}
+          : "A website is today the foundation of every company's presence – regardless of industry. Whether you run a small local business, an online store, or a service company – customers look for you online first. In this guide, I explain when a business website is truly needed, how to choose a developer, and what to look for before signing a contract."}
       </p>
 
       <section>
@@ -126,8 +126,8 @@ export default function StronaInternetowaDlaFirmyContent({ lang }: Props) {
             </h3>
             <p>
               {isPl
-                ? "Prosta strona wizytówka – zwykle 2–4 tygodnie. Bardziej rozbudowana strona lub sklep – 4–12 tygodni. Termin zależy od zakresu i dostępności treści (teksty, zdjęcia) po Twojej stronie."
-                : "A simple business card site – usually 2–4 weeks. A more extensive site or store – 4–12 weeks. The timeline depends on scope and availability of content (texts, images) on your side."}
+                ? "Prosta strona wizytówka - zwykle 1-2 tygodnie. Bardziej rozbudowana strona lub sklep - 2-5 tygodni. Termin zależy od zakresu i dostępności treści (teksty, zdjęcia) po Twojej stronie."
+                : "A simple business card site - usually 1-2 weeks. A more extensive site or store - 2-5 weeks. The timeline depends on scope and availability of content (texts, images) on your side."}
             </p>
           </div>
           <div>
@@ -149,8 +149,8 @@ export default function StronaInternetowaDlaFirmyContent({ lang }: Props) {
         </h2>
         <p className="mb-4">
           {isPl
-            ? "W ML Devworks tworzymy profesjonalne strony internetowe i aplikacje webowe – szybkie, zoptymalizowane pod SEO i dostosowane do Twoich potrzeb. Skontaktuj się z nami i otrzymaj bezpłatną wycenę."
-            : "At ML Devworks we create professional websites and web applications – fast, SEO-optimized and tailored to your needs. Contact us for a free quote."}
+            ? "W ML DevWorks tworzę profesjonalne strony internetowe i aplikacje webowe – szybkie, zoptymalizowane pod SEO i dostosowane do Twoich potrzeb. Skontaktuj się ze mną i otrzymaj bezpłatną wycenę."
+            : "At ML DevWorks I create professional websites and web applications – fast, SEO-optimized and tailored to your needs. Contact me for a free quote."}
         </p>
         <div className="flex flex-wrap gap-4">
           <Link

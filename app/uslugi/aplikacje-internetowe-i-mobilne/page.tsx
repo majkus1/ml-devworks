@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Aplikacje webowe i mobilne dla firm | ML DevWorks",
     description:
-      "Projektujemy i wdrażamy aplikacje web/mobile dla biznesu: od MVP po rozwój gotowego produktu.",
+      "Projektuję i wdrażam aplikacje web/mobile dla biznesu: od MVP po rozwój gotowego produktu.",
     url: "https://ml-devworks.com/uslugi/aplikacje-internetowe-i-mobilne",
     type: "website",
     locale: "pl_PL",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Aplikacje webowe i mobilne dla firm | ML DevWorks",
     description:
-      "Projektujemy i wdrażamy aplikacje web/mobile dla biznesu: od MVP po rozwój gotowego produktu.",
+      "Projektuję i wdrażam aplikacje web/mobile dla biznesu: od MVP po rozwój gotowego produktu.",
   },
 };
 
@@ -55,7 +55,7 @@ export default function AplikacjeInternetoweIMobilnePage() {
     "description": "Tworzymy nowoczesne aplikacje webowe i mobilne z wykorzystaniem najnowszych technologii. Szybkie, bezpieczne i skalowalne rozwiązania. Aplikacje na iOS i Android. Natywne i cross-platform rozwiązania dla Twojego biznesu.",
     "provider": {
       "@type": "Organization",
-      "name": "ML Devworks",
+      "name": "ML DevWorks",
       "url": "https://ml-devworks.com",
       "logo": "https://ml-devworks.com/primary-on-transparent-logo.png",
       "contactPoint": {
@@ -138,10 +138,10 @@ export default function AplikacjeInternetoweIMobilnePage() {
         {/* Main Content */}
         <section className="px-4 py-16">
           <div className="max-w-4xl mx-auto">
-            {/* What We Offer */}
+            {/* What I Offer */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                Co Oferujemy?
+                Co oferuję?
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
@@ -234,10 +234,10 @@ export default function AplikacjeInternetoweIMobilnePage() {
               </div>
             </div>
 
-            {/* Why Choose Us */}
+            {/* Why Work With Me */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                Dlaczego Warto Wybrać Nas?
+                Dlaczego warto pracować ze mną?
               </h2>
               <div className="space-y-6">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
@@ -271,7 +271,7 @@ export default function AplikacjeInternetoweIMobilnePage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">🚀 Szybki Czas Realizacji</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Dzięki wykorzystaniu narzędzi AI i sprawdzonych procesów, realizujemy projekty szybciej bez kompromisów w jakości. Agile methodology i ciągła komunikacja.
+                    Dzięki wykorzystaniu narzędzi AI i sprawdzonych procesów realizuję projekty szybciej bez kompromisów w jakości. Agile methodology i ciągła komunikacja.
                   </p>
                 </div>
 
@@ -370,7 +370,7 @@ export default function AplikacjeInternetoweIMobilnePage() {
                 Gotowy na Nowoczesną Aplikację?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Skontaktuj się z nami i otrzymaj bezpłatną wycenę dla Twojego projektu aplikacji.
+                Skontaktuj się ze mną i otrzymaj bezpłatną wycenę dla Twojego projektu aplikacji.
               </p>
               <Link
                 href="/#contact"

@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  outputFileTracingRoot: process.cwd(),
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
@@ -9,6 +10,20 @@ const nextConfig: NextConfig = {
         hostname: "lh3.googleusercontent.com",
       },
     ],
+  },
+  async redirects() {
+    return [
+      {
+        source: "/software-house-krakow",
+        destination: "/programista-krakow",
+        permanent: true,
+      },
+      {
+        source: "/en/software-house-krakow",
+        destination: "/en/software-developer-krakow",
+        permanent: true,
+      },
+    ];
   },
   // Optimize video loading
   async headers() {

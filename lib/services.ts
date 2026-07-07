@@ -20,8 +20,8 @@ export const serviceItems: ServiceItem[] = [
       en: "Websites",
     },
     description: {
-      pl: "Projektujemy szybkie, responsywne strony firmowe, landing page i serwisy ofertowe przygotowane pod SEO techniczne oraz pozyskiwanie zapytań.",
-      en: "We design fast, responsive business websites, landing pages, and offer pages prepared for technical SEO and lead generation.",
+      pl: "Projektuję szybkie, responsywne strony firmowe, landing page i serwisy ofertowe przygotowane pod SEO techniczne oraz pozyskiwanie zapytań.",
+      en: "I design fast, responsive business websites, landing pages, and offer pages prepared for technical SEO and lead generation.",
     },
     href: {
       pl: "/uslugi/strony-internetowe",
@@ -39,8 +39,8 @@ export const serviceItems: ServiceItem[] = [
       en: "Web/mobile apps",
     },
     description: {
-      pl: "Budujemy aplikacje webowe, panele klienta, systemy wewnętrzne oraz aplikacje iOS/Android z bezpieczną i skalowalną architekturą.",
-      en: "We build web applications, customer portals, internal systems, and iOS/Android apps with secure, scalable architecture.",
+      pl: "Buduję aplikacje webowe, panele klienta, systemy wewnętrzne oraz aplikacje iOS/Android z bezpieczną i skalowalną architekturą.",
+      en: "I build web applications, customer portals, internal systems, and iOS/Android apps with secure, scalable architecture.",
     },
     href: {
       pl: "/uslugi/aplikacje-internetowe-i-mobilne",
@@ -58,8 +58,8 @@ export const serviceItems: ServiceItem[] = [
       en: "Automation and AI",
     },
     description: {
-      pl: "Wdrażamy agentów AI, automatyzacje workflow, integracje narzędzi i systemy, które ograniczają pracę manualną oraz przyspieszają obsługę klienta.",
-      en: "We implement AI agents, workflow automation, tool integrations, and systems that reduce manual work and speed up customer service.",
+      pl: "Wdrażam agentów AI, automatyzacje workflow, integracje narzędzi i systemy, które ograniczają pracę manualną oraz przyspieszają obsługę klienta.",
+      en: "I implement AI agents, workflow automation, tool integrations, and systems that reduce manual work and speed up customer service.",
     },
     href: {
       pl: "/uslugi/automatyzacja-i-ai",
@@ -77,8 +77,8 @@ export const serviceItems: ServiceItem[] = [
       en: "Online stores",
     },
     description: {
-      pl: "Tworzymy sklepy internetowe B2C i B2B z katalogiem produktów, koszykiem, bramkami płatniczymi, dostawami kurierskimi, integracjami ERP/CRM i automatyzacją sprzedaży.",
-      en: "We build B2C and B2B online stores with product catalogs, carts, payment gateways, shipping integrations, ERP/CRM integrations, and sales automation.",
+      pl: "Tworzę sklepy internetowe B2C i B2B z katalogiem produktów, koszykiem, bramkami płatniczymi, dostawami kurierskimi, integracjami ERP/CRM i automatyzacją sprzedaży.",
+      en: "I build B2C and B2B online stores with product catalogs, carts, payment gateways, shipping integrations, ERP/CRM integrations, and sales automation.",
     },
     href: {
       pl: "/uslugi/sklepy-internetowe-systemy-rezerwacji",
@@ -96,8 +96,8 @@ export const serviceItems: ServiceItem[] = [
       en: "Online booking systems",
     },
     description: {
-      pl: "Projektujemy systemy rezerwacji klientów z kalendarzem dostępności, płatnościami online, przypomnieniami, panelem administracyjnym i integracjami CRM.",
-      en: "We design customer booking systems with availability calendars, online payments, reminders, admin panels, and CRM integrations.",
+      pl: "Projektuję systemy rezerwacji klientów z kalendarzem dostępności, płatnościami online, przypomnieniami, panelem administracyjnym i integracjami CRM.",
+      en: "I design customer booking systems with availability calendars, online payments, reminders, admin panels, and CRM integrations.",
     },
     href: {
       pl: "/uslugi/systemy-rezerwacji-online",
@@ -115,8 +115,8 @@ export const serviceItems: ServiceItem[] = [
       en: "DevOps and deployment",
     },
     description: {
-      pl: "Porządkujemy deploymenty, CI/CD, monitoring, backup, Docker, chmurę i utrzymanie infrastruktury dla aplikacji produkcyjnych.",
-      en: "We improve deployments, CI/CD, monitoring, backups, Docker, cloud infrastructure, and maintenance for production applications.",
+      pl: "Porządkuję deploymenty, CI/CD, monitoring, backup, Docker, chmurę i utrzymanie infrastruktury dla aplikacji produkcyjnych.",
+      en: "I improve deployments, CI/CD, monitoring, backups, Docker, cloud infrastructure, and maintenance for production applications.",
     },
     href: {
       pl: "/uslugi/devops-wdrozenia",
@@ -134,8 +134,8 @@ export const serviceItems: ServiceItem[] = [
       en: "Fixes and maintenance",
     },
     description: {
-      pl: "Diagnozujemy i naprawiamy strony oraz aplikacje po innych wykonawcach, poprawiamy Core Web Vitals, SEO techniczne, konwersję i stabilność.",
-      en: "We diagnose and fix websites and applications after other vendors, improving Core Web Vitals, technical SEO, conversion, and stability.",
+      pl: "Diagnozuję i naprawiam strony oraz aplikacje po innych wykonawcach, poprawiam Core Web Vitals, SEO techniczne, konwersję i stabilność.",
+      en: "I diagnose and fix websites and applications after other vendors, improving Core Web Vitals, technical SEO, conversion, and stability.",
     },
     href: {
       pl: "/uslugi/naprawa-optymalizacja-utrzymanie",

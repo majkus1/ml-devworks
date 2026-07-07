@@ -6,7 +6,7 @@ import StructuredData from "@/components/StructuredData";
 import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
-  title: "Business Process Automation and AI Agents | ML Devworks",
+  title: "Business Process Automation and AI Agents | ML DevWorks",
   description:
     "We implement AI agents and business process automation: customer support, workflows and integrations. Reduce manual work and speed up operations.",
   keywords: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Business Process Automation and AI Agents | ML Devworks",
+    title: "Business Process Automation and AI Agents | ML DevWorks",
     description:
       "AI-powered automation that reduces costs and accelerates your business workflows.",
     url: "https://ml-devworks.com/en/services/automation-and-ai",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Business Process Automation and AI Agents | ML Devworks",
+    title: "Business Process Automation and AI Agents | ML DevWorks",
     description:
       "AI-powered automation that reduces costs and accelerates your business workflows.",
   },
@@ -55,7 +55,7 @@ export default function AutomationAndAIPage() {
     "description": "Intelligent AI agents and business process automation systems. Automate repetitive tasks and increase your business efficiency.",
     "provider": {
       "@type": "Organization",
-      "name": "ML Devworks",
+      "name": "ML DevWorks",
       "url": "https://ml-devworks.com",
       "logo": "https://ml-devworks.com/primary-on-transparent-logo.png",
       "contactPoint": {
@@ -138,10 +138,10 @@ export default function AutomationAndAIPage() {
         {/* Main Content */}
         <section className="px-4 py-16">
           <div className="max-w-4xl mx-auto">
-            {/* What We Offer */}
+            {/* What I Offer */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                What We Offer?
+                What I offer
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-background-lighter rounded-xl p-6 border-2 border-amber-400/60 shadow-lg shadow-amber-500/20">
@@ -241,10 +241,10 @@ export default function AutomationAndAIPage() {
               </div>
             </div>
 
-            {/* Why Choose Us */}
+            {/* Why Work With Me */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                Why Choose Us?
+                Why work with me?
               </h2>
               <div className="space-y-6">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
@@ -257,14 +257,14 @@ export default function AutomationAndAIPage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Fast implementation</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Thanks to the use of ready-made AI solutions and proven frameworks, we deploy automation quickly. First results visible within a few weeks.
+                    Thanks to the use of ready-made AI solutions and proven frameworks, I deploy automation quickly. First results visible within a few weeks.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Measurable results</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Every automation is designed with measurable benefits in mind. Time savings, error reduction, increased efficiency - we monitor and report everything.
+                    Every automation is designed with measurable benefits in mind. Time savings, error reduction, increased efficiency - I define what should be measured and improved.
                   </p>
                 </div>
 
@@ -285,7 +285,7 @@ export default function AutomationAndAIPage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Comprehensive service</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    From process analysis, through design, implementation, testing, deployment, to maintenance and development - we provide full service at every stage.
+                    From process analysis, through design, implementation, testing, deployment, to maintenance and development - I cover the full automation workflow.
                   </p>
                 </div>
               </div>
@@ -377,7 +377,7 @@ export default function AutomationAndAIPage() {
                 Ready for AI Automation?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Contact us and discover how automation and AI can transform your business.
+                Contact me and see how automation and AI can improve your business.
               </p>
               <Link
                 href="/en#contact"

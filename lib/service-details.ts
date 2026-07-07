@@ -34,7 +34,7 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
       industries: ["firmy usługowe", "B2B", "lokalne firmy", "eksperci i konsultanci"],
       proof: "W projektach stron stawiamy na Core Web Vitals, przejrzysty układ oferty i kod możliwy do dalszego rozwoju.",
       price: "Najczęściej od 3 500 zł netto za prostą stronę firmową; rozbudowane serwisy wyceniamy po zakresie.",
-      timeline: "Zwykle 2-6 tygodni, zależnie od liczby podstron, treści i integracji.",
+      timeline: "Zwykle 1-3 tygodnie, zależnie od liczby podstron, treści i integracji.",
       faq: [
         { q: "Ile kosztuje strona internetowa dla firmy?", a: "Prosta strona firmowa zwykle zaczyna się od 3 500 zł netto. Dokładna cena zależy od liczby podstron, treści, animacji, formularzy i integracji." },
         { q: "Czy strona będzie przygotowana pod SEO?", a: "Tak. W standardzie uwzględniamy strukturę nagłówków, metadane, szybkość ładowania, responsywność, schema i podstawy indeksacji." },
@@ -53,7 +53,7 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
       industries: ["service companies", "B2B", "local businesses", "consultants and experts"],
       proof: "We focus on Core Web Vitals, clear offer structure, and code that can be developed further.",
       price: "Usually from PLN 3,500 net for a simple business website; larger websites are estimated by scope.",
-      timeline: "Usually 2-6 weeks, depending on pages, content, and integrations.",
+      timeline: "Usually 1-3 weeks, depending on pages, content, and integrations.",
       faq: [
         { q: "How much does a business website cost?", a: "A simple business website usually starts from PLN 3,500 net. The final price depends on pages, content, animations, forms, and integrations." },
         { q: "Will the website be SEO-ready?", a: "Yes. We include headings, metadata, loading speed, responsiveness, schema, and indexing basics." },
@@ -74,7 +74,7 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
       industries: ["SaaS", "usługi", "logistyka", "firmy operacyjne"],
       proof: "Budujemy aplikacje z myślą o utrzymaniu: role użytkowników, walidacja danych, monitoring i możliwość dalszej rozbudowy.",
       price: "MVP aplikacji najczęściej od 12 000 zł netto; systemy produkcyjne wyceniamy etapami.",
-      timeline: "Zwykle 4-12 tygodni dla MVP lub pierwszej wersji produkcyjnej.",
+      timeline: "Zwykle 2-8 tygodni dla MVP lub pierwszej wersji produkcyjnej.",
       faq: [
         { q: "Czy lepiej zacząć od MVP?", a: "Najczęściej tak. MVP pozwala sprawdzić kluczowy proces i zebrać feedback przed większą inwestycją." },
         { q: "Czy aplikacja może mieć panel administratora?", a: "Tak. Panele administracyjne, role użytkowników, raporty i eksporty danych są częścią typowego zakresu." },
@@ -93,7 +93,7 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
       industries: ["SaaS", "services", "logistics", "operations-heavy companies"],
       proof: "We build maintainable applications with user roles, validation, monitoring, and room for future development.",
       price: "Application MVPs usually start from PLN 12,000 net; production systems are estimated in stages.",
-      timeline: "Usually 4-12 weeks for an MVP or first production version.",
+      timeline: "Usually 2-8 weeks for an MVP or first production version.",
       faq: [
         { q: "Should we start with an MVP?", a: "Usually yes. An MVP validates the key workflow and gathers feedback before a larger investment." },
         { q: "Can the app include an admin panel?", a: "Yes. Admin panels, user roles, reports, and exports are common parts of the scope." },
@@ -112,9 +112,9 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
       pains: ["Obsługa zapytań i leadów jest wolna lub chaotyczna.", "Dane są kopiowane między narzędziami ręcznie.", "Zespół nie wie, które procesy warto automatyzować najpierw."],
       deliverables: ["Mapa procesów", "Automatyzacje workflow", "Agenci AI i chatboty", "Integracje z CRM, formularzami i API"],
       industries: ["sprzedaż B2B", "obsługa klienta", "e-commerce", "firmy usługowe"],
-      proof: "Automatyzacje projektujemy pod mierzalny efekt: mniej pracy manualnej, krótszy czas reakcji i mniej błędów w danych.",
+      proof: "Automatyzacje projektuję pod mierzalny efekt: mniej pracy manualnej, krótszy czas reakcji i mniej błędów w danych.",
       price: "Proste automatyzacje od 4 000 zł netto; agenci AI i integracje wielosystemowe wyceniamy po analizie.",
-      timeline: "Pierwsze automatyzacje zwykle 2-6 tygodni.",
+      timeline: "Pierwsze automatyzacje zwykle 3-14 dni roboczych.",
       faq: [
         { q: "Od czego zacząć automatyzację procesów?", a: "Najpierw wybieramy powtarzalny proces z dużą liczbą ręcznych kroków i mierzalnym kosztem czasu." },
         { q: "Czy agenci AI mogą działać z CRM lub formularzami?", a: "Tak. Integrujemy agentów AI z CRM, formularzami, bazami danych, pocztą i narzędziami operacyjnymi." },
@@ -133,7 +133,7 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
       industries: ["B2B sales", "customer support", "e-commerce", "service companies"],
       proof: "We design automation around measurable impact: less manual work, faster response times, and fewer data errors.",
       price: "Simple automations from PLN 4,000 net; AI agents and multi-system integrations are estimated after analysis.",
-      timeline: "First automations usually take 2-6 weeks.",
+      timeline: "First automations usually take 3-14 business days.",
       faq: [
         { q: "Where should process automation start?", a: "Start with a repetitive process with many manual steps and a measurable time cost." },
         { q: "Can AI agents work with CRM or forms?", a: "Yes. We integrate AI agents with CRM, forms, databases, email, and operational tools." },
@@ -154,7 +154,7 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
       industries: ["e-commerce B2C", "sprzedaż B2B", "marki produktowe", "dystrybutorzy i producenci"],
       proof: "Projektujemy ścieżkę zakupową tak, żeby była krótka, mierzalna, wygodna na telefonie i gotowa do dalszej optymalizacji sprzedaży.",
       price: "Sklepy internetowe zwykle od 7 000 zł netto; platformy B2B/B2C i większe integracje wyceniamy po analizie katalogu oraz procesów.",
-      timeline: "Zwykle 4-10 tygodni.",
+      timeline: "Zwykle 2-4 tygodnie.",
       faq: [
         { q: "Czy sklep może obsługiwać płatności online?", a: "Tak. Integrujemy płatności kartą, szybkie przelewy, BLIK, Stripe, Przelewy24 lub inne bramki dopasowane do rynku." },
         { q: "Czy sklep może integrować się z CRM lub ERP?", a: "Tak. Integrujemy sprzedaż, zamówienia, klientów i stany magazynowe z narzędziami zaplecza." },
@@ -173,7 +173,7 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
       industries: ["B2C e-commerce", "B2B commerce", "product brands", "distributors and manufacturers"],
       proof: "We design purchase flows to be short, measurable, mobile-friendly, and ready for ongoing sales optimization.",
       price: "Online stores usually start from PLN 7,000 net; larger B2B/B2C platforms and integrations are estimated after catalog and process analysis.",
-      timeline: "Usually 4-10 weeks.",
+      timeline: "Usually 2-4 weeks.",
       faq: [
         { q: "Can an online store collect payments?", a: "Yes. We integrate card payments, fast bank transfers, BLIK, Stripe, Przelewy24, or other gateways matched to the market." },
         { q: "Can an online store integrate with CRM or ERP?", a: "Yes. We integrate sales, orders, customers, and inventory with back office tools." },
@@ -194,7 +194,7 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
       industries: ["SaaS", "aplikacje webowe", "e-commerce", "zespoły produktowe"],
       proof: "Celem DevOps jest przewidywalne wdrożenie: mniej ręcznych kroków, szybsze wydania i większa odporność produkcji.",
       price: "Podstawowe uporządkowanie deploymentu zwykle od 4 500 zł netto; stałe utrzymanie wyceniamy miesięcznie.",
-      timeline: "Zwykle 1-4 tygodnie dla pierwszego stabilnego pipeline.",
+      timeline: "Zwykle 2-10 dni roboczych dla pierwszego stabilnego pipeline.",
       faq: [
         { q: "Czy możecie skonfigurować CI/CD?", a: "Tak. Konfigurujemy pipeline z testami, buildem i deploymentem na wybrane środowisko." },
         { q: "Czy pomagacie obniżyć koszty chmury?", a: "Tak. Analizujemy zasoby, cache, skalowanie i konfigurację usług, żeby ograniczyć niepotrzebne koszty." },
@@ -212,7 +212,7 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
       industries: ["SaaS", "web applications", "e-commerce", "product teams"],
       proof: "DevOps should make releases predictable: fewer manual steps, faster shipping, and more resilient production.",
       price: "Basic deployment cleanup usually starts from PLN 4,500 net; ongoing maintenance is estimated monthly.",
-      timeline: "Usually 1-4 weeks for the first stable pipeline.",
+      timeline: "Usually 2-10 business days for the first stable pipeline.",
       faq: [
         { q: "Can you configure CI/CD?", a: "Yes. We configure pipelines with tests, builds, and deployment to the chosen environment." },
         { q: "Can you help reduce cloud costs?", a: "Yes. We analyze resources, cache, scaling, and service configuration to reduce unnecessary cost." },
@@ -232,7 +232,7 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
       industries: ["firmy po wdrożeniu", "e-commerce", "SaaS", "strony usługowe"],
       proof: "Zaczynamy od diagnozy, żeby naprawiać przyczynę problemu, nie tylko widoczny objaw.",
       price: "Diagnozy i małe poprawki zwykle od 1 500 zł netto; większe prace wyceniamy po audycie.",
-      timeline: "Diagnoza zwykle 2-5 dni roboczych, wdrożenie poprawek zależy od zakresu.",
+      timeline: "Diagnoza zwykle 1-3 dni robocze, wdrożenie poprawek zależy od zakresu.",
       faq: [
         { q: "Czy naprawiacie projekty po innych wykonawcach?", a: "Tak. Przejmujemy istniejące strony i aplikacje, wykonujemy audyt, porządkujemy kod i planujemy poprawki etapami." },
         { q: "Czy możecie poprawić Core Web Vitals?", a: "Tak. Analizujemy LCP, CLS, INP, obrazy, JS, cache i sposób renderowania krytycznych elementów strony." },
@@ -249,9 +249,9 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
       pains: ["The project is slow or unstable.", "The previous vendor no longer develops the system.", "Technical issues reduce sales, SEO, or customer trust."],
       deliverables: ["Technical audit", "Repair plan", "Bug fixing and optimization", "Monitoring and maintenance support"],
       industries: ["post-launch companies", "e-commerce", "SaaS", "service websites"],
-      proof: "We start with diagnosis so we fix the cause, not just the visible symptom.",
+      proof: "I start with diagnosis so I fix the cause, not just the visible symptom.",
       price: "Diagnostics and small fixes usually start from PLN 1,500 net; larger work is estimated after audit.",
-      timeline: "Diagnosis usually takes 2-5 business days; implementation depends on scope.",
+      timeline: "Diagnosis usually takes 1-3 business days; implementation depends on scope.",
       faq: [
         { q: "Do you fix projects after other vendors?", a: "Yes. We take over existing websites and applications, audit them, organize the code, and plan fixes in stages." },
         { q: "Can you improve Core Web Vitals?", a: "Yes. We analyze LCP, CLS, INP, images, JavaScript, cache, and critical rendering." },

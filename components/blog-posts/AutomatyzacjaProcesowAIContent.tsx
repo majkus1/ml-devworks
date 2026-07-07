@@ -99,8 +99,8 @@ export default function AutomatyzacjaProcesowAIContent({ lang }: Props) {
         </h2>
         <p>
           {isPl
-            ? "Pierwszy proces można zwykle uruchomić w 2-6 tygodni, jeśli dane i systemy są dobrze przygotowane. Najlepsza strategia to podejście etapowe: najpierw jeden proces o wysokim wpływie biznesowym, potem skalowanie na kolejne obszary."
-            : "The first process can usually be launched in 2-6 weeks if data and systems are ready. The best strategy is phased implementation: start with one high-impact process, then scale to additional workflows."}
+            ? "Pierwszy proces można zwykle uruchomić w 3-14 dni roboczych, jeśli dane i systemy są dobrze przygotowane. Najlepsza strategia to podejście etapowe: najpierw jeden proces o wysokim wpływie biznesowym, potem skalowanie na kolejne obszary."
+            : "The first process can usually be launched in 3-14 business days if data and systems are ready. The best strategy is phased implementation: start with one high-impact process, then scale to additional workflows."}
         </p>
       </section>
 
@@ -174,8 +174,8 @@ export default function AutomatyzacjaProcesowAIContent({ lang }: Props) {
         </h2>
         <p className="mb-4">
           {isPl
-            ? "W ML Devworks projektujemy automatyzacje procesów i wdrożenia AI dopasowane do realnych celów biznesowych. Zaczynamy od audytu, kończymy na działającym systemie i mierzalnych efektach."
-            : "At ML Devworks, we design AI and workflow automation around real business goals. We start with process audit and finish with working systems and measurable outcomes."}
+            ? "W ML DevWorks projektuję automatyzacje procesów i wdrożenia AI dopasowane do realnych celów biznesowych. Zaczynam od audytu, kończę na działającym systemie i mierzalnych efektach."
+            : "At ML DevWorks, I design AI and workflow automation around real business goals. I start with process audit and finish with working systems and measurable outcomes."}
         </p>
         <div className="flex flex-wrap gap-4">
           <Link

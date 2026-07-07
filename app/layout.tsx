@@ -10,12 +10,12 @@ const inter = Inter({ subsets: ["latin", "latin-ext"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ml-devworks.com"),
-  title: "ML Devworks - Quality by Us. Speed by AI.",
-  description: "Tworzymy profesjonalne rozwiązania cyfrowe dla Twojego biznesu. Od prostych stron internetowych po zaawansowane aplikacje i wdrożenia w chmurze. Quality by Us. Speed by AI.",
+  title: "Strony, aplikacje i automatyzacje AI dla firm | ML DevWorks",
+  description: "Doświadczony programista tworzy strony internetowe, aplikacje, systemy rezerwacji i automatyzacje AI dla firm. Bezpośrednia współpraca i szybkie prototypy.",
   keywords: ["strony internetowe", "aplikacje webowe", "aplikacje mobilne", "sklepy internetowe", "devops", "wdrożenia w chmurze", "cloud deployment", "development"],
-  authors: [{ name: "ML Devworks" }],
-  creator: "ML Devworks",
-  publisher: "ML Devworks",
+  authors: [{ name: "ML DevWorks" }],
+  creator: "ML DevWorks",
+  publisher: "ML DevWorks",
   robots: {
     index: true,
     follow: true,
@@ -31,22 +31,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pl_PL",
     url: "https://ml-devworks.com",
-    siteName: "ML Devworks",
-    title: "ML Devworks - Quality by Us. Speed by AI.",
-    description: "Tworzymy profesjonalne rozwiązania cyfrowe dla Twojego biznesu. Od prostych stron internetowych po zaawansowane aplikacje i wdrożenia w chmurze. Quality by Us. Speed by AI.",
+    siteName: "ML DevWorks",
+    title: "Strony, aplikacje i automatyzacje AI dla firm | ML DevWorks",
+    description: "Doświadczony programista tworzy strony internetowe, aplikacje, systemy rezerwacji i automatyzacje AI dla firm. Bezpośrednia współpraca i szybkie prototypy.",
     images: [
       {
         url: "https://ml-devworks.com/ogimg.png",
         width: 1200,
         height: 630,
-        alt: "ML Devworks - strony internetowe i aplikacje",
+        alt: "ML DevWorks - strony internetowe i aplikacje",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ML Devworks - Quality by Us. Speed by AI.",
-    description: "Tworzymy profesjonalne rozwiązania cyfrowe dla Twojego biznesu. Od prostych stron internetowych po zaawansowane aplikacje i wdrożenia w chmurze. Quality by Us. Speed by AI.",
+    title: "Strony, aplikacje i automatyzacje AI dla firm | ML DevWorks",
+    description: "Doświadczony programista tworzy strony internetowe, aplikacje, systemy rezerwacji i automatyzacje AI dla firm. Bezpośrednia współpraca i szybkie prototypy.",
     images: ["https://ml-devworks.com/ogimg.png"],
   },
   alternates: {

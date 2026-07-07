@@ -18,6 +18,10 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  .animate-scroll-wheel {
+    animation: scroll-wheel 1.6s ease-in-out infinite;
+  }
   
   .sr-only {
     position: absolute;
@@ -29,6 +33,23 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border-width: 0;
+  }
+}
+
+@keyframes scroll-wheel {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  65% {
+    transform: translateY(12px);
+    opacity: 0.15;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 0;
   }
 }
 

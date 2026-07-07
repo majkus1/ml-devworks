@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         url: "https://ml-devworks.com/psi.png",
         width: 1200,
         height: 630,
-        alt: "ML Devworks - Strony Internetowe",
+        alt: "ML DevWorks - Strony Internetowe",
       },
     ],
   },
@@ -64,7 +64,7 @@ export default function StronyInternetowePage() {
     "description": "Tworzymy profesjonalne strony internetowe dostosowane do Twoich potrzeb. Responsywne, szybkie i zoptymalizowane pod SEO. Od prostych stron wizytówkowych po zaawansowane portale.",
     "provider": {
       "@type": "Organization",
-      "name": "ML Devworks",
+      "name": "ML DevWorks",
       "url": "https://ml-devworks.com",
       "logo": "https://ml-devworks.com/primary-on-transparent-logo.png",
       "contactPoint": {
@@ -147,10 +147,10 @@ export default function StronyInternetowePage() {
         {/* Main Content */}
         <section className="px-4 py-16">
           <div className="max-w-4xl mx-auto">
-            {/* What We Offer */}
+            {/* What I Offer */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                Co Oferujemy?
+                Co oferuję?
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
@@ -207,10 +207,10 @@ export default function StronyInternetowePage() {
               </div>
             </div>
 
-            {/* Why Choose Us */}
+            {/* Why Work With Me */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                Dlaczego Warto Wybrać Nas?
+                Dlaczego warto pracować ze mną?
               </h2>
               <div className="space-y-6">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
@@ -223,7 +223,7 @@ export default function StronyInternetowePage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">📱 Pełna Responsywność</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Każda strona jest w pełni responsywna i doskonale wygląda na wszystkich urządzeniach - od smartfonów, przez tablety, po duże monitory. Mobile-first approach to nasz standard.
+                    Każda strona jest w pełni responsywna i dobrze wygląda na wszystkich urządzeniach - od smartfonów, przez tablety, po duże monitory. Mobile-first approach to mój standard.
                   </p>
                 </div>
 
@@ -270,7 +270,7 @@ export default function StronyInternetowePage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Konsultacja i Analiza</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Rozmawiamy o Twoich potrzebach, celach biznesowych i oczekiwaniach. Analizujemy konkurencję i tworzymy strategię.
+                      Rozmawiam o Twoich potrzebach, celach biznesowych i oczekiwaniach. Analizuję konkurencję i tworzę strategię.
                     </p>
                   </div>
                 </div>
@@ -319,7 +319,7 @@ export default function StronyInternetowePage() {
                 Gotowy na Profesjonalną Stronę Internetową?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Skontaktuj się z nami i otrzymaj bezpłatną wycenę dla Twojego projektu.
+                Skontaktuj się ze mną i otrzymaj bezpłatną wycenę dla Twojego projektu.
               </p>
               <Link
                 href="/#contact"

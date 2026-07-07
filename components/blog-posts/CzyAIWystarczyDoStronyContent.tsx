@@ -88,8 +88,8 @@ export default function CzyAIWystarczyDoStronyContent({ lang }: Props) {
         </h2>
         <p className="mb-4">
           {isPl
-            ? "Najlepszy model to AI + doświadczony zespół techniczny. AI przyspiesza pracę, a architekt i senior developer pilnują jakości produktu, bezpieczeństwa oraz spójności architektury."
-            : "The best model is AI + experienced technical team. AI accelerates execution, while an architect and senior developers ensure product quality, security, and architecture consistency."}
+            ? "Najlepszy model to AI + doświadczony programista. AI przyspiesza pracę, a człowiek pilnuje jakości produktu, bezpieczeństwa oraz spójności architektury."
+            : "The best model is AI + an experienced developer. AI accelerates execution, while a human expert ensures product quality, security, and architecture consistency."}
         </p>
         <ul className="list-disc list-inside space-y-2 ml-2">
           <li>{isPl ? "AI do przyspieszania implementacji i analiz." : "Use AI to accelerate implementation and analysis."}</li>
@@ -104,7 +104,7 @@ export default function CzyAIWystarczyDoStronyContent({ lang }: Props) {
         <div className="space-y-6">
           <div>
             <h3 className="text-lg font-semibold text-white mb-2">
-              {isPl ? "Czy AI może całkowicie zastąpić software house?" : "Can AI fully replace a software agency?"}
+              {isPl ? "Czy AI może całkowicie zastąpić doświadczonego programistę?" : "Can AI fully replace an experienced software developer?"}
             </h3>
             <p>
               {isPl
@@ -141,8 +141,8 @@ export default function CzyAIWystarczyDoStronyContent({ lang }: Props) {
         </h2>
         <p className="mb-4">
           {isPl
-            ? "W ML Devworks łączymy szybkość AI z doświadczeniem architektonicznym i inżynierskim. Projektujemy rozwiązania, które działają dziś i są gotowe na wzrost jutro."
-            : "At ML Devworks, we combine AI speed with architectural and engineering expertise. We design solutions that work today and scale tomorrow."}
+            ? "W ML DevWorks łączę szybkość AI z doświadczeniem architektonicznym i inżynierskim. Projektuję rozwiązania, które działają dziś i są gotowe na wzrost jutro."
+            : "At ML DevWorks, I combine AI speed with architectural and engineering expertise. I design solutions that work today and scale tomorrow."}
         </p>
         <div className="flex flex-wrap gap-4">
           <Link

@@ -286,10 +286,10 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
       className="mt-16 border-primary/20 scroll-mt-[100px]"
       style={{ scrollMarginTop: "100px" }}
     >
-      <h2 className="text-3xl font-bold text-center mb-6">{t.title}</h2>
+      <h2 className="text-3xl font-bold text-left mb-6">{t.title}</h2>
       
       {overallRating && totalRatings && (
-        <div className="flex items-center justify-center gap-4 mb-8">
+        <div className="flex items-center justify-start gap-4 mb-8">
           <div className="flex items-center gap-2">
             <div className="flex">
               {[...Array(5)].map((_, i) => (
@@ -311,7 +311,7 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
         </div>
       )}
 
-      <div className="flex flex-wrap justify-center gap-6 mb-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6 w-full">
         {reviews.map((review, index) => (
           <motion.article
             key={review.time}
@@ -319,7 +319,7 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-            className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-5 flex-1 min-w-[280px] max-w-[380px]"
+            className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 w-full min-w-0"
           >
             <div className="flex items-start gap-3 mb-3">
               {review.profilePhotoUrl ? (
@@ -402,7 +402,7 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
 
   return (
     <>
-      <section id="realizations" className="pt-20 px-4 relative scroll-mt-[20px]" aria-labelledby="realizations-heading">
+      <section id="realizations" className="py-28 md:py-32 px-4 relative scroll-mt-[20px]" aria-labelledby="realizations-heading">
         <div className="max-w-7xl mx-auto">
           <motion.h2
             id="realizations-heading"
@@ -410,23 +410,23 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
             initial={{ opacity: 0, y: 50 }}
             animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-bold text-center mb-4"
+            className="text-4xl md:text-5xl font-bold text-left mb-4"
           >
-            {lang === "pl" ? "Realizacje" : "Realizations"}
+            {lang === "pl" ? "Moje realizacje" : "My projects"}
           </motion.h2>
           <motion.p
             ref={subtitleRef}
             initial={{ opacity: 0, y: 50 }}
             animate={isSubtitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.8 }}
-            className="text-xl text-gray-400 text-center mb-8 max-w-2xl mx-auto"
+            className="text-xl text-gray-400 text-left mb-8"
           >
             {lang === "pl"
-              ? "Zobacz nasze dotychczasowe projekty"
-              : "See our completed projects"}
+              ? "Zobacz moje dotychczasowe projekty"
+              : "See my completed projects"}
           </motion.p>
 
-          <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 ${projects.length === 4 ? "lg:grid-cols-2" : "lg:grid-cols-3"}`} role="list">
+          <ul className={`grid grid-cols-1 md:grid-cols-2 gap-8 list-none p-0 m-0 ${projects.length === 4 ? "lg:grid-cols-2" : "lg:grid-cols-3"}`} role="list">
             {projects.map((project, index) => (
               <ProjectCard
                 key={project.id}
@@ -437,7 +437,7 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
                 onOpenImageModal={openImageModal}
               />
             ))}
-          </div>
+          </ul>
 
           {/* Google Reviews Section */}
           <GoogleReviewsInline lang={lang} />
@@ -637,7 +637,7 @@ function ProjectCard({
   const isCardInView = useInView(cardRef, { once: true, margin: "-100px" });
 
   return (
-    <motion.article
+    <motion.li
       ref={cardRef}
       initial={{ opacity: 0, y: 50 }}
       animate={isCardInView ? { opacity: 1, y: 0 } : {}}
@@ -653,7 +653,6 @@ function ProjectCard({
       }}
       className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 hover:border-primary/40 transition-colors duration-200 cursor-pointer group"
       onClick={onOpenModal}
-      role="listitem"
     >
       {/* Badges */}
       <div className="flex flex-wrap gap-2 mb-4">
@@ -738,6 +737,6 @@ function ProjectCard({
           </div>
         )}
       </div>
-    </motion.article>
+    </motion.li>
   );
 }

@@ -55,7 +55,7 @@ export default function NaprawaOptymalizacjaUtrzymaniePage() {
     "description": "Naprawa błędów w istniejących projektach, optymalizacja wydajności, SEO i konwersji. Przywróć pełną funkcjonalność swojej strony lub aplikacji. Kompleksowe utrzymanie i wsparcie techniczne dla Twoich projektów.",
     "provider": {
       "@type": "Organization",
-      "name": "ML Devworks",
+      "name": "ML DevWorks",
       "url": "https://ml-devworks.com",
       "logo": "https://ml-devworks.com/primary-on-transparent-logo.png",
       "contactPoint": {
@@ -138,10 +138,10 @@ export default function NaprawaOptymalizacjaUtrzymaniePage() {
         {/* Main Content */}
         <section className="px-4 py-16">
           <div className="max-w-4xl mx-auto">
-            {/* What We Offer */}
+            {/* What I Offer */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                Co Oferujemy?
+                Co oferuję?
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
@@ -255,10 +255,10 @@ export default function NaprawaOptymalizacjaUtrzymaniePage() {
               </div>
             </div>
 
-            {/* Why Choose Us */}
+            {/* Why Work With Me */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                Dlaczego Warto Wybrać Nas?
+                Dlaczego warto pracować ze mną?
               </h2>
               <div className="space-y-6">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
@@ -391,7 +391,7 @@ export default function NaprawaOptymalizacjaUtrzymaniePage() {
                 Potrzebujesz Naprawy lub Optymalizacji?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Skontaktuj się z nami i otrzymaj bezpłatną analizę Twojego projektu oraz wycenę prac.
+                Skontaktuj się ze mną i otrzymaj bezpłatną analizę Twojego projektu oraz wycenę prac.
               </p>
               <Link
                 href="/#contact"

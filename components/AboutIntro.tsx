@@ -18,38 +18,46 @@ export default function AboutIntro({ lang = "pl" }: AboutIntroProps) {
 
   const content = {
     pl: {
-      title: "Technologia dla firm, które chcą szybciej sprzedawać i sprawniej działać",
-      lead: "Łączymy pracę senior developera z narzędziami AI. Jakość architektury, bezpieczeństwo i SEO techniczne zostają po naszej stronie — projekty powstają szybciej, bez długu technologicznego.",
+      title: "Nie rozmawiasz z handlowcem. Pracujesz bezpośrednio z programistą odpowiedzialnym za projekt",
+      lead: "Patrzę na projekt jak programista z doświadczeniem biznesowym: najpierw rozumiem proces, klienta i cel, a dopiero potem dobieram technologię. AI przyspiesza prototypowanie i analizę, ale decyzje techniczne, bezpieczeństwo i finalna jakość są po mojej stronie.",
       cards: [
         {
+          title: "Biznes przed kodem",
+          text: "Pomagam przełożyć pomysł, problem operacyjny albo proces sprzedaży na konkretne funkcje i priorytety wdrożenia.",
+        },
+        {
           title: "Strony, aplikacje i sklepy",
-          text: "Projektujemy strony internetowe, aplikacje webowe i mobilne, sklepy oraz systemy rezerwacji dla firm.",
+          text: "Projektuję strony internetowe, aplikacje webowe i mobilne, sklepy oraz systemy rezerwacji dla firm.",
         },
         {
           title: "Automatyzacja i AI",
-          text: "Wdrażamy automatyzacje procesów, integracje API i rozwiązania AI, które ograniczają pracę ręczną.",
+          text: "Wdrażam automatyzacje procesów, integracje API i rozwiązania AI, które ograniczają pracę ręczną.",
         },
         {
           title: "Rozwój i naprawa",
-          text: "Przejmujemy istniejące projekty po innych wykonawcach: naprawiamy błędy, poprawiamy Core Web Vitals i SEO.",
+          text: "Przejmuję istniejące projekty po innych wykonawcach: naprawiam błędy, poprawiam Core Web Vitals i SEO.",
         },
       ],
     },
     en: {
-      title: "Technology for companies that want to sell faster and operate more efficiently",
-      lead: "We combine senior development work with AI tools. Architecture quality, security, and technical SEO stay under human control — projects move faster, without technical debt.",
+      title: "You do not talk to a salesperson. You work directly with the developer responsible for the project",
+      lead: "I approach projects as a developer with business awareness: first I understand the process, customer, and goal, then I choose the right technology. AI speeds up prototyping and analysis, but technical decisions, security, and final quality stay on my side.",
       cards: [
         {
+          title: "Business before code",
+          text: "I help turn an idea, operational problem, or sales process into clear features and implementation priorities.",
+        },
+        {
           title: "Websites, apps and stores",
-          text: "We design websites, web and mobile applications, online stores, and booking systems for companies.",
+          text: "I design websites, web and mobile applications, online stores, and booking systems for companies.",
         },
         {
           title: "Automation and AI",
-          text: "We implement process automation, API integrations, and AI solutions that reduce manual work.",
+          text: "I implement process automation, API integrations, and AI solutions that reduce manual work.",
         },
         {
           title: "Development and fixes",
-          text: "We take over existing projects from other vendors: fixing bugs and improving Core Web Vitals and SEO.",
+          text: "I take over existing projects from other vendors: fixing bugs and improving Core Web Vitals and SEO.",
         },
       ],
     },
@@ -58,7 +66,7 @@ export default function AboutIntro({ lang = "pl" }: AboutIntroProps) {
   const t = content[lang];
 
   return (
-    <section className="px-4 py-20" aria-labelledby="about-intro-heading">
+    <section className="px-4 py-28 md:py-32" aria-labelledby="about-intro-heading">
       <div className="max-w-7xl mx-auto">
         <motion.h2
           id="about-intro-heading"
@@ -66,7 +74,7 @@ export default function AboutIntro({ lang = "pl" }: AboutIntroProps) {
           initial={{ opacity: 0, y: 50 }}
           animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-5xl font-bold text-center leading-tight mb-6 text-white max-w-4xl mx-auto"
+          className="text-3xl md:text-5xl font-bold text-left leading-tight mb-6 text-white"
         >
           {t.title}
         </motion.h2>
@@ -76,12 +84,12 @@ export default function AboutIntro({ lang = "pl" }: AboutIntroProps) {
           initial={{ opacity: 0, y: 50 }}
           animate={isLeadInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-lg text-gray-300 text-center leading-relaxed mb-12 max-w-3xl mx-auto"
+          className="text-lg text-gray-300 text-left leading-relaxed mb-12"
         >
           {t.lead}
         </motion.p>
 
-        <div ref={cardsRef} className="grid gap-6 md:grid-cols-3">
+        <div ref={cardsRef} className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {t.cards.map((card, index) => (
             <motion.article
               key={card.title}

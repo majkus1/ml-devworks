@@ -6,7 +6,7 @@ import StructuredData from "@/components/StructuredData";
 import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
-  title: "Web and Mobile App Development for Companies | ML Devworks",
+  title: "Web and Mobile App Development for Companies | ML DevWorks",
   description:
     "We build custom web and mobile apps: business tools, customer portals, iOS/Android and MVPs. Secure, scalable architecture with fast delivery.",
   keywords: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Web and Mobile App Development | ML Devworks",
+    title: "Web and Mobile App Development | ML DevWorks",
     description:
       "Custom applications for business growth, built with scalable architecture and fast delivery.",
     url: "https://ml-devworks.com/en/services/web-and-mobile-applications",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web and Mobile App Development | ML Devworks",
+    title: "Web and Mobile App Development | ML DevWorks",
     description:
       "Custom applications for business growth, built with scalable architecture and fast delivery.",
   },
@@ -55,7 +55,7 @@ export default function WebAndMobileApplicationsPage() {
     "description": "We create modern web and mobile applications using the latest technologies. Fast, secure, and scalable solutions. iOS and Android apps. Native and cross-platform solutions for your business.",
     "provider": {
       "@type": "Organization",
-      "name": "ML Devworks",
+      "name": "ML DevWorks",
       "url": "https://ml-devworks.com",
       "logo": "https://ml-devworks.com/primary-on-transparent-logo.png",
       "contactPoint": {
@@ -138,10 +138,10 @@ export default function WebAndMobileApplicationsPage() {
         {/* Main Content */}
         <section className="px-4 py-16">
           <div className="max-w-4xl mx-auto">
-            {/* What We Offer */}
+            {/* What I Offer */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                What We Offer?
+                What I offer
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
@@ -234,10 +234,10 @@ export default function WebAndMobileApplicationsPage() {
               </div>
             </div>
 
-            {/* Why Choose Us */}
+            {/* Why Work With Me */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                Why Choose Us?
+                Why work with me?
               </h2>
               <div className="space-y-6">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
@@ -271,14 +271,14 @@ export default function WebAndMobileApplicationsPage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">🚀 Fast Delivery</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Thanks to the use of AI tools and proven processes, we deliver projects faster without compromising quality. Agile methodology and continuous communication.
+                    Thanks to the use of AI tools and proven processes, I deliver projects faster without compromising quality. Agile methodology and continuous communication.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Comprehensive service</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    From concept, through design, development, testing, deployment, to maintenance - we provide full service at every stage. Technical support and updates.
+                    From concept, through design, development, testing, deployment, to maintenance - I cover the full application workflow. Technical support and updates.
                   </p>
                 </div>
               </div>
@@ -370,7 +370,7 @@ export default function WebAndMobileApplicationsPage() {
                 Ready for a Modern Application?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Contact us and get a free quote for your application project.
+                Contact me and get a free quote for your application project.
               </p>
               <Link
                 href="/en#contact"

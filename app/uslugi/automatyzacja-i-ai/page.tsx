@@ -55,7 +55,7 @@ export default function AutomatyzacjaIAIPage() {
     "description": "Inteligentne agent AI i systemy automatyzacji procesów biznesowych. Zautomatyzuj powtarzalne zadania i zwiększ efektywność swojego biznesu.",
     "provider": {
       "@type": "Organization",
-      "name": "ML Devworks",
+      "name": "ML DevWorks",
       "url": "https://ml-devworks.com",
       "logo": "https://ml-devworks.com/primary-on-transparent-logo.png",
       "contactPoint": {
@@ -138,10 +138,10 @@ export default function AutomatyzacjaIAIPage() {
         {/* Main Content */}
         <section className="px-4 py-16">
           <div className="max-w-4xl mx-auto">
-            {/* What We Offer */}
+            {/* What I Offer */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                Co Oferujemy?
+                Co oferuję?
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-background-lighter rounded-xl p-6 border-2 border-amber-400/60 shadow-lg shadow-amber-500/20">
@@ -241,10 +241,10 @@ export default function AutomatyzacjaIAIPage() {
               </div>
             </div>
 
-            {/* Why Choose Us */}
+            {/* Why Work With Me */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                Dlaczego Warto Wybrać Nas?
+                Dlaczego warto pracować ze mną?
               </h2>
               <div className="space-y-6">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
@@ -257,7 +257,7 @@ export default function AutomatyzacjaIAIPage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Szybka implementacja</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Dzięki wykorzystaniu gotowych rozwiązań AI i sprawdzonych frameworków, wdrażamy automatyzację szybko. Pierwsze efekty widoczne już po kilku tygodniach.
+                    Dzięki wykorzystaniu gotowych rozwiązań AI i sprawdzonych frameworków wdrażam automatyzację szybko. Pierwsze efekty widoczne już po kilku tygodniach.
                   </p>
                 </div>
 
@@ -377,7 +377,7 @@ export default function AutomatyzacjaIAIPage() {
                 Gotowy na Automatyzację z AI?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Skontaktuj się z nami i odkryj, jak automatyzacja i AI mogą przekształcić Twój biznes.
+                Skontaktuj się ze mną i sprawdź, jak automatyzacja i AI mogą usprawnić Twój biznes.
               </p>
               <Link
                 href="/#contact"

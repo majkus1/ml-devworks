@@ -23,12 +23,12 @@ export const blogPosts: BlogPost[] = [
     slug: "ile-kosztuje-automatyzacja-procesow-w-firmie-i-jak-liczyc-roi",
     slugEn: "how-much-does-business-process-automation-cost-and-how-to-calculate-roi",
     title: {
-      pl: "Ile kosztuje automatyzacja procesów w firmie i jak liczyć ROI?",
-      en: "How Much Does Business Process Automation Cost and How to Calculate ROI?",
+      pl: "Koszt automatyzacji procesów i ROI dla firm",
+      en: "Business Process Automation Cost and ROI",
     },
     excerpt: {
-      pl: "Praktyczny przewodnik dla firm: od czego zależy koszt automatyzacji procesów, jakie wdrożenia dają najszybszy zwrot i jak policzyć ROI przed rozpoczęciem projektu.",
-      en: "A practical guide for companies: what drives process automation cost, which workflows deliver the fastest return, and how to estimate ROI before starting implementation.",
+      pl: "Sprawdź, od czego zależy koszt automatyzacji, które procesy dają szybki zwrot i jak policzyć ROI przed wdrożeniem.",
+      en: "See what drives automation cost, which workflows deliver fast ROI, and how to estimate payback before implementation.",
     },
     publishedAt: "2026-07-06",
     dateModified: "2026-07-06",
@@ -81,11 +81,11 @@ export const blogPosts: BlogPost[] = [
     slug: "system-rezerwacji-dla-firmy-uslugowej-funkcje-integracje-platnosci-wdrozenie",
     slugEn: "booking-system-for-service-business-features-payment-integrations-implementation",
     title: {
-      pl: "System rezerwacji dla firmy usługowej - funkcje, integracje płatności, wdrożenie",
-      en: "Booking System for a Service Business - Features, Payment Integrations, Implementation",
+      pl: "System rezerwacji dla firmy usługowej",
+      en: "Booking System for a Service Business",
     },
     excerpt: {
-      pl: "Jak zaplanować system rezerwacji klientów dla firmy usługowej: kalendarz dostępności, płatności online, przypomnienia, CRM, panel administracyjny i etapy wdrożenia.",
+      pl: "Jak zaplanować system rezerwacji: kalendarz dostępności, płatności online, przypomnienia, CRM i panel administracyjny.",
       en: "How to plan a customer booking system for a service business: availability calendar, online payments, reminders, CRM, admin panel, and implementation stages.",
     },
     publishedAt: "2026-07-03",
@@ -196,7 +196,7 @@ export const blogPosts: BlogPost[] = [
       en: "Business System Integration: API, CRM, ERP - How to Start",
     },
     excerpt: {
-      pl: "Jak uporządkować integracje API, CRM, ERP, formularze, płatności i raportowanie w firmie. Praktyczny plan dla firm, które chcą ograniczyć ręczne przepisywanie danych.",
+      pl: "Jak uporządkować integracje API, CRM, ERP, formularze, płatności i raportowanie oraz ograniczyć ręczne przepisywanie danych.",
       en: "How to organize API, CRM, ERP, forms, payments, and reporting integrations. A practical plan for companies that want to reduce manual data entry.",
     },
     publishedAt: "2026-06-18",
@@ -249,12 +249,12 @@ export const blogPosts: BlogPost[] = [
     slug: "kompleksowe-uslugi-programistyczne-dla-firm-jak-dobrac-rozwiazanie-do-branzy",
     slugEn: "comprehensive-software-services-for-businesses-how-to-match-solutions-to-industry",
     title: {
-      pl: "Kompleksowe usługi programistyczne dla firm - jak dobrać rozwiązanie do branży?",
-      en: "Comprehensive Software Services for Businesses - How to Match Solutions to Your Industry?",
+      pl: "Usługi programistyczne dla firm - jak dobrać zakres",
+      en: "Software Services for Businesses - How to Choose",
     },
     excerpt: {
-      pl: "Przewodnik dla firm, które chcą wyjść poza ogólną stronę WWW. Sprawdź, jak dobrać rozwiązania programistyczne do branży: aplikacje dla firm budowlanych, strony dla salonów fryzjerskich, systemy dla medycyny, transportu i usług.",
-      en: "A practical guide for companies that need more than a generic website. Learn how to match software solutions to industry needs: apps for construction firms, websites for salons, and systems for healthcare, logistics, and services.",
+      pl: "Jak dobrać rozwiązanie do branży: aplikację, stronę, system rezerwacji, integrację lub automatyzację procesu.",
+      en: "How to match software work to your industry: app, website, booking system, integration, or process automation.",
     },
     publishedAt: "2026-03-11",
     dateModified: "2026-07-06",
@@ -272,7 +272,7 @@ export const blogPosts: BlogPost[] = [
         "strona internetowa dla gabinetu medycznego",
         "oprogramowanie dla malych i srednich firm",
         "dedykowane rozwiazania it dla biznesu",
-        "software house dla firm z roznych branż",
+        "programista dla firm z roznych branż",
       ],
       en: [
         "comprehensive software services for businesses",
@@ -286,7 +286,7 @@ export const blogPosts: BlogPost[] = [
         "website for medical clinic",
         "custom software solutions for small business",
         "industry specific web application development",
-        "software agency for business digital transformation",
+        "software developer for business digital transformation",
       ],
     },
     faq: {
@@ -316,12 +316,12 @@ export const blogPosts: BlogPost[] = [
     slug: "social-media-czy-wlasna-strona-firmowa-co-bardziej-sie-oplaca",
     slugEn: "social-media-vs-business-website-what-brings-better-results",
     title: {
-      pl: "Social media czy własna strona firmowa - co bardziej się opłaca?",
-      en: "Social Media vs Business Website - What Brings Better Results?",
+      pl: "Social media czy własna strona firmowa?",
+      en: "Social Media vs Business Website",
     },
     excerpt: {
-      pl: "Wiele firm stawia tylko na Instagram, TikTok i Facebook. Sprawdź, dlaczego to ryzykowne i jak własna strona internetowa zwiększa konwersję, SEO oraz stabilność pozyskiwania klientów.",
-      en: "Many companies focus only on Instagram, TikTok, and Facebook. Learn why this is risky and how your own business website improves conversion, SEO, and long-term customer acquisition stability.",
+      pl: "Sprawdź, kiedy social media nie wystarczają i jak własna strona zwiększa konwersję, SEO oraz stabilność pozyskiwania klientów.",
+      en: "Learn when social media is not enough and how a business website improves conversion, SEO, and stable customer acquisition.",
     },
     publishedAt: "2026-03-11",
     dateModified: "2026-06-28",
@@ -379,12 +379,12 @@ export const blogPosts: BlogPost[] = [
     slug: "czy-ai-wystarczy-do-stworzenia-strony-lub-aplikacji",
     slugEn: "is-ai-enough-to-build-a-website-or-app",
     title: {
-      pl: "Czy AI wystarczy do stworzenia strony lub aplikacji? Dług technologiczny, bezpieczeństwo i architektura",
-      en: "Is AI Enough to Build a Website or App? Technical Debt, Security, and Architecture",
+      pl: "Czy AI wystarczy do stworzenia strony lub aplikacji?",
+      en: "Is AI Enough to Build a Website or App?",
     },
     excerpt: {
-      pl: "Wielu przedsiębiorców chce stworzyć stronę lub aplikację wyłącznie z AI. Sprawdź, kiedy to ma sens, jakie są ryzyka i dlaczego bez architekta technicznego łatwo o dług technologiczny, błędy i problemy bezpieczeństwa.",
-      en: "Many business owners want to build websites or apps using only AI. Learn when it works, where the risks are, and why technical architecture is essential to avoid debt, bugs, and security issues.",
+      pl: "Sprawdź, kiedy AI pomaga w budowie strony lub aplikacji, a kiedy potrzebna jest architektura, kontrola jakości i bezpieczeństwo.",
+      en: "Learn when AI helps build a website or app and when architecture, quality control, and security decisions are still needed.",
     },
     publishedAt: "2026-03-11",
     dateModified: "2026-06-20",
@@ -393,13 +393,13 @@ export const blogPosts: BlogPost[] = [
       pl: [
         "czy ai wystarczy do stworzenia strony internetowej",
         "czy ai zastapi programiste",
-        "strona internetowa z ai czy software house",
+        "strona internetowa z ai czy programista",
         "aplikacja z ai ryzyko techniczne",
         "dlug technologiczny w projektach ai",
         "bezpieczenstwo aplikacji generowanych przez ai",
         "jak dobrac architekture aplikacji",
         "stack technologiczny dla aplikacji webowej",
-        "kiedy warto zatrudnic software house",
+        "kiedy warto zatrudnic programiste do aplikacji",
         "ai w tworzeniu stron i aplikacji",
       ],
       en: [
@@ -422,7 +422,7 @@ export const blogPosts: BlogPost[] = [
           a: "AI pomaga przy kodzie i prototypach, ale produkcyjny projekt wymaga architektury, testów, bezpieczeństwa, dostępów, SEO i odpowiedzialności za utrzymanie.",
         },
         {
-          q: "Kiedy warto zaangażować software house do projektu z AI?",
+          q: "Kiedy warto zaangażować programistę do projektu z AI?",
           a: "Gdy projekt ma działać produkcyjnie, obsługiwać dane klientów, integrować się z narzędziami firmy albo rozwijać się dłużej niż jednorazowy prototyp.",
         },
       ],
@@ -432,7 +432,7 @@ export const blogPosts: BlogPost[] = [
           a: "AI helps with code and prototypes, but production projects still need architecture, testing, security, permissions, SEO, and maintenance accountability.",
         },
         {
-          q: "When should a company involve a software house in an AI-assisted project?",
+          q: "When should a company involve a software developer in an AI-assisted project?",
           a: "When the project must run in production, handle customer data, integrate with business tools, or evolve beyond a one-off prototype.",
         },
       ],
@@ -442,12 +442,12 @@ export const blogPosts: BlogPost[] = [
     slug: "system-rezerwacji-online-dla-salonu-kosmetycznego-co-wybrac-i-ile-to-trwa",
     slugEn: "online-booking-system-for-beauty-salon-what-to-choose-and-how-long-it-takes",
     title: {
-      pl: "System rezerwacji online dla salonu kosmetycznego - co wybrać i ile to trwa",
-      en: "Online Booking System for a Beauty Salon - What to Choose and How Long It Takes",
+      pl: "System rezerwacji online dla salonu kosmetycznego",
+      en: "Online Booking System for a Beauty Salon",
     },
     excerpt: {
-      pl: "Praktyczny poradnik dla właścicieli salonów kosmetycznych: jak wybrać system rezerwacji online, jakie funkcje są kluczowe, ile trwa wdrożenie i jak uniknąć najczęstszych błędów. Konkretne wskazówki pod wzrost liczby wizyt.",
-      en: "Practical guide for beauty salon owners: how to choose an online booking system, which features matter most, how long implementation takes, and how to avoid common mistakes. Actionable tips to increase appointment volume.",
+      pl: "Jak wybrać system rezerwacji online dla salonu: kluczowe funkcje, czas wdrożenia, płatności, przypomnienia i błędy.",
+      en: "How to choose an online booking system for a beauty salon: key features, timeline, payments, reminders, and mistakes.",
     },
     publishedAt: "2026-03-11",
     dateModified: "2026-07-01",
@@ -482,7 +482,7 @@ export const blogPosts: BlogPost[] = [
       pl: [
         {
           q: "Ile trwa wdrożenie systemu rezerwacji online?",
-          a: "Prosty system rezerwacji można wdrożyć zwykle w 3-6 tygodni. Rozbudowane płatności, integracje CRM i niestandardowe grafiki wydłużają zakres.",
+          a: "Prosty system rezerwacji można wdrożyć zwykle w 1-3 tygodnie. Rozbudowane płatności, integracje CRM i niestandardowe grafiki wydłużają zakres.",
         },
         {
           q: "Czy system rezerwacji powinien mieć płatności online?",
@@ -492,7 +492,7 @@ export const blogPosts: BlogPost[] = [
       en: [
         {
           q: "How long does an online booking system implementation take?",
-          a: "A simple booking system usually takes 3-6 weeks. Advanced payments, CRM integrations, and custom interfaces increase the scope.",
+          a: "A simple booking system usually takes 1-3 weeks. Advanced payments, CRM integrations, and custom interfaces increase the scope.",
         },
         {
           q: "Should a booking system include online payments?",
@@ -505,12 +505,12 @@ export const blogPosts: BlogPost[] = [
     slug: "kiedy-firmie-oplaca-sie-automatyzacja-procesow-z-ai",
     slugEn: "when-ai-process-automation-is-worth-it-for-business",
     title: {
-      pl: "Kiedy firmie opłaca się automatyzacja procesów z AI?",
-      en: "When Is AI Process Automation Worth It for a Company?",
+      pl: "Kiedy opłaca się automatyzacja procesów z AI?",
+      en: "When Is AI Process Automation Worth It?",
     },
     excerpt: {
-      pl: "Dowiedz się, kiedy automatyzacja procesów z AI realnie przynosi zwrot z inwestycji, które obszary warto automatyzować najpierw i jak policzyć ROI. Przewodnik dla firm, które chcą rosnąć bez zwiększania kosztów operacyjnych.",
-      en: "Learn when AI process automation delivers real ROI, which workflows to automate first, and how to calculate business impact. A practical guide for companies that want to scale without increasing operational costs.",
+      pl: "Kiedy automatyzacja z AI daje zwrot, które procesy wybrać najpierw i jak policzyć wpływ na koszty oraz czas zespołu.",
+      en: "When AI automation delivers ROI, which workflows to automate first, and how to estimate impact on cost and team time.",
     },
     publishedAt: "2026-03-11",
     dateModified: "2026-07-04",
@@ -568,12 +568,12 @@ export const blogPosts: BlogPost[] = [
     slug: "strona-internetowa-dla-firmy-jak-wybrac-wykonawce",
     slugEn: "business-website-how-to-choose-a-developer",
     title: {
-      pl: "Strona internetowa dla firmy – jak wybrać wykonawcę i na co zwrócić uwagę",
-      en: "Business Website – How to Choose a Developer and What to Look For",
+      pl: "Strona internetowa dla firmy - jak wybrać wykonawcę",
+      en: "Business Website - How to Choose a Developer",
     },
     excerpt: {
-      pl: "Kompletny przewodnik dla przedsiębiorców: kiedy firma potrzebuje strony www, jak znaleźć i wybrać dobrego wykonawcę oraz na co zwrócić uwagę przed podpisaniem umowy. Praktyczne wskazówki od ML Devworks.",
-      en: "Complete guide for business owners: when your company needs a website, how to find and choose a good developer, and what to look for before signing a contract. Practical tips from ML Devworks.",
+      pl: "Kiedy firma potrzebuje strony www, jak wybrać dobrego wykonawcę i na co zwrócić uwagę przed podpisaniem umowy.",
+      en: "When your company needs a website, how to choose a good developer, and what to check before signing a contract.",
     },
     publishedAt: "2025-03-11",
     dateModified: "2026-06-12",

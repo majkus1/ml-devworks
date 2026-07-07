@@ -120,7 +120,7 @@ export default function Services({ lang = "pl" }: ServicesProps) {
   const serviceList = services[lang];
 
   return (
-    <section id="services" className="pt-20 px-4 relative scroll-mt-[20px]" aria-labelledby="services-heading">
+    <section id="services" className="py-28 md:py-32 px-4 relative scroll-mt-[20px]" aria-labelledby="services-heading">
       <div className="max-w-7xl mx-auto">
         <motion.h2
           id="services-heading"
@@ -128,7 +128,7 @@ export default function Services({ lang = "pl" }: ServicesProps) {
           initial={{ opacity: 0, y: 50 }}
           animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl md:text-5xl font-bold text-center mb-4"
+          className="text-4xl md:text-5xl font-bold text-left mb-4"
         >
           {lang === "pl" ? "Usługi programistyczne dla firm" : "Software services for businesses"}
         </motion.h2>
@@ -137,7 +137,7 @@ export default function Services({ lang = "pl" }: ServicesProps) {
           initial={{ opacity: 0, y: 50 }}
           animate={isSubtitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="text-xl text-gray-400 text-center mb-4 max-w-3xl mx-auto"
+          className="text-xl text-gray-400 text-left mb-4"
         >
           {lang === "pl"
             ? "Kompleksowe rozwiązania cyfrowe dla Twojego biznesu"
@@ -149,19 +149,19 @@ export default function Services({ lang = "pl" }: ServicesProps) {
           initial={{ opacity: 0, y: 50 }}
           animate={isDescription1InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="text-base text-gray-300 text-center mb-4 max-w-3xl mx-auto"
+          className="text-base text-gray-300 text-left mb-4"
         >
           {lang === "pl" ? (
             <>
-              Realizujemy projekty kompleksowo - od koncepcji, przez wdrożenie, aż po utrzymanie.
+              Realizuję projekty kompleksowo - od koncepcji, przez wdrożenie, aż po utrzymanie.
               <br />
-              Stawiamy na długotrwałą współpracę.
+              Stawiam na bezpośrednią komunikację i długotrwałą współpracę.
             </>
           ) : (
             <>
-              We execute projects comprehensively - from concept, through deployment, to maintenance.
+              I execute projects comprehensively - from concept, through deployment, to maintenance.
               <br />
-              We focus on long-term partnerships.
+              I focus on direct communication and long-term cooperation.
             </>
           )}
         </motion.p>
@@ -171,14 +171,14 @@ export default function Services({ lang = "pl" }: ServicesProps) {
           initial={{ opacity: 0, y: 50 }}
           animate={isDescription2InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="text-base text-gray-300 text-center mb-8 max-w-3xl mx-auto"
+          className="text-base text-gray-300 text-left mb-8"
         >
           {lang === "pl"
-            ? "Podejmujemy się również istniejących projektów - ich rozwoju, naprawy błędów, optymalizacji i rozbudowy."
-            : "We also take on existing projects - their development, bug fixes, optimization, and expansion."}
+            ? "Podejmuję się również istniejących projektów - ich rozwoju, naprawy błędów, optymalizacji i rozbudowy."
+            : "I also take on existing projects - their development, bug fixes, optimization, and expansion."}
         </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 list-none p-0 m-0" role="list">
           {serviceList.map((service, index) => (
             <ServiceCard
               key={index}
@@ -186,30 +186,30 @@ export default function Services({ lang = "pl" }: ServicesProps) {
               index={index}
             />
           ))}
-        </div>
+        </ul>
         
         <motion.div
           ref={footerRef}
           initial={{ opacity: 0, y: 50 }}
           animate={isFooterInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="text-center mt-16 max-w-4xl mx-auto"
+          className="text-left mt-16"
         >
           <p className="text-lg text-gray-300 leading-relaxed mb-4">
             {lang === "pl" ? (
               <>
-                Korzystamy z <span className="text-primary font-semibold">nowoczesnych, wydajnych technologii</span> dopasowanych do specyfiki Twojego projektu oraz z <span className="text-primary font-semibold">narzędzi AI</span>, które znacznie przyspieszają wykonanie Twojego projektu.
+                Korzystam z <span className="text-primary font-semibold">nowoczesnych, wydajnych technologii</span> dopasowanych do specyfiki Twojego projektu oraz z <span className="text-primary font-semibold">narzędzi AI</span>, które przyspieszają analizę, prototypowanie i wdrożenie.
               </>
             ) : (
               <>
-                We use <span className="text-primary font-semibold">modern, efficient technologies</span> tailored to your project&apos;s needs and <span className="text-primary font-semibold">AI tools</span> that significantly speed up your project execution.
+                I use <span className="text-primary font-semibold">modern, efficient technologies</span> tailored to your project&apos;s needs and <span className="text-primary font-semibold">AI tools</span> that speed up analysis, prototyping, and implementation.
               </>
             )}
           </p>
           <p className="text-base text-gray-400 italic">
             {lang === "pl"
-              ? "My pilnujemy i pracujemy nad jakością każdego rozwiązania, aby spełniało najwyższe standardy."
-              : "We ensure and work on the quality of every solution to meet the highest standards."}
+              ? "Za jakość, bezpieczeństwo i finalny efekt odpowiada doświadczony programista, nie automatyczny generator kodu."
+              : "Quality, security, and the final result are owned by an experienced developer, not an automatic code generator."}
           </p>
         </motion.div>
       </div>
@@ -261,7 +261,7 @@ function ServiceCard({
 
   if (service.href) {
     return (
-      <motion.article
+      <motion.li
         ref={cardRef}
         initial={{ opacity: 0, y: 50 }}
         animate={isCardInView ? { opacity: 1, y: 0 } : {}}
@@ -276,20 +276,19 @@ function ServiceCard({
           transition: { duration: 0.2, ease: "easeOut" }
         }}
         className={cardClassName}
-        role="listitem"
       >
         <Link 
           href={service.href} 
           className="block h-full w-full no-underline"
         >
-          {cardContent}
+          <article>{cardContent}</article>
         </Link>
-      </motion.article>
+      </motion.li>
     );
   }
 
   return (
-    <motion.article
+    <motion.li
       ref={cardRef}
       initial={{ opacity: 0, y: 50 }}
       animate={isCardInView ? { opacity: 1, y: 0 } : {}}
@@ -304,10 +303,9 @@ function ServiceCard({
         transition: { duration: 0.2, ease: "easeOut" }
       }}
       className={cardClassName}
-      role="listitem"
     >
-      {cardContent}
-    </motion.article>
+      <article>{cardContent}</article>
+    </motion.li>
   );
 }
 

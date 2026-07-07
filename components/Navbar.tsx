@@ -164,7 +164,7 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
               >
                 <Image
                   src="/primary-on-transparent-logo.webp"
-                  alt="ML Devworks Logo"
+                  alt="ML DevWorks Logo"
                   width={215}
                   height={60}
                   priority

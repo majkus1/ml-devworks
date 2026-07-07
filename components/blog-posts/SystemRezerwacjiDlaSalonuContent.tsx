@@ -102,8 +102,8 @@ export default function SystemRezerwacjiDlaSalonuContent({ lang }: Props) {
         </h2>
         <p>
           {isPl
-            ? "W większości salonów wdrożenie trwa od 7 do 21 dni. W prostym wariancie (jedna lokalizacja, podstawowy grafik, płatności online) realny jest start nawet w tydzień. Bardziej rozbudowane wdrożenia (wiele stanowisk, integracje, migracja danych klientów) zajmują zwykle 2-4 tygodnie."
-            : "For most salons, implementation takes 7 to 21 days. In a simple setup (single location, standard schedule, online payments), launch within a week is realistic. More advanced implementations (multiple staff stations, integrations, customer data migration) usually take 2-4 weeks."}
+            ? "W większości salonów wdrożenie trwa od 5 do 14 dni. W prostym wariancie (jedna lokalizacja, podstawowy grafik, płatności online) realny jest start nawet w kilka dni. Bardziej rozbudowane wdrożenia (wiele stanowisk, integracje, migracja danych klientów) zajmują zwykle 1-3 tygodnie."
+            : "For most salons, implementation takes 5 to 14 days. In a simple setup (single location, standard schedule, online payments), launch within a few days is realistic. More advanced implementations (multiple staff stations, integrations, customer data migration) usually take 1-3 weeks."}
         </p>
       </section>
 
@@ -161,8 +161,8 @@ export default function SystemRezerwacjiDlaSalonuContent({ lang }: Props) {
         </h2>
         <p className="mb-4">
           {isPl
-            ? "W ML Devworks wdrażamy systemy rezerwacji online z integracją płatności, przypomnieniami i analizą wyników. Zadbamy o technikę i UX, żeby rezerwacje naprawdę rosły."
-            : "At ML Devworks, we implement online booking systems with payment integration, reminders, and analytics. We handle both technical setup and UX to increase completed bookings."}
+            ? "W ML DevWorks wdrażam systemy rezerwacji online z integracją płatności, przypomnieniami i analizą wyników. Dbam o technikę i UX, żeby rezerwacje naprawdę rosły."
+            : "At ML DevWorks, I implement online booking systems with payment integration, reminders, and analytics. I handle both technical setup and UX to increase completed bookings."}
         </p>
         <div className="flex flex-wrap gap-4">
           <Link

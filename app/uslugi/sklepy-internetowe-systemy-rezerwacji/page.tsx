@@ -55,7 +55,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
     "description": "Kompletne rozwiązania e-commerce z integracją płatności, dostaw, katalogu produktów, ERP/CRM i analityki sprzedaży.",
     "provider": {
       "@type": "Organization",
-      "name": "ML Devworks",
+      "name": "ML DevWorks",
       "url": "https://ml-devworks.com",
       "logo": "https://ml-devworks.com/primary-on-transparent-logo.png",
       "contactPoint": {
@@ -138,10 +138,10 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
         {/* Main Content */}
         <section className="px-4 py-16">
           <div className="max-w-4xl mx-auto">
-            {/* What We Offer */}
+            {/* What I Offer */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                Co Oferujemy?
+                Co oferuję?
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
@@ -250,16 +250,16 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
               </div>
             </div>
 
-            {/* Why Choose Us */}
+            {/* Why Work With Me */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                Dlaczego Warto Wybrać Nas?
+                Dlaczego warto pracować ze mną?
               </h2>
               <div className="space-y-6">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">🚀 Szybka Implementacja</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Dzięki wykorzystaniu sprawdzonych rozwiązań i narzędzi AI, wdrażamy sklepy internetowe szybko. Od koncepcji do uruchomienia w kilka tygodni.
+                    Dzięki wykorzystaniu sprawdzonych rozwiązań i narzędzi AI wdrażam sklepy internetowe szybko. Od koncepcji do uruchomienia w kilka tygodni.
                   </p>
                 </div>
 
@@ -386,7 +386,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
                 Gotowy na profesjonalny sklep internetowy?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Skontaktuj się z nami i otrzymaj bezpłatną wycenę sklepu internetowego, platformy B2B lub integracji e-commerce.
+                Skontaktuj się ze mną i otrzymaj bezpłatną wycenę sklepu internetowego, platformy B2B lub integracji e-commerce.
               </p>
               <Link
                 href="/#contact"
