@@ -71,7 +71,7 @@ export default function BookingCalendar({ lang = "pl" }: BookingCalendarProps) {
     pl: {
       title: "Zarezerwuj bezpłatną konsultację (30 min)",
       subtitle: "Wybierz dogodny termin i umów bezpłatne 30-minutowe spotkanie online.",
-      comingSoon: "Wkrótce udostępnimy terminy rezerwacji online. W międzyczasie napisz do nas przez formularz powyżej — odpowiemy i zaproponujemy dogodny termin.",
+      comingSoon: "Wkrótce udostępnię terminy rezerwacji online. W międzyczasie napisz do mnie przez formularz powyżej - odpowiem i zaproponuję dogodny termin.",
       pickDate: "Wybierz dzień",
       pickTime: "Wybierz godzinę",
       noSlots: "Brak dostępnych terminów tego dnia.",

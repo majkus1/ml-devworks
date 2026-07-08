@@ -8,7 +8,7 @@ import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from 
 export const metadata: Metadata = {
   title: "Sklepy internetowe i e-commerce dla firm | ML DevWorks",
   description:
-    "Budujemy sklepy internetowe B2C i B2B: katalog, koszyk, płatności online, dostawy, integracje ERP/CRM i automatyzacje sprzedaży. Umów bezpłatną wycenę.",
+    "Tworzę sklepy internetowe B2C i B2B: katalog, koszyk, płatności online, dostawy, integracje ERP/CRM i automatyzacje sprzedaży.",
   keywords: [
     "sklep internetowy dla firmy",
     "tworzenie sklepu internetowego",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sklepy internetowe dla firm | ML DevWorks",
     description:
-      "E-commerce z integracjami płatności, dostaw, ERP/CRM, katalogu produktów i analityki sprzedaży.",
+      "Tworzę sklepy internetowe B2C i B2B: katalog, koszyk, płatności online, dostawy, integracje ERP/CRM i automatyzacje sprzedaży.",
     url: "https://ml-devworks.com/uslugi/sklepy-internetowe-systemy-rezerwacji",
     type: "website",
     locale: "pl_PL",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Sklepy internetowe dla firm | ML DevWorks",
     description:
-      "E-commerce z integracjami płatności, dostaw, ERP/CRM, katalogu produktów i analityki sprzedaży.",
+      "Tworzę sklepy internetowe B2C i B2B: katalog, koszyk, płatności online, dostawy, integracje ERP/CRM i automatyzacje sprzedaży.",
   },
 };
 
@@ -52,7 +52,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Sklepy internetowe i e-commerce dla firm",
-    "description": "Kompletne rozwiązania e-commerce z integracją płatności, dostaw, katalogu produktów, ERP/CRM i analityki sprzedaży.",
+    "description": "Tworzę sklepy internetowe i rozwiązania e-commerce dla firm: katalog produktów, koszyk, płatności online, dostawy i integracje ERP/CRM.",
     "provider": {
       "@type": "Organization",
       "name": "ML DevWorks",
@@ -115,7 +115,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
               Sklepy internetowe i <span className="text-primary">e-commerce dla firm</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Projektujemy sklepy B2C i B2B z koszykiem, płatnościami, dostawami, katalogiem produktów, integracjami ERP/CRM i analityką sprzedaży.
+              Projektuję sklepy B2C i B2B z koszykiem, płatnościami, dostawami, katalogiem produktów, integracjami ERP/CRM i analityką sprzedaży.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -266,7 +266,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">💰 Optymalizacja Konwersji</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Projektujemy z myślą o konwersji. Optymalizujemy proces zakupowy, upraszczamy formularze, poprawiamy UX - wszystko po to, aby zwiększyć sprzedaż.
+                    Projektuję z myślą o konwersji. Optymalizuję proces zakupowy, upraszczamy formularze, poprawiamy UX - wszystko po to, aby zwiększyć sprzedaż.
                   </p>
                 </div>
 
@@ -294,7 +294,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Kompleksowa obsługa</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Od analizy potrzeb, przez projektowanie, rozwój, wdrożenie, szkolenie, aż po utrzymanie i wsparcie - zapewniamy pełną obsługę na każdym etapie.
+                    Od analizy potrzeb, przez projektowanie, rozwój, wdrożenie, szkolenie, aż po utrzymanie i wsparcie - zapewniam pełną obsługę na każdym etapie.
                   </p>
                 </div>
               </div>
@@ -313,7 +313,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Analiza i Planowanie</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Analizujemy Twoje potrzeby, asortyment, procesy biznesowe i cele. Tworzymy szczegółowy plan projektu, wybieramy najlepsze rozwiązania i technologie.
+                      Analizuję Twoje potrzeby, asortyment, procesy biznesowe i cele. Tworzę szczegółowy plan projektu, wybieram najlepsze rozwiązania i technologie.
                     </p>
                   </div>
                 </div>
@@ -325,7 +325,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Implementacja UX/UI</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Budujemy interfejs użytkownika z myślą o konwersji. Optymalizujemy doświadczenie użytkownika dla maksymalnej sprzedaży.
+                      Buduję interfejs użytkownika z myślą o konwersji. Optymalizuję doświadczenie użytkownika dla maksymalnej sprzedaży.
                     </p>
                   </div>
                 </div>
@@ -337,7 +337,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Rozwój i Integracje</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Programujemy sklep, integrujemy płatności, systemy kurierskie, fakturowanie i inne niezbędne narzędzia. Tworzymy panel administracyjny.
+                      Programuję sklep, integruję płatności, systemy kurierskie, fakturowanie i inne niezbędne narzędzia. Tworzę panel administracyjny.
                     </p>
                   </div>
                 </div>
@@ -349,7 +349,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Testowanie i Optymalizacja</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Testujemy wszystkie funkcjonalności, proces płatności, zamówienia, integracje i statusy. Optymalizujemy wydajność, bezpieczeństwo i user experience.
+                      Testuję wszystkie funkcjonalności, proces płatności, zamówienia, integracje i statusy. Optymalizuję wydajność, bezpieczeństwo i user experience.
                     </p>
                   </div>
                 </div>
@@ -361,7 +361,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Wdrożenie i Szkolenie</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Wdrażamy system na produkcję, konfigurujemy domenę, SSL, integracje. Szkolimy z obsługi panelu administracyjnego i przekazujemy dokumentację.
+                      Wdrażam system na produkcję, konfigurujemy domenę, SSL, integracje. Szkolę z obsługi panelu administracyjnego i przekazujemy dokumentację.
                     </p>
                   </div>
                 </div>
@@ -373,7 +373,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Wsparcie i Rozwój</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Zapewniamy ciągłe wsparcie techniczne, aktualizacje, monitoring, backup. Pomagamy w rozwoju funkcjonalności i optymalizacji wyników sprzedaży.
+                      Zapewniam ciągłe wsparcie techniczne, aktualizacje, monitoring, backup. Pomagam w rozwoju funkcjonalności i optymalizacji wyników sprzedaży.
                     </p>
                   </div>
                 </div>
@@ -392,7 +392,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
                 href="/#contact"
                 className="inline-block px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors transform hover:scale-105"
               >
-                Skontaktuj Się Z Nami
+                Skontaktuj się ze mną
               </Link>
             </div>
           </div>

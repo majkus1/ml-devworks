@@ -8,7 +8,7 @@ import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from 
 export const metadata: Metadata = {
   title: "Aplikacje webowe i mobilne dla firm | ML DevWorks",
   description:
-    "Tworzymy aplikacje webowe i mobilne dla firm: panele klienta, systemy zamówień, aplikacje iOS/Android i MVP. Skalowalnie i bezpiecznie — wyceń projekt.",
+    "Tworzę aplikacje webowe i mobilne dla firm: panele klienta, systemy zamówień, aplikacje iOS/Android oraz MVP. Skalowalne i bezpieczne.",
   keywords: [
     "aplikacje webowe dla firm",
     "aplikacje mobilne dla biznesu",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Aplikacje webowe i mobilne dla firm | ML DevWorks",
     description:
-      "Projektuję i wdrażam aplikacje web/mobile dla biznesu: od MVP po rozwój gotowego produktu.",
+      "Tworzę aplikacje webowe i mobilne dla firm: panele klienta, systemy zamówień, aplikacje iOS/Android oraz MVP. Skalowalne i bezpieczne.",
     url: "https://ml-devworks.com/uslugi/aplikacje-internetowe-i-mobilne",
     type: "website",
     locale: "pl_PL",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Aplikacje webowe i mobilne dla firm | ML DevWorks",
     description:
-      "Projektuję i wdrażam aplikacje web/mobile dla biznesu: od MVP po rozwój gotowego produktu.",
+      "Tworzę aplikacje webowe i mobilne dla firm: panele klienta, systemy zamówień, aplikacje iOS/Android oraz MVP. Skalowalne i bezpieczne.",
   },
 };
 
@@ -52,7 +52,7 @@ export default function AplikacjeInternetoweIMobilnePage() {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Aplikacje Internetowe i Mobilne",
-    "description": "Tworzymy nowoczesne aplikacje webowe i mobilne z wykorzystaniem najnowszych technologii. Szybkie, bezpieczne i skalowalne rozwiązania. Aplikacje na iOS i Android. Natywne i cross-platform rozwiązania dla Twojego biznesu.",
+    "description": "Tworzę nowoczesne aplikacje webowe i mobilne dla firm: panele klienta, systemy zamówień, MVP oraz aplikacje iOS/Android.",
     "provider": {
       "@type": "Organization",
       "name": "ML DevWorks",
@@ -201,7 +201,7 @@ export default function AplikacjeInternetoweIMobilnePage() {
             {/* Technologies */}
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                Technologie, Których Używamy
+                Technologie, Których Używam
               </h2>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20 text-center">
@@ -243,28 +243,28 @@ export default function AplikacjeInternetoweIMobilnePage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Najnowsze technologie</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Wykorzystujemy najnowsze frameworki i narzędzia, które zapewniają najlepszą wydajność, bezpieczeństwo i skalowalność. Zawsze wybieramy najlepsze rozwiązanie dla Twojego projektu.
+                    Wykorzystuję najnowsze frameworki i narzędzia, które zapewniają najlepszą wydajność, bezpieczeństwo i skalowalność. Zawsze wybieram najlepsze rozwiązanie dla Twojego projektu.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Bezpieczeństwo</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Bezpieczeństwo to priorytet. Implementujemy najlepsze praktyki bezpieczeństwa, szyfrowanie danych, autoryzację i uwierzytelnianie zgodne z najwyższymi standardami.
+                    Bezpieczeństwo to priorytet. Implementuję najlepsze praktyki bezpieczeństwa, szyfrowanie danych, autoryzację i uwierzytelnianie zgodne z najwyższymi standardami.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Skalowalność</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Projektujemy aplikacje z myślą o przyszłości. Architektura, która rośnie wraz z Twoim biznesem. Cloud-native rozwiązania, które automatycznie skalują się w zależności od obciążenia.
+                    Projektuję aplikacje z myślą o przyszłości. Architektura, która rośnie wraz z Twoim biznesem. Cloud-native rozwiązania, które automatycznie skalują się w zależności od obciążenia.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">🎨 Doskonałe UX/UI</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Intuicyjne interfejsy użytkownika, które są nie tylko piękne, ale także funkcjonalne. Projektujemy z myślą o użytkowniku, zapewniając najlepsze doświadczenie.
+                    Intuicyjne interfejsy użytkownika, które są nie tylko piękne, ale także funkcjonalne. Projektuję z myślą o użytkowniku, zapewniając najlepsze doświadczenie.
                   </p>
                 </div>
 
@@ -278,7 +278,7 @@ export default function AplikacjeInternetoweIMobilnePage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Kompleksowa obsługa</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Od koncepcji, przez projektowanie, rozwój, testowanie, wdrożenie, aż po utrzymanie - zapewniamy pełną obsługę na każdym etapie. Wsparcie techniczne i aktualizacje.
+                    Od koncepcji, przez projektowanie, rozwój, testowanie, wdrożenie, aż po utrzymanie - zapewniam pełną obsługę na każdym etapie. Wsparcie techniczne i aktualizacje.
                   </p>
                 </div>
               </div>
@@ -297,7 +297,7 @@ export default function AplikacjeInternetoweIMobilnePage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Analiza i Planowanie</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Analizujemy Twoje potrzeby, cele biznesowe i wymagania techniczne. Tworzymy szczegółowy plan projektu, wybieramy najlepsze technologie i architekturę.
+                      Analizuję Twoje potrzeby, cele biznesowe i wymagania techniczne. Tworzę szczegółowy plan projektu, wybieram najlepsze technologie i architekturę.
                     </p>
                   </div>
                 </div>
@@ -309,7 +309,7 @@ export default function AplikacjeInternetoweIMobilnePage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Implementacja UX/UI</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Budujemy interfejs, który jest intuicyjny i przyjazny dla użytkownika. Dbamy o wysoką jakość doświadczenia użytkownika.
+                      Buduję interfejs, który jest intuicyjny i przyjazny dla użytkownika. Dbam o wysoką jakość doświadczenia użytkownika.
                     </p>
                   </div>
                 </div>
@@ -321,7 +321,7 @@ export default function AplikacjeInternetoweIMobilnePage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Rozwój (Development)</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Programujemy aplikację zgodnie z najlepszymi praktykami. Piszemy czysty, czytelny kod, który jest łatwy w utrzymaniu. Agile development z regularnymi aktualizacjami.
+                      Programuję aplikację zgodnie z najlepszymi praktykami. Piszę czysty, czytelny kod, który jest łatwy w utrzymaniu. Pracuję iteracyjnie i pokazuję regularne aktualizacje.
                     </p>
                   </div>
                 </div>
@@ -345,7 +345,7 @@ export default function AplikacjeInternetoweIMobilnePage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Wdrożenie i Publikacja</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Wdrażamy aplikację na produkcję. Publikujemy w App Store i Google Play (dla aplikacji mobilnych). Konfigurujemy monitoring, backup i infrastrukturę.
+                      Wdrażam aplikację na produkcję. Publikuję w App Store i Google Play (dla aplikacji mobilnych). Konfiguruję monitoring, backup i infrastrukturę.
                     </p>
                   </div>
                 </div>
@@ -357,7 +357,7 @@ export default function AplikacjeInternetoweIMobilnePage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Wsparcie i Utrzymanie</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Zapewniamy ciągłe wsparcie techniczne, aktualizacje, naprawy błędów i rozwój funkcjonalności. Monitorujemy wydajność i reagujemy na potrzeby użytkowników.
+                      Zapewniam ciągłe wsparcie techniczne, aktualizacje, naprawy błędów i rozwój funkcjonalności. Monitoruję wydajność i reaguję na potrzeby użytkowników.
                     </p>
                   </div>
                 </div>
@@ -376,7 +376,7 @@ export default function AplikacjeInternetoweIMobilnePage() {
                 href="/#contact"
                 className="inline-block px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors transform hover:scale-105"
               >
-                Skontaktuj Się Z Nami
+                Skontaktuj się ze mną
               </Link>
             </div>
           </div>

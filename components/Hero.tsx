@@ -9,19 +9,19 @@ interface HeroProps {
 export default function Hero({ lang = "pl" }: HeroProps) {
   const content = {
     pl: {
-      eyebrow: "Doświadczony programista + narzędzia AI",
-      title: "Strony, aplikacje i automatyzacje AI dla firm",
-      lead: "Tworzę rozwiązania, które wspierają sprzedaż, obsługę klientów i pracę zespołu.",
+      eyebrow: "Programowanie wspierane przez AI",
+      title: "Aplikacje dla firm, strony internetowe i automatyzacje AI",
+      lead: "Projektuję aplikacje internetowe, systemy dla firm i automatyzacje AI, które usprawniają sprzedaż, obsługę klientów i pracę zespołu.",
       description:
-        "AI przyspiesza prototyp, ja pilnuję architektury, kodu i jakości.",
+        "AI przyspiesza analizę i prototypowanie. Za architekturę, kod i jakość odpowiadam osobiście.",
       cta: "Opisz swój pomysł",
     },
     en: {
-      eyebrow: "Experienced developer + AI tools",
-      title: "Websites, apps and AI automation for companies",
-      lead: "I build solutions that support sales, customer service, and team operations.",
+      eyebrow: "AI-assisted software development",
+      title: "Business apps, websites and AI automation",
+      lead: "I design web applications, business systems and AI automation that improve sales, customer service and team workflows.",
       description:
-        "AI speeds up the prototype; I own architecture, code, and quality.",
+        "AI speeds up analysis and prototyping. I personally own architecture, code and quality.",
       cta: "Describe your idea",
     },
   };

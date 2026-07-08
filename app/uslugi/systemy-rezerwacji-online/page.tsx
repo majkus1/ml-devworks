@@ -27,7 +27,7 @@ const faq = [
 export const metadata: Metadata = {
   title: "System rezerwacji online dla firm | ML DevWorks",
   description:
-    "Systemy rezerwacji klientów z kalendarzem, płatnościami online, zaliczkami, przypomnieniami i integracją CRM. Dla firm usługowych — umów bezpłatną wycenę.",
+    "Tworzę systemy rezerwacji online z kalendarzem, płatnościami, zaliczkami, przypomnieniami i integracją CRM dla firm usługowych.",
   alternates: {
     canonical: "https://ml-devworks.com/uslugi/systemy-rezerwacji-online",
     languages: {
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "System rezerwacji online dla firm | ML DevWorks",
     description:
-      "Dedykowane systemy rezerwacji z płatnościami, przypomnieniami, panelem administracyjnym i integracjami.",
+      "Tworzę systemy rezerwacji online z kalendarzem, płatnościami, zaliczkami, przypomnieniami i integracją CRM dla firm usługowych.",
     url: "https://ml-devworks.com/uslugi/systemy-rezerwacji-online",
     type: "website",
     locale: "pl_PL",
@@ -148,7 +148,7 @@ export default function OnlineBookingSystemsPage() {
               System rezerwacji online dla firm: klienci, płatności i kalendarz
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed mb-8">
-              Projektujemy dedykowane systemy rezerwacji klientów dla firm usługowych: od prostego kalendarza terminów po płatności online, zaliczki, przypomnienia i integracje z CRM.
+              Projektuję dedykowane systemy rezerwacji klientów dla firm usługowych: od prostego kalendarza terminów po płatności online, zaliczki, przypomnienia i integracje z CRM.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/#contact" className="px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors text-center">

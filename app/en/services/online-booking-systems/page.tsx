@@ -27,7 +27,7 @@ const faq = [
 export const metadata: Metadata = {
   title: "Online booking systems for companies | ML DevWorks",
   description:
-    "We build customer booking systems with availability calendars, online payments, deposits, reminders, admin panels, and CRM integrations for service companies.",
+    "I build online booking systems with availability calendars, payments, deposits, reminders, admin panels and CRM integrations for service companies.",
   alternates: {
     canonical: "https://ml-devworks.com/en/services/online-booking-systems",
     languages: {
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Online booking systems for companies | ML DevWorks",
     description:
-      "Custom booking systems with payments, reminders, admin panels, and business integrations.",
+      "I build online booking systems with availability calendars, payments, deposits, reminders, admin panels and CRM integrations for service companies.",
     url: "https://ml-devworks.com/en/services/online-booking-systems",
     type: "website",
     locale: "en_US",
@@ -148,7 +148,7 @@ export default function OnlineBookingSystemsPageEn() {
               Online booking system for companies: clients, payments, and calendar
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed mb-8">
-              We design custom booking systems for service companies: from a simple appointment calendar to online payments, deposits, reminders, and CRM integrations.
+              I design custom booking systems for service companies: from a simple appointment calendar to online payments, deposits, reminders, and CRM integrations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/en#contact" className="px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors text-center">

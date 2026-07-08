@@ -8,7 +8,7 @@ import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from 
 export const metadata: Metadata = {
   title: "Tworzenie stron internetowych dla firm | ML DevWorks",
   description:
-    "Projektujemy szybkie strony firmowe, landing page i strony ofertowe pod SEO i pozyskiwanie klientów. Zespół z Krakowa — umów bezpłatną wycenę.",
+    "Tworzę szybkie strony firmowe, landing page i strony ofertowe pod SEO, konwersję i pozyskiwanie klientów. Bezpośrednia współpraca z programistą.",
   keywords: [
     "tworzenie stron internetowych dla firm",
     "strona internetowa dla firmy uslugowej",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tworzenie stron internetowych dla firm | ML DevWorks",
     description:
-      "Skuteczne strony WWW dla firm: szybkie, responsywne i przygotowane pod SEO oraz pozyskiwanie zapytań.",
+      "Tworzę szybkie strony firmowe, landing page i strony ofertowe pod SEO, konwersję i pozyskiwanie klientów. Bezpośrednia współpraca z programistą.",
     url: "https://ml-devworks.com/uslugi/strony-internetowe",
     type: "website",
     locale: "pl_PL",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Tworzenie stron internetowych dla firm | ML DevWorks",
     description:
-      "Skuteczne strony WWW dla firm: szybkie, responsywne i przygotowane pod SEO oraz pozyskiwanie zapytań.",
+      "Tworzę szybkie strony firmowe, landing page i strony ofertowe pod SEO, konwersję i pozyskiwanie klientów. Bezpośrednia współpraca z programistą.",
     images: ["https://ml-devworks.com/psi.png"],
   },
 };
@@ -61,7 +61,7 @@ export default function StronyInternetowePage() {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Strony Internetowe",
-    "description": "Tworzymy profesjonalne strony internetowe dostosowane do Twoich potrzeb. Responsywne, szybkie i zoptymalizowane pod SEO. Od prostych stron wizytówkowych po zaawansowane portale.",
+    "description": "Tworzę profesjonalne strony internetowe dla firm. Responsywne, szybkie i zoptymalizowane pod SEO: od landing page po rozbudowane strony ofertowe.",
     "provider": {
       "@type": "Organization",
       "name": "ML DevWorks",
@@ -124,7 +124,7 @@ export default function StronyInternetowePage() {
               Strony internetowe dla firm, które <span className="text-primary">pozyskują klientów</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Tworzymy strony internetowe, które nie tylko wyglądają świetnie, ale także przynoszą realne rezultaty dla Twojego biznesu.
+              Tworzę strony internetowe, które nie tylko wyglądają świetnie, ale także przynoszą realne rezultaty dla Twojego biznesu.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -216,7 +216,7 @@ export default function StronyInternetowePage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">🚀 Szybkość i Wydajność</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Nasze strony ładują się błyskawicznie dzięki optymalizacji kodu, obrazów i wykorzystaniu najnowszych technologii. Szybka strona to lepsze doświadczenie użytkownika i wyższe pozycje w Google.
+                    Strony ładują się szybko dzięki optymalizacji kodu, obrazów i wykorzystaniu nowoczesnych technologii. Szybka strona to lepsze doświadczenie użytkownika i wyższe pozycje w Google.
                   </p>
                 </div>
 
@@ -237,21 +237,21 @@ export default function StronyInternetowePage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">🎨 Nowoczesny Design</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Tworzymy strony, które nie tylko są funkcjonalne, ale także pięknie wyglądają. Nowoczesny, minimalistyczny design, który przyciąga uwagę i buduje zaufanie.
+                    Tworzę strony, które nie tylko są funkcjonalne, ale także pięknie wyglądają. Nowoczesny, minimalistyczny design, który przyciąga uwagę i buduje zaufanie.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">🛠️ Najnowsze Technologie</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Wykorzystujemy najnowsze technologie webowe (Next.js, React, TypeScript) oraz narzędzia AI, które przyspieszają proces tworzenia bez kompromisów w jakości.
+                    Wykorzystuję najnowsze technologie webowe (Next.js, React, TypeScript) oraz narzędzia AI, które przyspieszają proces tworzenia bez kompromisów w jakości.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Kompleksowa obsługa</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Od koncepcji, przez projektowanie, wdrożenie, aż po utrzymanie - zapewniamy pełną obsługę na każdym etapie. Stawiamy na długotrwałą współpracę.
+                    Od koncepcji, przez projektowanie, wdrożenie, aż po utrzymanie - zapewniam pełną obsługę na każdym etapie. Stawiam na długotrwałą współpracę.
                   </p>
                 </div>
               </div>
@@ -282,7 +282,7 @@ export default function StronyInternetowePage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Programowanie</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Implementujemy projekt używając najnowszych technologii. Tworzymy kod wysokiej jakości, zoptymalizowany i łatwy w utrzymaniu.
+                      Implementuję projekt używając najnowszych technologii. Tworzę kod wysokiej jakości, zoptymalizowany i łatwy w utrzymaniu.
                     </p>
                   </div>
                 </div>
@@ -294,7 +294,7 @@ export default function StronyInternetowePage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Testowanie i Optymalizacja</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Testujemy stronę na różnych urządzeniach i przeglądarkach. Optymalizujemy wydajność i SEO. Wszystko musi działać perfekcyjnie.
+                      Testuję stronę na różnych urządzeniach i przeglądarkach. Optymalizuję wydajność i SEO. Wszystko musi działać perfekcyjnie.
                     </p>
                   </div>
                 </div>
@@ -306,7 +306,7 @@ export default function StronyInternetowePage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Wdrożenie i Wsparcie</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Wdrażamy stronę na produkcję i zapewniamy pełne wsparcie techniczne. Pomagamy w utrzymaniu, aktualizacjach i rozwoju.
+                      Wdrażam stronę na produkcję i zapewniam pełne wsparcie techniczne. Pomagam w utrzymaniu, aktualizacjach i rozwoju.
                     </p>
                   </div>
                 </div>
@@ -325,7 +325,7 @@ export default function StronyInternetowePage() {
                 href="/#contact"
                 className="inline-block px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors transform hover:scale-105"
               >
-                Skontaktuj Się Z Nami
+                Skontaktuj się ze mną
               </Link>
             </div>
           </div>

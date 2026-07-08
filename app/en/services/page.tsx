@@ -10,7 +10,7 @@ const services = getServices("en");
 export const metadata: Metadata = {
   title: "Software development services for companies | ML DevWorks",
   description:
-    "Websites, web and mobile apps, AI automation, online stores, booking systems, DevOps and maintenance. Software development services for companies.",
+    "Business websites, web and mobile apps, AI automation, online stores, booking systems, DevOps, fixes and maintenance for companies.",
   alternates: {
     canonical: "https://ml-devworks.com/en/services",
     languages: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Software development services | ML DevWorks",
     description:
-      "Websites, apps, AI automation, e-commerce, booking systems, DevOps, fixes, and maintenance.",
+      "Business websites, web and mobile apps, AI automation, online stores, booking systems, DevOps, fixes and maintenance for companies.",
     url: "https://ml-devworks.com/en/services",
     type: "website",
     locale: "en_US",

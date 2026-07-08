@@ -10,8 +10,8 @@ const inter = Inter({ subsets: ["latin", "latin-ext"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ml-devworks.com"),
-  title: "Strony, aplikacje i automatyzacje AI dla firm | ML DevWorks",
-  description: "Doświadczony programista tworzy strony internetowe, aplikacje, systemy rezerwacji i automatyzacje AI dla firm. Bezpośrednia współpraca i szybkie prototypy.",
+  title: "Aplikacje dla firm, strony i automatyzacje AI | ML DevWorks",
+  description: "Programista z Krakowa tworzy aplikacje dla firm, strony internetowe, systemy rezerwacji, integracje API/CRM i automatyzacje AI. Bezpośrednia współpraca.",
   keywords: ["strony internetowe", "aplikacje webowe", "aplikacje mobilne", "sklepy internetowe", "devops", "wdrożenia w chmurze", "cloud deployment", "development"],
   authors: [{ name: "ML DevWorks" }],
   creator: "ML DevWorks",
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     locale: "pl_PL",
     url: "https://ml-devworks.com",
     siteName: "ML DevWorks",
-    title: "Strony, aplikacje i automatyzacje AI dla firm | ML DevWorks",
-    description: "Doświadczony programista tworzy strony internetowe, aplikacje, systemy rezerwacji i automatyzacje AI dla firm. Bezpośrednia współpraca i szybkie prototypy.",
+    title: "Aplikacje dla firm, strony i automatyzacje AI | ML DevWorks",
+    description: "Programista z Krakowa tworzy aplikacje dla firm, strony internetowe, systemy rezerwacji, integracje API/CRM i automatyzacje AI. Bezpośrednia współpraca.",
     images: [
       {
         url: "https://ml-devworks.com/ogimg.png",
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Strony, aplikacje i automatyzacje AI dla firm | ML DevWorks",
-    description: "Doświadczony programista tworzy strony internetowe, aplikacje, systemy rezerwacji i automatyzacje AI dla firm. Bezpośrednia współpraca i szybkie prototypy.",
+    title: "Aplikacje dla firm, strony i automatyzacje AI | ML DevWorks",
+    description: "Programista z Krakowa tworzy aplikacje dla firm, strony internetowe, systemy rezerwacji, integracje API/CRM i automatyzacje AI. Bezpośrednia współpraca.",
     images: ["https://ml-devworks.com/ogimg.png"],
   },
   alternates: {

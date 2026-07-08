@@ -8,7 +8,7 @@ import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from 
 export const metadata: Metadata = {
   title: "Business Process Automation and AI Agents | ML DevWorks",
   description:
-    "We implement AI agents and business process automation: customer support, workflows and integrations. Reduce manual work and speed up operations.",
+    "I implement AI agents and business process automation for customer service, workflows and tool integrations. Reduce manual work and speed up operations.",
   keywords: [
     "business process automation",
     "ai agents for business",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Business Process Automation and AI Agents | ML DevWorks",
     description:
-      "AI-powered automation that reduces costs and accelerates your business workflows.",
+      "I implement AI agents and business process automation for customer service, workflows and tool integrations. Reduce manual work and speed up operations.",
     url: "https://ml-devworks.com/en/services/automation-and-ai",
     type: "website",
     locale: "en_US",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Business Process Automation and AI Agents | ML DevWorks",
     description:
-      "AI-powered automation that reduces costs and accelerates your business workflows.",
+      "I implement AI agents and business process automation for customer service, workflows and tool integrations. Reduce manual work and speed up operations.",
   },
 };
 
@@ -52,7 +52,7 @@ export default function AutomationAndAIPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Automation & AI",
-    "description": "Intelligent AI agents and business process automation systems. Automate repetitive tasks and increase your business efficiency.",
+    "description": "I implement AI agents and business process automation for customer service, workflows, lead qualification and tool integrations.",
     "provider": {
       "@type": "Organization",
       "name": "ML DevWorks",
@@ -250,7 +250,7 @@ export default function AutomationAndAIPage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-amber-400">Latest AI technologies</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    We use the latest AI models, including GPT, Claude, and other advanced systems. We always choose the best tool for a specific use case.
+                    I use the latest AI models, including GPT, Claude, and other advanced systems. We always choose the best tool for a specific use case.
                   </p>
                 </div>
 
@@ -271,7 +271,7 @@ export default function AutomationAndAIPage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Security and privacy</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Data security is a priority. We implement best practices, encryption, access control, and GDPR compliance. Your data is safe.
+                    Data security is a priority. I implement best practices, encryption, access control, and GDPR compliance. Your data is safe.
                   </p>
                 </div>
 
@@ -304,7 +304,7 @@ export default function AutomationAndAIPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Process Analysis</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We analyze your business processes, identify areas for automation, and assess potential benefits. We create process maps and prioritize tasks.
+                      I analyze your business processes, identify areas for automation, and assess potential benefits. I create process maps and prioritize tasks.
                     </p>
                   </div>
                 </div>
@@ -316,7 +316,7 @@ export default function AutomationAndAIPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Solution Design</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We design the automation architecture, choose appropriate AI technologies and tools. We create a detailed implementation plan with a schedule.
+                      I design the automation architecture, choose appropriate AI technologies and tools. I create a detailed implementation plan with a schedule.
                     </p>
                   </div>
                 </div>
@@ -328,7 +328,7 @@ export default function AutomationAndAIPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Development & Implementation</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We program the automation system, integrate with existing systems, train AI models. We create interfaces and configure workflows.
+                      I program the automation system, integrate with existing systems, train AI models. I create interfaces and configure workflows.
                     </p>
                   </div>
                 </div>
@@ -340,7 +340,7 @@ export default function AutomationAndAIPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Testing & Optimization</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We test the system on real data, check AI accuracy, optimize performance. Beta testing with users and collecting feedback.
+                      I test the system on real data, check AI accuracy, optimize performance. Beta testing with users and collecting feedback.
                     </p>
                   </div>
                 </div>
@@ -352,7 +352,7 @@ export default function AutomationAndAIPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Deployment & Training</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We deploy the system to production, train users, document processes. We ensure smooth transition and support during launch.
+                      I deploy the system to production, train users, document processes. I ensure smooth transition and support during launch.
                     </p>
                   </div>
                 </div>

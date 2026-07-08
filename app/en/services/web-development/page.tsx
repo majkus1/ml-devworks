@@ -8,7 +8,7 @@ import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from 
 export const metadata: Metadata = {
   title: "Web development for businesses | ML DevWorks",
   description:
-    "We build fast business websites, service pages and conversion-focused landing pages with technical SEO that turn traffic into qualified leads.",
+    "I build fast business websites, service pages and conversion-focused landing pages with technical SEO that turn traffic into qualified leads.",
   keywords: [
     "web development for businesses",
     "website development company",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "responsive website development",
     "fast loading website development",
     "small business web development",
-    "custom website development agency",
+    "custom website developer",
     "web development krakow",
     "lead generation website development",
   ],
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Web Development for Businesses | ML DevWorks",
     description:
-      "Fast business websites built for technical SEO, clear offers, lead generation, and strong Core Web Vitals.",
+      "I build fast business websites, service pages and conversion-focused landing pages with technical SEO that turn traffic into qualified leads.",
     url: "https://ml-devworks.com/en/services/web-development",
     type: "website",
     locale: "en_US",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Web Development for Businesses | ML DevWorks",
     description:
-      "Fast business websites built for technical SEO, clear offers, lead generation, and strong Core Web Vitals.",
+      "I build fast business websites, service pages and conversion-focused landing pages with technical SEO that turn traffic into qualified leads.",
   },
 };
 
@@ -52,7 +52,7 @@ export default function WebDevelopmentPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Web Development",
-    "description": "We create professional websites tailored to your needs. Responsive, fast, and SEO-optimized. From simple business cards to advanced portals.",
+    "description": "I build professional business websites that are responsive, fast, and SEO-ready: from landing pages to clear service websites.",
     "provider": {
       "@type": "Organization",
       "name": "ML DevWorks",
@@ -115,7 +115,7 @@ export default function WebDevelopmentPage() {
               Business websites that <span className="text-primary">generate leads</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              We create websites that not only look great but also deliver real results for your business.
+              I create websites that not only look great but also deliver real results for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -228,14 +228,14 @@ export default function WebDevelopmentPage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">🎨 Modern Design</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    We create websites that are not only functional but also beautiful. Modern, minimalist design that attracts attention and builds trust.
+                    I create websites that are not only functional but also beautiful. Modern, minimalist design that attracts attention and builds trust.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">🛠️ Latest Technologies</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    We use the latest web technologies (Next.js, React, TypeScript) and AI tools that speed up the creation process without compromising quality.
+                    I use the latest web technologies (Next.js, React, TypeScript) and AI tools that speed up the creation process without compromising quality.
                   </p>
                 </div>
 
@@ -261,7 +261,7 @@ export default function WebDevelopmentPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Consultation & Analysis</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We discuss your needs, business goals, and expectations. We analyze the competition and create a strategy.
+                      We discuss your needs, business goals, and expectations. I analyze the competition and create a strategy.
                     </p>
                   </div>
                 </div>
@@ -273,7 +273,7 @@ export default function WebDevelopmentPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Development</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We implement the project using the latest technologies. We create high-quality, optimized, and maintainable code.
+                      I implement the project using the latest technologies. I create high-quality, optimized, and maintainable code.
                     </p>
                   </div>
                 </div>
@@ -285,7 +285,7 @@ export default function WebDevelopmentPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Testing & Optimization</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We test the website on various devices and browsers. We optimize performance and SEO. Everything must work perfectly.
+                      I test the website on various devices and browsers. I optimize performance and SEO. Everything must work perfectly.
                     </p>
                   </div>
                 </div>
@@ -297,7 +297,7 @@ export default function WebDevelopmentPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Deployment & Support</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We deploy the website to production and provide full technical support. We help with maintenance, updates, and development.
+                      I deploy the website to production and provide full technical support. I help with maintenance, updates, and development.
                     </p>
                   </div>
                 </div>

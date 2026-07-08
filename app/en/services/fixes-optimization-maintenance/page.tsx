@@ -8,7 +8,7 @@ import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from 
 export const metadata: Metadata = {
   title: "Website & app fixes and optimization | ML DevWorks",
   description:
-    "We fix broken websites and web apps, improve Core Web Vitals and technical SEO, and provide ongoing maintenance. Fast diagnostics and clear scope.",
+    "I fix broken websites and web apps, improve Core Web Vitals and technical SEO, and provide ongoing maintenance. Fast diagnostics and clear scope.",
   keywords: [
     "website bug fixing service",
     "web app troubleshooting",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Website & App Fixes | ML DevWorks",
     description:
-      "Bug fixing, performance tuning, technical SEO repairs, and reliable ongoing support.",
+      "I fix broken websites and web apps, improve Core Web Vitals and technical SEO, and provide ongoing maintenance. Fast diagnostics and clear scope.",
     url: "https://ml-devworks.com/en/services/fixes-optimization-maintenance",
     type: "website",
     locale: "en_US",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Website & App Fixes | ML DevWorks",
     description:
-      "Bug fixing, performance tuning, technical SEO repairs, and reliable ongoing support.",
+      "I fix broken websites and web apps, improve Core Web Vitals and technical SEO, and provide ongoing maintenance. Fast diagnostics and clear scope.",
   },
 };
 
@@ -299,7 +299,7 @@ export default function FixesOptimizationMaintenancePage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Flexible approach</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    We adapt to your needs - from one-time fixes to long-term maintenance contracts. We work with projects in various technologies and sizes.
+                    We adapt to your needs - from one-time fixes to long-term maintenance contracts. I work with projects in various technologies and sizes.
                   </p>
                 </div>
               </div>
@@ -318,7 +318,7 @@ export default function FixesOptimizationMaintenancePage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Analysis & Diagnostics</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We analyze your project, identify problems, bugs, and areas for optimization. We create a detailed report with recommendations and an action plan.
+                      I analyze your project, identify problems, bugs, and areas for optimization. I create a detailed report with recommendations and an action plan.
                     </p>
                   </div>
                 </div>
@@ -330,7 +330,7 @@ export default function FixesOptimizationMaintenancePage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Quote & Plan</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We present a detailed quote and schedule. We agree on priorities and scope of work. We create an action plan divided into stages.
+                      I present a detailed quote and schedule. I agree on priorities and scope of work. I create an action plan divided into stages.
                     </p>
                   </div>
                 </div>
@@ -342,7 +342,7 @@ export default function FixesOptimizationMaintenancePage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Implementation</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We implement fixes and optimizations according to the plan. We work in a test environment, test changes, and ensure everything works correctly.
+                      I implement fixes and optimizations according to the plan. I work in a test environment, test changes, and ensure everything works correctly.
                     </p>
                   </div>
                 </div>
@@ -354,7 +354,7 @@ export default function FixesOptimizationMaintenancePage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Testing & Verification</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We test all changes, verify fixes, check performance and functionality. We ensure everything works better than before the changes.
+                      I test all changes, verify fixes, check performance and functionality. I ensure everything works better than before the changes.
                     </p>
                   </div>
                 </div>
@@ -366,7 +366,7 @@ export default function FixesOptimizationMaintenancePage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Deployment & Documentation</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We deploy changes to production, document fixes and optimizations. We provide a results report and recommendations for the future.
+                      I deploy changes to production, document fixes and optimizations. I provide a results report and recommendations for the future.
                     </p>
                   </div>
                 </div>
@@ -378,7 +378,7 @@ export default function FixesOptimizationMaintenancePage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Monitoring & Support</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We monitor results after deployment, collect feedback, respond to any problems. We provide continuous support and further optimizations.
+                      We monitor results after deployment, collect feedback, respond to any problems. I provide continuous support and further optimizations.
                     </p>
                   </div>
                 </div>

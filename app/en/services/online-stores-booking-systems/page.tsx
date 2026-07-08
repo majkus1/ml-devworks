@@ -8,7 +8,7 @@ import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from 
 export const metadata: Metadata = {
   title: "E-commerce Development for Businesses | ML DevWorks",
   description:
-    "We build B2C and B2B online stores with product catalogs, checkout, payment gateways, shipping integrations, ERP/CRM integrations, and sales automation.",
+    "I build B2C and B2B online stores with product catalogs, checkout, payment gateways, shipping integrations, ERP/CRM and sales automation.",
   keywords: [
     "ecommerce development company",
     "online store development",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "E-commerce Development for Businesses | ML DevWorks",
     description:
-      "Online stores built for product sales, integrations, checkout conversion, and scalable operations.",
+      "I build B2C and B2B online stores with product catalogs, checkout, payment gateways, shipping integrations, ERP/CRM and sales automation.",
     url: "https://ml-devworks.com/en/services/online-stores-booking-systems",
     type: "website",
     locale: "en_US",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "E-commerce Development for Businesses | ML DevWorks",
     description:
-      "Online stores built for product sales, integrations, checkout conversion, and scalable operations.",
+      "I build B2C and B2B online stores with product catalogs, checkout, payment gateways, shipping integrations, ERP/CRM and sales automation.",
   },
 };
 
@@ -50,7 +50,7 @@ export default function OnlineStoresBookingSystemsPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "E-commerce development for businesses",
-    "description": "Complete e-commerce solutions with payment gateways, shipping integrations, product management, ERP/CRM integrations, and sales analytics.",
+    "description": "I build online stores and e-commerce systems for companies: product catalogs, checkout, payment gateways, shipping and ERP/CRM integrations.",
     "provider": {
       "@type": "Organization",
       "name": "ML DevWorks",
@@ -113,7 +113,7 @@ export default function OnlineStoresBookingSystemsPage() {
               Online stores and <span className="text-primary">e-commerce development</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              We design B2C and B2B stores with checkout, payment gateways, shipping integrations, product catalogs, ERP/CRM integrations, and sales analytics.
+              I design B2C and B2B stores with checkout, payment gateways, shipping integrations, product catalogs, ERP/CRM integrations, and sales analytics.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -264,7 +264,7 @@ export default function OnlineStoresBookingSystemsPage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">💰 Conversion Optimization</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    We design with conversion in mind. We optimize the checkout process, simplify forms, improve UX - all to increase sales.
+                    I design with conversion in mind. I optimize the checkout process, simplify forms, improve UX - all to increase sales.
                   </p>
                 </div>
 
@@ -311,7 +311,7 @@ export default function OnlineStoresBookingSystemsPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Analysis & Planning</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We analyze your needs, inventory, business processes, and goals. We create a detailed project plan, choose the best solutions and technologies.
+                      I analyze your needs, inventory, business processes, and goals. I create a detailed project plan, choose the best solutions and technologies.
                     </p>
                   </div>
                 </div>
@@ -323,7 +323,7 @@ export default function OnlineStoresBookingSystemsPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">UX/UI Implementation</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We build the user interface with conversion in mind. We optimize user experience for maximum sales.
+                      I build the user interface with conversion in mind. I optimize user experience for maximum sales.
                     </p>
                   </div>
                 </div>
@@ -335,7 +335,7 @@ export default function OnlineStoresBookingSystemsPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Development & Integrations</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We program the store, integrate payments, courier systems, invoicing, and other necessary tools. We create an admin panel.
+                      I program the store, integrate payments, courier systems, invoicing, and other necessary tools. I create an admin panel.
                     </p>
                   </div>
                 </div>
@@ -347,7 +347,7 @@ export default function OnlineStoresBookingSystemsPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Testing & Optimization</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We test all features, payment flows, orders, integrations, and statuses. We optimize performance, security, and user experience.
+                      I test all features, payment flows, orders, integrations, and statuses. I optimize performance, security, and user experience.
                     </p>
                   </div>
                 </div>
@@ -359,7 +359,7 @@ export default function OnlineStoresBookingSystemsPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Deployment & Training</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We deploy the system to production, configure domain, SSL, integrations. We train on admin panel usage and provide documentation.
+                      I deploy the system to production, configure domain, SSL, integrations. I train on admin panel usage and provide documentation.
                     </p>
                   </div>
                 </div>
@@ -371,7 +371,7 @@ export default function OnlineStoresBookingSystemsPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Support & Development</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We provide continuous technical support, updates, monitoring, backup. We help with feature development and sales performance optimization.
+                      I provide continuous technical support, updates, monitoring, backup. I help with feature development and sales performance optimization.
                     </p>
                   </div>
                 </div>

@@ -51,7 +51,7 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
       pains: ["The website looks fine but does not generate leads.", "The website is slow, weak on mobile, or hard to index.", "The offer is unclear for B2B buyers and search engines."],
       deliverables: ["Content architecture", "Responsive frontend", "Technical SEO and schema", "Contact forms and analytics"],
       industries: ["service companies", "B2B", "local businesses", "consultants and experts"],
-      proof: "We focus on Core Web Vitals, clear offer structure, and code that can be developed further.",
+      proof: "I focus on Core Web Vitals, clear offer structure, and code that can be developed further.",
       price: "Usually from PLN 3,500 net for a simple business website; larger websites are estimated by scope.",
       timeline: "Usually 1-3 weeks, depending on pages, content, and integrations.",
       faq: [
@@ -72,7 +72,7 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
       pains: ["Procesy są obsługiwane w arkuszach i wiadomościach email.", "Zespół traci czas na ręczne przepisywanie danych.", "Gotowe narzędzia nie pasują do modelu biznesowego."],
       deliverables: ["Analiza wymagań", "UX/UI i frontend", "Backend i baza danych", "Panel administracyjny i integracje"],
       industries: ["SaaS", "usługi", "logistyka", "firmy operacyjne"],
-      proof: "Budujemy aplikacje z myślą o utrzymaniu: role użytkowników, walidacja danych, monitoring i możliwość dalszej rozbudowy.",
+      proof: "Buduję aplikacje z myślą o utrzymaniu: role użytkowników, walidacja danych, monitoring i możliwość dalszej rozbudowy.",
       price: "MVP aplikacji najczęściej od 12 000 zł netto; systemy produkcyjne wyceniamy etapami.",
       timeline: "Zwykle 2-8 tygodni dla MVP lub pierwszej wersji produkcyjnej.",
       faq: [
@@ -91,7 +91,7 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
       pains: ["Processes live in spreadsheets and email.", "The team wastes time re-entering data.", "Off-the-shelf tools do not fit the business model."],
       deliverables: ["Requirements analysis", "UX/UI and frontend", "Backend and database", "Admin panel and integrations"],
       industries: ["SaaS", "services", "logistics", "operations-heavy companies"],
-      proof: "We build maintainable applications with user roles, validation, monitoring, and room for future development.",
+      proof: "I build maintainable applications with user roles, validation, monitoring, and room for future development.",
       price: "Application MVPs usually start from PLN 12,000 net; production systems are estimated in stages.",
       timeline: "Usually 2-8 weeks for an MVP or first production version.",
       faq: [
@@ -116,9 +116,9 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
       price: "Proste automatyzacje od 4 000 zł netto; agenci AI i integracje wielosystemowe wyceniamy po analizie.",
       timeline: "Pierwsze automatyzacje zwykle 3-14 dni roboczych.",
       faq: [
-        { q: "Od czego zacząć automatyzację procesów?", a: "Najpierw wybieramy powtarzalny proces z dużą liczbą ręcznych kroków i mierzalnym kosztem czasu." },
-        { q: "Czy agenci AI mogą działać z CRM lub formularzami?", a: "Tak. Integrujemy agentów AI z CRM, formularzami, bazami danych, pocztą i narzędziami operacyjnymi." },
-        { q: "Jak liczyć ROI automatyzacji?", a: "Porównujemy koszt wdrożenia z oszczędnością czasu, redukcją błędów, szybszą obsługą leadów i wzrostem przepustowości zespołu." },
+        { q: "Od czego zacząć automatyzację procesów?", a: "Najpierw wybieram powtarzalny proces z dużą liczbą ręcznych kroków i mierzalnym kosztem czasu." },
+        { q: "Czy agenci AI mogą działać z CRM lub formularzami?", a: "Tak. Integruję agentów AI z CRM, formularzami, bazami danych, pocztą i narzędziami operacyjnymi." },
+        { q: "Jak liczyć ROI automatyzacji?", a: "Porównuję koszt wdrożenia z oszczędnością czasu, redukcją błędów, szybszą obsługą leadów i wzrostem przepustowości zespołu." },
       ],
       relatedPosts: [
         { title: "Kiedy firmie opłaca się automatyzacja procesów z AI?", href: "/blog/kiedy-firmie-oplaca-sie-automatyzacja-procesow-z-ai" },
@@ -131,13 +131,13 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
       pains: ["Lead handling is slow or chaotic.", "Data is copied between tools manually.", "The team is not sure which processes to automate first."],
       deliverables: ["Process map", "Workflow automations", "AI agents and chatbots", "CRM, form, and API integrations"],
       industries: ["B2B sales", "customer support", "e-commerce", "service companies"],
-      proof: "We design automation around measurable impact: less manual work, faster response times, and fewer data errors.",
+      proof: "I design automation around measurable impact: less manual work, faster response times, and fewer data errors.",
       price: "Simple automations from PLN 4,000 net; AI agents and multi-system integrations are estimated after analysis.",
       timeline: "First automations usually take 3-14 business days.",
       faq: [
         { q: "Where should process automation start?", a: "Start with a repetitive process with many manual steps and a measurable time cost." },
-        { q: "Can AI agents work with CRM or forms?", a: "Yes. We integrate AI agents with CRM, forms, databases, email, and operational tools." },
-        { q: "How do you calculate automation ROI?", a: "We compare implementation cost with time saved, error reduction, faster lead handling, and team capacity gains." },
+        { q: "Can AI agents work with CRM or forms?", a: "Yes. I integrate AI agents with CRM, forms, databases, email, and operational tools." },
+        { q: "How do you calculate automation ROI?", a: "I compare implementation cost with time saved, error reduction, faster lead handling, and team capacity gains." },
       ],
       relatedPosts: [
         { title: "When AI process automation is worth it", href: "/en/blog/when-ai-process-automation-is-worth-it-for-business" },
@@ -152,12 +152,12 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
       pains: ["Sprzedaż online jest rozproszona między formularzami, wiadomościami i ręczną obsługą.", "Sklep nie integruje się z magazynem, fakturowaniem, CRM albo analityką.", "Proces zakupowy jest zbyt długi i obniża konwersję na mobile."],
       deliverables: ["Katalog produktów i wariantów", "Koszyk, checkout i płatności online", "Integracje dostaw, faktur, ERP/CRM", "Analityka sprzedaży i automatyzacje"],
       industries: ["e-commerce B2C", "sprzedaż B2B", "marki produktowe", "dystrybutorzy i producenci"],
-      proof: "Projektujemy ścieżkę zakupową tak, żeby była krótka, mierzalna, wygodna na telefonie i gotowa do dalszej optymalizacji sprzedaży.",
+      proof: "Projektuję ścieżkę zakupową tak, żeby była krótka, mierzalna, wygodna na telefonie i gotowa do dalszej optymalizacji sprzedaży.",
       price: "Sklepy internetowe zwykle od 7 000 zł netto; platformy B2B/B2C i większe integracje wyceniamy po analizie katalogu oraz procesów.",
       timeline: "Zwykle 2-4 tygodnie.",
       faq: [
-        { q: "Czy sklep może obsługiwać płatności online?", a: "Tak. Integrujemy płatności kartą, szybkie przelewy, BLIK, Stripe, Przelewy24 lub inne bramki dopasowane do rynku." },
-        { q: "Czy sklep może integrować się z CRM lub ERP?", a: "Tak. Integrujemy sprzedaż, zamówienia, klientów i stany magazynowe z narzędziami zaplecza." },
+        { q: "Czy sklep może obsługiwać płatności online?", a: "Tak. Integruję płatności kartą, szybkie przelewy, BLIK, Stripe, Przelewy24 lub inne bramki dopasowane do rynku." },
+        { q: "Czy sklep może integrować się z CRM lub ERP?", a: "Tak. Integruję sprzedaż, zamówienia, klientów i stany magazynowe z narzędziami zaplecza." },
         { q: "Czy lepiej wybrać WooCommerce, Shopify czy dedykowany sklep?", a: "Dobór zależy od katalogu, integracji, budżetu i planu rozwoju. Prosty sklep może działać na gotowej platformie, a nietypowy model sprzedaży często wymaga dedykowanych elementów." },
       ],
       relatedPosts: [
@@ -171,13 +171,13 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
       pains: ["Online sales are scattered across forms, messages, and manual handling.", "The store is not connected to inventory, invoicing, CRM, or analytics.", "The checkout flow is too long and lowers mobile conversion."],
       deliverables: ["Product catalog and variants", "Cart, checkout, and online payments", "Shipping, invoicing, ERP/CRM integrations", "Sales analytics and automation"],
       industries: ["B2C e-commerce", "B2B commerce", "product brands", "distributors and manufacturers"],
-      proof: "We design purchase flows to be short, measurable, mobile-friendly, and ready for ongoing sales optimization.",
+      proof: "I design purchase flows to be short, measurable, mobile-friendly, and ready for ongoing sales optimization.",
       price: "Online stores usually start from PLN 7,000 net; larger B2B/B2C platforms and integrations are estimated after catalog and process analysis.",
       timeline: "Usually 2-4 weeks.",
       faq: [
-        { q: "Can an online store collect payments?", a: "Yes. We integrate card payments, fast bank transfers, BLIK, Stripe, Przelewy24, or other gateways matched to the market." },
-        { q: "Can an online store integrate with CRM or ERP?", a: "Yes. We integrate sales, orders, customers, and inventory with back office tools." },
-        { q: "Should we choose WooCommerce, Shopify, or a custom store?", a: "The choice depends on catalog size, integrations, budget, and growth plans. A simple store can use a ready platform, while unusual sales workflows often need custom elements." },
+        { q: "Can an online store collect payments?", a: "Yes. I integrate card payments, fast bank transfers, BLIK, Stripe, Przelewy24, or other gateways matched to the market." },
+        { q: "Can an online store integrate with CRM or ERP?", a: "Yes. I integrate sales, orders, customers, and inventory with back office tools." },
+        { q: "Should I choose WooCommerce, Shopify, or a custom store?", a: "The choice depends on catalog size, integrations, budget, and growth plans. A simple store can use a ready platform, while unusual sales workflows often need custom elements." },
       ],
       relatedPosts: [
         { title: "Business system integration: API, CRM, ERP", href: "/en/blog/business-system-integration-api-crm-erp-how-to-start" },
@@ -196,9 +196,9 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
       price: "Podstawowe uporządkowanie deploymentu zwykle od 4 500 zł netto; stałe utrzymanie wyceniamy miesięcznie.",
       timeline: "Zwykle 2-10 dni roboczych dla pierwszego stabilnego pipeline.",
       faq: [
-        { q: "Czy możecie skonfigurować CI/CD?", a: "Tak. Konfigurujemy pipeline z testami, buildem i deploymentem na wybrane środowisko." },
-        { q: "Czy pomagacie obniżyć koszty chmury?", a: "Tak. Analizujemy zasoby, cache, skalowanie i konfigurację usług, żeby ograniczyć niepotrzebne koszty." },
-        { q: "Czy DevOps obejmuje monitoring?", a: "Tak. Możemy wdrożyć monitoring, alerty, logi i podstawowe procedury reakcji na incydenty." },
+        { q: "Czy możesz skonfigurować CI/CD?", a: "Tak. Konfiguruję pipeline z testami, buildem i deploymentem na wybrane środowisko." },
+        { q: "Czy pomagasz obniżyć koszty chmury?", a: "Tak. Analizuję zasoby, cache, skalowanie i konfigurację usług, żeby ograniczyć niepotrzebne koszty." },
+        { q: "Czy DevOps obejmuje monitoring?", a: "Tak. Mogę wdrożyć monitoring, alerty, logi i podstawowe procedury reakcji na incydenty." },
       ],
       relatedPosts: [
         { title: "Czy AI wystarczy do stworzenia strony lub aplikacji?", href: "/blog/czy-ai-wystarczy-do-stworzenia-strony-lub-aplikacji" },
@@ -214,9 +214,9 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
       price: "Basic deployment cleanup usually starts from PLN 4,500 net; ongoing maintenance is estimated monthly.",
       timeline: "Usually 2-10 business days for the first stable pipeline.",
       faq: [
-        { q: "Can you configure CI/CD?", a: "Yes. We configure pipelines with tests, builds, and deployment to the chosen environment." },
-        { q: "Can you help reduce cloud costs?", a: "Yes. We analyze resources, cache, scaling, and service configuration to reduce unnecessary cost." },
-        { q: "Does DevOps include monitoring?", a: "Yes. We can implement monitoring, alerts, logs, and basic incident response procedures." },
+        { q: "Can you configure CI/CD?", a: "Yes. I configure pipelines with tests, builds, and deployment to the chosen environment." },
+        { q: "Can you help reduce cloud costs?", a: "Yes. I analyze resources, cache, scaling, and service configuration to reduce unnecessary cost." },
+        { q: "Does DevOps include monitoring?", a: "Yes. I can implement monitoring, alerts, logs, and basic incident response procedures." },
       ],
       relatedPosts: [
         { title: "Is AI enough to build a website or app?", href: "/en/blog/is-ai-enough-to-build-a-website-or-app" },
@@ -235,7 +235,7 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
       timeline: "Diagnoza zwykle 1-3 dni robocze, wdrożenie poprawek zależy od zakresu.",
       faq: [
         { q: "Czy naprawiacie projekty po innych wykonawcach?", a: "Tak. Przejmujemy istniejące strony i aplikacje, wykonujemy audyt, porządkujemy kod i planujemy poprawki etapami." },
-        { q: "Czy możecie poprawić Core Web Vitals?", a: "Tak. Analizujemy LCP, CLS, INP, obrazy, JS, cache i sposób renderowania krytycznych elementów strony." },
+        { q: "Czy możecie poprawić Core Web Vitals?", a: "Tak. Analizuję LCP, CLS, INP, obrazy, JS, cache i sposób renderowania krytycznych elementów strony." },
         { q: "Czy oferujecie stałe utrzymanie?", a: "Tak. Możemy ustalić miesięczny zakres wsparcia, aktualizacji, monitoringu i rozwoju." },
       ],
       relatedPosts: [
@@ -254,7 +254,7 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
       timeline: "Diagnosis usually takes 1-3 business days; implementation depends on scope.",
       faq: [
         { q: "Do you fix projects after other vendors?", a: "Yes. We take over existing websites and applications, audit them, organize the code, and plan fixes in stages." },
-        { q: "Can you improve Core Web Vitals?", a: "Yes. We analyze LCP, CLS, INP, images, JavaScript, cache, and critical rendering." },
+        { q: "Can you improve Core Web Vitals?", a: "Yes. I analyze LCP, CLS, INP, images, JavaScript, cache, and critical rendering." },
         { q: "Do you offer ongoing maintenance?", a: "Yes. We can agree on monthly support, updates, monitoring, and development scope." },
       ],
       relatedPosts: [

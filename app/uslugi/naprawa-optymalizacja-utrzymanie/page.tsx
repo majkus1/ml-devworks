@@ -8,7 +8,7 @@ import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from 
 export const metadata: Metadata = {
   title: "Naprawa i optymalizacja stron i aplikacji | ML DevWorks",
   description:
-    "Naprawiamy strony i aplikacje po innych wykonawcach: bugfixing, Core Web Vitals, techniczne SEO i utrzymanie. Szybka diagnoza problemu i plan naprawczy.",
+    "Naprawiam strony i aplikacje po innych wykonawcach: bugfixing, Core Web Vitals, techniczne SEO i utrzymanie. Szybka diagnoza i plan naprawy.",
   keywords: [
     "naprawa strony internetowej",
     "naprawa aplikacji webowej",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Naprawa stron i aplikacji | ML DevWorks",
     description:
-      "Bugfixing, Core Web Vitals, techniczne SEO i utrzymanie projektów produkcyjnych.",
+      "Naprawiam strony i aplikacje po innych wykonawcach: bugfixing, Core Web Vitals, techniczne SEO i utrzymanie. Szybka diagnoza i plan naprawy.",
     url: "https://ml-devworks.com/uslugi/naprawa-optymalizacja-utrzymanie",
     type: "website",
     locale: "pl_PL",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Naprawa stron i aplikacji | ML DevWorks",
     description:
-      "Bugfixing, Core Web Vitals, techniczne SEO i utrzymanie projektów produkcyjnych.",
+      "Naprawiam strony i aplikacje po innych wykonawcach: bugfixing, Core Web Vitals, techniczne SEO i utrzymanie. Szybka diagnoza i plan naprawy.",
   },
 };
 
@@ -264,7 +264,7 @@ export default function NaprawaOptymalizacjaUtrzymaniePage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Szybka reakcja</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Szybka diagnoza problemów i natychmiastowa naprawa. Priorytetyzujemy krytyczne błędy i zapewniamy szybką reakcję na problemy, które wpływają na działanie Twojego biznesu.
+                    Szybka diagnoza problemów i natychmiastowa naprawa. Priorytetyzuję krytyczne błędy i zapewniam szybką reakcję na problemy, które wpływają na działanie Twojego biznesu.
                   </p>
                 </div>
 
@@ -278,28 +278,28 @@ export default function NaprawaOptymalizacjaUtrzymaniePage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">🔍 Kompleksowa Analiza</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Dokładna analiza całego projektu przed wprowadzeniem zmian. Identyfikujemy wszystkie problemy i możliwości optymalizacji. Nie naprawiamy tylko objawów, ale przyczyny.
+                    Dokładnie analizuję cały projekt przed wprowadzeniem zmian. Identyfikuję problemy i możliwości optymalizacji. Nie naprawiam tylko objawów, ale przyczyny.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">💡 Doświadczenie</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Mamy doświadczenie w pracy z różnymi technologiami, frameworkami i systemami. Szybko rozumiemy istniejący kod i wprowadzamy poprawki bez zakłócania działania.
+                    Mam doświadczenie w pracy z różnymi technologiami, frameworkami i systemami. Szybko rozumiem istniejący kod i wprowadzam poprawki bez zakłócania działania.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Ciągłe ulepszanie</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Nie tylko naprawiamy, ale także ciągle optymalizujemy. Monitorujemy wyniki, zbieramy feedback i wprowadzamy ulepszenia, aby Twój projekt był coraz lepszy.
+                    Nie tylko naprawiam, ale także stale optymalizuję. Monitoruję wyniki, zbieram feedback i wprowadzam ulepszenia, aby Twój projekt był coraz lepszy.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Elastyczne podejście</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Dostosowujemy się do Twoich potrzeb - od jednorazowych napraw po długoterminowe umowy utrzymaniowe. Pracujemy z projektami w różnych technologiach i rozmiarach.
+                    Dostosowuję się do Twoich potrzeb - od jednorazowych napraw po długoterminowe umowy utrzymaniowe. Pracuję z projektami w różnych technologiach i rozmiarach.
                   </p>
                 </div>
               </div>
@@ -318,7 +318,7 @@ export default function NaprawaOptymalizacjaUtrzymaniePage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Analiza i Diagnostyka</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Analizujemy Twój projekt, identyfikujemy problemy, błędy i obszary do optymalizacji. Tworzymy szczegółowy raport z rekomendacjami i planem działania.
+                      Analizuję Twój projekt, identyfikuję problemy, błędy i obszary do optymalizacji. Tworzę szczegółowy raport z rekomendacjami i planem działania.
                     </p>
                   </div>
                 </div>
@@ -330,7 +330,7 @@ export default function NaprawaOptymalizacjaUtrzymaniePage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Wycena i Plan</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Przedstawiamy szczegółową wycenę prac i harmonogram. Uzgadniamy priorytety i zakres prac. Tworzymy plan działania z podziałem na etapy.
+                      Przedstawiam szczegółową wycenę prac i harmonogram. Uzgadniam priorytety i zakres prac. Tworzę plan działania z podziałem na etapy.
                     </p>
                   </div>
                 </div>
@@ -342,7 +342,7 @@ export default function NaprawaOptymalizacjaUtrzymaniePage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Implementacja</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Wprowadzamy naprawy i optymalizacje zgodnie z planem. Pracujemy w środowisku testowym, testujemy zmiany i upewniamy się, że wszystko działa poprawnie.
+                      Wprowadzam naprawy i optymalizacje zgodnie z planem. Pracuję w środowisku testowym, testuję zmiany i upewniam się, że wszystko działa poprawnie.
                     </p>
                   </div>
                 </div>
@@ -354,7 +354,7 @@ export default function NaprawaOptymalizacjaUtrzymaniePage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Testowanie i Weryfikacja</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Testujemy wszystkie zmiany, weryfikujemy poprawki, sprawdzamy wydajność i funkcjonalność. Upewniamy się, że wszystko działa lepiej niż przed zmianami.
+                      Testuję wszystkie zmiany, weryfikuję poprawki, sprawdzam wydajność i funkcjonalność. Upewniam się, że wszystko działa lepiej niż przed zmianami.
                     </p>
                   </div>
                 </div>
@@ -366,7 +366,7 @@ export default function NaprawaOptymalizacjaUtrzymaniePage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Wdrożenie i Dokumentacja</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Wdrażamy zmiany na produkcję, dokumentujemy wprowadzone poprawki i optymalizacje. Przekazujemy raport z wynikami i rekomendacjami na przyszłość.
+                      Wdrażam zmiany na produkcję, dokumentuję wprowadzone poprawki i optymalizacje. Przekazuję raport z wynikami i rekomendacjami na przyszłość.
                     </p>
                   </div>
                 </div>
@@ -378,7 +378,7 @@ export default function NaprawaOptymalizacjaUtrzymaniePage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Monitorowanie i Wsparcie</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Monitorujemy wyniki po wdrożeniu, zbieramy feedback, reagujemy na ewentualne problemy. Zapewniamy ciągłe wsparcie i dalsze optymalizacje.
+                      Monitoruję wyniki po wdrożeniu, zbieram feedback i reaguję na ewentualne problemy. Zapewniam ciągłe wsparcie oraz dalsze optymalizacje.
                     </p>
                   </div>
                 </div>
@@ -397,7 +397,7 @@ export default function NaprawaOptymalizacjaUtrzymaniePage() {
                 href="/#contact"
                 className="inline-block px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors transform hover:scale-105"
               >
-                Skontaktuj Się Z Nami
+                Skontaktuj się ze mną
               </Link>
             </div>
           </div>

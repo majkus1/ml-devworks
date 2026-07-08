@@ -10,8 +10,8 @@ import AboutIntro from "@/components/AboutIntro";
 import HomeFAQ from "@/components/HomeFAQ";
 
 export const metadata: Metadata = {
-  title: "Websites, apps & AI automation for companies | ML DevWorks",
-  description: "Krakow developer building websites, apps, booking systems, and AI automation for companies. Direct cooperation and fast prototypes.",
+  title: "Business apps, websites and AI automation | ML DevWorks",
+  description: "Krakow developer building business apps, websites, booking systems, API/CRM integrations and AI automation. Direct cooperation and fast prototypes.",
   alternates: {
     canonical: "https://ml-devworks.com/en",
     languages: {

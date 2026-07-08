@@ -8,7 +8,7 @@ import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from 
 export const metadata: Metadata = {
   title: "Automatyzacja procesów i AI dla firm | ML DevWorks",
   description:
-    "Wdrażamy agentów AI i automatyzację procesów: obsługa klienta, workflow i integracje narzędzi. Mniej pracy ręcznej, więcej leadów — umów bezpłatną wycenę.",
+    "Wdrażam agentów AI i automatyzację procesów biznesowych: obsługę klienta, workflow i integracje narzędzi. Mniej pracy ręcznej.",
   keywords: [
     "automatyzacja procesow biznesowych",
     "ai dla firm",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Automatyzacja procesów i AI dla firm | ML DevWorks",
     description:
-      "Agenci AI i automatyzacje procesów, które obniżają koszty operacyjne i przyspieszają obsługę klienta.",
+      "Wdrażam agentów AI i automatyzację procesów biznesowych: obsługę klienta, workflow i integracje narzędzi. Mniej pracy ręcznej.",
     url: "https://ml-devworks.com/uslugi/automatyzacja-i-ai",
     type: "website",
     locale: "pl_PL",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Automatyzacja procesów i AI dla firm | ML DevWorks",
     description:
-      "Agenci AI i automatyzacje procesów, które obniżają koszty operacyjne i przyspieszają obsługę klienta.",
+      "Wdrażam agentów AI i automatyzację procesów biznesowych: obsługę klienta, workflow i integracje narzędzi. Mniej pracy ręcznej.",
   },
 };
 
@@ -52,7 +52,7 @@ export default function AutomatyzacjaIAIPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Automatyzacja i AI",
-    "description": "Inteligentne agent AI i systemy automatyzacji procesów biznesowych. Zautomatyzuj powtarzalne zadania i zwiększ efektywność swojego biznesu.",
+    "description": "Wdrażam agentów AI i automatyzacje procesów biznesowych: obsługę klienta, workflow, kwalifikację leadów i integracje narzędzi.",
     "provider": {
       "@type": "Organization",
       "name": "ML DevWorks",
@@ -250,7 +250,7 @@ export default function AutomatyzacjaIAIPage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-amber-400">Najnowsze technologie AI</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Wykorzystujemy najnowsze modele AI, w tym GPT, Claude i inne zaawansowane systemy. Zawsze wybieramy najlepsze narzędzie dla konkretnego przypadku użycia.
+                    Wykorzystuję najnowsze modele AI, w tym GPT, Claude i inne zaawansowane systemy. Zawsze wybieram najlepsze narzędzie dla konkretnego przypadku użycia.
                   </p>
                 </div>
 
@@ -264,28 +264,28 @@ export default function AutomatyzacjaIAIPage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Mierzalne rezultaty</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Każda automatyzacja jest projektowana z myślą o mierzalnych korzyściach. Oszczędność czasu, redukcja błędów, zwiększenie wydajności - wszystko to monitorujemy i raportujemy.
+                    Każda automatyzacja jest projektowana z myślą o mierzalnych korzyściach. Oszczędność czasu, redukcję błędów i wzrost wydajności monitoruję oraz raportuję.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Bezpieczeństwo i prywatność</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Bezpieczeństwo danych to priorytet. Implementujemy najlepsze praktyki, szyfrowanie, kontrolę dostępu i zgodność z RODO. Twoje dane są bezpieczne.
+                    Bezpieczeństwo danych to priorytet. Implementuję najlepsze praktyki, szyfrowanie, kontrolę dostępu i zgodność z RODO. Twoje dane są bezpieczne.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Ciągłe uczenie i rozwój</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Systemy AI uczą się i poprawiają z czasem. Monitorujemy wydajność, zbieramy feedback i ciągle optymalizujemy rozwiązania, aby były coraz lepsze.
+                    Systemy AI uczą się i poprawiają z czasem. Monitoruję wydajność, zbieram feedback i ciągle optymalizuję rozwiązania, aby były coraz lepsze.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Kompleksowa obsługa</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Od analizy procesów, przez projektowanie, implementację, testowanie, wdrożenie, aż po utrzymanie i rozwój - zapewniamy pełną obsługę na każdym etapie.
+                    Od analizy procesów, przez projektowanie, implementację, testowanie, wdrożenie, aż po utrzymanie i rozwój - zapewniam pełną obsługę na każdym etapie.
                   </p>
                 </div>
               </div>
@@ -304,7 +304,7 @@ export default function AutomatyzacjaIAIPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Analiza Procesów</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Analizujemy Twoje procesy biznesowe, identyfikujemy obszary do automatyzacji i oceniamy potencjalne korzyści. Tworzymy mapę procesów i priorytetyzujemy zadania.
+                      Analizuję Twoje procesy biznesowe, identyfikuję obszary do automatyzacji i oceniam potencjalne korzyści. Tworzę mapę procesów i priorytetyzuję zadania.
                     </p>
                   </div>
                 </div>
@@ -316,7 +316,7 @@ export default function AutomatyzacjaIAIPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Projektowanie Rozwiązania</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Projektujemy architekturę automatyzacji, wybieramy odpowiednie technologie AI i narzędzia. Tworzymy szczegółowy plan implementacji z harmonogramem.
+                      Projektuję architekturę automatyzacji, wybieram odpowiednie technologie AI i narzędzia. Tworzę szczegółowy plan implementacji z harmonogramem.
                     </p>
                   </div>
                 </div>
@@ -328,7 +328,7 @@ export default function AutomatyzacjaIAIPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Rozwój i Implementacja</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Programujemy system automatyzacji, integrujemy z istniejącymi systemami, trenujemy modele AI. Tworzymy interfejsy i konfigurujemy workflow.
+                      Programuję system automatyzacji, integruję go z istniejącymi systemami i konfiguruję workflow. Tworzę interfejsy oraz testuję działanie AI na realnych danych.
                     </p>
                   </div>
                 </div>
@@ -340,7 +340,7 @@ export default function AutomatyzacjaIAIPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Testowanie i Optymalizacja</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Testujemy system na rzeczywistych danych, sprawdzamy dokładność AI, optymalizujemy wydajność. Beta testing z użytkownikami i zbieranie feedbacku.
+                      Testuję system na rzeczywistych danych, sprawdzam dokładność AI, optymalizuję wydajność. Beta testing z użytkownikami i zbieranie feedbacku.
                     </p>
                   </div>
                 </div>
@@ -352,7 +352,7 @@ export default function AutomatyzacjaIAIPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Wdrożenie i Szkolenie</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Wdrażamy system na produkcję, szkolimy użytkowników, dokumentujemy procesy. Zapewniamy płynne przejście i wsparcie podczas startu.
+                      Wdrażam system na produkcję, szkolę użytkowników, dokumentuję procesy. Zapewniam płynne przejście i wsparcie podczas startu.
                     </p>
                   </div>
                 </div>
@@ -364,7 +364,7 @@ export default function AutomatyzacjaIAIPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Monitorowanie i Rozwój</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Monitorujemy wydajność systemu, zbieramy metryki, optymalizujemy na podstawie danych. Ciągły rozwój i dodawanie nowych funkcjonalności.
+                      Monitoruję wydajność systemu, zbieram metryki i optymalizuję rozwiązanie na podstawie danych. Rozwijam system oraz dodaję nowe funkcjonalności.
                     </p>
                   </div>
                 </div>
@@ -383,7 +383,7 @@ export default function AutomatyzacjaIAIPage() {
                 href="/#contact"
                 className="inline-block px-8 py-4 bg-amber-400 text-background font-semibold rounded-lg hover:bg-amber-300 transition-colors transform hover:scale-105"
               >
-                Skontaktuj Się Z Nami
+                Skontaktuj się ze mną
               </Link>
             </div>
           </div>

@@ -8,7 +8,7 @@ import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from 
 export const metadata: Metadata = {
   title: "DevOps Services and Cloud Deployment (CI/CD) | ML DevWorks",
   description:
-    "DevOps services: CI/CD pipelines, Docker/Kubernetes, cloud deployment, monitoring and backups. Faster releases with fewer production incidents.",
+    "I configure DevOps and cloud deployments: CI/CD pipelines, Docker/Kubernetes, monitoring, backups and security for stable application releases.",
   keywords: [
     "devops services for companies",
     "cloud deployment services",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DevOps Services and Cloud Deployment | ML DevWorks",
     description:
-      "CI/CD pipelines, cloud deployment, monitoring, backups, and stable production releases for business applications.",
+      "I configure DevOps and cloud deployments: CI/CD pipelines, Docker/Kubernetes, monitoring, backups and security for stable application releases.",
     url: "https://ml-devworks.com/en/services/devops-deployment",
     type: "website",
     locale: "en_US",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "DevOps Services and Cloud Deployment | ML DevWorks",
     description:
-      "CI/CD pipelines, cloud deployment, monitoring, backups, and stable production releases for business applications.",
+      "I configure DevOps and cloud deployments: CI/CD pipelines, Docker/Kubernetes, monitoring, backups and security for stable application releases.",
   },
 };
 
@@ -264,7 +264,7 @@ export default function DevOpsDeploymentPage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">💰 Cost Optimization</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    We optimize infrastructure for costs. We choose the best solutions that provide performance at reasonable costs.
+                    I optimize infrastructure for costs. We choose the best solutions that provide performance at reasonable costs.
                   </p>
                 </div>
 
@@ -297,7 +297,7 @@ export default function DevOpsDeploymentPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Analysis & Planning</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We analyze application requirements, scale, budget, and goals. We plan infrastructure architecture, choose the best platforms and tools.
+                      I analyze application requirements, scale, budget, and goals. We plan infrastructure architecture, choose the best platforms and tools.
                     </p>
                   </div>
                 </div>
@@ -309,7 +309,7 @@ export default function DevOpsDeploymentPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Infrastructure Configuration</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We create cloud infrastructure, configure servers, databases, networks, and security. We use Infrastructure as Code for repeatability.
+                      I create cloud infrastructure, configure servers, databases, networks, and security. I use Infrastructure as Code for repeatability.
                     </p>
                   </div>
                 </div>
@@ -321,7 +321,7 @@ export default function DevOpsDeploymentPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">CI/CD Configuration</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We configure CI/CD pipeline: automated tests, build, deployment. We set up dev, staging, and production environments with automated deployment.
+                      I configure CI/CD pipeline: automated tests, build, deployment. I set up dev, staging, and production environments with automated deployment.
                     </p>
                   </div>
                 </div>
@@ -333,7 +333,7 @@ export default function DevOpsDeploymentPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Monitoring & Backup</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We configure performance monitoring, logging, alerts, and automatic backups. We test disaster recovery and restoration strategies.
+                      I configure performance monitoring, logging, alerts, and automatic backups. I test disaster recovery and restoration strategies.
                     </p>
                   </div>
                 </div>
@@ -345,7 +345,7 @@ export default function DevOpsDeploymentPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Deployment & Testing</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We deploy the application to production, test all functionalities, performance, and security. We optimize and adjust configuration.
+                      I deploy the application to production, test all functionalities, performance, and security. I optimize and adjust configuration.
                     </p>
                   </div>
                 </div>
@@ -357,7 +357,7 @@ export default function DevOpsDeploymentPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Maintenance & Support</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We provide continuous monitoring, updates, optimization, backup, and technical support. We respond to problems and develop infrastructure.
+                      I provide continuous monitoring, updates, optimization, backup, and technical support. We respond to problems and develop infrastructure.
                     </p>
                   </div>
                 </div>

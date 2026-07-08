@@ -8,7 +8,7 @@ import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from 
 export const metadata: Metadata = {
   title: "DevOps i wdrożenia chmurowe dla firm | ML DevWorks",
   description:
-    "Wdrożenia w chmurze i DevOps: CI/CD, Docker, monitoring, backup i bezpieczeństwo. Stabilne deploymenty i szybsze wydania dla zespołów produktowych.",
+    "Wdrażam aplikacje w chmurze i porządkuję DevOps: CI/CD, Docker, monitoring, backup i bezpieczeństwo. Stabilne wydania bez chaosu.",
   keywords: [
     "devops dla firm",
     "wdrozenia chmurowe aplikacji",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DevOps i wdrożenia chmurowe | ML DevWorks",
     description:
-      "CI/CD, monitoring, bezpieczeństwo i stabilne wdrożenia chmurowe dla aplikacji webowych.",
+      "Wdrażam aplikacje w chmurze i porządkuję DevOps: CI/CD, Docker, monitoring, backup i bezpieczeństwo. Stabilne wydania bez chaosu.",
     url: "https://ml-devworks.com/uslugi/devops-wdrozenia",
     type: "website",
     locale: "pl_PL",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "DevOps i wdrożenia chmurowe | ML DevWorks",
     description:
-      "CI/CD, monitoring, bezpieczeństwo i stabilne wdrożenia chmurowe dla aplikacji webowych.",
+      "Wdrażam aplikacje w chmurze i porządkuję DevOps: CI/CD, Docker, monitoring, backup i bezpieczeństwo. Stabilne wydania bez chaosu.",
   },
 };
 
@@ -264,7 +264,7 @@ export default function DevOpsWdrozeniaPage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">💰 Optymalizacja Kosztów</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Optymalizujemy infrastrukturę pod kątem kosztów. Wybieramy najlepsze rozwiązania, które zapewniają wydajność przy rozsądnych kosztach.
+                    Optymalizuję infrastrukturę pod kątem kosztów. Wybieramy najlepsze rozwiązania, które zapewniają wydajność przy rozsądnych kosztach.
                   </p>
                 </div>
 
@@ -278,7 +278,7 @@ export default function DevOpsWdrozeniaPage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Kompleksowa obsługa</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Od planowania infrastruktury, przez konfigurację, wdrożenie, monitoring, aż po utrzymanie i rozwój - zapewniamy pełną obsługę DevOps.
+                    Od planowania infrastruktury, przez konfigurację, wdrożenie, monitoring, aż po utrzymanie i rozwój - zapewniam pełną obsługę DevOps.
                   </p>
                 </div>
               </div>
@@ -297,7 +297,7 @@ export default function DevOpsWdrozeniaPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Analiza i Planowanie</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Analizujemy wymagania aplikacji, skalę, budżet i cele. Planujemy architekturę infrastruktury, wybieramy najlepsze platformy i narzędzia.
+                      Analizuję wymagania aplikacji, skalę, budżet i cele. Planuję architekturę infrastruktury, wybieram najlepsze platformy i narzędzia.
                     </p>
                   </div>
                 </div>
@@ -309,7 +309,7 @@ export default function DevOpsWdrozeniaPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Konfiguracja Infrastruktury</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Tworzymy infrastrukturę w chmurze, konfigurujemy serwery, bazy danych, sieci i bezpieczeństwo. Używamy Infrastructure as Code dla powtarzalności.
+                      Tworzę infrastrukturę w chmurze, konfigurujemy serwery, bazy danych, sieci i bezpieczeństwo. Używam Infrastructure as Code dla powtarzalności.
                     </p>
                   </div>
                 </div>
@@ -321,7 +321,7 @@ export default function DevOpsWdrozeniaPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Konfiguracja CI/CD</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Konfigurujemy pipeline CI/CD: automatyczne testy, build, deployment. Ustawiamy środowiska dev, staging i production z automatycznym wdrażaniem.
+                      Konfiguruję pipeline CI/CD: automatyczne testy, build, deployment. Ustawiamy środowiska dev, staging i production z automatycznym wdrażaniem.
                     </p>
                   </div>
                 </div>
@@ -333,7 +333,7 @@ export default function DevOpsWdrozeniaPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Monitoring i Backup</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Konfigurujemy monitoring wydajności, logowanie, alerty i automatyczne backupy. Testujemy disaster recovery i strategie przywracania.
+                      Konfiguruję monitoring wydajności, logowanie, alerty i automatyczne backupy. Testuję disaster recovery i strategie przywracania.
                     </p>
                   </div>
                 </div>
@@ -345,7 +345,7 @@ export default function DevOpsWdrozeniaPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Wdrożenie i Testy</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Wdrażamy aplikację na produkcję, testujemy wszystkie funkcjonalności, wydajność i bezpieczeństwo. Optymalizujemy i dostosowujemy konfigurację.
+                      Wdrażam aplikację na produkcję, testuję wszystkie funkcjonalności, wydajność i bezpieczeństwo. Optymalizuję i dostosowuję konfigurację.
                     </p>
                   </div>
                 </div>
@@ -357,7 +357,7 @@ export default function DevOpsWdrozeniaPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Utrzymanie i Wsparcie</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Zapewniamy ciągłe monitorowanie, aktualizacje, optymalizację, backup i wsparcie techniczne. Reagujemy na problemy i rozwijamy infrastrukturę.
+                      Zapewniam ciągłe monitorowanie, aktualizacje, optymalizację, backup i wsparcie techniczne. Reagujemy na problemy i rozwijamy infrastrukturę.
                     </p>
                   </div>
                 </div>
@@ -376,7 +376,7 @@ export default function DevOpsWdrozeniaPage() {
                 href="/#contact"
                 className="inline-block px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors transform hover:scale-105"
               >
-                Skontaktuj Się Z Nami
+                Skontaktuj się ze mną
               </Link>
             </div>
           </div>

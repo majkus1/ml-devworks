@@ -232,26 +232,40 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
             </div>
 
             <button
-              className="md:hidden relative z-50 flex flex-col items-center justify-center w-10 h-10 space-y-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded"
+              className="md:hidden relative z-50 flex items-center justify-center w-10 h-10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded"
               onClick={() => setIsMobileMenuOpen((isOpen) => !isOpen)}
-              aria-label={lang === "pl" ? "Otwórz menu" : "Open menu"}
+              aria-label={
+                isMobileMenuOpen
+                  ? lang === "pl"
+                    ? "Zamknij menu"
+                    : "Close menu"
+                  : lang === "pl"
+                    ? "Otwórz menu"
+                    : "Open menu"
+              }
               aria-expanded={isMobileMenuOpen}
             >
-              <span
-                className={`w-6 h-0.5 bg-white block transition-transform duration-300 ${
-                  isMobileMenuOpen ? "translate-y-2 rotate-45" : ""
-                }`}
-              />
-              <span
-                className={`w-6 h-0.5 bg-white block transition-opacity duration-300 ${
-                  isMobileMenuOpen ? "opacity-0" : "opacity-100"
-                }`}
-              />
-              <span
-                className={`w-6 h-0.5 bg-white block transition-transform duration-300 ${
-                  isMobileMenuOpen ? "-translate-y-2 -rotate-45" : ""
-                }`}
-              />
+              {isMobileMenuOpen ? (
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  className="h-8 w-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M6 6l12 12" />
+                  <path d="M18 6L6 18" />
+                </svg>
+              ) : (
+                <span className="flex flex-col items-center justify-center gap-1.5" aria-hidden="true">
+                  <span className="block h-0.5 w-6 rounded-full bg-white" />
+                  <span className="block h-0.5 w-6 rounded-full bg-white" />
+                  <span className="block h-0.5 w-6 rounded-full bg-white" />
+                </span>
+              )}
             </button>
           </div>
         </div>

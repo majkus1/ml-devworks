@@ -19,7 +19,7 @@ export default function AboutIntro({ lang = "pl" }: AboutIntroProps) {
   const content = {
     pl: {
       title: "Nie rozmawiasz z handlowcem. Pracujesz bezpośrednio z programistą odpowiedzialnym za projekt",
-      lead: "Patrzę na projekt jak programista z doświadczeniem biznesowym: najpierw rozumiem proces, klienta i cel, a dopiero potem dobieram technologię. AI przyspiesza prototypowanie i analizę, ale decyzje techniczne, bezpieczeństwo i finalna jakość są po mojej stronie.",
+      lead: "Patrzę na projekt jak programista z doświadczeniem biznesowym: najpierw rozumiem proces, klienta i cel, a dopiero potem dobieram technologię. Tworzę dedykowane oprogramowanie dla firm: aplikacje webowe, panele administracyjne, integracje API/CRM, systemy rezerwacji i automatyzacje procesów.",
       cards: [
         {
           title: "Biznes przed kodem",
@@ -27,7 +27,7 @@ export default function AboutIntro({ lang = "pl" }: AboutIntroProps) {
         },
         {
           title: "Strony, aplikacje i sklepy",
-          text: "Projektuję strony internetowe, aplikacje webowe i mobilne, sklepy oraz systemy rezerwacji dla firm.",
+          text: "Projektuję strony internetowe, aplikacje webowe i mobilne, sklepy, panele klienta oraz systemy rezerwacji dla firm.",
         },
         {
           title: "Automatyzacja i AI",
@@ -41,7 +41,7 @@ export default function AboutIntro({ lang = "pl" }: AboutIntroProps) {
     },
     en: {
       title: "You do not talk to a salesperson. You work directly with the developer responsible for the project",
-      lead: "I approach projects as a developer with business awareness: first I understand the process, customer, and goal, then I choose the right technology. AI speeds up prototyping and analysis, but technical decisions, security, and final quality stay on my side.",
+      lead: "I approach projects as a developer with business awareness: first I understand the process, customer, and goal, then I choose the right technology. I build custom software for companies: web apps, admin panels, API/CRM integrations, booking systems, and process automation.",
       cards: [
         {
           title: "Business before code",
@@ -49,7 +49,7 @@ export default function AboutIntro({ lang = "pl" }: AboutIntroProps) {
         },
         {
           title: "Websites, apps and stores",
-          text: "I design websites, web and mobile applications, online stores, and booking systems for companies.",
+          text: "I design websites, web and mobile applications, online stores, customer portals, and booking systems for companies.",
         },
         {
           title: "Automation and AI",

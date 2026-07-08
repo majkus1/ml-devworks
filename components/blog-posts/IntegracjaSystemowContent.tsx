@@ -82,8 +82,8 @@ export default function IntegracjaSystemowContent({ lang }: Props) {
         </h2>
         <p className="mb-4">
           {isPl
-            ? "Projektujemy integracje API, panele klienta, automatyzacje danych i aplikacje wewnętrzne, które łączą narzędzia firmy w jeden spójny proces."
-            : "We design API integrations, client portals, data automations, and internal apps that connect company tools into one coherent process."}
+            ? "Projektuję integracje API, panele klienta, automatyzacje danych i aplikacje wewnętrzne, które łączą narzędzia firmy w jeden spójny proces."
+            : "I design API integrations, client portals, data automations, and internal apps that connect company tools into one coherent process."}
         </p>
         <Link
           href={isPl ? "/uslugi/aplikacje-internetowe-i-mobilne" : "/en/services/web-and-mobile-applications"}

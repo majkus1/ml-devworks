@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ml-devworks.com"),
-  title: "Websites, apps and AI automation | ML DevWorks",
-  description: "Developer building websites, apps, booking systems, and AI automation for companies. Direct cooperation and fast prototypes.",
+  title: "Business apps, websites and AI automation | ML DevWorks",
+  description: "Krakow developer building business apps, websites, booking systems, API/CRM integrations and AI automation. Direct cooperation and fast prototypes.",
   keywords: ["web development", "web applications", "mobile applications", "online stores", "devops", "cloud deployment", "cloud deployments", "development"],
   authors: [{ name: "ML DevWorks" }],
   creator: "ML DevWorks",
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://ml-devworks.com/en",
     siteName: "ML DevWorks",
-    title: "Websites, apps and AI automation | ML DevWorks",
-    description: "Developer building websites, apps, booking systems, and AI automation for companies. Direct cooperation and fast prototypes.",
+    title: "Business apps, websites and AI automation | ML DevWorks",
+    description: "Krakow developer building business apps, websites, booking systems, API/CRM integrations and AI automation. Direct cooperation and fast prototypes.",
     images: [
       {
         url: "https://ml-devworks.com/ogimg.png",
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Websites, apps and AI automation | ML DevWorks",
-    description: "Developer building websites, apps, booking systems, and AI automation for companies. Direct cooperation and fast prototypes.",
+    title: "Business apps, websites and AI automation | ML DevWorks",
+    description: "Krakow developer building business apps, websites, booking systems, API/CRM integrations and AI automation. Direct cooperation and fast prototypes.",
     images: ["https://ml-devworks.com/ogimg.png"],
   },
   alternates: {

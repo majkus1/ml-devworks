@@ -10,8 +10,8 @@ import AboutIntro from "@/components/AboutIntro";
 import HomeFAQ from "@/components/HomeFAQ";
 
 export const metadata: Metadata = {
-  title: "Strony, aplikacje i automatyzacje AI dla firm | ML DevWorks",
-  description: "Programista z Krakowa tworzy strony, aplikacje, systemy rezerwacji i automatyzacje AI dla firm. Bezpośrednia współpraca i szybkie prototypy.",
+  title: "Aplikacje dla firm, strony i automatyzacje AI | ML DevWorks",
+  description: "Programista z Krakowa tworzy aplikacje dla firm, strony internetowe, systemy rezerwacji, integracje API/CRM i automatyzacje AI. Bezpośrednia współpraca.",
   alternates: {
     canonical: "https://ml-devworks.com",
     languages: {

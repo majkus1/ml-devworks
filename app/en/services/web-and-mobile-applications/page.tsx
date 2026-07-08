@@ -8,7 +8,7 @@ import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from 
 export const metadata: Metadata = {
   title: "Web and Mobile App Development for Companies | ML DevWorks",
   description:
-    "We build custom web and mobile apps: business tools, customer portals, iOS/Android and MVPs. Secure, scalable architecture with fast delivery.",
+    "I build custom web and mobile apps for companies: customer portals, admin panels, business tools, iOS/Android apps and MVPs.",
   keywords: [
     "web application development company",
     "mobile app development for business",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Web and Mobile App Development | ML DevWorks",
     description:
-      "Custom applications for business growth, built with scalable architecture and fast delivery.",
+      "I build custom web and mobile apps for companies: customer portals, admin panels, business tools, iOS/Android apps and MVPs.",
     url: "https://ml-devworks.com/en/services/web-and-mobile-applications",
     type: "website",
     locale: "en_US",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Web and Mobile App Development | ML DevWorks",
     description:
-      "Custom applications for business growth, built with scalable architecture and fast delivery.",
+      "I build custom web and mobile apps for companies: customer portals, admin panels, business tools, iOS/Android apps and MVPs.",
   },
 };
 
@@ -52,7 +52,7 @@ export default function WebAndMobileApplicationsPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Web and Mobile Applications",
-    "description": "We create modern web and mobile applications using the latest technologies. Fast, secure, and scalable solutions. iOS and Android apps. Native and cross-platform solutions for your business.",
+    "description": "I build modern web and mobile applications for companies: customer portals, admin panels, MVPs and iOS/Android applications.",
     "provider": {
       "@type": "Organization",
       "name": "ML DevWorks",
@@ -243,28 +243,28 @@ export default function WebAndMobileApplicationsPage() {
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Latest technologies</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    We use the latest frameworks and tools that ensure the best performance, security, and scalability. We always choose the best solution for your project.
+                    I use the latest frameworks and tools that ensure the best performance, security, and scalability. We always choose the best solution for your project.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Security</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Security is a priority. We implement best security practices, data encryption, authorization, and authentication in line with the highest standards.
+                    Security is a priority. I implement best security practices, data encryption, authorization, and authentication in line with the highest standards.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">Scalability</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    We design applications with the future in mind. Architecture that grows with your business. Cloud-native solutions that automatically scale based on load.
+                    I design applications with the future in mind. Architecture that grows with your business. Cloud-native solutions that automatically scale based on load.
                   </p>
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
                   <h3 className="text-xl font-bold mb-3 text-primary">🎨 Excellent UX/UI</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Intuitive user interfaces that are not only beautiful but also functional. We design with the user in mind, ensuring the best experience.
+                    Intuitive user interfaces that are not only beautiful but also functional. I design with the user in mind, ensuring the best experience.
                   </p>
                 </div>
 
@@ -297,7 +297,7 @@ export default function WebAndMobileApplicationsPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Analysis & Planning</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We analyze your needs, business goals, and technical requirements. We create a detailed project plan, choose the best technologies and architecture.
+                      I analyze your needs, business goals, and technical requirements. I create a detailed project plan, choose the best technologies and architecture.
                     </p>
                   </div>
                 </div>
@@ -309,7 +309,7 @@ export default function WebAndMobileApplicationsPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">UX/UI Implementation</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We build intuitive, user-friendly interfaces. We focus on quality user experience.
+                      I build intuitive, user-friendly interfaces. I focus on quality user experience.
                     </p>
                   </div>
                 </div>
@@ -321,7 +321,7 @@ export default function WebAndMobileApplicationsPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Development</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We program the application according to best practices. We write clean, readable code that is easy to maintain. Agile development with regular updates.
+                      I program the application according to best practices. We write clean, readable code that is easy to maintain. Agile development with regular updates.
                     </p>
                   </div>
                 </div>
@@ -345,7 +345,7 @@ export default function WebAndMobileApplicationsPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Deployment & Publication</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We deploy the application to production. We publish to App Store and Google Play (for mobile apps). We configure monitoring, backup, and infrastructure.
+                      I deploy the application to production. I publish to App Store and Google Play (for mobile apps). I configure monitoring, backup, and infrastructure.
                     </p>
                   </div>
                 </div>
@@ -357,7 +357,7 @@ export default function WebAndMobileApplicationsPage() {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold mb-2">Support & Maintenance</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      We provide continuous technical support, updates, bug fixes, and feature development. We monitor performance and respond to user needs.
+                      I provide continuous technical support, updates, bug fixes, and feature development. We monitor performance and respond to user needs.
                     </p>
                   </div>
                 </div>

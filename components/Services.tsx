@@ -130,7 +130,7 @@ export default function Services({ lang = "pl" }: ServicesProps) {
           transition={{ duration: 0.5 }}
           className="text-4xl md:text-5xl font-bold text-left mb-4"
         >
-          {lang === "pl" ? "Usługi programistyczne dla firm" : "Software services for businesses"}
+          {lang === "pl" ? "Usługi programistyczne i dedykowane oprogramowanie dla firm" : "Software development and custom business systems"}
         </motion.h2>
         <motion.p
           ref={subtitleRef}
@@ -140,8 +140,8 @@ export default function Services({ lang = "pl" }: ServicesProps) {
           className="text-xl text-gray-400 text-left mb-4"
         >
           {lang === "pl"
-            ? "Kompleksowe rozwiązania cyfrowe dla Twojego biznesu"
-            : "Comprehensive digital solutions for your business"}
+            ? "Aplikacje webowe, strony internetowe, integracje API/CRM i automatyzacja procesów"
+            : "Web applications, websites, API/CRM integrations and process automation"}
         </motion.p>
         
         <motion.p
@@ -153,15 +153,15 @@ export default function Services({ lang = "pl" }: ServicesProps) {
         >
           {lang === "pl" ? (
             <>
-              Realizuję projekty kompleksowo - od koncepcji, przez wdrożenie, aż po utrzymanie.
+              Tworzę dedykowane oprogramowanie dla firm: aplikacje internetowe, panele administracyjne, systemy rezerwacji, sklepy e-commerce i automatyzacje AI.
               <br />
-              Stawiam na bezpośrednią komunikację i długotrwałą współpracę.
+              Pracujesz bezpośrednio z programistą, który rozumie proces biznesowy i odpowiada za efekt końcowy.
             </>
           ) : (
             <>
-              I execute projects comprehensively - from concept, through deployment, to maintenance.
+              I build custom software for companies: web applications, admin panels, booking systems, e-commerce stores, and AI automation.
               <br />
-              I focus on direct communication and long-term cooperation.
+              You work directly with the developer who understands the business process and owns the final result.
             </>
           )}
         </motion.p>
@@ -174,8 +174,8 @@ export default function Services({ lang = "pl" }: ServicesProps) {
           className="text-base text-gray-300 text-left mb-8"
         >
           {lang === "pl"
-            ? "Podejmuję się również istniejących projektów - ich rozwoju, naprawy błędów, optymalizacji i rozbudowy."
-            : "I also take on existing projects - their development, bug fixes, optimization, and expansion."}
+            ? "Podejmuję się również istniejących projektów: rozwijam aplikacje, naprawiam błędy, poprawiam wydajność, SEO i integracje."
+            : "I also take over existing projects: app development, bug fixes, performance work, SEO improvements, and integrations."}
         </motion.p>
 
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 list-none p-0 m-0" role="list">
