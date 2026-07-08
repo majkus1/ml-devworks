@@ -286,7 +286,7 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
       className="mt-16 border-primary/20 scroll-mt-[100px]"
       style={{ scrollMarginTop: "100px" }}
     >
-      <h2 className="text-3xl font-bold text-left mb-6">{t.title}</h2>
+      <h2 className="text-2xl md:text-3xl font-bold text-left mb-6">{t.title}</h2>
       
       {overallRating && totalRatings && (
         <div className="flex items-center justify-start gap-4 mb-8">
@@ -303,7 +303,7 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
                 />
               ))}
             </div>
-            <span className="text-xl font-bold">{overallRating.toFixed(1)}</span>
+            <span className="text-lg md:text-xl font-bold">{overallRating.toFixed(1)}</span>
           </div>
           <span className="text-gray-400">
             ({totalRatings} {t.reviews})
@@ -410,7 +410,7 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
             initial={{ opacity: 0, y: 50 }}
             animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-bold text-left mb-4"
+            className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-left leading-tight mb-4"
           >
             {lang === "pl" ? "Moje realizacje" : "My projects"}
           </motion.h2>
@@ -419,7 +419,7 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
             initial={{ opacity: 0, y: 50 }}
             animate={isSubtitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.8 }}
-            className="text-xl text-gray-400 text-left mb-8"
+            className="text-base md:text-lg text-gray-400 text-left leading-relaxed mb-8"
           >
             {lang === "pl"
               ? "Zobacz moje dotychczasowe projekty"
@@ -669,7 +669,7 @@ function ProjectCard({
       </div>
 
       {/* Project Name */}
-      <h3 className="text-2xl font-bold mb-3 text-primary group-hover:text-primary-light transition-colors">
+      <h3 className="text-xl font-bold mb-3 text-primary group-hover:text-primary-light transition-colors">
         {project.name[lang]}
       </h3>
 

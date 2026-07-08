@@ -120,8 +120,8 @@ export default function Contact({ lang = "pl" }: ContactProps) {
           transition={{ duration: 0.8 }}
           className="text-left mb-8"
         >
-          <h2 id="contact-heading" className="text-4xl md:text-5xl font-bold mb-4">{t.title}</h2>
-          <p className="text-xl text-gray-400">{t.subtitle}</p>
+          <h2 id="contact-heading" className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight mb-4">{t.title}</h2>
+          <p className="text-base md:text-lg text-gray-400 leading-relaxed">{t.subtitle}</p>
         </motion.header>
 
         <div className="space-y-8">
@@ -134,7 +134,7 @@ export default function Contact({ lang = "pl" }: ContactProps) {
             className="space-y-6 not-italic"
           >
             <div className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6">
-              <h3 className="text-xl font-bold mb-4 text-primary">{lang === "pl" ? "Dane kontaktowe" : "Contact details"}</h3>
+              <h3 className="text-lg md:text-xl font-bold mb-4 text-primary">{lang === "pl" ? "Dane kontaktowe" : "Contact details"}</h3>
               
               <div className="flex items-center gap-4 mb-6 pb-6 border-b border-primary/20">
                 <Image
@@ -145,7 +145,7 @@ export default function Contact({ lang = "pl" }: ContactProps) {
                   className="w-16 h-16 rounded-full object-cover border-2 border-primary/30"
                 />
                 <div>
-                  <p className="text-white font-semibold text-lg">Michał Lipka</p>
+                  <p className="text-white font-semibold text-base md:text-lg">Michał Lipka</p>
                   <p className="text-gray-400 text-sm">{t.role}</p>
                 </div>
               </div>
@@ -183,8 +183,8 @@ export default function Contact({ lang = "pl" }: ContactProps) {
           </motion.address>
 
           <div className="bg-primary/10 border border-primary/30 rounded-xl p-6">
-            <h3 className="text-xl font-bold text-primary mb-3">{t.form.prototypeTitle}</h3>
-            <p className="text-gray-300 leading-relaxed">{t.form.prototypeText}</p>
+            <h3 className="text-lg md:text-xl font-bold text-primary mb-3">{t.form.prototypeTitle}</h3>
+            <p className="text-sm md:text-base text-gray-300 leading-relaxed">{t.form.prototypeText}</p>
           </div>
 
           {/* Contact Form */}

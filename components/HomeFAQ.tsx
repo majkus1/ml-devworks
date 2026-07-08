@@ -75,10 +75,10 @@ export default function HomeFAQ({ lang = "pl" }: HomeFAQProps) {
           <p className="text-primary font-semibold uppercase tracking-[0.18em] text-sm mb-3">
             FAQ
           </p>
-          <h2 id="home-faq-heading" className="text-4xl md:text-5xl font-bold text-left">
+          <h2 id="home-faq-heading" className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-left leading-tight">
             {lang === "pl" ? "Najczęstsze pytania" : "Frequently asked questions"}
           </h2>
-          <p className="mt-4 text-lg text-gray-400">
+          <p className="mt-4 text-base md:text-lg text-gray-400 leading-relaxed">
             {lang === "pl"
               ? "Krótkie odpowiedzi dla osób, które chcą szybko ocenić, czy mogę pomóc w projekcie strony, aplikacji albo automatyzacji."
               : "Short answers for people who want to quickly decide whether I can help with a website, app, or automation project."}
@@ -91,8 +91,8 @@ export default function HomeFAQ({ lang = "pl" }: HomeFAQProps) {
               key={item.q}
               className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 transition-colors hover:border-primary/50"
             >
-              <h3 className="text-xl font-bold text-primary mb-4">{item.q}</h3>
-              <p className="text-gray-200 leading-relaxed">{item.a}</p>
+              <h3 className="text-lg md:text-xl font-bold text-primary mb-4">{item.q}</h3>
+              <p className="text-sm md:text-base text-gray-200 leading-relaxed">{item.a}</p>
             </article>
           ))}
         </div>

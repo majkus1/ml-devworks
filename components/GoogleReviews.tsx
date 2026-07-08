@@ -113,8 +113,8 @@ export default function GoogleReviews({ lang = "pl", googleMapsUrl }: GoogleRevi
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">{t.title}</h2>
-          <p className="text-xl text-gray-400 mb-6">{t.subtitle}</p>
+          <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight mb-4">{t.title}</h2>
+          <p className="text-base md:text-lg text-gray-400 leading-relaxed mb-6">{t.subtitle}</p>
           
           {overallRating && totalRatings && (
             <div className="flex items-center justify-center gap-4 mb-8">
@@ -131,7 +131,7 @@ export default function GoogleReviews({ lang = "pl", googleMapsUrl }: GoogleRevi
                     />
                   ))}
                 </div>
-                <span className="text-2xl font-bold">{overallRating.toFixed(1)}</span>
+                <span className="text-xl font-bold">{overallRating.toFixed(1)}</span>
               </div>
               <span className="text-gray-400">
                 ({totalRatings} {t.reviews})

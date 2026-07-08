@@ -128,7 +128,7 @@ export default function Services({ lang = "pl" }: ServicesProps) {
           initial={{ opacity: 0, y: 50 }}
           animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl md:text-5xl font-bold text-left mb-4"
+          className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-left leading-tight mb-4"
         >
           {lang === "pl" ? "Usługi programistyczne i dedykowane oprogramowanie dla firm" : "Software development and custom business systems"}
         </motion.h2>
@@ -137,7 +137,7 @@ export default function Services({ lang = "pl" }: ServicesProps) {
           initial={{ opacity: 0, y: 50 }}
           animate={isSubtitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="text-xl text-gray-400 text-left mb-4"
+          className="text-base md:text-lg text-gray-400 text-left leading-relaxed mb-4"
         >
           {lang === "pl"
             ? "Aplikacje webowe, strony internetowe, integracje API/CRM i automatyzacja procesów"
@@ -195,7 +195,7 @@ export default function Services({ lang = "pl" }: ServicesProps) {
           transition={{ duration: 0.5 }}
           className="text-left mt-16"
         >
-          <p className="text-lg text-gray-300 leading-relaxed mb-4">
+          <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-4">
             {lang === "pl" ? (
               <>
                 Korzystam z <span className="text-primary font-semibold">nowoczesnych, wydajnych technologii</span> dopasowanych do specyfiki Twojego projektu oraz z <span className="text-primary font-semibold">narzędzi AI</span>, które przyspieszają analizę, prototypowanie i wdrożenie.
@@ -242,14 +242,14 @@ function ServiceCard({
           }`}
         />
       </div>
-      <h3 className={`text-2xl font-bold mb-3 transition-colors duration-200 ${
+      <h3 className={`text-lg md:text-xl font-bold mb-3 transition-colors duration-200 ${
         isAutomationAI
           ? "text-amber-400 group-hover:text-amber-300"
           : "text-primary group-hover:text-primary-light"
       }`}>
         {service.title}
       </h3>
-      <p className="text-gray-400 leading-relaxed">{service.description}</p>
+      <p className="text-sm md:text-base text-gray-400 leading-relaxed">{service.description}</p>
     </>
   );
 

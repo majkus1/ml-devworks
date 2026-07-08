@@ -63,15 +63,15 @@ export default function Hero({ lang = "pl" }: HeroProps) {
             {t.eyebrow}
           </p>
 
-          <h1 className="mb-6 text-4xl md:text-6xl lg:text-7xl font-bold leading-tight bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent max-[380px]:mb-5 max-[380px]:text-[2.35rem] max-[380px]:leading-[1.08]">
+          <h1 className="mb-6 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent max-[380px]:mb-5 max-[380px]:text-[2.25rem] max-[380px]:leading-[1.08]">
             {t.title}
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-100 mb-5 font-semibold leading-relaxed max-[380px]:mb-4 max-[380px]:text-[1.08rem] max-[380px]:leading-[1.45]">
+          <p className="text-lg md:text-xl text-gray-100 mb-5 font-semibold leading-relaxed max-[380px]:mb-4 max-[380px]:text-[1.04rem] max-[380px]:leading-[1.45]">
             {t.lead}
           </p>
 
-          <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed max-[380px]:mb-6 max-[380px]:text-[1rem] max-[380px]:leading-[1.45]">
+          <p className="text-base md:text-lg text-gray-300 mb-8 leading-relaxed max-[380px]:mb-6 max-[380px]:text-[0.98rem] max-[380px]:leading-[1.45]">
             {t.description}
           </p>
 
