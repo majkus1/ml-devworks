@@ -128,7 +128,7 @@ export default function Services({ lang = "pl" }: ServicesProps) {
           initial={{ opacity: 0, y: 50 }}
           animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-left leading-tight mb-4"
+          className="max-w-5xl text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-left leading-tight mb-4 [text-wrap:balance]"
         >
           {lang === "pl" ? "Usługi programistyczne i dedykowane oprogramowanie dla firm" : "Software development and custom business systems"}
         </motion.h2>
