@@ -6,11 +6,11 @@ export default function AboutIntro({ lang = "pl" }: AboutIntroProps) {
   const content = {
     pl: {
       title: "Nie rozmawiasz z handlowcem. Pracujesz bezpośrednio z programistą odpowiedzialnym za projekt",
-      lead: "Patrzę na projekt jak programista z doświadczeniem biznesowym: najpierw rozumiem proces, klienta i cel, a dopiero potem dobieram technologię. Tworzę dedykowane oprogramowanie dla firm: aplikacje webowe, panele administracyjne, integracje API/CRM, systemy rezerwacji i automatyzacje procesów.",
+      lead: "Łączę rolę programisty i analityka biznesowego: najpierw rozumiem proces, klienta i cel, liczę, gdzie ginie czas i pieniądze, a dopiero potem dobieram technologię. Ta sama osoba prowadzi analizę, prototyp, wdrożenie i utrzymanie, więc nic nie ginie między handlowcem, project managerem a wykonawcą.",
     },
     en: {
       title: "You do not talk to a salesperson. You work directly with the developer responsible for the project",
-      lead: "I approach projects as a developer with business awareness: first I understand the process, customer, and goal, then I choose the right technology. I build custom software for companies: web apps, admin panels, API/CRM integrations, booking systems, and process automation.",
+      lead: "I combine the roles of developer and business analyst: first I understand the process, customer, and goal, calculate where time and money are lost, and only then choose the technology. The same person runs analysis, prototype, delivery, and maintenance, so nothing gets lost between a salesperson, a project manager, and a contractor.",
     },
   };
 
