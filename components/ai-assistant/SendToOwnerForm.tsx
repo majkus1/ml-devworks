@@ -97,7 +97,7 @@ export default function SendToOwnerForm({ onClose }: SendToOwnerFormProps) {
       initial={reduceMotion ? false : { opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-      className="absolute inset-0 z-10 bg-background-lighter/95 backdrop-blur-sm overflow-y-auto"
+      className="absolute inset-0 z-10 bg-[#0a0e0c]/95 backdrop-blur-sm overflow-y-auto"
       role="dialog"
       aria-modal="true"
       aria-labelledby="ai-send-title"

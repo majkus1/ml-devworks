@@ -135,7 +135,7 @@ export default function AiAssistantFloating() {
               animate={reduceMotion ? { opacity: 1 } : { x: 0 }}
               exit={reduceMotion ? { opacity: 0 } : { x: "100%" }}
               transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="fixed inset-y-0 right-0 z-[70] w-full sm:w-[480px] h-[100dvh] sm:border-l border-primary/25 shadow-2xl bg-background-lighter"
+              className="fixed inset-y-0 right-0 z-[70] w-full sm:w-[480px] h-[100dvh] sm:border-l border-primary/25 shadow-2xl bg-[#0a0e0c]"
             >
               <AiAssistantChat variant="panel" onClose={handleClose} autoFocus />
             </motion.aside>

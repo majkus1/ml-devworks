@@ -24,7 +24,7 @@ function SparkIcon({ className = "" }: { className?: string }) {
 
 function AssistantAvatar() {
   return (
-    <div className="shrink-0 w-8 h-8 rounded-full bg-primary/15 border border-primary/40 flex items-center justify-center text-primary" aria-hidden="true">
+    <div className="shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-primary to-emerald-600 text-background shadow-[0_0_14px_rgba(0,255,136,0.45)] flex items-center justify-center" aria-hidden="true">
       <SparkIcon className="w-4 h-4" />
     </div>
   );
@@ -66,6 +66,7 @@ export default function AiAssistantChat({ variant, onClose, autoFocus = false }:
 
   const [input, setInput] = useState("");
   const [showSendForm, setShowSendForm] = useState(false);
+  const [showChips, setShowChips] = useState(false);
   const [liveMessage, setLiveMessage] = useState("");
   const listRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -78,6 +79,18 @@ export default function AiAssistantChat({ variant, onClose, autoFocus = false }:
   useEffect(() => {
     if (autoFocus) textareaRef.current?.focus();
   }, [autoFocus]);
+
+  useEffect(() => {
+    const fit = () => {
+      const element = textareaRef.current;
+      if (!element) return;
+      element.style.height = "auto";
+      element.style.height = `${Math.min(element.scrollHeight, 160)}px`;
+    };
+    fit();
+    window.addEventListener("resize", fit);
+    return () => window.removeEventListener("resize", fit);
+  }, []);
 
   const handleScroll = useCallback(() => {
     const element = listRef.current;
@@ -139,14 +152,14 @@ export default function AiAssistantChat({ variant, onClose, autoFocus = false }:
     : { initial: { opacity: 0, y: 8 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.25, ease: [0.16, 1, 0.3, 1] as const } };
 
   return (
-    <div className={`relative flex flex-col ${isPanel ? "h-full" : "h-[640px] md:h-[680px]"} bg-background-lighter border border-primary/20 ${isPanel ? "" : "rounded-2xl"} overflow-hidden`}>
+    <div className={`relative flex flex-col ${isPanel ? "h-full" : "h-[640px] md:h-[680px]"} border border-primary/25 ${isPanel ? "" : "rounded-2xl shadow-[0_30px_80px_rgba(0,0,0,0.55)]"} overflow-hidden bg-[#0a0e0c] bg-[radial-gradient(90%_60%_at_100%_0%,rgba(0,255,136,0.14),transparent_60%),radial-gradient(70%_50%_at_0%_100%,rgba(0,255,136,0.06),transparent_60%)]`}>
       {/* Nagłówek */}
-      <div className="flex items-center gap-3 px-5 py-4 border-b border-primary/15 bg-background/60">
+      <div className="flex items-center gap-3 px-5 py-4 border-b border-white/10 bg-white/[0.03] backdrop-blur">
         <AssistantAvatar />
         <div className="min-w-0 flex-1">
           <p className="font-semibold text-white text-base leading-tight truncate">{t.chatTitle}</p>
           <p className="text-sm text-gray-400 flex items-center gap-1.5 mt-0.5">
-            <span className={`inline-block w-1.5 h-1.5 rounded-full ${isStreaming ? "bg-amber-400" : "bg-primary"}`} aria-hidden="true" />
+            <span className={`relative inline-flex w-2 h-2 rounded-full ${isStreaming ? "bg-amber-400" : "bg-primary"}`} aria-hidden="true">{!isStreaming && <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-60" />}</span>
             {isStreaming ? t.chatStatusTyping : t.chatStatusOnline}
           </p>
         </div>
@@ -184,21 +197,36 @@ export default function AiAssistantChat({ variant, onClose, autoFocus = false }:
       >
         <div className="flex gap-3">
           <AssistantAvatar />
-          <div className="max-w-[90%] rounded-2xl rounded-tl-md bg-background border border-primary/15 px-4 py-3.5 text-gray-200 text-base leading-relaxed">
+          <div className="max-w-[90%] rounded-2xl rounded-tl-md bg-white/[0.04] border border-white/10 px-4 py-3.5 text-gray-100 text-base leading-relaxed">
             {t.welcome}
           </div>
         </div>
 
         {hydrated && messages.length === 0 && (
           <div className="pl-0 sm:pl-11 space-y-2">
-            <p className="text-xs uppercase tracking-[0.14em] text-gray-500 font-semibold px-1">{t.chipsLabel}</p>
-            <div className="flex flex-col gap-2">
+            <button
+              type="button"
+              onClick={() => setShowChips((value) => !value)}
+              aria-expanded={showChips}
+              aria-controls={`ai-chips-${variant}`}
+              className="inline-flex items-center gap-2 text-sm font-medium text-primary/90 hover:text-primary px-3 py-2 rounded-full bg-primary/[0.08] border border-primary/25 hover:border-primary/60 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8" />
+              </svg>
+              {showChips ? t.chipsHide : t.chipsLabel}
+              <svg className={`transition-transform ${showChips ? "rotate-180" : ""}`} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+            {showChips && (
+            <div id={`ai-chips-${variant}`} className="flex flex-col gap-2 pt-1">
               {t.chips.map((chip) => (
                 <button
                   key={chip}
                   type="button"
                   onClick={() => void submit(chip)}
-                  className="group flex items-center justify-between gap-3 text-left text-[15px] px-4 py-3 rounded-xl bg-primary/[0.07] border border-primary/25 text-gray-100 hover:bg-primary/15 hover:border-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                  className="group flex items-center justify-between gap-3 text-left text-[15px] px-4 py-3 rounded-xl bg-white/[0.04] border border-white/10 text-gray-100 hover:bg-primary/10 hover:border-primary/60 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                 >
                   <span>{chip}</span>
                   <svg className="shrink-0 text-primary opacity-60 group-hover:opacity-100 transition-opacity" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -207,13 +235,14 @@ export default function AiAssistantChat({ variant, onClose, autoFocus = false }:
                 </button>
               ))}
             </div>
+            )}
           </div>
         )}
 
         {messages.map((message) =>
           message.role === "user" ? (
             <motion.div key={message.id} {...bubbleMotion} className="flex justify-end">
-              <div className="max-w-[90%] rounded-2xl rounded-tr-md bg-primary/15 border border-primary/30 px-4 py-3.5 text-white text-base leading-relaxed whitespace-pre-wrap">
+              <div className="max-w-[90%] rounded-2xl rounded-tr-md bg-gradient-to-br from-primary/25 to-primary/10 border border-primary/40 px-4 py-3.5 text-white text-base leading-relaxed whitespace-pre-wrap shadow-[0_8px_24px_rgba(0,255,136,0.08)]">
                 <span className="sr-only">{t.a11y.userLabel}: </span>
                 {message.content}
               </div>
@@ -221,7 +250,7 @@ export default function AiAssistantChat({ variant, onClose, autoFocus = false }:
           ) : (
             <motion.div key={message.id} {...bubbleMotion} className="flex gap-3">
               <AssistantAvatar />
-              <div className="max-w-[90%] rounded-2xl rounded-tl-md bg-background border border-primary/15 px-4 py-3.5 text-gray-200">
+              <div className="max-w-[90%] rounded-2xl rounded-tl-md bg-white/[0.04] border border-white/10 px-4 py-3.5 text-gray-100">
                 <span className="sr-only">{t.a11y.assistantLabel}: </span>
                 <MessageMarkdown text={message.content} />
               </div>
@@ -232,7 +261,7 @@ export default function AiAssistantChat({ variant, onClose, autoFocus = false }:
         {isStreaming && (
           <div className="flex gap-3">
             <AssistantAvatar />
-            <div className="max-w-[90%] rounded-2xl rounded-tl-md bg-background border border-primary/15 px-4 py-3.5 text-gray-200">
+            <div className="max-w-[90%] rounded-2xl rounded-tl-md bg-white/[0.04] border border-white/10 px-4 py-3.5 text-gray-100">
               {streamingText ? (
                 <>
                   <MessageMarkdown text={streamingText} />
@@ -274,7 +303,7 @@ export default function AiAssistantChat({ variant, onClose, autoFocus = false }:
       </div>
 
       {/* Stopka: kompozytor + CTA */}
-      <div className="border-t border-primary/15 bg-background/60 px-4 md:px-5 pt-4 pb-4 space-y-3">
+      <div className="border-t border-white/10 bg-white/[0.02] backdrop-blur px-4 md:px-5 pt-4 pb-4 space-y-3">
         {sentEmail && (
           <p className="text-sm text-primary bg-primary/10 border border-primary/30 rounded-lg px-3.5 py-2.5" role="status">
             {t.sentBanner(sentEmail)}
@@ -298,13 +327,13 @@ export default function AiAssistantChat({ variant, onClose, autoFocus = false }:
             }}
             onKeyDown={handleKeyDown}
             placeholder={limitReached ? t.limitReached : t.inputPlaceholder}
-            className="flex-1 resize-none px-4 py-3.5 text-base leading-6 bg-background border border-primary/25 rounded-xl placeholder:text-gray-500 focus:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 transition-colors disabled:opacity-60 min-h-[52px] max-h-[160px]"
+            className="flex-1 resize-none px-4 py-3.5 text-base leading-6 bg-black/40 border border-white/15 rounded-xl placeholder:text-gray-500 focus:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 transition-colors disabled:opacity-60 min-h-[52px] max-h-[160px] [field-sizing:content] overflow-y-auto"
           />
           {isStreaming ? (
             <button
               type="button"
               onClick={stop}
-              className="shrink-0 h-[52px] px-4 rounded-xl bg-background border border-primary/40 text-white font-medium hover:border-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              className="shrink-0 h-[52px] px-4 rounded-xl bg-black/40 border border-primary/40 text-white font-medium hover:border-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
               {t.stop}
             </button>
@@ -314,7 +343,7 @@ export default function AiAssistantChat({ variant, onClose, autoFocus = false }:
               onClick={() => void submit(input)}
               disabled={!input.trim() || limitReached}
               aria-label={t.send}
-              className="shrink-0 h-[52px] w-[52px] flex items-center justify-center rounded-xl bg-primary text-background hover:bg-primary-dark transition-colors disabled:opacity-40 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              className="shrink-0 h-[52px] w-[52px] flex items-center justify-center rounded-xl bg-gradient-to-br from-primary to-emerald-500 text-background shadow-[0_0_18px_rgba(0,255,136,0.35)] hover:from-primary-light hover:to-primary transition-all disabled:opacity-40 disabled:shadow-none disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z" />
