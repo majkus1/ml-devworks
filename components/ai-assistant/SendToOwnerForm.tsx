@@ -12,7 +12,7 @@ interface SendToOwnerFormProps {
 }
 
 const inputClass =
-  "w-full px-4 py-3 text-base bg-background border border-primary/20 rounded-lg focus:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-colors";
+  "w-full px-4 py-3.5 text-base bg-background border border-primary/25 rounded-xl placeholder:text-gray-500 focus:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 transition-colors";
 
 export default function SendToOwnerForm({ onClose }: SendToOwnerFormProps) {
   const { lang, messages, markSent, sentEmail } = useAiAssistant();

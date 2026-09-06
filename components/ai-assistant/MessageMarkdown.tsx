@@ -85,7 +85,7 @@ export default function MessageMarkdown({ text }: { text: string }) {
   const blocks = parseBlocks(text);
 
   return (
-    <div className="space-y-2.5 text-[15px] leading-relaxed">
+    <div className="space-y-3 text-base leading-relaxed">
       {blocks.map((block, blockIndex) => {
         const key = `b${blockIndex}`;
         if (block.type === "ul") {
