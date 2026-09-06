@@ -19,7 +19,7 @@ export default function HomeFAQAnimated({ lang, items }: HomeFAQAnimatedProps) {
         <p className="text-primary font-semibold uppercase tracking-[0.18em] text-sm mb-3">
           FAQ
         </p>
-        <h2 id="home-faq-heading" className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-left leading-tight">
+        <h2 id="home-faq-heading" className="max-w-5xl text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-left leading-tight [text-wrap:balance]">
           {lang === "pl" ? "Najczęstsze pytania" : "Frequently asked questions"}
         </h2>
         <p className="mt-4 text-base md:text-lg text-gray-400 leading-relaxed">
