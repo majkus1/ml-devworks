@@ -117,6 +117,26 @@ function ArticleSchema({ post }: { post: BlogPost }) {
 }
 
 const RELATED_SERVICE_BY_SLUG: Record<string, { title: string; href: string; label: string }> = {
+  "what-can-be-automated-in-a-company-with-ai-process-examples": {
+    title: "AI automation for companies",
+    href: "/en/services/automation-and-ai",
+    label: "View AI automation service",
+  },
+  "ai-automation-of-customer-support-tickets-helpdesk-contact-center": {
+    title: "AI automation for companies",
+    href: "/en/services/automation-and-ai",
+    label: "View AI automation service",
+  },
+  "custom-mobile-apps-for-companies-cost-timeline-native-vs-cross-platform": {
+    title: "Custom mobile apps for companies",
+    href: "/en/services/mobile-apps-for-companies",
+    label: "View mobile apps for companies",
+  },
+  "ai-automation-agency-or-developer-how-to-choose-a-vendor": {
+    title: "AI automation for companies",
+    href: "/en/services/automation-and-ai",
+    label: "View AI automation service",
+  },
   "how-much-does-business-process-automation-cost-and-how-to-calculate-roi": {
     title: "Business process automation and AI",
     href: "/en/services/automation-and-ai",

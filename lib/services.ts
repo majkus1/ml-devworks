@@ -48,6 +48,25 @@ export const serviceItems: ServiceItem[] = [
     },
   },
   {
+    id: "mobile-apps",
+    title: {
+      pl: "Aplikacje mobilne dla firm na zamówienie",
+      en: "Custom mobile apps for companies",
+    },
+    shortTitle: {
+      pl: "Aplikacje mobilne",
+      en: "Mobile apps",
+    },
+    description: {
+      pl: "Tworzę aplikacje mobilne iOS i Android na zamówienie: dla pracowników w terenie, klientów, serwisu, sprzedaży i rezerwacji, z panelem administracyjnym i integracjami.",
+      en: "I build custom iOS and Android mobile apps: for field employees, customers, service, sales, and bookings, with an admin panel and integrations.",
+    },
+    href: {
+      pl: "/uslugi/aplikacje-mobilne-dla-firm",
+      en: "/en/services/mobile-apps-for-companies",
+    },
+  },
+  {
     id: "automation-ai",
     title: {
       pl: "Automatyzacja procesów i AI dla firm",

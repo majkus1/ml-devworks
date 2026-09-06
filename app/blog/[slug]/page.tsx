@@ -117,6 +117,26 @@ function ArticleSchema({ post, slug }: { post: BlogPost; slug: string }) {
 }
 
 const RELATED_SERVICE_BY_SLUG: Record<string, { title: string; href: string; label: string }> = {
+  "co-mozna-zautomatyzowac-w-firmie-z-ai-przyklady-procesow": {
+    title: "Automatyzacje AI dla firm",
+    href: "/uslugi/automatyzacja-i-ai",
+    label: "Zobacz usługę automatyzacji AI",
+  },
+  "automatyzacja-obslugi-zgloszen-i-klienta-z-ai-helpdesk-contact-center": {
+    title: "Automatyzacje AI dla firm",
+    href: "/uslugi/automatyzacja-i-ai",
+    label: "Zobacz usługę automatyzacji AI",
+  },
+  "aplikacje-mobilne-dla-firm-na-zamowienie-koszt-czas-natywna-czy-cross-platform": {
+    title: "Aplikacje mobilne dla firm na zamówienie",
+    href: "/uslugi/aplikacje-mobilne-dla-firm",
+    label: "Zobacz aplikacje mobilne dla firm",
+  },
+  "agencja-automatyzacji-ai-czy-programista-jak-wybrac-wykonawce": {
+    title: "Automatyzacje AI dla firm",
+    href: "/uslugi/automatyzacja-i-ai",
+    label: "Zobacz usługę automatyzacji AI",
+  },
   "ile-kosztuje-automatyzacja-procesow-w-firmie-i-jak-liczyc-roi": {
     title: "Automatyzacja procesów i AI dla firm",
     href: "/uslugi/automatyzacja-i-ai",

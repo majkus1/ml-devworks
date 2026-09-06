@@ -7,7 +7,9 @@ interface StructuredDataProps {
 export default function StructuredData({ lang = "pl" }: StructuredDataProps) {
   const googleMapsUrl =
     "https://www.google.com/maps/place/ML+Devworks/@50.0624834,19.9337611,17z/data=!3m1!4b1!4m6!3m5!1s0x425626465742ffe9:0xa1672c4591c41c29!8m2!3d50.06248!4d19.936336!16s%2Fg%2F11yrt8l9fl?entry=ttu";
-  const sameAs = [googleMapsUrl];
+  // Uzupełnij o kolejne profile firmy (LinkedIn, GitHub, Clutch itp.), gdy będą dostępne.
+  const socialProfiles: string[] = [];
+  const sameAs = [googleMapsUrl, ...socialProfiles];
   const services = getServices(lang);
 
   const organization = {
@@ -35,6 +37,8 @@ export default function StructuredData({ lang = "pl" }: StructuredDataProps) {
     },
     sameAs,
     founder: { "@id": "https://ml-devworks.com/#person" },
+    knowsAbout: services.map((service) => service.title),
+    slogan: lang === "pl" ? "Doświadczony programista wspierany narzędziami AI." : "Experienced developer supported by AI tools.",
     description:
       lang === "pl"
         ? "ML DevWorks to marka doświadczonego programisty z Krakowa, który tworzy strony internetowe, aplikacje webowe i mobilne, automatyzacje AI, sklepy internetowe, systemy rezerwacji, wdrożenia DevOps oraz utrzymuje projekty dla firm."
@@ -92,6 +96,7 @@ export default function StructuredData({ lang = "pl" }: StructuredDataProps) {
         ? "Profesjonalne rozwiązania cyfrowe - strony internetowe, aplikacje, sklepy online"
         : "Professional digital solutions - websites, applications, online stores",
     inLanguage: lang === "pl" ? "pl-PL" : "en-US",
+    publisher: { "@id": "https://ml-devworks.com/#organization" },
   };
 
   const person = {
@@ -106,10 +111,15 @@ export default function StructuredData({ lang = "pl" }: StructuredDataProps) {
       "Web development",
       "Next.js",
       "React",
+      "React Native",
       "TypeScript",
       "AI automation",
+      "AI agents",
+      "Business process automation",
+      "Mobile app development",
       "API integration",
       "E-commerce",
+      "Booking systems",
       "DevOps",
     ],
     address: {

@@ -105,78 +105,22 @@ const services = {
 };
 
 export default function Services({ lang = "pl" }: ServicesProps) {
-  const headingRef = useRef(null);
-  const subtitleRef = useRef(null);
-  const description1Ref = useRef(null);
-  const description2Ref = useRef(null);
-  const footerRef = useRef(null);
-  
-  const isHeadingInView = useInView(headingRef, { once: true, margin: "-50px" });
-  const isSubtitleInView = useInView(subtitleRef, { once: true, margin: "-50px" });
-  const isDescription1InView = useInView(description1Ref, { once: true, margin: "-50px" });
-  const isDescription2InView = useInView(description2Ref, { once: true, margin: "-50px" });
-  const isFooterInView = useInView(footerRef, { once: true, margin: "-50px" });
-
   const serviceList = services[lang];
 
   return (
     <section id="services" className="py-28 md:py-32 px-4 relative scroll-mt-[20px]" aria-labelledby="services-heading">
       <div className="max-w-7xl mx-auto">
-        <motion.h2
+        <h2
           id="services-heading"
-          ref={headingRef}
-          initial={{ opacity: 0, y: 50 }}
-          animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.5 }}
           className="max-w-5xl text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-left leading-tight mb-4 [text-wrap:balance]"
         >
           {lang === "pl" ? "Usługi programistyczne i dedykowane oprogramowanie dla firm" : "Software development and custom business systems"}
-        </motion.h2>
-        <motion.p
-          ref={subtitleRef}
-          initial={{ opacity: 0, y: 50 }}
-          animate={isSubtitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.5 }}
-          className="text-base md:text-lg text-gray-400 text-left leading-relaxed mb-4"
-        >
+        </h2>
+        <p className="text-base md:text-lg text-gray-400 text-left leading-relaxed mb-10 max-w-3xl">
           {lang === "pl"
-            ? "Aplikacje webowe, strony internetowe, integracje API/CRM i automatyzacja procesów"
-            : "Web applications, websites, API/CRM integrations and process automation"}
-        </motion.p>
-        
-        <motion.p
-          ref={description1Ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={isDescription1InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.5 }}
-          className="text-base text-gray-300 text-left mb-4"
-        >
-          {lang === "pl" ? (
-            <>
-              Tworzę dedykowane oprogramowanie dla firm: aplikacje internetowe, panele administracyjne, systemy rezerwacji, sklepy e-commerce i automatyzacje AI.
-              <br />
-              Pracujesz bezpośrednio z programistą, który rozumie proces biznesowy i odpowiada za efekt końcowy.
-            </>
-          ) : (
-            <>
-              I build custom software for companies: web applications, admin panels, booking systems, e-commerce stores, and AI automation.
-              <br />
-              You work directly with the developer who understands the business process and owns the final result.
-            </>
-          )}
-        </motion.p>
-        
-        <motion.p
-          ref={description2Ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={isDescription2InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.5 }}
-          className="text-base text-gray-300 text-left mb-8"
-        >
-          {lang === "pl"
-            ? "Podejmuję się również istniejących projektów: rozwijam aplikacje, naprawiam błędy, poprawiam wydajność, SEO i integracje."
-            : "I also take over existing projects: app development, bug fixes, performance work, SEO improvements, and integrations."}
-        </motion.p>
+            ? "Od strony firmowej po agenta AI: dobieram zakres do procesu, który ma zarabiać albo oszczędzać czas. Każdą usługę opisuję z cenami „od” i czasem realizacji."
+            : "From a business website to an AI agent: I match the scope to the process that should earn money or save time. Every service page lists 'from' prices and timelines."}
+        </p>
 
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 list-none p-0 m-0" role="list">
           {serviceList.map((service, index) => (
@@ -188,30 +132,6 @@ export default function Services({ lang = "pl" }: ServicesProps) {
           ))}
         </ul>
         
-        <motion.div
-          ref={footerRef}
-          initial={{ opacity: 0, y: 50 }}
-          animate={isFooterInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.5 }}
-          className="text-left mt-16"
-        >
-          <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-4">
-            {lang === "pl" ? (
-              <>
-                Korzystam z <span className="text-primary font-semibold">nowoczesnych, wydajnych technologii</span> dopasowanych do specyfiki Twojego projektu oraz z <span className="text-primary font-semibold">narzędzi AI</span>, które przyspieszają analizę, prototypowanie i wdrożenie.
-              </>
-            ) : (
-              <>
-                I use <span className="text-primary font-semibold">modern, efficient technologies</span> tailored to your project&apos;s needs and <span className="text-primary font-semibold">AI tools</span> that speed up analysis, prototyping, and implementation.
-              </>
-            )}
-          </p>
-          <p className="text-base text-gray-400 italic">
-            {lang === "pl"
-              ? "Za jakość, bezpieczeństwo i finalny efekt odpowiada doświadczony programista, nie automatyczny generator kodu."
-              : "Quality, security, and the final result are owned by an experienced developer, not an automatic code generator."}
-          </p>
-        </motion.div>
       </div>
     </section>
   );
@@ -226,7 +146,7 @@ function ServiceCard({
 }) {
   const IconComponent = service.icon;
   const cardRef = useRef(null);
-  const isCardInView = useInView(cardRef, { once: true, margin: "-50px" });
+  const isCardInView = useInView(cardRef, { once: true, margin: "0px 0px -40px 0px" });
   
   // Sprawdź czy to usługa "Automatyzacja i AI" / "Automation & AI"
   const isAutomationAI = service.title === "Automatyzacja i AI" || service.title === "Automation & AI";
@@ -263,7 +183,7 @@ function ServiceCard({
     return (
       <motion.li
         ref={cardRef}
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 24 }}
         animate={isCardInView ? { opacity: 1, y: 0 } : {}}
         transition={{ 
           duration: 0.5,
@@ -290,7 +210,7 @@ function ServiceCard({
   return (
     <motion.li
       ref={cardRef}
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 24 }}
       animate={isCardInView ? { opacity: 1, y: 0 } : {}}
       transition={{ 
         duration: 0.5,

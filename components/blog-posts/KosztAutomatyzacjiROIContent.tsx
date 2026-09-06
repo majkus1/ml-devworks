@@ -35,12 +35,12 @@ export default function KosztAutomatyzacjiROIContent({ lang }: Props) {
         <div className="grid gap-4 md:grid-cols-3">
           {(isPl
             ? [
-                ["Prosty workflow", "od ok. 4 000 zł netto", "np. formularz -> CRM -> e-mail -> zadanie dla handlowca."],
+                ["Prosty workflow", "od ok. 2 500 zł netto", "np. formularz -> CRM -> e-mail -> zadanie dla handlowca."],
                 ["Integracja wielu systemów", "od ok. 8 000-18 000 zł netto", "np. CRM, płatności, raporty i automatyczne statusy."],
                 ["Agent AI lub panel", "wycena po analizie", "np. agent obsługi klienta, baza wiedzy, dashboard i monitoring jakości."],
               ]
             : [
-                ["Simple workflow", "from about PLN 4,000 net", "for example form -> CRM -> email -> sales task."],
+                ["Simple workflow", "from about PLN 2,500 net", "for example form -> CRM -> email -> sales task."],
                 ["Multi-system integration", "from about PLN 8,000-18,000 net", "for example CRM, payments, reports, and automatic statuses."],
                 ["AI agent or panel", "estimated after analysis", "for example customer service agent, knowledge base, dashboard, and quality monitoring."],
               ]

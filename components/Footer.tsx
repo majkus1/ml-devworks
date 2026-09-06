@@ -18,7 +18,7 @@ export default function Footer({ lang = "pl" }: FooterProps) {
       contact: "Kontakt",
       blog: "Blog",
       home: "Strona główna",
-      contactSection: "Formularz kontaktowy",
+      contactSection: "Kontakt i asystent AI",
       switchLang: "English version",
       rights: "Wszelkie prawa zastrzeżone.",
       addressLabel: "Adres",
@@ -31,7 +31,7 @@ export default function Footer({ lang = "pl" }: FooterProps) {
       contact: "Contact",
       blog: "Blog",
       home: "Homepage",
-      contactSection: "Contact form",
+      contactSection: "Contact and AI advisor",
       switchLang: "Polska wersja",
       rights: "All rights reserved.",
       addressLabel: "Address",
@@ -45,7 +45,7 @@ export default function Footer({ lang = "pl" }: FooterProps) {
   const blogHref = isEnglish ? "/en/blog" : "/blog";
   const servicesHref = isEnglish ? "/en/services" : "/uslugi";
   const localHref = isEnglish ? "/en/software-developer-krakow" : "/programista-krakow";
-  const contactHref = isEnglish ? "/en#contact" : "/#contact";
+  const contactHref = isEnglish ? "/en/contact" : "/kontakt";
   const alternateHref = isEnglish ? "/" : "/en";
 
   return (

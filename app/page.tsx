@@ -8,6 +8,10 @@ import Navbar from "@/components/Navbar";
 import StructuredData from "@/components/StructuredData";
 import AboutIntro from "@/components/AboutIntro";
 import HomeFAQ from "@/components/HomeFAQ";
+import AiAssistantSection from "@/components/ai-assistant/AiAssistantSection";
+import TrustBar from "@/components/TrustBar";
+import AutomationExamplesSection from "@/components/AutomationExamplesSection";
+import HomeProcess from "@/components/HomeProcess";
 
 export const metadata: Metadata = {
   title: "Aplikacje dla firm, strony i automatyzacje AI | ML DevWorks",
@@ -29,11 +33,15 @@ export default function HomePage() {
       <Navbar lang="pl" />
       <main className="min-h-screen">
         <Hero />
+        <TrustBar lang="pl" />
+        <AutomationExamplesSection lang="pl" limit={6} moreHref="/uslugi/automatyzacja-i-ai" id="automatyzacje" showCta={false} />
+        <AiAssistantSection lang="pl" showSteps={false} />
         <AboutIntro />
         <Services />
         <Realizations />
+        <HomeProcess lang="pl" />
         <HomeFAQ />
-        <Contact />
+        <Contact compact />
       </main>
       <Footer />
     </>

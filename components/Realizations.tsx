@@ -279,10 +279,7 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
     <motion.div
       id="client-reviews"
       ref={reviewsRef}
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.8, delay: 0.3 }}
+      initial={false}
       className="mt-16 border-primary/20 scroll-mt-[100px]"
       style={{ scrollMarginTop: "100px" }}
     >
@@ -315,10 +312,10 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
         {reviews.map((review, index) => (
           <motion.article
             key={review.time}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+            viewport={{ once: true, margin: "0px 0px -40px 0px" }}
+            transition={{ duration: 0.45, delay: index * 0.07 }}
             className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 w-full min-w-0"
           >
             <div className="flex items-start gap-3 mb-3">
@@ -375,10 +372,6 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
 }
 
 export default function Realizations({ lang = "pl" }: RealizationsProps) {
-  const headingRef = useRef(null);
-  const subtitleRef = useRef(null);
-  const isHeadingInView = useInView(headingRef, { once: true, margin: "-100px" });
-  const isSubtitleInView = useInView(subtitleRef, { once: true, margin: "-100px" });
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -404,27 +397,17 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
     <>
       <section id="realizations" className="py-28 md:py-32 px-4 relative scroll-mt-[20px]" aria-labelledby="realizations-heading">
         <div className="max-w-7xl mx-auto">
-          <motion.h2
+          <h2
             id="realizations-heading"
-            ref={headingRef}
-            initial={{ opacity: 0, y: 50 }}
-            animate={isHeadingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-            transition={{ duration: 0.8 }}
             className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-left leading-tight mb-4"
           >
             {lang === "pl" ? "Moje realizacje" : "My projects"}
-          </motion.h2>
-          <motion.p
-            ref={subtitleRef}
-            initial={{ opacity: 0, y: 50 }}
-            animate={isSubtitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-            transition={{ duration: 0.8 }}
-            className="text-base md:text-lg text-gray-400 text-left leading-relaxed mb-8"
-          >
+          </h2>
+          <p className="text-base md:text-lg text-gray-400 text-left leading-relaxed mb-8">
             {lang === "pl"
               ? "Zobacz moje dotychczasowe projekty"
               : "See my completed projects"}
-          </motion.p>
+          </p>
 
           <ul className={`grid grid-cols-1 md:grid-cols-2 gap-8 list-none p-0 m-0 ${projects.length === 4 ? "lg:grid-cols-2" : "lg:grid-cols-3"}`} role="list">
             {projects.map((project, index) => (
@@ -634,16 +617,16 @@ function ProjectCard({
   onOpenImageModal: (image: string) => void;
 }) {
   const cardRef = useRef(null);
-  const isCardInView = useInView(cardRef, { once: true, margin: "-100px" });
+  const isCardInView = useInView(cardRef, { once: true, margin: "0px 0px -40px 0px" });
 
   return (
     <motion.li
       ref={cardRef}
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 24 }}
       animate={isCardInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ 
-        duration: 0.8,
-        delay: 0.3 + index * 0.1,
+      transition={{
+        duration: 0.5,
+        delay: index * 0.08,
         ease: [0.16, 1, 0.3, 1]
       }}
       whileHover={{ 

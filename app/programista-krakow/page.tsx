@@ -118,6 +118,42 @@ export default function ProgramistaKrakowPage() {
           </div>
         </section>
 
+        <section className="px-4 py-16" aria-labelledby="krakow-automation-heading">
+          <div className="max-w-5xl mx-auto grid gap-8 lg:grid-cols-[1.2fr_1fr] items-start">
+            <div>
+              <h2 id="krakow-automation-heading" className="text-3xl md:text-4xl font-bold mb-4">
+                Automatyzacja AI Kraków: wdrożenia dla lokalnych firm
+              </h2>
+              <p className="text-lg text-gray-300 leading-relaxed mb-4">
+                Firmy z Krakowa i Małopolski najczęściej pytają o automatyzację obsługi zapytań i zgłoszeń, integrację CRM z formularzami i sklepem, automatyczne raporty oraz agentów AI, którzy odciążają biuro. Wdrażam takie rozwiązania od 2 500 zł netto, a pierwsze efekty widać po 3-14 dniach roboczych.
+              </p>
+              <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                Mogę spotkać się na miejscu w Krakowie, żeby przejść przez proces z zespołem, a wdrożenie i utrzymanie prowadzić zdalnie. Zacznij od rozmowy z asystentem AI na stronie kontaktu albo opisz proces w formularzu.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link href="/uslugi/automatyzacja-i-ai" className="px-5 py-3 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors">
+                  Automatyzacje AI dla firm
+                </Link>
+                <Link href="/kontakt#ai-advisor" className="px-5 py-3 bg-background-lighter border border-primary/30 rounded-lg text-primary hover:border-primary transition-colors">
+                  Zapytaj asystenta AI
+                </Link>
+              </div>
+            </div>
+            <div className="bg-background-lighter border border-primary/20 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-white mb-4">Oprogramowanie dla firm z Krakowa</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li>- Aplikacje mobilne dla pracowników terenowych i serwisu</li>
+                <li>- Systemy rezerwacji dla gabinetów, salonów i usług lokalnych</li>
+                <li>- Integracje CRM/ERP i panele klienta</li>
+                <li>- Strony firmowe pod lokalne SEO</li>
+              </ul>
+              <Link href="/uslugi/aplikacje-mobilne-dla-firm" className="inline-block mt-4 text-primary hover:text-primary-light font-semibold">
+                Aplikacje mobilne dla firm na zamówienie
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <section className="px-4 py-16 bg-background-lighter/40" aria-labelledby="krakow-proof-heading">
           <div className="max-w-5xl mx-auto">
             <h2 id="krakow-proof-heading" className="text-3xl md:text-4xl font-bold mb-6">

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { COOKIE_CONSENT_EVENT } from "@/components/ai-assistant/AiAssistantFloating";
 
 interface CookieBannerProps {
   lang?: "pl" | "en";
@@ -65,6 +66,7 @@ export default function CookieBanner({ lang = "pl" }: CookieBannerProps) {
     localStorage.setItem("cookie-consent", JSON.stringify(allAccepted));
     updateConsent(allAccepted);
     setIsVisible(false);
+    window.dispatchEvent(new Event(COOKIE_CONSENT_EVENT));
   };
 
   const handleRejectAll = () => {
@@ -74,6 +76,7 @@ export default function CookieBanner({ lang = "pl" }: CookieBannerProps) {
     localStorage.setItem("cookie-consent", JSON.stringify(rejected));
     updateConsent(rejected);
     setIsVisible(false);
+    window.dispatchEvent(new Event(COOKIE_CONSENT_EVENT));
   };
 
   const texts = {

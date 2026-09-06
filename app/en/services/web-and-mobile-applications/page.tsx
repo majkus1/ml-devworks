@@ -135,6 +135,20 @@ export default function WebAndMobileApplicationsPage() {
         </section>
         <ServiceSeoSections serviceId="apps" lang="en" />
 
+        <section className="px-4 py-12" aria-labelledby="mobile-only-heading">
+          <div className="max-w-4xl mx-auto bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-6">
+            <div className="flex-1">
+              <h2 id="mobile-only-heading" className="text-2xl font-bold text-white mb-2">Looking for a custom mobile app only?</h2>
+              <p className="text-gray-300 leading-relaxed">
+                Custom mobile apps for companies (iOS and Android) for field employees, service, sales, and customers have their own page: technologies, costs, timeline, and app store publishing.
+              </p>
+            </div>
+            <Link href="/en/services/mobile-apps-for-companies" className="shrink-0 px-6 py-3 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors text-center">
+              Mobile apps for companies
+            </Link>
+          </div>
+        </section>
+
         {/* Main Content */}
         <section className="px-4 py-16">
           <div className="max-w-4xl mx-auto">

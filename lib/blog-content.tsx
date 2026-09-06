@@ -10,8 +10,24 @@ import KosztAutomatyzacjiROIContent from "@/components/blog-posts/KosztAutomatyz
 import SystemRezerwacjiDlaFirmyUslugowejContent from "@/components/blog-posts/SystemRezerwacjiDlaFirmyUslugowejContent";
 import AgenciAIObslugaKlientaContent from "@/components/blog-posts/AgenciAIObslugaKlientaContent";
 import IntegracjaSystemowContent from "@/components/blog-posts/IntegracjaSystemowContent";
+import CoMoznaZautomatyzowacContent from "@/components/blog-posts/CoMoznaZautomatyzowacContent";
+import AutomatyzacjaObslugiZgloszenContent from "@/components/blog-posts/AutomatyzacjaObslugiZgloszenContent";
+import AplikacjeMobilneNaZamowienieContent from "@/components/blog-posts/AplikacjeMobilneNaZamowienieContent";
+import AgencjaAutomatyzacjiCzyProgramistaContent from "@/components/blog-posts/AgencjaAutomatyzacjiCzyProgramistaContent";
 
 const POST_CONTENT: Record<string, (lang: "pl" | "en") => ReactNode> = {
+  "co-mozna-zautomatyzowac-w-firmie-z-ai-przyklady-procesow": (lang) => (
+    <CoMoznaZautomatyzowacContent lang={lang} />
+  ),
+  "automatyzacja-obslugi-zgloszen-i-klienta-z-ai-helpdesk-contact-center": (lang) => (
+    <AutomatyzacjaObslugiZgloszenContent lang={lang} />
+  ),
+  "aplikacje-mobilne-dla-firm-na-zamowienie-koszt-czas-natywna-czy-cross-platform": (lang) => (
+    <AplikacjeMobilneNaZamowienieContent lang={lang} />
+  ),
+  "agencja-automatyzacji-ai-czy-programista-jak-wybrac-wykonawce": (lang) => (
+    <AgencjaAutomatyzacjiCzyProgramistaContent lang={lang} />
+  ),
   "ile-kosztuje-automatyzacja-procesow-w-firmie-i-jak-liczyc-roi": (lang) => (
     <KosztAutomatyzacjiROIContent lang={lang} />
   ),

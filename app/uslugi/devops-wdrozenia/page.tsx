@@ -6,10 +6,15 @@ import StructuredData from "@/components/StructuredData";
 import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
-  title: "DevOps i wdrożenia chmurowe dla firm | ML DevWorks",
+  title: "DevOps i automatyzacja wdrożeń w chmurze (CI/CD) | ML DevWorks",
   description:
-    "Wdrażam aplikacje w chmurze i porządkuję DevOps: CI/CD, Docker, monitoring, backup i bezpieczeństwo. Stabilne wydania bez chaosu.",
+    "Automatyzacja wdrożeń w chmurze i DevOps dla firm: CI/CD, Docker, monitoring, backup i bezpieczeństwo. Wsparcie DevOps dla e-commerce, SaaS i agencji. Od 4 500 zł netto.",
   keywords: [
+    "automatyzacja wdrożeń w chmurze",
+    "devops w chmurze",
+    "wdrożenie devops",
+    "wsparcie devops dla e-commerce",
+    "usługi devops dla agencji",
     "devops dla firm",
     "wdrozenia chmurowe aplikacji",
     "konfiguracja ci cd",
@@ -32,18 +37,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "DevOps i wdrożenia chmurowe | ML DevWorks",
+    title: "DevOps i automatyzacja wdrożeń w chmurze (CI/CD) | ML DevWorks",
     description:
-      "Wdrażam aplikacje w chmurze i porządkuję DevOps: CI/CD, Docker, monitoring, backup i bezpieczeństwo. Stabilne wydania bez chaosu.",
+      "Automatyzacja wdrożeń w chmurze i DevOps dla firm: CI/CD, Docker, monitoring, backup i bezpieczeństwo. Wsparcie DevOps dla e-commerce, SaaS i agencji.",
     url: "https://ml-devworks.com/uslugi/devops-wdrozenia",
     type: "website",
     locale: "pl_PL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "DevOps i wdrożenia chmurowe | ML DevWorks",
+    title: "DevOps i automatyzacja wdrożeń w chmurze (CI/CD) | ML DevWorks",
     description:
-      "Wdrażam aplikacje w chmurze i porządkuję DevOps: CI/CD, Docker, monitoring, backup i bezpieczeństwo. Stabilne wydania bez chaosu.",
+      "Automatyzacja wdrożeń w chmurze i DevOps dla firm: CI/CD, Docker, monitoring, backup i bezpieczeństwo. Wsparcie DevOps dla e-commerce, SaaS i agencji.",
   },
 };
 

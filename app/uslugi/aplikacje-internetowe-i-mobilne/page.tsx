@@ -115,7 +115,7 @@ export default function AplikacjeInternetoweIMobilnePage() {
               Aplikacje webowe i mobilne <span className="text-primary">dla firm</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Nowoczesne aplikacje webowe i mobilne, które przyspieszają rozwój Twojego biznesu i zapewniają doskonałe doświadczenie użytkownika.
+              Dedykowane aplikacje webowe i mobilne na zamówienie: panele klienta, systemy wewnętrzne, aplikacje iOS/Android i MVP, które porządkują procesy i przyspieszają rozwój firmy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -134,6 +134,20 @@ export default function AplikacjeInternetoweIMobilnePage() {
           </div>
         </section>
         <ServiceSeoSections serviceId="apps" lang="pl" />
+
+        <section className="px-4 py-12" aria-labelledby="mobile-only-heading">
+          <div className="max-w-4xl mx-auto bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-6">
+            <div className="flex-1">
+              <h2 id="mobile-only-heading" className="text-2xl font-bold text-white mb-2">Szukasz tylko aplikacji mobilnej na zamówienie?</h2>
+              <p className="text-gray-300 leading-relaxed">
+                Aplikacje mobilne dla firm (iOS i Android) dla pracowników w terenie, serwisu, sprzedaży i klientów opisuję na osobnej stronie: technologie, koszty, czas i publikacja w sklepach.
+              </p>
+            </div>
+            <Link href="/uslugi/aplikacje-mobilne-dla-firm" className="shrink-0 px-6 py-3 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors text-center">
+              Aplikacje mobilne dla firm
+            </Link>
+          </div>
+        </section>
 
         {/* Main Content */}
         <section className="px-4 py-16">

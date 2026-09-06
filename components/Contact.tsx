@@ -1,23 +1,17 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 import Image from "next/image";
 import BookingCalendar from "./BookingCalendar";
 
 interface ContactProps {
   lang?: "pl" | "en";
+  /** Wersja skrócona (strona główna): bez boxa o prototypie i kalendarza. */
+  compact?: boolean;
 }
 
-export default function Contact({ lang = "pl" }: ContactProps) {
-  const headerRef = useRef(null);
-  const formRef = useRef(null);
-  const contactInfoRef = useRef(null);
-  
-  const isHeaderInView = useInView(headerRef, { once: true, margin: "-100px" });
-  const isFormInView = useInView(formRef, { once: true, margin: "-50px" });
-  const isContactInfoInView = useInView(contactInfoRef, { once: true, margin: "-50px" });
-  
+export default function Contact({ lang = "pl", compact = false }: ContactProps) {
   const [formData, setFormData] = useState({
     email: "",
     description: "",
@@ -113,26 +107,14 @@ export default function Contact({ lang = "pl" }: ContactProps) {
   return (
     <section id="contact" className="py-28 md:py-32 px-4 relative scroll-mt-[100px]" style={{ scrollMarginTop: '100px' }} aria-labelledby="contact-heading">
       <div className="max-w-7xl mx-auto">
-        <motion.header
-          ref={headerRef}
-          initial={{ opacity: 0, y: 50 }}
-          animate={isHeaderInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8 }}
-          className="text-left mb-8"
-        >
+        <header className="text-left mb-8">
           <h2 id="contact-heading" className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight mb-4">{t.title}</h2>
           <p className="text-base md:text-lg text-gray-400 leading-relaxed">{t.subtitle}</p>
-        </motion.header>
+        </header>
 
         <div className="space-y-8">
           {/* Contact Info */}
-          <motion.address
-            ref={contactInfoRef}
-            initial={{ opacity: 0, y: 40 }}
-            animate={isContactInfoInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-6 not-italic"
-          >
+          <address className="space-y-6 not-italic">
             <div className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6">
               <h3 className="text-lg md:text-xl font-bold mb-4 text-primary">{lang === "pl" ? "Dane kontaktowe" : "Contact details"}</h3>
               
@@ -180,19 +162,17 @@ export default function Contact({ lang = "pl" }: ContactProps) {
                 </div>
               </div>
             </div>
-          </motion.address>
+          </address>
 
-          <div className="bg-primary/10 border border-primary/30 rounded-xl p-6">
-            <h3 className="text-lg md:text-xl font-bold text-primary mb-3">{t.form.prototypeTitle}</h3>
-            <p className="text-sm md:text-base text-gray-300 leading-relaxed">{t.form.prototypeText}</p>
-          </div>
+          {!compact && (
+            <div className="bg-primary/10 border border-primary/30 rounded-xl p-6">
+              <h3 className="text-lg md:text-xl font-bold text-primary mb-3">{t.form.prototypeTitle}</h3>
+              <p className="text-sm md:text-base text-gray-300 leading-relaxed">{t.form.prototypeText}</p>
+            </div>
+          )}
 
           {/* Contact Form */}
-          <motion.form
-            ref={formRef}
-            initial={{ opacity: 0, y: 40 }}
-            animate={isFormInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-            transition={{ duration: 0.8 }}
+          <form
             onSubmit={handleSubmit}
             className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 space-y-6"
             aria-label={lang === "pl" ? "Formularz kontaktowy" : "Contact form"}
@@ -299,11 +279,11 @@ export default function Contact({ lang = "pl" }: ContactProps) {
             <p className="text-sm text-gray-400 text-left mt-2">
               {t.form.responseTime}
             </p>
-          </motion.form>
+          </form>
         </div>
 
         {/* Booking Calendar */}
-        <BookingCalendar lang={lang} />
+        {!compact && <BookingCalendar lang={lang} />}
       </div>
     </section>
   );

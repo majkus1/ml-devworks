@@ -168,6 +168,43 @@ export default function AutomatyzacjaProcesowAIContent({ lang }: Props) {
         </div>
       </section>
 
+      <section>
+        <h2 className="text-2xl font-bold text-white mb-4">
+          {isPl ? "Czy automatyzacja AI opłaca się dla małej firmy?" : "Is AI automation worth it for a small company?"}
+        </h2>
+        <p className="mb-4">
+          {isPl
+            ? "Tak - i często szybciej niż w dużej organizacji, bo w małej firmie jeden powtarzalny proces stanowi większą część czasu właściciela lub zespołu. Kluczem jest zacząć od jednego, mierzalnego procesu, a nie od „wdrożenia AI w firmie”."
+            : "Yes - and often faster than in a large organization, because in a small company one repetitive process is a bigger share of the owner's or team's time. The key is to start with one measurable process instead of an abstract 'AI rollout'."}
+        </p>
+        <ul className="list-disc list-inside space-y-2 ml-2 mb-4">
+          <li>{isPl ? "Odpowiadanie na powtarzalne zapytania z formularza, maila i Messengera - agent AI odpowiada w sekundy i zapisuje lead." : "Answering repetitive enquiries from forms, email, and Messenger - an AI agent replies in seconds and saves the lead."}</li>
+          <li>{isPl ? "Umawianie terminów i przypomnienia - system rezerwacji zamiast telefonów." : "Scheduling and reminders - a booking system instead of phone calls."}</li>
+          <li>{isPl ? "Przepisywanie zamówień, faktur i danych klientów między arkuszem, sklepem i księgowością." : "Re-entering orders, invoices, and customer data between spreadsheets, the store, and accounting."}</li>
+          <li>{isPl ? "Cotygodniowe raporty składane ręcznie z kilku źródeł." : "Weekly reports compiled manually from several sources."}</li>
+        </ul>
+        <p className="mb-4">
+          {isPl
+            ? "Prosta automatyzacja kosztuje zwykle od 2 500 zł netto i zwraca się w kilka miesięcy, jeśli oszczędza choćby 3-5 godzin tygodniowo. Przy małej skali nie potrzebujesz platformy ani abonamentu za każdy krok - wystarczy jedna dobrze zaprojektowana integracja lub agent."
+            : "A simple automation usually costs from PLN 2,500 net and pays back within a few months if it saves even 3-5 hours per week. At small scale you do not need a platform or a per-step subscription - one well-designed integration or agent is enough."}
+        </p>
+        <p>
+          {isPl ? (
+            <>
+              Nie wiesz, który proces wybrać? Zobacz{" "}
+              <Link href="/blog/co-mozna-zautomatyzowac-w-firmie-z-ai-przyklady-procesow">12 procesów, które warto zautomatyzować</Link>, albo zapytaj asystenta AI na stronie{" "}
+              <Link href="/kontakt">kontaktu</Link> - podpowie, od czego zacząć w Twojej firmie.
+            </>
+          ) : (
+            <>
+              Not sure which process to pick? See{" "}
+              <Link href="/en/blog/what-can-be-automated-in-a-company-with-ai-process-examples">12 processes worth automating</Link>, or ask the AI advisor on the{" "}
+              <Link href="/en/contact">contact page</Link> - it will suggest where to start in your company.
+            </>
+          )}
+        </p>
+      </section>
+
       <section className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-6 md:p-8 border border-primary/20">
         <h2 className="text-xl font-bold text-white mb-4">
           {isPl ? "Sprawdźmy, które procesy warto zautomatyzować u Ciebie" : "Let's identify which workflows to automate first"}

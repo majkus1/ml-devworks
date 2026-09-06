@@ -8,8 +8,11 @@ import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from 
 export const metadata: Metadata = {
   title: "DevOps Services and Cloud Deployment (CI/CD) | ML DevWorks",
   description:
-    "I configure DevOps and cloud deployments: CI/CD pipelines, Docker/Kubernetes, monitoring, backups and security for stable application releases.",
+    "Cloud deployment automation and DevOps for companies: CI/CD pipelines, Docker, monitoring, backups and security. DevOps support for e-commerce, SaaS and agencies. From PLN 4,500 net.",
   keywords: [
+    "cloud deployment automation",
+    "devops support for e-commerce",
+    "devops services for agencies",
     "devops services for companies",
     "cloud deployment services",
     "ci cd pipeline setup",

@@ -3,6 +3,9 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import CookieBanner from "@/components/CookieBanner";
 import HashNavigationHandler from "@/components/HashNavigationHandler";
+import { AiAssistantProvider } from "@/components/ai-assistant/AiAssistantProvider";
+import AiAssistantFloating from "@/components/ai-assistant/AiAssistantFloating";
+import { isAiAssistantEnabled } from "@/lib/ai-assistant/openai";
 import { headers } from "next/headers";
 import "./globals.css";
 
@@ -86,6 +89,7 @@ export default async function RootLayout({
   const headersList = await headers();
   const pathname = headersList.get("x-pathname") || "";
   const lang = pathname.startsWith("/en") ? "en" : "pl";
+  const aiAssistantEnabled = isAiAssistantEnabled();
   
   return (
     <html lang={lang} className="scroll-smooth overflow-x-hidden">
@@ -159,9 +163,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         
-        {children}
-        <HashNavigationHandler />
-        <CookieBanner />
+        <AiAssistantProvider enabled={aiAssistantEnabled}>
+          {children}
+          <HashNavigationHandler />
+          <CookieBanner />
+          <AiAssistantFloating />
+        </AiAssistantProvider>
       </body>
     </html>
   );

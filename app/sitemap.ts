@@ -3,7 +3,7 @@ import { blogPosts } from "@/lib/blog";
 import { serviceItems } from "@/lib/services";
 
 const BASE_URL = "https://ml-devworks.com";
-const SITE_LAST_MODIFIED = new Date("2026-07-06");
+const SITE_LAST_MODIFIED = new Date("2026-09-06");
 
 function localizedEntry({
   plPath,
@@ -96,6 +96,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     }),
     ...serviceEntries,
+    ...localizedEntry({
+      plPath: "/kontakt",
+      enPath: "/en/contact",
+      lastModified: SITE_LAST_MODIFIED,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    }),
     ...localizedEntry({
       plPath: "/blog",
       enPath: "/en/blog",

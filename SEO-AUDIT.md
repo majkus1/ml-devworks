@@ -290,3 +290,34 @@ Struktura sekcji:
 - [ ] `next build` + Lighthouse mobile (cel LCP <2,5 s, Perf ≥90).
 - [ ] Rich Results Test dla Organization/Service/FAQ/Article.
 - [ ] GSC: reindeksacja hubów i 6 usług, monitoring „Strony".
+
+---
+
+# ITERACJA 2 (wrzesień 2026) — asystent AI + klastry z GSC
+
+## Co pokazał eksport GSC (`Zapytania.csv`, 74 zapytania)
+~1200 wyświetleń, 1 kliknięcie, pozycje 36–80 dla fraz komercyjnych. Klastry:
+
+| Klaster | Wyśw. | Money page | Działanie |
+|---|---|---|---|
+| Automatyzacje AI dla firm (automatyzacje ai dla firm 58, automatyzacja ai 54, agencja automatyzacji ai 47, automatyzacja ai dla firm 34, automatyzacja biznesu 34, automatyzacja ai kraków 20 …) | ~420 | `/uslugi/automatyzacja-i-ai` | Przepisana strona (title/H1 „Automatyzacje AI dla firm"), sekcja „Co można zautomatyzować" (12 procesów), „Agencja czy programista", Kraków, +3 FAQ, wpisy P1/P2/P4 |
+| Aplikacje mobilne dla firm (125 wyśw., aplikacje mobilne na zamówienie 51) | ~190 | **nowy** `/uslugi/aplikacje-mobilne-dla-firm` | Dedykowany landing PL/EN + wpis P3 + link z `aplikacje-internetowe-i-mobilne` |
+| Automatyzacja obsługi zgłoszeń / contact center / obsługi klienta / zamówień | ~70 | `/uslugi/automatyzacja-i-ai` | Wpis P2 + karta oferty „Automatyzacja obsługi klienta i zgłoszeń" + FAQ |
+| DevOps (automatyzacja wdrożeń w chmurze poz. 4,2 / 0 klików) | ~17 | `/uslugi/devops-wdrozenia` | Title/description z frazą, keywords |
+| Brand/nawigacyjne (ml devnew email/phone ~130) | ~200 | **nowy** `/kontakt`, `/en/contact` | Strona kontaktu z NAP, `ContactPage` schema, asystent AI |
+| Lokalne (automatyzacja ai kraków) | ~21 | `/programista-krakow` | Sekcja „Automatyzacja AI Kraków" PL/EN |
+| Serwis / serwis terenowy (optymalizacja serwisu, procesy serwisowe) | ~30 | — | Backlog: wpis P5; na razie punkt 10 w liście 12 procesów |
+
+## Co wdrożono
+- **Asystent AI** (OpenAI, `lib/ai-assistant/*`, `components/ai-assistant/*`, `app/api/ai-assistant/*`): sekcja inline na home PL/EN i `/kontakt`, pływający przycisk na podstronach, streaming NDJSON, limity, honeypot, wysyłka transkryptu + podsumowania AI na `OWNER_EMAIL`. Env: `OPENAI_API_KEY`, `OPENAI_MODEL`, `AI_ASSISTANT_ENABLED`, `AI_SEND_CLIENT_COPY` (patrz `.env.example`).
+- **Nowe strony**: `/uslugi/aplikacje-mobilne-dla-firm`, `/en/services/mobile-apps-for-companies`, `/kontakt`, `/en/contact`; usługa `mobile-apps` i `booking-systems` w `lib/service-details.ts`.
+- **Nowe wpisy (PL+EN)**: `co-mozna-zautomatyzowac-w-firmie-z-ai-przyklady-procesow`, `automatyzacja-obslugi-zgloszen-i-klienta-z-ai-helpdesk-contact-center`, `aplikacje-mobilne-dla-firm-na-zamowienie-koszt-czas-natywna-czy-cross-platform`, `agencja-automatyzacji-ai-czy-programista-jak-wybrac-wykonawce`.
+- **Poprawki**: automatyzacja PL/EN (przepisane), devops meta, aplikacje (box → mobile), programista-krakow (sekcja AI Kraków), wpis „kiedy opłaca się automatyzacja" (sekcja „mała firma" + FAQ, `dateModified`), HomeFAQ (+1 pytanie), footer → `/kontakt`.
+- **AEO**: `llms.txt` rozbudowany (FAQ, cennik, asystent, lista wpisów), nowy `llms-full.txt`, `Organization.knowsAbout/slogan`, `WebSite.publisher`, `robots` disallow `/api/`, sitemap `2026-09-06`.
+
+## Do zrobienia po wdrożeniu
+1. Uzupełnić `OPENAI_API_KEY` (i `OWNER_EMAIL`) w `.env` / Vercel; ustawić limit budżetu w panelu OpenAI.
+2. GSC: „Poproś o indeksowanie" dla: `/kontakt`, `/en/contact`, `/uslugi/aplikacje-mobilne-dla-firm`, `/en/services/mobile-apps-for-companies`, 4×2 wpisów, `/uslugi/automatyzacja-i-ai`, `/en/services/automation-and-ai`.
+3. `components/StructuredData.tsx` → `socialProfiles`: dopisać LinkedIn/GitHub/Clutch.
+4. Po 4–6 tygodniach sprawdzić w GSC pozycje fraz z tabeli wyżej; jeśli klaster „serwis" rośnie — napisać P5.
+5. Rozważyć kafelek „Aplikacje mobilne" w `components/Services.tsx` na home (obecnie 6 kafelków, mobile tylko w hubie/footerze).

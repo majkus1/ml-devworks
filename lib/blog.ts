@@ -20,6 +20,303 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "co-mozna-zautomatyzowac-w-firmie-z-ai-przyklady-procesow",
+    slugEn: "what-can-be-automated-in-a-company-with-ai-process-examples",
+    title: {
+      pl: "Automatyzacje AI dla firm: 12 procesów, które warto zautomatyzować",
+      en: "AI Automation for Companies: 12 Processes Worth Automating",
+    },
+    excerpt: {
+      pl: "Co można zautomatyzować w firmie z AI? 12 procesów z problemem, rozwiązaniem, efektem i orientacyjnym budżetem - od obsługi zgłoszeń po raporty.",
+      en: "What can be automated in a company with AI? 12 processes with the problem, solution, effect, and indicative budget - from ticket handling to reports.",
+    },
+    publishedAt: "2026-09-06",
+    dateModified: "2026-09-06",
+    readingTime: { pl: "11 min", en: "11 min" },
+    keywords: {
+      pl: [
+        "automatyzacje ai dla firm",
+        "automatyzacja ai",
+        "automatyzacje ai",
+        "co można zautomatyzować w firmie",
+        "automatyzacja biznesu",
+        "automatyzacja firmy",
+        "automatyzacja pracy biurowej z ai",
+        "automatyzacja z użyciem agentów ai",
+        "automatyzacja procesów ai przykłady",
+        "automatyzacje dla firm",
+      ],
+      en: [
+        "ai automation for companies",
+        "what can be automated in a company",
+        "business automation with ai",
+        "ai automation examples",
+        "office work automation ai",
+        "automation with ai agents",
+        "process automation examples",
+      ],
+    },
+    faq: {
+      pl: [
+        {
+          q: "Co można zautomatyzować w firmie z AI?",
+          a: "Najczęściej obsługę zapytań i zgłoszeń, kwalifikację leadów, obsługę zamówień, przetwarzanie faktur i dokumentów, przepisywanie danych między systemami, raporty, CRM i follow-upy, rezerwacje, pracę biurową, serwis, onboarding oraz obsługę e-commerce.",
+        },
+        {
+          q: "Ile kosztują automatyzacje AI dla firm?",
+          a: "Prosta automatyzacja jednego procesu zaczyna się od 2 500 zł netto, agent AI z bazą wiedzy od ok. 8 000 zł netto, a integracje wielosystemowe i aplikacje wyceniane są po analizie. Do tego koszt użycia modeli, zwykle kilkadziesiąt do kilkuset złotych miesięcznie.",
+        },
+        {
+          q: "Od którego procesu zacząć automatyzację?",
+          a: "Od procesu powtarzalnego, mierzalnego i bolesnego: takiego, który dzieje się co tydzień, którego koszt czasu da się policzyć i który opóźnia sprzedaż lub obsługę klienta.",
+        },
+        {
+          q: "Czy automatyzacja AI zastąpi pracowników?",
+          a: "Zwykle nie. Przejmuje powtarzalną część pracy, a ludzie dostają trudniejsze sprawy z gotowym kontekstem. Efektem jest większa przepustowość zespołu bez nowych etatów.",
+        },
+      ],
+      en: [
+        {
+          q: "What can be automated in a company with AI?",
+          a: "Most often enquiry and ticket handling, lead qualification, order handling, invoice and document processing, copying data between systems, reports, CRM and follow-ups, bookings, office work, field service, onboarding, and e-commerce operations.",
+        },
+        {
+          q: "How much does AI automation for companies cost?",
+          a: "A simple single-process automation starts from PLN 2,500 net, an AI agent with a knowledge base from about PLN 8,000 net, and multi-system integrations and apps are estimated after analysis. Add model usage, usually tens to a few hundred PLN per month.",
+        },
+        {
+          q: "Which process should we automate first?",
+          a: "A repetitive, measurable, and painful one: it happens weekly, its time cost can be calculated, and it delays sales or customer service.",
+        },
+        {
+          q: "Will AI automation replace employees?",
+          a: "Usually not. It takes over the repetitive part of the work while people handle harder cases with ready context. The result is higher team capacity without new hires.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "automatyzacja-obslugi-zgloszen-i-klienta-z-ai-helpdesk-contact-center",
+    slugEn: "ai-automation-of-customer-support-tickets-helpdesk-contact-center",
+    title: {
+      pl: "Automatyzacja obsługi zgłoszeń i klienta z AI: helpdesk, contact center, zamówienia",
+      en: "AI Automation of Customer Support: Tickets, Helpdesk, Contact Center, Orders",
+    },
+    excerpt: {
+      pl: "Jak zautomatyzować obsługę zgłoszeń i procesy w contact center z AI: trzy poziomy automatyzacji, przepływ krok po kroku, integracje, mierniki, koszty i ryzyka.",
+      en: "How to automate ticket handling and contact center processes with AI: three automation levels, a step-by-step flow, integrations, metrics, costs, and risks.",
+    },
+    publishedAt: "2026-09-04",
+    dateModified: "2026-09-06",
+    readingTime: { pl: "10 min", en: "10 min" },
+    keywords: {
+      pl: [
+        "automatyzacja obsługi zgłoszeń",
+        "automatyzacja procesów w contact center",
+        "automatyzacja procesów obsługi klienta",
+        "automatyzacja obsługi zamówień",
+        "automatyzacja crm ai",
+        "automatyzacja helpdesk ai",
+        "agent ai obsługa klienta",
+        "automatyzacja obsługi klienta ai",
+      ],
+      en: [
+        "customer support automation ai",
+        "ticket automation",
+        "contact center process automation",
+        "helpdesk automation ai",
+        "order handling automation",
+        "crm automation ai",
+        "ai agent customer service",
+      ],
+    },
+    faq: {
+      pl: [
+        {
+          q: "Na czym polega automatyzacja obsługi zgłoszeń?",
+          a: "AI odbiera zgłoszenie z maila, formularza, czatu lub telefonu, klasyfikuje je, odpowiada na powtarzalne sprawy z bazy wiedzy firmy, zapisuje sprawę w helpdesku lub CRM i eskaluje trudniejsze tematy do człowieka z podsumowaniem.",
+        },
+        {
+          q: "Jaki procent zgłoszeń może obsłużyć AI bez człowieka?",
+          a: "Realistycznie 40-60% po 2-3 miesiącach dostrajania bazy wiedzy. Pozostałe sprawy trafiają do zespołu już sklasyfikowane i z gotowym kontekstem, co skraca czas ich obsługi.",
+        },
+        {
+          q: "Ile kosztuje automatyzacja procesów w contact center?",
+          a: "Automatyzacja jednego kanału z klasyfikacją, bazą wiedzy i eskalacją to zwykle 8 000-15 000 zł netto i 2-4 tygodnie. Prostszy wariant z regułami i automatycznym przypisaniem zaczyna się od 2 500 zł netto.",
+        },
+        {
+          q: "Czy klient musi wiedzieć, że rozmawia z AI?",
+          a: "Tak, warto to jasno komunikować i zawsze zostawić ścieżkę do człowieka. Buduje to zaufanie i ogranicza frustrację przy nietypowych sprawach.",
+        },
+      ],
+      en: [
+        {
+          q: "What does ticket handling automation involve?",
+          a: "AI receives the request from email, a form, chat, or phone, classifies it, answers repetitive cases from the company knowledge base, logs the case in the helpdesk or CRM, and escalates harder topics to a human with a summary.",
+        },
+        {
+          q: "What share of tickets can AI handle without a human?",
+          a: "Realistically 40-60% after 2-3 months of tuning the knowledge base. The remaining cases reach the team already classified and with ready context, which shortens handling time.",
+        },
+        {
+          q: "How much does contact center process automation cost?",
+          a: "Automating one channel with classification, a knowledge base, and escalation usually costs PLN 8,000-15,000 net and takes 2-4 weeks. A simpler variant with rules and automatic routing starts from PLN 2,500 net.",
+        },
+        {
+          q: "Does the customer need to know they are talking to AI?",
+          a: "Yes, it is worth communicating clearly and always leaving a path to a human. It builds trust and reduces frustration in unusual cases.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "aplikacje-mobilne-dla-firm-na-zamowienie-koszt-czas-natywna-czy-cross-platform",
+    slugEn: "custom-mobile-apps-for-companies-cost-timeline-native-vs-cross-platform",
+    title: {
+      pl: "Aplikacje mobilne dla firm na zamówienie: koszt, czas, natywna czy cross-platform",
+      en: "Custom Mobile Apps for Companies: Cost, Timeline, Native vs Cross-Platform",
+    },
+    excerpt: {
+      pl: "Kiedy firmie potrzebna jest aplikacja mobilna, ile kosztuje aplikacja na zamówienie, ile trwa wdrożenie, natywna czy cross-platform i co przygotować przed rozmową z wykonawcą.",
+      en: "When a company needs a mobile app, how much a custom app costs, how long delivery takes, native vs cross-platform, and what to prepare before talking to a vendor.",
+    },
+    publishedAt: "2026-09-02",
+    dateModified: "2026-09-06",
+    readingTime: { pl: "10 min", en: "10 min" },
+    keywords: {
+      pl: [
+        "aplikacje mobilne dla firm",
+        "aplikacje mobilne na zamówienie",
+        "ile kosztuje aplikacja mobilna dla firmy",
+        "dedykowane aplikacje dla firm na zamówienie",
+        "developer aplikacje mobilne",
+        "aplikacja natywna czy cross-platform",
+        "react native czy natywna",
+        "aplikacja mobilna dla pracowników terenowych",
+      ],
+      en: [
+        "custom mobile apps for companies",
+        "how much does a business mobile app cost",
+        "mobile app development for business",
+        "native vs cross-platform app",
+        "react native vs native",
+        "field service mobile app",
+        "mobile app developer",
+      ],
+    },
+    faq: {
+      pl: [
+        {
+          q: "Ile kosztuje aplikacja mobilna dla firmy na zamówienie?",
+          a: "MVP aplikacji mobilnej dla jednej roli zaczyna się od 12 000 zł netto. Aplikacja z panelem administracyjnym, rolami, pracą offline i kilkoma integracjami to zwykle 25 000-45 000 zł netto. Większe systemy wyceniane są etapami.",
+        },
+        {
+          q: "Ile trwa stworzenie aplikacji mobilnej?",
+          a: "Pierwsza wersja w sklepach zwykle powstaje w 3-8 tygodni: analiza i makiety, backend i integracje, aplikacja, publikacja i pilotaż.",
+        },
+        {
+          q: "Natywna czy cross-platform?",
+          a: "Dla większości aplikacji firmowych cross-platform (React Native) daje jedną bazę kodu na iOS i Android przy niższym koszcie. Natywna ma sens przy intensywnym użyciu sprzętu lub w produktach konsumenckich.",
+        },
+        {
+          q: "Czy aplikacja mobilna może działać bez zasięgu?",
+          a: "Tak. Praca offline z synchronizacją po odzyskaniu zasięgu jest standardem w aplikacjach dla pracowników terenowych, ale zwiększa zakres prac i budżet.",
+        },
+      ],
+      en: [
+        {
+          q: "How much does a custom mobile app for a company cost?",
+          a: "A single-role mobile app MVP starts from PLN 12,000 net. An app with an admin panel, roles, offline mode, and several integrations usually costs PLN 25,000-45,000 net. Larger systems are estimated in stages.",
+        },
+        {
+          q: "How long does it take to build a mobile app?",
+          a: "The first version in the stores usually takes 3-8 weeks: analysis and mockups, backend and integrations, the app, publishing and pilot.",
+        },
+        {
+          q: "Native or cross-platform?",
+          a: "For most business apps, cross-platform (React Native) gives one codebase for iOS and Android at a lower cost. Native makes sense with heavy hardware use or in consumer products.",
+        },
+        {
+          q: "Can a mobile app work without coverage?",
+          a: "Yes. Offline mode with synchronization after regaining coverage is standard in apps for field employees, but it increases the scope and budget.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "agencja-automatyzacji-ai-czy-programista-jak-wybrac-wykonawce",
+    slugEn: "ai-automation-agency-or-developer-how-to-choose-a-vendor",
+    title: {
+      pl: "Agencja automatyzacji AI czy programista? Jak wybrać wykonawcę automatyzacji",
+      en: "AI Automation Agency or Developer? How to Choose an Automation Vendor",
+    },
+    excerpt: {
+      pl: "Agencja automatyzacji AI, freelancer no-code, programista czy zespół wewnętrzny? Porównanie modeli współpracy, kosztów, własności rozwiązania, 10 pytań do wykonawcy i czerwone flagi.",
+      en: "AI automation agency, no-code freelancer, developer, or in-house team? A comparison of cooperation models, costs, solution ownership, 10 questions for a vendor, and red flags.",
+    },
+    publishedAt: "2026-08-30",
+    dateModified: "2026-09-06",
+    readingTime: { pl: "9 min", en: "9 min" },
+    keywords: {
+      pl: [
+        "agencja automatyzacji ai",
+        "agencja automatyzacji procesów",
+        "agencja automatyzacji",
+        "usługi automatyzacji procesów",
+        "usługi automatyzacji dla firm",
+        "firma od automatyzacji ai",
+        "jak wybrać wykonawcę automatyzacji",
+        "automatyzacja no-code czy kod",
+      ],
+      en: [
+        "ai automation agency",
+        "process automation agency",
+        "process automation services",
+        "automation services for companies",
+        "how to choose an automation vendor",
+        "no-code vs custom automation",
+      ],
+    },
+    faq: {
+      pl: [
+        {
+          q: "Czym różni się agencja automatyzacji AI od programisty?",
+          a: "Agencja zwykle składa scenariusze w narzędziach no-code i rozlicza abonament, a rozmawiasz z handlowcem, nie z wykonawcą. Programista buduje automatyzacje jako kod i integracje, które należą do Ciebie, i osobiście odpowiada za analizę, wdrożenie i utrzymanie.",
+        },
+        {
+          q: "Ile kosztują usługi automatyzacji procesów?",
+          a: "Agencje wyceniają pierwszy projekt zwykle od 10 000-15 000 zł netto plus abonament narzędzi. Programista wspierany AI wdraża prostą automatyzację od 2 500 zł netto, a agentów AI i integracje od ok. 8 000 zł netto.",
+        },
+        {
+          q: "Czy automatyzacja w narzędziach no-code jest zła?",
+          a: "Nie. Sprawdza się w prostych, standardowych przepływach. Problem pojawia się, gdy proces wymaga niestandardowej logiki, bezpieczeństwa danych lub gdy abonament rośnie razem z liczbą operacji.",
+        },
+        {
+          q: "O co zapytać wykonawcę automatyzacji przed umową?",
+          a: "O własność kodu i kont, mierniki efektu, prototyp przed pełnym wdrożeniem, obsługę eskalacji do człowieka, ochronę danych w modelach AI oraz koszt utrzymania przy większym wolumenie.",
+        },
+      ],
+      en: [
+        {
+          q: "How does an AI automation agency differ from a developer?",
+          a: "An agency usually assembles scenarios in no-code tools and bills a subscription, and you talk to a salesperson rather than the implementer. A developer builds automations as code and integrations that belong to you and is personally accountable for analysis, delivery, and maintenance.",
+        },
+        {
+          q: "How much do process automation services cost?",
+          a: "Agencies usually price the first project from PLN 10,000-15,000 net plus tool subscriptions. An AI-assisted developer delivers a simple automation from PLN 2,500 net, and AI agents and integrations from about PLN 8,000 net.",
+        },
+        {
+          q: "Is no-code automation bad?",
+          a: "No. It works well for simple, standard flows. Problems appear when the process needs custom logic, data security, or when the subscription grows with the number of operations.",
+        },
+        {
+          q: "What should I ask an automation vendor before signing?",
+          a: "About ownership of code and accounts, effect metrics, a prototype before full delivery, escalation to a human, data protection in AI models, and maintenance cost at higher volume.",
+        },
+      ],
+    },
+  },
+  {
     slug: "ile-kosztuje-automatyzacja-procesow-w-firmie-i-jak-liczyc-roi",
     slugEn: "how-much-does-business-process-automation-cost-and-how-to-calculate-roi",
     title: {
@@ -513,11 +810,13 @@ export const blogPosts: BlogPost[] = [
       en: "When AI automation delivers ROI, which workflows to automate first, and how to estimate impact on cost and team time.",
     },
     publishedAt: "2026-03-11",
-    dateModified: "2026-07-04",
-    readingTime: { pl: "8 min", en: "8 min" },
+    dateModified: "2026-09-06",
+    readingTime: { pl: "9 min", en: "9 min" },
     keywords: {
       pl: [
         "kiedy automatyzacja ai sie oplaca",
+        "czy automatyzacja ai opłaca się dla małej firmy",
+        "automatyzacja ai mała firma",
         "automatyzacja procesow z ai w firmie",
         "ai dla biznesu roi",
         "jak policzyc roi automatyzacji",
@@ -551,6 +850,10 @@ export const blogPosts: BlogPost[] = [
           q: "Jak sprawdzić, czy automatyzacja AI się opłaca?",
           a: "Liczymy obecny koszt czasu, liczbę błędów, czas reakcji i potencjalny wzrost przepustowości zespołu, a potem porównujemy to z kosztem wdrożenia.",
         },
+        {
+          q: "Czy automatyzacja AI opłaca się dla małej firmy?",
+          a: "Tak, jeśli zaczniesz od jednego procesu, który regularnie zabiera czas: odpowiadania na zapytania, umawiania terminów albo przepisywania danych. Prosta automatyzacja od 2 500 zł netto zwraca się zwykle w kilka miesięcy przy 3-5 godzinach oszczędności tygodniowo.",
+        },
       ],
       en: [
         {
@@ -560,6 +863,10 @@ export const blogPosts: BlogPost[] = [
         {
           q: "How do you know whether AI automation is worth it?",
           a: "We compare current time cost, error volume, response time, and team capacity gains with the implementation cost.",
+        },
+        {
+          q: "Is AI automation worth it for a small company?",
+          a: "Yes, if you start with one process that regularly consumes time: answering enquiries, scheduling, or re-entering data. A simple automation from PLN 2,500 net usually pays back within a few months with 3-5 hours saved per week.",
         },
       ],
     },
