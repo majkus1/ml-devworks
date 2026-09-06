@@ -9,7 +9,7 @@ import AiAssistantSection from "@/components/ai-assistant/AiAssistantSection";
 
 const TITLE = "Contact ML DevWorks: email, phone, Krakow | ML DevWorks";
 const DESCRIPTION =
-  "Contact ML DevWorks (Michał Lipka): office@ml-devworks.com, +48 516 598 792, Rynek Główny 34/15, Krakow. Describe your project or ask the AI advisor - reply within 2-5 days with a free prototype.";
+  "Contact ML DevWorks (Michał Lipka): office@ml-devworks.com, +48 516 598 792, Krakow. Describe your project or ask the AI advisor. Reply in 2-5 days.";
 
 export const metadata: Metadata = {
   title: TITLE,

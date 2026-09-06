@@ -7,9 +7,9 @@ import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from 
 import AutomationExamplesSection from "@/components/AutomationExamplesSection";
 import OpenAssistantButton from "@/components/ai-assistant/OpenAssistantButton";
 
-const TITLE = "Automatyzacje AI dla firm: agenci AI, integracje, workflow | ML DevWorks";
+const TITLE = "Automatyzacje AI dla firm: agenci i integracje | ML DevWorks";
 const DESCRIPTION =
-  "Automatyzacje AI dla firm: agenci AI do obsługi zgłoszeń i klientów, integracje CRM/API, automatyzacja pracy biurowej i raportów. Od 2 500 zł netto, pierwsze efekty w 3-14 dni. Kraków i zdalnie.";
+  "Automatyzacje AI dla firm: agenci AI do zgłoszeń i klientów, integracje systemów, automatyzacja pracy biurowej. Od 2 500 zł netto, efekty w 3-14 dni.";
 
 export const metadata: Metadata = {
   title: TITLE,

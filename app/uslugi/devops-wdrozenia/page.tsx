@@ -6,9 +6,9 @@ import StructuredData from "@/components/StructuredData";
 import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 
 export const metadata: Metadata = {
-  title: "DevOps i automatyzacja wdrożeń w chmurze (CI/CD) | ML DevWorks",
+  title: "DevOps i automatyzacja wdrożeń w chmurze | ML DevWorks",
   description:
-    "Automatyzacja wdrożeń w chmurze i DevOps dla firm: CI/CD, Docker, monitoring, backup i bezpieczeństwo. Wsparcie DevOps dla e-commerce, SaaS i agencji. Od 4 500 zł netto.",
+    "Automatyzacja wdrożeń w chmurze i DevOps dla firm: CI/CD, Docker, monitoring, backup. Wsparcie dla e-commerce, SaaS i agencji. Od 4 500 zł netto.",
   keywords: [
     "automatyzacja wdrożeń w chmurze",
     "devops w chmurze",
@@ -37,18 +37,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "DevOps i automatyzacja wdrożeń w chmurze (CI/CD) | ML DevWorks",
+    title: "DevOps i automatyzacja wdrożeń w chmurze | ML DevWorks",
     description:
-      "Automatyzacja wdrożeń w chmurze i DevOps dla firm: CI/CD, Docker, monitoring, backup i bezpieczeństwo. Wsparcie DevOps dla e-commerce, SaaS i agencji.",
+      "Automatyzacja wdrożeń w chmurze i DevOps dla firm: CI/CD, Docker, monitoring, backup, bezpieczeństwo. Wsparcie dla e-commerce, SaaS i agencji.",
     url: "https://ml-devworks.com/uslugi/devops-wdrozenia",
     type: "website",
     locale: "pl_PL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "DevOps i automatyzacja wdrożeń w chmurze (CI/CD) | ML DevWorks",
+    title: "DevOps i automatyzacja wdrożeń w chmurze | ML DevWorks",
     description:
-      "Automatyzacja wdrożeń w chmurze i DevOps dla firm: CI/CD, Docker, monitoring, backup i bezpieczeństwo. Wsparcie DevOps dla e-commerce, SaaS i agencji.",
+      "Automatyzacja wdrożeń w chmurze i DevOps dla firm: CI/CD, Docker, monitoring, backup, bezpieczeństwo. Wsparcie dla e-commerce, SaaS i agencji.",
   },
 };
 

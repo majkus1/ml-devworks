@@ -6,9 +6,9 @@ import StructuredData from "@/components/StructuredData";
 import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 import OpenAssistantButton from "@/components/ai-assistant/OpenAssistantButton";
 
-const TITLE = "Aplikacje mobilne dla firm na zamówienie (iOS i Android) | ML DevWorks";
+const TITLE = "Aplikacje mobilne dla firm na zamówienie | ML DevWorks";
 const DESCRIPTION =
-  "Aplikacje mobilne dla firm na zamówienie: iOS i Android, praca offline, panel administracyjny, integracje z CRM/ERP. MVP od 12 000 zł netto, 3-8 tygodni. Kraków i zdalnie.";
+  "Aplikacje mobilne iOS i Android na zamówienie: praca offline, panel administracyjny, integracje z systemami firmy. MVP od 12 000 zł netto w 3-8 tygodni.";
 
 export const metadata: Metadata = {
   title: TITLE,

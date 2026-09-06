@@ -6,6 +6,8 @@ export interface BlogPost {
   slug: string;
   slugEn: string;
   title: { pl: string; en: string };
+  /** Krótszy tytuł do <title> (≤ 60 znaków), gdy tytuł artykułu jest długi. */
+  metaTitle?: { pl: string; en: string };
   excerpt: { pl: string; en: string };
   image?: string;
   publishedAt: string; // ISO date
@@ -26,9 +28,13 @@ export const blogPosts: BlogPost[] = [
       pl: "Automatyzacje AI dla firm: 12 procesów, które warto zautomatyzować",
       en: "AI Automation for Companies: 12 Processes Worth Automating",
     },
+    metaTitle: {
+      pl: "Automatyzacje AI dla firm: 12 procesów do automatyzacji",
+      en: "AI Automation for Companies: 12 Processes to Automate",
+    },
     excerpt: {
-      pl: "Co można zautomatyzować w firmie z AI? 12 procesów z problemem, rozwiązaniem, efektem i orientacyjnym budżetem - od obsługi zgłoszeń po raporty.",
-      en: "What can be automated in a company with AI? 12 processes with the problem, solution, effect, and indicative budget - from ticket handling to reports.",
+      pl: "Co można zautomatyzować w firmie z AI? 12 procesów z problemem, rozwiązaniem, efektem i orientacyjnym budżetem: od zgłoszeń po raporty.",
+      en: "What can be automated in a company with AI? 12 processes with the problem, solution, effect, and indicative budget: from tickets to reports.",
     },
     publishedAt: "2026-09-06",
     dateModified: "2026-09-06",
@@ -102,9 +108,13 @@ export const blogPosts: BlogPost[] = [
       pl: "Automatyzacja obsługi zgłoszeń i klienta z AI: helpdesk, contact center, zamówienia",
       en: "AI Automation of Customer Support: Tickets, Helpdesk, Contact Center, Orders",
     },
+    metaTitle: {
+      pl: "Automatyzacja obsługi zgłoszeń i klienta z AI",
+      en: "AI Automation of Customer Support and Tickets",
+    },
     excerpt: {
-      pl: "Jak zautomatyzować obsługę zgłoszeń i procesy w contact center z AI: trzy poziomy automatyzacji, przepływ krok po kroku, integracje, mierniki, koszty i ryzyka.",
-      en: "How to automate ticket handling and contact center processes with AI: three automation levels, a step-by-step flow, integrations, metrics, costs, and risks.",
+      pl: "Jak zautomatyzować obsługę zgłoszeń i contact center z AI: trzy poziomy automatyzacji, przepływ krok po kroku, integracje, mierniki, koszty i ryzyka.",
+      en: "How to automate tickets and contact center work with AI: three automation levels, a step-by-step flow, integrations, metrics, costs, and risks.",
     },
     publishedAt: "2026-09-04",
     dateModified: "2026-09-06",
@@ -176,9 +186,13 @@ export const blogPosts: BlogPost[] = [
       pl: "Aplikacje mobilne dla firm na zamówienie: koszt, czas, natywna czy cross-platform",
       en: "Custom Mobile Apps for Companies: Cost, Timeline, Native vs Cross-Platform",
     },
+    metaTitle: {
+      pl: "Aplikacje mobilne dla firm na zamówienie: koszt i czas",
+      en: "Custom Mobile Apps for Companies: Cost and Timeline",
+    },
     excerpt: {
-      pl: "Kiedy firmie potrzebna jest aplikacja mobilna, ile kosztuje aplikacja na zamówienie, ile trwa wdrożenie, natywna czy cross-platform i co przygotować przed rozmową z wykonawcą.",
-      en: "When a company needs a mobile app, how much a custom app costs, how long delivery takes, native vs cross-platform, and what to prepare before talking to a vendor.",
+      pl: "Kiedy firmie potrzebna jest aplikacja mobilna, ile kosztuje aplikacja na zamówienie, ile trwa wdrożenie i czy wybrać natywną, czy cross-platform.",
+      en: "When a company needs a mobile app, how much a custom app costs, how long delivery takes, and whether to go native or cross-platform.",
     },
     publishedAt: "2026-09-02",
     dateModified: "2026-09-06",
@@ -250,9 +264,13 @@ export const blogPosts: BlogPost[] = [
       pl: "Agencja automatyzacji AI czy programista? Jak wybrać wykonawcę automatyzacji",
       en: "AI Automation Agency or Developer? How to Choose an Automation Vendor",
     },
+    metaTitle: {
+      pl: "Agencja automatyzacji AI czy programista? Jak wybrać",
+      en: "AI Automation Agency or Developer? How to Choose",
+    },
     excerpt: {
-      pl: "Agencja automatyzacji AI, freelancer no-code, programista czy zespół wewnętrzny? Porównanie modeli współpracy, kosztów, własności rozwiązania, 10 pytań do wykonawcy i czerwone flagi.",
-      en: "AI automation agency, no-code freelancer, developer, or in-house team? A comparison of cooperation models, costs, solution ownership, 10 questions for a vendor, and red flags.",
+      pl: "Agencja automatyzacji AI, freelancer no-code, programista czy zespół wewnętrzny? Porównanie kosztów i własności rozwiązania oraz 10 pytań do wykonawcy.",
+      en: "AI automation agency, no-code freelancer, developer, or in-house team? Comparison of costs and solution ownership, 10 vendor questions, red flags.",
     },
     publishedAt: "2026-08-30",
     dateModified: "2026-09-06",

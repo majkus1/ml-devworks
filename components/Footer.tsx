@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getServices } from "@/lib/services";
+import { blogPosts } from "@/lib/blog";
 
 interface FooterProps {
   lang?: "pl" | "en";
@@ -10,6 +11,9 @@ export default function Footer({ lang = "pl" }: FooterProps) {
   const currentYear = new Date().getFullYear();
   const services = getServices(lang);
   const isEnglish = lang === "en";
+  const latestPosts = [...blogPosts]
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+    .slice(0, 3);
 
   const content = {
     pl: {
@@ -121,6 +125,20 @@ export default function Footer({ lang = "pl" }: FooterProps) {
                   {t.switchLang}
                 </Link>
               </li>
+            </ul>
+
+            <h2 className="text-white font-bold mb-4 mt-8">{isEnglish ? "Latest on the blog" : "Ostatnio na blogu"}</h2>
+            <ul className="space-y-3">
+              {latestPosts.map((post) => (
+                <li key={post.slug}>
+                  <Link
+                    href={isEnglish ? `/en/blog/${post.slugEn}` : `/blog/${post.slug}`}
+                    className="text-gray-300 hover:text-primary transition-colors text-sm leading-snug"
+                  >
+                    {post.metaTitle?.[lang] ?? post.title[lang]}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
 

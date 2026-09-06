@@ -6,9 +6,9 @@ import StructuredData from "@/components/StructuredData";
 import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
 import OpenAssistantButton from "@/components/ai-assistant/OpenAssistantButton";
 
-const TITLE = "Custom Mobile Apps for Companies (iOS & Android) | ML DevWorks";
+const TITLE = "Custom Mobile Apps for Companies | ML DevWorks";
 const DESCRIPTION =
-  "Custom mobile apps for companies: iOS and Android, offline mode, admin panel, CRM/ERP integrations. MVP from PLN 12,000 net in 3-8 weeks. Krakow-based, remote across the EU.";
+  "Custom iOS and Android apps for companies: offline mode, admin panel, integrations with your systems. MVP from PLN 12,000 net in 3-8 weeks. Krakow and remote.";
 
 export const metadata: Metadata = {
   title: TITLE,

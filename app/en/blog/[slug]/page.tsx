@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     metadataBase: new URL(baseUrl),
-    title: post.title.en,
+    title: post.metaTitle?.en ?? post.title.en,
     description: post.excerpt.en,
     keywords: [
       ...(post.keywords?.en ?? []),
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: post.title.en,
+      title: post.metaTitle?.en ?? post.title.en,
       description: post.excerpt.en,
       url: postUrlEn,
       type: "article",
@@ -52,22 +52,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       modifiedTime: post.dateModified ?? post.publishedAt,
       locale: "en_US",
       siteName: "ML DevWorks",
-      ...(post.image && {
-        images: [
-          {
-            url: post.image.startsWith("http") ? post.image : `${baseUrl}${post.image}`,
-            alt: post.title.en,
-          },
-        ],
-      }),
+      images: [
+        {
+          url: post.image ? (post.image.startsWith("http") ? post.image : `${baseUrl}${post.image}`) : `${baseUrl}/ogimg.png`,
+          width: 1200,
+          height: 630,
+          alt: post.title.en,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title.en,
+      title: post.metaTitle?.en ?? post.title.en,
       description: post.excerpt.en,
-      ...(post.image && {
-        images: [post.image.startsWith("http") ? post.image : `${baseUrl}${post.image}`],
-      }),
+      images: [post.image ? (post.image.startsWith("http") ? post.image : `${baseUrl}${post.image}`) : `${baseUrl}/ogimg.png`],
     },
     robots: { index: true, follow: true },
   };
@@ -95,9 +93,7 @@ function ArticleSchema({ post }: { post: BlogPost }) {
     description: post.excerpt.en,
     datePublished: post.publishedAt,
     dateModified: post.dateModified ?? post.publishedAt,
-    ...(post.image && {
-      image: { "@type": "ImageObject", url: post.image.startsWith("http") ? post.image : `${baseUrl}${post.image}` },
-    }),
+    image: { "@type": "ImageObject", url: post.image ? (post.image.startsWith("http") ? post.image : `${baseUrl}${post.image}`) : `${baseUrl}/ogimg.png`, width: 1200, height: 630 },
     author: {
       "@type": "Organization",
       name: "ML DevWorks",

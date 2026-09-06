@@ -7,9 +7,9 @@ import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from 
 import AutomationExamplesSection from "@/components/AutomationExamplesSection";
 import OpenAssistantButton from "@/components/ai-assistant/OpenAssistantButton";
 
-const TITLE = "AI Automation for Companies: AI Agents, Integrations, Workflows | ML DevWorks";
+const TITLE = "AI Automation for Companies and AI Agents | ML DevWorks";
 const DESCRIPTION =
-  "AI automation for companies: AI agents for tickets and customer service, CRM/API integrations, office work and reporting automation. From PLN 2,500 net, first results in 3-14 days. Krakow and remote.";
+  "AI automation for companies: AI agents for tickets and customers, system integrations, office work automation. From PLN 2,500 net, results in 3-14 days.";
 
 export const metadata: Metadata = {
   title: TITLE,
