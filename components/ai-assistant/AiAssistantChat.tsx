@@ -76,8 +76,22 @@ export default function AiAssistantChat({ variant, onClose, autoFocus = false }:
   const hasAssistantReply = messages.some((m) => m.role === "assistant");
   const isPanel = variant === "panel";
 
+  // Fokus na polu tekstowym tylko tam, gdzie nie wysuwa klawiatury (mysz, szeroki ekran).
+  // Na telefonie klawiatura zasłoniłaby powitanie i tematy — fokus dostaje sam panel,
+  // a lista zaczyna się od góry, żeby użytkownik najpierw przeczytał, co tu jest.
   useEffect(() => {
-    if (autoFocus) textareaRef.current?.focus();
+    if (!autoFocus) return;
+    const keyboardSafe = window.matchMedia("(pointer: fine)").matches && window.innerWidth >= 640;
+    if (keyboardSafe) {
+      textareaRef.current?.focus();
+      return;
+    }
+    if (listRef.current) {
+      listRef.current.scrollTop = 0;
+      stickToBottomRef.current = messages.length > 0;
+      listRef.current.focus({ preventScroll: true });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- tylko przy otwarciu
   }, [autoFocus]);
 
   useEffect(() => {
@@ -193,7 +207,8 @@ export default function AiAssistantChat({ variant, onClose, autoFocus = false }:
         role="log"
         aria-label={t.a11y.log}
         aria-busy={isStreaming}
-        className="flex-1 overflow-y-auto overscroll-contain px-4 md:px-5 py-5 space-y-5"
+        tabIndex={-1}
+        className="flex-1 overflow-y-auto overscroll-contain px-4 md:px-5 py-5 space-y-5 focus:outline-none"
       >
         <div className="flex gap-3">
           <AssistantAvatar />

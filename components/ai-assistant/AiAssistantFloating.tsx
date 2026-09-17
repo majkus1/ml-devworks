@@ -78,6 +78,30 @@ export default function AiAssistantFloating() {
 
   const handleClose = useCallback(() => close(), [close]);
 
+  // Gdy wysunie się klawiatura, panel kurczy się do widocznej części ekranu,
+  // dzięki czemu pole tekstowe i nagłówek zostają w zasięgu wzroku (iOS nie aktualizuje 100dvh).
+  useEffect(() => {
+    if (!isOpen) return;
+    const viewport = window.visualViewport;
+    const panel = panelRef.current;
+    if (!viewport || !panel) return;
+
+    const apply = () => {
+      const shrunk = viewport.height < window.innerHeight - 80;
+      panel.style.height = shrunk ? `${Math.round(viewport.height)}px` : "";
+      panel.style.top = shrunk ? `${Math.round(viewport.offsetTop)}px` : "";
+    };
+    apply();
+    viewport.addEventListener("resize", apply);
+    viewport.addEventListener("scroll", apply);
+    return () => {
+      viewport.removeEventListener("resize", apply);
+      viewport.removeEventListener("scroll", apply);
+      panel.style.height = "";
+      panel.style.top = "";
+    };
+  }, [isOpen]);
+
   if (!enabled || !hydrated) return null;
 
   const hasUnread = messages.length > 0 && status !== "streaming";
