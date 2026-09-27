@@ -77,31 +77,36 @@ export default function KontaktPage() {
       <ContactPageSchema />
       <Navbar lang="pl" />
       <main className="min-h-screen pt-20">
-        <section className="px-4 pt-16 md:pt-24 pb-8 bg-gradient-to-b from-background to-background-lighter">
+        <section className="px-4 pt-8 md:pt-24 pb-8 bg-gradient-to-b from-background to-background-lighter">
           <div className="max-w-7xl mx-auto">
-            <Breadcrumbs className="mb-8" items={[{ label: "Strona główna", href: "/" }, { label: "Kontakt" }]} />
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Kontakt z ML DevWorks</h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed mb-10">
-              Napisz, zadzwoń albo zapytaj asystenta AI, co da się zautomatyzować w Twojej firmie. Pracujesz bezpośrednio ze mną, Michałem Lipką - programistą z Krakowa. Odpowiadam zwykle w ciągu 2-5 dni, często od razu z bezpłatnym prototypem.
+            <Breadcrumbs className="mb-5 md:mb-8" items={[{ label: "Strona główna", href: "/" }, { label: "Kontakt" }]} />
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">Kontakt z ML DevWorks</h1>
+            <p className="text-lg md:text-2xl text-gray-300 max-w-3xl leading-relaxed mb-6 md:mb-10">
+              {/* Na telefonie skrócony tekst, żeby dane kontaktowe były od razu widoczne. */}
+              Napisz, zadzwoń albo zapytaj asystenta AI
+              <span className="hidden md:inline">, co da się zautomatyzować w Twojej firmie</span>.{" "}
+              <span className="hidden md:inline">Pracujesz bezpośrednio ze mną, Michałem Lipką - programistą z Krakowa. </span>
+              Odpowiadam zwykle w ciągu 2-5 dni
+              <span className="hidden md:inline">, często od razu z bezpłatnym prototypem</span>.
             </p>
 
-            <div className="grid gap-4 md:grid-cols-3">
-              <a href="mailto:office@ml-devworks.com" className="bg-background-lighter border border-primary/20 rounded-xl p-6 hover:border-primary transition-colors group">
-                <p className="text-sm text-gray-400 mb-2">E-mail</p>
-                <p className="text-lg font-semibold text-white group-hover:text-primary transition-colors break-all">office@ml-devworks.com</p>
+            <div className="grid gap-3 md:gap-4 md:grid-cols-3">
+              <a href="mailto:office@ml-devworks.com" className="bg-background-lighter border border-primary/20 rounded-xl p-4 md:p-6 hover:border-primary transition-colors group block">
+                <p className="text-sm text-gray-400 mb-1 md:mb-2">E-mail</p>
+                <p className="text-base md:text-lg font-semibold text-white group-hover:text-primary transition-colors break-all">office@ml-devworks.com</p>
               </a>
-              <a href="tel:+48516598792" className="bg-background-lighter border border-primary/20 rounded-xl p-6 hover:border-primary transition-colors group">
-                <p className="text-sm text-gray-400 mb-2">Telefon</p>
-                <p className="text-lg font-semibold text-white group-hover:text-primary transition-colors">+48 516 598 792</p>
+              <a href="tel:+48516598792" className="bg-background-lighter border border-primary/20 rounded-xl p-4 md:p-6 hover:border-primary transition-colors group block">
+                <p className="text-sm text-gray-400 mb-1 md:mb-2">Telefon</p>
+                <p className="text-base md:text-lg font-semibold text-white group-hover:text-primary transition-colors">+48 516 598 792</p>
               </a>
               <a
                 href="https://www.google.com/maps/place/ML+Devworks/@50.0624834,19.9337611,17z/data=!3m1!4b1!4m6!3m5!1s0x425626465742ffe9:0xa1672c4591c41c29!8m2!3d50.06248!4d19.936336!16s%2Fg%2F11yrt8l9fl?entry=ttu"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-background-lighter border border-primary/20 rounded-xl p-6 hover:border-primary transition-colors group"
+                className="bg-background-lighter border border-primary/20 rounded-xl p-4 md:p-6 hover:border-primary transition-colors group block"
               >
-                <p className="text-sm text-gray-400 mb-2">Adres (Kraków)</p>
-                <p className="text-lg font-semibold text-white group-hover:text-primary transition-colors">Rynek Główny 34/15, 31-010 Kraków</p>
+                <p className="text-sm text-gray-400 mb-1 md:mb-2">Adres (Kraków)</p>
+                <p className="text-base md:text-lg font-semibold text-white group-hover:text-primary transition-colors">Rynek Główny 34/15, 31-010 Kraków</p>
               </a>
             </div>
           </div>
