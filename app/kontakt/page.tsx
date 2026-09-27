@@ -83,11 +83,8 @@ export default function KontaktPage() {
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">Kontakt z ML DevWorks</h1>
             <p className="text-lg md:text-2xl text-gray-300 max-w-3xl leading-relaxed mb-6 md:mb-10">
               {/* Na telefonie skrócony tekst, żeby dane kontaktowe były od razu widoczne. */}
-              Napisz, zadzwoń albo zapytaj asystenta AI
-              <span className="hidden md:inline">, co da się zautomatyzować w Twojej firmie</span>.{" "}
-              <span className="hidden md:inline">Pracujesz bezpośrednio ze mną, Michałem Lipką - programistą z Krakowa. </span>
-              Odpowiadam zwykle w ciągu 2-5 dni
-              <span className="hidden md:inline">, często od razu z bezpłatnym prototypem</span>.
+              Napisz, zadzwoń albo zapytaj asystenta AI, co da się zautomatyzować w Twojej firmie.
+              <span className="hidden md:inline"> Pracujesz bezpośrednio ze mną, Michałem Lipką - programistą z Krakowa.</span>
             </p>
 
             <div className="grid gap-3 md:gap-4 md:grid-cols-3">

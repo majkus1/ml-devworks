@@ -83,11 +83,8 @@ export default function ContactPage() {
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">Contact ML DevWorks</h1>
             <p className="text-lg md:text-2xl text-gray-300 max-w-3xl leading-relaxed mb-6 md:mb-10">
               {/* Shorter text on phones so contact details are visible right away. */}
-              Write, call, or ask the AI advisor
-              <span className="hidden md:inline"> what can be automated in your company</span>.{" "}
-              <span className="hidden md:inline">You work directly with me, Michał Lipka, a developer from Krakow. </span>
-              I usually reply within 2-5 days
-              <span className="hidden md:inline">, often with a free prototype right away</span>.
+              Write, call, or ask the AI advisor what can be automated in your company.
+              <span className="hidden md:inline"> You work directly with me, Michał Lipka, a developer from Krakow.</span>
             </p>
 
             <div className="grid gap-3 md:gap-4 md:grid-cols-3">
