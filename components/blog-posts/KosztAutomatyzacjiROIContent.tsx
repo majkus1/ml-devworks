@@ -75,6 +75,50 @@ export default function KosztAutomatyzacjiROIContent({ lang }: Props) {
         </div>
       </section>
 
+      <section id="automatyzacja-procesu-sprzedazowego">
+        <h2 className="text-2xl font-bold text-white mb-4">
+          {isPl ? "Ile kosztuje automatyzacja procesu sprzedażowego?" : "How much does sales process automation cost?"}
+        </h2>
+        <p className="mb-6">
+          {isPl
+            ? "Proces sprzedażowy to najczęstsze miejsce, gdzie automatyzacja zwraca się najszybciej: zapytania przestają czekać, follow-upy wychodzą same, a handlowiec widzi tylko to, co wymaga rozmowy. Koszt zależy od tego, ile etapów lejka obejmuje automatyzacja."
+            : "The sales process is where automation usually pays back fastest: inquiries stop waiting, follow-ups go out on their own, and salespeople only see what needs a conversation. The cost depends on how many funnel stages the automation covers."}
+        </p>
+        <div className="grid gap-4 md:grid-cols-3">
+          {(isPl
+            ? [
+                ["Zapytanie do CRM", "ok. 2 500-4 000 zł netto", "Formularz lub mail trafia do CRM, handlowiec dostaje zadanie, klient automatyczne potwierdzenie."],
+                ["Kwalifikacja i follow-upy", "ok. 6 000-12 000 zł netto", "AI ocenia i opisuje zapytanie, przypomnienia po ofercie wychodzą same, raport tygodniowy."],
+                ["Pełny lejek", "od ok. 12 000 zł netto", "CRM, oferty, przypomnienia, integracja z fakturami i raport sprzedaży w jednym przepływie."],
+              ]
+            : [
+                ["Inquiry to CRM", "about PLN 2,500-4,000 net", "Form or email lands in the CRM, the salesperson gets a task, the client an automatic confirmation."],
+                ["Qualification and follow-ups", "about PLN 6,000-12,000 net", "AI scores and summarizes the inquiry, post-offer reminders go out automatically, weekly report."],
+                ["Full funnel", "from about PLN 12,000 net", "CRM, offers, reminders, invoicing integration and sales reporting in one flow."],
+              ]
+          ).map(([title, price, description]) => (
+            <article key={title} className="bg-background-lighter border border-primary/20 rounded-xl p-5">
+              <h3 className="text-xl font-bold text-primary mb-2">{title}</h3>
+              <p className="font-semibold text-white mb-2">{price}</p>
+              <p>{description}</p>
+            </article>
+          ))}
+        </div>
+        <p className="mt-6">
+          {isPl
+            ? "Do tego koszty stałe: licencja CRM (jeśli firma go jeszcze nie ma) oraz użycie modeli AI, zwykle od kilkudziesięciu do kilkuset złotych miesięcznie."
+            : "Plus recurring costs: a CRM licence (if the company doesn't have one yet) and AI model usage, usually from a few dozen to a few hundred PLN per month."}
+        </p>
+        <div className="bg-background-lighter border border-primary/20 rounded-xl p-6 mt-6">
+          <p className="text-white font-semibold mb-3">{isPl ? "Przykładowe wyliczenie:" : "Example calculation:"}</p>
+          <p>
+            {isPl
+              ? "Handlowiec spędza godzinę dziennie na przepisywaniu zapytań i ręcznych przypomnieniach, czyli około 20 godzin miesięcznie. Przy koszcie 80 zł za godzinę to 1 600 zł miesięcznie. Automatyzacja za 6 000 zł netto zwraca się w niespełna 4 miesiące, a to bez liczenia klientów, którzy nie odeszli do konkurencji, bo dostali odpowiedź tego samego dnia."
+              : "A salesperson spends an hour a day retyping inquiries and sending manual reminders, about 20 hours a month. At PLN 80 per hour that is PLN 1,600 a month. A PLN 6,000 net automation pays back in under 4 months, not counting clients who stayed because they got an answer the same day."}
+          </p>
+        </div>
+      </section>
+
       <section>
         <h2 className="text-2xl font-bold text-white mb-4">
           {isPl ? "Które procesy zwykle zwracają się najszybciej?" : "Which processes usually pay back fastest?"}

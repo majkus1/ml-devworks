@@ -301,6 +301,22 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
         { q: "Czy możesz skonfigurować CI/CD?", a: "Tak. Konfiguruję pipeline z testami, buildem i deploymentem na wybrane środowisko." },
         { q: "Czy pomagasz obniżyć koszty chmury?", a: "Tak. Analizuję zasoby, cache, skalowanie i konfigurację usług, żeby ograniczyć niepotrzebne koszty." },
         { q: "Czy DevOps obejmuje monitoring?", a: "Tak. Mogę wdrożyć monitoring, alerty, logi i podstawowe procedury reakcji na incydenty." },
+        {
+          q: "Na czym polega wdrożenie DevOps w firmie?",
+          a: "Zaczynam od przeglądu, jak dziś wygląda publikacja aplikacji: kto ją robi, ile trwa i co może pójść źle. Potem ustawiam pipeline CI/CD (testy, build, wdrożenie), środowiska testowe i produkcyjne, monitoring, kopie zapasowe i krótką dokumentację. Zespół publikuje zmiany jednym zatwierdzeniem zamiast ręcznej procedury.",
+        },
+        {
+          q: "Ile trwa wdrożenie DevOps?",
+          a: "Pierwszy stabilny pipeline zwykle 2-10 dni roboczych. Pełne uporządkowanie infrastruktury (środowiska, monitoring, backup, kontrola kosztów) to najczęściej 2-4 tygodnie, zależnie od liczby aplikacji.",
+        },
+        {
+          q: "DevOps w chmurze czy na własnym serwerze?",
+          a: "Dla większości małych i średnich firm chmura (AWS, Google Cloud, Azure, a dla aplikacji webowych Vercel) jest tańsza w utrzymaniu i bezpieczniejsza niż własny serwer: kopie zapasowe, skalowanie i aktualizacje są w standardzie. Własny serwer ma sens przy stałym, dużym obciążeniu albo wymaganiach co do miejsca przechowywania danych.",
+        },
+        {
+          q: "Czy mogę zostać przy obecnym hostingu?",
+          a: "Tak. Automatyczne wdrożenia da się ustawić także na zwykłym serwerze VPS lub hostingu z dostępem SSH. Przeprowadzka do chmury nie jest warunkiem.",
+        },
       ],
       relatedPosts: [
         { title: "Czy AI wystarczy do stworzenia strony lub aplikacji?", href: "/blog/czy-ai-wystarczy-do-stworzenia-strony-lub-aplikacji" },
@@ -319,6 +335,22 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
         { q: "Can you configure CI/CD?", a: "Yes. I configure pipelines with tests, builds, and deployment to the chosen environment." },
         { q: "Can you help reduce cloud costs?", a: "Yes. I analyze resources, cache, scaling, and service configuration to reduce unnecessary cost." },
         { q: "Does DevOps include monitoring?", a: "Yes. I can implement monitoring, alerts, logs, and basic incident response procedures." },
+        {
+          q: "What does a DevOps implementation involve?",
+          a: "I start by reviewing how releases work today: who does them, how long they take and what can go wrong. Then I set up a CI/CD pipeline (tests, build, deployment), staging and production environments, monitoring, backups and short documentation. The team ships changes with one approval instead of a manual procedure.",
+        },
+        {
+          q: "How long does a DevOps implementation take?",
+          a: "The first stable pipeline usually takes 2-10 business days. A full infrastructure cleanup (environments, monitoring, backups, cost control) is typically 2-4 weeks, depending on the number of applications.",
+        },
+        {
+          q: "DevOps in the cloud or on your own server?",
+          a: "For most small and mid-sized companies the cloud (AWS, Google Cloud, Azure, or Vercel for web apps) is cheaper to maintain and safer than an own server: backups, scaling and updates come standard. An own server makes sense with constant heavy load or strict data-location requirements.",
+        },
+        {
+          q: "Can I stay with my current hosting?",
+          a: "Yes. Automated deployments can also run on a regular VPS or hosting with SSH access. Moving to the cloud is not a requirement.",
+        },
       ],
       relatedPosts: [
         { title: "Is AI enough to build a website or app?", href: "/en/blog/is-ai-enough-to-build-a-website-or-app" },

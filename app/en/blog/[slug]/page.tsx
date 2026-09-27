@@ -113,6 +113,11 @@ function ArticleSchema({ post }: { post: BlogPost }) {
 }
 
 const RELATED_SERVICE_BY_SLUG: Record<string, { title: string; href: string; label: string }> = {
+  "enrollment-panel-for-a-language-school-case-study": {
+    title: "Class enrollment system for schools and academies",
+    href: "/en/services/class-enrollment-system",
+    label: "See the class enrollment system",
+  },
   "what-can-be-automated-in-a-company-with-ai-process-examples": {
     title: "AI automation for companies",
     href: "/en/services/automation-and-ai",

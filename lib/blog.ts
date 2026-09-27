@@ -22,6 +22,73 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "panel-zapisow-dla-szkoly-jezykowej-studium-przypadku",
+    slugEn: "enrollment-panel-for-a-language-school-case-study",
+    title: {
+      pl: "Panel zapisów dla szkoły językowej: studium przypadku",
+      en: "Enrollment Panel for a Language School: Case Study",
+    },
+    metaTitle: {
+      pl: "Panel zapisów dla szkoły językowej: case study",
+      en: "Language School Enrollment Panel: Case Study",
+    },
+    excerpt: {
+      pl: "Jak zaprojektowałem panel zapisów dla szkoły językowej: zgłoszenia z formularza, lekcje próbne, decyzja rodzica jednym kliknięciem i odrabianie zajęć bez telefonów.",
+      en: "How I designed an enrollment panel for a language school: form submissions, trial lessons, one-tap parent decisions and make-up classes without phone calls.",
+    },
+    publishedAt: "2026-09-27",
+    dateModified: "2026-09-27",
+    readingTime: { pl: "6 min", en: "6 min" },
+    keywords: {
+      pl: [
+        "system zapisów na zajęcia",
+        "panel zapisów dla szkoły językowej",
+        "program dla szkoły językowej",
+        "zapisy na lekcję próbną",
+        "odrabianie zajęć szkoła językowa",
+        "automatyzacja szkoły językowej",
+        "system dla akademii sportowej",
+      ],
+      en: [
+        "class enrollment system",
+        "language school enrollment software",
+        "trial lesson booking",
+        "make-up class scheduling",
+        "language school automation",
+      ],
+    },
+    faq: {
+      pl: [
+        {
+          q: "Czy panel zapisów zastępuje system do umów i płatności?",
+          a: "Nie. Panel obsługuje etap przed zapisem: zgłoszenia, lekcje próbne, decyzje rodziców i odrabianie zajęć. Umowy i płatności zostają w dotychczasowym systemie, a dane zapisanego ucznia można do niego przekazać.",
+        },
+        {
+          q: "Czy rodzic musi zakładać konto?",
+          a: "Nie. Rodzic dostaje jednorazowy link w wiadomości i odpowiada jednym kliknięciem z telefonu.",
+        },
+        {
+          q: "Ile kosztuje taki panel zapisów?",
+          a: "Wdrożenie zaczyna się od 2 500 zł netto, do tego stała miesięczna opłata za utrzymanie. Przed decyzją można zobaczyć działający prototyp na przykładowych danych szkoły.",
+        },
+      ],
+      en: [
+        {
+          q: "Does the enrollment panel replace the contracts and payments system?",
+          a: "No. The panel handles the stage before enrollment: inquiries, trial lessons, parent decisions and make-up classes. Contracts and payments stay in the existing system, and enrolled student data can be passed to it.",
+        },
+        {
+          q: "Do parents need an account?",
+          a: "No. Parents receive a one-time link in a message and reply with one tap on their phone.",
+        },
+        {
+          q: "How much does an enrollment panel like this cost?",
+          a: "Implementation starts from PLN 2,500 net, plus a fixed monthly maintenance fee. Before deciding, you can see a working prototype on sample school data.",
+        },
+      ],
+    },
+  },
+  {
     slug: "co-mozna-zautomatyzowac-w-firmie-z-ai-przyklady-procesow",
     slugEn: "what-can-be-automated-in-a-company-with-ai-process-examples",
     title: {
@@ -338,19 +405,25 @@ export const blogPosts: BlogPost[] = [
     slug: "ile-kosztuje-automatyzacja-procesow-w-firmie-i-jak-liczyc-roi",
     slugEn: "how-much-does-business-process-automation-cost-and-how-to-calculate-roi",
     title: {
-      pl: "Koszt automatyzacji procesów i ROI dla firm",
+      pl: "Ile kosztuje automatyzacja procesów w firmie? Koszty, przykłady i ROI",
+      en: "How Much Does Business Process Automation Cost? Costs, Examples and ROI",
+    },
+    metaTitle: {
+      pl: "Ile kosztuje automatyzacja procesów? Koszty i ROI",
       en: "Business Process Automation Cost and ROI",
     },
     excerpt: {
-      pl: "Sprawdź, od czego zależy koszt automatyzacji, które procesy dają szybki zwrot i jak policzyć ROI przed wdrożeniem.",
-      en: "See what drives automation cost, which workflows deliver fast ROI, and how to estimate payback before implementation.",
+      pl: "Ile kosztuje automatyzacja procesów, w tym procesu sprzedażowego: widełki cen, co wpływa na koszt, przykładowe wyliczenie i jak policzyć ROI przed wdrożeniem.",
+      en: "What business process automation costs, including sales process automation: price ranges, cost drivers, an example calculation and how to estimate ROI.",
     },
     publishedAt: "2026-07-06",
-    dateModified: "2026-07-06",
+    dateModified: "2026-09-27",
     readingTime: { pl: "10 min", en: "10 min" },
     keywords: {
       pl: [
         "ile kosztuje automatyzacja procesow w firmie",
+        "ile kosztuje automatyzacja procesu sprzedażowego",
+        "automatyzacja procesu sprzedaży koszt",
         "automatyzacja procesow roi",
         "uslugi automatyzacji procesow",
         "automatyzacja ai dla firm koszt",
@@ -379,6 +452,10 @@ export const blogPosts: BlogPost[] = [
           q: "Jak policzyć ROI automatyzacji?",
           a: "Najprościej porównać miesięczny koszt pracy ręcznej, błędów i opóźnień z kosztem wdrożenia oraz utrzymania automatyzacji. Dobrze wybrany proces powinien mieć mierzalny czas zwrotu.",
         },
+        {
+          q: "Ile kosztuje automatyzacja procesu sprzedażowego?",
+          a: "Przekazanie zapytań do CRM z zadaniem dla handlowca to zwykle 2 500-4 000 zł netto, kwalifikacja zapytań z AI i automatyczne follow-upy 6 000-12 000 zł netto, a pełny lejek z ofertami, fakturami i raportami od ok. 12 000 zł netto. Do tego koszt CRM i modeli AI, zwykle kilkadziesiąt do kilkuset złotych miesięcznie.",
+        },
       ],
       en: [
         {
@@ -388,6 +465,10 @@ export const blogPosts: BlogPost[] = [
         {
           q: "How do you calculate automation ROI?",
           a: "Compare the monthly cost of manual work, errors, and delays with implementation and maintenance cost. A well-selected process should have a measurable payback period.",
+        },
+        {
+          q: "How much does sales process automation cost?",
+          a: "Passing inquiries to a CRM with a task for the salesperson usually costs PLN 2,500-4,000 net, AI qualification with automatic follow-ups PLN 6,000-12,000 net, and a full funnel with offers, invoices and reports from about PLN 12,000 net. Plus CRM and AI model costs, usually a few dozen to a few hundred PLN per month.",
         },
       ],
     },

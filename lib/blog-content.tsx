@@ -14,8 +14,12 @@ import CoMoznaZautomatyzowacContent from "@/components/blog-posts/CoMoznaZautoma
 import AutomatyzacjaObslugiZgloszenContent from "@/components/blog-posts/AutomatyzacjaObslugiZgloszenContent";
 import AplikacjeMobilneNaZamowienieContent from "@/components/blog-posts/AplikacjeMobilneNaZamowienieContent";
 import AgencjaAutomatyzacjiCzyProgramistaContent from "@/components/blog-posts/AgencjaAutomatyzacjiCzyProgramistaContent";
+import PanelZapisowSzkolaJezykowaContent from "@/components/blog-posts/PanelZapisowSzkolaJezykowaContent";
 
 const POST_CONTENT: Record<string, (lang: "pl" | "en") => ReactNode> = {
+  "panel-zapisow-dla-szkoly-jezykowej-studium-przypadku": (lang) => (
+    <PanelZapisowSzkolaJezykowaContent lang={lang} />
+  ),
   "co-mozna-zautomatyzowac-w-firmie-z-ai-przyklady-procesow": (lang) => (
     <CoMoznaZautomatyzowacContent lang={lang} />
   ),

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SolutionLinks from "@/components/SolutionLinks";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -116,6 +117,8 @@ export default function ServicesHubPageEn() {
             </div>
           </div>
         </section>
+
+        <SolutionLinks lang="en" />
 
         <section className="px-4 pb-20">
           <div className="max-w-5xl mx-auto bg-gradient-to-r from-primary/20 to-primary/10 border border-primary/30 rounded-xl p-8 md:p-12 text-center">

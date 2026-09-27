@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import SolutionLinks from "@/components/SolutionLinks";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -228,6 +229,8 @@ export default function AutomatyzacjaIAIPage() {
         </section>
 
         {/* Dlaczego ja */}
+        <SolutionLinks lang="pl" />
+
         <section className="px-4 py-16 bg-background-lighter/40" aria-labelledby="why-me-heading">
           <div className="max-w-6xl mx-auto">
             <h2 id="why-me-heading" className="text-3xl md:text-4xl font-bold mb-10">

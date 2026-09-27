@@ -1,9 +1,12 @@
 import { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog";
 import { serviceItems } from "@/lib/services";
+import { solutions } from "@/lib/solutions";
 
 const BASE_URL = "https://ml-devworks.com";
 const SITE_LAST_MODIFIED = new Date("2026-09-06");
+/** Usługi zmienione później niż reszta serwisu. */
+const SERVICE_LAST_MODIFIED: Record<string, string> = { devops: "2026-09-27", "automation-ai": "2026-09-27" };
 
 function localizedEntry({
   plPath,
@@ -53,9 +56,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     localizedEntry({
       plPath: service.href.pl,
       enPath: service.href.en,
-      lastModified: SITE_LAST_MODIFIED,
+      lastModified: SERVICE_LAST_MODIFIED[service.id] ? new Date(SERVICE_LAST_MODIFIED[service.id]) : SITE_LAST_MODIFIED,
       changeFrequency: "monthly",
       priority: 0.9,
+    }),
+  );
+
+  const solutionEntries = solutions.flatMap((solution) =>
+    localizedEntry({
+      plPath: solution.href.pl,
+      enPath: solution.href.en,
+      lastModified: new Date(solution.lastModified),
+      changeFrequency: "monthly",
+      priority: 0.85,
     }),
   );
 
@@ -96,6 +109,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     }),
     ...serviceEntries,
+    ...solutionEntries,
     ...localizedEntry({
       plPath: "/kontakt",
       enPath: "/en/contact",

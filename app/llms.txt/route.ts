@@ -2,6 +2,7 @@ import { getServices } from "@/lib/services";
 import { serviceDetails, type ServiceDetailId } from "@/lib/service-details";
 import { homeFaq } from "@/lib/home-faq";
 import { blogPosts } from "@/lib/blog";
+import { solutions } from "@/lib/solutions";
 
 export const dynamic = "force-static";
 
@@ -38,6 +39,12 @@ export function GET() {
     "",
     "## English service pages",
     ...enServices.map((service) => `- [${service.title}](${BASE_URL}${service.href}): ${service.description}`),
+    "",
+    "## Industry solutions",
+    ...solutions.flatMap((solution) => [
+      `- [${solution.content.en.breadcrumb}](${BASE_URL}${solution.href.en}): ${solution.content.en.metaDescription}`,
+      `- [${solution.content.pl.breadcrumb}](${BASE_URL}${solution.href.pl}) (PL): ${solution.content.pl.metaDescription}`,
+    ]),
     "",
     "## Indicative pricing (net, PLN)",
     ...enServices

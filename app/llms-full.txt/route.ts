@@ -3,6 +3,7 @@ import { serviceDetails, type ServiceDetailId } from "@/lib/service-details";
 import { homeFaq } from "@/lib/home-faq";
 import { getAutomationExamples } from "@/lib/automation-examples";
 import { blogPosts } from "@/lib/blog";
+import { solutions } from "@/lib/solutions";
 
 export const dynamic = "force-static";
 
@@ -46,6 +47,21 @@ export function GET() {
     "## Usługi (Polish)",
     "",
     ...serviceBlock("pl"),
+    "## Industry solutions",
+    "",
+    ...solutions.flatMap((solution) =>
+      (["en", "pl"] as const).flatMap((lang) => {
+        const content = solution.content[lang];
+        return [
+          `### ${content.breadcrumb}`,
+          `URL: ${BASE_URL}${solution.href[lang]}`,
+          content.metaDescription,
+          ...content.features.map((feature) => `- ${feature.title}: ${feature.text}`),
+          ...content.faq.flatMap((item) => `Q: ${item.q}\nA: ${item.a}`),
+          "",
+        ];
+      }),
+    ),
     "## Processes most often automated (English)",
     ...getAutomationExamples("en").map((item) => `- ${item.title}. Problem: ${item.problem} Solution: ${item.solution} Effect: ${item.effect}`),
     "",

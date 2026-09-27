@@ -52,6 +52,13 @@ export const metadata: Metadata = {
   },
 };
 
+const beforeAfter = [
+  ["Publikacja nowej wersji", "Ręczne kroki, jedna osoba wie jak, wdrożenie po godzinach", "Automatycznie po zatwierdzeniu zmian, w kilka minut"],
+  ["Błąd na produkcji", "Klient zgłasza problem pierwszy", "Alert przychodzi, zanim zauważy go klient"],
+  ["Kopie zapasowe", "Są, ale nikt nie sprawdzał, czy da się z nich odtworzyć system", "Automatyczne, z przetestowanym przywracaniem"],
+  ["Koszty chmury", "Rosną z miesiąca na miesiąc bez kontroli", "Widoczne, z limitami i alertami budżetowymi"],
+];
+
 export default function DevOpsWdrozeniaPage() {
   const serviceStructuredData = {
     "@context": "https://schema.org",
@@ -92,7 +99,13 @@ export default function DevOpsWdrozeniaPage() {
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "DevOps & Wdrożenia",
+        "name": "Usługi",
+        "item": "https://ml-devworks.com/uslugi"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "DevOps i wdrożenia w chmurze",
         "item": "https://ml-devworks.com/uslugi/devops-wdrozenia"
       }
     ]
@@ -117,28 +130,55 @@ export default function DevOpsWdrozeniaPage() {
         <section className="px-4 py-16 md:py-24 bg-gradient-to-b from-background to-background-lighter">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              DevOps i wdrożenia w chmurze <span className="text-primary">dla firm</span>
+              Wdrożenie DevOps i automatyzacja wdrożeń <span className="text-primary">w chmurze</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Profesjonalne wdrożenia w chmurze, automatyzacja procesów i pełne utrzymanie infrastruktury. Od developmentu do produkcji - kompleksowa obsługa DevOps.
+              CI/CD, konfiguracja chmury, monitoring i kopie zapasowe dla firm. Nowa wersja trafia na produkcję po jednym zatwierdzeniu, a nie po ręcznej procedurze.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/#contact"
-                className="px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors transform hover:scale-105"
+                href="/kontakt"
+                className="px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors"
               >
-                Bezpłatna Wycena
+                Bezpłatna wycena
               </Link>
               <Link
                 href="/uslugi"
                 className="px-8 py-4 bg-background-lighter border border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-colors"
               >
-                Zobacz Wszystkie Usługi
+                Zobacz wszystkie usługi
               </Link>
             </div>
           </div>
         </section>
         <ServiceSeoSections serviceId="devops" lang="pl" />
+
+        {/* Przed i po */}
+        <section className="px-4 py-16 bg-background-lighter/40" aria-labelledby="devops-before-after-heading">
+          <div className="max-w-5xl mx-auto">
+            <h2 id="devops-before-after-heading" className="text-3xl md:text-4xl font-bold mb-4 [text-wrap:balance]">
+              DevOps w chmurze: co zmienia się po wdrożeniu
+            </h2>
+            <p className="text-lg text-gray-400 mb-10 max-w-3xl">
+              Wdrożenie DevOps nie polega na zmianie narzędzi dla samej zmiany. Chodzi o to, żeby publikacja nowej wersji była nudna i przewidywalna.
+            </p>
+            <div className="grid gap-4">
+              {beforeAfter.map(([area, before, after]) => (
+                <article key={area} className="grid gap-3 md:grid-cols-[1fr_1.4fr_1.4fr] md:gap-6 items-start bg-background border border-primary/20 rounded-xl p-5 md:p-6">
+                  <h3 className="text-lg font-bold text-white">{area}</h3>
+                  <p className="text-gray-400">
+                    <span className="block text-xs font-semibold uppercase tracking-wide text-gray-500 mb-1">Przed</span>
+                    {before}
+                  </p>
+                  <p className="text-gray-200">
+                    <span className="block text-xs font-semibold uppercase tracking-wide text-primary mb-1">Po wdrożeniu</span>
+                    {after}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Main Content */}
         <section className="px-4 py-16">
@@ -246,7 +286,7 @@ export default function DevOpsWdrozeniaPage() {
               </h2>
               <div className="space-y-6">
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">🚀 Szybkie Wdrożenia</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Szybkie wdrożenia</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Dzięki automatyzacji i sprawdzonym procesom wdrażam aplikacje szybko i bezpiecznie. Od developmentu do produkcji w ciągu godzin, nie tygodni.
                   </p>
@@ -267,7 +307,7 @@ export default function DevOpsWdrozeniaPage() {
                 </div>
 
                 <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">💰 Optymalizacja Kosztów</h3>
+                  <h3 className="text-xl font-bold mb-3 text-primary">Optymalizacja kosztów</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Optymalizuję infrastrukturę pod kątem kosztów. Wybieramy najlepsze rozwiązania, które zapewniają wydajność przy rozsądnych kosztach.
                   </p>
@@ -372,14 +412,14 @@ export default function DevOpsWdrozeniaPage() {
             {/* CTA Section */}
             <div className="bg-gradient-to-r from-primary/20 to-primary/10 rounded-xl p-8 md:p-12 text-center border border-primary/30">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Gotowy na Profesjonalne Wdrożenie DevOps?
+                Gotowy na wdrożenie DevOps w swojej firmie?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Skontaktuj się ze mną i otrzymaj bezpłatną wycenę dla Twojego projektu DevOps.
               </p>
               <Link
-                href="/#contact"
-                className="inline-block px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors transform hover:scale-105"
+                href="/kontakt"
+                className="inline-block px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors"
               >
                 Skontaktuj się ze mną
               </Link>

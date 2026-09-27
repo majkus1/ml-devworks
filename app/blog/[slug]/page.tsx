@@ -113,6 +113,11 @@ function ArticleSchema({ post, slug }: { post: BlogPost; slug: string }) {
 }
 
 const RELATED_SERVICE_BY_SLUG: Record<string, { title: string; href: string; label: string }> = {
+  "panel-zapisow-dla-szkoly-jezykowej-studium-przypadku": {
+    title: "System zapisów na zajęcia dla szkół i akademii",
+    href: "/uslugi/system-zapisow-na-zajecia",
+    label: "Zobacz system zapisów na zajęcia",
+  },
   "co-mozna-zautomatyzowac-w-firmie-z-ai-przyklady-procesow": {
     title: "Automatyzacje AI dla firm",
     href: "/uslugi/automatyzacja-i-ai",

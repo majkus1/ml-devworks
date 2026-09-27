@@ -31,6 +31,10 @@ const ROUTE_MAP: Record<string, string> = {
   "/en/services/devops-deployment": "/uslugi/devops-wdrozenia",
   "/uslugi/naprawa-optymalizacja-utrzymanie": "/en/services/fixes-optimization-maintenance",
   "/en/services/fixes-optimization-maintenance": "/uslugi/naprawa-optymalizacja-utrzymanie",
+  "/uslugi/system-zapisow-na-zajecia": "/en/services/class-enrollment-system",
+  "/en/services/class-enrollment-system": "/uslugi/system-zapisow-na-zajecia",
+  "/uslugi/system-przypomnien-o-terminach": "/en/services/deadline-reminder-system",
+  "/en/services/deadline-reminder-system": "/uslugi/system-przypomnien-o-terminach",
 };
 
 /**
