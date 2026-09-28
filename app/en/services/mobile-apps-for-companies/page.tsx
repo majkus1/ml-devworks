@@ -117,7 +117,7 @@ export default function MobileAppsForCompaniesPage() {
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed mb-4">
               I build dedicated mobile apps for field employees, service teams, sales, and customers. With an admin panel, offline mode, and integrations with CRM, ERP, or inventory.
             </p>
-            <p className="text-lg text-gray-400 max-w-3xl leading-relaxed mb-8">
+            <p className="section-lead mb-8">
               A mobile app MVP usually starts from PLN 12,000 net, with the first version in the stores in 3-8 weeks. Direct cooperation with a Krakow-based developer, remote across Poland and the EU.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -135,10 +135,10 @@ export default function MobileAppsForCompaniesPage() {
 
         <section className="px-4 py-16" aria-labelledby="mobile-usecases-heading">
           <div className="max-w-6xl mx-auto">
-            <h2 id="mobile-usecases-heading" className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 id="mobile-usecases-heading" className="section-heading mb-4">
               Who custom mobile apps are for
             </h2>
-            <p className="text-lg text-gray-400 mb-10 max-w-3xl">
+            <p className="section-lead mb-10">
               A business mobile app makes sense when people work away from a desk or customers want to handle things from their phone. The most common use cases:
             </p>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -154,10 +154,10 @@ export default function MobileAppsForCompaniesPage() {
 
         <section className="px-4 py-16 bg-background-lighter/40" aria-labelledby="mobile-tech-heading">
           <div className="max-w-6xl mx-auto">
-            <h2 id="mobile-tech-heading" className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 id="mobile-tech-heading" className="section-heading mb-4">
               Native, cross-platform, or PWA?
             </h2>
-            <p className="text-lg text-gray-400 mb-10 max-w-3xl">
+            <p className="section-lead mb-10">
               The technology choice drives cost, timeline, and maintenance. I recommend the option that fits the process and budget, not the other way around.
             </p>
             <div className="grid gap-6 md:grid-cols-3">
@@ -180,7 +180,7 @@ export default function MobileAppsForCompaniesPage() {
 
         <section className="px-4 py-16" aria-labelledby="mobile-process-heading">
           <div className="max-w-4xl mx-auto">
-            <h2 id="mobile-process-heading" className="text-3xl md:text-4xl font-bold mb-10">
+            <h2 id="mobile-process-heading" className="section-heading mb-10">
               How mobile app development works
             </h2>
             <ol className="space-y-6">
@@ -223,7 +223,7 @@ export default function MobileAppsForCompaniesPage() {
 
         <section className="px-4 py-16">
           <div className="max-w-5xl mx-auto bg-gradient-to-r from-primary/20 to-primary/10 border border-primary/30 rounded-xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Describe the process and get an app prototype</h2>
+            <h2 className="section-heading mb-4">Describe the process and get an app prototype</h2>
             <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
               Tell me who will use the app, what it should do, and what it must connect to. After a clear brief, I come back within 2-5 days with a clickable prototype and an indicative estimate.
             </p>

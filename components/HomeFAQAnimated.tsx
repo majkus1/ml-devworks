@@ -15,10 +15,10 @@ export default function HomeFAQAnimated({ lang, items }: HomeFAQAnimatedProps) {
         <p className="text-primary font-semibold uppercase tracking-[0.18em] text-sm mb-3">
           FAQ
         </p>
-        <h2 id="home-faq-heading" className="max-w-5xl text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-left leading-tight [text-wrap:balance]">
+        <h2 id="home-faq-heading" className="section-heading">
           {lang === "pl" ? "Najczęstsze pytania" : "Frequently asked questions"}
         </h2>
-        <p className="mt-4 text-base md:text-lg text-gray-400 leading-relaxed">
+        <p className="mt-4 section-lead">
           {lang === "pl"
             ? "Krótkie odpowiedzi dla osób, które chcą szybko ocenić, czy mogę pomóc w projekcie strony, aplikacji albo automatyzacji."
             : "Short answers for people who want to quickly decide whether I can help with a website, app, or automation project."}

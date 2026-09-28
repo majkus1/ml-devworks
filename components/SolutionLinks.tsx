@@ -9,10 +9,10 @@ export default function SolutionLinks({ lang }: { lang: SiteLang }) {
   return (
     <section className="px-4 py-16" aria-labelledby="solutions-heading">
       <div className="max-w-6xl mx-auto">
-        <h2 id="solutions-heading" className="text-3xl md:text-4xl font-bold mb-4">
+        <h2 id="solutions-heading" className="section-heading mb-4">
           {isEnglish ? "Ready-made solutions for specific industries" : "Gotowe rozwiązania dla branż"}
         </h2>
-        <p className="text-lg text-gray-400 mb-10 max-w-3xl">
+        <p className="section-lead mb-10">
           {isEnglish
             ? "Proven workflows I adapt to your company. You see a working prototype first, then decide."
             : "Sprawdzone schematy, które dopasowuję do Twojej firmy. Najpierw widzisz działający prototyp, potem decydujesz."}

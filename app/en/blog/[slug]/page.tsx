@@ -228,7 +228,7 @@ function FAQSection({ post }: { post: BlogPost }) {
 
   return (
     <section className="mt-12" aria-labelledby="post-faq-heading">
-      <h2 id="post-faq-heading" className="text-3xl font-bold mb-6">
+      <h2 id="post-faq-heading" className="section-heading mb-6">
         Frequently Asked Questions
       </h2>
       <div className="space-y-4">

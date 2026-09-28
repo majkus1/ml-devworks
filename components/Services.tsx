@@ -109,11 +109,11 @@ export default function Services({ lang = "pl" }: ServicesProps) {
       <div className="max-w-7xl mx-auto">
         <h2
           id="services-heading"
-          className="max-w-5xl text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-left leading-tight mb-4 [text-wrap:balance]"
+          className="section-heading mb-4"
         >
           {lang === "pl" ? "Usługi programistyczne i dedykowane oprogramowanie dla firm" : "Software development and custom business systems"}
         </h2>
-        <p className="text-base md:text-lg text-gray-400 text-left leading-relaxed mb-10 max-w-3xl">
+        <p className="section-lead mb-10">
           {lang === "pl"
             ? "Od strony firmowej po agenta AI: dobieram zakres do procesu, który ma zarabiać albo oszczędzać czas. Każdą usługę opisuję z cenami „od” i czasem realizacji."
             : "From a business website to an AI agent: I match the scope to the process that should earn money or save time. Every service page lists 'from' prices and timelines."}

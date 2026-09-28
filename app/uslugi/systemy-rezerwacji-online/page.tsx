@@ -163,7 +163,7 @@ export default function OnlineBookingSystemsPage() {
 
         <section className="px-4 py-16" aria-labelledby="booking-problems-heading">
           <div className="max-w-6xl mx-auto">
-            <h2 id="booking-problems-heading" className="text-3xl md:text-4xl font-bold mb-8">
+            <h2 id="booking-problems-heading" className="section-heading mb-8">
               Kiedy dedykowany system rezerwacji ma sens
             </h2>
             <div className="grid gap-6 md:grid-cols-3">
@@ -182,7 +182,7 @@ export default function OnlineBookingSystemsPage() {
 
         <section className="px-4 py-16 bg-background-lighter/40" aria-labelledby="booking-scope-heading">
           <div className="max-w-6xl mx-auto">
-            <h2 id="booking-scope-heading" className="text-3xl md:text-4xl font-bold mb-8">
+            <h2 id="booking-scope-heading" className="section-heading mb-8">
               Co może zawierać system rezerwacji klientów
             </h2>
             <div className="grid gap-6 md:grid-cols-2">
@@ -221,7 +221,7 @@ export default function OnlineBookingSystemsPage() {
 
         <section className="px-4 py-16" aria-labelledby="booking-faq-heading">
           <div className="max-w-4xl mx-auto">
-            <h2 id="booking-faq-heading" className="text-3xl md:text-4xl font-bold mb-8">
+            <h2 id="booking-faq-heading" className="section-heading mb-8">
               Najczęstsze pytania
             </h2>
             <div className="space-y-4">

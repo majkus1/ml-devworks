@@ -149,7 +149,7 @@ export default function AplikacjeMobilneDlaFirmPage() {
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed mb-4">
               Tworzę dedykowane aplikacje mobilne dla pracowników w terenie, serwisu, sprzedaży i klientów. Z panelem administracyjnym, pracą offline i integracjami z CRM, ERP czy magazynem.
             </p>
-            <p className="text-lg text-gray-400 max-w-3xl leading-relaxed mb-8">
+            <p className="section-lead mb-8">
               MVP aplikacji mobilnej najczęściej od 12 000 zł netto, pierwsza wersja w sklepach w 3-8 tygodni. Bezpośrednia współpraca z programistą z Krakowa, zdalnie w całej Polsce.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -167,10 +167,10 @@ export default function AplikacjeMobilneDlaFirmPage() {
 
         <section className="px-4 py-16" aria-labelledby="mobile-usecases-heading">
           <div className="max-w-6xl mx-auto">
-            <h2 id="mobile-usecases-heading" className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 id="mobile-usecases-heading" className="section-heading mb-4">
               Dla kogo są aplikacje mobilne na zamówienie
             </h2>
-            <p className="text-lg text-gray-400 mb-10 max-w-3xl">
+            <p className="section-lead mb-10">
               Aplikacja mobilna dla firmy ma sens wtedy, gdy ludzie pracują poza biurkiem albo klienci chcą załatwiać sprawy z telefonu. Najczęstsze zastosowania:
             </p>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -186,10 +186,10 @@ export default function AplikacjeMobilneDlaFirmPage() {
 
         <section className="px-4 py-16 bg-background-lighter/40" aria-labelledby="mobile-tech-heading">
           <div className="max-w-6xl mx-auto">
-            <h2 id="mobile-tech-heading" className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 id="mobile-tech-heading" className="section-heading mb-4">
               Natywna, cross-platform czy PWA?
             </h2>
-            <p className="text-lg text-gray-400 mb-10 max-w-3xl">
+            <p className="section-lead mb-10">
               Dobór technologii wpływa na koszt, czas i utrzymanie. Doradzam wariant pod proces i budżet, a nie odwrotnie.
             </p>
             <div className="grid gap-6 md:grid-cols-3">
@@ -212,7 +212,7 @@ export default function AplikacjeMobilneDlaFirmPage() {
 
         <section className="px-4 py-16" aria-labelledby="mobile-process-heading">
           <div className="max-w-4xl mx-auto">
-            <h2 id="mobile-process-heading" className="text-3xl md:text-4xl font-bold mb-10">
+            <h2 id="mobile-process-heading" className="section-heading mb-10">
               Jak wygląda tworzenie aplikacji mobilnej
             </h2>
             <ol className="space-y-6">
@@ -255,7 +255,7 @@ export default function AplikacjeMobilneDlaFirmPage() {
 
         <section className="px-4 py-16">
           <div className="max-w-5xl mx-auto bg-gradient-to-r from-primary/20 to-primary/10 border border-primary/30 rounded-xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Opisz proces, a dostaniesz prototyp aplikacji</h2>
+            <h2 className="section-heading mb-4">Opisz proces, a dostaniesz prototyp aplikacji</h2>
             <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
               Napisz, kto ma używać aplikacji, co ma robić i z czym się łączyć. Po dobrym opisie wracam w 2-5 dni z klikalnym prototypem i orientacyjną wyceną.
             </p>

@@ -122,7 +122,7 @@ export default function ServicesHubPageEn() {
 
         <section className="px-4 pb-20">
           <div className="max-w-5xl mx-auto bg-gradient-to-r from-primary/20 to-primary/10 border border-primary/30 rounded-xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Not sure where to start?</h2>
+            <h2 className="section-heading mb-4">Not sure where to start?</h2>
             <p className="text-gray-300 text-lg mb-8">
               Describe the business problem and I will recommend the right scope: website, application, integration, automation, or a recovery plan for an existing project.
             </p>

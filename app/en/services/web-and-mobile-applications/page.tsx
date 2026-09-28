@@ -154,7 +154,7 @@ export default function WebAndMobileApplicationsPage() {
           <div className="max-w-4xl mx-auto">
             {/* What I Offer */}
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+              <h2 className="section-heading mb-8 text-center">
                 What I offer
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
@@ -214,7 +214,7 @@ export default function WebAndMobileApplicationsPage() {
 
             {/* Technologies */}
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+              <h2 className="section-heading mb-8 text-center">
                 Technologies We Use
               </h2>
               <div className="grid md:grid-cols-3 gap-6">
@@ -250,7 +250,7 @@ export default function WebAndMobileApplicationsPage() {
 
             {/* Why Work With Me */}
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+              <h2 className="section-heading mb-8 text-center">
                 Why work with me?
               </h2>
               <div className="space-y-6">
@@ -300,7 +300,7 @@ export default function WebAndMobileApplicationsPage() {
 
             {/* Process */}
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+              <h2 className="section-heading mb-8 text-center">
                 How Does the Process Work?
               </h2>
               <div className="space-y-6">
@@ -380,7 +380,7 @@ export default function WebAndMobileApplicationsPage() {
 
             {/* CTA Section */}
             <div className="bg-gradient-to-r from-primary/20 to-primary/10 rounded-xl p-8 md:p-12 text-center border border-primary/30">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="section-heading mb-4">
                 Ready for a Modern Application?
               </h2>
               <p className="text-xl text-gray-300 mb-8">

@@ -113,8 +113,8 @@ export default function ContactPage() {
 
         <section className="px-4 py-12 bg-background-lighter/40" aria-labelledby="brief-heading">
           <div className="max-w-7xl mx-auto">
-            <h2 id="brief-heading" className="text-3xl md:text-4xl font-bold mb-4">What to write to get a prototype</h2>
-            <p className="text-lg text-gray-400 mb-8 max-w-3xl">
+            <h2 id="brief-heading" className="section-heading mb-4">What to write to get a prototype</h2>
+            <p className="section-lead mb-8">
               The better the description, the faster I come back with specifics. No specification needed - answers to four questions are enough:
             </p>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">

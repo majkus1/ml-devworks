@@ -139,7 +139,7 @@ export default function SolutionPage({ id, lang }: { id: SolutionId; lang: SiteL
         {/* Problem */}
         <section className="px-4 py-16" aria-labelledby="solution-pains-heading">
           <div className="max-w-6xl mx-auto">
-            <h2 id="solution-pains-heading" className="text-3xl md:text-4xl font-bold mb-10 [text-wrap:balance]">
+            <h2 id="solution-pains-heading" className="section-heading mb-10">
               {t.painsHeading}
             </h2>
             <div className="grid gap-6 md:grid-cols-3">
@@ -158,10 +158,10 @@ export default function SolutionPage({ id, lang }: { id: SolutionId; lang: SiteL
         {/* Przepływ */}
         <section className="px-4 py-16 bg-background-lighter/40" aria-labelledby="solution-flow-heading">
           <div className="max-w-4xl mx-auto">
-            <h2 id="solution-flow-heading" className="text-3xl md:text-4xl font-bold mb-4 [text-wrap:balance]">
+            <h2 id="solution-flow-heading" className="section-heading mb-4">
               {t.flowHeading}
             </h2>
-            <p className="text-lg text-gray-400 mb-10">{t.flowIntro}</p>
+            <p className="section-lead mb-10">{t.flowIntro}</p>
             <ol className="space-y-8">
               {t.flow.map((step, index) => (
                 <li key={step.title} className="flex gap-4 md:gap-5">
@@ -184,7 +184,7 @@ export default function SolutionPage({ id, lang }: { id: SolutionId; lang: SiteL
         {/* Funkcje */}
         <section className="px-4 py-16" aria-labelledby="solution-features-heading">
           <div className="max-w-6xl mx-auto">
-            <h2 id="solution-features-heading" className="text-3xl md:text-4xl font-bold mb-10 [text-wrap:balance]">
+            <h2 id="solution-features-heading" className="section-heading mb-10">
               {t.featuresHeading}
             </h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -205,7 +205,7 @@ export default function SolutionPage({ id, lang }: { id: SolutionId; lang: SiteL
         <section className="px-4 py-16 bg-background-lighter/40" aria-labelledby="solution-audience-heading">
           <div className="max-w-6xl mx-auto grid gap-10 lg:grid-cols-2 lg:gap-12 items-start">
             <div>
-              <h2 id="solution-audience-heading" className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 id="solution-audience-heading" className="section-heading mb-6">
                 {t.audienceHeading}
               </h2>
               <ul className="flex flex-wrap gap-3">
@@ -242,7 +242,7 @@ export default function SolutionPage({ id, lang }: { id: SolutionId; lang: SiteL
         {/* Koszty */}
         <section className="px-4 py-16 bg-background-lighter/40" aria-labelledby="solution-pricing-heading">
           <div className="max-w-6xl mx-auto">
-            <h2 id="solution-pricing-heading" className="text-3xl md:text-4xl font-bold mb-10">
+            <h2 id="solution-pricing-heading" className="section-heading mb-10">
               {t.pricingHeading}
             </h2>
             <div className="grid gap-6 md:grid-cols-3">
@@ -260,7 +260,7 @@ export default function SolutionPage({ id, lang }: { id: SolutionId; lang: SiteL
         {/* FAQ */}
         <section className="px-4 py-16" aria-labelledby="solution-faq-heading">
           <div className="max-w-4xl mx-auto">
-            <h2 id="solution-faq-heading" className="text-3xl md:text-4xl font-bold mb-8">
+            <h2 id="solution-faq-heading" className="section-heading mb-8">
               {t.faqHeading}
             </h2>
             <div className="space-y-3">
@@ -313,7 +313,7 @@ export default function SolutionPage({ id, lang }: { id: SolutionId; lang: SiteL
         {/* CTA */}
         <section className="px-4 py-16">
           <div className="max-w-5xl mx-auto bg-gradient-to-r from-primary/20 to-primary/10 border border-primary/30 rounded-xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 [text-wrap:balance]">{t.ctaHeading}</h2>
+            <h2 className="section-heading mb-4">{t.ctaHeading}</h2>
             <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">{t.ctaText}</p>
             <Link
               href={contactHref}

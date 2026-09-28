@@ -113,7 +113,7 @@ export default function GoogleReviews({ lang = "pl", googleMapsUrl }: GoogleRevi
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight mb-4">{t.title}</h2>
+          <h2 className="section-heading mb-4">{t.title}</h2>
           <p className="text-base md:text-lg text-gray-400 leading-relaxed mb-6">{t.subtitle}</p>
           
           {overallRating && totalRatings && (

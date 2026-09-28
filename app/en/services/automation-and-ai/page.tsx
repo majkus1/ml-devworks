@@ -146,7 +146,7 @@ export default function AutomationAndAIPage() {
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed mb-4">
               Business process automation with AI agents: ticket and customer handling, lead qualification, copying data between systems, reports, and office work.
             </p>
-            <p className="text-lg text-gray-400 max-w-3xl leading-relaxed mb-8">
+            <p className="section-lead mb-8">
               Simple automations from PLN 2,500 net, first results in 3-14 business days. You work directly with a Krakow-based developer, remotely across Poland and the EU.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -172,7 +172,7 @@ export default function AutomationAndAIPage() {
 
         <section className="px-4 py-16 bg-background-lighter/40" aria-labelledby="automation-offer-heading">
           <div className="max-w-6xl mx-auto">
-            <h2 id="automation-offer-heading" className="text-3xl md:text-4xl font-bold mb-10">
+            <h2 id="automation-offer-heading" className="section-heading mb-10">
               What process automation services include
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
@@ -197,7 +197,7 @@ export default function AutomationAndAIPage() {
         <section className="px-4 py-16" aria-labelledby="agency-heading">
           <div className="max-w-5xl mx-auto grid gap-8 lg:grid-cols-[1.2fr_1fr] items-start">
             <div>
-              <h2 id="agency-heading" className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 id="agency-heading" className="section-heading mb-4">
                 AI automation agency or a developer?
               </h2>
               <p className="text-lg text-gray-300 leading-relaxed mb-4">
@@ -226,7 +226,7 @@ export default function AutomationAndAIPage() {
 
         <section className="px-4 py-16 bg-background-lighter/40" aria-labelledby="why-me-heading">
           <div className="max-w-6xl mx-auto">
-            <h2 id="why-me-heading" className="text-3xl md:text-4xl font-bold mb-10">
+            <h2 id="why-me-heading" className="section-heading mb-10">
               Why automate with me
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -242,7 +242,7 @@ export default function AutomationAndAIPage() {
 
         <section className="px-4 py-16" aria-labelledby="process-heading">
           <div className="max-w-4xl mx-auto">
-            <h2 id="process-heading" className="text-3xl md:text-4xl font-bold mb-10">
+            <h2 id="process-heading" className="section-heading mb-10">
               How an automation project works
             </h2>
             <ol className="space-y-6">
@@ -263,7 +263,7 @@ export default function AutomationAndAIPage() {
 
         <section className="px-4 pb-20">
           <div className="max-w-5xl mx-auto bg-gradient-to-r from-amber-400/20 to-amber-400/10 rounded-xl p-8 md:p-12 text-center border-2 border-amber-400/60 shadow-lg shadow-amber-500/10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-amber-400">Ready for AI automation?</h2>
+            <h2 className="section-heading mb-4 text-amber-400">Ready for AI automation?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Describe the process that takes the most of your team&apos;s time. I come back within 2-5 days with a free automation prototype and an indicative estimate.
             </p>

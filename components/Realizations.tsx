@@ -390,11 +390,11 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
         <div className="max-w-7xl mx-auto">
           <h2
             id="realizations-heading"
-            className="max-w-5xl text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-left leading-tight mb-4 [text-wrap:balance]"
+            className="section-heading mb-4"
           >
             {lang === "pl" ? "Moje realizacje" : "My projects"}
           </h2>
-          <p className="text-base md:text-lg text-gray-400 text-left leading-relaxed mb-8">
+          <p className="section-lead mb-8">
             {lang === "pl"
               ? "Zobacz moje dotychczasowe projekty"
               : "See my completed projects"}

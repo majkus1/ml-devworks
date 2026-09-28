@@ -150,7 +150,7 @@ export default function AutomatyzacjaIAIPage() {
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed mb-4">
               Automatyzacja procesów biznesowych z użyciem agentów AI: obsługa zgłoszeń i klientów, kwalifikacja leadów, przepisywanie danych między systemami, raporty i praca biurowa.
             </p>
-            <p className="text-lg text-gray-400 max-w-3xl leading-relaxed mb-8">
+            <p className="section-lead mb-8">
               Proste automatyzacje od 2 500 zł netto, pierwsze efekty w 3-14 dni roboczych. Pracujesz bezpośrednio z programistą z Krakowa - zdalnie w całej Polsce.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -177,7 +177,7 @@ export default function AutomatyzacjaIAIPage() {
         {/* Oferta */}
         <section className="px-4 py-16 bg-background-lighter/40" aria-labelledby="automation-offer-heading">
           <div className="max-w-6xl mx-auto">
-            <h2 id="automation-offer-heading" className="text-3xl md:text-4xl font-bold mb-10">
+            <h2 id="automation-offer-heading" className="section-heading mb-10">
               Co obejmują usługi automatyzacji procesów
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
@@ -203,7 +203,7 @@ export default function AutomatyzacjaIAIPage() {
         <section className="px-4 py-16" aria-labelledby="agency-heading">
           <div className="max-w-5xl mx-auto grid gap-8 lg:grid-cols-[1.2fr_1fr] items-start">
             <div>
-              <h2 id="agency-heading" className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 id="agency-heading" className="section-heading mb-4">
                 Agencja automatyzacji AI czy programista?
               </h2>
               <p className="text-lg text-gray-300 leading-relaxed mb-4">
@@ -233,7 +233,7 @@ export default function AutomatyzacjaIAIPage() {
 
         <section className="px-4 py-16 bg-background-lighter/40" aria-labelledby="why-me-heading">
           <div className="max-w-6xl mx-auto">
-            <h2 id="why-me-heading" className="text-3xl md:text-4xl font-bold mb-10">
+            <h2 id="why-me-heading" className="section-heading mb-10">
               Dlaczego warto automatyzować ze mną
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -250,7 +250,7 @@ export default function AutomatyzacjaIAIPage() {
         {/* Proces */}
         <section className="px-4 py-16" aria-labelledby="process-heading">
           <div className="max-w-4xl mx-auto">
-            <h2 id="process-heading" className="text-3xl md:text-4xl font-bold mb-10">
+            <h2 id="process-heading" className="section-heading mb-10">
               Jak wygląda wdrożenie automatyzacji
             </h2>
             <ol className="space-y-6">
@@ -272,7 +272,7 @@ export default function AutomatyzacjaIAIPage() {
         {/* CTA */}
         <section className="px-4 pb-20">
           <div className="max-w-5xl mx-auto bg-gradient-to-r from-amber-400/20 to-amber-400/10 rounded-xl p-8 md:p-12 text-center border-2 border-amber-400/60 shadow-lg shadow-amber-500/10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-amber-400">Gotowy na automatyzację z AI?</h2>
+            <h2 className="section-heading mb-4 text-amber-400">Gotowy na automatyzację z AI?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Opisz proces, który zabiera Wam najwięcej czasu. Wrócę w 2-5 dni z bezpłatnym prototypem automatyzacji i orientacyjną wyceną.
             </p>

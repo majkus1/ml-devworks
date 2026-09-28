@@ -43,15 +43,15 @@ export default function AiAssistantSection({ lang = "pl", showSteps = true }: Ai
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(0,255,136,0.08),transparent_45%)] pointer-events-none" aria-hidden="true" />
 
       <div className="relative max-w-7xl mx-auto">
-        <header className="mb-10 md:mb-14 max-w-3xl">
+        <header className="mb-10 md:mb-14">
           <p className="text-primary font-semibold mb-3 flex items-center gap-2">
             <span className="inline-block w-2 h-2 rounded-full bg-primary animate-pulse" aria-hidden="true" />
             {t.sectionEyebrow}
           </p>
-          <h2 id="ai-advisor-heading" className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight mb-4">
+          <h2 id="ai-advisor-heading" className="section-heading mb-4">
             {t.sectionTitle}
           </h2>
-          <p className="text-base md:text-lg text-gray-400 leading-relaxed">{t.sectionSubtitle}</p>
+          <p className="section-lead">{t.sectionSubtitle}</p>
         </header>
 
         <div className={showSteps ? "grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)] items-start" : "max-w-4xl"}>

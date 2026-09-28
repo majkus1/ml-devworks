@@ -56,10 +56,10 @@ export default function AutomationExamplesSection({
   return (
     <section id={id} className={compact ? "" : "px-4 py-24 md:py-28"} aria-labelledby={`${id}-heading`}>
       <div className={compact ? "" : "max-w-7xl mx-auto"}>
-        <Heading id={`${id}-heading`} className={compact ? "text-2xl font-bold text-white mb-4" : "text-3xl md:text-4xl font-bold mb-4"}>
+        <Heading id={`${id}-heading`} className={compact ? "text-2xl font-bold text-white mb-4" : "section-heading mb-4"}>
           {title}
         </Heading>
-        <p className={`text-gray-400 leading-relaxed ${compact ? "mb-6" : "text-lg mb-12 max-w-3xl"}`}>
+        <p className={`${compact ? "text-gray-400 leading-relaxed mb-6" : "section-lead mb-12"}`}>
           {limit && isPl
             ? "Automatyzacje AI dla firm zaczynają się od jednego powtarzalnego procesu, który zabiera czas zespołu. Oto te, które automatyzuję najczęściej:"
             : limit

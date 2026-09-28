@@ -99,7 +99,7 @@ export default function ServiceSeoSections({ serviceId, lang = "pl" }: ServiceSe
           <p className="text-primary font-semibold mb-3">
             {isEnglish ? "Service definition" : "Definicja usługi"}
           </p>
-          <h2 id="service-business-heading" className="text-3xl md:text-4xl font-bold mb-5">
+          <h2 id="service-business-heading" className="section-heading mb-5">
             {isEnglish ? "What this service covers" : "Co obejmuje ta usługa"}
           </h2>
           <p className="text-lg text-gray-300 leading-relaxed">{detail.definition}</p>
@@ -149,7 +149,7 @@ export default function ServiceSeoSections({ serviceId, lang = "pl" }: ServiceSe
         </div>
 
         <div>
-          <h2 className="text-3xl font-bold mb-6">{isEnglish ? "FAQ" : "Najczęstsze pytania"}</h2>
+          <h2 className="section-heading mb-6">{isEnglish ? "FAQ" : "Najczęstsze pytania"}</h2>
           <div className="space-y-4">
             {detail.faq.map((item) => (
               <article key={item.q} className="bg-background-lighter border border-primary/20 rounded-xl p-6">

@@ -108,8 +108,8 @@ export default function Contact({ lang = "pl", compact = false }: ContactProps) 
     <section id="contact" className="py-28 md:py-32 px-4 relative scroll-mt-[100px]" style={{ scrollMarginTop: '100px' }} aria-labelledby="contact-heading">
       <div className="max-w-7xl mx-auto">
         <header className="text-left mb-8">
-          <h2 id="contact-heading" className="max-w-5xl text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight mb-4 [text-wrap:balance]">{t.title}</h2>
-          <p className="text-base md:text-lg text-gray-400 leading-relaxed">{t.subtitle}</p>
+          <h2 id="contact-heading" className="section-heading mb-4">{t.title}</h2>
+          <p className="section-lead">{t.subtitle}</p>
         </header>
 
         <div className="space-y-8">

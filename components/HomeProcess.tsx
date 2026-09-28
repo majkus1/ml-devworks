@@ -25,14 +25,14 @@ export default function HomeProcess({ lang = "pl" }: HomeProcessProps) {
   return (
     <section className="px-4 py-24 md:py-28 bg-background-lighter/40" aria-labelledby="home-process-heading">
       <div className="max-w-7xl mx-auto">
-        <div className="max-w-3xl mb-12">
+        <div className="mb-12">
           <p className="text-primary font-semibold uppercase tracking-[0.18em] text-sm mb-3">
             {isPl ? "Jak wygląda współpraca" : "How we work together"}
           </p>
-          <h2 id="home-process-heading" className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight mb-4">
+          <h2 id="home-process-heading" className="section-heading mb-4">
             {isPl ? "Od opisu problemu do działającego rozwiązania w czterech krokach" : "From problem description to a working solution in four steps"}
           </h2>
-          <p className="text-base md:text-lg text-gray-400 leading-relaxed">
+          <p className="section-lead">
             {isPl
               ? "Nie podpisujesz umowy na „projekt IT”. Zaczynamy od jednego procesu, sprawdzamy efekt i dopiero wtedy idziemy dalej."
               : "You do not sign up for an 'IT project'. We start with one process, verify the effect, and only then move on."}

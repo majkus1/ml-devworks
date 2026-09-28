@@ -19,10 +19,10 @@ export default function AboutIntro({ lang = "pl" }: AboutIntroProps) {
   return (
     <section className="px-4 py-24 md:py-28" aria-labelledby="about-intro-heading">
       <div className="max-w-7xl mx-auto">
-        <h2 id="about-intro-heading" className="max-w-5xl text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-left leading-tight mb-5 text-white [text-wrap:balance]">
+        <h2 id="about-intro-heading" className="section-heading mb-5 text-white">
           {t.title}
         </h2>
-        <p className="text-base md:text-lg text-gray-300 text-left leading-relaxed max-w-4xl">{t.lead}</p>
+        <p className="section-lead">{t.lead}</p>
 
       </div>
     </section>

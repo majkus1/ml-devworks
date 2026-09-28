@@ -14,6 +14,36 @@
   }
 }
 
+@layer components {
+  /* Wspólny wygląd nagłówków sekcji (poza hero strony głównej): pełna szerokość kontenera. */
+  .section-heading {
+    @apply text-3xl md:text-4xl lg:text-[2.75rem] font-bold tracking-tight;
+    line-height: 1.15;
+    text-wrap: pretty;
+  }
+
+  /* Tekst pod nagłówkiem sekcji: szerszy niż wcześniej, ale wciąż wygodny do czytania. */
+  .section-lead {
+    @apply text-base md:text-lg text-gray-400 leading-relaxed max-w-4xl;
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  /* Wspólny wygląd nagłówków sekcji (poza hero strony głównej): pełna szerokość kontenera. */
+  .section-heading {
+    @apply text-3xl md:text-4xl lg:text-[2.75rem] font-bold tracking-tight;
+    line-height: 1.15;
+    text-wrap: pretty;
+  }
+
+  /* Tekst pod nagłówkiem sekcji: szerszy niż wcześniej, ale wciąż wygodny do czytania. */
+  .section-lead {
+    @apply text-base md:text-lg text-gray-400 leading-relaxed max-w-4xl;
+    text-wrap: pretty;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

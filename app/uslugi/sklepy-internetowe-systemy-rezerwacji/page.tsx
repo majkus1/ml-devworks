@@ -140,7 +140,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
           <div className="max-w-4xl mx-auto">
             {/* What I Offer */}
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+              <h2 className="section-heading mb-8 text-center">
                 Co oferuję?
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
@@ -202,7 +202,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
 
             {/* Features */}
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+              <h2 className="section-heading mb-8 text-center">
                 Kluczowe Funkcjonalności
               </h2>
               <div className="space-y-6">
@@ -252,7 +252,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
 
             {/* Why Work With Me */}
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+              <h2 className="section-heading mb-8 text-center">
                 Dlaczego warto pracować ze mną?
               </h2>
               <div className="space-y-6">
@@ -302,7 +302,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
 
             {/* Process */}
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+              <h2 className="section-heading mb-8 text-center">
                 Jak Wygląda Proces?
               </h2>
               <div className="space-y-6">
@@ -382,7 +382,7 @@ export default function SklepyInternetoweSystemyRezerwacjiPage() {
 
             {/* CTA Section */}
             <div className="bg-gradient-to-r from-primary/20 to-primary/10 rounded-xl p-8 md:p-12 text-center border border-primary/30">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="section-heading mb-4">
                 Gotowy na profesjonalny sklep internetowy?
               </h2>
               <p className="text-xl text-gray-300 mb-8">

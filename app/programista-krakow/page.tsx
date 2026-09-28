@@ -77,7 +77,7 @@ export default function ProgramistaKrakowPage() {
 
         <section className="px-4 py-12 bg-background-lighter/40" aria-labelledby="business-approach-heading">
           <div className="max-w-6xl mx-auto">
-            <h2 id="business-approach-heading" className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 id="business-approach-heading" className="section-heading mb-6">
               Biznesowe podejście do programowania
             </h2>
             <div className="grid gap-6 md:grid-cols-3">
@@ -97,7 +97,7 @@ export default function ProgramistaKrakowPage() {
 
         <section className="px-4 py-16" aria-labelledby="local-services-heading">
           <div className="max-w-6xl mx-auto">
-            <h2 id="local-services-heading" className="text-3xl md:text-4xl font-bold mb-8">
+            <h2 id="local-services-heading" className="section-heading mb-8">
               Co tworzę dla firm z Krakowa i okolic
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -121,7 +121,7 @@ export default function ProgramistaKrakowPage() {
         <section className="px-4 py-16" aria-labelledby="krakow-automation-heading">
           <div className="max-w-5xl mx-auto grid gap-8 lg:grid-cols-[1.2fr_1fr] items-start">
             <div>
-              <h2 id="krakow-automation-heading" className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 id="krakow-automation-heading" className="section-heading mb-4">
                 Automatyzacja AI Kraków: wdrożenia dla lokalnych firm
               </h2>
               <p className="text-lg text-gray-300 leading-relaxed mb-4">
@@ -156,7 +156,7 @@ export default function ProgramistaKrakowPage() {
 
         <section className="px-4 py-16 bg-background-lighter/40" aria-labelledby="krakow-proof-heading">
           <div className="max-w-5xl mx-auto">
-            <h2 id="krakow-proof-heading" className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 id="krakow-proof-heading" className="section-heading mb-6">
               Lokalnie w Krakowie, technicznie end-to-end
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed mb-6">

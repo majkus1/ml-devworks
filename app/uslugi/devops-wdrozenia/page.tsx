@@ -156,10 +156,10 @@ export default function DevOpsWdrozeniaPage() {
         {/* Przed i po */}
         <section className="px-4 py-16 bg-background-lighter/40" aria-labelledby="devops-before-after-heading">
           <div className="max-w-5xl mx-auto">
-            <h2 id="devops-before-after-heading" className="text-3xl md:text-4xl font-bold mb-4 [text-wrap:balance]">
+            <h2 id="devops-before-after-heading" className="section-heading mb-4">
               DevOps w chmurze: co zmienia się po wdrożeniu
             </h2>
-            <p className="text-lg text-gray-400 mb-10 max-w-3xl">
+            <p className="section-lead mb-10">
               Wdrożenie DevOps nie polega na zmianie narzędzi dla samej zmiany. Chodzi o to, żeby publikacja nowej wersji była nudna i przewidywalna.
             </p>
             <div className="grid gap-4">
@@ -185,7 +185,7 @@ export default function DevOpsWdrozeniaPage() {
           <div className="max-w-4xl mx-auto">
             {/* What I Offer */}
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+              <h2 className="section-heading mb-8 text-center">
                 Co oferuję?
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
@@ -245,7 +245,7 @@ export default function DevOpsWdrozeniaPage() {
 
             {/* Technologies */}
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+              <h2 className="section-heading mb-8 text-center">
                 Technologie i Narzędzia
               </h2>
               <div className="grid md:grid-cols-3 gap-6">
@@ -281,7 +281,7 @@ export default function DevOpsWdrozeniaPage() {
 
             {/* Why Work With Me */}
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+              <h2 className="section-heading mb-8 text-center">
                 Dlaczego warto pracować ze mną?
               </h2>
               <div className="space-y-6">
@@ -331,7 +331,7 @@ export default function DevOpsWdrozeniaPage() {
 
             {/* Process */}
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+              <h2 className="section-heading mb-8 text-center">
                 Jak Wygląda Proces?
               </h2>
               <div className="space-y-6">
@@ -411,7 +411,7 @@ export default function DevOpsWdrozeniaPage() {
 
             {/* CTA Section */}
             <div className="bg-gradient-to-r from-primary/20 to-primary/10 rounded-xl p-8 md:p-12 text-center border border-primary/30">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="section-heading mb-4">
                 Gotowy na wdrożenie DevOps w swojej firmie?
               </h2>
               <p className="text-xl text-gray-300 mb-8">

@@ -140,7 +140,7 @@ export default function FixesOptimizationMaintenancePage() {
           <div className="max-w-4xl mx-auto">
             {/* What I Offer */}
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+              <h2 className="section-heading mb-8 text-center">
                 What I offer
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
@@ -200,7 +200,7 @@ export default function FixesOptimizationMaintenancePage() {
 
             {/* Services Details */}
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+              <h2 className="section-heading mb-8 text-center">
                 Detailed Services
               </h2>
               <div className="space-y-6">
@@ -257,7 +257,7 @@ export default function FixesOptimizationMaintenancePage() {
 
             {/* Why Work With Me */}
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+              <h2 className="section-heading mb-8 text-center">
                 Why work with me?
               </h2>
               <div className="space-y-6">
@@ -307,7 +307,7 @@ export default function FixesOptimizationMaintenancePage() {
 
             {/* Process */}
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+              <h2 className="section-heading mb-8 text-center">
                 How Does the Process Work?
               </h2>
               <div className="space-y-6">
@@ -387,7 +387,7 @@ export default function FixesOptimizationMaintenancePage() {
 
             {/* CTA Section */}
             <div className="bg-gradient-to-r from-primary/20 to-primary/10 rounded-xl p-8 md:p-12 text-center border border-primary/30">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="section-heading mb-4">
                 Need Fixes or Optimization?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
