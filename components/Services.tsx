@@ -1,8 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
 import Link from "next/link";
 import {
   GlobeIcon,
@@ -123,12 +120,8 @@ export default function Services({ lang = "pl" }: ServicesProps) {
         </p>
 
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 list-none p-0 m-0" role="list">
-          {serviceList.map((service, index) => (
-            <ServiceCard
-              key={index}
-              service={service}
-              index={index}
-            />
+          {serviceList.map((service) => (
+            <ServiceCard key={service.title} service={service} />
           ))}
         </ul>
         
@@ -137,16 +130,8 @@ export default function Services({ lang = "pl" }: ServicesProps) {
   );
 }
 
-function ServiceCard({
-  service,
-  index,
-}: {
-  service: Service;
-  index: number;
-}) {
+function ServiceCard({ service }: { service: Service }) {
   const IconComponent = service.icon;
-  const cardRef = useRef(null);
-  const isCardInView = useInView(cardRef, { once: true, margin: "0px 0px -40px 0px" });
   
   // Sprawdź czy to usługa "Automatyzacja i AI" / "Automation & AI"
   const isAutomationAI = service.title === "Automatyzacja i AI" || service.title === "Automation & AI";
@@ -173,7 +158,7 @@ function ServiceCard({
     </>
   );
 
-  const cardClassName = `bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-6 transition-colors cursor-pointer group ${
+  const cardClassName = `bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-6 transition-[transform,border-color] duration-200 hover:-translate-y-1 cursor-pointer group ${
     isAutomationAI
       ? "border-2 border-amber-400/60 hover:border-amber-400 shadow-lg shadow-amber-500/20"
       : "border border-primary/20 hover:border-primary/50"
@@ -181,20 +166,7 @@ function ServiceCard({
 
   if (service.href) {
     return (
-      <motion.li
-        ref={cardRef}
-        initial={{ opacity: 0, y: 24 }}
-        animate={isCardInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ 
-          duration: 0.5,
-          delay: 0.1 + index * 0.05,
-          ease: [0.16, 1, 0.3, 1]
-        }}
-        whileHover={{ 
-          scale: 1.02,
-          y: -5,
-          transition: { duration: 0.2, ease: "easeOut" }
-        }}
+      <li
         className={cardClassName}
       >
         <Link 
@@ -203,29 +175,16 @@ function ServiceCard({
         >
           <article>{cardContent}</article>
         </Link>
-      </motion.li>
+      </li>
     );
   }
 
   return (
-    <motion.li
-      ref={cardRef}
-      initial={{ opacity: 0, y: 24 }}
-      animate={isCardInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ 
-        duration: 0.5,
-        delay: 0.1 + index * 0.05,
-        ease: [0.16, 1, 0.3, 1]
-      }}
-      whileHover={{ 
-        scale: 1.02,
-        y: -5,
-        transition: { duration: 0.2, ease: "easeOut" }
-      }}
+    <li
       className={cardClassName}
     >
       <article>{cardContent}</article>
-    </motion.li>
+    </li>
   );
 }
 

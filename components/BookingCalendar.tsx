@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef, useState, useMemo } from "react";
+import { motion } from "framer-motion";
+import { useState, useMemo } from "react";
 
 interface BookingCalendarProps {
   lang?: "pl" | "en";
@@ -52,9 +52,6 @@ function formatTime(iso: string, lang: "pl" | "en"): string {
 }
 
 export default function BookingCalendar({ lang = "pl" }: BookingCalendarProps) {
-  const containerRef = useRef(null);
-  const isInView = useInView(containerRef, { once: true, margin: "-100px" });
-
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
   const [slots, setSlots] = useState<string[]>([]);
   const [loadingSlots, setLoadingSlots] = useState(false);
@@ -180,11 +177,7 @@ export default function BookingCalendar({ lang = "pl" }: BookingCalendarProps) {
   };
 
   return (
-    <motion.section
-      ref={containerRef}
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.8 }}
+    <section
       className="mt-12 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 md:p-8"
     >
       <div>
@@ -322,6 +315,6 @@ export default function BookingCalendar({ lang = "pl" }: BookingCalendarProps) {
           </>
         )}
       </div>
-    </motion.section>
+    </section>
   );
 }

@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 type FAQItem = {
   q: string;
   a: string;
@@ -30,18 +26,14 @@ export default function HomeFAQAnimated({ lang, items }: HomeFAQAnimatedProps) {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {items.map((item, index) => (
-          <motion.article
+        {items.map((item) => (
+          <article
             key={item.q}
             className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 transition-colors hover:border-primary/50"
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "0px 0px -40px 0px" }}
-            transition={{ duration: 0.45, delay: index * 0.06, ease: [0.16, 1, 0.3, 1] }}
           >
             <h3 className="text-lg md:text-xl font-bold text-primary mb-4">{item.q}</h3>
             <p className="text-sm md:text-base text-gray-200 leading-relaxed">{item.a}</p>
-          </motion.article>
+          </article>
         ))}
       </div>
     </div>

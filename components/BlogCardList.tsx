@@ -1,7 +1,3 @@
-"use client";
-
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { BlogPost } from "@/lib/blog";
@@ -12,35 +8,25 @@ interface BlogCardListProps {
 }
 
 export default function BlogCardList({ posts, lang }: BlogCardListProps) {
-  const listRef = useRef(null);
-  const isInView = useInView(listRef, { once: true, margin: "-50px" });
-
   if (posts.length === 0) {
     return (
-      <motion.div
-        ref={listRef}
-        initial={{ opacity: 0, y: 30 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6 }}
-        className="text-center py-16 px-4"
-      >
+      <div className="text-center py-16 px-4">
         <p className="text-xl text-gray-400">
           {lang === "pl"
             ? "Wkrótce pojawią się tu nowe wpisy. Zaglądaj regularnie!"
             : "New posts coming soon. Check back regularly!"}
         </p>
-      </motion.div>
+      </div>
     );
   }
 
   return (
     <ul
-      ref={listRef}
       className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 list-none p-0 m-0"
       role="list"
     >
-      {posts.map((post, index) => (
-        <BlogCard key={post.slug} post={post} lang={lang} index={index} />
+      {posts.map((post) => (
+        <BlogCard key={post.slug} post={post} lang={lang} />
       ))}
     </ul>
   );
@@ -49,32 +35,14 @@ export default function BlogCardList({ posts, lang }: BlogCardListProps) {
 function BlogCard({
   post,
   lang,
-  index,
 }: {
   post: BlogPost;
   lang: "pl" | "en";
-  index: number;
 }) {
-  const cardRef = useRef(null);
-  const isCardInView = useInView(cardRef, { once: true, margin: "-80px" });
   const href = lang === "pl" ? `/blog/${post.slug}` : `/en/blog/${post.slugEn}`;
 
   return (
-    <motion.li
-      ref={cardRef}
-      initial={{ opacity: 0, y: 40 }}
-      animate={isCardInView ? { opacity: 1, y: 0 } : {}}
-      transition={{
-        duration: 0.5,
-        delay: index * 0.1,
-        ease: [0.16, 1, 0.3, 1],
-      }}
-      whileHover={{
-        y: -6,
-        transition: { duration: 0.2, ease: "easeOut" },
-      }}
-      className="bg-background-lighter border border-primary/20 rounded-xl overflow-hidden hover:border-primary/40 transition-colors duration-200 group"
-    >
+    <li className="bg-background-lighter border border-primary/20 rounded-xl overflow-hidden hover:border-primary/40 transition-[transform,border-color] duration-200 hover:-translate-y-1 group">
       <Link href={href} className="block h-full">
         <article>
           {post.image && (
@@ -117,6 +85,6 @@ function BlogCard({
           </div>
         </article>
       </Link>
-    </motion.li>
+    </li>
   );
 }

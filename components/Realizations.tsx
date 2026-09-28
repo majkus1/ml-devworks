@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, useInView, AnimatePresence } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 // Ikony technologii zostały usunięte - użyj <img> tagów w miejscach oznaczonych TODO
 
@@ -215,8 +215,6 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
   const [overallRating, setOverallRating] = useState<number | null>(null);
   const [totalRatings, setTotalRatings] = useState<number | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const reviewsRef = useRef(null);
-  const isReviewsInView = useInView(reviewsRef, { once: true, margin: "-100px" });
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -246,9 +244,8 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
   // Reserve space for reviews section even when loading to prevent layout shift
   if (isLoading) {
     return (
-      <motion.div
+      <div
         id="client-reviews"
-        ref={reviewsRef}
         className="mt-16 border-primary/20 scroll-mt-[100px] min-h-[400px]"
         style={{ scrollMarginTop: "100px" }}
         aria-label={lang === "pl" ? "Ładowanie opinii klientów" : "Loading client reviews"}
@@ -276,10 +273,8 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
   const t = content[lang];
 
   return (
-    <motion.div
+    <div
       id="client-reviews"
-      ref={reviewsRef}
-      initial={false}
       className="mt-16 border-primary/20 scroll-mt-[100px]"
       style={{ scrollMarginTop: "100px" }}
     >
@@ -309,13 +304,9 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
       )}
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6 w-full">
-        {reviews.map((review, index) => (
-          <motion.article
+        {reviews.map((review) => (
+          <article
             key={review.time}
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "0px 0px -40px 0px" }}
-            transition={{ duration: 0.45, delay: index * 0.07 }}
             className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 w-full min-w-0"
           >
             <div className="flex items-start gap-3 mb-3">
@@ -350,7 +341,7 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">{review.text}</p>
             <span className="text-xs text-gray-500 mt-2 block">{review.relativeTime}</span>
-          </motion.article>
+          </article>
         ))}
       </div>
 
@@ -367,7 +358,7 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
           </svg>
         </a>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
@@ -410,12 +401,11 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
           </p>
 
           <ul className={`grid grid-cols-1 md:grid-cols-2 gap-8 list-none p-0 m-0 ${projects.length === 4 ? "lg:grid-cols-2" : "lg:grid-cols-3"}`} role="list">
-            {projects.map((project, index) => (
+            {projects.map((project) => (
               <ProjectCard
                 key={project.id}
                 project={project}
                 lang={lang}
-                index={index}
                 onOpenModal={() => openModal(project)}
                 onOpenImageModal={openImageModal}
               />
@@ -606,35 +596,17 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
 function ProjectCard({
   project,
   lang,
-  index,
   onOpenModal,
   onOpenImageModal,
 }: {
   project: Project;
   lang: "pl" | "en";
-  index: number;
   onOpenModal: () => void;
   onOpenImageModal: (image: string) => void;
 }) {
-  const cardRef = useRef(null);
-  const isCardInView = useInView(cardRef, { once: true, margin: "0px 0px -40px 0px" });
-
   return (
-    <motion.li
-      ref={cardRef}
-      initial={{ opacity: 0, y: 24 }}
-      animate={isCardInView ? { opacity: 1, y: 0 } : {}}
-      transition={{
-        duration: 0.5,
-        delay: index * 0.08,
-        ease: [0.16, 1, 0.3, 1]
-      }}
-      whileHover={{ 
-        scale: 1.02,
-        y: -5,
-        transition: { duration: 0.2, ease: "easeOut" }
-      }}
-      className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 hover:border-primary/40 transition-colors duration-200 cursor-pointer group"
+    <li
+      className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 hover:border-primary/40 transition-[transform,border-color] duration-200 hover:-translate-y-1 cursor-pointer group"
       onClick={onOpenModal}
     >
       {/* Badges */}
@@ -720,6 +692,6 @@ function ProjectCard({
           </div>
         )}
       </div>
-    </motion.li>
+    </li>
   );
 }
