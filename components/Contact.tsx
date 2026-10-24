@@ -129,7 +129,7 @@ export default function Contact({ lang = "pl", compact = false }: ContactProps) 
 
             <address className="card mt-8 not-italic">
               <div className="flex items-center gap-4 border-b border-white/[0.08] pb-5">
-                <Image src="/IM.webp" alt="Michał Lipka" width={56} height={56} className="h-14 w-14 rounded-full border border-white/15 object-cover" />
+                <Image src="/ja-avatar.webp" alt="Michał Lipka" width={56} height={56} className="h-14 w-14 rounded-full border border-white/15 object-cover" />
                 <div>
                   <p className="font-semibold text-white">Michał Lipka</p>
                   <p className="text-sm text-gray-400">{t.role}</p>

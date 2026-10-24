@@ -56,7 +56,7 @@ export default function BlogPostLayout({ lang, post, content, related }: BlogPos
                 {post.excerpt[lang]}
               </p>
               <div className="mt-8 flex items-center gap-3 border-t border-white/[0.07] pt-6" itemProp="author" itemScope itemType="https://schema.org/Person">
-                <Image src="/IM.webp" alt="Michał Lipka" width={44} height={44} className="h-11 w-11 rounded-full border border-white/15 object-cover" />
+                <Image src="/ja-avatar.webp" alt="Michał Lipka" width={44} height={44} className="h-11 w-11 rounded-full border border-white/15 object-cover" />
                 <div className="text-sm">
                   <p className="font-semibold text-white" itemProp="name">
                     Michał Lipka

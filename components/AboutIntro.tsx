@@ -44,10 +44,10 @@ export default function AboutIntro({ lang = "pl" }: AboutIntroProps) {
           <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-primary/25 via-transparent to-accent/20 blur-2xl" aria-hidden="true" />
           <div className="relative overflow-hidden rounded-3xl border border-white/10">
             <Image
-              src="/IM.webp"
+              src="/ja.webp"
               alt={isPl ? "Michał Lipka, programista i analityk biznesowy z Krakowa" : "Michał Lipka, developer and business analyst from Krakow"}
-              width={640}
-              height={640}
+              width={900}
+              height={1125}
               sizes="(min-width: 1024px) 380px, 90vw"
               className="h-auto w-full object-cover"
             />

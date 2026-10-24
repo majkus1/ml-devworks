@@ -1,11 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { getAlternateLangPath } from "@/lib/i18n-routes";
+import { HOLD_NAV_EVENT } from "@/lib/nav-scroll";
 import { ArrowRightIcon } from "@/components/ui/icons";
 
 interface NavbarProps {
@@ -34,8 +34,9 @@ function getActiveNavItem(pathname: string | null): string {
 
 export default function Navbar({ lang = "pl" }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
+  const holdNav = useRef(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("");
   const pathname = usePathname();
@@ -73,27 +74,56 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
   }, [isHomePage, pathname]);
 
   useEffect(() => {
+    let releaseTimer: number | undefined;
+
+    const release = () => {
+      holdNav.current = false;
+      window.clearTimeout(releaseTimer);
+    };
+
+    // Przewijanie po kliknięciu linku: menu zostaje widoczne, aż przewijanie się skończy
+    // (chwila bez zdarzeń scroll) albo użytkownik sam zacznie przewijać.
+    const hold = () => {
+      holdNav.current = true;
+      setIsVisible(true);
+      window.clearTimeout(releaseTimer);
+      releaseTimer = window.setTimeout(release, 600);
+    };
+
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+      setIsScrolled(currentScrollY >= 10);
 
-      if (currentScrollY < 10) {
-        setIsScrolled(false);
+      if (holdNav.current) {
+        window.clearTimeout(releaseTimer);
+        releaseTimer = window.setTimeout(release, 200);
+      } else if (currentScrollY < 10 || currentScrollY < lastScrollY.current) {
         setIsVisible(true);
-      } else {
-        setIsScrolled(true);
-        if (currentScrollY < lastScrollY) {
-          setIsVisible(true);
-        } else if (currentScrollY > lastScrollY && currentScrollY > 120) {
-          setIsVisible(false);
-        }
+      } else if (currentScrollY > lastScrollY.current && currentScrollY > 120) {
+        setIsVisible(false);
       }
 
-      setLastScrollY(currentScrollY);
+      lastScrollY.current = currentScrollY;
+    };
+
+    // Każdy link do sekcji na tej samej stronie (menu, przyciski, stopka).
+    const handleClick = (e: MouseEvent) => {
+      const link = e.target instanceof Element ? e.target.closest("a[href*='#']") : null;
+      if (link instanceof HTMLAnchorElement && link.hash && link.pathname === window.location.pathname) hold();
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+    window.addEventListener(HOLD_NAV_EVENT, hold);
+    document.addEventListener("click", handleClick, true);
+    for (const type of ["wheel", "touchstart", "keydown"]) window.addEventListener(type, release, { passive: true });
+    return () => {
+      window.clearTimeout(releaseTimer);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener(HOLD_NAV_EVENT, hold);
+      document.removeEventListener("click", handleClick, true);
+      for (const type of ["wheel", "touchstart", "keydown"]) window.removeEventListener(type, release);
+    };
+  }, []);
 
   useEffect(() => {
     if (!isMobileMenuOpen) return;
@@ -162,7 +192,7 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
   return (
     <>
       <nav
-        className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${isVisible || isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"} ${
+        className={`fixed left-0 right-0 top-0 z-50 transition-[transform,background-color,border-color] duration-200 ease-out ${isVisible || isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"} ${
           solid ? "border-b border-white/[0.07] bg-background/80 backdrop-blur-xl" : "border-b border-transparent bg-transparent"
         }`}
         role="navigation"
@@ -179,10 +209,10 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
               <Image
                 src="/primary-on-transparent-logo.webp"
                 alt="ML DevWorks Logo"
-                width={172}
-                height={48}
+                width={190}
+                height={53}
                 priority
-                className="h-auto w-[150px] transition-opacity hover:opacity-80 md:w-[172px]"
+                className="h-auto w-[178px] transition-opacity hover:opacity-80 sm:w-[184px] lg:w-[180px]"
               />
             </Link>
 
@@ -242,9 +272,9 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
                 aria-expanded={isMobileMenuOpen}
               >
                 <span className="relative block h-3.5 w-5" aria-hidden="true">
-                  <span className={`absolute left-0 block h-0.5 w-5 rounded-full bg-white transition-all duration-300 ${isMobileMenuOpen ? "top-1.5 rotate-45" : "top-0"}`} />
-                  <span className={`absolute left-0 top-1.5 block h-0.5 w-5 rounded-full bg-white transition-opacity duration-200 ${isMobileMenuOpen ? "opacity-0" : "opacity-100"}`} />
-                  <span className={`absolute left-0 block h-0.5 w-5 rounded-full bg-white transition-all duration-300 ${isMobileMenuOpen ? "top-1.5 -rotate-45" : "top-3"}`} />
+                  <span className={`absolute left-0 block h-0.5 w-5 rounded-full bg-white transition-all duration-200 ease-out ${isMobileMenuOpen ? "top-1.5 rotate-45" : "top-0"}`} />
+                  <span className={`absolute left-0 top-1.5 block h-0.5 w-5 rounded-full bg-white transition-opacity duration-150 ${isMobileMenuOpen ? "opacity-0" : "opacity-100"}`} />
+                  <span className={`absolute left-0 block h-0.5 w-5 rounded-full bg-white transition-all duration-200 ease-out ${isMobileMenuOpen ? "top-1.5 -rotate-45" : "top-3"}`} />
                 </span>
               </button>
             </div>
@@ -252,70 +282,66 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
         </div>
       </nav>
 
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            className="fixed inset-0 z-40 bg-background/95 backdrop-blur-xl lg:hidden"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-          >
-            <div className="container-site flex h-full flex-col pb-8 pt-24">
-              <ul className="flex flex-col">
-                {items.map((item, index) => {
-                  const isPageLink = item.href.startsWith("/");
-                  const isActive = activeSection === item.key || (item.key === "contact-page" && activeSection === "#contact");
-                  const className = `flex items-center justify-between border-b border-white/[0.07] py-4 font-display text-2xl font-medium transition-colors ${
-                    isActive ? "text-primary" : "text-white hover:text-primary"
-                  }`;
-                  return (
-                    <motion.li
-                      key={item.href}
-                      initial={{ opacity: 0, y: 12 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.3, delay: 0.04 * index, ease: [0.16, 1, 0.3, 1] }}
-                    >
-                      {isPageLink ? (
-                        <Link href={item.href} onClick={() => setIsMobileMenuOpen(false)} className={className} aria-current={isActive ? "page" : undefined}>
-                          {item.label}
-                          <ArrowRightIcon size={20} className="text-gray-600" />
-                        </Link>
-                      ) : (
-                        <a href={resolveHref(item.href)} onClick={(e) => handleLinkClick(e, item.href)} className={className}>
-                          {item.label}
-                          <ArrowRightIcon size={20} className="text-gray-600" />
-                        </a>
-                      )}
-                    </motion.li>
-                  );
-                })}
-              </ul>
+      {/* Menu na telefonie: zawsze w DOM, otwierane samym CSS (opacity + przesunięcie) — reaguje od razu i płynnie znika. */}
+      <div
+        className={`fixed inset-0 z-40 bg-background lg:hidden transition-[opacity,visibility] duration-200 ease-out motion-reduce:transition-none ${
+          isMobileMenuOpen ? "visible opacity-100" : "pointer-events-none invisible opacity-0"
+        }`}
+        aria-hidden={!isMobileMenuOpen}
+      >
+        <div
+          className={`container-site flex h-full flex-col pb-8 pt-20 transition-transform duration-200 ease-out motion-reduce:transition-none ${
+            isMobileMenuOpen ? "translate-y-0" : "-translate-y-2"
+          }`}
+        >
+          <ul className="flex flex-col">
+            {items.map((item) => {
+              const isPageLink = item.href.startsWith("/");
+              const isActive = activeSection === item.key || (item.key === "contact-page" && activeSection === "#contact");
+              const className = `flex items-center justify-between border-b border-white/[0.07] py-4 font-display text-2xl font-medium transition-colors ${
+                isActive ? "text-primary" : "text-white active:text-primary"
+              }`;
+              return (
+                <li key={item.href}>
+                  {isPageLink ? (
+                    <Link href={item.href} onClick={() => setIsMobileMenuOpen(false)} className={className} aria-current={isActive ? "page" : undefined} tabIndex={isMobileMenuOpen ? 0 : -1}>
+                      {item.label}
+                      <ArrowRightIcon size={20} className="text-gray-600" />
+                    </Link>
+                  ) : (
+                    <a href={resolveHref(item.href)} onClick={(e) => handleLinkClick(e, item.href)} className={className} tabIndex={isMobileMenuOpen ? 0 : -1}>
+                      {item.label}
+                      <ArrowRightIcon size={20} className="text-gray-600" />
+                    </a>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
 
-              <div className="mt-auto flex flex-col gap-3">
-                <Link href={contactHref} onClick={() => setIsMobileMenuOpen(false)} className="btn-primary w-full">
-                  {ctaLabel}
-                  <ArrowRightIcon size={18} />
-                </Link>
-                <div className="flex items-center justify-between text-sm text-gray-400">
-                  <a href="tel:+48516598792" className="hover:text-white">
-                    +48 516 598 792
-                  </a>
-                  <Link
-                    href={getAlternateLangPath(pathname || "/")}
-                    hrefLang={isEnglish ? "pl" : "en"}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="rounded-lg border border-white/10 px-3 py-1.5 font-semibold text-gray-300 hover:text-white"
-                    aria-label={isEnglish ? "Przełącz na język polski" : "Switch to English"}
-                  >
-                    {isEnglish ? "Polski" : "English"}
-                  </Link>
-                </div>
-              </div>
+          <div className="mt-auto flex flex-col gap-3">
+            <Link href={contactHref} onClick={() => setIsMobileMenuOpen(false)} className="btn-primary w-full" tabIndex={isMobileMenuOpen ? 0 : -1}>
+              {ctaLabel}
+              <ArrowRightIcon size={18} />
+            </Link>
+            <div className="flex items-center justify-between text-sm text-gray-400">
+              <a href="tel:+48516598792" className="hover:text-white" tabIndex={isMobileMenuOpen ? 0 : -1}>
+                +48 516 598 792
+              </a>
+              <Link
+                href={getAlternateLangPath(pathname || "/")}
+                hrefLang={isEnglish ? "pl" : "en"}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="rounded-lg border border-white/10 px-3 py-1.5 font-semibold text-gray-300 hover:text-white"
+                aria-label={isEnglish ? "Przełącz na język polski" : "Switch to English"}
+                tabIndex={isMobileMenuOpen ? 0 : -1}
+              >
+                {isEnglish ? "Polski" : "English"}
+              </Link>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

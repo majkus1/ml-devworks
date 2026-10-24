@@ -29,6 +29,11 @@ interface Project {
     pl: string;
     en: string;
   };
+  /** 3–4 krótkie punkty „co zrobiłem” w oknie szczegółów. */
+  highlights: {
+    pl: string[];
+    en: string[];
+  };
   technologies: TechIcon[];
   images?: string[];
   inDevelopment: boolean;
@@ -38,73 +43,53 @@ interface Project {
   };
 }
 
-function truncateDescription(text: string, maxLength = 120) {
-  if (text.length <= maxLength) return text;
-  const trimmed = text.slice(0, maxLength).trimEnd();
-  const lastSpace = trimmed.lastIndexOf(" ");
-  return `${trimmed.slice(0, lastSpace > 80 ? lastSpace : trimmed.length)}...`;
-}
-
 const projects: Project[] = [
   {
     id: "planopia",
-    name: {
-      pl: "Planopia",
-      en: "Planopia",
-    },
+    name: { pl: "Planopia", en: "Planopia" },
     url: "https://planopia.pl",
     shortDescription: {
-      pl: "Kompleksowy system SaaS do zarządzania czasem pracy i urlopami dla przedsiębiorstw. Śledzenie czasu, zarządzanie urlopami, czat zespołowy i działowy, tablica zadań, grafik pracy oraz kontrola dostępu oparta na rolach z dużą swobodą konfiguracji.",
-      en: "Comprehensive SaaS solution for enterprise time tracking, leave management, and team coordination. Team and department chat, task board, work schedule management, role-based access control with high configuration flexibility.",
+      pl: "Aplikacja SaaS do ewidencji czasu pracy, urlopów i grafików — używana przez firmy na co dzień.",
+      en: "A SaaS app for time tracking, leave, and schedules — used by companies every day.",
     },
     longDescription: {
-      pl: "Kompleksowy system SaaS do zarządzania czasem pracy i urlopami dla przedsiębiorstw. Śledzenie czasu, zarządzanie urlopami, czat zespołowy i działowy, tablica zadań, grafik pracy oraz kontrola dostępu oparta na rolach z dużą swobodą konfiguracji. System składa się z zoptymalizowanych pod SEO stron marketingowych z blogiem oraz aplikacji biznesowej do śledzenia czasu pracy i zarządzania urlopami. Funkcje obejmują codzienne logowanie czasu z nadgodzinami, widok kalendarza miesięcznego, eksport PDF wniosków urlopowych, generowanie ewidencji czasu pracy do pliku Excela, system wniosków urlopowych z zatwierdzaniem i powiadomieniami oraz planowanie urlopów w kalendarzu zespołu. Podział na role (pracownik, przełożony, admin, HR) z dużą swobodą konfiguracji i prostym interfejsem zapewnia elastyczne zarządzanie dostępem i uprawnieniami. Pełna responsywność i wsparcie dla wszystkich urządzeń.",
-      en: "Comprehensive SaaS solution for enterprise time tracking, leave management, and team coordination. Team and department chat, task board, work schedule management, role-based access control with high configuration flexibility. The system consists of SEO-optimized marketing pages with blog and a business application for time tracking and leave management. Features include daily time logging with overtime, monthly calendar view, PDF export for leave requests, Excel export for time records, leave request system with approvals and notifications, and team leave planning calendar. Role-based division (employee, supervisor, admin, HR) with high configuration flexibility and simple interface ensures flexible access and permission management. Fully responsive with support for all devices.",
+      pl: "Zastępuje arkusze z godzinami i papierowe wnioski urlopowe. Pracownicy logują czas i składają wnioski z telefonu, a przełożony zatwierdza wszystko w jednym miejscu.",
+      en: "It replaces timesheets and paper leave requests. Employees log time and request leave from their phone, and managers approve everything in one place.",
     },
-    technologies: [
-      { name: "React" },
-      { name: "Next.js" },
-      { name: "Node.js" },
-      { name: "MongoDB" },
-      { name: "JavaScript" },
-    ],
+    highlights: {
+      pl: ["Ewidencja czasu pracy z eksportem do Excela i PDF", "Wnioski urlopowe z akceptacją i powiadomieniami", "Grafik, tablica zadań i asystent AI", "Role: pracownik, przełożony, HR, administrator"],
+      en: ["Time tracking with Excel and PDF export", "Leave requests with approvals and notifications", "Schedule, task board, and AI assistant", "Roles: employee, manager, HR, admin"],
+    },
+    technologies: [{ name: "Next.js" }, { name: "React" }, { name: "Node.js" }, { name: "MongoDB" }, { name: "OpenAI" }],
     images: [
       "/realizacje/planopia-home-desktop.webp",
-      "/planopia-app-desktop.webp",
-      "/realizacje/planopia-features-desktop.webp",
-      "/realizacje/planopia-pricing-desktop.webp",
+      "/realizacje/planopia-app-dashboard.webp",
+      "/realizacje/planopia-app-schedule.webp",
+      "/realizacje/planopia-app-dashboard-stats.webp",
+      "/realizacje/planopia-app-leave-approve.webp",
+      "/realizacje/planopia-app-board.webp",
       "/realizacje/planopia-home-mobile.webp",
-      "/planopia-app-mobile.webp",
     ],
     inDevelopment: false,
-    projectType: {
-      pl: "Aplikacja internetowa",
-      en: "Web Application",
-    },
+    projectType: { pl: "Aplikacja SaaS", en: "SaaS app" },
   },
   {
     id: "agmar-paliwa",
-    name: {
-      pl: "AGMAR Paliwa",
-      en: "AGMAR Paliwa",
-    },
+    name: { pl: "AGMAR Paliwa", en: "AGMAR Paliwa" },
     url: "https://agmar-paliwa.pl",
     shortDescription: {
-      pl: "Strona internetowa dla firmy dostarczającej paliwo. Next.js 15 z panelem administracyjnym do zarządzania cenami. Responsywny design, formularz kontaktowy i wyświetlanie cen w czasie rzeczywistym.",
-      en: "Website for a fuel delivery company. Built with Next.js 15, includes an admin dashboard for managing fuel prices. Responsive design, contact form, and real-time price display.",
+      pl: "Strona dostawcy paliwa z panelem, w którym właściciel sam zmienia cenę dnia.",
+      en: "A fuel supplier's website with a panel where the owner updates the daily price himself.",
     },
     longDescription: {
-      pl: "Profesjonalna strona internetowa dla firmy dostarczającej paliwo. Aplikacja zbudowana w Next.js 15 oferuje panel administracyjny do zarządzania cenami paliwa oraz wyświetlanie aktualnych cen w czasie rzeczywistym na stronie głównej. Pełna responsywność, formularz kontaktowy z wysyłką e-mail, zabezpieczona autentykacja oraz walidacja i ochrona danych. Strona dostosowana do potrzeb firm z branży paliwowej.",
-      en: "Professional website for a fuel delivery company. The application built with Next.js 15 features an admin dashboard for fuel price management and real-time price display on the main page. Fully responsive, contact form with email sending, secured authentication, and input validation with data protection. Tailored to the needs of companies in the fuel industry.",
+      pl: "Dla klientów najważniejsza jest aktualna cena oleju napędowego. Właściciel zmienia ją w prostym panelu, a strona od razu pokazuje ją na górze strony głównej.",
+      en: "For customers the key information is the current diesel price. The owner changes it in a simple panel and the website shows it at the top of the homepage right away.",
     },
-    technologies: [
-      { name: "Next.js" },
-      { name: "React" },
-      { name: "MongoDB" },
-      { name: "Node.js" },
-      { name: "SCSS" },
-      { name: "JWT" },
-    ],
+    highlights: {
+      pl: ["Panel administracyjny do zmiany cen", "Cena dnia widoczna od razu na stronie", "Formularz kontaktowy z wysyłką e-mail", "Szybka strona, wygodna na telefonie"],
+      en: ["Admin panel for price updates", "Daily price shown instantly on the site", "Contact form with email delivery", "Fast, mobile-friendly website"],
+    },
+    technologies: [{ name: "Next.js" }, { name: "React" }, { name: "Node.js" }, { name: "MongoDB" }, { name: "JWT" }],
     images: [
       "/realizacje/agmar-home-desktop.webp",
       "/realizacje/agmar-firma-desktop.webp",
@@ -112,31 +97,25 @@ const projects: Project[] = [
       "/realizacje/agmar-home-mobile.webp",
     ],
     inDevelopment: false,
-    projectType: {
-      pl: "Strona internetowa",
-      en: "Website",
-    },
+    projectType: { pl: "Strona z panelem", en: "Website with a panel" },
   },
   {
     id: "sweetsteviam",
-    name: {
-      pl: "Sweet Steviam",
-      en: "Sweet Steviam",
-    },
+    name: { pl: "Sweet Steviam", en: "Sweet Steviam" },
     url: "https://sweetsteviam.com",
     shortDescription: {
-      pl: "Nowoczesna, zoptymalizowana pod SEO strona wizytówkowa dla hurtowni naturalnych słodzików działającej w Polsce i UE. Wielojęzyczna, z zaawansowaną ochroną antyspamową i optymalizacją wydajności.",
-      en: "Modern, SEO-optimized business card website for a natural sweeteners wholesale company operating in Poland and the EU. Multilingual, with advanced anti-spam protection and performance optimization.",
+      pl: "Wielojęzyczna strona B2B hurtowni słodzików, która zbiera zapytania od producentów żywności z UE.",
+      en: "A multilingual B2B website for a sweetener wholesaler that collects enquiries from EU food producers.",
     },
     longDescription: {
-      pl: "Nowoczesna, zoptymalizowana pod SEO strona wizytówkowa dla hurtowni naturalnych słodzików działającej w Polsce i UE. Wielojęzyczna, z zaawansowaną ochroną antyspamową i optymalizacją wydajności. Wielojęzyczna strona prezentuje hurtową ofertę naturalnych słodzików, w tym Stevia Rebaudiana Bertoni, Erythritol, Xylitol, Sucralose, Sorbitol i inne alternatywy cukru. Strona zawiera zoptymalizowany formularz kontaktowy z ochroną antyspamową oraz pełną responsywność dla wszystkich urządzeń.",
-      en: "Modern, SEO-optimized business card website for a natural sweeteners wholesale company operating in Poland and the EU. Multilingual, with advanced anti-spam protection and performance optimization. Multilingual website showcases wholesale natural sweeteners including Stevia Rebaudiana Bertoni, Erythritol, Xylitol, Sucralose, Sorbitol, and other sugar alternatives. The site includes an optimized contact form with anti-spam protection and full responsiveness for all devices.",
+      pl: "Hurtownia sprzedaje stewię, erytrytol i ksylitol firmom z Polski i UE. Strona pokazuje katalog z danymi technicznymi i prowadzi prosto do zapytania ofertowego.",
+      en: "The wholesaler sells stevia, erythritol, and xylitol to companies in Poland and the EU. The site presents a catalogue with technical data and leads straight to a quote request.",
     },
-    technologies: [
-      { name: "HTML" },
-      { name: "CSS" },
-      { name: "PHP" },
-    ],
+    highlights: {
+      pl: ["Wersje językowe PL i EN", "Katalog produktów z danymi technicznymi", "Formularz zapytań z ochroną przed spamem", "Wysoki wynik w PageSpeed Insights"],
+      en: ["Polish and English versions", "Product catalogue with technical data", "Enquiry form with spam protection", "High PageSpeed Insights score"],
+    },
+    technologies: [{ name: "HTML" }, { name: "CSS" }, { name: "PHP" }],
     images: [
       "/realizacje/sweetsteviam-home-desktop.webp",
       "/realizacje/sweetsteviam-products-desktop.webp",
@@ -144,47 +123,32 @@ const projects: Project[] = [
       "/sweetsteviam-page-speed.webp",
     ],
     inDevelopment: false,
-    projectType: {
-      pl: "Strona internetowa",
-      en: "Website",
-    },
+    projectType: { pl: "Strona B2B", en: "B2B website" },
   },
   {
     id: "czatsportowy",
-    name: {
-      pl: "Czat Sportowy",
-      en: "Sports Chat",
-    },
+    name: { pl: "Czat Sportowy", en: "Sports Chat" },
     url: "https://czatsportowy.pl",
     shortDescription: {
-      pl: "Platforma czatu sportowego z analizą meczów wspieraną przez AI. Czat na żywo, przewidywania AI, raport AI analizujący najbliższe mecze oraz statystyki piłkarskie w czasie rzeczywistym.",
-      en: "Live sports chat platform with AI-powered match analysis. Real-time chat, AI predictions, AI report analyzing upcoming matches, and live football statistics.",
+      pl: "Platforma z analizami meczów od AI, asystentem, który odpowiada na pytania, i czatem na żywo.",
+      en: "A platform with AI match analysis, an assistant that answers questions, and live chat.",
     },
     longDescription: {
-      pl: "Platforma czatu sportowego z analizą meczów wspieraną przez AI. Czat na żywo, przewidywania AI, raport AI analizujący najbliższe mecze oraz statystyki piłkarskie w czasie rzeczywistym. Oferuje czat na żywo podczas meczów i przed meczami, prywatną komunikację między użytkownikami oraz wielojęzyczne wsparcie (PL/EN). Integracja z AI zapewnia szczegółową analizę meczów i przewidywania. System oferuje raport AI, który analizuje najbliższe mecze i na podstawie statystyk drużyn generuje szczegółową analizę najbliższych 15 meczów. Aplikacja zawiera interaktywne widgety ze statystykami meczów, wyszukiwanie meczów oraz dynamiczny wybór daty.",
-      en: "Live sports chat platform with AI-powered match analysis. Real-time chat, AI predictions, AI report analyzing upcoming matches, and live football statistics. Offers live chat during and before matches, private user-to-user communication, and multi-language support (PL/EN). AI integration provides detailed match analysis and predictions. The system features an AI report that analyzes upcoming matches and generates detailed analysis of the next 15 matches based on team statistics. The app includes interactive widgets with match statistics, match search, and dynamic date selection.",
+      pl: "Model liczy szanse na podstawie statystyk tysięcy meczów, a AI tłumaczy wynik prostym językiem. Użytkownicy rozmawiają na czacie w czasie rzeczywistym i dostają poranny raport.",
+      en: "A model calculates probabilities from thousands of matches and AI explains the result in plain language. Users chat in real time and receive a morning report.",
     },
-    technologies: [
-      { name: "Next.js" },
-      { name: "React" },
-      { name: "Node.js" },
-      { name: "MongoDB" },
-      { name: "Redis" },
-      { name: "Socket.IO" },
-      { name: "Express" },
-      { name: "Tailwind CSS" },
-      { name: "OpenAI" },
-    ],
+    highlights: {
+      pl: ["Analizy i asystent oparte na AI", "Czat na żywo w czasie rzeczywistym", "Poranny raport AI na e-mail", "Konta użytkowników, plany i wersje PL/EN"],
+      en: ["AI-powered analysis and assistant", "Real-time live chat", "Morning AI report by email", "User accounts, plans, and PL/EN versions"],
+    },
+    technologies: [{ name: "Next.js" }, { name: "Node.js" }, { name: "MongoDB" }, { name: "Redis" }, { name: "Socket.IO" }, { name: "OpenAI" }],
     images: [
       "/realizacje/czatsportowy-home-desktop.webp",
       "/realizacje/czatsportowy-features-desktop.webp",
       "/realizacje/czatsportowy-home-mobile.webp",
     ],
     inDevelopment: true,
-    projectType: {
-      pl: "Aplikacja internetowa",
-      en: "Web Application",
-    },
+    projectType: { pl: "Aplikacja z AI", en: "AI app" },
   },
 ];
 
@@ -448,30 +412,27 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
                 onClick={(e) => e.stopPropagation()}
               >
               {/* Modal Header */}
-              <div className="p-6 border-b border-white/[0.08] flex items-start justify-between">
-                <div className="flex-1">
-                  {/* Badges - nad tytułem */}
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    {/* Project Type Badge */}
-                    <span className="px-3 py-1 text-xs font-semibold rounded-full bg-primary/20 text-primary border border-primary/30">
+              <div className="flex items-start justify-between gap-4 border-b border-white/[0.08] p-5 md:p-6">
+                <div className="min-w-0 flex-1">
+                  <div className="mb-2 flex flex-wrap gap-2">
+                    <span className="rounded-full border border-primary/30 bg-primary/10 px-2.5 py-0.5 text-xs font-semibold text-primary">
                       {selectedProject.projectType[lang]}
                     </span>
-                    {/* Development Status Badge */}
                     {selectedProject.inDevelopment && (
-                      <span className="px-3 py-1 text-xs font-semibold rounded-full bg-primary/20 text-primary border border-primary/30">
-                        {lang === "pl" ? "W rozwoju" : "In Development"}
+                      <span className="rounded-full border border-white/15 px-2.5 py-0.5 text-xs font-semibold text-gray-300">
+                        {lang === "pl" ? "W rozwoju" : "In development"}
                       </span>
                     )}
                   </div>
-                  <h3 className="text-3xl font-semibold text-white mb-2">{selectedProject.name[lang]}</h3>
+                  <h3 className="font-display text-2xl font-semibold text-white md:text-3xl">{selectedProject.name[lang]}</h3>
                   <a
                     href={selectedProject.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary hover:text-primary-light transition-colors text-sm font-medium inline-flex items-center gap-2"
+                    className="mt-1 inline-flex items-center gap-1.5 text-sm font-medium text-primary transition-colors hover:text-primary-light"
                   >
-                    {selectedProject.url}
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    {selectedProject.url.replace("https://", "")}
+                    <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </a>
@@ -488,61 +449,55 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
               </div>
 
               {/* Modal Body */}
-              <div className="p-6 overflow-y-auto flex-1">
-                {/* Long Description */}
-                <p className="text-gray-200 mb-6 leading-relaxed">
-                  {selectedProject.longDescription[lang]}
-                </p>
-
-                {/* Project Images */}
+              <div className="flex-1 overflow-y-auto p-5 md:p-6">
+                {/* Zrzuty: najpierw obraz, potem krótki tekst */}
                 {selectedProject.images && selectedProject.images.length > 0 && (
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-4">
-                      {lang === "pl" ? "Zrzuty ekranu" : "Screenshots"}
-                    </h4>
-                    <div className="flex flex-wrap gap-3">
-                      {selectedProject.images.map((image, index) => (
-                        <div
-                          key={index}
-                          className="relative rounded-lg overflow-hidden border border-primary/20 hover:border-primary/40 transition-colors cursor-pointer"
+                  <div className="-mx-5 mb-6 flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-2 md:-mx-6 md:px-6">
+                    {selectedProject.images.map((image, index) => {
+                      const isMobileShot = image.includes("-mobile");
+                      return (
+                        <button
+                          type="button"
+                          key={image}
                           onClick={() => openImageModal(image)}
+                          className={`relative h-44 shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 bg-background-lighter transition-colors hover:border-primary/50 md:h-52 ${
+                            isMobileShot ? "aspect-[9/16]" : "aspect-[16/10]"
+                          }`}
+                          aria-label={`${selectedProject.name[lang]} - ${lang === "pl" ? "powiększ zrzut ekranu" : "enlarge screenshot"} ${index + 1}`}
                         >
-                <Image
-                  src={image}
-                  alt={`${selectedProject.name[lang]} - ${lang === "pl" ? "Zrzut ekranu" : "Screenshot"} ${index + 1}`}
-                  width={128}
-                  height={128}
-                  className="w-24 h-24 md:w-32 md:h-32 object-cover"
-                />
-                        </div>
-                      ))}
-                    </div>
+                          <Image
+                            src={image}
+                            alt={`${selectedProject.name[lang]} - ${lang === "pl" ? "zrzut ekranu" : "screenshot"} ${index + 1}`}
+                            fill
+                            sizes={isMobileShot ? "150px" : "360px"}
+                            loading="eager"
+                            className="object-cover object-top"
+                          />
+                        </button>
+                      );
+                    })}
                   </div>
                 )}
 
-                {/* Technologies */}
-                <div className="mt-6">
-                  <h4 className="text-lg font-semibold text-white mb-4">
-                    {lang === "pl" ? "Wykorzystane technologie" : "Technologies Used"}
-                  </h4>
-                  <div className="flex flex-wrap gap-3">
-                    {selectedProject.technologies.map((tech) => (
-                      <div
-                        key={tech.name}
-                        className="flex items-center gap-2 px-3 py-2 bg-background-lighter rounded-lg border border-primary/10 hover:border-primary/30 transition-colors"
-                        title={tech.name}
-                      >
-                        {/* TODO: Dodaj ikonę technologii - ustaw src na ścieżkę do obrazka */}
-                        {/* Przykład: <img src="/technologies/nextjs.svg" alt={tech.name} className="w-5 h-5" /> */}
-                        {/* <img 
-                          src="/technologies/nextjs.svg" 
-                          alt={tech.name} 
-                          className="w-5 h-5"
-                        /> */}
-                        <span className="text-sm text-gray-300">{tech.name}</span>
-                      </div>
-                    ))}
-                  </div>
+                <p className="text-[0.98rem] leading-relaxed text-gray-300">{selectedProject.longDescription[lang]}</p>
+
+                <ul className="mt-5 grid gap-2.5 sm:grid-cols-2">
+                  {selectedProject.highlights[lang].map((item) => (
+                    <li key={item} className="flex items-start gap-2.5 text-sm text-gray-200">
+                      <svg className="mt-0.5 shrink-0 text-primary" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <path d="M20 6 9 17l-5-5" />
+                      </svg>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-6 flex flex-wrap gap-2 border-t border-white/[0.08] pt-5">
+                  {selectedProject.technologies.map((tech) => (
+                    <span key={tech.name} className="rounded-md border border-white/[0.08] bg-white/[0.03] px-2.5 py-1 text-xs text-gray-400">
+                      {tech.name}
+                    </span>
+                  ))}
                 </div>
               </div>
               </motion.div>
@@ -659,7 +614,7 @@ function ProjectCard({
           </a>
         </div>
 
-        <p className="mt-3 text-[0.95rem] leading-relaxed text-gray-400">{truncateDescription(project.shortDescription[lang], 170)}</p>
+        <p className="mt-3 text-[0.95rem] leading-relaxed text-gray-400">{project.shortDescription[lang]}</p>
 
         <div className="mt-5 flex flex-wrap gap-2">
           {project.technologies.slice(0, 5).map((tech) => (

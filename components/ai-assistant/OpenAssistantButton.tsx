@@ -1,6 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
+import { holdNavDuringScroll } from "@/lib/nav-scroll";
 import { useAiAssistant } from "./AiAssistantProvider";
 
 interface OpenAssistantButtonProps {
@@ -29,6 +30,7 @@ export default function OpenAssistantButton({ children, className = "", fallback
   const handleClick = () => {
     const inlineSection = document.getElementById("ai-advisor");
     if (inlineSection) {
+      holdNavDuringScroll();
       inlineSection.scrollIntoView({ behavior: "smooth", block: "start" });
       window.setTimeout(() => {
         document.getElementById("ai-input-inline")?.focus({ preventScroll: true });

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
+import { holdNavDuringScroll } from "@/lib/nav-scroll";
 
 export default function HashNavigationHandler() {
   const pathname = usePathname();
@@ -68,6 +69,7 @@ export default function HashNavigationHandler() {
               html.style.scrollBehavior = originalHtmlScrollBehavior || "";
               body.style.scrollBehavior = originalBodyScrollBehavior || "";
 
+              holdNavDuringScroll();
               window.scrollTo({
                 top: Math.max(0, offsetPosition),
                 behavior: "smooth",
@@ -105,6 +107,7 @@ export default function HashNavigationHandler() {
                   html.style.scrollBehavior = originalHtmlScrollBehavior || "";
                   body.style.scrollBehavior = originalBodyScrollBehavior || "";
 
+                  holdNavDuringScroll();
                   window.scrollTo({
                     top: Math.max(0, offsetPosition),
                     behavior: "smooth",
@@ -196,6 +199,7 @@ export default function HashNavigationHandler() {
       }
       // Handle navigation with pending hash
       setTimeout(() => {
+        holdNavDuringScroll();
         window.location.hash = pendingHash;
         handleHashNavigation();
       }, 0);

@@ -10,7 +10,6 @@ export default function Hero({ lang = "pl" }: HeroProps) {
   const isPl = lang === "pl";
   const t = isPl
     ? {
-        eyebrow: "Automatyzacje AI i aplikacje dla firm · Kraków",
         titleStart: "Automatyzacje AI dla firm, które ",
         titleHighlight: "oddają zespołowi godziny pracy",
         lead: "Agenci AI, aplikacje i integracje dla małych i średnich firm. Opisujesz proces, a w 2–5 dni pokazuję działający prototyp — za darmo, zanim cokolwiek zapłacisz.",
@@ -21,7 +20,6 @@ export default function Hero({ lang = "pl" }: HeroProps) {
         person: "Michał Lipka · programista i analityk biznesowy",
       }
     : {
-        eyebrow: "AI automation and business apps · Krakow, Poland",
         titleStart: "AI automation for companies that ",
         titleHighlight: "gives your team hours back",
         lead: "AI agents, business apps, and integrations for small and mid-sized companies. Describe the process and within 2–5 days I'll show a working prototype — free, before you pay anything.",
@@ -42,10 +40,6 @@ export default function Hero({ lang = "pl" }: HeroProps) {
 
       <div className="container-site relative grid items-center gap-14 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-16">
         <div>
-          <p className="eyebrow mb-7">
-            <span className="eyebrow-dot" aria-hidden="true" />
-            {t.eyebrow}
-          </p>
           <h1 className="font-display text-[2.5rem] font-semibold leading-[1.04] tracking-tight text-white text-balance sm:text-6xl lg:text-[3.7rem] xl:text-[4rem]">
             {t.titleStart}
             <span className="text-gradient">{t.titleHighlight}</span>
