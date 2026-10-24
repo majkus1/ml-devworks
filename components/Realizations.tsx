@@ -3,7 +3,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
 // Ikony technologii zostały usunięte - użyj <img> tagów w miejscach oznaczonych TODO
 
 interface RealizationsProps {
@@ -70,10 +69,12 @@ const projects: Project[] = [
       { name: "JavaScript" },
     ],
     images: [
-      "/planopia-dekstop.webp",
+      "/realizacje/planopia-home-desktop.webp",
       "/planopia-app-desktop.webp",
+      "/realizacje/planopia-features-desktop.webp",
+      "/realizacje/planopia-pricing-desktop.webp",
+      "/realizacje/planopia-home-mobile.webp",
       "/planopia-app-mobile.webp",
-      "/planopia-app-mobile2.webp",
     ],
     inDevelopment: false,
     projectType: {
@@ -105,8 +106,10 @@ const projects: Project[] = [
       { name: "JWT" },
     ],
     images: [
-      "/agmar.webp",
-      "/agmar2.webp",
+      "/realizacje/agmar-home-desktop.webp",
+      "/realizacje/agmar-firma-desktop.webp",
+      "/realizacje/agmar-oferta-desktop.webp",
+      "/realizacje/agmar-home-mobile.webp",
     ],
     inDevelopment: false,
     projectType: {
@@ -135,9 +138,9 @@ const projects: Project[] = [
       { name: "PHP" },
     ],
     images: [
-      "/sweetsteviam-desktop-main.webp",
-      "/sweetsteviam-desktop-products.webp",
-      "/sweetsteviam-mobile.webp",
+      "/realizacje/sweetsteviam-home-desktop.webp",
+      "/realizacje/sweetsteviam-products-desktop.webp",
+      "/realizacje/sweetsteviam-home-mobile.webp",
       "/sweetsteviam-page-speed.webp",
     ],
     inDevelopment: false,
@@ -173,10 +176,9 @@ const projects: Project[] = [
       { name: "OpenAI" },
     ],
     images: [
-      "/czatsportowy.webp",
-      "/czatsportowy1.webp",
-      "/czatsportowy-mobile.webp",
-      "/czatsportowy-mobile2.webp",
+      "/realizacje/czatsportowy-home-desktop.webp",
+      "/realizacje/czatsportowy-features-desktop.webp",
+      "/realizacje/czatsportowy-home-mobile.webp",
     ],
     inDevelopment: true,
     projectType: {
@@ -404,26 +406,6 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
             </p>
           </div>
 
-          {lang === "pl" && (
-            <Link
-              href="/blog/panel-zapisow-dla-szkoly-jezykowej-studium-przypadku"
-              className="group mb-6 flex flex-col gap-5 rounded-2xl border border-primary/30 bg-gradient-to-r from-primary/[0.10] via-white/[0.02] to-accent/[0.06] p-6 transition-colors hover:border-primary/60 md:flex-row md:items-center md:justify-between md:p-7"
-            >
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary">Studium przypadku</p>
-                <p className="mt-2 font-display text-xl font-semibold text-white md:text-2xl">
-                  Panel zapisów dla szkoły językowej: zgłoszenia, grupy i przypomnienia bez telefonów
-                </p>
-                <p className="mt-2 text-sm text-gray-400">Jak wyglądał proces przed wdrożeniem, co zautomatyzowałem i co zmieniło się w pracy sekretariatu.</p>
-              </div>
-              <span className="btn-secondary shrink-0 group-hover:border-primary/50">
-                Czytaj case study
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M5 12h14M13 6l6 6-6 6" />
-                </svg>
-              </span>
-            </Link>
-          )}
 
           <ul className="m-0 grid list-none grid-cols-1 gap-6 p-0 md:grid-cols-2" role="list">
             {projects.map((project) => (

@@ -51,12 +51,15 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
     const updateActiveSection = () => {
       const offset = 120;
       let current = "";
+      let closest = -Infinity;
 
+      // Aktywna jest sekcja, której początek jest najbliżej nad linią menu (niezależnie od kolejności na liście).
       for (const id of SECTION_IDS) {
         const el = document.getElementById(id);
         if (!el) continue;
-        const rect = el.getBoundingClientRect();
-        if (rect.top <= offset) {
+        const top = el.getBoundingClientRect().top;
+        if (top <= offset && top > closest) {
+          closest = top;
           current = `#${id}`;
         }
       }
@@ -129,16 +132,16 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
   const navItems = {
     pl: [
       { href: "/uslugi", label: "Usługi", key: "services" },
-      { href: "#realizations", label: "Realizacje", key: "#realizations" },
       { href: "#pricing", label: "Ceny", key: "#pricing" },
+      { href: "#realizations", label: "Realizacje", key: "#realizations" },
       { href: "#client-reviews", label: "Opinie", key: "#client-reviews" },
       { href: "/blog", label: "Blog", key: "blog" },
       { href: "/kontakt", label: "Kontakt", key: "contact-page" },
     ],
     en: [
       { href: "/en/services", label: "Services", key: "services" },
-      { href: "#realizations", label: "Work", key: "#realizations" },
       { href: "#pricing", label: "Pricing", key: "#pricing" },
+      { href: "#realizations", label: "Work", key: "#realizations" },
       { href: "#client-reviews", label: "Reviews", key: "#client-reviews" },
       { href: "/en/blog", label: "Blog", key: "blog" },
       { href: "/en/contact", label: "Contact", key: "contact-page" },
@@ -186,7 +189,7 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
             <div className="hidden items-center gap-1 lg:flex">
               {items.map((item) => {
                 const isPageLink = item.href.startsWith("/");
-                const isActive = activeSection === item.key;
+                const isActive = activeSection === item.key || (item.key === "contact-page" && activeSection === "#contact");
                 const className = `relative rounded-lg px-3.5 py-2 text-[0.92rem] font-medium transition-colors ${
                   isActive ? "text-white" : "text-gray-400 hover:text-white"
                 }`;
@@ -262,7 +265,7 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
               <ul className="flex flex-col">
                 {items.map((item, index) => {
                   const isPageLink = item.href.startsWith("/");
-                  const isActive = activeSection === item.key;
+                  const isActive = activeSection === item.key || (item.key === "contact-page" && activeSection === "#contact");
                   const className = `flex items-center justify-between border-b border-white/[0.07] py-4 font-display text-2xl font-medium transition-colors ${
                     isActive ? "text-primary" : "text-white hover:text-primary"
                   }`;
