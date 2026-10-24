@@ -64,7 +64,7 @@ export default function CoMoznaZautomatyzowacContent({ lang }: Props) {
                 ["Painful", "It delays sales, annoys customers, or blocks one person without whom the process stops."],
               ]
           ).map(([title, description]) => (
-            <article key={title} className="bg-background-lighter border border-primary/20 rounded-xl p-5">
+            <article key={title} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
               <h3 className="text-xl font-bold text-primary mb-2">{title}</h3>
               <p>{description}</p>
             </article>
@@ -94,7 +94,7 @@ export default function CoMoznaZautomatyzowacContent({ lang }: Props) {
                 ["Multi-system integration or app", "estimated after analysis", "CRM, ERP, payments, inventory, admin panel, and reports. Delivered in stages, the first stage usually 2-6 weeks."],
               ]
           ).map(([title, price, description]) => (
-            <article key={title} className="bg-background-lighter border border-primary/20 rounded-xl p-5">
+            <article key={title} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
               <h3 className="text-xl font-bold text-primary mb-2">{title}</h3>
               <p className="font-semibold text-white mb-2">{price}</p>
               <p>{description}</p>
@@ -159,7 +159,7 @@ export default function CoMoznaZautomatyzowacContent({ lang }: Props) {
         </ul>
       </section>
 
-      <section className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-6 md:p-8 border border-primary/20">
+      <section className="card-accent">
         <h2 className="text-xl font-bold text-white mb-4">
           {isPl ? "Sprawdź, które z tych 12 procesów są w Twojej firmie" : "Check which of these 12 processes exist in your company"}
         </h2>
@@ -169,7 +169,7 @@ export default function CoMoznaZautomatyzowacContent({ lang }: Props) {
             : "Describe to the AI advisor what you do and what takes the most of your time. You get 2-3 directions with an indicative budget, and you can send the conversation to me with one click - I come back within 2-5 days with a free prototype."}
         </p>
         <div className="flex flex-wrap gap-4">
-          <Link href={contactHref} className="inline-flex items-center gap-2 px-6 py-3 bg-primary font-semibold rounded-lg hover:bg-primary-dark transition-colors !text-black !no-underline">
+          <Link href={contactHref} className="btn-primary !text-[#03140b] !no-underline">
             {isPl ? "Zapytaj asystenta AI" : "Ask the AI advisor"}
             <span aria-hidden="true">→</span>
           </Link>

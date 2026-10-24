@@ -1,10 +1,11 @@
 import { Metadata } from "next";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
 import BlogCardList from "@/components/BlogCardList";
 import { blogPosts } from "@/lib/blog";
+import PageHero from "@/components/ui/PageHero";
+import CtaBand from "@/components/ui/CtaBand";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ml-devworks.com"),
@@ -82,35 +83,26 @@ export default function BlogPageEn() {
       <StructuredData lang="en" />
       <BlogBreadcrumbSchema />
       <Navbar lang="en" />
-      <main className="min-h-screen pt-20">
-        <section className="px-4 py-16 md:py-24 bg-gradient-to-b from-background to-background-lighter">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              <span className="text-primary">Blog</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Articles about web development, web applications, technologies and
-              best practices – for business and IT.
-            </p>
+      <main className="min-h-screen">
+        <PageHero
+          lang="en"
+          breadcrumbs={[{ label: "Home", href: "/en" }, { label: "Blog" }]}
+          eyebrow="Blog"
+          title={
+            <>
+              Blog about AI automation, <span className="text-gradient">apps, and websites for companies</span>
+            </>
+          }
+          lead="Practical guides for business owners: what automation costs, what can be automated, how to choose a vendor, and how to calculate the return."
+          primaryCta={null}
+          showAssistant={false}
+        />
+        <section className="pb-6" aria-label="Posts">
+          <div className="container-site">
+            <BlogCardList posts={blogPosts} lang="en" featureFirst />
           </div>
         </section>
-
-        <section className="px-4 py-16">
-          <div className="max-w-7xl mx-auto">
-            <BlogCardList posts={blogPosts} lang="en" />
-          </div>
-        </section>
-
-        <section className="px-4 pb-16">
-          <div className="max-w-7xl mx-auto text-center">
-            <Link
-              href="/en"
-              className="inline-flex items-center gap-2 text-primary hover:text-primary-light transition-colors font-medium"
-            >
-              ← Back to homepage
-            </Link>
-          </div>
-        </section>
+        <CtaBand lang="en" />
       </main>
       <Footer lang="en" />
     </>

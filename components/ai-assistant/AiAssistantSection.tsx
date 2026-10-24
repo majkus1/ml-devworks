@@ -33,56 +33,88 @@ export default function AiAssistantSection({ lang = "pl", showSteps = true }: Ai
     };
   }, [setInlineVisible]);
 
+  const benefits =
+    lang === "pl"
+      ? ["2–3 konkretne kierunki automatyzacji", "Orientacyjny budżet i czas wdrożenia", "Rozmowę wysyłasz do mnie jednym kliknięciem"]
+      : ["2–3 concrete automation directions", "Indicative budget and timeline", "Send the conversation to me in one click"];
+
+  const unavailable = (
+    <div className="card text-center">
+      <h3 className="mb-2 text-xl font-semibold text-white">{t.unavailableTitle}</h3>
+      <p className="text-gray-400">{t.unavailableText}</p>
+    </div>
+  );
+
   return (
     <section
       ref={sectionRef}
       id="ai-advisor"
-      className="relative py-24 md:py-28 px-4 scroll-mt-[100px] overflow-hidden"
+      className="section-y relative scroll-mt-24 overflow-hidden"
       aria-labelledby="ai-advisor-heading"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(0,255,136,0.08),transparent_45%)] pointer-events-none" aria-hidden="true" />
+      <div className="pointer-events-none absolute right-0 top-0 h-[30rem] w-[40rem] rounded-full bg-primary/[0.07] blur-[120px]" aria-hidden="true" />
 
-      <div className="relative max-w-7xl mx-auto">
-        <header className="mb-10 md:mb-14">
-          <p className="text-primary font-semibold mb-3 flex items-center gap-2">
-            <span className="inline-block w-2 h-2 rounded-full bg-primary animate-pulse" aria-hidden="true" />
-            {t.sectionEyebrow}
-          </p>
-          <h2 id="ai-advisor-heading" className="section-heading mb-4">
-            {t.sectionTitle}
-          </h2>
-          <p className="section-lead">{t.sectionSubtitle}</p>
-        </header>
+      <div className="container-site relative">
+        {showSteps ? (
+          <>
+            <header className="mb-10 max-w-3xl md:mb-14">
+              <p className="eyebrow mb-5">
+                <span className="eyebrow-dot animate-pulse-soft" aria-hidden="true" />
+                {t.sectionEyebrow}
+              </p>
+              <h2 id="ai-advisor-heading" className="section-heading">
+                {t.sectionTitle}
+              </h2>
+              <p className="section-lead mt-4">{t.sectionSubtitle}</p>
+            </header>
 
-        <div className={showSteps ? "grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)] items-start" : "max-w-4xl"}>
-          {showSteps && (
-          <aside className="space-y-4 lg:sticky lg:top-28">
-            <h3 className="text-lg font-bold text-white">{t.howItWorksTitle}</h3>
-            <ol className="space-y-3">
-              {t.howItWorks.map((step, index) => (
-                <li key={step.title} className="flex gap-4 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-4 hover:border-primary/50 transition-colors">
-                  <span className="shrink-0 w-9 h-9 rounded-full bg-primary text-background font-bold flex items-center justify-center" aria-hidden="true">
-                    {index + 1}
-                  </span>
-                  <div>
-                    <p className="font-semibold text-white mb-1">{step.title}</p>
-                    <p className="text-sm text-gray-400 leading-relaxed">{step.text}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </aside>
-          )}
-
-          {enabled ? (
-            <AiAssistantChat variant="inline" />
-          ) : (
-            <div className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-8 text-center">
-              <h3 className="text-xl font-bold text-white mb-2">{t.unavailableTitle}</h3>
-              <p className="text-gray-400">{t.unavailableText}</p>
+            <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)]">
+              <aside className="space-y-4 lg:sticky lg:top-28">
+                <h3 className="text-lg font-semibold text-white">{t.howItWorksTitle}</h3>
+                <ol className="space-y-3">
+                  {t.howItWorks.map((step, index) => (
+                    <li key={step.title} className="card flex gap-4 !p-5">
+                      <span className="font-display text-sm font-semibold text-primary" aria-hidden="true">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <div>
+                        <p className="mb-1 font-semibold text-white">{step.title}</p>
+                        <p className="text-sm leading-relaxed text-gray-400">{step.text}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </aside>
+              {enabled ? <AiAssistantChat variant="inline" /> : unavailable}
             </div>
-          )}
-        </div>
+          </>
+        ) : (
+          <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-14">
+            <header>
+              <p className="eyebrow mb-5">
+                <span className="eyebrow-dot animate-pulse-soft" aria-hidden="true" />
+                {t.sectionEyebrow}
+              </p>
+              <h2 id="ai-advisor-heading" className="section-heading">
+                {t.sectionTitle}
+              </h2>
+              <p className="section-lead mt-4">{t.sectionSubtitle}</p>
+              <ul className="mt-8 space-y-3">
+                {benefits.map((benefit) => (
+                  <li key={benefit} className="flex items-center gap-3 text-gray-200">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <path d="M20 6 9 17l-5-5" />
+                      </svg>
+                    </span>
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+            </header>
+            {enabled ? <AiAssistantChat variant="inline" /> : unavailable}
+          </div>
+        )}
       </div>
     </section>
   );

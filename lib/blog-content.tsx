@@ -15,8 +15,10 @@ import AutomatyzacjaObslugiZgloszenContent from "@/components/blog-posts/Automat
 import AplikacjeMobilneNaZamowienieContent from "@/components/blog-posts/AplikacjeMobilneNaZamowienieContent";
 import AgencjaAutomatyzacjiCzyProgramistaContent from "@/components/blog-posts/AgencjaAutomatyzacjiCzyProgramistaContent";
 import PanelZapisowSzkolaJezykowaContent from "@/components/blog-posts/PanelZapisowSzkolaJezykowaContent";
+import AutomatyzacjaSprzedazyKosztContent from "@/components/blog-posts/AutomatyzacjaSprzedazyKosztContent";
 
 const POST_CONTENT: Record<string, (lang: "pl" | "en") => ReactNode> = {
+  "ile-kosztuje-automatyzacja-procesu-sprzedazowego": (lang) => <AutomatyzacjaSprzedazyKosztContent lang={lang} />,
   "panel-zapisow-dla-szkoly-jezykowej-studium-przypadku": (lang) => (
     <PanelZapisowSzkolaJezykowaContent lang={lang} />
   ),

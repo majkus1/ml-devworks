@@ -55,7 +55,7 @@ export const solutions: Solution[] = [
     lastModified: "2026-09-27",
     content: {
       pl: {
-        metaTitle: "System zapisów na zajęcia dla szkół i akademii | ML DevWorks",
+        metaTitle: "System zapisów na zajęcia i szkolenia dla szkół | ML DevWorks",
         metaDescription:
           "System zapisów na zajęcia: zgłoszenia z formularza, lekcja próbna, automatyczne pytanie o decyzję i odrabianie zajęć. Bezpłatny prototyp, od 2 500 zł netto.",
         keywords: [
@@ -69,6 +69,9 @@ export const solutions: Solution[] = [
           "aplikacja dla akademii piłkarskiej",
           "system zapisów dla szkoły robotyki",
           "panel dla szkoły językowej",
+          "formularz zapisów do szkoły językowej",
+          "system do zapisów uczniów",
+          "system zapisów na szkolenia",
         ],
         breadcrumb: "System zapisów na zajęcia",
         eyebrow: "Dla szkół językowych, tańca, akademii sportowych",
@@ -163,6 +166,10 @@ export const solutions: Solution[] = [
           {
             q: "Czy działa na telefonie?",
             a: "Tak. Panel działa w przeglądarce na komputerze i telefonie, a na życzenie instaluje się jak aplikacja, z ikoną na ekranie i powiadomieniami.",
+          },
+          {
+            q: "Kto oferuje systemy zapisów na szkolenia i zajęcia?",
+            a: "Są gotowe platformy z abonamentem (np. do grafików i karnetów) oraz systemy budowane pod konkretną szkołę. Gotowa platforma wystarczy przy prostych zapisach. Gdy masz lekcje próbne, odrabianie zajęć, grupy na poziomach albo własne płatności, lepiej sprawdza się system dopasowany do Twojego procesu — taki przygotowuję, zaczynając od bezpłatnego prototypu.",
           },
         ],
         relatedHeading: "Powiązane",

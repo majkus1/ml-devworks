@@ -45,7 +45,7 @@ export default function AgenciAIObslugaKlientaContent({ lang }: Props) {
                 "You need fast responses, but also escalation to humans.",
               ]
           ).map((item) => (
-            <article key={item} className="bg-background-lighter border border-primary/20 rounded-xl p-5">
+            <article key={item} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
               <p>{item}</p>
             </article>
           ))}
@@ -75,7 +75,7 @@ export default function AgenciAIObslugaKlientaContent({ lang }: Props) {
         </p>
       </section>
 
-      <section className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-6 md:p-8 border border-primary/20">
+      <section className="card-accent">
         <h2 className="text-xl font-bold text-white mb-4">
           {isPl ? "Chcesz sprawdzić, czy agent AI ma sens u Ciebie?" : "Want to check if an AI agent makes sense for your company?"}
         </h2>
@@ -86,7 +86,7 @@ export default function AgenciAIObslugaKlientaContent({ lang }: Props) {
         </p>
         <Link
           href={isPl ? "/uslugi/automatyzacja-i-ai" : "/en/services/automation-and-ai"}
-          className="inline-flex items-center gap-2 px-6 py-3 bg-primary font-semibold rounded-lg hover:bg-primary-dark transition-colors !text-black"
+          className="btn-primary !text-[#03140b] !no-underline"
         >
           {isPl ? "Zobacz automatyzację i AI" : "View automation and AI"}
           <span aria-hidden="true">→</span>

@@ -106,7 +106,7 @@ export default function ServiceSeoSections({ serviceId, lang = "pl" }: ServiceSe
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
-          <div className="bg-background-lighter border border-primary/20 rounded-xl p-6">
+          <div className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-6">
             <h3 className="text-2xl font-bold text-primary mb-4">
               {isEnglish ? "Problems I solve" : "Problemy, które rozwiązuję"}
             </h3>
@@ -116,7 +116,7 @@ export default function ServiceSeoSections({ serviceId, lang = "pl" }: ServiceSe
               ))}
             </ul>
           </div>
-          <div className="bg-background-lighter border border-primary/20 rounded-xl p-6">
+          <div className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-6">
             <h3 className="text-2xl font-bold text-primary mb-4">
               {isEnglish ? "What you receive" : "Co dostajesz"}
             </h3>
@@ -143,7 +143,7 @@ export default function ServiceSeoSections({ serviceId, lang = "pl" }: ServiceSe
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6">
+        <div className="rounded-xl border border-primary/25 bg-primary/[0.06] p-6">
           <h2 className="text-2xl font-bold mb-3">{isEnglish ? "How I prove value" : "Jak pokazuję wartość"}</h2>
           <p className="text-gray-300 leading-relaxed">{detail.proof}</p>
         </div>
@@ -152,7 +152,7 @@ export default function ServiceSeoSections({ serviceId, lang = "pl" }: ServiceSe
           <h2 className="section-heading mb-6">{isEnglish ? "FAQ" : "Najczęstsze pytania"}</h2>
           <div className="space-y-4">
             {detail.faq.map((item) => (
-              <article key={item.q} className="bg-background-lighter border border-primary/20 rounded-xl p-6">
+              <article key={item.q} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-6">
                 <h3 className="text-xl font-bold text-primary mb-3">{item.q}</h3>
                 <p className="text-gray-300 leading-relaxed">{item.a}</p>
               </article>
@@ -167,7 +167,7 @@ export default function ServiceSeoSections({ serviceId, lang = "pl" }: ServiceSe
             </h2>
             <div className="flex flex-wrap gap-3">
               {detail.relatedPosts.map((post) => (
-                <Link key={post.href} href={post.href} className="px-4 py-3 bg-background-lighter border border-primary/20 rounded-lg text-primary hover:border-primary transition-colors">
+                <Link key={post.href} href={post.href} className="px-4 py-3 rounded-lg border border-white/[0.08] bg-white/[0.025] text-primary hover:border-primary transition-colors">
                   {post.title}
                 </Link>
               ))}

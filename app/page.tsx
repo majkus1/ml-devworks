@@ -12,10 +12,11 @@ import AiAssistantSection from "@/components/ai-assistant/AiAssistantSection";
 import TrustBar from "@/components/TrustBar";
 import AutomationExamplesSection from "@/components/AutomationExamplesSection";
 import HomeProcess from "@/components/HomeProcess";
+import PricingSection from "@/components/PricingSection";
 
 export const metadata: Metadata = {
-  title: "Aplikacje dla firm, strony i automatyzacje AI | ML DevWorks",
-  description: "Programista z Krakowa tworzy aplikacje dla firm, strony internetowe, systemy rezerwacji, integracje API/CRM i automatyzacje AI. Bezpośrednia współpraca.",
+  title: "Automatyzacje AI dla firm i aplikacje na zamówienie | ML DevWorks",
+  description: "Agenci AI, aplikacje i integracje dla małych i średnich firm. Działający prototyp w 2–5 dni za darmo, automatyzacje od 2 500 zł netto. Programista z Krakowa.",
   alternates: {
     canonical: "https://ml-devworks.com",
     languages: {
@@ -38,6 +39,7 @@ export default function HomePage() {
         <AiAssistantSection lang="pl" showSteps={false} />
         <AboutIntro />
         <Services />
+        <PricingSection lang="pl" />
         <Realizations />
         <HomeProcess lang="pl" />
         <HomeFAQ />

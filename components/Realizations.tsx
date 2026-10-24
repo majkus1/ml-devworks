@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 // Ikony technologii zostały usunięte - użyj <img> tagów w miejscach oznaczonych TODO
 
 interface RealizationsProps {
@@ -47,73 +48,37 @@ function truncateDescription(text: string, maxLength = 120) {
 
 const projects: Project[] = [
   {
-    id: "czatsportowy",
+    id: "planopia",
     name: {
-      pl: "Czat Sportowy",
-      en: "Sports Chat",
+      pl: "Planopia",
+      en: "Planopia",
     },
-    url: "https://czatsportowy.pl",
+    url: "https://planopia.pl",
     shortDescription: {
-      pl: "Platforma czatu sportowego z analizą meczów wspieraną przez AI. Czat na żywo, przewidywania AI, raport AI analizujący najbliższe mecze oraz statystyki piłkarskie w czasie rzeczywistym.",
-      en: "Live sports chat platform with AI-powered match analysis. Real-time chat, AI predictions, AI report analyzing upcoming matches, and live football statistics.",
+      pl: "Kompleksowy system SaaS do zarządzania czasem pracy i urlopami dla przedsiębiorstw. Śledzenie czasu, zarządzanie urlopami, czat zespołowy i działowy, tablica zadań, grafik pracy oraz kontrola dostępu oparta na rolach z dużą swobodą konfiguracji.",
+      en: "Comprehensive SaaS solution for enterprise time tracking, leave management, and team coordination. Team and department chat, task board, work schedule management, role-based access control with high configuration flexibility.",
     },
     longDescription: {
-      pl: "Platforma czatu sportowego z analizą meczów wspieraną przez AI. Czat na żywo, przewidywania AI, raport AI analizujący najbliższe mecze oraz statystyki piłkarskie w czasie rzeczywistym. Oferuje czat na żywo podczas meczów i przed meczami, prywatną komunikację między użytkownikami oraz wielojęzyczne wsparcie (PL/EN). Integracja z AI zapewnia szczegółową analizę meczów i przewidywania. System oferuje raport AI, który analizuje najbliższe mecze i na podstawie statystyk drużyn generuje szczegółową analizę najbliższych 15 meczów. Aplikacja zawiera interaktywne widgety ze statystykami meczów, wyszukiwanie meczów oraz dynamiczny wybór daty.",
-      en: "Live sports chat platform with AI-powered match analysis. Real-time chat, AI predictions, AI report analyzing upcoming matches, and live football statistics. Offers live chat during and before matches, private user-to-user communication, and multi-language support (PL/EN). AI integration provides detailed match analysis and predictions. The system features an AI report that analyzes upcoming matches and generates detailed analysis of the next 15 matches based on team statistics. The app includes interactive widgets with match statistics, match search, and dynamic date selection.",
+      pl: "Kompleksowy system SaaS do zarządzania czasem pracy i urlopami dla przedsiębiorstw. Śledzenie czasu, zarządzanie urlopami, czat zespołowy i działowy, tablica zadań, grafik pracy oraz kontrola dostępu oparta na rolach z dużą swobodą konfiguracji. System składa się z zoptymalizowanych pod SEO stron marketingowych z blogiem oraz aplikacji biznesowej do śledzenia czasu pracy i zarządzania urlopami. Funkcje obejmują codzienne logowanie czasu z nadgodzinami, widok kalendarza miesięcznego, eksport PDF wniosków urlopowych, generowanie ewidencji czasu pracy do pliku Excela, system wniosków urlopowych z zatwierdzaniem i powiadomieniami oraz planowanie urlopów w kalendarzu zespołu. Podział na role (pracownik, przełożony, admin, HR) z dużą swobodą konfiguracji i prostym interfejsem zapewnia elastyczne zarządzanie dostępem i uprawnieniami. Pełna responsywność i wsparcie dla wszystkich urządzeń.",
+      en: "Comprehensive SaaS solution for enterprise time tracking, leave management, and team coordination. Team and department chat, task board, work schedule management, role-based access control with high configuration flexibility. The system consists of SEO-optimized marketing pages with blog and a business application for time tracking and leave management. Features include daily time logging with overtime, monthly calendar view, PDF export for leave requests, Excel export for time records, leave request system with approvals and notifications, and team leave planning calendar. Role-based division (employee, supervisor, admin, HR) with high configuration flexibility and simple interface ensures flexible access and permission management. Fully responsive with support for all devices.",
     },
     technologies: [
-      { name: "Next.js" },
       { name: "React" },
+      { name: "Next.js" },
       { name: "Node.js" },
       { name: "MongoDB" },
-      { name: "Redis" },
-      { name: "Socket.IO" },
-      { name: "Express" },
-      { name: "Tailwind CSS" },
-      { name: "OpenAI" },
+      { name: "JavaScript" },
     ],
     images: [
-      "/czatsportowy.webp",
-      "/czatsportowy1.webp",
-      "/czatsportowy-mobile.webp",
-      "/czatsportowy-mobile2.webp",
-    ],
-    inDevelopment: true,
-    projectType: {
-      pl: "Aplikacja internetowa",
-      en: "Web Application",
-    },
-  },
-  {
-    id: "sweetsteviam",
-    name: {
-      pl: "Sweet Steviam",
-      en: "Sweet Steviam",
-    },
-    url: "https://sweetsteviam.com",
-    shortDescription: {
-      pl: "Nowoczesna, zoptymalizowana pod SEO strona wizytówkowa dla hurtowni naturalnych słodzików działającej w Polsce i UE. Wielojęzyczna, z zaawansowaną ochroną antyspamową i optymalizacją wydajności.",
-      en: "Modern, SEO-optimized business card website for a natural sweeteners wholesale company operating in Poland and the EU. Multilingual, with advanced anti-spam protection and performance optimization.",
-    },
-    longDescription: {
-      pl: "Nowoczesna, zoptymalizowana pod SEO strona wizytówkowa dla hurtowni naturalnych słodzików działającej w Polsce i UE. Wielojęzyczna, z zaawansowaną ochroną antyspamową i optymalizacją wydajności. Wielojęzyczna strona prezentuje hurtową ofertę naturalnych słodzików, w tym Stevia Rebaudiana Bertoni, Erythritol, Xylitol, Sucralose, Sorbitol i inne alternatywy cukru. Strona zawiera zoptymalizowany formularz kontaktowy z ochroną antyspamową oraz pełną responsywność dla wszystkich urządzeń.",
-      en: "Modern, SEO-optimized business card website for a natural sweeteners wholesale company operating in Poland and the EU. Multilingual, with advanced anti-spam protection and performance optimization. Multilingual website showcases wholesale natural sweeteners including Stevia Rebaudiana Bertoni, Erythritol, Xylitol, Sucralose, Sorbitol, and other sugar alternatives. The site includes an optimized contact form with anti-spam protection and full responsiveness for all devices.",
-    },
-    technologies: [
-      { name: "HTML" },
-      { name: "CSS" },
-      { name: "PHP" },
-    ],
-    images: [
-      "/sweetsteviam-desktop-main.webp",
-      "/sweetsteviam-desktop-products.webp",
-      "/sweetsteviam-mobile.webp",
-      "/sweetsteviam-page-speed.webp",
+      "/planopia-dekstop.webp",
+      "/planopia-app-desktop.webp",
+      "/planopia-app-mobile.webp",
+      "/planopia-app-mobile2.webp",
     ],
     inDevelopment: false,
     projectType: {
-      pl: "Strona internetowa",
-      en: "Website",
+      pl: "Aplikacja internetowa",
+      en: "Web Application",
     },
   },
   {
@@ -150,34 +115,70 @@ const projects: Project[] = [
     },
   },
   {
-    id: "planopia",
+    id: "sweetsteviam",
     name: {
-      pl: "Planopia",
-      en: "Planopia",
+      pl: "Sweet Steviam",
+      en: "Sweet Steviam",
     },
-    url: "https://planopia.pl",
+    url: "https://sweetsteviam.com",
     shortDescription: {
-      pl: "Kompleksowy system SaaS do zarządzania czasem pracy i urlopami dla przedsiębiorstw. Śledzenie czasu, zarządzanie urlopami, czat zespołowy i działowy, tablica zadań, grafik pracy oraz kontrola dostępu oparta na rolach z dużą swobodą konfiguracji.",
-      en: "Comprehensive SaaS solution for enterprise time tracking, leave management, and team coordination. Team and department chat, task board, work schedule management, role-based access control with high configuration flexibility.",
+      pl: "Nowoczesna, zoptymalizowana pod SEO strona wizytówkowa dla hurtowni naturalnych słodzików działającej w Polsce i UE. Wielojęzyczna, z zaawansowaną ochroną antyspamową i optymalizacją wydajności.",
+      en: "Modern, SEO-optimized business card website for a natural sweeteners wholesale company operating in Poland and the EU. Multilingual, with advanced anti-spam protection and performance optimization.",
     },
     longDescription: {
-      pl: "Kompleksowy system SaaS do zarządzania czasem pracy i urlopami dla przedsiębiorstw. Śledzenie czasu, zarządzanie urlopami, czat zespołowy i działowy, tablica zadań, grafik pracy oraz kontrola dostępu oparta na rolach z dużą swobodą konfiguracji. System składa się z zoptymalizowanych pod SEO stron marketingowych z blogiem oraz aplikacji biznesowej do śledzenia czasu pracy i zarządzania urlopami. Funkcje obejmują codzienne logowanie czasu z nadgodzinami, widok kalendarza miesięcznego, eksport PDF wniosków urlopowych, generowanie ewidencji czasu pracy do pliku Excela, system wniosków urlopowych z zatwierdzaniem i powiadomieniami oraz planowanie urlopów w kalendarzu zespołu. Podział na role (pracownik, przełożony, admin, HR) z dużą swobodą konfiguracji i prostym interfejsem zapewnia elastyczne zarządzanie dostępem i uprawnieniami. Pełna responsywność i wsparcie dla wszystkich urządzeń.",
-      en: "Comprehensive SaaS solution for enterprise time tracking, leave management, and team coordination. Team and department chat, task board, work schedule management, role-based access control with high configuration flexibility. The system consists of SEO-optimized marketing pages with blog and a business application for time tracking and leave management. Features include daily time logging with overtime, monthly calendar view, PDF export for leave requests, Excel export for time records, leave request system with approvals and notifications, and team leave planning calendar. Role-based division (employee, supervisor, admin, HR) with high configuration flexibility and simple interface ensures flexible access and permission management. Fully responsive with support for all devices.",
+      pl: "Nowoczesna, zoptymalizowana pod SEO strona wizytówkowa dla hurtowni naturalnych słodzików działającej w Polsce i UE. Wielojęzyczna, z zaawansowaną ochroną antyspamową i optymalizacją wydajności. Wielojęzyczna strona prezentuje hurtową ofertę naturalnych słodzików, w tym Stevia Rebaudiana Bertoni, Erythritol, Xylitol, Sucralose, Sorbitol i inne alternatywy cukru. Strona zawiera zoptymalizowany formularz kontaktowy z ochroną antyspamową oraz pełną responsywność dla wszystkich urządzeń.",
+      en: "Modern, SEO-optimized business card website for a natural sweeteners wholesale company operating in Poland and the EU. Multilingual, with advanced anti-spam protection and performance optimization. Multilingual website showcases wholesale natural sweeteners including Stevia Rebaudiana Bertoni, Erythritol, Xylitol, Sucralose, Sorbitol, and other sugar alternatives. The site includes an optimized contact form with anti-spam protection and full responsiveness for all devices.",
     },
     technologies: [
-      { name: "React" },
-      { name: "Next.js" },
-      { name: "Node.js" },
-      { name: "MongoDB" },
-      { name: "JavaScript" },
+      { name: "HTML" },
+      { name: "CSS" },
+      { name: "PHP" },
     ],
     images: [
-      "/planopia-dekstop.webp",
-      "/planopia-app-desktop.webp",
-      "/planopia-app-mobile.webp",
-      "/planopia-app-mobile2.webp",
+      "/sweetsteviam-desktop-main.webp",
+      "/sweetsteviam-desktop-products.webp",
+      "/sweetsteviam-mobile.webp",
+      "/sweetsteviam-page-speed.webp",
     ],
     inDevelopment: false,
+    projectType: {
+      pl: "Strona internetowa",
+      en: "Website",
+    },
+  },
+  {
+    id: "czatsportowy",
+    name: {
+      pl: "Czat Sportowy",
+      en: "Sports Chat",
+    },
+    url: "https://czatsportowy.pl",
+    shortDescription: {
+      pl: "Platforma czatu sportowego z analizą meczów wspieraną przez AI. Czat na żywo, przewidywania AI, raport AI analizujący najbliższe mecze oraz statystyki piłkarskie w czasie rzeczywistym.",
+      en: "Live sports chat platform with AI-powered match analysis. Real-time chat, AI predictions, AI report analyzing upcoming matches, and live football statistics.",
+    },
+    longDescription: {
+      pl: "Platforma czatu sportowego z analizą meczów wspieraną przez AI. Czat na żywo, przewidywania AI, raport AI analizujący najbliższe mecze oraz statystyki piłkarskie w czasie rzeczywistym. Oferuje czat na żywo podczas meczów i przed meczami, prywatną komunikację między użytkownikami oraz wielojęzyczne wsparcie (PL/EN). Integracja z AI zapewnia szczegółową analizę meczów i przewidywania. System oferuje raport AI, który analizuje najbliższe mecze i na podstawie statystyk drużyn generuje szczegółową analizę najbliższych 15 meczów. Aplikacja zawiera interaktywne widgety ze statystykami meczów, wyszukiwanie meczów oraz dynamiczny wybór daty.",
+      en: "Live sports chat platform with AI-powered match analysis. Real-time chat, AI predictions, AI report analyzing upcoming matches, and live football statistics. Offers live chat during and before matches, private user-to-user communication, and multi-language support (PL/EN). AI integration provides detailed match analysis and predictions. The system features an AI report that analyzes upcoming matches and generates detailed analysis of the next 15 matches based on team statistics. The app includes interactive widgets with match statistics, match search, and dynamic date selection.",
+    },
+    technologies: [
+      { name: "Next.js" },
+      { name: "React" },
+      { name: "Node.js" },
+      { name: "MongoDB" },
+      { name: "Redis" },
+      { name: "Socket.IO" },
+      { name: "Express" },
+      { name: "Tailwind CSS" },
+      { name: "OpenAI" },
+    ],
+    images: [
+      "/czatsportowy.webp",
+      "/czatsportowy1.webp",
+      "/czatsportowy-mobile.webp",
+      "/czatsportowy-mobile2.webp",
+    ],
+    inDevelopment: true,
     projectType: {
       pl: "Aplikacja internetowa",
       en: "Web Application",
@@ -246,7 +247,7 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
     return (
       <div
         id="client-reviews"
-        className="mt-16 border-primary/20 scroll-mt-[100px] min-h-[400px]"
+        className="mt-20 scroll-mt-[100px] min-h-[400px]"
         style={{ scrollMarginTop: "100px" }}
         aria-label={lang === "pl" ? "Ładowanie opinii klientów" : "Loading client reviews"}
       />
@@ -259,7 +260,7 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
 
   const content = {
     pl: {
-      title: "Opinie Klientów",
+      title: "Opinie klientów",
       viewOnGoogle: "Zobacz wszystkie opinie na Google",
       reviews: "opinii",
     },
@@ -275,10 +276,10 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
   return (
     <div
       id="client-reviews"
-      className="mt-16 border-primary/20 scroll-mt-[100px]"
+      className="mt-20 scroll-mt-[100px]"
       style={{ scrollMarginTop: "100px" }}
     >
-      <h2 className="text-2xl md:text-3xl font-bold text-left mb-6">{t.title}</h2>
+      <h2 className="section-heading mb-4 !text-3xl md:!text-[2rem]">{t.title}</h2>
       
       {overallRating && totalRatings && (
         <div className="flex items-center justify-start gap-4 mb-8">
@@ -289,7 +290,7 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
                   key={i}
                   className={`w-5 h-5 ${
                     i < Math.round(overallRating)
-                      ? "text-yellow-400"
+                      ? "text-amber-400"
                       : "text-gray-600"
                   }`}
                 />
@@ -307,7 +308,7 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
         {reviews.map((review) => (
           <article
             key={review.time}
-            className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 w-full min-w-0"
+            className="card flex w-full min-w-0 flex-col"
           >
             <div className="flex items-start gap-3 mb-3">
               {review.profilePhotoUrl ? (
@@ -332,14 +333,14 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
                     <StarIcon
                       key={i}
                       className={`w-3 h-3 ${
-                        i < review.rating ? "text-yellow-400" : "text-gray-600"
+                        i < review.rating ? "text-amber-400" : "text-gray-600"
                       }`}
                     />
                   ))}
                 </div>
               </div>
             </div>
-            <p className="text-gray-300 text-sm leading-relaxed">{review.text}</p>
+            <p className="text-[0.95rem] leading-relaxed text-gray-300">„{review.text}”</p>
             <span className="text-xs text-gray-500 mt-2 block">{review.relativeTime}</span>
           </article>
         ))}
@@ -386,21 +387,45 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
 
   return (
     <>
-      <section id="realizations" className="py-28 md:py-32 px-4 relative scroll-mt-[20px]" aria-labelledby="realizations-heading">
-        <div className="max-w-7xl mx-auto">
-          <h2
-            id="realizations-heading"
-            className="section-heading mb-4"
-          >
-            {lang === "pl" ? "Moje realizacje" : "My projects"}
-          </h2>
-          <p className="section-lead mb-8">
-            {lang === "pl"
-              ? "Zobacz moje dotychczasowe projekty"
-              : "See my completed projects"}
-          </p>
+      <section id="realizations" className="section-y relative scroll-mt-24" aria-labelledby="realizations-heading">
+        <div className="container-site">
+          <div className="mb-10 max-w-3xl md:mb-14">
+            <p className="eyebrow mb-5">
+              <span className="eyebrow-dot" aria-hidden="true" />
+              {lang === "pl" ? "Realizacje" : "Work"}
+            </p>
+            <h2 id="realizations-heading" className="section-heading">
+              {lang === "pl" ? "Projekty, które działają u klientów" : "Projects running for real clients"}
+            </h2>
+            <p className="section-lead mt-4">
+              {lang === "pl"
+                ? "Aplikacje, panele i strony, które sam zaprojektowałem, napisałem i utrzymuję. Kliknij kartę, żeby zobaczyć szczegóły i zrzuty ekranu."
+                : "Apps, portals, and websites I designed, built, and maintain myself. Click a card to see details and screenshots."}
+            </p>
+          </div>
 
-          <ul className={`grid grid-cols-1 md:grid-cols-2 gap-8 list-none p-0 m-0 ${projects.length === 4 ? "lg:grid-cols-2" : "lg:grid-cols-3"}`} role="list">
+          {lang === "pl" && (
+            <Link
+              href="/blog/panel-zapisow-dla-szkoly-jezykowej-studium-przypadku"
+              className="group mb-6 flex flex-col gap-5 rounded-2xl border border-primary/30 bg-gradient-to-r from-primary/[0.10] via-white/[0.02] to-accent/[0.06] p-6 transition-colors hover:border-primary/60 md:flex-row md:items-center md:justify-between md:p-7"
+            >
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary">Studium przypadku</p>
+                <p className="mt-2 font-display text-xl font-semibold text-white md:text-2xl">
+                  Panel zapisów dla szkoły językowej: zgłoszenia, grupy i przypomnienia bez telefonów
+                </p>
+                <p className="mt-2 text-sm text-gray-400">Jak wyglądał proces przed wdrożeniem, co zautomatyzowałem i co zmieniło się w pracy sekretariatu.</p>
+              </div>
+              <span className="btn-secondary shrink-0 group-hover:border-primary/50">
+                Czytaj case study
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </span>
+            </Link>
+          )}
+
+          <ul className="m-0 grid list-none grid-cols-1 gap-6 p-0 md:grid-cols-2" role="list">
             {projects.map((project) => (
               <ProjectCard
                 key={project.id}
@@ -437,11 +462,11 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                className="bg-gradient-to-r from-background/95 to-background-lighter/95 backdrop-blur-md border border-primary/25 rounded-xl shadow-2xl overflow-hidden max-h-[90vh] w-full max-w-3xl flex flex-col pointer-events-auto"
+                className="bg-background-light border border-white/10 rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] w-full max-w-3xl flex flex-col pointer-events-auto"
                 onClick={(e) => e.stopPropagation()}
               >
               {/* Modal Header */}
-              <div className="p-6 border-b border-primary/20 flex items-start justify-between">
+              <div className="p-6 border-b border-white/[0.08] flex items-start justify-between">
                 <div className="flex-1">
                   {/* Badges - nad tytułem */}
                   <div className="flex flex-wrap gap-2 mb-3">
@@ -456,7 +481,7 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
                       </span>
                     )}
                   </div>
-                  <h3 className="text-3xl font-bold text-primary mb-2">{selectedProject.name[lang]}</h3>
+                  <h3 className="text-3xl font-semibold text-white mb-2">{selectedProject.name[lang]}</h3>
                   <a
                     href={selectedProject.url}
                     target="_blank"
@@ -604,93 +629,90 @@ function ProjectCard({
   onOpenModal: () => void;
   onOpenImageModal: (image: string) => void;
 }) {
+  const cover = project.images?.[0];
+
   return (
-    <li
-      className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 hover:border-primary/40 transition-[transform,border-color] duration-200 hover:-translate-y-1 cursor-pointer group"
-      onClick={onOpenModal}
-    >
-      {/* Badges */}
-      <div className="flex flex-wrap gap-2 mb-4">
-        {/* Project Type Badge */}
-        <span className="px-3 py-1 text-xs font-semibold rounded-full bg-primary/20 text-primary border border-primary/30">
-          {project.projectType[lang]}
-        </span>
-        {/* Development Status Badge */}
-        {project.inDevelopment && (
-          <span className="px-3 py-1 text-xs font-semibold rounded-full bg-primary/20 text-primary border border-primary/30">
-            {lang === "pl" ? "W rozwoju" : "In Development"}
+    <li className="group flex flex-col overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.025] transition duration-200 hover:-translate-y-0.5 hover:border-primary/35">
+      {cover && (
+        <button
+          type="button"
+          onClick={onOpenModal}
+          className="relative block aspect-[16/9] w-full overflow-hidden border-b border-white/[0.06] bg-background-lighter"
+          aria-label={lang === "pl" ? `Szczegóły projektu ${project.name[lang]}` : `Project details: ${project.name[lang]}`}
+        >
+          <Image
+            src={cover}
+            alt={`${project.name[lang]} - ${lang === "pl" ? "zrzut ekranu" : "screenshot"}`}
+            fill
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+          />
+          <span className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" aria-hidden="true" />
+          <span className="absolute left-4 top-4 flex flex-wrap gap-2">
+            <span className="rounded-full border border-white/15 bg-background/80 px-3 py-1 text-xs font-semibold text-white backdrop-blur">
+              {project.projectType[lang]}
+            </span>
+            {project.inDevelopment && (
+              <span className="rounded-full border border-primary/30 bg-background/80 px-3 py-1 text-xs font-semibold text-primary backdrop-blur">
+                {lang === "pl" ? "W rozwoju" : "In development"}
+              </span>
+            )}
           </span>
-        )}
-      </div>
-
-      {/* Project Name */}
-      <h3 className="text-xl font-bold mb-3 text-primary group-hover:text-primary-light transition-colors">
-        {project.name[lang]}
-      </h3>
-
-      {/* Short Description */}
-      <p className="text-gray-300 mb-4 line-clamp-3">
-        {truncateDescription(project.shortDescription[lang])}
-      </p>
-
-      {/* Link */}
-      <a
-        href={project.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={(e) => e.stopPropagation()}
-        className="text-primary hover:text-primary-light transition-colors text-sm font-medium inline-flex items-center gap-2 mb-4"
-      >
-        {project.url.replace("https://", "")}
-        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-        </svg>
-      </a>
-
-      {/* Screenshots - miniaturki */}
-      {project.images && project.images.length > 0 && (
-        <div className="flex flex-wrap gap-2 mb-4" onClick={(e) => e.stopPropagation()}>
-          {project.images.map((image, index) => (
-            <div
-              key={index}
-              className="relative rounded-lg overflow-hidden border border-primary/20 hover:border-primary/40 transition-all cursor-pointer hover:scale-105"
-              onClick={() => onOpenImageModal(image)}
-            >
-              <Image
-                src={image}
-                alt={`${project.name[lang]} - ${lang === "pl" ? "Zrzut ekranu" : "Screenshot"} ${index + 1}`}
-                width={80}
-                height={80}
-                className="w-16 h-16 md:w-20 md:h-20 object-cover"
-              />
-            </div>
-          ))}
-        </div>
+        </button>
       )}
 
-      {/* Technologies */}
-      <div className="flex flex-wrap gap-3 mt-4">
-        {project.technologies.slice(0, 6).map((tech) => (
-          <div
-            key={tech.name}
-            className="flex items-center gap-1.5 px-2 py-1 bg-background rounded border border-primary/10"
-            title={tech.name}
+      <div className="flex flex-1 flex-col p-6 md:p-7">
+        <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
+          <h3 className="font-sans text-xl font-semibold text-white">{project.name[lang]}</h3>
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex shrink-0 items-center gap-1.5 text-sm font-medium text-gray-400 transition-colors hover:text-primary"
           >
-            {/* TODO: Dodaj ikonę technologii - ustaw src na ścieżkę do obrazka */}
-            {/* Przykład: <img src="/technologies/nextjs.svg" alt={tech.name} className="w-4 h-4" /> */}
-            {/* <img 
-              src="/technologies/nextjs.svg" 
-              alt={tech.name} 
-              className="w-4 h-4"
-            /> */}
-            <span className="text-xs text-gray-400">{tech.name}</span>
-          </div>
-        ))}
-        {project.technologies.length > 6 && (
-          <div className="px-2 py-1 bg-background rounded border border-primary/10 text-xs text-gray-400">
-            +{project.technologies.length - 6}
-          </div>
-        )}
+            {project.url.replace("https://", "")}
+            <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+
+        <p className="mt-3 text-[0.95rem] leading-relaxed text-gray-400">{truncateDescription(project.shortDescription[lang], 170)}</p>
+
+        <div className="mt-5 flex flex-wrap gap-2">
+          {project.technologies.slice(0, 5).map((tech) => (
+            <span key={tech.name} className="rounded-md border border-white/[0.08] bg-white/[0.03] px-2.5 py-1 text-xs text-gray-400">
+              {tech.name}
+            </span>
+          ))}
+          {project.technologies.length > 5 && (
+            <span className="rounded-md border border-white/[0.08] bg-white/[0.03] px-2.5 py-1 text-xs text-gray-500">+{project.technologies.length - 5}</span>
+          )}
+        </div>
+
+        <div className="mt-auto flex items-center gap-3 pt-6">
+          <button type="button" onClick={onOpenModal} className="btn-link">
+            {lang === "pl" ? "Szczegóły i zrzuty ekranu" : "Details and screenshots"}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </button>
+          {project.images && project.images.length > 1 && (
+            <div className="ml-auto flex -space-x-2">
+              {project.images.slice(1, 4).map((image, index) => (
+                <button
+                  key={image}
+                  type="button"
+                  onClick={() => onOpenImageModal(image)}
+                  className="relative h-9 w-9 overflow-hidden rounded-lg border-2 border-background transition-transform hover:z-10 hover:scale-110"
+                  aria-label={`${project.name[lang]} - ${lang === "pl" ? "zrzut ekranu" : "screenshot"} ${index + 2}`}
+                >
+                  <Image src={image} alt="" fill sizes="36px" className="object-cover" />
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </li>
   );

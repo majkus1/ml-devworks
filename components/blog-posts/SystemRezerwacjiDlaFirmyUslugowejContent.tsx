@@ -52,7 +52,7 @@ export default function SystemRezerwacjiDlaFirmyUslugowejContent({ lang }: Props
                 "Google Calendar, notifications, and automated follow-ups.",
               ]
           ).map((item) => (
-            <article key={item} className="bg-background-lighter border border-primary/20 rounded-xl p-5">
+            <article key={item} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
               <p>{item}</p>
             </article>
           ))}
@@ -82,7 +82,7 @@ export default function SystemRezerwacjiDlaFirmyUslugowejContent({ lang }: Props
         </ol>
       </section>
 
-      <section className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-6 md:p-8 border border-primary/20">
+      <section className="card-accent">
         <h2 className="text-xl font-bold text-white mb-4">
           {isPl ? "Budujesz system rezerwacji dla firmy usługowej?" : "Building a booking system for a service business?"}
         </h2>
@@ -93,7 +93,7 @@ export default function SystemRezerwacjiDlaFirmyUslugowejContent({ lang }: Props
         </p>
         <Link
           href={isPl ? "/uslugi/systemy-rezerwacji-online" : "/en/services/online-booking-systems"}
-          className="inline-flex items-center gap-2 px-6 py-3 bg-primary font-semibold rounded-lg hover:bg-primary-dark transition-colors !text-black"
+          className="btn-primary !text-[#03140b] !no-underline"
         >
           {isPl ? "Zobacz systemy rezerwacji online" : "View online booking systems"}
           <span aria-hidden="true">→</span>

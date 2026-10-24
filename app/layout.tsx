@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import CookieBanner from "@/components/CookieBanner";
 import HashNavigationHandler from "@/components/HashNavigationHandler";
@@ -9,12 +9,14 @@ import { isAiAssistantEnabled } from "@/lib/ai-assistant/openai";
 import { headers } from "next/headers";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin", "latin-ext"] });
+const inter = Inter({ subsets: ["latin", "latin-ext"], variable: "--font-sans", display: "swap" });
+// Nagłówki: geometryczny krój z charakterem „tech”, pasujący do logo.
+const display = Space_Grotesk({ subsets: ["latin", "latin-ext"], variable: "--font-display", display: "swap", weight: ["500", "600", "700"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ml-devworks.com"),
-  title: "Aplikacje dla firm, strony i automatyzacje AI | ML DevWorks",
-  description: "Programista z Krakowa tworzy aplikacje dla firm, strony internetowe, systemy rezerwacji, integracje API/CRM i automatyzacje AI. Bezpośrednia współpraca.",
+  title: "Automatyzacje AI dla firm i aplikacje na zamówienie | ML DevWorks",
+  description: "Agenci AI, aplikacje i integracje dla małych i średnich firm. Działający prototyp w 2–5 dni za darmo, automatyzacje od 2 500 zł netto. Programista z Krakowa.",
   keywords: ["strony internetowe", "aplikacje webowe", "aplikacje mobilne", "sklepy internetowe", "devops", "wdrożenia w chmurze", "cloud deployment", "development"],
   authors: [{ name: "ML DevWorks" }],
   creator: "ML DevWorks",
@@ -35,8 +37,8 @@ export const metadata: Metadata = {
     locale: "pl_PL",
     url: "https://ml-devworks.com",
     siteName: "ML DevWorks",
-    title: "Aplikacje dla firm, strony i automatyzacje AI | ML DevWorks",
-    description: "Programista z Krakowa tworzy aplikacje dla firm, strony internetowe, systemy rezerwacji, integracje API/CRM i automatyzacje AI. Bezpośrednia współpraca.",
+    title: "Automatyzacje AI dla firm i aplikacje na zamówienie | ML DevWorks",
+    description: "Agenci AI, aplikacje i integracje dla małych i średnich firm. Działający prototyp w 2–5 dni za darmo, automatyzacje od 2 500 zł netto. Programista z Krakowa.",
     images: [
       {
         url: "https://ml-devworks.com/ogimg.png",
@@ -48,8 +50,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aplikacje dla firm, strony i automatyzacje AI | ML DevWorks",
-    description: "Programista z Krakowa tworzy aplikacje dla firm, strony internetowe, systemy rezerwacji, integracje API/CRM i automatyzacje AI. Bezpośrednia współpraca.",
+    title: "Automatyzacje AI dla firm i aplikacje na zamówienie | ML DevWorks",
+    description: "Agenci AI, aplikacje i integracje dla małych i średnich firm. Działający prototyp w 2–5 dni za darmo, automatyzacje od 2 500 zł netto. Programista z Krakowa.",
     images: ["https://ml-devworks.com/ogimg.png"],
   },
   alternates: {
@@ -77,7 +79,7 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   other: {
-    "theme-color": "#000000",
+    "theme-color": "#07090c",
   },
 };
 
@@ -92,8 +94,8 @@ export default async function RootLayout({
   const aiAssistantEnabled = isAiAssistantEnabled();
   
   return (
-    <html lang={lang} className="scroll-smooth overflow-x-hidden">
-      <body className={`${inter.className} overflow-x-hidden`}>
+    <html lang={lang} className={`${inter.variable} ${display.variable} scroll-smooth overflow-x-hidden`}>
+      <body className="font-sans overflow-x-hidden">
         {/* Prevent default hash scroll behavior - runs before React hydration */}
         <Script
           id="prevent-hash-scroll"

@@ -1,3 +1,6 @@
+import SectionHeader from "@/components/ui/SectionHeader";
+import FaqAccordion from "@/components/ui/FaqAccordion";
+
 type FAQItem = {
   q: string;
   a: string;
@@ -9,32 +12,23 @@ interface HomeFAQAnimatedProps {
 }
 
 export default function HomeFAQAnimated({ lang, items }: HomeFAQAnimatedProps) {
-  return (
-    <div className="max-w-7xl mx-auto">
-      <div className="mb-12">
-        <p className="text-primary font-semibold uppercase tracking-[0.18em] text-sm mb-3">
-          FAQ
-        </p>
-        <h2 id="home-faq-heading" className="section-heading">
-          {lang === "pl" ? "Najczęstsze pytania" : "Frequently asked questions"}
-        </h2>
-        <p className="mt-4 section-lead">
-          {lang === "pl"
-            ? "Krótkie odpowiedzi dla osób, które chcą szybko ocenić, czy mogę pomóc w projekcie strony, aplikacji albo automatyzacji."
-            : "Short answers for people who want to quickly decide whether I can help with a website, app, or automation project."}
-        </p>
-      </div>
+  const isPl = lang === "pl";
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {items.map((item) => (
-          <article
-            key={item.q}
-            className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 transition-colors hover:border-primary/50"
-          >
-            <h3 className="text-lg md:text-xl font-bold text-primary mb-4">{item.q}</h3>
-            <p className="text-sm md:text-base text-gray-200 leading-relaxed">{item.a}</p>
-          </article>
-        ))}
+  return (
+    <div className="container-site">
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
+        <SectionHeader
+          id="home-faq-heading"
+          eyebrow="FAQ"
+          title={isPl ? "Najczęstsze pytania" : "Frequently asked questions"}
+          lead={
+            isPl
+              ? "Krótkie odpowiedzi dla osób, które chcą szybko ocenić, czy mogę pomóc przy automatyzacji, aplikacji albo stronie."
+              : "Short answers for people who want to quickly decide whether I can help with automation, an app, or a website."
+          }
+          className="lg:sticky lg:top-28 lg:self-start"
+        />
+        <FaqAccordion items={items} />
       </div>
     </div>
   );

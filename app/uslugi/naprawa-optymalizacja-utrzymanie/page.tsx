@@ -1,14 +1,14 @@
 import { Metadata } from "next";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
-import ServiceSeoSections, { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
+import { ServiceFaqSchema, ServiceOfferCatalogSchema } from "@/components/ServiceSeoSections";
+import ServiceLanding from "@/components/ServiceSections";
 
 export const metadata: Metadata = {
-  title: "Naprawa i optymalizacja stron i aplikacji | ML DevWorks",
+  title: "Naprawa błędów stron, SEO techniczne i optymalizacja | ML DevWorks",
   description:
-    "Naprawiam strony i aplikacje po innych wykonawcach: bugfixing, Core Web Vitals, techniczne SEO i utrzymanie. Szybka diagnoza i plan naprawy.",
+    "Naprawa błędów stron i aplikacji, błędy SEO i Search Console, przyspieszenie (Core Web Vitals) i utrzymanie. Diagnoza w 1–3 dni, poprawki od 1 500 zł netto.",
   keywords: [
     "naprawa strony internetowej",
     "naprawa aplikacji webowej",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Naprawa stron i aplikacji | ML DevWorks",
     description:
-      "Naprawiam strony i aplikacje po innych wykonawcach: bugfixing, Core Web Vitals, techniczne SEO i utrzymanie. Szybka diagnoza i plan naprawy.",
+      "Naprawa błędów stron i aplikacji, błędy SEO i Search Console, przyspieszenie (Core Web Vitals) i utrzymanie. Diagnoza w 1–3 dni, poprawki od 1 500 zł netto.",
     url: "https://ml-devworks.com/uslugi/naprawa-optymalizacja-utrzymanie",
     type: "website",
     locale: "pl_PL",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Naprawa stron i aplikacji | ML DevWorks",
     description:
-      "Naprawiam strony i aplikacje po innych wykonawcach: bugfixing, Core Web Vitals, techniczne SEO i utrzymanie. Szybka diagnoza i plan naprawy.",
+      "Naprawa błędów stron i aplikacji, błędy SEO i Search Console, przyspieszenie (Core Web Vitals) i utrzymanie. Diagnoza w 1–3 dni, poprawki od 1 500 zł netto.",
   },
 };
 
@@ -107,302 +107,10 @@ export default function NaprawaOptymalizacjaUtrzymaniePage() {
       <ServiceFaqSchema serviceId="maintenance" lang="pl" />
       <ServiceOfferCatalogSchema serviceId="maintenance" lang="pl" />
       <Navbar lang="pl" />
-      <main className="min-h-screen pt-20">
-        {/* Hero Section */}
-        <section className="px-4 py-16 md:py-24 bg-gradient-to-b from-background to-background-lighter">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Naprawa, optymalizacja i utrzymanie <span className="text-primary">stron oraz aplikacji</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Przywróć pełną funkcjonalność swojej strony lub aplikacji. Optymalizuj wydajność, SEO i konwersję. Kompleksowe wsparcie techniczne dla Twoich projektów.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/#contact"
-                className="px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors transform hover:scale-105"
-              >
-                Bezpłatna Wycena
-              </Link>
-              <Link
-                href="/uslugi"
-                className="px-8 py-4 bg-background-lighter border border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-colors"
-              >
-                Zobacz Wszystkie Usługi
-              </Link>
-            </div>
-          </div>
-        </section>
-        <ServiceSeoSections serviceId="maintenance" lang="pl" />
-
-        {/* Main Content */}
-        <section className="px-4 py-16">
-          <div className="max-w-4xl mx-auto">
-            {/* What I Offer */}
-            <div className="mb-16">
-              <h2 className="section-heading mb-8 text-center">
-                Co oferuję?
-              </h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-2xl font-bold mb-4 text-primary">Naprawa Błędów</h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    Diagnozowanie i naprawa błędów w istniejących projektach. Przywracanie funkcjonalności, naprawa problemów z bezpieczeństwem, kompatybilnością i wydajnością.
-                  </p>
-                  <ul className="list-disc list-inside text-gray-400 space-y-2">
-                    <li>Diagnostyka problemów</li>
-                    <li>Naprawa błędów krytycznych</li>
-                    <li>Poprawki bezpieczeństwa</li>
-                    <li>Kompatybilność przeglądarek</li>
-                  </ul>
-                </div>
-
-                <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-2xl font-bold mb-4 text-primary">Optymalizacja Wydajności</h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    Przyspieszenie ładowania strony, optymalizacja kodu, obrazów, bazy danych i infrastruktury. Zwiększenie wydajności aplikacji i poprawa user experience.
-                  </p>
-                  <ul className="list-disc list-inside text-gray-400 space-y-2">
-                    <li>Optymalizacja szybkości</li>
-                    <li>Optymalizacja kodu</li>
-                    <li>Optymalizacja obrazów</li>
-                    <li>Optymalizacja bazy danych</li>
-                  </ul>
-                </div>
-
-                <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-2xl font-bold mb-4 text-primary">Optymalizacja SEO</h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    Poprawa widoczności w wyszukiwarkach poprzez optymalizację meta tagów, struktury strony, treści, linków wewnętrznych i technicznych aspektów SEO.
-                  </p>
-                  <ul className="list-disc list-inside text-gray-400 space-y-2">
-                    <li>Audyt SEO</li>
-                    <li>Optymalizacja on-page</li>
-                    <li>Poprawa Core Web Vitals</li>
-                    <li>Structured data</li>
-                  </ul>
-                </div>
-
-                <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-2xl font-bold mb-4 text-primary">Optymalizacja Konwersji</h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    Zwiększenie konwersji poprzez optymalizację user experience, procesu zakupowego, formularzy, CTA i analityki. A/B testing i ciągłe ulepszanie.
-                  </p>
-                  <ul className="list-disc list-inside text-gray-400 space-y-2">
-                    <li>Analiza konwersji</li>
-                    <li>Optymalizacja UX</li>
-                    <li>A/B testing</li>
-                    <li>Optymalizacja formularzy</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Services Details */}
-            <div className="mb-16">
-              <h2 className="section-heading mb-8 text-center">
-                Szczegółowe Usługi
-              </h2>
-              <div className="space-y-6">
-                <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">🔧 Naprawa i Debugging</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Szybka diagnoza i naprawa błędów w kodzie, problemów z funkcjonalnością, błędów JavaScript, problemów z bazą danych, integracjami i bezpieczeństwem. Przywracanie pełnej funkcjonalności aplikacji.
-                  </p>
-                </div>
-
-                <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">Optymalizacja wydajności</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Analiza i optymalizacja czasu ładowania strony, optymalizacja kodu (minifikacja, bundling), optymalizacja obrazów (kompresja, formaty nowoczesne), optymalizacja bazy danych, caching, CDN. Zwiększenie PageSpeed Score.
-                  </p>
-                </div>
-
-                <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">🔍 Optymalizacja SEO</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Kompleksowy audyt SEO, optymalizacja meta tagów, nagłówków, treści, linków wewnętrznych, structured data, poprawa Core Web Vitals, mobile-first indexing, poprawa indeksowania w Google.
-                  </p>
-                </div>
-
-                <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">Optymalizacja konwersji</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Analiza zachowań użytkowników, identyfikacja punktów spadku konwersji, optymalizacja procesu zakupowego, formularzy, CTA, landing pages. A/B testing i ciągłe ulepszanie wyników.
-                  </p>
-                </div>
-
-                <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">Aktualizacje i modernizacja</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Aktualizacja frameworków, bibliotek, zależności, systemów CMS. Modernizacja kodu, migracja do nowszych technologii, refaktoryzacja. Utrzymanie zgodności z najnowszymi standardami.
-                  </p>
-                </div>
-
-                <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">🛡️ Bezpieczeństwo</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Audyt bezpieczeństwa, naprawa luk bezpieczeństwa, aktualizacje zabezpieczeń, konfiguracja SSL, ochrona przed atakami, backup i disaster recovery. Zapewnienie bezpieczeństwa danych.
-                  </p>
-                </div>
-
-                <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">Utrzymanie i wsparcie</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Ciągłe monitorowanie, regularne aktualizacje, backup, wsparcie techniczne, szybka reakcja na problemy, konsultacje i doradztwo. Pełna obsługa utrzymaniowa Twojego projektu.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Why Work With Me */}
-            <div className="mb-16">
-              <h2 className="section-heading mb-8 text-center">
-                Dlaczego warto pracować ze mną?
-              </h2>
-              <div className="space-y-6">
-                <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">Szybka reakcja</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Szybka diagnoza problemów i natychmiastowa naprawa. Priorytetyzuję krytyczne błędy i zapewniam szybką reakcję na problemy, które wpływają na działanie Twojego biznesu.
-                  </p>
-                </div>
-
-                <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">Mierzalne rezultaty</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Wszystkie optymalizacje są mierzalne. Przed i po analizie, raporty z wynikami, monitoring metryk. Widzisz realne poprawy w wydajności, SEO i konwersji.
-                  </p>
-                </div>
-
-                <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">🔍 Kompleksowa Analiza</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Dokładnie analizuję cały projekt przed wprowadzeniem zmian. Identyfikuję problemy i możliwości optymalizacji. Nie naprawiam tylko objawów, ale przyczyny.
-                  </p>
-                </div>
-
-                <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">💡 Doświadczenie</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Mam doświadczenie w pracy z różnymi technologiami, frameworkami i systemami. Szybko rozumiem istniejący kod i wprowadzam poprawki bez zakłócania działania.
-                  </p>
-                </div>
-
-                <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">Ciągłe ulepszanie</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Nie tylko naprawiam, ale także stale optymalizuję. Monitoruję wyniki, zbieram feedback i wprowadzam ulepszenia, aby Twój projekt był coraz lepszy.
-                  </p>
-                </div>
-
-                <div className="bg-background-lighter rounded-xl p-6 border border-primary/20">
-                  <h3 className="text-xl font-bold mb-3 text-primary">Elastyczne podejście</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Dostosowuję się do Twoich potrzeb - od jednorazowych napraw po długoterminowe umowy utrzymaniowe. Pracuję z projektami w różnych technologiach i rozmiarach.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Process */}
-            <div className="mb-16">
-              <h2 className="section-heading mb-8 text-center">
-                Jak Wygląda Proces?
-              </h2>
-              <div className="space-y-6">
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-background font-bold text-xl">
-                    1
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">Analiza i Diagnostyka</h3>
-                    <p className="text-gray-300 leading-relaxed">
-                      Analizuję Twój projekt, identyfikuję problemy, błędy i obszary do optymalizacji. Tworzę szczegółowy raport z rekomendacjami i planem działania.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-background font-bold text-xl">
-                    2
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">Wycena i Plan</h3>
-                    <p className="text-gray-300 leading-relaxed">
-                      Przedstawiam szczegółową wycenę prac i harmonogram. Uzgadniam priorytety i zakres prac. Tworzę plan działania z podziałem na etapy.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-background font-bold text-xl">
-                    3
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">Implementacja</h3>
-                    <p className="text-gray-300 leading-relaxed">
-                      Wprowadzam naprawy i optymalizacje zgodnie z planem. Pracuję w środowisku testowym, testuję zmiany i upewniam się, że wszystko działa poprawnie.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-background font-bold text-xl">
-                    4
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">Testowanie i Weryfikacja</h3>
-                    <p className="text-gray-300 leading-relaxed">
-                      Testuję wszystkie zmiany, weryfikuję poprawki, sprawdzam wydajność i funkcjonalność. Upewniam się, że wszystko działa lepiej niż przed zmianami.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-background font-bold text-xl">
-                    5
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">Wdrożenie i Dokumentacja</h3>
-                    <p className="text-gray-300 leading-relaxed">
-                      Wdrażam zmiany na produkcję, dokumentuję wprowadzone poprawki i optymalizacje. Przekazuję raport z wynikami i rekomendacjami na przyszłość.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-background font-bold text-xl">
-                    6
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">Monitorowanie i Wsparcie</h3>
-                    <p className="text-gray-300 leading-relaxed">
-                      Monitoruję wyniki po wdrożeniu, zbieram feedback i reaguję na ewentualne problemy. Zapewniam ciągłe wsparcie oraz dalsze optymalizacje.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* CTA Section */}
-            <div className="bg-gradient-to-r from-primary/20 to-primary/10 rounded-xl p-8 md:p-12 text-center border border-primary/30">
-              <h2 className="section-heading mb-4">
-                Potrzebujesz Naprawy lub Optymalizacji?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Skontaktuj się ze mną i otrzymaj bezpłatną analizę Twojego projektu oraz wycenę prac.
-              </p>
-              <Link
-                href="/#contact"
-                className="inline-block px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors transform hover:scale-105"
-              >
-                Skontaktuj się ze mną
-              </Link>
-            </div>
-          </div>
-        </section>
+      <main className="min-h-screen">
+        <ServiceLanding serviceId="maintenance" lang="pl" />
       </main>
+
       <Footer lang="pl" />
     </>
   );

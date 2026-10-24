@@ -45,7 +45,7 @@ export default function KosztAutomatyzacjiROIContent({ lang }: Props) {
                 ["AI agent or panel", "estimated after analysis", "for example customer service agent, knowledge base, dashboard, and quality monitoring."],
               ]
           ).map(([title, price, description]) => (
-            <article key={title} className="bg-background-lighter border border-primary/20 rounded-xl p-5">
+            <article key={title} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
               <h3 className="text-xl font-bold text-primary mb-2">{title}</h3>
               <p className="font-semibold text-white mb-2">{price}</p>
               <p>{description}</p>
@@ -63,7 +63,7 @@ export default function KosztAutomatyzacjiROIContent({ lang }: Props) {
             ? "Najprostszy model nie wymaga skomplikowanego arkusza. Wystarczy policzyć obecny koszt procesu i porównać go z kosztem wdrożenia."
             : "The simplest model does not require a complex spreadsheet. Calculate the current process cost and compare it with implementation cost."}
         </p>
-        <div className="bg-background-lighter border border-primary/20 rounded-xl p-6">
+        <div className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-6">
           <p className="text-white font-semibold mb-3">
             {isPl ? "Wzór praktyczny:" : "Practical formula:"}
           </p>
@@ -97,7 +97,7 @@ export default function KosztAutomatyzacjiROIContent({ lang }: Props) {
                 ["Full funnel", "from about PLN 12,000 net", "CRM, offers, reminders, invoicing integration and sales reporting in one flow."],
               ]
           ).map(([title, price, description]) => (
-            <article key={title} className="bg-background-lighter border border-primary/20 rounded-xl p-5">
+            <article key={title} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
               <h3 className="text-xl font-bold text-primary mb-2">{title}</h3>
               <p className="font-semibold text-white mb-2">{price}</p>
               <p>{description}</p>
@@ -109,7 +109,7 @@ export default function KosztAutomatyzacjiROIContent({ lang }: Props) {
             ? "Do tego koszty stałe: licencja CRM (jeśli firma go jeszcze nie ma) oraz użycie modeli AI, zwykle od kilkudziesięciu do kilkuset złotych miesięcznie."
             : "Plus recurring costs: a CRM licence (if the company doesn't have one yet) and AI model usage, usually from a few dozen to a few hundred PLN per month."}
         </p>
-        <div className="bg-background-lighter border border-primary/20 rounded-xl p-6 mt-6">
+        <div className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-6 mt-6">
           <p className="text-white font-semibold mb-3">{isPl ? "Przykładowe wyliczenie:" : "Example calculation:"}</p>
           <p>
             {isPl
@@ -131,7 +131,7 @@ export default function KosztAutomatyzacjiROIContent({ lang }: Props) {
         </ul>
       </section>
 
-      <section className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-6 md:p-8 border border-primary/20">
+      <section className="card-accent">
         <h2 className="text-xl font-bold text-white mb-4">
           {isPl ? "Chcesz policzyć ROI automatyzacji w swojej firmie?" : "Want to calculate automation ROI for your company?"}
         </h2>
@@ -142,7 +142,7 @@ export default function KosztAutomatyzacjiROIContent({ lang }: Props) {
         </p>
         <Link
           href={isPl ? "/uslugi/automatyzacja-i-ai" : "/en/services/automation-and-ai"}
-          className="inline-flex items-center gap-2 px-6 py-3 bg-primary font-semibold rounded-lg hover:bg-primary-dark transition-colors !text-black"
+          className="btn-primary !text-[#03140b] !no-underline"
         >
           {isPl ? "Zobacz usługę automatyzacji AI" : "View AI automation service"}
           <span aria-hidden="true">→</span>

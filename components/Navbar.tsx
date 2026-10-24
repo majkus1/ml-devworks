@@ -6,12 +6,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { getAlternateLangPath } from "@/lib/i18n-routes";
+import { ArrowRightIcon } from "@/components/ui/icons";
 
 interface NavbarProps {
   lang?: "pl" | "en";
 }
 
-const SECTION_IDS = ["services", "realizations", "client-reviews", "contact"] as const;
+const SECTION_IDS = ["realizations", "pricing", "client-reviews", "contact"] as const;
 
 function getActiveNavItem(pathname: string | null): string {
   if (!pathname) return "";
@@ -22,6 +23,10 @@ function getActiveNavItem(pathname: string | null): string {
 
   if (pathname === "/uslugi" || pathname === "/en/services" || pathname.startsWith("/uslugi/") || pathname.startsWith("/en/services/")) {
     return "services";
+  }
+
+  if (pathname === "/kontakt" || pathname === "/en/contact") {
+    return "contact-page";
   }
 
   return "";
@@ -75,7 +80,7 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
         setIsScrolled(true);
         if (currentScrollY < lastScrollY) {
           setIsVisible(true);
-        } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        } else if (currentScrollY > lastScrollY && currentScrollY > 120) {
           setIsVisible(false);
         }
       }
@@ -89,10 +94,11 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
 
   useEffect(() => {
     if (!isMobileMenuOpen) return;
-
-    const handleScroll = () => setIsMobileMenuOpen(false);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previous;
+    };
   }, [isMobileMenuOpen]);
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -103,8 +109,7 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
     if (isHomePage) {
       const element = document.querySelector(href);
       if (element) {
-        const navbarHeight = 80;
-        const offset = navbarHeight + 20;
+        const offset = 88;
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - offset;
 
@@ -125,80 +130,75 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
     pl: [
       { href: "/uslugi", label: "Usługi", key: "services" },
       { href: "#realizations", label: "Realizacje", key: "#realizations" },
+      { href: "#pricing", label: "Ceny", key: "#pricing" },
       { href: "#client-reviews", label: "Opinie", key: "#client-reviews" },
-      { href: "#contact", label: "Kontakt", key: "#contact" },
       { href: "/blog", label: "Blog", key: "blog" },
+      { href: "/kontakt", label: "Kontakt", key: "contact-page" },
     ],
     en: [
       { href: "/en/services", label: "Services", key: "services" },
-      { href: "#realizations", label: "Realizations", key: "#realizations" },
+      { href: "#realizations", label: "Work", key: "#realizations" },
+      { href: "#pricing", label: "Pricing", key: "#pricing" },
       { href: "#client-reviews", label: "Reviews", key: "#client-reviews" },
-      { href: "#contact", label: "Contact", key: "#contact" },
       { href: "/en/blog", label: "Blog", key: "blog" },
+      { href: "/en/contact", label: "Contact", key: "contact-page" },
     ],
   };
 
   const items = navItems[lang];
+  const contactHref = isEnglish ? "/en/contact" : "/kontakt";
+  const ctaLabel = isEnglish ? "Free prototype" : "Bezpłatny prototyp";
+  const solid = isScrolled || isMobileMenuOpen;
+
+  const resolveHref = (href: string) => {
+    if (href.startsWith("/")) return href;
+    const homePath = isEnglish ? "/en" : "/";
+    return isHomePage ? href : `${homePath}${href}`;
+  };
 
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isVisible ? "translate-y-0" : "-translate-y-full"
-        } ${
-          isScrolled || isMobileMenuOpen
-            ? "bg-background/95 backdrop-blur-md border-b border-primary/20 shadow-lg"
-            : "bg-transparent"
+        className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${isVisible || isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"} ${
+          solid ? "border-b border-white/[0.07] bg-background/80 backdrop-blur-xl" : "border-b border-transparent bg-transparent"
         }`}
         role="navigation"
         aria-label={lang === "pl" ? "Główne menu nawigacyjne" : "Main navigation menu"}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            <div className="flex-shrink-0 z-50">
-              <Link
-                href={isEnglish ? "/en" : "/"}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="flex items-center"
-                aria-label={lang === "pl" ? "Przejdź do strony głównej" : "Go to homepage"}
-              >
-                <Image
-                  src="/primary-on-transparent-logo.webp"
-                  alt="ML DevWorks Logo"
-                  width={215}
-                  height={60}
-                  priority
-                  className="hover:opacity-80 transition-opacity"
-                />
-              </Link>
-            </div>
+        <div className="container-site">
+          <div className="flex h-16 items-center justify-between md:h-[72px]">
+            <Link
+              href={isEnglish ? "/en" : "/"}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="relative z-50 flex shrink-0 items-center"
+              aria-label={lang === "pl" ? "Przejdź do strony głównej" : "Go to homepage"}
+            >
+              <Image
+                src="/primary-on-transparent-logo.webp"
+                alt="ML DevWorks Logo"
+                width={172}
+                height={48}
+                priority
+                className="h-auto w-[150px] transition-opacity hover:opacity-80 md:w-[172px]"
+              />
+            </Link>
 
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden items-center gap-1 lg:flex">
               {items.map((item) => {
                 const isPageLink = item.href.startsWith("/");
-                const homePath = isEnglish ? "/en" : "/";
-                const linkHref = isPageLink ? item.href : isHomePage ? item.href : `${homePath}${item.href}`;
-                const itemKey = isPageLink ? item.key : item.href;
-                const isActive = activeSection === itemKey;
-                const linkClassName = `font-medium relative group block transition-colors ${
-                  isActive ? "text-primary" : "text-white hover:text-primary"
+                const isActive = activeSection === item.key;
+                const className = `relative rounded-lg px-3.5 py-2 text-[0.92rem] font-medium transition-colors ${
+                  isActive ? "text-white" : "text-gray-400 hover:text-white"
                 }`;
+                const indicator = isActive ? (
+                  <span className="absolute inset-x-3.5 -bottom-[1px] h-px bg-gradient-to-r from-primary/0 via-primary to-primary/0" aria-hidden="true" />
+                ) : null;
 
                 if (isPageLink) {
                   return (
-                    <Link
-                      key={item.href}
-                      href={linkHref}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className={linkClassName}
-                      aria-current={isActive ? "page" : undefined}
-                    >
+                    <Link key={item.href} href={item.href} className={className} aria-current={isActive ? "page" : undefined}>
                       {item.label}
-                      <span
-                        className={`absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-300 ${
-                          isActive ? "w-full" : "w-0 group-hover:w-full"
-                        }`}
-                      />
+                      {indicator}
                     </Link>
                   );
                 }
@@ -206,158 +206,111 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
                 return (
                   <a
                     key={item.href}
-                    href={linkHref}
+                    href={resolveHref(item.href)}
                     onClick={(e) => handleLinkClick(e, item.href)}
-                    className={linkClassName}
-                    aria-current={isActive ? "page" : undefined}
+                    className={className}
+                    aria-current={isActive ? "true" : undefined}
                   >
                     {item.label}
-                    <span
-                      className={`absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-300 ${
-                        isActive ? "w-full" : "w-0 group-hover:w-full"
-                      }`}
-                    />
+                    {indicator}
                   </a>
                 );
               })}
+            </div>
 
+            <div className="flex items-center gap-2">
               <Link
                 href={getAlternateLangPath(pathname || "/")}
-                className="px-4 py-2 bg-background-lighter border border-primary/30 rounded-lg hover:border-primary transition-colors text-sm font-medium"
+                className="hidden rounded-lg px-3 py-2 text-xs font-semibold tracking-wider text-gray-400 transition-colors hover:text-white sm:inline-flex"
                 aria-label={isEnglish ? "Przełącz na język polski" : "Switch to English"}
                 hrefLang={isEnglish ? "pl" : "en"}
               >
                 {isEnglish ? "PL" : "EN"}
               </Link>
-            </div>
+              <Link href={contactHref} className="btn-primary hidden !px-4 !py-2.5 !text-sm sm:inline-flex">
+                {ctaLabel}
+                <ArrowRightIcon size={16} />
+              </Link>
 
-            <button
-              className="md:hidden relative z-50 flex items-center justify-center w-10 h-10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded"
-              onClick={() => setIsMobileMenuOpen((isOpen) => !isOpen)}
-              aria-label={
-                isMobileMenuOpen
-                  ? lang === "pl"
-                    ? "Zamknij menu"
-                    : "Close menu"
-                  : lang === "pl"
-                    ? "Otwórz menu"
-                    : "Open menu"
-              }
-              aria-expanded={isMobileMenuOpen}
-            >
-              {isMobileMenuOpen ? (
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 24 24"
-                  className="h-8 w-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M6 6l12 12" />
-                  <path d="M18 6L6 18" />
-                </svg>
-              ) : (
-                <span className="flex flex-col items-center justify-center gap-1.5" aria-hidden="true">
-                  <span className="block h-0.5 w-6 rounded-full bg-white" />
-                  <span className="block h-0.5 w-6 rounded-full bg-white" />
-                  <span className="block h-0.5 w-6 rounded-full bg-white" />
+              <button
+                className="relative z-50 flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] lg:hidden"
+                onClick={() => setIsMobileMenuOpen((isOpen) => !isOpen)}
+                aria-label={isMobileMenuOpen ? (lang === "pl" ? "Zamknij menu" : "Close menu") : lang === "pl" ? "Otwórz menu" : "Open menu"}
+                aria-expanded={isMobileMenuOpen}
+              >
+                <span className="relative block h-3.5 w-5" aria-hidden="true">
+                  <span className={`absolute left-0 block h-0.5 w-5 rounded-full bg-white transition-all duration-300 ${isMobileMenuOpen ? "top-1.5 rotate-45" : "top-0"}`} />
+                  <span className={`absolute left-0 top-1.5 block h-0.5 w-5 rounded-full bg-white transition-opacity duration-200 ${isMobileMenuOpen ? "opacity-0" : "opacity-100"}`} />
+                  <span className={`absolute left-0 block h-0.5 w-5 rounded-full bg-white transition-all duration-300 ${isMobileMenuOpen ? "top-1.5 -rotate-45" : "top-3"}`} />
                 </span>
-              )}
-            </button>
+              </button>
+            </div>
           </div>
         </div>
       </nav>
 
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <div className="fixed inset-0 z-40 md:hidden">
-            <motion.button
-              type="button"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-              className="absolute inset-0 bg-black/50"
-              onClick={() => setIsMobileMenuOpen(false)}
-              aria-label={lang === "pl" ? "Zamknij menu" : "Close menu"}
-            />
-
-            <motion.div
-              initial={{ opacity: 0, y: -16 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -16 }}
-              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute top-20 left-0 right-0 bg-background shadow-2xl border-b border-primary/20 max-h-[calc(100vh-5rem)] overflow-y-auto"
-            >
-              <div className="flex flex-col p-6 space-y-3">
+          <motion.div
+            className="fixed inset-0 z-40 bg-background/95 backdrop-blur-xl lg:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="container-site flex h-full flex-col pb-8 pt-24">
+              <ul className="flex flex-col">
                 {items.map((item, index) => {
                   const isPageLink = item.href.startsWith("/");
-                  const homePath = isEnglish ? "/en" : "/";
-                  const linkHref = isPageLink ? item.href : isHomePage ? item.href : `${homePath}${item.href}`;
-                  const itemKey = isPageLink ? item.key : item.href;
-                  const isActive = activeSection === itemKey;
-                  const mobileClassName = `block transition-colors duration-200 font-medium text-lg py-4 px-5 rounded-lg hover:bg-primary/20 border ${
-                    isActive
-                      ? "text-primary bg-primary/10 border-primary"
-                      : "text-white hover:text-primary border-primary/30 hover:border-primary"
+                  const isActive = activeSection === item.key;
+                  const className = `flex items-center justify-between border-b border-white/[0.07] py-4 font-display text-2xl font-medium transition-colors ${
+                    isActive ? "text-primary" : "text-white hover:text-primary"
                   }`;
-                  const motionProps = {
-                    initial: { opacity: 0, x: 40 },
-                    animate: { opacity: 1, x: 0 },
-                    transition: { duration: 0.4, delay: 0.1 + index * 0.07, ease: [0.16, 1, 0.3, 1] as const },
-                  };
-
-                  if (isPageLink) {
-                    return (
-                      <motion.div key={item.href} {...motionProps}>
-                        <Link
-                          href={linkHref}
-                          onClick={() => setIsMobileMenuOpen(false)}
-                          className={mobileClassName}
-                          aria-current={isActive ? "page" : undefined}
-                        >
-                          {item.label}
-                        </Link>
-                      </motion.div>
-                    );
-                  }
-
                   return (
-                    <motion.a
+                    <motion.li
                       key={item.href}
-                      href={linkHref}
-                      onClick={(e) => handleLinkClick(e, item.href)}
-                      className={mobileClassName}
-                      aria-current={isActive ? "page" : undefined}
-                      {...motionProps}
+                      initial={{ opacity: 0, y: 12 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: 0.04 * index, ease: [0.16, 1, 0.3, 1] }}
                     >
-                      {item.label}
-                    </motion.a>
+                      {isPageLink ? (
+                        <Link href={item.href} onClick={() => setIsMobileMenuOpen(false)} className={className} aria-current={isActive ? "page" : undefined}>
+                          {item.label}
+                          <ArrowRightIcon size={20} className="text-gray-600" />
+                        </Link>
+                      ) : (
+                        <a href={resolveHref(item.href)} onClick={(e) => handleLinkClick(e, item.href)} className={className}>
+                          {item.label}
+                          <ArrowRightIcon size={20} className="text-gray-600" />
+                        </a>
+                      )}
+                    </motion.li>
                   );
                 })}
+              </ul>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.1 + items.length * 0.07, ease: [0.16, 1, 0.3, 1] }}
-                  className="pt-4 mt-4 border-t border-primary/30"
-                >
+              <div className="mt-auto flex flex-col gap-3">
+                <Link href={contactHref} onClick={() => setIsMobileMenuOpen(false)} className="btn-primary w-full">
+                  {ctaLabel}
+                  <ArrowRightIcon size={18} />
+                </Link>
+                <div className="flex items-center justify-between text-sm text-gray-400">
+                  <a href="tel:+48516598792" className="hover:text-white">
+                    +48 516 598 792
+                  </a>
                   <Link
                     href={getAlternateLangPath(pathname || "/")}
-                    className="block w-full text-center px-4 py-3 bg-background-lighter border-2 border-primary/50 rounded-lg hover:border-primary hover:bg-primary/10 transition-colors text-sm font-medium text-white hover:text-primary"
-                    aria-label={isEnglish ? "Przełącz na język polski" : "Switch to English"}
                     hrefLang={isEnglish ? "pl" : "en"}
                     onClick={() => setIsMobileMenuOpen(false)}
+                    className="rounded-lg border border-white/10 px-3 py-1.5 font-semibold text-gray-300 hover:text-white"
+                    aria-label={isEnglish ? "Przełącz na język polski" : "Switch to English"}
                   >
-                    {isEnglish ? "PL" : "EN"}
+                    {isEnglish ? "Polski" : "English"}
                   </Link>
-                </motion.div>
+                </div>
               </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         )}
       </AnimatePresence>
     </>

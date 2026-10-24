@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
-import Breadcrumbs from "@/components/Breadcrumbs";
 import Contact from "@/components/Contact";
-import AiAssistantSection from "@/components/ai-assistant/AiAssistantSection";
+import ContactPageContent from "@/components/pages/ContactPageContent";
 
 const TITLE = "Contact ML DevWorks: email, phone, Krakow | ML DevWorks";
 const DESCRIPTION =
@@ -76,73 +74,8 @@ export default function ContactPage() {
       <StructuredData lang="en" />
       <ContactPageSchema />
       <Navbar lang="en" />
-      <main className="min-h-screen pt-20">
-        <section className="px-4 pt-8 md:pt-24 pb-8 bg-gradient-to-b from-background to-background-lighter">
-          <div className="max-w-7xl mx-auto">
-            <Breadcrumbs className="mb-5 md:mb-8" items={[{ label: "Home", href: "/en" }, { label: "Contact" }]} />
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">Contact ML DevWorks</h1>
-            <p className="text-lg md:text-2xl text-gray-300 max-w-3xl leading-relaxed mb-6 md:mb-10">
-              {/* Shorter text on phones so contact details are visible right away. */}
-              Write, call, or ask the AI advisor what can be automated in your company.
-              <span className="hidden md:inline"> You work directly with me, Michał Lipka, a developer from Krakow.</span>
-            </p>
-
-            <div className="grid gap-3 md:gap-4 md:grid-cols-3">
-              <a href="mailto:office@ml-devworks.com" className="bg-background-lighter border border-primary/20 rounded-xl p-4 md:p-6 hover:border-primary transition-colors group block">
-                <p className="text-sm text-gray-400 mb-1 md:mb-2">Email</p>
-                <p className="text-base md:text-lg font-semibold text-white group-hover:text-primary transition-colors break-all">office@ml-devworks.com</p>
-              </a>
-              <a href="tel:+48516598792" className="bg-background-lighter border border-primary/20 rounded-xl p-4 md:p-6 hover:border-primary transition-colors group block">
-                <p className="text-sm text-gray-400 mb-1 md:mb-2">Phone</p>
-                <p className="text-base md:text-lg font-semibold text-white group-hover:text-primary transition-colors">+48 516 598 792</p>
-              </a>
-              <a
-                href="https://www.google.com/maps/place/ML+Devworks/@50.0624834,19.9337611,17z/data=!3m1!4b1!4m6!3m5!1s0x425626465742ffe9:0xa1672c4591c41c29!8m2!3d50.06248!4d19.936336!16s%2Fg%2F11yrt8l9fl?entry=ttu"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-background-lighter border border-primary/20 rounded-xl p-4 md:p-6 hover:border-primary transition-colors group block"
-              >
-                <p className="text-sm text-gray-400 mb-1 md:mb-2">Address (Krakow)</p>
-                <p className="text-base md:text-lg font-semibold text-white group-hover:text-primary transition-colors">Rynek Główny 34/15, 31-010 Kraków</p>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <AiAssistantSection lang="en" />
-
-        <section className="px-4 py-12 bg-background-lighter/40" aria-labelledby="brief-heading">
-          <div className="max-w-7xl mx-auto">
-            <h2 id="brief-heading" className="section-heading mb-4">What to write to get a prototype</h2>
-            <p className="section-lead mb-8">
-              The better the description, the faster I come back with specifics. No specification needed - answers to four questions are enough:
-            </p>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-              {briefTips.map(([title, text], index) => (
-                <article key={title} className="bg-background border border-primary/20 rounded-xl p-6">
-                  <span className="inline-flex w-9 h-9 items-center justify-center rounded-full bg-primary text-background font-bold mb-4" aria-hidden="true">
-                    {index + 1}
-                  </span>
-                  <h3 className="text-xl font-bold text-primary mb-2">{title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{text}</p>
-                </article>
-              ))}
-            </div>
-            <p className="text-gray-400 mt-8">
-              Not sure which service fits? See{" "}
-              <Link href="/en/services" className="text-primary hover:text-primary-light underline">
-                all services
-              </Link>{" "}
-              or read how to{" "}
-              <Link href="/en/blog/comprehensive-software-services-for-businesses-how-to-match-solutions-to-industry" className="text-primary hover:text-primary-light underline">
-                match a solution to your industry
-              </Link>
-              .
-            </p>
-          </div>
-        </section>
-
-        <Contact lang="en" />
+      <main className="min-h-screen">
+        <ContactPageContent lang="en" briefTips={briefTips} />
       </main>
       <Footer lang="en" />
     </>

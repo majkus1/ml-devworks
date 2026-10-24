@@ -22,6 +22,82 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ile-kosztuje-automatyzacja-procesu-sprzedazowego",
+    slugEn: "how-much-does-sales-process-automation-cost",
+    title: {
+      pl: "Ile kosztuje automatyzacja procesu sprzedażowego? Cennik 2026",
+      en: "How Much Does Sales Process Automation Cost? 2026 Pricing",
+    },
+    metaTitle: {
+      pl: "Ile kosztuje automatyzacja procesu sprzedażowego? Cennik",
+      en: "Sales Process Automation Cost: 2026 Pricing",
+    },
+    excerpt: {
+      pl: "Od 2 500 zł netto za zapytania prosto do CRM, 6 000–12 000 zł za kwalifikację leadów z AI i follow-upy. Cennik, czas wdrożenia, przykład zwrotu i od czego zacząć.",
+      en: "From PLN 2,500 net for enquiries straight to the CRM, PLN 6,000–12,000 for AI lead qualification and follow-ups. Pricing, timelines, a payback example, and where to start.",
+    },
+    publishedAt: "2026-10-24",
+    dateModified: "2026-10-24",
+    readingTime: { pl: "6 min", en: "6 min" },
+    keywords: {
+      pl: [
+        "ile kosztuje automatyzacja procesu sprzedażowego",
+        "automatyzacja procesu sprzedaży koszt",
+        "automatyzacja sprzedaży cena",
+        "automatyzacja lejka sprzedażowego",
+        "automatyzacja crm cena",
+        "kwalifikacja leadów ai",
+        "automatyczne follow-upy",
+        "ile kosztuje wdrożenie automatyzacji procesów biznesowych",
+      ],
+      en: [
+        "sales process automation cost",
+        "sales automation pricing",
+        "crm automation cost",
+        "ai lead qualification",
+        "automated sales follow-ups",
+      ],
+    },
+    faq: {
+      pl: [
+        {
+          q: "Ile kosztuje automatyzacja procesu sprzedażowego?",
+          a: "Zwykle od 2 500 zł netto za przekazywanie zapytań do CRM z zadaniem dla handlowca, 6 000–12 000 zł netto za kwalifikację leadów z AI i automatyczne follow-upy oraz od ok. 12 000 zł netto za pełny lejek z ofertami, fakturami i raportami.",
+        },
+        {
+          q: "Ile trwa wdrożenie automatyzacji sprzedaży?",
+          a: "Prosty przepływ zapytań do CRM to zwykle 3–7 dni roboczych, kwalifikacja z AI 2–4 tygodnie, a pełny lejek 4–8 tygodni. Prototyp do sprawdzenia przygotowuję w 2–5 dni.",
+        },
+        {
+          q: "Czy do automatyzacji sprzedaży potrzebny jest CRM?",
+          a: "Najlepiej tak — CRM jest miejscem, w którym zbierają się leady i zadania. Jeśli firma go nie ma, pomagam wybrać prosty system z API albo przygotowuję lekki panel dopasowany do procesu.",
+        },
+        {
+          q: "Jakie są miesięczne koszty po wdrożeniu?",
+          a: "Głównie abonament CRM i koszt modeli AI, najczęściej od kilkudziesięciu do kilkuset złotych miesięcznie. Nie pobieram stałego abonamentu za samą automatyzację.",
+        },
+      ],
+      en: [
+        {
+          q: "How much does sales process automation cost?",
+          a: "Usually from PLN 2,500 net for passing enquiries to the CRM with a task for sales, PLN 6,000–12,000 net for AI lead qualification and automatic follow-ups, and from about PLN 12,000 net for a full funnel with quotes, invoices, and reports.",
+        },
+        {
+          q: "How long does sales automation take to implement?",
+          a: "A simple enquiry-to-CRM flow usually takes 3–7 business days, AI qualification 2–4 weeks, and a full funnel 4–8 weeks. I prepare a prototype to review within 2–5 days.",
+        },
+        {
+          q: "Do I need a CRM for sales automation?",
+          a: "Ideally yes — the CRM is where leads and tasks come together. If you don't have one, I help choose a simple system with an API or build a light panel tailored to the process.",
+        },
+        {
+          q: "What are the monthly costs after implementation?",
+          a: "Mainly the CRM subscription and AI model usage, usually tens to a few hundred PLN per month. I don't charge a fixed subscription for the automation itself.",
+        },
+      ],
+    },
+  },
+  {
     slug: "panel-zapisow-dla-szkoly-jezykowej-studium-przypadku",
     slugEn: "enrollment-panel-for-a-language-school-case-study",
     title: {
@@ -332,7 +408,7 @@ export const blogPosts: BlogPost[] = [
       en: "AI Automation Agency or Developer? How to Choose an Automation Vendor",
     },
     metaTitle: {
-      pl: "Agencja automatyzacji AI czy programista? Jak wybrać",
+      pl: "Agencja automatyzacji AI czy programista? Porównanie",
       en: "AI Automation Agency or Developer? How to Choose",
     },
     excerpt: {
@@ -340,7 +416,7 @@ export const blogPosts: BlogPost[] = [
       en: "AI automation agency, no-code freelancer, developer, or in-house team? Comparison of costs and solution ownership, 10 vendor questions, red flags.",
     },
     publishedAt: "2026-08-30",
-    dateModified: "2026-09-06",
+    dateModified: "2026-10-24",
     readingTime: { pl: "9 min", en: "9 min" },
     keywords: {
       pl: [
@@ -364,6 +440,10 @@ export const blogPosts: BlogPost[] = [
     },
     faq: {
       pl: [
+        {
+          q: "Które agencje AI specjalizują się w automatyzacji procesów?",
+          a: "Na rynku są trzy typy wykonawców: agencje no-code (gotowe scenariusze w narzędziach typu Make czy Zapier), software house'y budujące większe systemy oraz niezależni programiści, którzy wdrażają agentów AI i integracje jako kod. Wybierając, sprawdź, czy wykonawca pokaże prototyp na Twoim procesie, do kogo należą kod i konta oraz jaki jest koszt utrzymania po wdrożeniu.",
+        },
         {
           q: "Czym różni się agencja automatyzacji AI od programisty?",
           a: "Agencja zwykle składa scenariusze w narzędziach no-code i rozlicza abonament, a rozmawiasz z handlowcem, nie z wykonawcą. Programista buduje automatyzacje jako kod i integracje, które należą do Ciebie, i osobiście odpowiada za analizę, wdrożenie i utrzymanie.",
@@ -409,15 +489,15 @@ export const blogPosts: BlogPost[] = [
       en: "How Much Does Business Process Automation Cost? Costs, Examples and ROI",
     },
     metaTitle: {
-      pl: "Ile kosztuje automatyzacja procesów? Koszty i ROI",
+      pl: "Ile kosztuje automatyzacja procesów? Cennik 2026 i ROI",
       en: "Business Process Automation Cost and ROI",
     },
     excerpt: {
-      pl: "Ile kosztuje automatyzacja procesów, w tym procesu sprzedażowego: widełki cen, co wpływa na koszt, przykładowe wyliczenie i jak policzyć ROI przed wdrożeniem.",
+      pl: "Prosta automatyzacja od 2 500 zł netto, integracje wielu systemów 8 000–18 000 zł. Widełki cen, co wpływa na koszt, przykładowe wyliczenie i jak policzyć ROI przed wdrożeniem.",
       en: "What business process automation costs, including sales process automation: price ranges, cost drivers, an example calculation and how to estimate ROI.",
     },
     publishedAt: "2026-07-06",
-    dateModified: "2026-09-27",
+    dateModified: "2026-10-24",
     readingTime: { pl: "10 min", en: "10 min" },
     keywords: {
       pl: [
@@ -451,6 +531,18 @@ export const blogPosts: BlogPost[] = [
         {
           q: "Jak policzyć ROI automatyzacji?",
           a: "Najprościej porównać miesięczny koszt pracy ręcznej, błędów i opóźnień z kosztem wdrożenia oraz utrzymania automatyzacji. Dobrze wybrany proces powinien mieć mierzalny czas zwrotu.",
+        },
+        {
+          q: "Ile kosztuje wdrożenie automatyzacji procesów biznesowych?",
+          a: "Najczęściej od 2 500 zł netto za jeden prosty proces, 8 000–18 000 zł netto za integrację kilku systemów, a agenci AI i panele są wyceniani po analizie. Do tego ewentualne opłaty za narzędzia i modele AI, zwykle kilkadziesiąt do kilkuset złotych miesięcznie.",
+        },
+        {
+          q: "Ile kosztuje oprogramowanie do automatyzacji procesów?",
+          a: "Gotowe narzędzia no-code kosztują zwykle od kilkudziesięciu do kilkuset złotych miesięcznie, ale rosną z liczbą zadań. Automatyzacja zbudowana jako kod to jednorazowy koszt wdrożenia i niskie opłaty za infrastrukturę, bez abonamentu za każdy krok.",
+        },
+        {
+          q: "Jaki ROI daje automatyzacja procesów biznesowych?",
+          a: "Dobrze wybrany proces zwraca się zwykle w 3–9 miesięcy. Przykład: 20 godzin pracy miesięcznie po 60 zł to 1 200 zł oszczędności, więc wdrożenie za 6 000 zł zwraca się w około 5 miesięcy — bez liczenia mniejszej liczby błędów i szybszej obsługi klientów.",
         },
         {
           q: "Ile kosztuje automatyzacja procesu sprzedażowego?",
@@ -590,6 +682,10 @@ export const blogPosts: BlogPost[] = [
     title: {
       pl: "Integracja systemów w firmie: API, CRM, ERP - jak zacząć",
       en: "Business System Integration: API, CRM, ERP - How to Start",
+    },
+    metaTitle: {
+      pl: "Integracja systemów w firmie: CRM z API, ERP, sklep",
+      en: "Business System Integration: CRM API, ERP, Store",
     },
     excerpt: {
       pl: "Jak uporządkować integracje API, CRM, ERP, formularze, płatności i raportowanie oraz ograniczyć ręczne przepisywanie danych.",
@@ -901,15 +997,19 @@ export const blogPosts: BlogPost[] = [
     slug: "kiedy-firmie-oplaca-sie-automatyzacja-procesow-z-ai",
     slugEn: "when-ai-process-automation-is-worth-it-for-business",
     title: {
-      pl: "Kiedy opłaca się automatyzacja procesów z AI?",
-      en: "When Is AI Process Automation Worth It?",
+      pl: "Czy automatyzacja AI opłaca się małej firmie? Kiedy tak, a kiedy nie",
+      en: "Is AI Process Automation Worth It for a Small Business?",
+    },
+    metaTitle: {
+      pl: "Czy automatyzacja AI opłaca się małej firmie?",
+      en: "Is AI Automation Worth It for a Small Business?",
     },
     excerpt: {
       pl: "Kiedy automatyzacja z AI daje zwrot, które procesy wybrać najpierw i jak policzyć wpływ na koszty oraz czas zespołu.",
       en: "When AI automation delivers ROI, which workflows to automate first, and how to estimate impact on cost and team time.",
     },
     publishedAt: "2026-03-11",
-    dateModified: "2026-09-06",
+    dateModified: "2026-10-24",
     readingTime: { pl: "9 min", en: "9 min" },
     keywords: {
       pl: [
@@ -952,6 +1052,14 @@ export const blogPosts: BlogPost[] = [
         {
           q: "Czy automatyzacja AI opłaca się dla małej firmy?",
           a: "Tak, jeśli zaczniesz od jednego procesu, który regularnie zabiera czas: odpowiadania na zapytania, umawiania terminów albo przepisywania danych. Prosta automatyzacja od 2 500 zł netto zwraca się zwykle w kilka miesięcy przy 3-5 godzinach oszczędności tygodniowo.",
+        },
+        {
+          q: "Ile czasu trwa wdrożenie automatyzacji AI?",
+          a: "Pierwsza prosta automatyzacja działa zwykle po 3–14 dniach roboczych, agent AI z integracjami po 2–4 tygodniach. Działający prototyp do sprawdzenia można zobaczyć już po 2–5 dniach.",
+        },
+        {
+          q: "Ile kosztuje automatyzacja AI dla małej firmy?",
+          a: "Najczęściej od 2 500 zł netto za jeden proces, np. odpowiadanie na zapytania albo przepisywanie danych z maili do arkusza. Bardziej złożone wdrożenia z agentem AI i kilkoma systemami kosztują zwykle 6 000–12 000 zł netto.",
         },
       ],
       en: [

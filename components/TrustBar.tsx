@@ -1,20 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { ClockIcon, PrototypeIcon, StarIcon, WalletIcon } from "@/components/ui/icons";
 
 interface TrustBarProps {
   lang?: "pl" | "en";
 }
 
-interface Stat {
-  value: string;
-  label: string;
-  sub?: string;
-}
-
 const GOOGLE_MAPS_URL =
   "https://www.google.com/maps/place/ML+Devworks/@50.0624834,19.9337611,17z/data=!3m1!4b1!4m6!3m5!1s0x425626465742ffe9:0xa1672c4591c41c29!8m2!3d50.06248!4d19.936336!16s%2Fg%2F11yrt8l9fl?entry=ttu";
 
+/** Pasek konkretów zaraz pod hero: czas, cena i opinie — to, o co klient pyta najpierw. */
 export default function TrustBar({ lang = "pl" }: TrustBarProps) {
   const isPl = lang === "pl";
   const [rating, setRating] = useState<{ value: number; total: number } | null>(null);
@@ -33,64 +29,73 @@ export default function TrustBar({ lang = "pl" }: TrustBarProps) {
     };
   }, [lang]);
 
-  const stats: Stat[] = [
+  const ratingValue = rating ? rating.value.toFixed(1).replace(".", isPl ? "," : ".") : isPl ? "5,0" : "5.0";
+  const reviewsLabel =
+    rating && rating.total > 0
+      ? isPl
+        ? `${rating.total} ${rating.total === 1 ? "opinia" : rating.total < 5 ? "opinie" : "opinii"} w Google`
+        : `${rating.total} ${rating.total === 1 ? "review" : "reviews"} on Google`
+      : isPl
+        ? "opinie w Google"
+        : "Google reviews";
+
+  const stats = [
     {
-      value: "2-5 " + (isPl ? "dni" : "days"),
+      icon: PrototypeIcon,
+      value: isPl ? "2–5 dni" : "2–5 days",
       label: isPl ? "do bezpłatnego prototypu" : "to a free prototype",
-      sub: isPl ? "klikalny albo działający szkic" : "clickable or a working draft",
     },
     {
-      value: "3-14 " + (isPl ? "dni" : "days"),
-      label: isPl ? "do działającej pierwszej automatyzacji" : "to the first working automation",
-      sub: isPl ? "wdrożenie etapami, bez abonamentu" : "delivered in stages, no subscription",
+      icon: ClockIcon,
+      value: isPl ? "3–14 dni" : "3–14 days",
+      label: isPl ? "do pierwszej działającej automatyzacji" : "to the first working automation",
     },
     {
+      icon: WalletIcon,
       value: isPl ? "od 2 500 zł" : "from PLN 2,500",
-      label: isPl ? "prosta automatyzacja AI" : "simple AI automation",
-      sub: isPl ? "netto, wycena znana przed startem" : "net, price agreed before we start",
+      label: isPl ? "netto, cena znana przed startem" : "net, price agreed before we start",
     },
   ];
 
   return (
-    <section className="relative px-4 py-14 md:py-20" aria-label={isPl ? "Dlaczego warto" : "Why it works"}>
-      <div className="max-w-7xl mx-auto">
-        <div className="grid gap-4 md:gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((stat) => (
-            <div key={stat.label} className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl px-6 py-6 md:px-7 md:py-7 hover:border-primary/50 transition-colors">
-              <p className="text-2xl md:text-3xl font-bold text-white leading-none mb-3">{stat.value}</p>
-              <p className="text-sm text-gray-200 leading-snug">{stat.label}</p>
-              {stat.sub && <p className="text-xs text-gray-500 mt-1">{stat.sub}</p>}
-            </div>
-          ))}
+    <section className="relative" aria-label={isPl ? "Najważniejsze fakty" : "Key facts"}>
+      <div className="container-site">
+        <div className="grid overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.06] sm:grid-cols-2 lg:grid-cols-4" style={{ gap: "1px" }}>
+          {stats.map((stat) => {
+            const Icon = stat.icon;
+            return (
+              <div key={stat.label} className="flex items-center gap-4 bg-background-light px-6 py-6">
+                <span className="icon-tile">
+                  <Icon size={20} />
+                </span>
+                <div>
+                  <p className="font-display text-2xl font-semibold leading-none text-white">{stat.value}</p>
+                  <p className="mt-1.5 text-sm leading-snug text-gray-400">{stat.label}</p>
+                </div>
+              </div>
+            );
+          })}
           <a
             href={GOOGLE_MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl px-6 py-6 md:px-7 md:py-7 hover:border-primary/50 transition-colors group"
+            className="group flex items-center gap-4 bg-background-light px-6 py-6 transition-colors hover:bg-background-lighter"
             aria-label={isPl ? "Zobacz opinie ML DevWorks w Google" : "See ML DevWorks reviews on Google"}
           >
-            <p className="text-2xl md:text-3xl font-bold text-white leading-none mb-3 flex items-center gap-2">
-              {rating ? rating.value.toFixed(1).replace(".", isPl ? "," : ".") : "5,0"}
-              <span className="flex text-yellow-400" aria-hidden="true">
-                {[0, 1, 2, 3, 4].map((index) => (
-                  <svg key={index} width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                ))}
-              </span>
-            </p>
-            <p className="text-sm text-gray-200 leading-snug group-hover:text-primary transition-colors">
-              {isPl ? "ocena klientów w Google" : "customer rating on Google"}
-            </p>
-            <p className="text-xs text-gray-500 mt-1">
-              {rating && rating.total > 0
-                ? isPl
-                  ? `${rating.total} ${rating.total === 1 ? "opinia" : rating.total < 5 ? "opinie" : "opinii"}`
-                  : `${rating.total} ${rating.total === 1 ? "review" : "reviews"}`
-                : isPl
-                  ? "zobacz opinie"
-                  : "see reviews"}
-            </p>
+            <span className="icon-tile !border-amber-400/30 !bg-amber-400/10 !text-amber-400">
+              <StarIcon size={18} />
+            </span>
+            <div>
+              <p className="flex items-center gap-2 font-display text-2xl font-semibold leading-none text-white">
+                {ratingValue}
+                <span className="flex text-amber-400" aria-hidden="true">
+                  {[0, 1, 2, 3, 4].map((index) => (
+                    <StarIcon key={index} size={13} />
+                  ))}
+                </span>
+              </p>
+              <p className="mt-1.5 text-sm leading-snug text-gray-400 transition-colors group-hover:text-primary">{reviewsLabel}</p>
+            </div>
           </a>
         </div>
       </div>

@@ -166,7 +166,7 @@ export default function AiAssistantChat({ variant, onClose, autoFocus = false }:
     : { initial: { opacity: 0, y: 8 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.25, ease: [0.16, 1, 0.3, 1] as const } };
 
   return (
-    <div className={`relative flex flex-col ${isPanel ? "h-full" : "h-[640px] md:h-[680px]"} border border-primary/25 ${isPanel ? "" : "rounded-2xl shadow-[0_30px_80px_rgba(0,0,0,0.55)]"} overflow-hidden bg-[#0a0e0c] bg-[radial-gradient(90%_60%_at_100%_0%,rgba(0,255,136,0.14),transparent_60%),radial-gradient(70%_50%_at_0%_100%,rgba(0,255,136,0.06),transparent_60%)]`}>
+    <div className={`relative flex flex-col ${isPanel ? "h-full" : "h-[640px] md:h-[680px]"} border border-white/10 ${isPanel ? "" : "rounded-2xl shadow-[0_30px_80px_rgba(0,0,0,0.55)]"} overflow-hidden bg-[#0b1013] bg-[radial-gradient(90%_60%_at_100%_0%,rgba(0,255,136,0.12),transparent_60%),radial-gradient(70%_50%_at_0%_100%,rgba(62,231,255,0.06),transparent_60%)]`}>
       {/* Nagłówek */}
       <div className="flex items-center gap-3 px-5 py-4 border-b border-white/10 bg-white/[0.03] backdrop-blur">
         <AssistantAvatar />

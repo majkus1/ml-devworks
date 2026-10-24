@@ -143,7 +143,7 @@ export default function StronaInternetowaDlaFirmyContent({ lang }: Props) {
         </div>
       </section>
 
-      <section className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-6 md:p-8 border border-primary/20">
+      <section className="card-accent">
         <h2 className="text-xl font-bold text-white mb-4">
           {isPl ? "Potrzebujesz strony internetowej dla swojej firmy?" : "Need a Website for Your Business?"}
         </h2>
@@ -155,7 +155,7 @@ export default function StronaInternetowaDlaFirmyContent({ lang }: Props) {
         <div className="flex flex-wrap gap-4">
           <Link
             href={isPl ? "/uslugi/strony-internetowe" : "/en/services/web-development"}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary font-semibold rounded-lg hover:bg-primary-dark transition-colors !text-black"
+            className="btn-primary !text-[#03140b] !no-underline"
           >
             {isPl ? "Zobacz ofertę stron internetowych" : "View web development offer"}
             <span aria-hidden="true">→</span>

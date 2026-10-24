@@ -1,10 +1,9 @@
 import { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
-import Breadcrumbs from "@/components/Breadcrumbs";
+import BlogPostLayout from "@/components/blog/BlogPostLayout";
 import { blogPosts, type BlogPost } from "@/lib/blog";
 import { getPostContent } from "@/lib/blog-content";
 
@@ -113,6 +112,11 @@ function ArticleSchema({ post }: { post: BlogPost }) {
 }
 
 const RELATED_SERVICE_BY_SLUG: Record<string, { title: string; href: string; label: string }> = {
+  "how-much-does-sales-process-automation-cost": {
+    title: "AI automation for companies",
+    href: "/en/services/automation-and-ai",
+    label: "See the service and pricing",
+  },
   "enrollment-panel-for-a-language-school-case-study": {
     title: "Class enrollment system for schools and academies",
     href: "/en/services/class-enrollment-system",
@@ -190,20 +194,6 @@ const RELATED_SERVICE_BY_SLUG: Record<string, { title: string; href: string; lab
   },
 };
 
-function RelatedService({ slug }: { slug: string }) {
-  const service = RELATED_SERVICE_BY_SLUG[slug];
-  if (!service) return null;
-
-  return (
-    <aside className="mt-12 bg-gradient-to-r from-primary/15 to-primary/5 border border-primary/25 rounded-xl p-6">
-      <p className="text-gray-400 mb-2">Related service</p>
-      <h2 className="text-2xl font-bold mb-4">{service.title}</h2>
-      <Link href={service.href} className="inline-flex text-primary hover:text-primary-light font-semibold">
-        {service.label}
-      </Link>
-    </aside>
-  );
-}
 
 function FAQSchema({ post }: { post: BlogPost }) {
   if (!post.faq?.en?.length) return null;
@@ -223,25 +213,6 @@ function FAQSchema({ post }: { post: BlogPost }) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
 }
 
-function FAQSection({ post }: { post: BlogPost }) {
-  if (!post.faq?.en?.length) return null;
-
-  return (
-    <section className="mt-12" aria-labelledby="post-faq-heading">
-      <h2 id="post-faq-heading" className="section-heading mb-6">
-        Frequently Asked Questions
-      </h2>
-      <div className="space-y-4">
-        {post.faq.en.map((item) => (
-          <article key={item.q} className="bg-background-lighter border border-primary/20 rounded-xl p-6">
-            <h3 className="text-xl font-bold text-primary mb-3">{item.q}</h3>
-            <p className="text-gray-300 leading-relaxed">{item.a}</p>
-          </article>
-        ))}
-      </div>
-    </section>
-  );
-}
 
 export default async function BlogPostPageEn({ params }: Props) {
   const { slug } = await params;
@@ -260,47 +231,8 @@ export default async function BlogPostPageEn({ params }: Props) {
       <ArticleSchema post={post} />
       <FAQSchema post={post} />
       <Navbar lang="en" />
-      <main className="min-h-screen pt-20">
-        <article className="px-4 py-16 max-w-3xl mx-auto" itemScope itemType="https://schema.org/BlogPosting">
-          <Breadcrumbs
-            className="mb-6"
-            items={[
-              { label: "Home", href: "/en" },
-              { label: "Blog", href: "/en/blog" },
-              { label: post.title.en },
-            ]}
-          />
-          <Link
-            href="/en/blog"
-            className="text-primary hover:text-primary-light text-sm font-medium mb-6 inline-block"
-          >
-            ← Back to blog
-          </Link>
-          <header className="mb-10">
-            <time
-              dateTime={post.publishedAt}
-              className="text-primary/80 text-sm block mb-2"
-              itemProp="datePublished"
-            >
-              {new Date(post.publishedAt).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </time>
-            {post.readingTime && (
-              <span className="text-gray-500 text-sm ml-4">{post.readingTime.en}</span>
-            )}
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white" itemProp="headline">
-              {post.title.en}
-            </h1>
-          </header>
-          <div className="max-w-none text-gray-300 [&_a]:text-primary [&_a]:hover:text-primary-light [&_a]:underline">
-            {content ?? <p>{post.excerpt.en}</p>}
-          </div>
-          <FAQSection post={post} />
-          <RelatedService slug={post.slugEn} />
-        </article>
+      <main className="min-h-screen">
+        <BlogPostLayout lang="en" post={post} content={content} related={RELATED_SERVICE_BY_SLUG[post.slugEn]} />
       </main>
       <Footer lang="en" />
     </>

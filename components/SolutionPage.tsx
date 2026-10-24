@@ -3,8 +3,12 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
-import Breadcrumbs from "@/components/Breadcrumbs";
-import OpenAssistantButton from "@/components/ai-assistant/OpenAssistantButton";
+import PageHero from "@/components/ui/PageHero";
+import Section from "@/components/ui/Section";
+import SectionHeader from "@/components/ui/SectionHeader";
+import FaqAccordion from "@/components/ui/FaqAccordion";
+import CtaBand from "@/components/ui/CtaBand";
+import { ArrowRightIcon, CheckIcon } from "@/components/ui/icons";
 import type { SiteLang } from "@/lib/services";
 import { getSolution, type SolutionId } from "@/lib/solutions";
 
@@ -99,230 +103,154 @@ export default function SolutionPage({ id, lang }: { id: SolutionId; lang: SiteL
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar lang={lang} />
 
-      <main className="min-h-screen pt-20">
-        {/* Hero */}
-        <section className="px-4 pt-10 pb-16 md:pt-14 md:pb-24 bg-gradient-to-b from-background to-background-lighter">
-          <div className="max-w-5xl mx-auto">
-            <Breadcrumbs
-              className="mb-8"
-              items={[
-                { label: isEnglish ? "Home" : "Strona główna", href: homeHref },
-                { label: isEnglish ? "Services" : "Usługi", href: servicesHref },
-                { label: t.breadcrumb },
-              ]}
-            />
-            <p className="inline-flex text-sm font-semibold text-primary bg-primary/10 border border-primary/30 rounded-full px-3 py-1 mb-6">
-              {t.eyebrow}
-            </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight [text-wrap:balance]">
-              {t.h1} <span className="text-primary">{t.h1Highlight}</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed mb-4 [text-wrap:pretty]">{t.lead}</p>
-            <p className="text-base md:text-lg text-gray-400 max-w-3xl leading-relaxed mb-8">{t.priceLine}</p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href={contactHref}
-                className="px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors text-center"
-              >
-                {t.ctaPrimary}
-              </Link>
-              <OpenAssistantButton
-                fallbackHref={`${contactHref}#ai-advisor`}
-                className="px-8 py-4 bg-background-lighter border border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-colors text-center"
-              >
-                {t.ctaAssistant}
-              </OpenAssistantButton>
-            </div>
-          </div>
-        </section>
+      <main className="min-h-screen">
+        <PageHero
+          lang={lang}
+          breadcrumbs={[
+            { label: isEnglish ? "Home" : "Strona główna", href: homeHref },
+            { label: isEnglish ? "Services" : "Usługi", href: servicesHref },
+            { label: t.breadcrumb },
+          ]}
+          eyebrow={t.eyebrow}
+          title={
+            <>
+              {t.h1} <span className="text-gradient">{t.h1Highlight}</span>
+            </>
+          }
+          lead={t.lead}
+          primaryCta={{ label: t.ctaPrimary, href: contactHref }}
+        >
+          <p className="mt-8 flex items-start gap-2.5 text-[0.95rem] leading-relaxed text-gray-400">
+            <CheckIcon size={18} className="mt-0.5 shrink-0 text-primary" />
+            {t.priceLine}
+          </p>
+        </PageHero>
 
         {/* Problem */}
-        <section className="px-4 py-16" aria-labelledby="solution-pains-heading">
-          <div className="max-w-6xl mx-auto">
-            <h2 id="solution-pains-heading" className="section-heading mb-10">
-              {t.painsHeading}
-            </h2>
-            <div className="grid gap-6 md:grid-cols-3">
-              {t.pains.map((pain, index) => (
-                <article key={pain} className="bg-background-lighter border border-primary/20 rounded-xl p-6">
-                  <span className="block text-sm font-semibold text-primary mb-3" aria-hidden="true">
-                    0{index + 1}
-                  </span>
-                  <p className="text-gray-200 leading-relaxed">{pain}</p>
-                </article>
-              ))}
-            </div>
+        <Section id="pains" labelledBy="solution-pains-heading">
+          <SectionHeader id="solution-pains-heading" eyebrow={isEnglish ? "The problem" : "Problem"} title={t.painsHeading} />
+          <div className="grid gap-5 md:grid-cols-3">
+            {t.pains.map((pain, index) => (
+              <article key={pain} className="card">
+                <span className="font-display text-sm font-semibold text-primary" aria-hidden="true">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <p className="mt-3 leading-relaxed text-gray-200">{pain}</p>
+              </article>
+            ))}
           </div>
-        </section>
+        </Section>
 
         {/* Przepływ */}
-        <section className="px-4 py-16 bg-background-lighter/40" aria-labelledby="solution-flow-heading">
-          <div className="max-w-4xl mx-auto">
-            <h2 id="solution-flow-heading" className="section-heading mb-4">
-              {t.flowHeading}
-            </h2>
-            <p className="section-lead mb-10">{t.flowIntro}</p>
-            <ol className="space-y-8">
-              {t.flow.map((step, index) => (
-                <li key={step.title} className="flex gap-4 md:gap-5">
-                  <span
-                    className="shrink-0 w-11 h-11 md:w-12 md:h-12 bg-primary rounded-full flex items-center justify-center text-background font-bold text-lg md:text-xl"
-                    aria-hidden="true"
-                  >
-                    {index + 1}
-                  </span>
-                  <div className="pt-1">
-                    <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                    <p className="text-gray-300 leading-relaxed">{step.text}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
+        <Section id="flow" tone="muted" labelledBy="solution-flow-heading">
+          <SectionHeader id="solution-flow-heading" eyebrow={isEnglish ? "How it works" : "Jak to działa"} title={t.flowHeading} lead={t.flowIntro} />
+          <ol className="relative grid gap-4 md:grid-cols-2">
+            {t.flow.map((step, index) => (
+              <li key={step.title} className="card flex gap-5">
+                <span className="font-display text-2xl font-semibold text-primary/80" aria-hidden="true">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <h3 className="font-sans text-lg font-semibold text-white">{step.title}</h3>
+                  <p className="mt-2 leading-relaxed text-gray-400">{step.text}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </Section>
 
         {/* Funkcje */}
-        <section className="px-4 py-16" aria-labelledby="solution-features-heading">
-          <div className="max-w-6xl mx-auto">
-            <h2 id="solution-features-heading" className="section-heading mb-10">
-              {t.featuresHeading}
-            </h2>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {t.features.map((feature) => (
-                <article
-                  key={feature.title}
-                  className="bg-background-lighter border border-primary/20 rounded-xl p-6 hover:border-primary/50 transition-colors"
-                >
-                  <h3 className="text-xl font-bold text-primary mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{feature.text}</p>
-                </article>
-              ))}
-            </div>
+        <Section id="features" labelledBy="solution-features-heading">
+          <SectionHeader id="solution-features-heading" eyebrow={isEnglish ? "Features" : "Funkcje"} title={t.featuresHeading} />
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {t.features.map((feature) => (
+              <article key={feature.title} className="card-interactive">
+                <h3 className="font-sans text-lg font-semibold text-white">{feature.title}</h3>
+                <p className="mt-2 leading-relaxed text-gray-400">{feature.text}</p>
+              </article>
+            ))}
           </div>
-        </section>
+        </Section>
 
         {/* Dla kogo + integracje */}
-        <section className="px-4 py-16 bg-background-lighter/40" aria-labelledby="solution-audience-heading">
-          <div className="max-w-6xl mx-auto grid gap-10 lg:grid-cols-2 lg:gap-12 items-start">
+        <Section id="audience" tone="muted" labelledBy="solution-audience-heading">
+          <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-14">
             <div>
-              <h2 id="solution-audience-heading" className="section-heading mb-6">
-                {t.audienceHeading}
-              </h2>
-              <ul className="flex flex-wrap gap-3">
+              <SectionHeader id="solution-audience-heading" eyebrow={isEnglish ? "For whom" : "Dla kogo"} title={t.audienceHeading} className="!mb-8" />
+              <ul className="flex flex-wrap gap-2.5">
                 {t.audience.map((item) => (
-                  <li key={item} className="px-4 py-2 rounded-full bg-background border border-primary/25 text-gray-200">
+                  <li key={item} className="chip">
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 md:p-8">
-              <h2 className="text-2xl font-bold mb-3">{t.integrationsHeading}</h2>
-              <p className="text-gray-300 leading-relaxed">{t.integrations}</p>
+            <div className="card-accent">
+              <h2 className="font-sans text-xl font-semibold text-white">{t.integrationsHeading}</h2>
+              <p className="mt-3 leading-relaxed text-gray-300">{t.integrations}</p>
             </div>
           </div>
-        </section>
+        </Section>
 
         {/* Przykład */}
-        <section className="px-4 py-16" aria-labelledby="solution-example-heading">
-          <div className="max-w-4xl mx-auto bg-background-lighter border border-primary/25 rounded-xl p-6 md:p-10">
-            <p className="text-sm font-semibold uppercase tracking-wide text-primary mb-3">{t.example.label}</p>
-            <h2 id="solution-example-heading" className="text-2xl md:text-3xl font-bold mb-4 [text-wrap:balance]">
+        <Section id="example" labelledBy="solution-example-heading">
+          <div className="relative overflow-hidden rounded-3xl border border-primary/25 bg-gradient-to-br from-primary/[0.08] via-white/[0.02] to-accent/[0.05] p-7 md:p-12">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary">{t.example.label}</p>
+            <h2 id="solution-example-heading" className="section-heading mt-3 max-w-3xl">
               {t.example.title}
             </h2>
-            <p className="text-gray-300 leading-relaxed text-lg">{t.example.text}</p>
+            <p className="mt-5 max-w-3xl text-lg leading-relaxed text-gray-300">{t.example.text}</p>
             {t.example.linkHref && t.example.linkLabel ? (
-              <Link href={t.example.linkHref} className="inline-flex mt-6 text-primary hover:text-primary-light font-semibold underline underline-offset-4">
+              <Link href={t.example.linkHref} className="btn-link mt-6">
                 {t.example.linkLabel}
+                <ArrowRightIcon size={16} />
               </Link>
             ) : null}
           </div>
-        </section>
+        </Section>
 
         {/* Koszty */}
-        <section className="px-4 py-16 bg-background-lighter/40" aria-labelledby="solution-pricing-heading">
-          <div className="max-w-6xl mx-auto">
-            <h2 id="solution-pricing-heading" className="section-heading mb-10">
-              {t.pricingHeading}
-            </h2>
-            <div className="grid gap-6 md:grid-cols-3">
-              {t.pricing.map((item) => (
-                <article key={item.title} className="bg-background border border-primary/20 rounded-xl p-6 flex flex-col">
-                  <h3 className="text-lg font-semibold text-gray-300 mb-2">{item.title}</h3>
-                  <p className="text-2xl font-bold text-primary mb-3">{item.value}</p>
-                  <p className="text-gray-400 leading-relaxed">{item.text}</p>
-                </article>
-              ))}
-            </div>
+        <Section id="pricing" tone="muted" labelledBy="solution-pricing-heading">
+          <SectionHeader id="solution-pricing-heading" eyebrow={isEnglish ? "Pricing" : "Ceny"} title={t.pricingHeading} />
+          <div className="grid gap-5 md:grid-cols-3">
+            {t.pricing.map((item, index) => (
+              <article
+                key={item.title}
+                className={`flex flex-col rounded-2xl border p-7 ${index === 0 ? "border-primary/40 bg-gradient-to-b from-primary/[0.10] to-white/[0.02]" : "border-white/[0.08] bg-white/[0.025]"}`}
+              >
+                <h3 className="font-sans text-base font-semibold text-gray-300">{item.title}</h3>
+                <p className="mt-3 font-display text-3xl font-semibold tracking-tight text-white">{item.value}</p>
+                <p className="mt-3 leading-relaxed text-gray-400">{item.text}</p>
+              </article>
+            ))}
           </div>
-        </section>
+        </Section>
 
-        {/* FAQ */}
-        <section className="px-4 py-16" aria-labelledby="solution-faq-heading">
-          <div className="max-w-4xl mx-auto">
-            <h2 id="solution-faq-heading" className="section-heading mb-8">
-              {t.faqHeading}
-            </h2>
-            <div className="space-y-3">
-              {t.faq.map((item) => (
-                <details key={item.q} className="group bg-background-lighter border border-primary/20 rounded-xl open:border-primary/50 transition-colors">
-                  <summary className="flex cursor-pointer list-none items-start justify-between gap-4 p-5 md:p-6 text-lg font-semibold text-white [&::-webkit-details-marker]:hidden">
-                    <span>{item.q}</span>
-                    <svg
-                      className="mt-1 shrink-0 text-primary transition-transform group-open:rotate-180"
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
+        {/* FAQ + powiązane */}
+        <Section id="faq" labelledBy="solution-faq-heading">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
+            <div className="lg:sticky lg:top-28 lg:self-start">
+              <SectionHeader id="solution-faq-heading" eyebrow="FAQ" title={t.faqHeading} className="!mb-8" />
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">{t.relatedHeading}</p>
+              <ul className="space-y-2">
+                {t.related.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="flex items-center justify-between gap-3 rounded-xl border border-white/[0.08] bg-white/[0.02] px-4 py-3 text-sm text-gray-300 transition-colors hover:border-primary/35 hover:text-white"
                     >
-                      <path d="m6 9 6 6 6-6" />
-                    </svg>
-                  </summary>
-                  <p className="px-5 pb-5 md:px-6 md:pb-6 -mt-1 text-gray-300 leading-relaxed">{item.a}</p>
-                </details>
-              ))}
+                      {item.label}
+                      <ArrowRightIcon size={15} className="text-primary" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
+            <FaqAccordion items={t.faq} />
           </div>
-        </section>
+        </Section>
 
-        {/* Powiązane */}
-        <section className="px-4 pb-4" aria-labelledby="solution-related-heading">
-          <div className="max-w-4xl mx-auto">
-            <h2 id="solution-related-heading" className="text-xl font-bold mb-4 text-gray-300">
-              {t.relatedHeading}
-            </h2>
-            <div className="flex flex-wrap gap-3">
-              {t.related.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="px-4 py-3 bg-background-lighter border border-primary/20 rounded-lg text-primary hover:border-primary transition-colors"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="px-4 py-16">
-          <div className="max-w-5xl mx-auto bg-gradient-to-r from-primary/20 to-primary/10 border border-primary/30 rounded-xl p-8 md:p-12 text-center">
-            <h2 className="section-heading mb-4">{t.ctaHeading}</h2>
-            <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">{t.ctaText}</p>
-            <Link
-              href={contactHref}
-              className="inline-block px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors"
-            >
-              {t.ctaButton}
-            </Link>
-          </div>
-        </section>
+        <CtaBand lang={lang} title={t.ctaHeading} text={t.ctaText} />
       </main>
       <Footer lang={lang} />
     </>

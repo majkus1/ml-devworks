@@ -193,7 +193,7 @@ function ReviewCard({
         delay: index * 0.1,
         ease: [0.16, 1, 0.3, 1],
       }}
-      className="bg-background-lighter border border-primary/20 rounded-xl p-6 hover:border-primary/40 transition-colors flex-1 min-w-[280px] max-w-[380px]"
+      className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-6 hover:border-primary/40 transition-colors flex-1 min-w-[280px] max-w-[380px]"
     >
       <div className="flex items-start gap-4 mb-4">
         {review.profilePhotoUrl ? (

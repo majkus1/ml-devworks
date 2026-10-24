@@ -1,10 +1,11 @@
 import { Metadata } from "next";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
 import BlogCardList from "@/components/BlogCardList";
 import { blogPosts } from "@/lib/blog";
+import PageHero from "@/components/ui/PageHero";
+import CtaBand from "@/components/ui/CtaBand";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ml-devworks.com"),
@@ -82,35 +83,26 @@ export default function BlogPage() {
       <StructuredData lang="pl" />
       <BlogBreadcrumbSchema />
       <Navbar lang="pl" />
-      <main className="min-h-screen pt-20">
-        <section className="px-4 py-16 md:py-24 bg-gradient-to-b from-background to-background-lighter">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              <span className="text-primary">Blog</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Wpisy o tworzeniu stron internetowych, aplikacjach webowych,
-              technologiach i najlepszych praktykach – dla biznesu i IT.
-            </p>
+      <main className="min-h-screen">
+        <PageHero
+          lang="pl"
+          breadcrumbs={[{ label: "Strona główna", href: "/" }, { label: "Blog" }]}
+          eyebrow="Blog"
+          title={
+            <>
+              Blog o automatyzacji AI, <span className="text-gradient">aplikacjach i stronach dla firm</span>
+            </>
+          }
+          lead="Konkretne poradniki dla właścicieli firm: ile kosztuje automatyzacja, co da się zautomatyzować, jak wybrać wykonawcę i jak policzyć zwrot z inwestycji."
+          primaryCta={null}
+          showAssistant={false}
+        />
+        <section className="pb-6" aria-label="Wpisy">
+          <div className="container-site">
+            <BlogCardList posts={blogPosts} lang="pl" featureFirst />
           </div>
         </section>
-
-        <section className="px-4 py-16">
-          <div className="max-w-7xl mx-auto">
-            <BlogCardList posts={blogPosts} lang="pl" />
-          </div>
-        </section>
-
-        <section className="px-4 pb-16">
-          <div className="max-w-7xl mx-auto text-center">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 text-primary hover:text-primary-light transition-colors font-medium"
-            >
-              ← Powrót do strony głównej
-            </Link>
-          </div>
-        </section>
+        <CtaBand lang="pl" />
       </main>
       <Footer lang="pl" />
     </>

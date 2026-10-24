@@ -78,7 +78,7 @@ export default function AutomatyzacjaObslugiZgloszenContent({ lang }: Props) {
         </h2>
         <div className="space-y-4">
           {levels.map(([title, description, price]) => (
-            <article key={title} className="bg-background-lighter border border-primary/20 rounded-xl p-5">
+            <article key={title} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
               <div className="flex flex-wrap items-baseline justify-between gap-2 mb-2">
                 <h3 className="text-xl font-bold text-primary">{title}</h3>
                 <span className="text-sm font-semibold text-white">{price}</span>
@@ -148,7 +148,7 @@ export default function AutomatyzacjaObslugiZgloszenContent({ lang }: Props) {
                 ["Knowledge base", "FAQ, terms, instructions, price lists, the team's reply history - this is what the agent 'learns' to answer in the company's style."],
               ]
           ).map(([title, description]) => (
-            <article key={title} className="bg-background-lighter border border-primary/20 rounded-xl p-5">
+            <article key={title} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
               <h3 className="text-lg font-bold text-primary mb-2">{title}</h3>
               <p>{description}</p>
             </article>
@@ -175,7 +175,7 @@ export default function AutomatyzacjaObslugiZgloszenContent({ lang }: Props) {
         </h2>
         <div className="grid gap-4 md:grid-cols-2">
           {metrics.map(([title, description]) => (
-            <article key={title} className="bg-background-lighter border border-primary/20 rounded-xl p-5">
+            <article key={title} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
               <h3 className="text-lg font-bold text-primary mb-2">{title}</h3>
               <p>{description}</p>
             </article>
@@ -211,7 +211,7 @@ export default function AutomatyzacjaObslugiZgloszenContent({ lang }: Props) {
         </ul>
       </section>
 
-      <section className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-6 md:p-8 border border-primary/20">
+      <section className="card-accent">
         <h2 className="text-xl font-bold text-white mb-4">
           {isPl ? "Chcesz zautomatyzować obsługę zgłoszeń w swojej firmie?" : "Want to automate ticket handling in your company?"}
         </h2>
@@ -221,7 +221,7 @@ export default function AutomatyzacjaObslugiZgloszenContent({ lang }: Props) {
             : "Describe which channels requests come through, how many per month, and which questions repeat most often. The AI advisor on the contact page will immediately suggest an automation level, and I will come back within 2-5 days with an agent prototype built on your sample requests."}
         </p>
         <div className="flex flex-wrap gap-4">
-          <Link href={contactHref} className="inline-flex items-center gap-2 px-6 py-3 bg-primary font-semibold rounded-lg hover:bg-primary-dark transition-colors !text-black !no-underline">
+          <Link href={contactHref} className="btn-primary !text-[#03140b] !no-underline">
             {isPl ? "Zapytaj asystenta AI" : "Ask the AI advisor"}
             <span aria-hidden="true">→</span>
           </Link>

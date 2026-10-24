@@ -63,7 +63,7 @@ export default function AgencjaAutomatyzacjiCzyProgramistaContent({ lang }: Prop
         </h2>
         <div className="space-y-4">
           {models.map(([title, description, points]) => (
-            <article key={title as string} className="bg-background-lighter border border-primary/20 rounded-xl p-5">
+            <article key={title as string} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
               <h3 className="text-xl font-bold text-primary mb-2">{title as string}</h3>
               <p className="mb-3">{description as string}</p>
               <ul className="list-disc list-inside space-y-1 text-sm">
@@ -82,7 +82,7 @@ export default function AgencjaAutomatyzacjiCzyProgramistaContent({ lang }: Prop
         </h2>
         <div className="grid gap-4 md:grid-cols-2">
           {criteria.map(([title, description]) => (
-            <article key={title} className="bg-background-lighter border border-primary/20 rounded-xl p-5">
+            <article key={title} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
               <h3 className="text-lg font-bold text-primary mb-2">{title}</h3>
               <p>{description}</p>
             </article>
@@ -112,7 +112,7 @@ export default function AgencjaAutomatyzacjiCzyProgramistaContent({ lang }: Prop
                 ["AI-assisted developer", "from PLN 2,500 net", "for a simple automation as code; AI agents and integrations from about PLN 8,000; model usage usually tens to a few hundred PLN/month."],
               ]
           ).map(([title, price, description]) => (
-            <article key={title} className="bg-background-lighter border border-primary/20 rounded-xl p-5">
+            <article key={title} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
               <h3 className="text-xl font-bold text-primary mb-2">{title}</h3>
               <p className="font-semibold text-white mb-2">{price}</p>
               <p className="text-sm">{description}</p>
@@ -188,7 +188,7 @@ export default function AgencjaAutomatyzacjiCzyProgramistaContent({ lang }: Prop
         </ol>
       </section>
 
-      <section className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-6 md:p-8 border border-primary/20">
+      <section className="card-accent">
         <h2 className="text-xl font-bold text-white mb-4">
           {isPl ? "Porównaj na własnym procesie" : "Compare on your own process"}
         </h2>
@@ -198,7 +198,7 @@ export default function AgencjaAutomatyzacjiCzyProgramistaContent({ lang }: Prop
             : "Instead of choosing a vendor based on a proposal, test them on a prototype. Describe one process and I will come back with a working draft and an estimate - no obligation. You can also start with the AI advisor, which points out what has the biggest potential in your company."}
         </p>
         <div className="flex flex-wrap gap-4">
-          <Link href={automationHref} className="inline-flex items-center gap-2 px-6 py-3 bg-primary font-semibold rounded-lg hover:bg-primary-dark transition-colors !text-black !no-underline">
+          <Link href={automationHref} className="btn-primary !text-[#03140b] !no-underline">
             {isPl ? "Automatyzacje AI dla firm" : "AI automation for companies"}
             <span aria-hidden="true">→</span>
           </Link>

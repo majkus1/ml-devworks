@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
-import Breadcrumbs from "@/components/Breadcrumbs";
+import LocalDeveloperContent from "@/components/pages/LocalDeveloperContent";
 
 export const metadata: Metadata = {
-  title: "Programista Kraków | Aplikacje i automatyzacje AI",
+  title: "Programista Kraków: automatyzacje AI i aplikacje dla firm",
   description:
-    "Programista z Krakowa z biznesowym podejściem: strony, aplikacje, systemy rezerwacji, integracje i automatyzacje AI dopasowane do celu firmy.",
+    "Programista i analityk z Krakowa: automatyzacje AI, aplikacje, systemy rezerwacji i strony dla firm. Biuro przy Rynku Głównym, prototyp w 2–5 dni gratis.",
   alternates: {
     canonical: "https://ml-devworks.com/programista-krakow",
     languages: {
@@ -48,125 +47,8 @@ export default function ProgramistaKrakowPage() {
       <StructuredData lang="pl" />
       <LocalSchema />
       <Navbar lang="pl" />
-      <main className="min-h-screen pt-20">
-        <section className="px-4 py-16 md:py-24 bg-gradient-to-b from-background to-background-lighter">
-          <div className="max-w-5xl mx-auto">
-            <Breadcrumbs
-              className="mb-8"
-              items={[
-                { label: "Strona główna", href: "/" },
-                { label: "Programista Kraków" },
-              ]}
-            />
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Programista z Krakowa, który rozumie technologię i biznes
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed mb-8">
-              Projektuję strony internetowe, aplikacje, systemy rezerwacji, integracje i automatyzacje AI dla firm. Najpierw rozumiem cel, proces i klienta, potem dobieram rozwiązanie techniczne.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/#contact" className="px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors text-center">
-                Umów konsultację
-              </Link>
-              <Link href="/uslugi" className="px-8 py-4 bg-background-lighter border border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-colors text-center">
-                Zobacz usługi
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        <section className="px-4 py-12 bg-background-lighter/40" aria-labelledby="business-approach-heading">
-          <div className="max-w-6xl mx-auto">
-            <h2 id="business-approach-heading" className="section-heading mb-6">
-              Biznesowe podejście do programowania
-            </h2>
-            <div className="grid gap-6 md:grid-cols-3">
-              {[
-                ["Analiza celu", "Ustalam, co rozwiązanie ma realnie poprawić: sprzedaż, obsługę klienta, czas pracy albo jakość procesu."],
-                ["Priorytety wdrożenia", "Pomagam wybrać funkcje, które mają największy sens biznesowy na start, zamiast budować wszystko naraz."],
-                ["Technologia pod wynik", "Dobieram stronę, aplikację, integrację albo automatyzację AI do problemu, nie odwrotnie."],
-              ].map(([title, description]) => (
-                <article key={title} className="bg-background border border-primary/20 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-primary mb-3">{title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{description}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="px-4 py-16" aria-labelledby="local-services-heading">
-          <div className="max-w-6xl mx-auto">
-            <h2 id="local-services-heading" className="section-heading mb-8">
-              Co tworzę dla firm z Krakowa i okolic
-            </h2>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {[
-                ["Strony internetowe", "Szybkie strony firmowe, landing page i serwisy ofertowe przygotowane pod SEO techniczne i lead generation."],
-                ["Aplikacje dla firm", "Panele administracyjne, aplikacje webowe i mobilne, MVP oraz systemy wewnętrzne dla zespołów operacyjnych."],
-                ["Automatyzacja AI", "Agenci AI, workflow, integracje API, automatyczne raporty i redukcja pracy manualnej w procesach biznesowych."],
-                ["Systemy rezerwacji", "Rezerwacje klientów, kalendarze dostępności, płatności online, przypomnienia i integracje z CRM."],
-                ["DevOps", "CI/CD, Docker, wdrożenia w chmurze, monitoring, backup i stabilizacja aplikacji produkcyjnych."],
-                ["Utrzymanie", "Przejmowanie projektów po innych wykonawcach, bugfixing, Core Web Vitals, SEO techniczne i rozwój."],
-              ].map(([title, description]) => (
-                <article key={title} className="bg-background-lighter border border-primary/20 rounded-xl p-6">
-                  <h3 className="text-2xl font-bold text-primary mb-3">{title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{description}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="px-4 py-16" aria-labelledby="krakow-automation-heading">
-          <div className="max-w-5xl mx-auto grid gap-8 lg:grid-cols-[1.2fr_1fr] items-start">
-            <div>
-              <h2 id="krakow-automation-heading" className="section-heading mb-4">
-                Automatyzacja AI Kraków: wdrożenia dla lokalnych firm
-              </h2>
-              <p className="text-lg text-gray-300 leading-relaxed mb-4">
-                Firmy z Krakowa i Małopolski najczęściej pytają o automatyzację obsługi zapytań i zgłoszeń, integrację CRM z formularzami i sklepem, automatyczne raporty oraz agentów AI, którzy odciążają biuro. Wdrażam takie rozwiązania od 2 500 zł netto, a pierwsze efekty widać po 3-14 dniach roboczych.
-              </p>
-              <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                Mogę spotkać się na miejscu w Krakowie, żeby przejść przez proces z zespołem, a wdrożenie i utrzymanie prowadzić zdalnie. Zacznij od rozmowy z asystentem AI na stronie kontaktu albo opisz proces w formularzu.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <Link href="/uslugi/automatyzacja-i-ai" className="px-5 py-3 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors">
-                  Automatyzacje AI dla firm
-                </Link>
-                <Link href="/kontakt#ai-advisor" className="px-5 py-3 bg-background-lighter border border-primary/30 rounded-lg text-primary hover:border-primary transition-colors">
-                  Zapytaj asystenta AI
-                </Link>
-              </div>
-            </div>
-            <div className="bg-background-lighter border border-primary/20 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Oprogramowanie dla firm z Krakowa</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li>- Aplikacje mobilne dla pracowników terenowych i serwisu</li>
-                <li>- Systemy rezerwacji dla gabinetów, salonów i usług lokalnych</li>
-                <li>- Integracje CRM/ERP i panele klienta</li>
-                <li>- Strony firmowe pod lokalne SEO</li>
-              </ul>
-              <Link href="/uslugi/aplikacje-mobilne-dla-firm" className="inline-block mt-4 text-primary hover:text-primary-light font-semibold">
-                Aplikacje mobilne dla firm na zamówienie
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        <section className="px-4 py-16 bg-background-lighter/40" aria-labelledby="krakow-proof-heading">
-          <div className="max-w-5xl mx-auto">
-            <h2 id="krakow-proof-heading" className="section-heading mb-6">
-              Lokalnie w Krakowie, technicznie end-to-end
-            </h2>
-            <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              Pracuję z firmami, które potrzebują nie tylko wykonawcy strony, ale partnera technicznego: od analizy celu biznesowego, przez architekturę i wdrożenie, po utrzymanie, optymalizację i rozwój.
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              Dzięki połączeniu doświadczenia programistycznego, SEO technicznego i automatyzacji AI pomagam budować rozwiązania, które są szybkie, czytelne dla Google i realnie użyteczne dla zespołu.
-            </p>
-          </div>
-        </section>
+      <main className="min-h-screen">
+        <LocalDeveloperContent lang="pl" />
       </main>
       <Footer lang="pl" />
     </>

@@ -33,7 +33,7 @@ export default function Contact({ lang = "pl", compact = false }: ContactProps) 
         description: "Opisz dokładnie pomysł, proces albo problem",
         descriptionPlaceholder: "Np. aplikacja, automatyzacja, CRM/API, rezerwacje albo problem w projekcie...",
         budget: "Szacunkowy budżet (opcjonalnie)",
-        submit: "Wyślij",
+        submit: "Wyślij opis projektu",
         submitting: "Wysyłanie...",
         success: "Wiadomość wysłana! Skontaktuję się wkrótce.",
         error: "Wystąpił błąd. Spróbuj ponownie lub skontaktuj się bezpośrednio.",
@@ -54,7 +54,7 @@ export default function Contact({ lang = "pl", compact = false }: ContactProps) 
         description: "Describe your idea, process, or problem in detail",
         descriptionPlaceholder: "E.g. app, automation, CRM/API, bookings, or a project issue...",
         budget: "Estimated budget (optional)",
-        submit: "Send",
+        submit: "Send project brief",
         submitting: "Sending...",
         success: "Message sent! I will contact you soon.",
         error: "An error occurred. Please try again or contact me directly.",
@@ -104,82 +104,107 @@ export default function Contact({ lang = "pl", compact = false }: ContactProps) 
     });
   };
 
-  return (
-    <section id="contact" className="py-28 md:py-32 px-4 relative scroll-mt-[100px]" style={{ scrollMarginTop: '100px' }} aria-labelledby="contact-heading">
-      <div className="max-w-7xl mx-auto">
-        <header className="text-left mb-8">
-          <h2 id="contact-heading" className="section-heading mb-4">{t.title}</h2>
-          <p className="section-lead">{t.subtitle}</p>
-        </header>
+  const inputClass =
+    "w-full rounded-xl border border-white/10 bg-background/70 px-4 py-3 text-base text-white placeholder:text-gray-500 transition-colors focus:border-primary/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40";
 
-        <div className="space-y-8">
-          {/* Contact Info */}
-          <address className="space-y-6 not-italic">
-            <div className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6">
-              <h3 className="text-lg md:text-xl font-bold mb-4 text-primary">{lang === "pl" ? "Dane kontaktowe" : "Contact details"}</h3>
-              
-              <div className="flex items-center gap-4 mb-6 pb-6 border-b border-primary/20">
-                <Image
-                  src="/IM.webp"
-                  alt="Michał Lipka"
-                  width={64}
-                  height={64}
-                  className="w-16 h-16 rounded-full object-cover border-2 border-primary/30"
-                />
+  const nextSteps =
+    lang === "pl"
+      ? ["Czytam opis i w razie potrzeby dopytuję mailem", "W 2–5 dni wracam z prototypem albo konkretną propozycją", "Ty decydujesz, czy idziemy dalej — bez zobowiązań"]
+      : ["I read your brief and ask follow-up questions by email if needed", "Within 2–5 days I come back with a prototype or a concrete proposal", "You decide whether we continue — no commitment"];
+
+  return (
+    <section id="contact" className="section-y relative scroll-mt-24 overflow-hidden" style={{ scrollMarginTop: "100px" }} aria-labelledby="contact-heading">
+      <div className="pointer-events-none absolute bottom-0 left-0 h-[28rem] w-[36rem] rounded-full bg-primary/[0.06] blur-[120px]" aria-hidden="true" />
+      <div className="container-site relative">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-14">
+          <div>
+            <p className="eyebrow mb-5">
+              <span className="eyebrow-dot" aria-hidden="true" />
+              {lang === "pl" ? "Kontakt" : "Contact"}
+            </p>
+            <h2 id="contact-heading" className="section-heading">
+              {t.title}
+            </h2>
+            <p className="section-lead mt-4">{t.subtitle}</p>
+
+            <address className="card mt-8 not-italic">
+              <div className="flex items-center gap-4 border-b border-white/[0.08] pb-5">
+                <Image src="/IM.webp" alt="Michał Lipka" width={56} height={56} className="h-14 w-14 rounded-full border border-white/15 object-cover" />
                 <div>
-                  <p className="text-white font-semibold text-base md:text-lg">Michał Lipka</p>
-                  <p className="text-gray-400 text-sm">{t.role}</p>
+                  <p className="font-semibold text-white">Michał Lipka</p>
+                  <p className="text-sm text-gray-400">{t.role}</p>
                 </div>
               </div>
-              
-              <div className="grid gap-4 md:grid-cols-3">
-                <div>
-                  <p className="text-sm text-gray-400 mb-1">{t.email}</p>
+              <ul className="mt-5 space-y-3 text-[0.95rem]">
+                <li>
                   <a
                     href="mailto:office@ml-devworks.com"
-                    className="text-white hover:text-primary transition-colors"
+                    className="flex items-center gap-3 text-gray-200 transition-colors hover:text-primary"
                     aria-label={lang === "pl" ? "Wyślij email do ML DevWorks" : "Send email to ML DevWorks"}
                   >
+                    <span className="icon-tile !h-9 !w-9 !rounded-lg">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <rect x="3" y="5" width="18" height="14" rx="2" />
+                        <path d="M3 7l9 6 9-6" />
+                      </svg>
+                    </span>
                     office@ml-devworks.com
                   </a>
-                </div>
-                <div>
-                  <p className="text-sm text-gray-400 mb-1">{t.phone}</p>
+                </li>
+                <li>
                   <a
                     href="tel:+48516598792"
-                    className="text-white hover:text-primary transition-colors"
+                    className="flex items-center gap-3 text-gray-200 transition-colors hover:text-primary"
                     aria-label={lang === "pl" ? "Zadzwoń do ML DevWorks" : "Call ML DevWorks"}
                   >
+                    <span className="icon-tile !h-9 !w-9 !rounded-lg">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
+                      </svg>
+                    </span>
                     +48 516 598 792
                   </a>
-                </div>
-                <div>
-                  <p className="text-sm text-gray-400 mb-1">{t.address}</p>
-                  <address className="text-white not-italic">
-                    31-010 Kraków<br />
-                    Rynek Główny 34/15
-                  </address>
-                </div>
+                </li>
+                <li className="flex items-center gap-3 text-gray-300">
+                  <span className="icon-tile !h-9 !w-9 !rounded-lg">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z" />
+                      <circle cx="12" cy="9" r="2.5" />
+                    </svg>
+                  </span>
+                  Rynek Główny 34/15, 31-010 Kraków
+                </li>
+              </ul>
+            </address>
+
+            <div className="mt-8">
+              <h3 className="font-sans text-base font-semibold text-white">{lang === "pl" ? "Co dzieje się po wysłaniu" : "What happens next"}</h3>
+              <ol className="mt-4 space-y-3">
+                {nextSteps.map((step, index) => (
+                  <li key={step} className="flex items-start gap-3 text-[0.95rem] text-gray-300">
+                    <span className="font-display text-sm font-semibold text-primary">{String(index + 1).padStart(2, "0")}</span>
+                    {step}
+                  </li>
+                ))}
+              </ol>
+            </div>
+
+            {!compact && (
+              <div className="card-accent mt-8">
+                <h3 className="font-sans text-lg font-semibold text-white">{t.form.prototypeTitle}</h3>
+                <p className="mt-2 text-[0.95rem] leading-relaxed text-gray-300">{t.form.prototypeText}</p>
               </div>
-            </div>
-          </address>
+            )}
+          </div>
 
-          {!compact && (
-            <div className="bg-primary/10 border border-primary/30 rounded-xl p-6">
-              <h3 className="text-lg md:text-xl font-bold text-primary mb-3">{t.form.prototypeTitle}</h3>
-              <p className="text-sm md:text-base text-gray-300 leading-relaxed">{t.form.prototypeText}</p>
-            </div>
-          )}
-
-          {/* Contact Form */}
           <form
             onSubmit={handleSubmit}
-            className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 space-y-6"
+            className="h-fit space-y-5 rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-card md:p-8"
             aria-label={lang === "pl" ? "Formularz kontaktowy" : "Contact form"}
             noValidate
           >
             <div>
-              <label htmlFor="email" className="block text-sm font-medium mb-2">
+              <label htmlFor="email" className="mb-2 block text-sm font-medium text-gray-200">
                 {t.form.email}
               </label>
               <input
@@ -189,8 +214,8 @@ export default function Contact({ lang = "pl", compact = false }: ContactProps) 
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-3 text-base bg-background border border-primary/20 rounded-lg focus:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-colors"
-                placeholder="twoj@email.com"
+                className={inputClass}
+                placeholder={lang === "pl" ? "twoj@email.com" : "you@company.com"}
                 aria-required="true"
                 aria-describedby="email-description"
               />
@@ -200,20 +225,17 @@ export default function Contact({ lang = "pl", compact = false }: ContactProps) 
             </div>
 
             <div>
-              <label
-                htmlFor="description"
-                className="block text-sm font-medium mb-2"
-              >
+              <label htmlFor="description" className="mb-2 block text-sm font-medium text-gray-200">
                 {t.form.description}
               </label>
               <textarea
                 id="description"
                 name="description"
                 required
-                rows={6}
+                rows={7}
                 value={formData.description}
                 onChange={handleChange}
-                className="w-full px-4 py-3 text-base bg-background border border-primary/20 rounded-lg focus:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-colors resize-none"
+                className={`${inputClass} resize-none`}
                 placeholder={t.form.descriptionPlaceholder}
                 aria-required="true"
                 aria-describedby="description-description"
@@ -224,7 +246,7 @@ export default function Contact({ lang = "pl", compact = false }: ContactProps) 
             </div>
 
             <div>
-              <label htmlFor="budget" className="block text-sm font-medium mb-2">
+              <label htmlFor="budget" className="mb-2 block text-sm font-medium text-gray-200">
                 {t.form.budget}
               </label>
               <input
@@ -233,8 +255,8 @@ export default function Contact({ lang = "pl", compact = false }: ContactProps) 
                 name="budget"
                 value={formData.budget}
                 onChange={handleChange}
-                className="w-full px-4 py-3 text-base bg-background border border-primary/20 rounded-lg focus:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-colors"
-                placeholder={lang === "pl" ? "np. 5000-10000 PLN" : "e.g. 5000-10000 PLN"}
+                className={inputClass}
+                placeholder={lang === "pl" ? "np. 5 000–10 000 zł" : "e.g. PLN 5,000–10,000"}
                 aria-describedby="budget-description"
               />
               <span id="budget-description" className="sr-only">
@@ -246,7 +268,7 @@ export default function Contact({ lang = "pl", compact = false }: ContactProps) 
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="p-4 bg-primary/20 border border-primary rounded-lg text-primary"
+                className="rounded-xl border border-primary/50 bg-primary/10 p-4 text-primary"
                 role="status"
                 aria-live="polite"
                 aria-atomic="true"
@@ -259,7 +281,7 @@ export default function Contact({ lang = "pl", compact = false }: ContactProps) 
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="p-4 bg-red-500/20 border border-red-500 rounded-lg text-red-400"
+                className="rounded-xl border border-red-500/60 bg-red-500/10 p-4 text-red-300"
                 role="alert"
                 aria-live="assertive"
                 aria-atomic="true"
@@ -271,14 +293,12 @@ export default function Contact({ lang = "pl", compact = false }: ContactProps) 
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full px-6 py-3 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+              className="btn-primary w-full !py-4 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0"
               aria-label={isSubmitting ? t.form.submitting : t.form.submit}
             >
               {isSubmitting ? t.form.submitting : t.form.submit}
             </button>
-            <p className="text-sm text-gray-400 text-left mt-2">
-              {t.form.responseTime}
-            </p>
+            <p className="text-sm leading-relaxed text-gray-500">{t.form.responseTime}</p>
           </form>
         </div>
 
@@ -288,4 +308,3 @@ export default function Contact({ lang = "pl", compact = false }: ContactProps) 
     </section>
   );
 }
-

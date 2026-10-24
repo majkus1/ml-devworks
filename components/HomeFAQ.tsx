@@ -22,7 +22,7 @@ export default function HomeFAQ({ lang = "pl" }: HomeFAQProps) {
   };
 
   return (
-    <section className="py-28 md:py-32 px-4 bg-background" aria-labelledby="home-faq-heading">
+    <section className="section-y relative" aria-labelledby="home-faq-heading">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

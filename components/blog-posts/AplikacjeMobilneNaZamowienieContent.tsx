@@ -69,7 +69,7 @@ export default function AplikacjeMobilneNaZamowienieContent({ lang }: Props) {
         </h2>
         <div className="grid gap-4 md:grid-cols-2">
           {whenApp.map(([title, points]) => (
-            <article key={title as string} className="bg-background-lighter border border-primary/20 rounded-xl p-5">
+            <article key={title as string} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
               <h3 className="text-lg font-bold text-primary mb-3">{title as string}</h3>
               <ul className="list-disc list-inside space-y-2">
                 {(points as string[]).map((point) => (
@@ -119,7 +119,7 @@ export default function AplikacjeMobilneNaZamowienieContent({ lang }: Props) {
                 ["System with a customer app", "estimated after analysis", "Customer app + team app + panel, payments, notifications, ERP integrations. Delivered in stages."],
               ]
           ).map(([title, price, description]) => (
-            <article key={title} className="bg-background-lighter border border-primary/20 rounded-xl p-5">
+            <article key={title} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
               <h3 className="text-xl font-bold text-primary mb-2">{title}</h3>
               <p className="font-semibold text-white mb-2">{price}</p>
               <p>{description}</p>
@@ -197,7 +197,7 @@ export default function AplikacjeMobilneNaZamowienieContent({ lang }: Props) {
         </p>
       </section>
 
-      <section className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-6 md:p-8 border border-primary/20">
+      <section className="card-accent">
         <h2 className="text-xl font-bold text-white mb-4">
           {isPl ? "Zastanawiasz się nad aplikacją mobilną dla swojej firmy?" : "Considering a mobile app for your company?"}
         </h2>
@@ -207,7 +207,7 @@ export default function AplikacjeMobilneNaZamowienieContent({ lang }: Props) {
             : "Describe the process the app should handle. I come back within 2-5 days with a clickable screen prototype and an indicative estimate - free of charge. You can also first ask the AI advisor whether an app, a PWA, or an automation fits your case better."}
         </p>
         <div className="flex flex-wrap gap-4">
-          <Link href={mobileHref} className="inline-flex items-center gap-2 px-6 py-3 bg-primary font-semibold rounded-lg hover:bg-primary-dark transition-colors !text-black !no-underline">
+          <Link href={mobileHref} className="btn-primary !text-[#03140b] !no-underline">
             {isPl ? "Aplikacje mobilne dla firm na zamówienie" : "Custom mobile apps for companies"}
             <span aria-hidden="true">→</span>
           </Link>

@@ -178,7 +178,7 @@ export default function BookingCalendar({ lang = "pl" }: BookingCalendarProps) {
 
   return (
     <section
-      className="mt-12 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 md:p-8"
+      className="mt-12 rounded-xl border border-primary/25 bg-primary/[0.06] p-6 md:p-8"
     >
       <div>
         <h2 className="text-2xl md:text-3xl font-bold mb-4 text-left text-white">

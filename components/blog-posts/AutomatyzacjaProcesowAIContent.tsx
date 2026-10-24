@@ -205,7 +205,7 @@ export default function AutomatyzacjaProcesowAIContent({ lang }: Props) {
         </p>
       </section>
 
-      <section className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl p-6 md:p-8 border border-primary/20">
+      <section className="card-accent">
         <h2 className="text-xl font-bold text-white mb-4">
           {isPl ? "Sprawdźmy, które procesy warto zautomatyzować u Ciebie" : "Let's identify which workflows to automate first"}
         </h2>
@@ -217,7 +217,7 @@ export default function AutomatyzacjaProcesowAIContent({ lang }: Props) {
         <div className="flex flex-wrap gap-4">
           <Link
             href={isPl ? "/uslugi/automatyzacja-i-ai" : "/en/services/automation-and-ai"}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary font-semibold rounded-lg hover:bg-primary-dark transition-colors !text-black"
+            className="btn-primary !text-[#03140b] !no-underline"
           >
             {isPl ? "Zobacz ofertę automatyzacji AI" : "View AI automation services"}
             <span aria-hidden="true">→</span>

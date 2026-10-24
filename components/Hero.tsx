@@ -1,94 +1,92 @@
-"use client";
-
-import Image from "next/image";
 import OpenAssistantButton from "@/components/ai-assistant/OpenAssistantButton";
+import HeroWorkflow from "@/components/HeroWorkflow";
+import { ArrowRightIcon, CheckIcon, SparkIcon, StarIcon } from "@/components/ui/icons";
 
 interface HeroProps {
   lang?: "pl" | "en";
 }
 
 export default function Hero({ lang = "pl" }: HeroProps) {
-  const content = {
-    pl: {
-      eyebrow: "Automatyzacje AI dla firm",
-      title: "Zautomatyzuję to, co zabiera czas Twojemu zespołowi",
-      lead: "Agenci AI, aplikacje i połączenia między systemami, które odciążają obsługę klienta i biuro. Pracujesz bezpośrednio z programistą, bez pośredników.",
-      description: "Bezpłatny prototyp w 2-5 dni po opisie procesu.",
-      ctaPrimary: "Zapytaj AI, co zautomatyzować",
-      ctaSecondary: "Opisz projekt",
-      ctaSecondaryAria: "Przejdź do formularza kontaktowego",
-    },
-    en: {
-      eyebrow: "AI automation for companies",
-      title: "I automate what eats your team's time",
-      lead: "AI agents, business apps, and connections between your systems that relieve customer service and the back office. You work directly with the developer, no intermediaries.",
-      description: "Free prototype within 2-5 days after you describe the process.",
-      ctaPrimary: "Ask AI what to automate",
-      ctaSecondary: "Describe your project",
-      ctaSecondaryAria: "Go to the contact form",
-    },
-  };
-
-  const t = content[lang];
+  const isPl = lang === "pl";
+  const t = isPl
+    ? {
+        eyebrow: "Automatyzacje AI i aplikacje dla firm · Kraków",
+        titleStart: "Automatyzacje AI dla firm, które ",
+        titleHighlight: "oddają zespołowi godziny pracy",
+        lead: "Agenci AI, aplikacje i integracje dla małych i średnich firm. Opisujesz proces, a w 2–5 dni pokazuję działający prototyp — za darmo, zanim cokolwiek zapłacisz.",
+        ctaPrimary: "Odbierz bezpłatny prototyp",
+        ctaSecondary: "Zapytaj AI, co zautomatyzować",
+        points: ["Prototyp w 2–5 dni", "Od 2 500 zł netto", "Bezpośrednio z programistą"],
+        rating: "5,0 w opiniach Google",
+        person: "Michał Lipka · programista i analityk biznesowy",
+      }
+    : {
+        eyebrow: "AI automation and business apps · Krakow, Poland",
+        titleStart: "AI automation for companies that ",
+        titleHighlight: "gives your team hours back",
+        lead: "AI agents, business apps, and integrations for small and mid-sized companies. Describe the process and within 2–5 days I'll show a working prototype — free, before you pay anything.",
+        ctaPrimary: "Get a free prototype",
+        ctaSecondary: "Ask AI what to automate",
+        points: ["Prototype in 2–5 days", "From PLN 2,500 net", "Directly with the developer"],
+        rating: "5.0 on Google reviews",
+        person: "Michał Lipka · developer and business analyst",
+      };
 
   return (
-    <header className="relative min-h-[90vh] flex items-center overflow-hidden pt-36 pb-24 md:pt-40 md:pb-32 max-[380px]:pt-28 max-[380px]:pb-16" role="banner">
-      <div className="absolute inset-0 w-full h-full bg-background" aria-hidden="true">
-        <Image src="/hero.webp" alt="" fill priority sizes="100vw" className="object-cover object-center opacity-60" />
-        <div className="absolute inset-0 bg-primary/15 mix-blend-screen" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/60 to-background/25" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-transparent to-background/90" />
-      </div>
-      <div className="absolute inset-0 opacity-10" aria-hidden="true">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(0, 255, 136, 0.2) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(0, 255, 136, 0.2) 1px, transparent 1px)
-            `,
-            backgroundSize: "50px 50px",
-          }}
-        />
+    <header className="relative overflow-hidden pb-16 pt-28 md:pb-24 md:pt-36" role="banner">
+      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+        <div className="bg-grid absolute inset-0" />
+        <div className="absolute -top-48 left-[10%] h-[36rem] w-[50rem] rounded-full bg-primary/[0.10] blur-[130px]" />
+        <div className="absolute right-[-10rem] top-32 h-[28rem] w-[28rem] rounded-full bg-accent/[0.08] blur-[120px]" />
       </div>
 
-      <div className="relative z-10 px-4 max-w-7xl mx-auto w-full">
-        <div className="max-w-3xl">
-          <p
-            className="text-xs md:text-sm text-primary mb-6 md:mb-8 font-semibold uppercase tracking-[0.18em] max-[380px]:mb-4 max-[380px]:text-[0.68rem] max-[380px]:leading-snug"
-            role="doc-subtitle"
-          >
+      <div className="container-site relative grid items-center gap-14 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-16">
+        <div>
+          <p className="eyebrow mb-7">
+            <span className="eyebrow-dot" aria-hidden="true" />
             {t.eyebrow}
           </p>
-          <h1 className="mb-8 md:mb-10 text-4xl md:text-5xl lg:text-[3.5rem] font-bold leading-[1.1] bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent [text-wrap:balance] max-[380px]:mb-4 max-[380px]:text-[2rem]">
-            {t.title}
+          <h1 className="font-display text-[2.5rem] font-semibold leading-[1.04] tracking-tight text-white text-balance sm:text-6xl lg:text-[3.7rem] xl:text-[4rem]">
+            {t.titleStart}
+            <span className="text-gradient">{t.titleHighlight}</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-100 mb-10 md:mb-12 font-medium leading-relaxed [text-wrap:pretty] max-[380px]:mb-8 max-[380px]:text-base">
-            {t.lead}
-          </p>
-          <nav aria-label={lang === "pl" ? "Główne wezwania do działania" : "Primary calls to action"} className="flex flex-col sm:flex-row gap-4 sm:gap-5">
-            <OpenAssistantButton
-              fallbackHref="#ai-advisor"
-              className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-primary !text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors shadow-[0_0_30px_rgba(0,255,136,0.3)] max-[380px]:px-6 max-[380px]:py-3.5"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8" />
-              </svg>
+          <p className="mt-7 max-w-xl text-lg leading-relaxed text-gray-300 text-pretty md:text-xl">{t.lead}</p>
+
+          <nav aria-label={isPl ? "Główne wezwania do działania" : "Primary calls to action"} className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="#contact" className="btn-primary !px-7 !py-4">
               {t.ctaPrimary}
-            </OpenAssistantButton>
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center px-7 py-4 bg-background/60 backdrop-blur border border-primary/50 text-white font-semibold rounded-lg hover:border-primary hover:bg-primary/10 transition-colors max-[380px]:px-6 max-[380px]:py-3.5"
-              aria-label={t.ctaSecondaryAria}
-            >
-              {t.ctaSecondary}
+              <ArrowRightIcon size={18} />
             </a>
+            <OpenAssistantButton fallbackHref="#ai-advisor" className="btn-secondary !px-7 !py-4">
+              <SparkIcon size={18} className="text-primary" />
+              {t.ctaSecondary}
+            </OpenAssistantButton>
           </nav>
-          <p className="mt-6 text-sm md:text-base text-gray-400 flex items-center gap-2">
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary" aria-hidden="true" />
-            {t.description}
-          </p>
+
+          <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2.5">
+            {t.points.map((point) => (
+              <li key={point} className="flex items-center gap-2 text-sm text-gray-300">
+                <CheckIcon size={16} className="text-primary" />
+                {point}
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-3 border-t border-white/[0.07] pt-6 text-sm text-gray-400">
+            <span className="flex items-center gap-2">
+              <span className="flex text-amber-400">
+                {[0, 1, 2, 3, 4].map((index) => (
+                  <StarIcon key={index} size={14} />
+                ))}
+              </span>
+              {t.rating}
+            </span>
+            <span className="hidden h-4 w-px bg-white/10 sm:block" aria-hidden="true" />
+            <span>{t.person}</span>
+          </div>
         </div>
+
+        <HeroWorkflow lang={lang} />
       </div>
 
     </header>
