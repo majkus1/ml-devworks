@@ -203,6 +203,14 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
     return isHomePage ? href : `${homePath}${href}`;
   };
 
+  // Wejście pozycji menu: kolejno co 30 ms, miękkie wyhamowanie; wyjście wszystkich naraz i szybciej.
+  const menuRevealClass = `transition-[opacity,transform] motion-reduce:transition-none ${
+    isMobileMenuOpen
+      ? "translate-y-0 opacity-100 duration-[420ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
+      : "translate-y-3 opacity-0 duration-150 ease-in"
+  }`;
+  const menuRevealDelay = (index: number) => ({ transitionDelay: isMobileMenuOpen ? `${50 + index * 30}ms` : "0ms" });
+
   return (
     <>
       <nav
@@ -313,27 +321,28 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
         </div>
       </nav>
 
-      {/* Menu na telefonie: zawsze w DOM, otwierane samym CSS (opacity + przesunięcie) — reaguje od razu i płynnie znika. */}
+      {/* Menu na telefonie: zawsze w DOM, otwierane samym CSS. Tło pojawia się płynnie, a pozycje wjeżdżają
+          kolejno od góry (tylko opacity i transform — płynne także na słabszych telefonach). Zamykanie jest krótsze i bez opóźnień. */}
       <div
-        className={`fixed inset-0 z-40 bg-background lg:hidden transition-[opacity,visibility] duration-200 ease-[cubic-bezier(0.2,0.8,0.2,1)] motion-reduce:transition-none ${
-          isMobileMenuOpen ? "visible opacity-100" : "pointer-events-none invisible opacity-0"
+        className={`fixed inset-0 z-40 bg-background lg:hidden transition-[opacity,visibility] motion-reduce:transition-none ${
+          isMobileMenuOpen ? "visible opacity-100 duration-300 ease-out" : "pointer-events-none invisible opacity-0 duration-200 ease-in"
         }`}
         aria-hidden={!isMobileMenuOpen}
       >
         <div
-          className={`container-site flex h-full flex-col pb-8 pt-20 transition-transform duration-200 ease-[cubic-bezier(0.2,0.8,0.2,1)] motion-reduce:transition-none ${
-            isMobileMenuOpen ? "translate-y-0" : "-translate-y-3"
-          }`}
-        >
+          className="pointer-events-none absolute inset-x-0 top-0 h-80 bg-[radial-gradient(70%_60%_at_50%_0%,rgba(0,255,136,0.09),transparent)]"
+          aria-hidden="true"
+        />
+        <div className="container-site relative flex h-full flex-col pb-8 pt-20">
           <ul className="flex flex-col">
-            {items.map((item) => {
+            {items.map((item, index) => {
               const isPageLink = item.href.startsWith("/");
               const isActive = activeSection === item.key || (item.key === "contact-page" && activeSection === "#contact");
               const className = `flex items-center justify-between border-b border-white/[0.07] py-4 font-display text-2xl font-medium transition-colors ${
                 isActive ? "text-primary" : "text-white active:text-primary"
               }`;
               return (
-                <li key={item.href}>
+                <li key={item.href} className={menuRevealClass} style={menuRevealDelay(index)}>
                   {isPageLink ? (
                     <Link href={item.href} onClick={() => setIsMobileMenuOpen(false)} className={className} aria-current={isActive ? "page" : undefined} tabIndex={isMobileMenuOpen ? 0 : -1}>
                       {item.label}
@@ -350,7 +359,7 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
             })}
           </ul>
 
-          <div className="mt-auto flex flex-col gap-3">
+          <div className={`mt-auto flex flex-col gap-3 ${menuRevealClass}`} style={menuRevealDelay(items.length)}>
             <Link href={contactHref} onClick={() => setIsMobileMenuOpen(false)} className="btn-primary w-full" tabIndex={isMobileMenuOpen ? 0 : -1}>
               {ctaLabel}
               <ArrowRightIcon size={18} />
