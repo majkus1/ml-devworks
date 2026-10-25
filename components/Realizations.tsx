@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import { lockScroll } from "@/lib/scroll-lock";
 import Image from "next/image";
 // Ikony technologii zostały usunięte - użyj <img> tagów w miejscach oznaczonych TODO
 
@@ -335,13 +336,29 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
 
   const openModal = (project: Project) => {
     setSelectedProject(project);
-    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     setSelectedProject(null);
-    document.body.style.overflow = "unset";
   };
+
+  // Blokada przewijania strony i Escape, gdy okno szczegółów jest otwarte.
+  const isModalOpen = selectedProject !== null;
+  useEffect(() => {
+    if (!isModalOpen) return;
+    return lockScroll();
+  }, [isModalOpen]);
+
+  useEffect(() => {
+    if (!isModalOpen) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+      if (selectedImage) setSelectedImage(null);
+      else setSelectedProject(null);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [isModalOpen, selectedImage]);
 
   const openImageModal = (image: string) => {
     setSelectedImage(image);
@@ -393,21 +410,26 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
         {selectedProject && (
           <>
             {/* Overlay */}
+            {/* Bez rozmycia tła: animowany blur całej strony powodował miganie przy otwieraniu. */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50"
+              transition={{ duration: 0.18, ease: "easeOut" }}
+              className="fixed inset-0 z-50 bg-black/85"
               onClick={closeModal}
             />
 
             {/* Modal Content */}
             <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
               <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                role="dialog"
+                aria-modal="true"
+                aria-label={selectedProject.name[lang]}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 8 }}
+                transition={{ duration: 0.2, ease: [0.2, 0.8, 0.2, 1] }}
                 className="bg-background-light border border-white/10 rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] w-full max-w-3xl flex flex-col pointer-events-auto"
                 onClick={(e) => e.stopPropagation()}
               >
@@ -471,7 +493,8 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
                             fill
                             sizes={isMobileShot ? "150px" : "360px"}
                             loading="eager"
-                            className="object-cover object-top"
+                            className="object-cover object-top opacity-0 transition-opacity duration-300"
+                            onLoad={(e) => e.currentTarget.classList.remove("opacity-0")}
                           />
                         </button>
                       );
@@ -515,17 +538,18 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/95 backdrop-blur-sm z-[60]"
+              transition={{ duration: 0.18, ease: "easeOut" }}
+              className="fixed inset-0 z-[60] bg-black/95"
               onClick={closeImageModal}
             />
 
             {/* Image Modal Content */}
             <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 pointer-events-none">
               <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.97 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                exit={{ opacity: 0, scale: 0.97 }}
+                transition={{ duration: 0.2, ease: [0.2, 0.8, 0.2, 1] }}
                 className="relative max-w-full max-h-full pointer-events-auto"
                 onClick={(e) => e.stopPropagation()}
               >

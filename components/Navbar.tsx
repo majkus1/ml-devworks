@@ -6,6 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { getAlternateLangPath } from "@/lib/i18n-routes";
 import { HOLD_NAV_EVENT } from "@/lib/nav-scroll";
+import { lockScroll } from "@/lib/scroll-lock";
 import { ArrowRightIcon } from "@/components/ui/icons";
 
 interface NavbarProps {
@@ -127,11 +128,7 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
 
   useEffect(() => {
     if (!isMobileMenuOpen) return;
-    const previous = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = previous;
-    };
+    return lockScroll();
   }, [isMobileMenuOpen]);
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -181,7 +178,6 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
   const items = navItems[lang];
   const contactHref = isEnglish ? "/en/contact" : "/kontakt";
   const ctaLabel = isEnglish ? "Free prototype" : "Bezpłatny prototyp";
-  const solid = isScrolled || isMobileMenuOpen;
 
   const resolveHref = (href: string) => {
     if (href.startsWith("/")) return href;
@@ -193,7 +189,11 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
     <>
       <nav
         className={`fixed left-0 right-0 top-0 z-50 transition-[transform,background-color,border-color] duration-200 ease-out ${isVisible || isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"} ${
-          solid ? "border-b border-white/[0.07] bg-background/80 backdrop-blur-xl" : "border-b border-transparent bg-transparent"
+          isMobileMenuOpen
+            ? "border-b border-transparent bg-background"
+            : isScrolled
+              ? "border-b border-white/[0.07] bg-background/80 backdrop-blur-xl"
+              : "border-b border-transparent bg-transparent"
         }`}
         role="navigation"
         aria-label={lang === "pl" ? "Główne menu nawigacyjne" : "Main navigation menu"}
@@ -266,15 +266,28 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
               </Link>
 
               <button
-                className="relative z-50 flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] lg:hidden"
+                className="relative z-50 flex h-10 w-10 touch-manipulation items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] lg:hidden"
                 onClick={() => setIsMobileMenuOpen((isOpen) => !isOpen)}
                 aria-label={isMobileMenuOpen ? (lang === "pl" ? "Zamknij menu" : "Close menu") : lang === "pl" ? "Otwórz menu" : "Open menu"}
                 aria-expanded={isMobileMenuOpen}
               >
+                {/* Trzy kreski → „X” samymi transformacjami (bez animowania położenia), więc zmiana jest natychmiastowa i płynna. */}
                 <span className="relative block h-3.5 w-5" aria-hidden="true">
-                  <span className={`absolute left-0 block h-0.5 w-5 rounded-full bg-white transition-all duration-200 ease-out ${isMobileMenuOpen ? "top-1.5 rotate-45" : "top-0"}`} />
-                  <span className={`absolute left-0 top-1.5 block h-0.5 w-5 rounded-full bg-white transition-opacity duration-150 ${isMobileMenuOpen ? "opacity-0" : "opacity-100"}`} />
-                  <span className={`absolute left-0 block h-0.5 w-5 rounded-full bg-white transition-all duration-200 ease-out ${isMobileMenuOpen ? "top-1.5 -rotate-45" : "top-3"}`} />
+                  <span
+                    className={`absolute left-0 top-0 block h-0.5 w-5 rounded-full bg-white transition-transform duration-200 ease-[cubic-bezier(0.2,0.8,0.2,1)] motion-reduce:transition-none ${
+                      isMobileMenuOpen ? "translate-y-1.5 rotate-45" : ""
+                    }`}
+                  />
+                  <span
+                    className={`absolute left-0 top-1.5 block h-0.5 w-5 rounded-full bg-white transition-[opacity,transform] duration-150 ease-out motion-reduce:transition-none ${
+                      isMobileMenuOpen ? "scale-x-0 opacity-0" : ""
+                    }`}
+                  />
+                  <span
+                    className={`absolute left-0 top-3 block h-0.5 w-5 rounded-full bg-white transition-transform duration-200 ease-[cubic-bezier(0.2,0.8,0.2,1)] motion-reduce:transition-none ${
+                      isMobileMenuOpen ? "-translate-y-1.5 -rotate-45" : ""
+                    }`}
+                  />
                 </span>
               </button>
             </div>
@@ -284,14 +297,14 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
 
       {/* Menu na telefonie: zawsze w DOM, otwierane samym CSS (opacity + przesunięcie) — reaguje od razu i płynnie znika. */}
       <div
-        className={`fixed inset-0 z-40 bg-background lg:hidden transition-[opacity,visibility] duration-200 ease-out motion-reduce:transition-none ${
+        className={`fixed inset-0 z-40 bg-background lg:hidden transition-[opacity,visibility] duration-200 ease-[cubic-bezier(0.2,0.8,0.2,1)] motion-reduce:transition-none ${
           isMobileMenuOpen ? "visible opacity-100" : "pointer-events-none invisible opacity-0"
         }`}
         aria-hidden={!isMobileMenuOpen}
       >
         <div
-          className={`container-site flex h-full flex-col pb-8 pt-20 transition-transform duration-200 ease-out motion-reduce:transition-none ${
-            isMobileMenuOpen ? "translate-y-0" : "-translate-y-2"
+          className={`container-site flex h-full flex-col pb-8 pt-20 transition-transform duration-200 ease-[cubic-bezier(0.2,0.8,0.2,1)] motion-reduce:transition-none ${
+            isMobileMenuOpen ? "translate-y-0" : "-translate-y-3"
           }`}
         >
           <ul className="flex flex-col">

@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { lockScroll } from "@/lib/scroll-lock";
 import { useAiAssistant } from "./AiAssistantProvider";
 import { assistantContent } from "./content";
 import AiAssistantChat from "./AiAssistantChat";
@@ -44,8 +45,7 @@ export default function AiAssistantFloating() {
   // Blokada scrolla strony i Escape, gdy panel jest otwarty.
   useEffect(() => {
     if (!isOpen) return;
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    const unlockScroll = lockScroll();
 
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -70,7 +70,7 @@ export default function AiAssistantFloating() {
     window.addEventListener("keydown", onKey);
 
     return () => {
-      document.body.style.overflow = previousOverflow;
+      unlockScroll();
       window.removeEventListener("keydown", onKey);
       refocusFabRef.current = true;
     };
