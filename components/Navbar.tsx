@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { getAlternateLangPath } from "@/lib/i18n-routes";
-import { HOLD_NAV_EVENT } from "@/lib/nav-scroll";
+import { HOLD_NAV_EVENT, scrollToSection } from "@/lib/nav-scroll";
 import { lockScroll } from "@/lib/scroll-lock";
 import { ArrowRightIcon } from "@/components/ui/icons";
 
@@ -37,7 +37,7 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const lastScrollY = useRef(0);
-  const holdNav = useRef(false);
+  const lastUserScroll = useRef(-Infinity);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("");
   const pathname = usePathname();
@@ -75,54 +75,55 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
   }, [isHomePage, pathname]);
 
   useEffect(() => {
-    let releaseTimer: number | undefined;
-
-    const release = () => {
-      holdNav.current = false;
-      window.clearTimeout(releaseTimer);
+    // Menu chowa się tylko, gdy w dół przewija sam użytkownik (kółko, palec, klawisze, pasek przewijania).
+    // Przewijanie po kliknięciu linku albo przesunięcia układu nigdy go nie chowają.
+    const markUserScroll = () => {
+      lastUserScroll.current = performance.now();
     };
 
-    // Przewijanie po kliknięciu linku: menu zostaje widoczne, aż przewijanie się skończy
-    // (chwila bez zdarzeń scroll) albo użytkownik sam zacznie przewijać.
-    const hold = () => {
-      holdNav.current = true;
+    // Kliknięty link do sekcji: menu widoczne, a wcześniejsze dotknięcie (sam tap w link) się nie liczy.
+    const showForLinkScroll = () => {
+      lastUserScroll.current = -Infinity;
       setIsVisible(true);
-      window.clearTimeout(releaseTimer);
-      releaseTimer = window.setTimeout(release, 600);
     };
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+      const byUser = performance.now() - lastUserScroll.current < 1200;
       setIsScrolled(currentScrollY >= 10);
 
-      if (holdNav.current) {
-        window.clearTimeout(releaseTimer);
-        releaseTimer = window.setTimeout(release, 200);
-      } else if (currentScrollY < 10 || currentScrollY < lastScrollY.current) {
+      if (currentScrollY < 10 || currentScrollY < lastScrollY.current) {
         setIsVisible(true);
-      } else if (currentScrollY > lastScrollY.current && currentScrollY > 120) {
+      } else if (byUser && currentScrollY > lastScrollY.current && currentScrollY > 120) {
         setIsVisible(false);
       }
 
       lastScrollY.current = currentScrollY;
     };
 
-    // Każdy link do sekcji na tej samej stronie (menu, przyciski, stopka).
+    // Każdy link do sekcji na tej samej stronie (menu, przyciski, stopka): treść sekcji ląduje tuż pod menu.
+    // Przewijanie startuje dwie klatki później, gdy menu na telefonie zdąży się zamknąć i odblokować stronę.
     const handleClick = (e: MouseEvent) => {
+      if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
       const link = e.target instanceof Element ? e.target.closest("a[href*='#']") : null;
-      if (link instanceof HTMLAnchorElement && link.hash && link.pathname === window.location.pathname) hold();
+      if (!(link instanceof HTMLAnchorElement) || !link.hash || link.target || link.pathname !== window.location.pathname) return;
+      const section = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+      if (!section) return;
+      e.preventDefault();
+      showForLinkScroll();
+      requestAnimationFrame(() => requestAnimationFrame(() => scrollToSection(section)));
     };
 
+    const userInput = ["wheel", "touchstart", "touchmove", "touchend", "keydown", "pointerdown"];
     window.addEventListener("scroll", handleScroll, { passive: true });
-    window.addEventListener(HOLD_NAV_EVENT, hold);
+    window.addEventListener(HOLD_NAV_EVENT, showForLinkScroll);
     document.addEventListener("click", handleClick, true);
-    for (const type of ["wheel", "touchstart", "keydown"]) window.addEventListener(type, release, { passive: true });
+    for (const type of userInput) window.addEventListener(type, markUserScroll, { passive: true });
     return () => {
-      window.clearTimeout(releaseTimer);
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener(HOLD_NAV_EVENT, hold);
+      window.removeEventListener(HOLD_NAV_EVENT, showForLinkScroll);
       document.removeEventListener("click", handleClick, true);
-      for (const type of ["wheel", "touchstart", "keydown"]) window.removeEventListener(type, release);
+      for (const type of userInput) window.removeEventListener(type, markUserScroll);
     };
   }, []);
 
@@ -136,19 +137,8 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
 
     const homePath = isEnglish ? "/en" : "/";
 
-    if (isHomePage) {
-      const element = document.querySelector(href);
-      if (element) {
-        const offset = 88;
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
-      }
-    } else {
+    // Na stronie głównej przewija wspólny nasłuch kliknięć (handleClick wyżej); tu tylko zamykamy menu.
+    if (!isHomePage) {
       (window as Window & { __pendingHash?: string }).__pendingHash = href;
       window.location.href = `${homePath}${href}`;
     }

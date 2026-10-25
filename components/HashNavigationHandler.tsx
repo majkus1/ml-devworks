@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
-import { holdNavDuringScroll } from "@/lib/nav-scroll";
+import { holdNavDuringScroll, scrollToSection } from "@/lib/nav-scroll";
 
 export default function HashNavigationHandler() {
   const pathname = usePathname();
@@ -60,20 +60,11 @@ export default function HashNavigationHandler() {
 
             // Wait a tiny bit to ensure scroll to top completed
             setTimeout(() => {
-              const navbarHeight = 80;
-              const offset = navbarHeight + 20; // 100px total offset
-              const elementPosition = element.getBoundingClientRect().top;
-              const offsetPosition = elementPosition + window.pageYOffset - offset;
-
               // Re-enable smooth scroll before scrolling
               html.style.scrollBehavior = originalHtmlScrollBehavior || "";
               body.style.scrollBehavior = originalBodyScrollBehavior || "";
 
-              holdNavDuringScroll();
-              window.scrollTo({
-                top: Math.max(0, offsetPosition),
-                behavior: "smooth",
-              });
+              scrollToSection(element);
             }, 100);
             return true; // Element found and scrolled
           }
@@ -99,19 +90,10 @@ export default function HashNavigationHandler() {
               setTimeout(() => {
                 const contactElement = document.getElementById("contact");
                 if (contactElement) {
-                  const navbarHeight = 80;
-                  const offset = navbarHeight + 20;
-                  const elementPosition = contactElement.getBoundingClientRect().top;
-                  const offsetPosition = elementPosition + window.pageYOffset - offset;
-
                   html.style.scrollBehavior = originalHtmlScrollBehavior || "";
                   body.style.scrollBehavior = originalBodyScrollBehavior || "";
 
-                  holdNavDuringScroll();
-                  window.scrollTo({
-                    top: Math.max(0, offsetPosition),
-                    behavior: "smooth",
-                  });
+                  scrollToSection(contactElement);
                 }
               }, 100);
             }
