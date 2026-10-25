@@ -1,12 +1,11 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useLayoutEffect, useRef, type CSSProperties } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { getAlternateLangPath } from "@/lib/i18n-routes";
 import { HOLD_NAV_EVENT, scrollToSection } from "@/lib/nav-scroll";
-import { lockScroll } from "@/lib/scroll-lock";
 import { ArrowRightIcon } from "@/components/ui/icons";
 
 interface NavbarProps {
@@ -155,10 +154,24 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
     };
   }, []);
 
-  useEffect(() => {
-    if (!isMobileMenuOpen) return;
-    return lockScroll();
+  // Stan menu → <html data-menu="open">; wygląd, animacje i blokada przewijania są w CSS (globals.css).
+  // Przy starcie przejmujemy stan od skryptu z lib/mobile-menu.ts (gdy ktoś otworzył menu przed wczytaniem strony).
+  const menuSynced = useRef(false);
+  useLayoutEffect(() => {
+    const root = document.documentElement;
+    if (!menuSynced.current) {
+      menuSynced.current = true;
+      (window as Window & { __mldNavReady?: boolean }).__mldNavReady = true;
+      if (root.dataset.menu === "open") {
+        setIsMobileMenuOpen(true);
+        return;
+      }
+    }
+    if (isMobileMenuOpen) root.dataset.menu = "open";
+    else delete root.dataset.menu;
   }, [isMobileMenuOpen]);
+
+  useLayoutEffect(() => () => void delete document.documentElement.dataset.menu, []);
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -203,18 +216,13 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
     return isHomePage ? href : `${homePath}${href}`;
   };
 
-  // Wejście pozycji menu: kolejno co 30 ms, miękkie wyhamowanie; wyjście wszystkich naraz i szybciej.
-  const menuRevealClass = `transition-[opacity,transform] motion-reduce:transition-none ${
-    isMobileMenuOpen
-      ? "translate-y-0 opacity-100 duration-[420ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
-      : "translate-y-3 opacity-0 duration-150 ease-in"
-  }`;
-  const menuRevealDelay = (index: number) => ({ transitionDelay: isMobileMenuOpen ? `${50 + index * 30}ms` : "0ms" });
+  // Kolejność wjazdu pozycji menu (opóźnienie dla .mobile-menu-item w globals.css).
+  const menuRevealDelay = (index: number) => ({ "--d": `${30 + index * 28}ms` }) as CSSProperties;
 
   return (
     <>
       <nav
-        className={`fixed left-0 right-0 top-0 z-50 transition-[transform,background-color,border-color] duration-200 ease-out ${isVisible || isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"} ${
+        className={`site-nav fixed left-0 right-0 top-0 z-50 transition-[transform,background-color,border-color] duration-200 ease-out ${isVisible || isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"} ${
           isMobileMenuOpen
             ? "border-b border-transparent bg-background"
             : isScrolled
@@ -292,28 +300,17 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
               </Link>
 
               <button
-                className="relative z-50 flex h-10 w-10 touch-manipulation items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] lg:hidden"
+                className="relative z-50 flex h-10 w-10 touch-manipulation select-none items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] transition-[transform,background-color] duration-100 [-webkit-tap-highlight-color:transparent] active:scale-[0.92] active:bg-white/[0.12] lg:hidden"
                 onClick={() => setIsMobileMenuOpen((isOpen) => !isOpen)}
+                data-menu-toggle
                 aria-label={isMobileMenuOpen ? (lang === "pl" ? "Zamknij menu" : "Close menu") : lang === "pl" ? "Otwórz menu" : "Open menu"}
                 aria-expanded={isMobileMenuOpen}
               >
-                {/* Trzy kreski → „X” samymi transformacjami (bez animowania położenia), więc zmiana jest natychmiastowa i płynna. */}
+                {/* Trzy kreski → „X”: transformacje w CSS (.burger-line), sterowane atrybutem data-menu na <html>. */}
                 <span className="relative block h-3.5 w-5" aria-hidden="true">
-                  <span
-                    className={`absolute left-0 top-0 block h-0.5 w-5 rounded-full bg-white transition-transform duration-200 ease-[cubic-bezier(0.2,0.8,0.2,1)] motion-reduce:transition-none ${
-                      isMobileMenuOpen ? "translate-y-1.5 rotate-45" : ""
-                    }`}
-                  />
-                  <span
-                    className={`absolute left-0 top-1.5 block h-0.5 w-5 rounded-full bg-white transition-[opacity,transform] duration-150 ease-out motion-reduce:transition-none ${
-                      isMobileMenuOpen ? "scale-x-0 opacity-0" : ""
-                    }`}
-                  />
-                  <span
-                    className={`absolute left-0 top-3 block h-0.5 w-5 rounded-full bg-white transition-transform duration-200 ease-[cubic-bezier(0.2,0.8,0.2,1)] motion-reduce:transition-none ${
-                      isMobileMenuOpen ? "-translate-y-1.5 -rotate-45" : ""
-                    }`}
-                  />
+                  <span className="burger-line burger-line-top absolute left-0 top-0 block h-0.5 w-5 rounded-full bg-white" />
+                  <span className="burger-line burger-line-middle absolute left-0 top-1.5 block h-0.5 w-5 rounded-full bg-white" />
+                  <span className="burger-line burger-line-bottom absolute left-0 top-3 block h-0.5 w-5 rounded-full bg-white" />
                 </span>
               </button>
             </div>
@@ -321,14 +318,9 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
         </div>
       </nav>
 
-      {/* Menu na telefonie: zawsze w DOM, otwierane samym CSS. Tło pojawia się płynnie, a pozycje wjeżdżają
-          kolejno od góry (tylko opacity i transform — płynne także na słabszych telefonach). Zamykanie jest krótsze i bez opóźnień. */}
-      <div
-        className={`fixed inset-0 z-40 bg-background lg:hidden transition-[opacity,visibility] motion-reduce:transition-none ${
-          isMobileMenuOpen ? "visible opacity-100 duration-300 ease-out" : "pointer-events-none invisible opacity-0 duration-200 ease-in"
-        }`}
-        aria-hidden={!isMobileMenuOpen}
-      >
+      {/* Menu na telefonie: zawsze w DOM, otwierane samym CSS (.mobile-menu w globals.css). Tło pojawia się płynnie,
+          a pozycje wjeżdżają kolejno od góry; zamykanie jest krótsze i bez opóźnień. */}
+      <div className="mobile-menu fixed inset-0 z-40 bg-background lg:hidden" data-mobile-menu aria-hidden={!isMobileMenuOpen}>
         <div
           className="pointer-events-none absolute inset-x-0 top-0 h-80 bg-[radial-gradient(70%_60%_at_50%_0%,rgba(0,255,136,0.09),transparent)]"
           aria-hidden="true"
@@ -342,7 +334,7 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
                 isActive ? "text-primary" : "text-white active:text-primary"
               }`;
               return (
-                <li key={item.href} className={menuRevealClass} style={menuRevealDelay(index)}>
+                <li key={item.href} className="mobile-menu-item" style={menuRevealDelay(index)}>
                   {isPageLink ? (
                     <Link href={item.href} onClick={() => setIsMobileMenuOpen(false)} className={className} aria-current={isActive ? "page" : undefined} tabIndex={isMobileMenuOpen ? 0 : -1}>
                       {item.label}
@@ -359,7 +351,7 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
             })}
           </ul>
 
-          <div className={`mt-auto flex flex-col gap-3 ${menuRevealClass}`} style={menuRevealDelay(items.length)}>
+          <div className="mobile-menu-item mt-auto flex flex-col gap-3" style={menuRevealDelay(items.length)}>
             <Link href={contactHref} onClick={() => setIsMobileMenuOpen(false)} className="btn-primary w-full" tabIndex={isMobileMenuOpen ? 0 : -1}>
               {ctaLabel}
               <ArrowRightIcon size={18} />

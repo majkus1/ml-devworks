@@ -212,3 +212,85 @@ video::-webkit-media-controls-overlay-play-button {
 video {
   pointer-events: none;
 }
+
+/*
+ * Menu na telefonie. Stan otwarcia: <html data-menu="open"> (ustawia Navbar albo skrypt z lib/mobile-menu.ts,
+ * zanim wczytają się skrypty strony). Animowane tylko opacity i transform.
+ * Otwieranie: tło 240 ms, pozycje wjeżdżają kolejno (opóźnienie --d). Zamykanie: wszystko naraz, ok. 160 ms.
+ */
+html[data-menu="open"] {
+  overflow: hidden;
+}
+
+.mobile-menu {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 160ms ease-out,
+    visibility 0s linear 160ms;
+}
+
+html[data-menu="open"] .mobile-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition:
+    opacity 240ms cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s;
+}
+
+.mobile-menu-item {
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 120ms ease-out,
+    transform 120ms ease-out;
+}
+
+html[data-menu="open"] .mobile-menu-item {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 360ms cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0ms),
+    transform 360ms cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0ms);
+}
+
+/* Burger → X: same transformacje, zmiana zaczyna się w tej samej klatce co stuknięcie. */
+.burger-line {
+  transition:
+    transform 200ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 150ms ease-out;
+}
+
+html[data-menu="open"] .burger-line-top {
+  transform: translateY(6px) rotate(45deg);
+}
+
+html[data-menu="open"] .burger-line-middle {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+html[data-menu="open"] .burger-line-bottom {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Przy otwartym menu górny pasek zawsze widoczny i pełny (bez rozmycia, które na telefonie spowalnia animację). */
+html[data-menu="open"] .site-nav {
+  transform: none;
+  background-color: #07090c;
+  border-color: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu,
+  html[data-menu="open"] .mobile-menu,
+  .mobile-menu-item,
+  html[data-menu="open"] .mobile-menu-item,
+  .burger-line {
+    transition: none;
+  }
+}

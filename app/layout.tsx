@@ -7,6 +7,7 @@ import { AiAssistantProvider } from "@/components/ai-assistant/AiAssistantProvid
 import AiAssistantFloating from "@/components/ai-assistant/AiAssistantFloating";
 import { isAiAssistantEnabled } from "@/lib/ai-assistant/openai";
 import { headers } from "next/headers";
+import { MOBILE_MENU_BOOT_SCRIPT } from "@/lib/mobile-menu";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin", "latin-ext"], variable: "--font-sans", display: "swap" });
@@ -94,8 +95,10 @@ export default async function RootLayout({
   const aiAssistantEnabled = isAiAssistantEnabled();
   
   return (
-    <html lang={lang} className={`${inter.variable} ${display.variable} scroll-smooth overflow-x-hidden`}>
+    <html lang={lang} className={`${inter.variable} ${display.variable} scroll-smooth overflow-x-hidden`} suppressHydrationWarning>
       <body className="font-sans overflow-x-hidden">
+        {/* Zwykły skrypt w HTML (nie next/script): burger działa, zanim wczyta się reszta skryptów strony. */}
+        <script dangerouslySetInnerHTML={{ __html: MOBILE_MENU_BOOT_SCRIPT }} />
         {/* Prevent default hash scroll behavior - runs before React hydration */}
         <Script
           id="prevent-hash-scroll"
@@ -142,10 +145,11 @@ export default async function RootLayout({
           }}
         />
         
-        {/* Google Tag Manager */}
+        {/* Google Tag Manager: ładowany po wczytaniu strony, gdy przeglądarka jest wolna (GTM + GA blokowały telefon
+            na ok. 0,3–1 s w pierwszych sekundach, m.in. pierwsze stuknięcia w menu). Zgody ustawia skrypt wyżej. */}
         <Script
           id="google-tag-manager"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
