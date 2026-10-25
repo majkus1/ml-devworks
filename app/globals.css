@@ -276,6 +276,12 @@ html[data-menu="open"] .burger-line-bottom {
   transform: translateY(-6px) rotate(-45deg);
 }
 
+/* Pod otwartym menu animacje strony stoją (i tak ich nie widać) — inaczej na górze strony, gdzie działa animowana karta,
+   telefon przemalowywał ją w każdej klatce i otwieranie menu gubiło klatki. */
+html[data-menu="open"] main * {
+  animation-play-state: paused;
+}
+
 /* Przy otwartym menu górny pasek zawsze widoczny i pełny (bez rozmycia, które na telefonie spowalnia animację). */
 html[data-menu="open"] .site-nav {
   transform: none;

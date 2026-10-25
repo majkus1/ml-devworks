@@ -71,9 +71,10 @@ const config: Config = {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.45" },
         },
+        // Płynąca linia w karcie na górze strony: samo przesunięcie (transform), bez przemalowywania w każdej klatce.
         flow: {
-          "0%": { backgroundPosition: "0% 0%" },
-          "100%": { backgroundPosition: "0% 200%" },
+          "0%": { transform: "translateY(-50%)" },
+          "100%": { transform: "translateY(50%)" },
         },
       },
     },

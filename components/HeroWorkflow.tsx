@@ -66,7 +66,7 @@ export default function HeroWorkflow({ lang = "pl" }: HeroWorkflowProps) {
 
         {/* Łącznik */}
         <div className="relative mx-auto my-2 h-7 w-px overflow-hidden bg-white/10">
-          <span className="absolute inset-0 animate-flow bg-gradient-to-b from-transparent via-primary to-transparent bg-[length:100%_200%]" />
+          <span className="absolute inset-x-0 top-0 h-[200%] animate-flow bg-gradient-to-b from-transparent via-primary to-transparent" />
         </div>
 
         {/* Agent */}
@@ -86,7 +86,7 @@ export default function HeroWorkflow({ lang = "pl" }: HeroWorkflowProps) {
         </div>
 
         <div className="relative mx-auto my-2 h-7 w-px overflow-hidden bg-white/10">
-          <span className="absolute inset-0 animate-flow bg-gradient-to-b from-transparent via-primary to-transparent bg-[length:100%_200%] [animation-delay:0.8s]" />
+          <span className="absolute inset-x-0 top-0 h-[200%] animate-flow bg-gradient-to-b from-transparent via-primary to-transparent [animation-delay:0.8s]" />
         </div>
 
         {/* Efekty */}
