@@ -105,12 +105,16 @@ export default function CoMoznaZautomatyzowacContent({ lang }: Props) {
           {isPl ? (
             <>
               Do kosztu wdrożenia dolicz koszt użycia modeli AI (zwykle kilkadziesiąt do kilkuset złotych miesięcznie przy typowym wolumenie zapytań) oraz ewentualne utrzymanie. Szczegóły liczenia zwrotu opisuję w artykule{" "}
-              <Link href="/blog/ile-kosztuje-automatyzacja-procesow-w-firmie-i-jak-liczyc-roi">Koszt automatyzacji procesów i ROI dla firm</Link>.
+              <Link href="/blog/ile-kosztuje-automatyzacja-procesow-w-firmie-i-jak-liczyc-roi">Koszt automatyzacji procesów i ROI dla firm</Link>, a plan
+              wdrożenia z harmonogramem w tekście{" "}
+              <Link href="/blog/wdrozenie-ai-w-firmie-krok-po-kroku-plan-koszt-czas">Wdrożenie AI w firmie krok po kroku</Link>.
             </>
           ) : (
             <>
               Add the cost of AI model usage to the implementation cost (usually tens to a few hundred PLN per month at a typical enquiry volume) plus optional maintenance. I describe ROI calculation in detail in{" "}
-              <Link href="/en/blog/how-much-does-business-process-automation-cost-and-how-to-calculate-roi">Business Process Automation Cost and ROI</Link>.
+              <Link href="/en/blog/how-much-does-business-process-automation-cost-and-how-to-calculate-roi">Business Process Automation Cost and ROI</Link>, and a
+              rollout plan with a timeline in{" "}
+              <Link href="/en/blog/ai-implementation-in-a-company-step-by-step-plan-cost-timeline">AI Implementation in a Company Step by Step</Link>.
             </>
           )}
         </p>

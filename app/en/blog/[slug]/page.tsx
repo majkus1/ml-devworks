@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
 import BlogPostLayout from "@/components/blog/BlogPostLayout";
+import { LINKEDIN_URL } from "@/lib/profile";
 import { blogPosts, type BlogPost } from "@/lib/blog";
 import { getPostContent } from "@/lib/blog-content";
 
@@ -94,10 +95,12 @@ function ArticleSchema({ post }: { post: BlogPost }) {
     dateModified: post.dateModified ?? post.publishedAt,
     image: { "@type": "ImageObject", url: post.image ? (post.image.startsWith("http") ? post.image : `${baseUrl}${post.image}`) : `${baseUrl}/ogimg.png`, width: 1200, height: 630 },
     author: {
-      "@type": "Organization",
-      name: "ML DevWorks",
+      "@type": "Person",
+      "@id": `${baseUrl}/#person`,
+      name: "Michał Lipka",
       url: baseUrl,
-      logo: { "@type": "ImageObject", url: `${baseUrl}/primary-on-transparent-logo.png` },
+      jobTitle: "Software Developer",
+      sameAs: [LINKEDIN_URL],
     },
     publisher: {
       "@type": "Organization",

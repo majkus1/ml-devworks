@@ -16,8 +16,12 @@ import AplikacjeMobilneNaZamowienieContent from "@/components/blog-posts/Aplikac
 import AgencjaAutomatyzacjiCzyProgramistaContent from "@/components/blog-posts/AgencjaAutomatyzacjiCzyProgramistaContent";
 import PanelZapisowSzkolaJezykowaContent from "@/components/blog-posts/PanelZapisowSzkolaJezykowaContent";
 import AutomatyzacjaSprzedazyKosztContent from "@/components/blog-posts/AutomatyzacjaSprzedazyKosztContent";
+import WdrozenieAIKrokPoKrokuContent from "@/components/blog-posts/WdrozenieAIKrokPoKrokuContent";
+import AplikacjeMobilnePrzykladyContent from "@/components/blog-posts/AplikacjeMobilnePrzykladyContent";
 
 const POST_CONTENT: Record<string, (lang: "pl" | "en") => ReactNode> = {
+  "wdrozenie-ai-w-firmie-krok-po-kroku-plan-koszt-czas": (lang) => <WdrozenieAIKrokPoKrokuContent lang={lang} />,
+  "aplikacje-mobilne-dla-firm-przyklady-zastosowan-i-ceny": (lang) => <AplikacjeMobilnePrzykladyContent lang={lang} />,
   "ile-kosztuje-automatyzacja-procesu-sprzedazowego": (lang) => <AutomatyzacjaSprzedazyKosztContent lang={lang} />,
   "panel-zapisow-dla-szkoly-jezykowej-studium-przypadku": (lang) => (
     <PanelZapisowSzkolaJezykowaContent lang={lang} />

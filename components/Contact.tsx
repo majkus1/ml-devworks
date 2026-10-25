@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
 import BookingCalendar from "./BookingCalendar";
+import { LinkedInIcon } from "@/components/ui/icons";
+import { LINKEDIN_URL } from "@/lib/profile";
 
 interface ContactProps {
   lang?: "pl" | "en";
@@ -130,10 +132,20 @@ export default function Contact({ lang = "pl", compact = false }: ContactProps) 
             <address className="card mt-8 not-italic">
               <div className="flex items-center gap-4 border-b border-white/[0.08] pb-5">
                 <Image src="/ja-avatar.webp" alt="Michał Lipka" width={56} height={56} className="h-14 w-14 rounded-full border border-white/15 object-cover" />
-                <div>
+                <div className="min-w-0 flex-1">
                   <p className="font-semibold text-white">Michał Lipka</p>
                   <p className="text-sm text-gray-400">{t.role}</p>
                 </div>
+                <a
+                  href={LINKEDIN_URL}
+                  target="_blank"
+                  rel="noopener noreferrer me"
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] text-[#0a66c2] transition-colors hover:border-[#0a66c2]/60 hover:bg-[#0a66c2]/10"
+                  aria-label={lang === "pl" ? "Profil Michała Lipki na LinkedIn" : "Michał Lipka on LinkedIn"}
+                  title="LinkedIn"
+                >
+                  <LinkedInIcon size={18} />
+                </a>
               </div>
               <ul className="mt-5 space-y-3 text-[0.95rem]">
                 <li>

@@ -4,8 +4,9 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 import CtaBand from "@/components/ui/CtaBand";
-import { ArrowRightIcon, ClockIcon } from "@/components/ui/icons";
+import { ArrowRightIcon, ClockIcon, LinkedInIcon } from "@/components/ui/icons";
 import type { BlogPost } from "@/lib/blog";
+import { LINKEDIN_URL } from "@/lib/profile";
 
 interface BlogPostLayoutProps {
   lang: "pl" | "en";
@@ -58,8 +59,19 @@ export default function BlogPostLayout({ lang, post, content, related }: BlogPos
               <div className="mt-8 flex items-center gap-3 border-t border-white/[0.07] pt-6" itemProp="author" itemScope itemType="https://schema.org/Person">
                 <Image src="/ja-avatar.webp" alt="Michał Lipka" width={44} height={44} className="h-11 w-11 rounded-full border border-white/15 object-cover" />
                 <div className="text-sm">
-                  <p className="font-semibold text-white" itemProp="name">
-                    Michał Lipka
+                  <p className="flex items-center gap-2 font-semibold text-white">
+                    <span itemProp="name">Michał Lipka</span>
+                    <a
+                      href={LINKEDIN_URL}
+                      target="_blank"
+                      rel="noopener noreferrer me"
+                      itemProp="sameAs"
+                      className="text-[#0a66c2] transition-opacity hover:opacity-80"
+                      aria-label={isPl ? "Profil autora na LinkedIn" : "Author on LinkedIn"}
+                      title="LinkedIn"
+                    >
+                      <LinkedInIcon size={15} />
+                    </a>
                   </p>
                   <p className="text-gray-400">{isPl ? "Programista i analityk biznesowy, ML DevWorks" : "Developer and business analyst, ML DevWorks"}</p>
                 </div>

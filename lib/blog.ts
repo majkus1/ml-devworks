@@ -22,6 +22,169 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "wdrozenie-ai-w-firmie-krok-po-kroku-plan-koszt-czas",
+    slugEn: "ai-implementation-in-a-company-step-by-step-plan-cost-timeline",
+    title: {
+      pl: "Wdrożenie AI w firmie krok po kroku: plan, koszt i czas (2026)",
+      en: "AI Implementation in a Company Step by Step: Plan, Cost, and Timeline (2026)",
+    },
+    metaTitle: {
+      pl: "Wdrożenie AI w firmie krok po kroku: plan, koszt i czas",
+      en: "AI Implementation Step by Step: Plan, Cost, Timeline",
+    },
+    excerpt: {
+      pl: "Jak wdrożyć AI w firmie w 30 dni: 6 kroków od wyboru procesu po pomiar efektu. Koszt od 2 500 zł netto, czas 2–4 tygodnie, RODO i typowe błędy.",
+      en: "How to implement AI in a company in 30 days: 6 steps from choosing a process to measuring results. From PLN 2,500 net, 2–4 weeks, GDPR, and pitfalls.",
+    },
+    publishedAt: "2026-10-25",
+    dateModified: "2026-10-25",
+    readingTime: { pl: "7 min", en: "7 min" },
+    keywords: {
+      pl: [
+        "wdrożenie ai w firmie",
+        "jak wdrożyć ai w firmie",
+        "wdrożenie automatyzacji ai",
+        "ile trwa wdrożenie automatyzacji ai",
+        "ile kosztuje wdrożenie ai",
+        "automatyzacje ai dla firm",
+        "ai w małej firmie",
+        "wdrożenie sztucznej inteligencji w firmie",
+      ],
+      en: [
+        "ai implementation in a company",
+        "how to implement ai in business",
+        "ai automation implementation",
+        "how long does ai implementation take",
+        "ai implementation cost",
+        "ai for small business",
+      ],
+    },
+    faq: {
+      pl: [
+        {
+          q: "Ile trwa wdrożenie automatyzacji AI w firmie?",
+          a: "Pierwszy proces zwykle 2–4 tygodnie: prototyp na prawdziwych przykładach w 3–10 dni, pilotaż 1–2 tygodnie i wdrożenie. Proste automatyzacje bez AI bywają gotowe w 3–7 dni roboczych.",
+        },
+        {
+          q: "Ile kosztuje wdrożenie AI w małej firmie?",
+          a: "Automatyzacja jednego procesu kosztuje zwykle 2 500–6 000 zł netto, agent AI z bazą wiedzy firmy od ok. 8 000 zł netto, a integracja kilku systemów 8 000–18 000 zł netto. Miesięcznie dochodzą modele AI i narzędzia: kilkadziesiąt do kilkuset złotych.",
+        },
+        {
+          q: "Od czego zacząć wdrożenie AI w firmie?",
+          a: "Od jednego powtarzalnego procesu, który zajmuje zespołowi godziny co tydzień, i od zmierzenia jego stanu przed wdrożeniem: liczby spraw, czasu obsługi i błędów.",
+        },
+        {
+          q: "Czy do wdrożenia AI potrzebny jest dział IT?",
+          a: "Nie. Wystarczy osoba, która zna proces i przez 2–3 tygodnie pilotażu oceni wyniki AI. Integracje, konfigurację i utrzymanie przejmuje wykonawca.",
+        },
+        {
+          q: "Czy wdrożenie AI jest zgodne z RODO?",
+          a: "Tak, jeśli dane są przetwarzane w UE na podstawie umowy powierzenia, modele działają przez API bez trenowania na danych firmy, a AI ma dostęp tylko do danych potrzebnych do zadania.",
+        },
+      ],
+      en: [
+        {
+          q: "How long does AI automation take to implement in a company?",
+          a: "The first process usually takes 2–4 weeks: a prototype on real examples in 3–10 days, a 1–2 week pilot, and rollout. Simple automations without AI can be ready in 3–7 business days.",
+        },
+        {
+          q: "How much does AI implementation cost for a small company?",
+          a: "Automating one process usually costs PLN 2,500–6,000 net, an AI agent with a company knowledge base from about PLN 8,000 net, and integrating several systems PLN 8,000–18,000 net. Monthly, add AI models and tools: tens to a few hundred PLN.",
+        },
+        {
+          q: "Where should AI implementation in a company start?",
+          a: "With one repetitive process that takes the team hours every week, and with measuring its state before rollout: number of cases, handling time, and errors.",
+        },
+        {
+          q: "Do you need an IT department to implement AI?",
+          a: "No. You need a person who knows the process and will review AI output during the 2–3 week pilot. The vendor handles integrations, configuration, and maintenance.",
+        },
+        {
+          q: "Is AI implementation GDPR compliant?",
+          a: "Yes, if data is processed in the EU under a data processing agreement, models run via an API without training on company data, and AI only accesses the data it needs for the task.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "aplikacje-mobilne-dla-firm-przyklady-zastosowan-i-ceny",
+    slugEn: "mobile-apps-for-business-examples-and-prices",
+    title: {
+      pl: "Aplikacje mobilne dla firm: 8 przykładów z cenami (2026)",
+      en: "Mobile Apps for Business: 8 Examples with Prices (2026)",
+    },
+    metaTitle: {
+      pl: "Aplikacje mobilne dla firm: 8 przykładów z cenami (2026)",
+      en: "Mobile Apps for Business: 8 Examples with Prices (2026)",
+    },
+    excerpt: {
+      pl: "Aplikacje mobilne dla firm w praktyce: serwis, handlowcy, magazyn, kontrole, rezerwacje. 8 przykładów z ceną od 12 000 zł netto, czasem i efektem.",
+      en: "Mobile apps for business in practice: field service, sales, warehouse, inspections, bookings. 8 examples priced from PLN 12,000 net, with timelines.",
+    },
+    publishedAt: "2026-10-25",
+    dateModified: "2026-10-25",
+    readingTime: { pl: "8 min", en: "8 min" },
+    keywords: {
+      pl: [
+        "aplikacje mobilne dla firm",
+        "aplikacje mobilne dla biznesu",
+        "aplikacja mobilna dla firmy przykłady",
+        "aplikacja dla serwisantów",
+        "aplikacja dla handlowców",
+        "aplikacja magazynowa na telefon",
+        "aplikacja do kontroli i audytów",
+        "ile kosztuje aplikacja mobilna dla firmy",
+      ],
+      en: [
+        "mobile apps for business",
+        "business mobile app examples",
+        "field service app",
+        "sales rep app",
+        "warehouse scanning app",
+        "inspection app",
+        "mobile app cost for business",
+      ],
+    },
+    faq: {
+      pl: [
+        {
+          q: "Jakie aplikacje mobilne są najczęściej tworzone dla firm?",
+          a: "Aplikacje dla serwisantów w terenie, handlowców, magazynu ze skanowaniem kodów, do kontroli i audytów, do ewidencji czasu pracy i grafików, dla kierowców oraz aplikacje rezerwacyjne dla klientów.",
+        },
+        {
+          q: "Ile kosztuje aplikacja mobilna dla firmy?",
+          a: "Prosta aplikacja dla jednej roli zaczyna się od 12 000 zł netto. Aplikacje z panelem, rolami, pracą offline i integracjami kosztują zwykle 20 000–40 000 zł netto, a aplikacje zakupowe i lojalnościowe od ok. 30 000 zł netto.",
+        },
+        {
+          q: "Ile trwa stworzenie aplikacji mobilnej dla firmy?",
+          a: "Zwykle 3–8 tygodni do pierwszej wersji używanej przez zespół. Większe aplikacje dla klientów, np. zakupowe i lojalnościowe, 8–12 tygodni.",
+        },
+        {
+          q: "Czy aplikacja mobilna musi być w App Store i Google Play?",
+          a: "Nie zawsze. Przy rezerwacjach, grafikach i panelach dla klientów często wystarczy aplikacja webowa instalowana na ekranie telefonu (PWA). Sklep jest potrzebny przy pełnej pracy offline, skanerze i GPS.",
+        },
+      ],
+      en: [
+        {
+          q: "What mobile apps are most often built for companies?",
+          a: "Apps for field technicians, sales reps, warehouses with barcode scanning, inspections and audits, time tracking and schedules, drivers, and booking apps for customers.",
+        },
+        {
+          q: "How much does a mobile app for a company cost?",
+          a: "A simple single-role app starts from PLN 12,000 net. Apps with a panel, roles, offline mode, and integrations usually cost PLN 20,000–40,000 net, and ordering and loyalty apps from about PLN 30,000 net.",
+        },
+        {
+          q: "How long does it take to build a business mobile app?",
+          a: "Usually 3–8 weeks to a first version used by the team. Larger customer apps, such as ordering and loyalty apps, take 8–12 weeks.",
+        },
+        {
+          q: "Does a business app have to be in the App Store and Google Play?",
+          a: "Not always. For bookings, schedules, and customer portals, a web app installed on the phone's home screen (PWA) is often enough. The stores are needed for full offline mode, scanning, and GPS.",
+        },
+      ],
+    },
+  },
+  {
     slug: "ile-kosztuje-automatyzacja-procesu-sprzedazowego",
     slugEn: "how-much-does-sales-process-automation-cost",
     title: {
@@ -33,8 +196,8 @@ export const blogPosts: BlogPost[] = [
       en: "Sales Process Automation Cost: 2026 Pricing",
     },
     excerpt: {
-      pl: "Od 2 500 zł netto za zapytania prosto do CRM, 6 000–12 000 zł za kwalifikację leadów z AI i follow-upy. Cennik, czas wdrożenia, przykład zwrotu i od czego zacząć.",
-      en: "From PLN 2,500 net for enquiries straight to the CRM, PLN 6,000–12,000 for AI lead qualification and follow-ups. Pricing, timelines, a payback example, and where to start.",
+      pl: "Od 2 500 zł netto za zapytania prosto do CRM, 6 000–12 000 zł za kwalifikację leadów z AI i follow-upy. Cennik, czas wdrożenia i przykład zwrotu.",
+      en: "From PLN 2,500 net for enquiries straight to the CRM, PLN 6,000–12,000 for AI lead qualification and follow-ups. Pricing, timelines, and payback.",
     },
     publishedAt: "2026-10-24",
     dateModified: "2026-10-24",
@@ -109,7 +272,7 @@ export const blogPosts: BlogPost[] = [
       en: "Language School Enrollment Panel: Case Study",
     },
     excerpt: {
-      pl: "Jak zaprojektowałem panel zapisów dla szkoły językowej: zgłoszenia z formularza, lekcje próbne, decyzja rodzica jednym kliknięciem i odrabianie zajęć bez telefonów.",
+      pl: "Panel zapisów dla szkoły językowej: zgłoszenia z formularza, lekcje próbne, decyzja rodzica jednym kliknięciem i odrabianie zajęć bez telefonów.",
       en: "How I designed an enrollment panel for a language school: form submissions, trial lessons, one-tap parent decisions and make-up classes without phone calls.",
     },
     publishedAt: "2026-09-27",
@@ -493,7 +656,7 @@ export const blogPosts: BlogPost[] = [
       en: "Business Process Automation Cost and ROI",
     },
     excerpt: {
-      pl: "Prosta automatyzacja od 2 500 zł netto, integracje wielu systemów 8 000–18 000 zł. Widełki cen, co wpływa na koszt, przykładowe wyliczenie i jak policzyć ROI przed wdrożeniem.",
+      pl: "Prosta automatyzacja od 2 500 zł netto, integracje wielu systemów 8 000–18 000 zł. Widełki cen, co wpływa na koszt i jak policzyć ROI przed wdrożeniem.",
       en: "What business process automation costs, including sales process automation: price ranges, cost drivers, an example calculation and how to estimate ROI.",
     },
     publishedAt: "2026-07-06",
@@ -629,7 +792,7 @@ export const blogPosts: BlogPost[] = [
       en: "AI Agents in Customer Service - When Are They Worth It?",
     },
     excerpt: {
-      pl: "Kiedy agent AI realnie pomaga w obsłudze klienta, a kiedy wystarczy zwykły chatbot lub lepszy formularz? Sprawdź kryteria, koszty, ryzyka i przykładowe procesy.",
+      pl: "Kiedy agent AI realnie pomaga w obsłudze klienta, a kiedy wystarczy chatbot lub lepszy formularz? Kryteria, koszty, ryzyka i przykładowe procesy.",
       en: "When does an AI agent actually help customer service, and when is a simple chatbot or better form enough? Learn criteria, costs, risks, and example workflows.",
     },
     publishedAt: "2026-06-26",

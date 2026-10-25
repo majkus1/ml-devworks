@@ -1,4 +1,5 @@
 import { getServices } from "@/lib/services";
+import { LINKEDIN_URL } from "@/lib/profile";
 
 interface StructuredDataProps {
   lang?: "pl" | "en";
@@ -107,6 +108,8 @@ export default function StructuredData({ lang = "pl" }: StructuredDataProps) {
     jobTitle: lang === "pl" ? "Programista / Software Developer" : "Software Developer",
     url: "https://ml-devworks.com",
     worksFor: { "@id": "https://ml-devworks.com/#localbusiness" },
+    image: "https://ml-devworks.com/ja.webp",
+    sameAs: [LINKEDIN_URL],
     knowsAbout: [
       "Web development",
       "Next.js",

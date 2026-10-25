@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Section from "@/components/ui/Section";
-import { CheckIcon, PinIcon } from "@/components/ui/icons";
+import { CheckIcon, LinkedInIcon, PinIcon } from "@/components/ui/icons";
+import { LINKEDIN_URL } from "@/lib/profile";
 
 interface AboutIntroProps {
   lang?: "pl" | "en";
@@ -22,6 +23,7 @@ export default function AboutIntro({ lang = "pl" }: AboutIntroProps) {
         name: "Michał Lipka",
         role: "Programista i analityk biznesowy, ML DevWorks",
         place: "Kraków · pracuję z firmami z całej Polski",
+        linkedin: "Mój profil na LinkedIn",
       }
     : {
         eyebrow: "Who you work with",
@@ -35,6 +37,7 @@ export default function AboutIntro({ lang = "pl" }: AboutIntroProps) {
         name: "Michał Lipka",
         role: "Developer and business analyst, ML DevWorks",
         place: "Krakow, Poland · working with companies remotely",
+        linkedin: "My LinkedIn profile",
       };
 
   return (
@@ -77,10 +80,16 @@ export default function AboutIntro({ lang = "pl" }: AboutIntroProps) {
               </li>
             ))}
           </ul>
-          <p className="mt-8 flex items-center gap-2 text-sm text-gray-400">
-            <PinIcon size={16} className="text-primary" />
-            {t.place}
-          </p>
+          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+            <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer me" className="btn-secondary !px-5 !py-3 !text-sm">
+              <LinkedInIcon size={18} className="text-[#0a66c2]" />
+              {t.linkedin}
+            </a>
+            <p className="flex items-center gap-2 text-sm text-gray-400">
+              <PinIcon size={16} className="text-primary" />
+              {t.place}
+            </p>
+          </div>
         </div>
       </div>
     </Section>

@@ -186,12 +186,16 @@ export default function AplikacjeMobilneNaZamowienieContent({ lang }: Props) {
           {isPl ? (
             <>
               Nie potrzebujesz specyfikacji. Odpowiedzi na te pytania wystarczą, żebym przygotował klikalny prototyp i wycenę. Jeśli zastanawiasz się, czy AI może zbudować taką aplikację samodzielnie, przeczytaj{" "}
-              <Link href="/blog/czy-ai-wystarczy-do-stworzenia-strony-lub-aplikacji">Czy AI wystarczy do stworzenia strony lub aplikacji?</Link>
+              <Link href="/blog/czy-ai-wystarczy-do-stworzenia-strony-lub-aplikacji">Czy AI wystarczy do stworzenia strony lub aplikacji?</Link> Gotowe
+              zastosowania z cenami (serwis, handlowcy, magazyn, kontrole, rezerwacje) zebrałem we wpisie{" "}
+              <Link href="/blog/aplikacje-mobilne-dla-firm-przyklady-zastosowan-i-ceny">Aplikacje mobilne dla firm: 8 przykładów z cenami</Link>.
             </>
           ) : (
             <>
               You do not need a specification. Answers to these questions are enough for me to prepare a clickable prototype and an estimate. If you wonder whether AI can build such an app on its own, read{" "}
-              <Link href="/en/blog/is-ai-enough-to-build-a-website-or-app">Is AI Enough to Build a Website or App?</Link>
+              <Link href="/en/blog/is-ai-enough-to-build-a-website-or-app">Is AI Enough to Build a Website or App?</Link> Ready use
+              cases with prices (field service, sales, warehouse, inspections, bookings) are collected in{" "}
+              <Link href="/en/blog/mobile-apps-for-business-examples-and-prices">Mobile Apps for Business: 8 Examples with Prices</Link>.
             </>
           )}
         </p>
