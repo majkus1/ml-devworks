@@ -37,7 +37,7 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const lastScrollY = useRef(0);
-  const lastUserScroll = useRef(-Infinity);
+  const holdNav = useRef(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("");
   const pathname = usePathname();
@@ -75,27 +75,50 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
   }, [isHomePage, pathname]);
 
   useEffect(() => {
-    // Menu chowa się tylko, gdy w dół przewija sam użytkownik (kółko, palec, klawisze, pasek przewijania).
-    // Przewijanie po kliknięciu linku albo przesunięcia układu nigdy go nie chowają.
-    const markUserScroll = () => {
-      lastUserScroll.current = performance.now();
+    // Zwykłe przewijanie: w dół chowa menu, w górę pokazuje. Kierunek liczony od miejsca, w którym się zmienił,
+    // z tolerancją kilku pikseli — drgania przewijania na telefonie nie przełączają menu.
+    const THRESHOLD = 8;
+    let direction: "up" | "down" | null = null;
+    let anchorY = window.scrollY;
+    let holdTimer: number | undefined;
+
+    const releaseHold = () => {
+      holdNav.current = false;
+      window.clearTimeout(holdTimer);
+      direction = null;
+      anchorY = window.scrollY;
     };
 
-    // Kliknięty link do sekcji: menu widoczne, a wcześniejsze dotknięcie (sam tap w link) się nie liczy.
-    const showForLinkScroll = () => {
-      lastUserScroll.current = -Infinity;
+    // Przewijanie po kliknięciu linku: menu widoczne do końca przewijania (chwila bez zdarzeń scroll)
+    // albo do momentu, gdy użytkownik sam zacznie przewijać.
+    const hold = () => {
+      holdNav.current = true;
       setIsVisible(true);
+      window.clearTimeout(holdTimer);
+      holdTimer = window.setTimeout(releaseHold, 1000);
     };
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      const byUser = performance.now() - lastUserScroll.current < 1200;
       setIsScrolled(currentScrollY >= 10);
 
-      if (currentScrollY < 10 || currentScrollY < lastScrollY.current) {
+      if (holdNav.current) {
         setIsVisible(true);
-      } else if (byUser && currentScrollY > lastScrollY.current && currentScrollY > 120) {
-        setIsVisible(false);
+        window.clearTimeout(holdTimer);
+        holdTimer = window.setTimeout(releaseHold, 250);
+      } else {
+        const delta = currentScrollY - lastScrollY.current;
+        const nextDirection = delta > 0 ? "down" : delta < 0 ? "up" : direction;
+        if (nextDirection !== direction) {
+          direction = nextDirection;
+          anchorY = lastScrollY.current;
+        }
+
+        if (currentScrollY < 10 || (direction === "up" && anchorY - currentScrollY > THRESHOLD)) {
+          setIsVisible(true);
+        } else if (direction === "down" && currentScrollY - anchorY > THRESHOLD && currentScrollY > 120) {
+          setIsVisible(false);
+        }
       }
 
       lastScrollY.current = currentScrollY;
@@ -110,20 +133,25 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
       const section = document.getElementById(decodeURIComponent(link.hash.slice(1)));
       if (!section) return;
       e.preventDefault();
-      showForLinkScroll();
+      hold();
       requestAnimationFrame(() => requestAnimationFrame(() => scrollToSection(section)));
     };
 
-    const userInput = ["wheel", "touchstart", "touchmove", "touchend", "keydown", "pointerdown"];
+    // Ręczne przewijanie (kółko, ruch palcem, klawisze) kończy trzymanie menu; samo stuknięcie w link nie.
+    const userInput = ["wheel", "touchmove", "keydown"];
+    const onUserInput = () => {
+      if (holdNav.current) releaseHold();
+    };
     window.addEventListener("scroll", handleScroll, { passive: true });
-    window.addEventListener(HOLD_NAV_EVENT, showForLinkScroll);
+    window.addEventListener(HOLD_NAV_EVENT, hold);
     document.addEventListener("click", handleClick, true);
-    for (const type of userInput) window.addEventListener(type, markUserScroll, { passive: true });
+    for (const type of userInput) window.addEventListener(type, onUserInput, { passive: true });
     return () => {
+      window.clearTimeout(holdTimer);
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener(HOLD_NAV_EVENT, showForLinkScroll);
+      window.removeEventListener(HOLD_NAV_EVENT, hold);
       document.removeEventListener("click", handleClick, true);
-      for (const type of userInput) window.removeEventListener(type, markUserScroll);
+      for (const type of userInput) window.removeEventListener(type, onUserInput);
     };
   }, []);
 
