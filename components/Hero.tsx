@@ -12,7 +12,7 @@ export default function Hero({ lang = "pl" }: HeroProps) {
     ? {
         titleStart: "Automatyzacje AI dla firm, które ",
         titleHighlight: "oddają zespołowi godziny pracy",
-        lead: "Agenci AI, aplikacje i integracje dla małych i średnich firm. Opisujesz proces, a w 2–5 dni pokazuję działający prototyp — za darmo, zanim cokolwiek zapłacisz.",
+        lead: "Zdejmuję z zespołu powtarzalną pracę: odpowiadanie na zapytania, przepisywanie danych, raporty. Opisujesz proces, a w 2–5 dni pokazuję działający prototyp — za darmo, zanim cokolwiek zapłacisz.",
         ctaPrimary: "Odbierz bezpłatny prototyp",
         ctaSecondary: "Zapytaj AI, co zautomatyzować",
         points: ["Prototyp w 2–5 dni", "Od 2 500 zł netto", "Bezpośrednio z programistą"],
@@ -22,7 +22,7 @@ export default function Hero({ lang = "pl" }: HeroProps) {
     : {
         titleStart: "AI automation for companies that ",
         titleHighlight: "gives your team hours back",
-        lead: "AI agents, business apps, and integrations for small and mid-sized companies. Describe the process and within 2–5 days I'll show a working prototype — free, before you pay anything.",
+        lead: "I take repetitive work off your team: answering enquiries, retyping data, building reports. Describe the process and within 2–5 days I'll show a working prototype — free, before you pay anything.",
         ctaPrimary: "Get a free prototype",
         ctaSecondary: "Ask AI what to automate",
         points: ["Prototype in 2–5 days", "From PLN 2,500 net", "Directly with the developer"],

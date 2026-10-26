@@ -39,7 +39,7 @@ export const servicePages: Record<ServiceDetailId, Record<SiteLang, ServicePageC
       eyebrow: "Strony internetowe dla firm",
       title: "Strona internetowa, która ",
       highlight: "zamienia odwiedzających w zapytania",
-      lead: "Szybkie strony firmowe i landing page z jasną ofertą, SEO technicznym i formularzami, które trafiają prosto do skrzynki albo CRM.",
+      lead: "Klient w kilka sekund rozumie, co robisz, ile to kosztuje i jak się z Tobą skontaktować. Szybkie strony firmowe i landing page przygotowane pod Google, z formularzem prosto do Twojej skrzynki albo CRM.",
       facts: plFacts("od 3 500 zł netto", "1–3 tygodnie", "Makieta w 2–5 dni, gratis"),
       offer: {
         eyebrow: "Zakres",
@@ -48,13 +48,13 @@ export const servicePages: Record<ServiceDetailId, Record<SiteLang, ServicePageC
           {
             title: "Strona firmowa",
             text: "Kilka podstron, które jasno mówią, co robisz, dla kogo i ile to kosztuje. Dla firm usługowych, B2B i lokalnych.",
-            points: ["Oferta ułożona pod pytania klientów", "Formularz i telefon jednym kliknięciem", "SEO techniczne i dane strukturalne"],
+            points: ["Oferta ułożona pod pytania klientów", "Formularz i telefon jednym kliknięciem", "Przygotowanie pod Google, żeby klienci Cię znajdowali"],
             highlight: true,
           },
           {
             title: "Landing page pod kampanię",
-            text: "Jedna strona pod konkretną usługę albo reklamę: nagłówek, dowody, cena i formularz. Projektowana pod konwersję.",
-            points: ["Bardzo szybkie ładowanie", "Analityka i zdarzenia konwersji", "Gotowa do testów A/B"],
+            text: "Jedna strona pod konkretną usługę albo reklamę: nagłówek, dowody, cena i formularz. Zaprojektowana tak, żeby odwiedzający zostawił kontakt, a nie zamknął kartę.",
+            points: ["Ładuje się od razu, także na telefonie", "Widzisz, ile osób z reklamy zostawia kontakt", "Można porównać dwie wersje i zostawić lepszą"],
           },
           {
             title: "Strona z panelem treści",
@@ -73,7 +73,7 @@ export const servicePages: Record<ServiceDetailId, Record<SiteLang, ServicePageC
       eyebrow: "Websites for businesses",
       title: "A website that ",
       highlight: "turns visitors into enquiries",
-      lead: "Fast business websites and landing pages with a clear offer, technical SEO, and forms that go straight to your inbox or CRM.",
+      lead: "Visitors understand in seconds what you do, what it costs, and how to contact you. Fast business websites and landing pages prepared for Google, with forms straight to your inbox or CRM.",
       facts: enFacts("from PLN 3,500 net", "1–3 weeks", "Mock-up in 2–5 days, free"),
       offer: {
         eyebrow: "Scope",
@@ -82,13 +82,13 @@ export const servicePages: Record<ServiceDetailId, Record<SiteLang, ServicePageC
           {
             title: "Business website",
             text: "A few pages that clearly say what you do, for whom, and what it costs. For service companies, B2B, and local businesses.",
-            points: ["Offer structured around customer questions", "Form and one-tap phone call", "Technical SEO and structured data"],
+            points: ["Offer structured around customer questions", "Form and one-tap phone call", "Search preparation so customers can find you"],
             highlight: true,
           },
           {
             title: "Campaign landing page",
-            text: "One page for a specific service or ad: headline, proof, price, and form. Designed for conversion.",
-            points: ["Very fast loading", "Analytics and conversion events", "Ready for A/B tests"],
+            text: "One page for a specific service or ad: headline, proof, price, and form. Designed so visitors leave their details instead of closing the tab.",
+            points: ["Loads instantly, on phones too", "See how many ad visitors leave their details", "Compare two versions and keep the better one"],
           },
           {
             title: "Website with a content panel",
@@ -110,7 +110,7 @@ export const servicePages: Record<ServiceDetailId, Record<SiteLang, ServicePageC
       eyebrow: "Aplikacje webowe i mobilne dla firm",
       title: "Aplikacja dla firmy, która ",
       highlight: "zastępuje arkusze, maile i przepisywanie danych",
-      lead: "Panele klienta, systemy wewnętrzne i aplikacje iOS/Android dopasowane do Twojego procesu. Zaczynamy od MVP, które sprawdza się na prawdziwej pracy.",
+      lead: "Panele klienta, systemy wewnętrzne i aplikacje iOS/Android dopasowane do Twojego procesu. Zaczynamy od pierwszej wersji z najważniejszą funkcją, którą zespół sprawdza w prawdziwej pracy.",
       facts: plFacts("od 12 000 zł netto (MVP)", "2–8 tygodni"),
       offer: {
         eyebrow: "Zakres",
@@ -134,9 +134,9 @@ export const servicePages: Record<ServiceDetailId, Record<SiteLang, ServicePageC
             href: "/uslugi/aplikacje-mobilne-dla-firm",
           },
           {
-            title: "MVP produktu lub SaaS",
-            text: "Pierwsza wersja produktu do sprawdzenia na rynku: rejestracja, abonamenty, panel i najważniejsza funkcja.",
-            points: ["Szybki start w kilka tygodni", "Architektura gotowa na rozwój", "Analityka użycia od pierwszego dnia"],
+            title: "Pierwsza wersja produktu (MVP, SaaS)",
+            text: "Twój pomysł na produkt u pierwszych klientów w kilka tygodni: rejestracja, abonamenty, panel i najważniejsza funkcja.",
+            points: ["Gotowa do pokazania klientom po kilku tygodniach", "Gotowa na kolejnych klientów i funkcje", "Widzisz, z czego klienci naprawdę korzystają"],
           },
         ],
       },
@@ -145,7 +145,7 @@ export const servicePages: Record<ServiceDetailId, Record<SiteLang, ServicePageC
       eyebrow: "Web and mobile apps for companies",
       title: "A business app that ",
       highlight: "replaces spreadsheets, emails, and manual data entry",
-      lead: "Customer portals, internal systems, and iOS/Android apps tailored to your process. We start with an MVP that proves itself on real work.",
+      lead: "Customer portals, internal systems, and iOS/Android apps tailored to your process. We start with a first version of the key feature that the team tests in real work.",
       facts: enFacts("from PLN 12,000 net (MVP)", "2–8 weeks"),
       offer: {
         eyebrow: "Scope",
@@ -169,9 +169,9 @@ export const servicePages: Record<ServiceDetailId, Record<SiteLang, ServicePageC
             href: "/en/services/mobile-apps-for-companies",
           },
           {
-            title: "Product MVP or SaaS",
-            text: "A first product version to test on the market: sign-up, subscriptions, admin panel, and the key feature.",
-            points: ["Launch in a few weeks", "Architecture ready to grow", "Usage analytics from day one"],
+            title: "First product version (MVP, SaaS)",
+            text: "Your product idea in front of first customers within weeks: sign-up, subscriptions, admin panel, and the key feature.",
+            points: ["Ready to show customers within weeks", "Ready for more customers and features", "See what customers actually use"],
           },
         ],
       },
@@ -239,7 +239,7 @@ export const servicePages: Record<ServiceDetailId, Record<SiteLang, ServicePageC
           {
             title: "Automatyzacja procesów biznesowych",
             text: "Powtarzalne zadania, które zajmują czas zespołu — od prostych powiadomień po workflow obejmujący wiele systemów.",
-            points: ["Integracje CRM, ERP, formularzy i API", "Automatyczne raporty", "Przetwarzanie dokumentów i faktur"],
+            points: ["CRM, ERP, formularze i poczta połączone ze sobą", "Raporty, które przychodzą same", "Faktury i dokumenty bez przepisywania"],
           },
           {
             title: "Obsługa klienta i zgłoszeń",
@@ -248,7 +248,7 @@ export const servicePages: Record<ServiceDetailId, Record<SiteLang, ServicePageC
           },
           {
             title: "Dane, dokumenty i RPA",
-            text: "Odczyt danych ze skanów i PDF, wypełnianie systemów bez API i analiza danych, która wspiera decyzje.",
+            text: "Dane ze skanów i PDF-ów trafiają do systemu same, także do programów, które nie mają połączeń z innymi. Do tego analiza, która podpowiada decyzje.",
             points: ["Ekstrakcja danych z dokumentów", "Automatyczne wypełnianie formularzy", "Wykrywanie anomalii"],
           },
         ],
@@ -273,7 +273,7 @@ export const servicePages: Record<ServiceDetailId, Record<SiteLang, ServicePageC
           {
             title: "Business process automation",
             text: "Repetitive tasks that eat the team's time — from simple notifications to workflows across several systems.",
-            points: ["CRM, ERP, form, and API integrations", "Automated reporting", "Document and invoice processing"],
+            points: ["CRM, ERP, forms, and email connected", "Reports that arrive by themselves", "Invoices and documents without retyping"],
           },
           {
             title: "Customer service and tickets",
@@ -282,7 +282,7 @@ export const servicePages: Record<ServiceDetailId, Record<SiteLang, ServicePageC
           },
           {
             title: "Data, documents, and RPA",
-            text: "Reading data from scans and PDFs, filling systems without an API, and data analysis that supports decisions.",
+            text: "Data from scans and PDFs reaches your system by itself, even software with no connections to others. Plus analysis that supports decisions.",
             points: ["Data extraction from documents", "Automatic form filling", "Anomaly detection"],
           },
         ],
@@ -320,7 +320,7 @@ export const servicePages: Record<ServiceDetailId, Record<SiteLang, ServicePageC
           {
             title: "Analityka i rozwój",
             text: "Wiesz, które produkty i kampanie zarabiają, a gdzie klienci porzucają koszyk.",
-            points: ["Raporty sprzedaży", "Zdarzenia e-commerce w analityce", "Testy i usprawnienia konwersji"],
+            points: ["Raporty sprzedaży", "Widzisz, na którym kroku klienci rezygnują", "Poprawki, po których więcej osób kończy zakup"],
           },
         ],
       },
@@ -354,7 +354,7 @@ export const servicePages: Record<ServiceDetailId, Record<SiteLang, ServicePageC
           {
             title: "Analytics and growth",
             text: "You know which products and campaigns make money and where customers abandon the cart.",
-            points: ["Sales reports", "E-commerce analytics events", "Conversion tests and improvements"],
+            points: ["Sales reports", "See at which step customers give up", "Fixes that get more people to finish checkout"],
           },
         ],
       },
@@ -437,7 +437,7 @@ export const servicePages: Record<ServiceDetailId, Record<SiteLang, ServicePageC
       eyebrow: "DevOps i wdrożenia w chmurze",
       title: "Automatyzacja wdrożeń w chmurze: ",
       highlight: "nowa wersja aplikacji bez stresu i przestojów",
-      lead: "CI/CD, monitoring, kopie zapasowe i porządek w infrastrukturze na AWS, Google Cloud, Vercel i Dockerze. Publikacja zmian staje się nudna i przewidywalna.",
+      lead: "Nowa wersja aplikacji wchodzi jednym kliknięciem, bez przestoju. Kopie zapasowe robią się same, a o awarii wiesz przed klientami. Automatyczne wdrożenia (CI/CD), monitoring i porządek na AWS, Google Cloud, Vercel, Dockerze albo Twoim serwerze.",
       facts: plFacts("od 4 500 zł netto", "2–10 dni roboczych", "Bezpłatny przegląd infrastruktury"),
       offer: {
         eyebrow: "Zakres",
@@ -446,7 +446,7 @@ export const servicePages: Record<ServiceDetailId, Record<SiteLang, ServicePageC
           {
             title: "Wdrożenia w chmurze",
             text: "Aplikacja na AWS, Google Cloud, Azure, Vercel albo własnym serwerze — z konfiguracją, którą da się odtworzyć.",
-            points: ["Środowiska testowe i produkcyjne", "Domeny, SSL i CDN", "Infrastruktura jako kod"],
+            points: ["Wersja testowa do sprawdzenia przed publikacją", "Domeny, certyfikaty SSL i szybkie ładowanie", "Konfiguracja zapisana, więc po awarii da się ją odtworzyć"],
             highlight: true,
           },
           {
@@ -471,7 +471,7 @@ export const servicePages: Record<ServiceDetailId, Record<SiteLang, ServicePageC
       eyebrow: "DevOps and cloud deployment",
       title: "Cloud deployment automation: ",
       highlight: "new app versions without stress or downtime",
-      lead: "CI/CD, monitoring, backups, and an orderly infrastructure on AWS, Google Cloud, Vercel, and Docker. Shipping changes becomes boring and predictable.",
+      lead: "A new app version goes live in one click, without downtime. Backups run themselves and you hear about outages before customers do. Automated deployments (CI/CD), monitoring, and order on AWS, Google Cloud, Vercel, Docker, or your own server.",
       facts: enFacts("from PLN 4,500 net", "2–10 business days", "Free infrastructure review"),
       offer: {
         eyebrow: "Scope",
@@ -480,7 +480,7 @@ export const servicePages: Record<ServiceDetailId, Record<SiteLang, ServicePageC
           {
             title: "Cloud deployment",
             text: "Your app on AWS, Google Cloud, Azure, Vercel, or your own server — with configuration you can reproduce.",
-            points: ["Staging and production environments", "Domains, SSL, and CDN", "Infrastructure as code"],
+            points: ["A test version to check before publishing", "Domains, SSL certificates, and fast loading", "Configuration saved, so it can be restored after a failure"],
             highlight: true,
           },
           {
@@ -528,7 +528,7 @@ export const servicePages: Record<ServiceDetailId, Record<SiteLang, ServicePageC
           {
             title: "SEO techniczne i błędy w Google",
             text: "Strony poza indeksem, przekierowania, duplikaty, błędy w Search Console i brak danych strukturalnych.",
-            points: ["Naprawa błędów indeksowania", "Mapa strony i przekierowania", "Dane strukturalne (schema)"],
+            points: ["Podstrony znowu widoczne w Google", "Stare adresy przekierowane bez utraty klientów", "Gwiazdki i pytania FAQ w wynikach Google (schema)"],
           },
           {
             title: "Utrzymanie i bezpieczeństwo",
@@ -562,7 +562,7 @@ export const servicePages: Record<ServiceDetailId, Record<SiteLang, ServicePageC
           {
             title: "Technical SEO and Google errors",
             text: "Pages out of the index, redirects, duplicates, Search Console errors, and missing structured data.",
-            points: ["Indexing error fixes", "Sitemap and redirects", "Structured data (schema)"],
+            points: ["Pages visible in Google again", "Old addresses redirected without losing customers", "Stars and FAQs in Google results (schema)"],
           },
           {
             title: "Maintenance and security",

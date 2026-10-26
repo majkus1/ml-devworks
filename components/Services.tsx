@@ -57,7 +57,7 @@ const services: Record<"pl" | "en", ServiceCardData[]> = {
     {
       icon: GlobeIcon,
       title: "Strony internetowe",
-      description: "Szybkie strony firmowe i landing page, które jasno tłumaczą ofertę i zbierają zapytania z Google.",
+      description: "Szybkie strony firmowe, które jasno tłumaczą ofertę i zamieniają odwiedziny z Google w zapytania.",
       price: "od 3 500 zł",
       href: "/uslugi/strony-internetowe",
     },
@@ -85,7 +85,7 @@ const services: Record<"pl" | "en", ServiceCardData[]> = {
     {
       icon: WrenchIcon,
       title: "Naprawa, SEO i utrzymanie",
-      description: "Naprawa błędów, przyspieszenie strony, SEO techniczne i opieka nad istniejącym projektem.",
+      description: "Naprawa błędów, szybsza strona, lepsza widoczność w Google i opieka nad istniejącym projektem.",
       price: "od 1 500 zł",
       href: "/uslugi/naprawa-optymalizacja-utrzymanie",
     },
@@ -116,7 +116,7 @@ const services: Record<"pl" | "en", ServiceCardData[]> = {
     {
       icon: GlobeIcon,
       title: "Websites",
-      description: "Fast business websites and landing pages that explain the offer clearly and collect enquiries from Google.",
+      description: "Fast business websites that explain the offer clearly and turn Google visits into enquiries.",
       price: "from PLN 3,500",
       href: "/en/services/web-development",
     },

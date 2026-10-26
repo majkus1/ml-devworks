@@ -26,20 +26,20 @@ export default function LocalDeveloperContent({ lang }: { lang: "pl" | "en" }) {
 
   const services = isPl
     ? [
-        { title: "Automatyzacja AI", text: "Agenci AI, workflow, integracje API, automatyczne raporty i mniej pracy ręcznej.", href: "/uslugi/automatyzacja-i-ai", highlight: true },
-        { title: "Aplikacje dla firm", text: "Panele klienta, systemy wewnętrzne, MVP oraz aplikacje webowe i mobilne.", href: "/uslugi/aplikacje-internetowe-i-mobilne" },
-        { title: "Strony internetowe", text: "Szybkie strony firmowe i landing page pod lokalne SEO i zapytania.", href: "/uslugi/strony-internetowe" },
+        { title: "Automatyzacja AI", text: "Odpowiedzi na zapytania w kilka sekund, dane między programami bez przepisywania i raporty, które przychodzą same.", href: "/uslugi/automatyzacja-i-ai", highlight: true },
+        { title: "Aplikacje dla firm", text: "Panel klienta, system wewnętrzny albo aplikacja mobilna zamiast arkuszy, maili i telefonów.", href: "/uslugi/aplikacje-internetowe-i-mobilne" },
+        { title: "Strony internetowe", text: "Szybka strona, która pokazuje się w Google na lokalne zapytania i zamienia odwiedziny w telefony.", href: "/uslugi/strony-internetowe" },
         { title: "Systemy rezerwacji", text: "Kalendarz dostępności, płatności online, przypomnienia i integracje z CRM.", href: "/uslugi/systemy-rezerwacji-online" },
-        { title: "DevOps", text: "CI/CD, Docker, wdrożenia w chmurze, monitoring i kopie zapasowe.", href: "/uslugi/devops-wdrozenia" },
-        { title: "Utrzymanie i naprawy", text: "Przejęcie projektu po innym wykonawcy, poprawki, Core Web Vitals i SEO techniczne.", href: "/uslugi/naprawa-optymalizacja-utrzymanie" },
+        { title: "DevOps", text: "Aktualizacje bez przestojów, kopie zapasowe i powiadomienia o awariach (CI/CD, chmura, Docker).", href: "/uslugi/devops-wdrozenia" },
+        { title: "Utrzymanie i naprawy", text: "Przejmuję projekt po innym wykonawcy, naprawiam błędy, przyspieszam stronę i poprawiam widoczność w Google.", href: "/uslugi/naprawa-optymalizacja-utrzymanie" },
       ]
     : [
-        { title: "AI automation", text: "AI agents, workflows, API integrations, automated reports, and less manual work.", href: "/en/services/automation-and-ai", highlight: true },
-        { title: "Business applications", text: "Customer portals, internal systems, MVPs, and web and mobile apps.", href: "/en/services/web-and-mobile-applications" },
-        { title: "Websites", text: "Fast business websites and landing pages built for local SEO and enquiries.", href: "/en/services/web-development" },
+        { title: "AI automation", text: "Replies to enquiries in seconds, data between your software without retyping, and reports that arrive by themselves.", href: "/en/services/automation-and-ai", highlight: true },
+        { title: "Business applications", text: "A customer portal, internal system, or mobile app instead of spreadsheets, emails, and phone calls.", href: "/en/services/web-and-mobile-applications" },
+        { title: "Websites", text: "A fast website that shows up in local Google searches and turns visits into calls.", href: "/en/services/web-development" },
         { title: "Booking systems", text: "Availability calendar, online payments, reminders, and CRM integrations.", href: "/en/services/online-booking-systems" },
-        { title: "DevOps", text: "CI/CD, Docker, cloud deployment, monitoring, and backups.", href: "/en/services/devops-deployment" },
-        { title: "Maintenance and fixes", text: "Taking over projects from other vendors, fixes, Core Web Vitals, and technical SEO.", href: "/en/services/fixes-optimization-maintenance" },
+        { title: "DevOps", text: "Updates without downtime, backups, and outage alerts (CI/CD, cloud, Docker).", href: "/en/services/devops-deployment" },
+        { title: "Maintenance and fixes", text: "I take over projects from other vendors, fix bugs, speed up the site, and improve Google visibility.", href: "/en/services/fixes-optimization-maintenance" },
       ];
 
   const localList = isPl

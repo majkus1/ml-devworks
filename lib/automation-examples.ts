@@ -22,8 +22,8 @@ export const automationExamples: AutomationExample[] = [
       en: "Enquiries from forms, email, and phone end up in different places and replies take hours.",
     },
     solution: {
-      pl: "Agent AI odpowiada w kilka sekund, dopytuje o szczegóły i zapisuje lead w Twoim systemie z podsumowaniem.",
-      en: "An AI agent replies within seconds, asks follow-ups, and saves the lead to your system with a summary.",
+      pl: "Agent AI odpowiada w kilka sekund, dopytuje o szczegóły i zapisuje zapytanie w Twoim systemie z podsumowaniem.",
+      en: "An AI agent replies within seconds, asks follow-ups, and saves the enquiry to your system with a summary.",
     },
     effect: { pl: "Odpowiedź w sekundy zamiast godzin", en: "Reply in seconds, not hours" },
   },

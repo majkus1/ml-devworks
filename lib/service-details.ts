@@ -26,15 +26,15 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
   "web-development": {
     pl: {
       definition:
-        "Tworzenie stron internetowych dla firm obejmuje projekt, wdrożenie, SEO techniczne, szybkie ładowanie, formularze kontaktowe i strukturę treści przygotowaną pod pozyskiwanie zapytań z Google.",
+        "Strona internetowa dla firmy, która przyprowadza klientów: jasno tłumaczy ofertę, szybko ładuje się na telefonie i zamienia odwiedziny z Google w zapytania. W cenie projekt, wykonanie, przygotowanie pod wyszukiwarkę (SEO) i formularze.",
       pains: [
         "Firma ma stronę, która wygląda poprawnie, ale nie generuje zapytań.",
         "Strona ładuje się wolno, słabo działa na telefonach albo ma problemy z indeksacją.",
         "Oferta jest niejasna dla klienta B2B i dla wyszukiwarek.",
       ],
-      deliverables: ["Architektura treści i sekcji sprzedażowych", "Responsywny frontend", "SEO techniczne i schema", "Formularze kontaktowe i analityka"],
+      deliverables: ["Treści i układ, które prowadzą klienta do zapytania", "Strona wygodna na telefonie i komputerze", "Przygotowanie pod Google, żeby klienci Cię znajdowali", "Formularz prosto na Twoją skrzynkę i statystyki odwiedzin"],
       industries: ["firmy usługowe", "B2B", "lokalne firmy", "eksperci i konsultanci"],
-      proof: "W projektach stron stawiamy na Core Web Vitals, przejrzysty układ oferty i kod możliwy do dalszego rozwoju.",
+      proof: "Mierzę, ile osób z Google zostawia zapytanie. Szybka strona i jasna oferta to mniej uciekających klientów, a stronę można potem rozbudowywać bez zaczynania od zera.",
       price: "Najczęściej od 3 500 zł netto za prostą stronę firmową; rozbudowane serwisy wyceniamy po zakresie.",
       timeline: "Zwykle 1-3 tygodnie, zależnie od liczby podstron, treści i integracji.",
       faq: [
@@ -49,11 +49,11 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
     },
     en: {
       definition:
-        "Business website development covers design, implementation, technical SEO, fast loading, contact flows, and content structure prepared for lead generation from search.",
+        "A business website that brings in customers: it explains the offer clearly, loads fast on phones, and turns Google visits into enquiries. Design, build, search engine preparation (SEO), and forms included.",
       pains: ["The website looks fine but does not generate leads.", "The website is slow, weak on mobile, or hard to index.", "The offer is unclear for B2B buyers and search engines."],
-      deliverables: ["Content architecture", "Responsive frontend", "Technical SEO and schema", "Contact forms and analytics"],
+      deliverables: ["Content and layout that lead visitors to enquire", "A site that works well on phones and desktops", "Search preparation so customers can find you", "Forms straight to your inbox and visitor statistics"],
       industries: ["service companies", "B2B", "local businesses", "consultants and experts"],
-      proof: "I focus on Core Web Vitals, clear offer structure, and code that can be developed further.",
+      proof: "I measure how many Google visitors leave an enquiry. A fast site and a clear offer mean fewer customers lost, and the site can grow later without starting over.",
       price: "Usually from PLN 3,500 net for a simple business website; larger websites are estimated by scope.",
       timeline: "Usually 1-3 weeks, depending on pages, content, and integrations.",
       faq: [
@@ -70,15 +70,15 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
   apps: {
     pl: {
       definition:
-        "Aplikacje webowe i mobilne dla firm to dedykowane systemy, panele klienta, aplikacje operacyjne i MVP, które automatyzują pracę oraz porządkują procesy sprzedaży, obsługi i raportowania.",
+        "Aplikacja dla firmy zastępuje arkusze, maile i przepisywanie danych jednym miejscem, w którym zespół i klienci załatwiają sprawy sami. Aplikacje webowe i mobilne na zamówienie: panele klienta, systemy wewnętrzne i pierwsze wersje produktów.",
       pains: ["Procesy są obsługiwane w arkuszach i wiadomościach email.", "Zespół traci czas na ręczne przepisywanie danych.", "Gotowe narzędzia nie pasują do modelu biznesowego."],
-      deliverables: ["Analiza wymagań", "UX/UI i frontend", "Backend i baza danych", "Panel administracyjny i integracje"],
+      deliverables: ["Rozpisanie procesu: kto, co i kiedy robi w aplikacji", "Ekrany na tyle proste, że zespół nie potrzebuje szkolenia", "Dane w jednym miejscu, bezpieczne i z kopiami zapasowymi", "Panel dla biura i połączenie z programami, których już używasz"],
       industries: ["SaaS", "usługi", "logistyka", "firmy operacyjne"],
-      proof: "Buduję aplikacje z myślą o utrzymaniu: role użytkowników, walidacja danych, monitoring i możliwość dalszej rozbudowy.",
+      proof: "Aplikacja ma działać latami: każdy widzi tylko to, co powinien, błędne dane nie przechodzą, a awarię widzę wcześniej niż Twoi klienci. Nowe funkcje dokładamy bez przepisywania całości.",
       price: "MVP aplikacji najczęściej od 12 000 zł netto; systemy produkcyjne wyceniamy etapami.",
       timeline: "Zwykle 2-8 tygodni dla MVP lub pierwszej wersji produkcyjnej.",
       faq: [
-        { q: "Czy lepiej zacząć od MVP?", a: "Najczęściej tak. MVP pozwala sprawdzić kluczowy proces i zebrać feedback przed większą inwestycją." },
+        { q: "Czy lepiej zacząć od MVP?", a: "Najczęściej tak. Pierwsza wersja (MVP) z najważniejszą funkcją trafia do zespołu po kilku tygodniach. Sprawdzasz, co naprawdę jest potrzebne, zanim wydasz więcej." },
         { q: "Czy aplikacja może mieć panel administratora?", a: "Tak. Panele administracyjne, role użytkowników, raporty i eksporty danych są częścią typowego zakresu." },
         { q: "Czy tworzycie aplikacje mobilne iOS/Android?", a: "Tak. Dobieramy podejście natywne albo cross-platform w zależności od budżetu, funkcji i planu rozwoju." },
       ],
@@ -89,15 +89,15 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
     },
     en: {
       definition:
-        "Web and mobile applications for companies are custom systems, customer portals, operational apps, and MVPs that automate work and organize sales, service, and reporting workflows.",
+        "A business app replaces spreadsheets, email, and retyping data with one place where your team and customers get things done themselves. Custom web and mobile apps: customer portals, internal systems, and first product versions.",
       pains: ["Processes live in spreadsheets and email.", "The team wastes time re-entering data.", "Off-the-shelf tools do not fit the business model."],
-      deliverables: ["Requirements analysis", "UX/UI and frontend", "Backend and database", "Admin panel and integrations"],
+      deliverables: ["Mapping the process: who does what, and when, in the app", "Screens simple enough that the team needs no training", "Data in one place, secure and backed up", "An office panel connected to the software you already use"],
       industries: ["SaaS", "services", "logistics", "operations-heavy companies"],
-      proof: "I build maintainable applications with user roles, validation, monitoring, and room for future development.",
+      proof: "The app should work for years: everyone sees only what they should, bad data doesn't get in, and I spot problems before your customers do. New features are added without rewriting everything.",
       price: "Application MVPs usually start from PLN 12,000 net; production systems are estimated in stages.",
       timeline: "Usually 2-8 weeks for an MVP or first production version.",
       faq: [
-        { q: "Should we start with an MVP?", a: "Usually yes. An MVP validates the key workflow and gathers feedback before a larger investment." },
+        { q: "Should we start with an MVP?", a: "Usually yes. A first version (MVP) with the key feature reaches the team within a few weeks. You check what is really needed before spending more." },
         { q: "Can the app include an admin panel?", a: "Yes. Admin panels, user roles, reports, and exports are common parts of the scope." },
         { q: "Do you build iOS and Android apps?", a: "Yes. We choose native or cross-platform delivery based on budget, features, and product roadmap." },
       ],
@@ -110,15 +110,15 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
   "mobile-apps": {
     pl: {
       definition:
-        "Aplikacje mobilne dla firm na zamówienie to dedykowane aplikacje iOS i Android (natywne lub cross-platform), które wspierają pracowników w terenie, obsługę klienta, sprzedaż, serwis i rezerwacje, z panelem administracyjnym i integracjami z systemami firmy.",
+        "Aplikacja mobilna dla firmy sprawia, że zlecenia, zdjęcia, podpisy i zamówienia trafiają do biura od razu, a nie po tygodniu. Aplikacje mobilne dla firm na zamówienie (iOS i Android) dla pracowników w terenie, handlowców, serwisu i klientów — z panelem dla biura.",
       pains: [
         "Pracownicy w terenie pracują na telefonie, notatkach i zdjęciach wysyłanych na WhatsAppie, a dane trafiają do systemu z opóźnieniem.",
         "Klienci chcą zamawiać, rezerwować lub sprawdzać status z telefonu, a strona mobilna tego nie obsługuje.",
         "Gotowe aplikacje z rynku nie pasują do procesu firmy albo nie integrują się z CRM, ERP i magazynem.",
       ],
-      deliverables: ["Analiza procesu i makiety ekranów", "Aplikacja iOS i Android (React Native / natywnie)", "Backend, panel administracyjny i integracje API", "Publikacja w App Store i Google Play oraz utrzymanie"],
+      deliverables: ["Klikalny projekt ekranów do sprawdzenia przed startem", "Jedna aplikacja na iPhone'a i Androida, działająca także bez zasięgu", "Panel dla biura połączony z programami firmy", "Publikacja w App Store i Google Play oraz opieka po starcie"],
       industries: ["serwis i firmy terenowe", "logistyka i transport", "sprzedaż B2B", "usługi z rezerwacjami", "produkcja"],
-      proof: "Aplikacje mobilne projektuję pod realny proces: offline, zdjęcia, podpisy, geolokalizacja, powiadomienia push i synchronizacja z systemem firmy.",
+      proof: "Projektuję pod prawdziwy dzień pracy: aplikacja działa w piwnicy bez zasięgu, protokół z podpisem klienta powstaje na miejscu, a biuro widzi wszystko bez dzwonienia.",
       price: "MVP aplikacji mobilnej najczęściej od 12 000 zł netto; rozbudowane aplikacje z panelem i integracjami wyceniamy etapami.",
       timeline: "Zwykle 3-8 tygodni dla pierwszej wersji w sklepach.",
       faq: [
@@ -134,15 +134,15 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
     },
     en: {
       definition:
-        "Custom mobile apps for companies are dedicated iOS and Android applications (native or cross-platform) that support field employees, customer service, sales, service operations, and bookings, with an admin panel and integrations with company systems.",
+        "A business mobile app gets jobs, photos, signatures, and orders to the office immediately instead of a week later. Custom mobile apps (iOS and Android) for field staff, sales reps, service teams, and customers — with an office panel.",
       pains: [
         "Field employees work on phone calls, notes, and photos sent via WhatsApp, and data reaches the system late.",
         "Customers want to order, book, or check status from their phone, and the mobile website does not support it.",
         "Off-the-shelf apps do not fit the company process or do not integrate with CRM, ERP, and inventory.",
       ],
-      deliverables: ["Process analysis and screen mockups", "iOS and Android app (React Native / native)", "Backend, admin panel, and API integrations", "App Store and Google Play publishing and maintenance"],
+      deliverables: ["A clickable screen design to review before the build", "One app for iPhone and Android, working without coverage too", "An office panel connected to your company software", "App Store and Google Play publishing and post-launch care"],
       industries: ["field service companies", "logistics and transport", "B2B sales", "booking-based services", "manufacturing"],
-      proof: "I design mobile apps around the real process: offline mode, photos, signatures, geolocation, push notifications, and sync with company systems.",
+      proof: "I design for a real working day: the app works in a basement without signal, the report with the customer's signature is created on site, and the office sees everything without phone calls.",
       price: "A mobile app MVP usually starts from PLN 12,000 net; larger apps with panels and integrations are estimated in stages.",
       timeline: "Usually 3-8 weeks for the first version in the stores.",
       faq: [
@@ -160,11 +160,11 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
   "automation-ai": {
     pl: {
       definition:
-        "Automatyzacja procesów i AI dla firm obejmuje agentów AI, integracje API, workflow, automatyczne raporty i obsługę powtarzalnych zadań, które dziś zabierają czas zespołu.",
-      pains: ["Obsługa zapytań i leadów jest wolna lub chaotyczna.", "Dane są kopiowane między narzędziami ręcznie.", "Zespół nie wie, które procesy warto automatyzować najpierw."],
-      deliverables: ["Mapa procesów", "Automatyzacje workflow", "Agenci AI i chatboty", "Integracje z CRM, formularzami i API"],
+        "Automatyzacja zdejmuje z zespołu powtarzalną pracę: odpowiadanie na te same pytania, przepisywanie danych, składanie raportów. Automatyzacje AI dla firm łączą Twoje programy tak, że robią to same, a AI czyta maile i dokumenty tam, gdzie wcześniej musiał to robić człowiek.",
+      pains: ["Odpowiedź na zapytanie od klienta trwa godzinami albo ginie w skrzynce.", "Dane są kopiowane między narzędziami ręcznie.", "Zespół nie wie, które procesy warto automatyzować najpierw."],
+      deliverables: ["Lista procesów, które najszybciej się zwrócą", "Zadania, które wykonują się same, bez przypominania", "Asystent AI, który odpowiada klientom w kilka sekund", "Połączenie Twoich programów: formularzy, poczty, CRM, faktur"],
       industries: ["sprzedaż B2B", "obsługa klienta", "e-commerce", "firmy usługowe"],
-      proof: "Automatyzacje projektuję pod mierzalny efekt: mniej pracy manualnej, krótszy czas reakcji i mniej błędów w danych.",
+      proof: "Przed startem mierzymy, ile godzin i błędów kosztuje proces, a po wdrożeniu porównujemy. Płacisz za odzyskany czas zespołu, nie za technologię.",
       price: "Proste automatyzacje od 2 500 zł netto; agenci AI i integracje wielosystemowe wyceniamy po analizie.",
       timeline: "Pierwsze automatyzacje zwykle 3-14 dni roboczych.",
       faq: [
@@ -184,11 +184,11 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
     },
     en: {
       definition:
-        "Business process automation and AI includes AI agents, API integrations, workflows, automated reports, and repetitive task handling that currently consumes team time.",
-      pains: ["Lead handling is slow or chaotic.", "Data is copied between tools manually.", "The team is not sure which processes to automate first."],
-      deliverables: ["Process map", "Workflow automations", "AI agents and chatbots", "CRM, form, and API integrations"],
+        "Automation takes repetitive work off your team: answering the same questions, retyping data, putting reports together. AI automation for business connects your software so it happens by itself, with AI reading emails and documents where a person used to.",
+      pains: ["Replies to customer enquiries take hours or get lost in the inbox.", "Data is copied between tools manually.", "The team is not sure which processes to automate first."],
+      deliverables: ["A list of the processes that pay back fastest", "Tasks that run themselves, without reminders", "An AI assistant that answers customers in seconds", "Your software connected: forms, email, CRM, invoicing"],
       industries: ["B2B sales", "customer support", "e-commerce", "service companies"],
-      proof: "I design automation around measurable impact: less manual work, faster response times, and fewer data errors.",
+      proof: "Before we start we measure how many hours and errors the process costs, and compare after launch. You pay for team time won back, not for technology.",
       price: "Simple automations from PLN 2,500 net; AI agents and multi-system integrations are estimated after analysis.",
       timeline: "First automations usually take 3-14 business days.",
       faq: [
@@ -210,11 +210,11 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
   "ecommerce-booking": {
     pl: {
       definition:
-        "Sklepy internetowe i e-commerce dla firm obejmują katalog produktów, koszyk, płatności online, dostawy, panel administracyjny, integracje ERP/CRM oraz automatyzację sprzedaży.",
+        "Sklep internetowy, który sprzedaje także wtedy, gdy nikt nie odbiera telefonu: klient wybiera, płaci i dostaje przesyłkę, a zamówienie, faktura i stan magazynu aktualizują się same. Sklepy internetowe B2C i B2B z płatnościami, dostawami i połączeniem z magazynem.",
       pains: ["Sprzedaż online jest rozproszona między formularzami, wiadomościami i ręczną obsługą.", "Sklep nie integruje się z magazynem, fakturowaniem, CRM albo analityką.", "Proces zakupowy jest zbyt długi i obniża konwersję na mobile."],
-      deliverables: ["Katalog produktów i wariantów", "Koszyk, checkout i płatności online", "Integracje dostaw, faktur, ERP/CRM", "Analityka sprzedaży i automatyzacje"],
+      deliverables: ["Katalog, w którym klient szybko znajduje swój produkt", "Krótki zakup z BLIK-iem, kartą i szybkim przelewem", "Faktury, przesyłki i stany magazynu bez przepisywania", "Raport, co się sprzedaje i skąd przychodzą klienci"],
       industries: ["e-commerce B2C", "sprzedaż B2B", "marki produktowe", "dystrybutorzy i producenci"],
-      proof: "Projektuję ścieżkę zakupową tak, żeby była krótka, mierzalna, wygodna na telefonie i gotowa do dalszej optymalizacji sprzedaży.",
+      proof: "Każdy dodatkowy krok w koszyku to uciekający klient. Projektuję zakup w kilku kliknięciach na telefonie i mierzę, gdzie klienci rezygnują, żeby to poprawiać.",
       price: "Sklepy internetowe zwykle od 7 000 zł netto; platformy B2B/B2C i większe integracje wyceniamy po analizie katalogu oraz procesów.",
       timeline: "Zwykle 2-4 tygodnie.",
       faq: [
@@ -229,11 +229,11 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
     },
     en: {
       definition:
-        "E-commerce development for businesses covers product catalogs, cart and checkout, online payments, shipping, admin panels, ERP/CRM integrations, and sales automation.",
+        "An online store that sells even when nobody answers the phone: customers choose, pay, and get the parcel, while the order, invoice, and stock update themselves. B2C and B2B online stores with payments, shipping, and inventory connection.",
       pains: ["Online sales are scattered across forms, messages, and manual handling.", "The store is not connected to inventory, invoicing, CRM, or analytics.", "The checkout flow is too long and lowers mobile conversion."],
-      deliverables: ["Product catalog and variants", "Cart, checkout, and online payments", "Shipping, invoicing, ERP/CRM integrations", "Sales analytics and automation"],
+      deliverables: ["A catalogue where customers find their product fast", "A short checkout with cards, BLIK, and fast transfers", "Invoices, shipments, and stock without retyping", "A report on what sells and where customers come from"],
       industries: ["B2C e-commerce", "B2B commerce", "product brands", "distributors and manufacturers"],
-      proof: "I design purchase flows to be short, measurable, mobile-friendly, and ready for ongoing sales optimization.",
+      proof: "Every extra checkout step loses customers. I design purchases in a few taps on a phone and measure where people drop off, so it can be improved.",
       price: "Online stores usually start from PLN 7,000 net; larger B2B/B2C platforms and integrations are estimated after catalog and process analysis.",
       timeline: "Usually 2-4 weeks.",
       faq: [
@@ -250,11 +250,11 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
   "booking-systems": {
     pl: {
       definition:
-        "Systemy rezerwacji online dla firm to dedykowane rozwiązania z kalendarzem dostępności, płatnościami online, zaliczkami, przypomnieniami, panelem administracyjnym i integracjami z CRM lub stroną internetową.",
+        "System rezerwacji online sprawia, że klienci umawiają się sami o każdej porze, płacą zaliczkę i dostają przypomnienie, więc telefon dzwoni rzadziej, a nieodwołanych wizyt jest mniej. Kalendarz dostępności, płatności, przypomnienia i panel dla zespołu.",
       pains: ["Klienci dzwonią lub piszą, żeby ustalić wolny termin, a zespół traci czas na koordynację.", "No-show i ręczne potwierdzanie wizyt obniżają przychód i dezorganizują grafik.", "Gotowy kalendarz nie obsługuje płatności, zaliczek, wielu pracowników lub Twoich reguł biznesowych."],
-      deliverables: ["Kalendarz dostępności, usługi, pracownicy i limity", "Płatności online, zaliczki i reguły anulowania", "Panel administracyjny i raporty", "Powiadomienia e-mail/SMS i integracje CRM"],
+      deliverables: ["Klient widzi wolne terminy i rezerwuje sam, także w nocy", "Zaliczki i zasady odwoływania, które ograniczają nieobecności", "Grafik, płatności i historia klienta w jednym panelu", "Przypomnienia SMS i e-mail wysyłane automatycznie"],
       industries: ["beauty", "medycyna", "edukacja", "konsulting", "wynajem", "wydarzenia", "usługi lokalne"],
-      proof: "Projektuję rezerwacje tak, żeby klient umawiał się sam, a zespół widział grafik, płatności i historię w jednym panelu.",
+      proof: "Mniej telefonów w trakcie pracy i mniej pustych terminów: klient umawia się sam, a przypomnienie i zaliczka sprawiają, że przychodzi.",
       price: "Najczęściej od 6 000 zł netto za prosty system rezerwacji; płatności, integracje i role pracowników wyceniamy po analizie.",
       timeline: "Zwykle 1-4 tygodnie dla pierwszej wersji produkcyjnej.",
       faq: [
@@ -269,11 +269,11 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
     },
     en: {
       definition:
-        "Online booking systems for companies are custom solutions with an availability calendar, online payments, deposits, reminders, an admin panel, and integrations with CRM or the website.",
+        "An online booking system lets customers book themselves at any hour, pay a deposit, and get a reminder, so the phone rings less and fewer appointments are missed. Availability calendar, payments, reminders, and a team panel.",
       pains: ["Customers call or write to find a free slot and the team wastes time coordinating.", "No-shows and manual confirmations reduce revenue and disrupt the schedule.", "A ready-made calendar does not support payments, deposits, multiple staff members, or your business rules."],
-      deliverables: ["Availability calendar, services, staff, and limits", "Online payments, deposits, and cancellation rules", "Admin panel and reports", "Email/SMS notifications and CRM integrations"],
+      deliverables: ["Customers see free slots and book themselves, even at night", "Deposits and cancellation rules that reduce no-shows", "Schedule, payments, and customer history in one panel", "SMS and email reminders sent automatically"],
       industries: ["beauty", "healthcare", "education", "consulting", "rentals", "events", "local services"],
-      proof: "I design bookings so customers schedule themselves while the team sees the calendar, payments, and history in one panel.",
+      proof: "Fewer calls during work and fewer empty slots: customers book themselves, and the reminder and deposit make sure they show up.",
       price: "Usually from PLN 6,000 net for a simple booking system; payments, integrations, and staff roles are estimated after analysis.",
       timeline: "Usually 1-4 weeks for the first production version.",
       faq: [
@@ -290,11 +290,11 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
   devops: {
     pl: {
       definition:
-        "DevOps i wdrożenia chmurowe obejmują CI/CD, Docker, konfigurację środowisk, monitoring, backupy, bezpieczeństwo i stabilne publikowanie aplikacji.",
+        "Aktualizacje aplikacji bez przestojów, nerwów i nocnych telefonów: nowa wersja wchodzi jednym kliknięciem, kopie zapasowe robią się same, a o awarii wiesz, zanim zauważą ją klienci. DevOps i wdrożenia w chmurze: CI/CD, Docker, monitoring, backupy.",
       pains: ["Wdrożenia są ręczne i stresujące.", "Brakuje monitoringu, backupu albo jasnego planu awaryjnego.", "Koszty chmury rosną bez kontroli."],
-      deliverables: ["Pipeline CI/CD", "Konfiguracja chmury", "Monitoring i alerty", "Backup i dokumentacja wdrożeń"],
+      deliverables: ["Nowa wersja publikowana jednym kliknięciem, sprawdzona przed startem (CI/CD)", "Serwery ustawione tak, żeby płacić tylko za to, czego używasz", "Powiadomienie o awarii, zanim zadzwoni klient", "Kopie zapasowe i instrukcja przywrócenia działania"],
       industries: ["SaaS", "aplikacje webowe", "e-commerce", "zespoły produktowe"],
-      proof: "Celem DevOps jest przewidywalne wdrożenie: mniej ręcznych kroków, szybsze wydania i większa odporność produkcji.",
+      proof: "Publikacja nowej wersji ma być nudna: bez ręcznych kroków, bez wyłączania aplikacji i bez ryzyka, że coś zniknie.",
       price: "Podstawowe uporządkowanie deploymentu zwykle od 4 500 zł netto; stałe utrzymanie wyceniamy miesięcznie.",
       timeline: "Zwykle 2-10 dni roboczych dla pierwszego stabilnego pipeline.",
       faq: [
@@ -324,11 +324,11 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
     },
     en: {
       definition:
-        "DevOps and cloud deployment covers CI/CD, Docker, environment configuration, monitoring, backups, security, and stable application releases.",
+        "App updates without downtime, stress, or late-night calls: a new version goes live in one click, backups run themselves, and you know about an outage before customers notice. DevOps and cloud deployment: CI/CD, Docker, monitoring, backups.",
       pains: ["Deployments are manual and stressful.", "Monitoring, backups, or incident plans are missing.", "Cloud costs grow without control."],
-      deliverables: ["CI/CD pipeline", "Cloud configuration", "Monitoring and alerts", "Backups and deployment documentation"],
+      deliverables: ["New versions published in one click, checked before going live (CI/CD)", "Servers set up so you pay only for what you use", "An outage alert before a customer calls", "Backups and instructions for restoring service"],
       industries: ["SaaS", "web applications", "e-commerce", "product teams"],
-      proof: "DevOps should make releases predictable: fewer manual steps, faster shipping, and more resilient production.",
+      proof: "Releasing a new version should be boring: no manual steps, no taking the app offline, and no risk of losing anything.",
       price: "Basic deployment cleanup usually starts from PLN 4,500 net; ongoing maintenance is estimated monthly.",
       timeline: "Usually 2-10 business days for the first stable pipeline.",
       faq: [
@@ -360,16 +360,16 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
   maintenance: {
     pl: {
       definition:
-        "Naprawa, optymalizacja i utrzymanie obejmuje audyt istniejącej strony lub aplikacji, bugfixing, Core Web Vitals, SEO techniczne, bezpieczeństwo i dalszy rozwój.",
+        "Strona lub aplikacja, która znowu działa szybko i bez błędów — także gdy poprzedni wykonawca zniknął. Naprawa, przyspieszenie, lepsza widoczność w Google (SEO techniczne, Core Web Vitals), bezpieczeństwo i dalszy rozwój.",
       pains: ["Projekt działa wolno albo niestabilnie.", "Poprzedni wykonawca nie rozwija już systemu.", "Błędy techniczne obniżają sprzedaż, SEO lub zaufanie klientów."],
-      deliverables: ["Audyt techniczny", "Plan naprawczy", "Bugfixing i optymalizacja", "Monitoring i wsparcie utrzymaniowe"],
+      deliverables: ["Diagnoza: co nie działa i ile Cię to kosztuje", "Plan napraw od najważniejszych dla sprzedaży", "Naprawione błędy i szybsza strona", "Stała opieka, żeby problemy nie wracały"],
       industries: ["firmy po wdrożeniu", "e-commerce", "SaaS", "strony usługowe"],
-      proof: "Zaczynamy od diagnozy, żeby naprawiać przyczynę problemu, nie tylko widoczny objaw.",
+      proof: "Najpierw diagnoza, potem naprawa przyczyny, a nie objawu. Dzięki temu nie płacisz drugi raz za ten sam problem.",
       price: "Diagnozy i małe poprawki zwykle od 1 500 zł netto; większe prace wyceniamy po audycie.",
       timeline: "Diagnoza zwykle 1-3 dni robocze, wdrożenie poprawek zależy od zakresu.",
       faq: [
         { q: "Czy naprawiacie projekty po innych wykonawcach?", a: "Tak. Przejmujemy istniejące strony i aplikacje, wykonujemy audyt, porządkujemy kod i planujemy poprawki etapami." },
-        { q: "Czy możecie poprawić Core Web Vitals?", a: "Tak. Analizuję LCP, CLS, INP, obrazy, JS, cache i sposób renderowania krytycznych elementów strony." },
+        { q: "Czy możecie poprawić Core Web Vitals?", a: "Tak. Core Web Vitals to wskaźniki Google mówiące, czy strona ładuje się szybko i nie „skacze”. Poprawiam obrazy, skrypty i serwer, żeby strona wczytywała się szybciej, co pomaga i w pozycjach w Google, i w sprzedaży." },
         { q: "Czy oferujecie stałe utrzymanie?", a: "Tak. Możemy ustalić miesięczny zakres wsparcia, aktualizacji, monitoringu i rozwoju." },
       ],
       relatedPosts: [
@@ -379,16 +379,16 @@ export const serviceDetails: Record<ServiceDetailId, Record<SiteLang, ServiceDet
     },
     en: {
       definition:
-        "Fixes, optimization, and maintenance include auditing an existing website or application, bug fixing, Core Web Vitals, technical SEO, security, and further development.",
+        "A website or app that runs fast and error-free again — even if the previous vendor disappeared. Fixes, speed-ups, better Google visibility (technical SEO, Core Web Vitals), security, and further development.",
       pains: ["The project is slow or unstable.", "The previous vendor no longer develops the system.", "Technical issues reduce sales, SEO, or customer trust."],
-      deliverables: ["Technical audit", "Repair plan", "Bug fixing and optimization", "Monitoring and maintenance support"],
+      deliverables: ["Diagnosis: what is broken and what it costs you", "A repair plan starting with what matters for sales", "Bugs fixed and a faster site", "Ongoing care so problems don't come back"],
       industries: ["post-launch companies", "e-commerce", "SaaS", "service websites"],
-      proof: "I start with diagnosis so I fix the cause, not just the visible symptom.",
+      proof: "Diagnosis first, then fixing the cause rather than the symptom. That way you don't pay twice for the same problem.",
       price: "Diagnostics and small fixes usually start from PLN 1,500 net; larger work is estimated after audit.",
       timeline: "Diagnosis usually takes 1-3 business days; implementation depends on scope.",
       faq: [
         { q: "Do you fix projects after other vendors?", a: "Yes. We take over existing websites and applications, audit them, organize the code, and plan fixes in stages." },
-        { q: "Can you improve Core Web Vitals?", a: "Yes. I analyze LCP, CLS, INP, images, JavaScript, cache, and critical rendering." },
+        { q: "Can you improve Core Web Vitals?", a: "Yes. Core Web Vitals are Google's measures of whether a page loads fast and doesn't jump around. I fix images, scripts, and the server so the page loads faster, which helps both Google rankings and sales." },
         { q: "Do you offer ongoing maintenance?", a: "Yes. We can agree on monthly support, updates, monitoring, and development scope." },
       ],
       relatedPosts: [

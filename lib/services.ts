@@ -20,8 +20,8 @@ export const serviceItems: ServiceItem[] = [
       en: "Websites",
     },
     description: {
-      pl: "Projektuję szybkie, responsywne strony firmowe, landing page i serwisy ofertowe przygotowane pod SEO techniczne oraz pozyskiwanie zapytań.",
-      en: "I design fast, responsive business websites, landing pages, and offer pages prepared for technical SEO and lead generation.",
+      pl: "Projektuję szybkie strony firmowe i landing page, które dobrze wyglądają na telefonie, pokazują się w Google i zamieniają odwiedziny w zapytania.",
+      en: "I design fast business websites and landing pages that look good on phones, show up in Google, and turn visits into enquiries.",
     },
     href: {
       pl: "/uslugi/strony-internetowe",
@@ -77,8 +77,8 @@ export const serviceItems: ServiceItem[] = [
       en: "Automation and AI",
     },
     description: {
-      pl: "Wdrażam agentów AI, automatyzacje workflow, integracje narzędzi i systemy, które ograniczają pracę manualną oraz przyspieszają obsługę klienta.",
-      en: "I implement AI agents, workflow automation, tool integrations, and systems that reduce manual work and speed up customer service.",
+      pl: "Wdrażam automatyzacje i agentów AI, które zdejmują z zespołu powtarzalną pracę, łączą programy firmy i odpowiadają klientom w kilka sekund.",
+      en: "I implement automations and AI agents that take repetitive work off your team, connect your software, and answer customers in seconds.",
     },
     href: {
       pl: "/uslugi/automatyzacja-i-ai",
@@ -134,8 +134,8 @@ export const serviceItems: ServiceItem[] = [
       en: "DevOps and deployment",
     },
     description: {
-      pl: "Porządkuję deploymenty, CI/CD, monitoring, backup, Docker, chmurę i utrzymanie infrastruktury dla aplikacji produkcyjnych.",
-      en: "I improve deployments, CI/CD, monitoring, backups, Docker, cloud infrastructure, and maintenance for production applications.",
+      pl: "Ustawiam aktualizacje aplikacji bez przestojów, kopie zapasowe i powiadomienia o awariach: CI/CD, monitoring, Docker i chmura.",
+      en: "I set up app updates without downtime, backups, and outage alerts: CI/CD, monitoring, Docker, and the cloud.",
     },
     href: {
       pl: "/uslugi/devops-wdrozenia",
@@ -153,8 +153,8 @@ export const serviceItems: ServiceItem[] = [
       en: "Fixes and maintenance",
     },
     description: {
-      pl: "Diagnozuję i naprawiam strony oraz aplikacje po innych wykonawcach, poprawiam Core Web Vitals, SEO techniczne, konwersję i stabilność.",
-      en: "I diagnose and fix websites and applications after other vendors, improving Core Web Vitals, technical SEO, conversion, and stability.",
+      pl: "Naprawiam strony i aplikacje po innych wykonawcach: szybsze ładowanie, lepsza widoczność w Google, więcej zapytań i mniej awarii.",
+      en: "I fix websites and apps after other vendors: faster loading, better Google visibility, more enquiries, and fewer outages.",
     },
     href: {
       pl: "/uslugi/naprawa-optymalizacja-utrzymanie",

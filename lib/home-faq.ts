@@ -17,7 +17,7 @@ export const homeFaq: Record<SiteLang, FaqItem[]> = {
     },
     {
       q: "Jak AI pomaga w realizacji projektu?",
-      a: "Narzędzia AI przyspieszają analizę, prototypowanie i wybrane etapy pracy. Architektura, bezpieczeństwo, jakość kodu i efekt końcowy pozostają po mojej stronie.",
+      a: "Narzędzia AI przyspieszają analizę, prototypowanie i wybrane etapy pracy. Za bezpieczeństwo, jakość i to, czy rozwiązanie działa w Twojej firmie, odpowiadam ja.",
     },
     {
       q: "Jakie projekty mogę zlecić?",
@@ -43,7 +43,7 @@ export const homeFaq: Record<SiteLang, FaqItem[]> = {
     },
     {
       q: "How does AI help in the project?",
-      a: "AI tools speed up analysis, prototyping, and selected implementation steps. Architecture, security, code quality, and the final result remain my responsibility.",
+      a: "AI tools speed up analysis, prototyping, and selected implementation steps. I remain responsible for security, quality, and whether the solution works in your company.",
     },
     {
       q: "What projects can I request?",

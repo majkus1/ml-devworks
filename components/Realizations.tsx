@@ -35,6 +35,10 @@ interface Project {
     pl: string[];
     en: string[];
   };
+  /** Dwa efekty w liczbach na karcie (tylko sprawdzalne fakty). */
+  results: { value: { pl: string; en: string }; label: { pl: string; en: string } }[];
+  /** Opinia klienta, jeśli jest publiczna. */
+  quote?: { text: { pl: string; en: string }; author: string };
   technologies: TechIcon[];
   images?: string[];
   inDevelopment: boolean;
@@ -44,22 +48,34 @@ interface Project {
   };
 }
 
+// Liczby w „results” są sprawdzalne: wynikają z działania rozwiązania albo z publicznych stron projektów (bez zmyślonych wyników klientów).
 const projects: Project[] = [
   {
     id: "planopia",
     name: { pl: "Planopia", en: "Planopia" },
     url: "https://planopia.pl",
     shortDescription: {
-      pl: "Aplikacja SaaS do ewidencji czasu pracy, urlopów i grafików — używana przez firmy na co dzień.",
-      en: "A SaaS app for time tracking, leave, and schedules — used by companies every day.",
+      pl: "Firmy zamieniły arkusze z godzinami i papierowe wnioski urlopowe na jedną aplikację. Raport na koniec miesiąca powstaje jednym kliknięciem.",
+      en: "Companies replaced timesheets and paper leave requests with one app. The month-end report takes one click.",
     },
     longDescription: {
-      pl: "Zastępuje arkusze z godzinami i papierowe wnioski urlopowe. Pracownicy logują czas i składają wnioski z telefonu, a przełożony zatwierdza wszystko w jednym miejscu.",
-      en: "It replaces timesheets and paper leave requests. Employees log time and request leave from their phone, and managers approve everything in one place.",
+      pl: "Problem: godziny w kilku arkuszach, wnioski urlopowe mailem i SMS-em, a saldo urlopu liczone ręcznie. Rozwiązanie: pracownicy wpisują czas i składają wnioski z telefonu, przełożony zatwierdza je w jednym miejscu, a saldo i raporty liczą się same.",
+      en: "Problem: hours in several spreadsheets, leave requests by email and text, and leave balances counted by hand. Solution: employees log time and request leave from their phone, managers approve in one place, and balances and reports calculate themselves.",
     },
     highlights: {
-      pl: ["Ewidencja czasu pracy z eksportem do Excela i PDF", "Wnioski urlopowe z akceptacją i powiadomieniami", "Grafik, tablica zadań i asystent AI", "Role: pracownik, przełożony, HR, administrator"],
-      en: ["Time tracking with Excel and PDF export", "Leave requests with approvals and notifications", "Schedule, task board, and AI assistant", "Roles: employee, manager, HR, admin"],
+      pl: ["Koniec zbierania i scalania arkuszy od kierowników", "Saldo urlopu liczy się samo po każdym wniosku", "Grafik, zadania i asystent AI w tej samej aplikacji", "Darmowy plan dla zespołów do 5 osób"],
+      en: ["No more collecting and merging spreadsheets from managers", "Leave balance updates itself after every request", "Schedule, tasks, and AI assistant in the same app", "Free plan for teams of up to 5 people"],
+    },
+    results: [
+      { value: { pl: "1 klik", en: "1 click" }, label: { pl: "raport miesięczny w PDF lub Excelu zamiast godzin w arkuszach", en: "monthly report in PDF or Excel instead of hours in spreadsheets" } },
+      { value: { pl: "2 min", en: "2 min" }, label: { pl: "od rejestracji do działającego zespołu", en: "from sign-up to a working team" } },
+    ],
+    quote: {
+      text: {
+        pl: "Problemy i uwagi rozwiązywane są w błyskawicznym czasie, a sama platforma bardzo przejrzysta i prosta w obsłudze.",
+        en: "Issues and feedback are resolved lightning fast, and the platform itself is very clear and easy to use.",
+      },
+      author: "Klaudia Pawłowska, Główna Księgowa, Halo Rental System",
     },
     technologies: [{ name: "Next.js" }, { name: "React" }, { name: "Node.js" }, { name: "MongoDB" }, { name: "OpenAI" }],
     images: [
@@ -79,17 +95,21 @@ const projects: Project[] = [
     name: { pl: "AGMAR Paliwa", en: "AGMAR Paliwa" },
     url: "https://agmar-paliwa.pl",
     shortDescription: {
-      pl: "Strona dostawcy paliwa z panelem, w którym właściciel sam zmienia cenę dnia.",
-      en: "A fuel supplier's website with a panel where the owner updates the daily price himself.",
+      pl: "Klient od razu po wejściu widzi dzisiejszą cenę paliwa i numer telefonu, a właściciel zmienia cenę sam z telefonu — bez czekania na informatyka.",
+      en: "Customers see today's fuel price and the phone number as soon as they land, and the owner updates the price from his phone — without waiting for a developer.",
     },
     longDescription: {
-      pl: "Dla klientów najważniejsza jest aktualna cena oleju napędowego. Właściciel zmienia ją w prostym panelu, a strona od razu pokazuje ją na górze strony głównej.",
-      en: "For customers the key information is the current diesel price. The owner changes it in a simple panel and the website shows it at the top of the homepage right away.",
+      pl: "Problem: cena paliwa zmienia się często, a klient chce ją znać, zanim zadzwoni. Zmiana ceny na zwykłej stronie wymaga kontaktu z wykonawcą. Rozwiązanie: prosty panel, w którym właściciel wpisuje cenę dnia, i strona, która pokazuje ją razem z telefonem na pierwszym ekranie.",
+      en: "Problem: fuel prices change often, and customers want to know the price before they call. Changing it on a regular website means contacting the developer. Solution: a simple panel where the owner enters the daily price, and a site that shows it with the phone number on the first screen.",
     },
     highlights: {
-      pl: ["Panel administracyjny do zmiany cen", "Cena dnia widoczna od razu na stronie", "Formularz kontaktowy z wysyłką e-mail", "Szybka strona, wygodna na telefonie"],
-      en: ["Admin panel for price updates", "Daily price shown instantly on the site", "Contact form with email delivery", "Fast, mobile-friendly website"],
+      pl: ["Cena dnia zmieniana samodzielnie, bez programisty", "Cena i telefon na pierwszym ekranie, także na telefonie", "Zapytania z formularza prosto na e-mail", "Oferta dla klientów ze Śląska i Małopolski"],
+      en: ["Daily price updated without a developer", "Price and phone number on the first screen, on mobile too", "Form enquiries straight to email", "Offer for customers in Silesia and Lesser Poland"],
     },
+    results: [
+      { value: { pl: "< 1 min", en: "< 1 min" }, label: { pl: "zmiana ceny dnia z telefonu, bez programisty", en: "to update the daily price from a phone, no developer" } },
+      { value: { pl: "1. ekran", en: "1st screen" }, label: { pl: "cena i numer telefonu widoczne od razu po wejściu", en: "price and phone number visible right away" } },
+    ],
     technologies: [{ name: "Next.js" }, { name: "React" }, { name: "Node.js" }, { name: "MongoDB" }, { name: "JWT" }],
     images: [
       "/realizacje/agmar-home-desktop.webp",
@@ -105,17 +125,21 @@ const projects: Project[] = [
     name: { pl: "Sweet Steviam", en: "Sweet Steviam" },
     url: "https://sweetsteviam.com",
     shortDescription: {
-      pl: "Wielojęzyczna strona B2B hurtowni słodzików, która zbiera zapytania od producentów żywności z UE.",
-      en: "A multilingual B2B website for a sweetener wholesaler that collects enquiries from EU food producers.",
+      pl: "Kupcy z firm spożywczych w Polsce i UE sami znajdują specyfikacje słodzików i od razu wysyłają zapytanie ofertowe — po polsku albo angielsku.",
+      en: "Buyers from food companies in Poland and the EU find sweetener specifications themselves and send a quote request straight away — in Polish or English.",
     },
     longDescription: {
-      pl: "Hurtownia sprzedaje stewię, erytrytol i ksylitol firmom z Polski i UE. Strona pokazuje katalog z danymi technicznymi i prowadzi prosto do zapytania ofertowego.",
-      en: "The wholesaler sells stevia, erythritol, and xylitol to companies in Poland and the EU. The site presents a catalogue with technical data and leads straight to a quote request.",
+      pl: "Problem: kupiec z działu rozwoju produktu potrzebuje danych technicznych, zanim w ogóle zapyta o cenę. Rozwiązanie: katalog z danymi technicznymi każdej grupy produktów, wersja angielska dla klientów z UE i bardzo szybka strona, która prowadzi prosto do zapytania.",
+      en: "Problem: a product development buyer needs technical data before even asking for a price. Solution: a catalogue with technical data for every product group, an English version for EU customers, and a very fast site that leads straight to an enquiry.",
     },
     highlights: {
-      pl: ["Wersje językowe PL i EN", "Katalog produktów z danymi technicznymi", "Formularz zapytań z ochroną przed spamem", "Wysoki wynik w PageSpeed Insights"],
-      en: ["Polish and English versions", "Product catalogue with technical data", "Enquiry form with spam protection", "High PageSpeed Insights score"],
+      pl: ["Dane techniczne dostępne bez pisania maila", "Wersje PL i EN dla klientów z całej UE", "Formularz zapytań z ochroną przed spamem", "100/100 wydajności w Google PageSpeed na telefonie"],
+      en: ["Technical data available without emailing", "Polish and English versions for EU customers", "Enquiry form with spam protection", "100/100 performance in Google PageSpeed on mobile"],
     },
+    results: [
+      { value: { pl: "13", en: "13" }, label: { pl: "grup produktów z danymi technicznymi online", en: "product groups with technical data online" } },
+      { value: { pl: "100/100", en: "100/100" }, label: { pl: "wydajności w Google PageSpeed na telefonie", en: "performance in Google PageSpeed on mobile" } },
+    ],
     technologies: [{ name: "HTML" }, { name: "CSS" }, { name: "PHP" }],
     images: [
       "/realizacje/sweetsteviam-home-desktop.webp",
@@ -131,17 +155,21 @@ const projects: Project[] = [
     name: { pl: "Czat Sportowy", en: "Sports Chat" },
     url: "https://czatsportowy.pl",
     shortDescription: {
-      pl: "Platforma z analizami meczów od AI, asystentem, który odpowiada na pytania, i czatem na żywo.",
-      en: "A platform with AI match analysis, an assistant that answers questions, and live chat.",
+      pl: "Kibice dostają analizy meczów wyjaśnione prostym językiem i odpowiedzi asystenta AI w kilka sekund — po polsku i angielsku.",
+      en: "Fans get match analysis explained in plain language and answers from an AI assistant within seconds — in Polish and English.",
     },
     longDescription: {
-      pl: "Model liczy szanse na podstawie statystyk tysięcy meczów, a AI tłumaczy wynik prostym językiem. Użytkownicy rozmawiają na czacie w czasie rzeczywistym i dostają poranny raport.",
-      en: "A model calculates probabilities from thousands of matches and AI explains the result in plain language. Users chat in real time and receive a morning report.",
+      pl: "Problem: statystyki meczów są rozproszone i trudne do zrozumienia dla zwykłego kibica. Rozwiązanie: model liczy dane z tysięcy meczów, a AI tłumaczy wynik po ludzku i odpowiada na pytania jak rozmówca, który zna każdy mecz.",
+      en: "Problem: match statistics are scattered and hard for an ordinary fan to understand. Solution: a model processes data from thousands of matches, and AI explains the result in plain words and answers questions like someone who knows every match.",
     },
     highlights: {
-      pl: ["Analizy i asystent oparte na AI", "Czat na żywo w czasie rzeczywistym", "Poranny raport AI na e-mail", "Konta użytkowników, plany i wersje PL/EN"],
-      en: ["AI-powered analysis and assistant", "Real-time live chat", "Morning AI report by email", "User accounts, plans, and PL/EN versions"],
+      pl: ["Asystent AI, który zna dzisiejsze mecze i wiadomości", "Analizy wyjaśnione prostym językiem", "Czat na żywo i poranny raport na e-mail", "Konta, plany i wersje PL/EN"],
+      en: ["An AI assistant that knows today's matches and news", "Analysis explained in plain language", "Live chat and a morning email report", "Accounts, plans, and PL/EN versions"],
     },
+    results: [
+      { value: { pl: "sekundy", en: "seconds" }, label: { pl: "na odpowiedź asystenta AI o każdym meczu", en: "for the AI assistant to answer about any match" } },
+      { value: { pl: "PL + EN", en: "PL + EN" }, label: { pl: "od startu, dla kibiców w Polsce i za granicą", en: "from launch, for fans in Poland and abroad" } },
+    ],
     technologies: [{ name: "Next.js" }, { name: "Node.js" }, { name: "MongoDB" }, { name: "Redis" }, { name: "Socket.IO" }, { name: "OpenAI" }],
     images: [
       "/realizacje/czatsportowy-home-desktop.webp",
@@ -502,7 +530,9 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
                   </div>
                 )}
 
-                <p className="text-[0.98rem] leading-relaxed text-gray-300">{selectedProject.longDescription[lang]}</p>
+                <ResultTiles project={selectedProject} lang={lang} className="mb-5" />
+
+                <ProblemSolution text={selectedProject.longDescription[lang]} />
 
                 <ul className="mt-5 grid gap-2.5 sm:grid-cols-2">
                   {selectedProject.highlights[lang].map((item) => (
@@ -515,7 +545,15 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
                   ))}
                 </ul>
 
-                <div className="mt-6 flex flex-wrap gap-2 border-t border-white/[0.08] pt-5">
+                {selectedProject.quote && (
+                  <figure className="mt-6 rounded-xl border border-white/[0.08] bg-white/[0.025] p-4">
+                    <blockquote className="text-[0.95rem] leading-relaxed text-gray-200">„{selectedProject.quote.text[lang]}”</blockquote>
+                    <figcaption className="mt-2 text-xs text-gray-500">{selectedProject.quote.author}</figcaption>
+                  </figure>
+                )}
+
+                <div className="mt-6 flex flex-wrap items-center gap-2 border-t border-white/[0.08] pt-5">
+                  <span className="mr-1 text-xs text-gray-500">{lang === "pl" ? "Technologie:" : "Technologies:"}</span>
                   {selectedProject.technologies.map((tech) => (
                     <span key={tech.name} className="rounded-md border border-white/[0.08] bg-white/[0.03] px-2.5 py-1 text-xs text-gray-400">
                       {tech.name}
@@ -579,6 +617,40 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
   );
 }
 
+/** Dwa efekty w liczbach — na karcie i w oknie szczegółów. */
+function ResultTiles({ project, lang, className = "" }: { project: Project; lang: "pl" | "en"; className?: string }) {
+  return (
+    <dl className={`grid grid-cols-2 gap-3 ${className}`}>
+      {project.results.map((result) => (
+        <div key={result.label.pl} className="rounded-xl border border-primary/20 bg-primary/[0.05] p-3.5">
+          <dt className="sr-only">{result.label[lang]}</dt>
+          <dd>
+            <span className="block font-display text-xl font-semibold text-primary">{result.value[lang]}</span>
+            <span className="mt-1 block text-xs leading-snug text-gray-400">{result.label[lang]}</span>
+          </dd>
+        </div>
+      ))}
+    </dl>
+  );
+}
+
+/** „Problem: … Rozwiązanie: …” jako dwa akapity z wyróżnionymi etykietami. */
+function ProblemSolution({ text }: { text: string }) {
+  const parts = text.split(/(Problem:|Rozwiązanie:|Solution:)/).filter((part) => part.trim());
+  const pairs: [string, string][] = [];
+  for (let i = 0; i < parts.length; i += 2) pairs.push([parts[i], (parts[i + 1] ?? "").trim()]);
+  return (
+    <div className="space-y-2.5 text-[0.98rem] leading-relaxed text-gray-300">
+      {pairs.map(([label, body]) => (
+        <p key={label}>
+          <span className="font-semibold text-white">{label} </span>
+          {body}
+        </p>
+      ))}
+    </div>
+  );
+}
+
 function ProjectCard({
   project,
   lang,
@@ -638,18 +710,9 @@ function ProjectCard({
           </a>
         </div>
 
-        <p className="mt-3 text-[0.95rem] leading-relaxed text-gray-400">{project.shortDescription[lang]}</p>
+        <p className="mt-3 text-[0.95rem] leading-relaxed text-gray-300">{project.shortDescription[lang]}</p>
 
-        <div className="mt-5 flex flex-wrap gap-2">
-          {project.technologies.slice(0, 5).map((tech) => (
-            <span key={tech.name} className="rounded-md border border-white/[0.08] bg-white/[0.03] px-2.5 py-1 text-xs text-gray-400">
-              {tech.name}
-            </span>
-          ))}
-          {project.technologies.length > 5 && (
-            <span className="rounded-md border border-white/[0.08] bg-white/[0.03] px-2.5 py-1 text-xs text-gray-500">+{project.technologies.length - 5}</span>
-          )}
-        </div>
+        <ResultTiles project={project} lang={lang} className="mt-5" />
 
         <div className="mt-auto flex items-center gap-3 pt-6">
           <button type="button" onClick={onOpenModal} className="btn-link">

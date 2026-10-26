@@ -147,7 +147,7 @@ export function ServiceOverview({ serviceId, lang }: { serviceId: ServiceDetailI
       <p className="mt-5 flex items-start gap-3 rounded-2xl border border-white/[0.08] bg-white/[0.02] px-6 py-5 text-[0.95rem] leading-relaxed text-gray-300">
         <CheckIcon size={18} className="mt-0.5 shrink-0 text-primary" />
         <span>
-          <span className="font-semibold text-white">{isPl ? "Jak pokazuję wartość: " : "How I prove value: "}</span>
+          <span className="font-semibold text-white">{isPl ? "Efekt dla firmy: " : "What it means for you: "}</span>
           {detail.proof}
         </span>
       </p>
