@@ -72,7 +72,7 @@ const projects: Project[] = [
     ],
     quote: {
       text: {
-        pl: "Problemy i uwagi rozwiązywane są w błyskawicznym czasie, a sama platforma bardzo przejrzysta i prosta w obsłudze.",
+        pl: "Polecam współpracę z panem Michałem, problemy i uwagi rozwiązywane są w błyskawicznym czasie, a sama platforma bardzo przejrzysta i prosta w obsłudze.",
         en: "Issues and feedback are resolved lightning fast, and the platform itself is very clear and easy to use.",
       },
       author: "Klaudia Pawłowska, Główna Księgowa, Halo Rental System",
@@ -205,6 +205,68 @@ interface Review {
   time: number;
 }
 
+/** Opinie klientów z aplikacji Planopia (publiczne na planopia.pl) — osobno od opinii z Google, bez logotypów. */
+const planopiaReviews = [
+  {
+    text: {
+      pl: "Polecam współpracę z panem Michałem, problemy i uwagi rozwiązywane są w błyskawicznym czasie, a sama platforma bardzo przejrzysta i prosta w obsłudze.",
+      en: "I recommend working with Michał — issues and feedback are resolved lightning fast, and the platform itself is very clear and easy to use.",
+    },
+    author: "Klaudia Pawłowska",
+    role: { pl: "Główna Księgowa", en: "Chief Accountant" },
+    company: "Halo Rental System",
+  },
+  {
+    text: {
+      pl: "Używam aplikacji planopia.pl do ewidencji czasu pracy. Aplikacja przejrzysta, bardzo intuicyjna. Wszystko w jednym miejscu: lista obecności, godziny pracy, grafiki, a przede wszystkim urlopy – wnioski składane i zatwierdzane elektronicznie. Tablica zadań bardzo pomocna w planowaniu zadań, które widzi cały zespół lub wybrane osoby. Kontakt z obsługą programu bardzo dobry. Polecam.",
+      en: "I use planopia.pl for time tracking. The app is clear and very intuitive. Everything in one place: attendance, working hours, schedules and, above all, leave — requests submitted and approved electronically. The task board is very helpful for planning work visible to the whole team or selected people. Support is very good. I recommend it.",
+    },
+    author: "Zespół Smart Cube",
+    role: { pl: "Budownictwo mieszkaniowe", en: "Residential construction" },
+    company: "Smart City Stargard",
+  },
+];
+
+function PlanopiaReviews({ lang }: { lang: "pl" | "en" }) {
+  const isPl = lang === "pl";
+  return (
+    <div className="mt-12">
+      <div className="mb-6 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+        <h3 className="font-display text-xl font-semibold text-white md:text-2xl">
+          {isPl ? "Opinie klientów aplikacji Planopia" : "Reviews from Planopia customers"}
+        </h3>
+        <a href="https://planopia.pl" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 transition-colors hover:text-primary">
+          {isPl ? "Opinie z planopia.pl" : "Reviews from planopia.pl"} ↗
+        </a>
+      </div>
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        {planopiaReviews.map((review) => (
+          <figure key={review.author} className="card flex min-w-0 flex-col">
+            <svg className="h-7 w-7 text-primary" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M9.6 6C6.5 7.4 4.5 10.2 4.5 13.6V18h5.3v-5.3H7.2c.1-2 1.3-3.6 3.2-4.5L9.6 6Zm9 0c-3.1 1.4-5.1 4.2-5.1 7.6V18h5.3v-5.3h-2.6c.1-2 1.3-3.6 3.2-4.5L18.6 6Z" />
+            </svg>
+            <blockquote className="mt-4 flex-1 text-[0.98rem] leading-relaxed text-gray-200">{review.text[lang]}</blockquote>
+            <figcaption className="mt-5 flex items-center gap-3 border-t border-white/[0.07] pt-4">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/15 text-sm font-semibold text-primary" aria-hidden="true">
+                {review.company.charAt(0)}
+              </span>
+              <span className="min-w-0">
+                <span className="block text-sm font-semibold text-white">{review.author}</span>
+                <span className="block text-xs text-gray-400">
+                  {review.role[lang]}, {review.company}
+                </span>
+              </span>
+              <span className="ml-auto shrink-0 rounded-full border border-primary/30 bg-primary/10 px-2.5 py-0.5 text-[0.7rem] font-semibold text-primary">
+                {isPl ? "Klient Planopii" : "Planopia customer"}
+              </span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 // Compact Google Reviews Component for Realizations section
 function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
   const [reviews, setReviews] = useState<Review[]>([]);
@@ -249,10 +311,6 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
     );
   }
 
-  if (reviews.length === 0) {
-    return null;
-  }
-
   const content = {
     pl: {
       title: "Opinie klientów",
@@ -275,7 +333,9 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
       style={{ scrollMarginTop: "100px" }}
     >
       <h2 className="section-heading mb-4 !text-3xl md:!text-[2rem]">{t.title}</h2>
-      
+
+      {reviews.length > 0 && (
+        <>
       {overallRating && totalRatings && (
         <div className="flex items-center justify-start gap-4 mb-8">
           <div className="flex items-center gap-2">
@@ -354,6 +414,10 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
           </svg>
         </a>
       </div>
+        </>
+      )}
+
+      <PlanopiaReviews lang={lang} />
     </div>
   );
 }
