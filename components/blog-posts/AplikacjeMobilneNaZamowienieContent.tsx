@@ -56,7 +56,7 @@ export default function AplikacjeMobilneNaZamowienieContent({ lang }: Props) {
     : ["Who will use the app and in what conditions (office, field, shop floor, customer at home)?", "Which 3-5 actions must be possible in the app for it to be useful from day one?", "Is offline mode required?", "Which systems must the app connect to (CRM, ERP, spreadsheet, calendar, payments)?", "Who in the office should see the data and in what form (panel, report, notification)?", "How many devices and which (iOS, Android, both, tablets)?", "What is the rough budget and deadline?"];
 
   return (
-    <div className="space-y-10 text-gray-300 leading-relaxed">
+    <div className="space-y-10 text-ink-soft leading-relaxed">
       <p className="text-lg">
         {isPl
           ? "Aplikacja mobilna dla firmy na zamówienie to dedykowana aplikacja iOS i Android zbudowana pod konkretny proces: pracę techników w terenie, zamówienia handlowców, rezerwacje klientów albo zgłoszenia serwisowe. W tym artykule wyjaśniam, kiedy aplikacja mobilna ma sens (a kiedy wystarczy strona), z czego składa się koszt, ile trwa wdrożenie, czy wybrać technologię natywną czy cross-platform, oraz co przygotować przed rozmową z wykonawcą."
@@ -64,12 +64,12 @@ export default function AplikacjeMobilneNaZamowienieContent({ lang }: Props) {
       </p>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Kiedy firma potrzebuje aplikacji mobilnej, a kiedy wystarczy strona" : "When a company needs a mobile app and when a website is enough"}
         </h2>
         <div className="grid gap-4 md:grid-cols-2">
           {whenApp.map(([title, points]) => (
-            <article key={title as string} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
+            <article key={title as string} className="rounded-xl border border-ink/[0.08] bg-ink/[0.025] p-5">
               <h3 className="text-lg font-bold text-primary mb-3">{title as string}</h3>
               <ul className="list-disc list-inside space-y-2">
                 {(points as string[]).map((point) => (
@@ -82,7 +82,7 @@ export default function AplikacjeMobilneNaZamowienieContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Natywna, cross-platform czy PWA: co wybrać" : "Native, cross-platform, or PWA: what to choose"}
         </h2>
         <p className="mb-4">
@@ -103,7 +103,7 @@ export default function AplikacjeMobilneNaZamowienieContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Ile kosztuje aplikacja mobilna dla firmy na zamówienie" : "How much a custom mobile app for a company costs"}
         </h2>
         <div className="grid gap-4 md:grid-cols-3 mb-6">
@@ -119,18 +119,18 @@ export default function AplikacjeMobilneNaZamowienieContent({ lang }: Props) {
                 ["System with a customer app", "estimated after analysis", "Customer app + team app + panel, payments, notifications, ERP integrations. Delivered in stages."],
               ]
           ).map(([title, price, description]) => (
-            <article key={title} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
+            <article key={title} className="rounded-xl border border-ink/[0.08] bg-ink/[0.025] p-5">
               <h3 className="text-xl font-bold text-primary mb-2">{title}</h3>
-              <p className="font-semibold text-white mb-2">{price}</p>
+              <p className="font-semibold text-ink mb-2">{price}</p>
               <p>{description}</p>
             </article>
           ))}
         </div>
-        <h3 className="text-lg font-semibold text-white mb-3">{isPl ? "Co wpływa na koszt" : "What drives the cost"}</h3>
+        <h3 className="text-lg font-semibold text-ink mb-3">{isPl ? "Co wpływa na koszt" : "What drives the cost"}</h3>
         <div className="grid gap-4 md:grid-cols-2">
           {costFactors.map(([title, description]) => (
             <div key={title} className="bg-background border border-primary/15 rounded-xl p-4">
-              <p className="font-semibold text-white mb-1">{title}</p>
+              <p className="font-semibold text-ink mb-1">{title}</p>
               <p className="text-sm">{description}</p>
             </div>
           ))}
@@ -138,17 +138,17 @@ export default function AplikacjeMobilneNaZamowienieContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Ile trwa wdrożenie: etapy" : "How long delivery takes: stages"}
         </h2>
         <ol className="space-y-4">
           {stages.map(([title, description], index) => (
             <li key={title} className="flex gap-4">
-              <span className="shrink-0 w-9 h-9 rounded-full bg-primary text-background font-bold flex items-center justify-center" aria-hidden="true">
+              <span className="shrink-0 w-9 h-9 rounded-full bg-primary text-paper font-bold flex items-center justify-center" aria-hidden="true">
                 {index + 1}
               </span>
               <div>
-                <h3 className="text-lg font-semibold text-white mb-1">{title}</h3>
+                <h3 className="text-lg font-semibold text-ink mb-1">{title}</h3>
                 <p>{description}</p>
               </div>
             </li>
@@ -162,7 +162,7 @@ export default function AplikacjeMobilneNaZamowienieContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Publikacja w App Store i Google Play" : "Publishing in the App Store and Google Play"}
         </h2>
         <ul className="list-disc list-inside space-y-2 ml-2">
@@ -174,7 +174,7 @@ export default function AplikacjeMobilneNaZamowienieContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Checklista briefu: co przygotować przed rozmową z wykonawcą" : "Brief checklist: what to prepare before talking to a vendor"}
         </h2>
         <ol className="list-decimal list-inside space-y-2 ml-2">
@@ -202,7 +202,7 @@ export default function AplikacjeMobilneNaZamowienieContent({ lang }: Props) {
       </section>
 
       <section className="card-accent">
-        <h2 className="text-xl font-bold text-white mb-4">
+        <h2 className="text-xl font-bold text-ink mb-4">
           {isPl ? "Zastanawiasz się nad aplikacją mobilną dla swojej firmy?" : "Considering a mobile app for your company?"}
         </h2>
         <p className="mb-4">
@@ -211,7 +211,7 @@ export default function AplikacjeMobilneNaZamowienieContent({ lang }: Props) {
             : "Describe the process the app should handle. I come back within 2-5 days with a clickable screen prototype and an indicative estimate - free of charge. You can also first ask the AI advisor whether an app, a PWA, or an automation fits your case better."}
         </p>
         <div className="flex flex-wrap gap-4">
-          <Link href={mobileHref} className="btn-primary !text-[#03140b] !no-underline">
+          <Link href={mobileHref} className="btn-primary !text-paper !no-underline">
             {isPl ? "Aplikacje mobilne dla firm na zamówienie" : "Custom mobile apps for companies"}
             <span aria-hidden="true">→</span>
           </Link>

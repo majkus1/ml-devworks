@@ -21,10 +21,7 @@ export default function CtaBand({ lang = "pl", title, text }: CtaBandProps) {
   return (
     <section className="section-y relative" aria-labelledby="cta-band-heading">
       <div className="container-site">
-        <div className="relative overflow-hidden rounded-3xl border border-primary/25 bg-gradient-to-br from-[#0d1a14] via-background-light to-[#0a1418] px-6 py-12 md:px-14 md:py-16">
-          <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-primary/20 blur-[90px]" aria-hidden="true" />
-          <div className="pointer-events-none absolute -bottom-32 left-10 h-72 w-72 rounded-full bg-accent/10 blur-[90px]" aria-hidden="true" />
-
+        <div className="relative overflow-hidden rounded-2xl border border-primary/25 bg-gradient-to-br from-[#0d1a14] via-background-light to-[#0a1418] px-6 py-12 md:px-14 md:py-16">
           <div className="relative grid gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:items-center">
             <div>
               <h2 id="cta-band-heading" className="section-heading">
@@ -38,7 +35,7 @@ export default function CtaBand({ lang = "pl", title, text }: CtaBandProps) {
               </p>
               <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
                 {points.map((point) => (
-                  <li key={point} className="flex items-center gap-2 text-sm text-gray-200">
+                  <li key={point} className="flex items-center gap-2 text-sm text-ink">
                     <CheckIcon size={16} className="text-primary" />
                     {point}
                   </li>
@@ -55,12 +52,12 @@ export default function CtaBand({ lang = "pl", title, text }: CtaBandProps) {
                 <SparkIcon size={18} className="text-primary" />
                 {isPl ? "Zapytaj asystenta AI" : "Ask the AI advisor"}
               </OpenAssistantButton>
-              <div className="mt-2 flex flex-wrap justify-center gap-x-5 gap-y-1 text-sm text-gray-400">
-                <a href="tel:+48516598792" className="inline-flex items-center gap-1.5 hover:text-white">
+              <div className="mt-2 flex flex-wrap justify-center gap-x-5 gap-y-1 text-sm text-muted">
+                <a href="tel:+48516598792" className="inline-flex items-center gap-1.5 hover:text-ink">
                   <PhoneIcon size={15} />
                   +48 516 598 792
                 </a>
-                <a href="mailto:office@ml-devworks.com" className="inline-flex items-center gap-1.5 hover:text-white">
+                <a href="mailto:office@ml-devworks.com" className="inline-flex items-center gap-1.5 hover:text-ink">
                   <MailIcon size={15} />
                   office@ml-devworks.com
                 </a>

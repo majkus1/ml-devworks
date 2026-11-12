@@ -8,7 +8,7 @@ export default function IntegracjaSystemowContent({ lang }: Props) {
   const isPl = lang === "pl";
 
   return (
-    <div className="space-y-10 text-gray-300 leading-relaxed">
+    <div className="space-y-10 text-ink-soft leading-relaxed">
       <p className="text-lg">
         {isPl
           ? "Integracja systemów w firmie zaczyna się wtedy, gdy dane krążą między CRM, ERP, stroną, formularzami, płatnościami i arkuszami, ale zespół nadal przepisuje je ręcznie. Dobra integracja nie tylko oszczędza czas, ale zmniejsza liczbę błędów i poprawia raportowanie."
@@ -16,7 +16,7 @@ export default function IntegracjaSystemowContent({ lang }: Props) {
       </p>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Od czego zacząć integrację API, CRM i ERP?" : "Where to start with API, CRM, and ERP integration?"}
         </h2>
         <ol className="list-decimal list-inside space-y-2 ml-2">
@@ -28,7 +28,7 @@ export default function IntegracjaSystemowContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Najczęstsze scenariusze integracji" : "Common integration scenarios"}
         </h2>
         <div className="grid gap-4 md:grid-cols-2">
@@ -46,7 +46,7 @@ export default function IntegracjaSystemowContent({ lang }: Props) {
                 "Weekly report pulls data from several tools without manual exports.",
               ]
           ).map((item) => (
-            <article key={item} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
+            <article key={item} className="rounded-xl border border-ink/[0.08] bg-ink/[0.025] p-5">
               <p>{item}</p>
             </article>
           ))}
@@ -54,7 +54,7 @@ export default function IntegracjaSystemowContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "API, gotowy connector czy dedykowany panel?" : "API, ready connector, or custom panel?"}
         </h2>
         <p className="mb-4">
@@ -65,7 +65,7 @@ export default function IntegracjaSystemowContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Jak uniknąć błędów przy integracji?" : "How to avoid integration mistakes?"}
         </h2>
         <ul className="list-disc list-inside space-y-2 ml-2">
@@ -77,7 +77,7 @@ export default function IntegracjaSystemowContent({ lang }: Props) {
       </section>
 
       <section className="card-accent">
-        <h2 className="text-xl font-bold text-white mb-4">
+        <h2 className="text-xl font-bold text-ink mb-4">
           {isPl ? "Potrzebujesz integracji systemów w firmie?" : "Need business system integration?"}
         </h2>
         <p className="mb-4">
@@ -87,7 +87,7 @@ export default function IntegracjaSystemowContent({ lang }: Props) {
         </p>
         <Link
           href={isPl ? "/uslugi/aplikacje-internetowe-i-mobilne" : "/en/services/web-and-mobile-applications"}
-          className="btn-primary !text-[#03140b] !no-underline"
+          className="btn-primary !text-paper !no-underline"
         >
           {isPl ? "Zobacz aplikacje i integracje" : "View apps and integrations"}
           <span aria-hidden="true">→</span>

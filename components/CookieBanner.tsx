@@ -109,10 +109,10 @@ export default function CookieBanner({ lang = "pl" }: CookieBannerProps) {
       >
         <div className="max-w-4xl mx-auto bg-background-lighter border border-primary/30 rounded-xl shadow-2xl p-6 md:p-8">
           <div className="mb-6">
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+            <h3 className="text-xl md:text-2xl font-bold text-ink mb-3">
               {t.title}
             </h3>
-            <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+            <p className="text-ink-soft text-sm md:text-base leading-relaxed">
               {t.description}
             </p>
           </div>
@@ -120,7 +120,7 @@ export default function CookieBanner({ lang = "pl" }: CookieBannerProps) {
           <div className="flex flex-col sm:flex-row gap-3">
             <button
               onClick={handleRejectAll}
-              className="px-6 py-3 bg-background border border-primary/30 rounded-lg hover:border-primary/50 transition-colors text-white font-medium"
+              className="px-6 py-3 bg-background border border-primary/30 rounded-lg hover:border-primary/50 transition-colors text-ink font-medium"
             >
               {t.rejectAll}
             </button>

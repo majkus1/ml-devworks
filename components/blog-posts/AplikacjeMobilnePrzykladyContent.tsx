@@ -182,10 +182,10 @@ export default function AplikacjeMobilnePrzykladyContent({ lang }: Props) {
   const contactHref = isPl ? "/kontakt" : "/en/contact";
 
   return (
-    <div className="space-y-12 leading-relaxed text-gray-300">
+    <div className="space-y-12 leading-relaxed text-ink-soft">
       <div className="rounded-2xl border border-primary/30 bg-primary/[0.06] p-6 md:p-7">
         <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-primary">{isPl ? "Krótka odpowiedź" : "Short answer"}</p>
-        <p className="text-lg text-gray-100">
+        <p className="text-lg text-ink">
           {isPl
             ? "Aplikacje mobilne dla firm najczęściej zastępują papier, telefony i przepisywanie danych: w serwisie w terenie, u handlowców, w magazynie, przy kontrolach, w ewidencji czasu pracy, przy dostawach i w rezerwacjach dla klientów. Prosta aplikacja dla jednej roli kosztuje od 12 000 zł netto i powstaje w 3–5 tygodni; aplikacja z panelem, rolami, pracą offline i integracjami to zwykle 20 000–40 000 zł netto i 5–8 tygodni."
             : "Mobile apps for business most often replace paper, phone calls, and retyping data: in field service, sales, warehouses, inspections, time tracking, deliveries, and customer bookings. A simple single-role app costs from PLN 12,000 net and takes 3–5 weeks; an app with a panel, roles, offline mode, and integrations usually costs PLN 20,000–40,000 net and takes 5–8 weeks."}
@@ -193,26 +193,26 @@ export default function AplikacjeMobilnePrzykladyContent({ lang }: Props) {
       </div>
 
       <section>
-        <h2 className="mb-5 text-2xl font-semibold text-white md:text-3xl">{isPl ? "8 przykładów w skrócie" : "8 examples at a glance"}</h2>
+        <h2 className="mb-5 text-2xl font-semibold text-ink md:text-3xl">{isPl ? "8 przykładów w skrócie" : "8 examples at a glance"}</h2>
         {/* Telefon: karty zamiast tabeli przewijanej w bok. */}
         <ul className="space-y-3 sm:hidden">
           {examples.map((example, index) => (
             <li key={example.name}>
-              <a href={`#przyklad-${index + 1}`} className="block rounded-xl border border-white/[0.08] bg-white/[0.025] p-4 !no-underline">
-                <span className="font-semibold text-white">
+              <a href={`#przyklad-${index + 1}`} className="block rounded-xl border border-ink/[0.08] bg-ink/[0.025] p-4 !no-underline">
+                <span className="font-semibold text-ink">
                   {index + 1}. {example.name}
                 </span>
                 <span className="mt-1.5 flex flex-wrap items-baseline justify-between gap-x-3 text-[0.95rem]">
                   <span className="font-semibold text-primary">{example.price}</span>
-                  <span className="text-gray-400">{example.time}</span>
+                  <span className="text-muted">{example.time}</span>
                 </span>
               </a>
             </li>
           ))}
         </ul>
-        <div className="hidden overflow-x-auto rounded-2xl border border-white/[0.08] sm:block">
+        <div className="hidden overflow-x-auto rounded-2xl border border-ink/[0.08] sm:block">
           <table className="w-full min-w-[640px] text-left text-[0.95rem]">
-            <thead className="bg-white/[0.04] text-xs uppercase tracking-[0.1em] text-gray-400">
+            <thead className="bg-ink/[0.04] text-xs uppercase tracking-[0.1em] text-muted">
               <tr>
                 <th className="px-5 py-3 font-semibold">{isPl ? "Aplikacja" : "App"}</th>
                 <th className="px-5 py-3 font-semibold">{labels.price}</th>
@@ -221,23 +221,23 @@ export default function AplikacjeMobilnePrzykladyContent({ lang }: Props) {
             </thead>
             <tbody>
               {examples.map((example, index) => (
-                <tr key={example.name} className="border-t border-white/[0.06] align-top">
+                <tr key={example.name} className="border-t border-ink/[0.06] align-top">
                   <td className="px-5 py-3.5">
                     <a href={`#przyklad-${index + 1}`} className="!no-underline">
-                      <span className="font-semibold text-white">
+                      <span className="font-semibold text-ink">
                         {index + 1}. {example.name}
                       </span>
                     </a>
-                    <p className="mt-0.5 text-sm text-gray-400">{example.who}</p>
+                    <p className="mt-0.5 text-sm text-muted">{example.who}</p>
                   </td>
                   <td className="whitespace-nowrap px-5 py-3.5 font-semibold text-primary">{example.price}</td>
-                  <td className="whitespace-nowrap px-5 py-3.5 text-gray-300">{example.time}</td>
+                  <td className="whitespace-nowrap px-5 py-3.5 text-ink-soft">{example.time}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-        <p className="mt-4 text-sm text-gray-500">
+        <p className="mt-4 text-sm text-muted">
           {isPl
             ? "Ceny orientacyjne netto dla aplikacji na iOS i Android z panelem dla biura. Dokładną kwotę podaję po bezpłatnym prototypie."
             : "Indicative net prices for iOS and Android apps with an office panel. I give the exact amount after the free prototype."}
@@ -245,28 +245,28 @@ export default function AplikacjeMobilnePrzykladyContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="mb-6 text-2xl font-semibold text-white md:text-3xl">{isPl ? "Przykłady: problem, rozwiązanie, efekt" : "Examples: problem, solution, effect"}</h2>
+        <h2 className="mb-6 text-2xl font-semibold text-ink md:text-3xl">{isPl ? "Przykłady: problem, rozwiązanie, efekt" : "Examples: problem, solution, effect"}</h2>
         <div className="space-y-5">
           {examples.map((example, index) => (
-            <article key={example.name} id={`przyklad-${index + 1}`} className="scroll-mt-28 rounded-2xl border border-white/[0.08] bg-white/[0.025] p-5 md:p-6">
+            <article key={example.name} id={`przyklad-${index + 1}`} className="scroll-mt-28 rounded-2xl border border-ink/[0.08] bg-ink/[0.025] p-5 md:p-6">
               <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                <h3 className="font-display text-xl font-semibold text-white">
+                <h3 className="font-display text-xl font-semibold text-ink">
                   <span className="mr-2 text-primary">{String(index + 1).padStart(2, "0")}</span>
                   {example.name}
                 </h3>
-                <p className="text-sm text-gray-400">{example.who}</p>
+                <p className="text-sm text-muted">{example.who}</p>
               </div>
               <dl className="mt-4 grid gap-3 text-[0.95rem] sm:grid-cols-[9rem_1fr]">
-                <dt className="font-semibold text-gray-400">{labels.problem}</dt>
+                <dt className="font-semibold text-muted">{labels.problem}</dt>
                 <dd>{example.problem}</dd>
-                <dt className="font-semibold text-gray-400">{labels.does}</dt>
+                <dt className="font-semibold text-muted">{labels.does}</dt>
                 <dd>{example.does}</dd>
-                <dt className="font-semibold text-gray-400">{labels.effect}</dt>
-                <dd className="text-gray-100">{example.effect}</dd>
+                <dt className="font-semibold text-muted">{labels.effect}</dt>
+                <dd className="text-ink">{example.effect}</dd>
               </dl>
-              <div className="mt-4 flex flex-wrap gap-2 border-t border-white/[0.06] pt-4 text-sm">
+              <div className="mt-4 flex flex-wrap gap-2 border-t border-ink/[0.06] pt-4 text-sm">
                 <span className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 font-semibold text-primary">{example.price}</span>
-                <span className="rounded-full border border-white/10 px-3 py-1 text-gray-300">{example.time}</span>
+                <span className="rounded-full border border-ink/10 px-3 py-1 text-ink-soft">{example.time}</span>
               </div>
             </article>
           ))}
@@ -274,7 +274,7 @@ export default function AplikacjeMobilnePrzykladyContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="mb-4 text-2xl font-semibold text-white md:text-3xl">{isPl ? "Jak wybrać pierwszą aplikację" : "How to choose your first app"}</h2>
+        <h2 className="mb-4 text-2xl font-semibold text-ink md:text-3xl">{isPl ? "Jak wybrać pierwszą aplikację" : "How to choose your first app"}</h2>
         <p className="mb-4">
           {isPl
             ? "Najlepiej zwraca się aplikacja dla procesu, który dzieje się codziennie i dziś wymaga przepisywania. Zanim zaczniesz, odpowiedz na trzy pytania:"
@@ -304,7 +304,7 @@ export default function AplikacjeMobilnePrzykladyContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="mb-4 text-2xl font-semibold text-white md:text-3xl">{isPl ? "Aplikacja w sklepie czy aplikacja webowa (PWA)?" : "App store app or web app (PWA)?"}</h2>
+        <h2 className="mb-4 text-2xl font-semibold text-ink md:text-3xl">{isPl ? "Aplikacja w sklepie czy aplikacja webowa (PWA)?" : "App store app or web app (PWA)?"}</h2>
         <p>
           {isPl
             ? "Aplikacja w App Store i Google Play daje pełną pracę offline, skaner, GPS i pewne powiadomienia. Aplikacja webowa instalowana na ekranie telefonu (PWA) jest tańsza i szybsza do wdrożenia — wystarcza przy rezerwacjach, grafikach, zgłoszeniach i panelach dla klientów. Szczegółowe porównanie technologii i kosztów opisałem w artykule "
@@ -314,7 +314,7 @@ export default function AplikacjeMobilnePrzykladyContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="mb-4 text-2xl font-semibold text-white md:text-3xl">{isPl ? "Koszty po wdrożeniu" : "Costs after launch"}</h2>
+        <h2 className="mb-4 text-2xl font-semibold text-ink md:text-3xl">{isPl ? "Koszty po wdrożeniu" : "Costs after launch"}</h2>
         <ul className="ml-2 list-inside list-disc space-y-2">
           {(isPl
             ? [
@@ -334,7 +334,7 @@ export default function AplikacjeMobilnePrzykladyContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="mb-4 text-2xl font-semibold text-white md:text-3xl">{isPl ? "Kiedy aplikacja mobilna się nie opłaca" : "When a mobile app doesn't pay off"}</h2>
+        <h2 className="mb-4 text-2xl font-semibold text-ink md:text-3xl">{isPl ? "Kiedy aplikacja mobilna się nie opłaca" : "When a mobile app doesn't pay off"}</h2>
         <p>
           {isPl
             ? "Gdy proces dzieje się rzadko, korzysta z niego kilka osób przy biurku albo wystarczy dobry formularz i automatyczny e-mail. Wtedy taniej i szybciej będzie zautomatyzować sam proces albo zbudować prosty panel w przeglądarce."
@@ -343,17 +343,17 @@ export default function AplikacjeMobilnePrzykladyContent({ lang }: Props) {
       </section>
 
       <section className="card-accent">
-        <h2 className="mb-3 text-2xl font-semibold text-white">{isPl ? "Sprawdź, jak wyglądałaby u Ciebie" : "See what it would look like for you"}</h2>
-        <p className="mb-5 text-gray-300">
+        <h2 className="mb-3 text-2xl font-semibold text-ink">{isPl ? "Sprawdź, jak wyglądałaby u Ciebie" : "See what it would look like for you"}</h2>
+        <p className="mb-5 text-ink-soft">
           {isPl
             ? "Opisz, kto ma korzystać z aplikacji i co dziś robi ręcznie. W 2–5 dni pokażę klikalny prototyp na Twoim procesie i podam dokładną cenę — za darmo i bez zobowiązań."
             : "Describe who will use the app and what they do manually today. Within 2–5 days I'll show a clickable prototype of your process and give an exact price — free and with no commitment."}
         </p>
         <div className="flex flex-wrap gap-3">
-          <Link href={contactHref} className="btn-primary !text-[#03140b] !no-underline">
+          <Link href={contactHref} className="btn-primary !text-paper !no-underline">
             {isPl ? "Odbierz bezpłatny prototyp" : "Get a free prototype"}
           </Link>
-          <Link href={serviceHref} className="btn-secondary !text-white !no-underline">
+          <Link href={serviceHref} className="btn-secondary !text-ink !no-underline">
             {isPl ? "Aplikacje mobilne dla firm — usługa" : "Mobile apps for companies — service"}
           </Link>
         </div>

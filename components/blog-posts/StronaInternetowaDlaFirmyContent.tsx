@@ -8,7 +8,7 @@ export default function StronaInternetowaDlaFirmyContent({ lang }: Props) {
   const isPl = lang === "pl";
 
   return (
-    <div className="space-y-10 text-gray-300 leading-relaxed">
+    <div className="space-y-10 text-ink-soft leading-relaxed">
       <p className="text-lg">
         {isPl
           ? "Strona internetowa to dziś fundament obecności każdej firmy – niezależnie od branży. Niezależnie od tego, czy prowadzisz mały lokal, sklep online, czy firmę usługową – klienci najpierw szukają Cię w sieci. W tym przewodniku wyjaśniamy, kiedy strona internetowa dla firmy jest naprawdę potrzebna, jak wybrać wykonawcę oraz na co zwrócić uwagę przed podpisaniem umowy."
@@ -16,7 +16,7 @@ export default function StronaInternetowaDlaFirmyContent({ lang }: Props) {
       </p>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Kiedy firma potrzebuje strony internetowej?" : "When Does Your Business Need a Website?"}
         </h2>
         <p>
@@ -27,7 +27,7 @@ export default function StronaInternetowaDlaFirmyContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Jak wybrać wykonawcę strony internetowej?" : "How to Choose a Website Developer?"}
         </h2>
         <p className="mb-4">
@@ -39,55 +39,55 @@ export default function StronaInternetowaDlaFirmyContent({ lang }: Props) {
           <li>
             {isPl ? (
               <>
-                <strong className="text-white">Portfolio i realizacje</strong> – sprawdź, czy wykonawca ma doświadczenie w Twojej branży lub podobnych projektach.
+                <strong className="text-ink">Portfolio i realizacje</strong> – sprawdź, czy wykonawca ma doświadczenie w Twojej branży lub podobnych projektach.
               </>
             ) : (
               <>
-                <strong className="text-white">Portfolio and projects</strong> – check if the developer has experience in your industry or similar projects.
+                <strong className="text-ink">Portfolio and projects</strong> – check if the developer has experience in your industry or similar projects.
               </>
             )}
           </li>
           <li>
             {isPl ? (
               <>
-                <strong className="text-white">Technologie</strong> – nowoczesne strony (Next.js, React) ładują się szybko i są lepiej indeksowane przez Google niż przestarzałe rozwiązania.
+                <strong className="text-ink">Technologie</strong> – nowoczesne strony (Next.js, React) ładują się szybko i są lepiej indeksowane przez Google niż przestarzałe rozwiązania.
               </>
             ) : (
               <>
-                <strong className="text-white">Technologies</strong> – modern websites (Next.js, React) load quickly and are better indexed by Google than outdated solutions.
+                <strong className="text-ink">Technologies</strong> – modern websites (Next.js, React) load quickly and are better indexed by Google than outdated solutions.
               </>
             )}
           </li>
           <li>
             {isPl ? (
               <>
-                <strong className="text-white">SEO od samego początku</strong> – strona powinna być zoptymalizowana pod wyszukiwarki (semantyczna struktura, meta tagi, szybkość).
+                <strong className="text-ink">SEO od samego początku</strong> – strona powinna być zoptymalizowana pod wyszukiwarki (semantyczna struktura, meta tagi, szybkość).
               </>
             ) : (
               <>
-                <strong className="text-white">SEO from the start</strong> – the site should be optimized for search engines (semantic structure, meta tags, speed).
+                <strong className="text-ink">SEO from the start</strong> – the site should be optimized for search engines (semantic structure, meta tags, speed).
               </>
             )}
           </li>
           <li>
             {isPl ? (
               <>
-                <strong className="text-white">Responsywność</strong> – strona musi dobrze wyglądać na smartfonie, tablecie i komputerze.
+                <strong className="text-ink">Responsywność</strong> – strona musi dobrze wyglądać na smartfonie, tablecie i komputerze.
               </>
             ) : (
               <>
-                <strong className="text-white">Responsiveness</strong> – the site must look good on smartphone, tablet, and desktop.
+                <strong className="text-ink">Responsiveness</strong> – the site must look good on smartphone, tablet, and desktop.
               </>
             )}
           </li>
           <li>
             {isPl ? (
               <>
-                <strong className="text-white">Wsparcie i utrzymanie</strong> – upewnij się, że po wdrożeniu możesz liczyć na aktualizacje i pomoc techniczną.
+                <strong className="text-ink">Wsparcie i utrzymanie</strong> – upewnij się, że po wdrożeniu możesz liczyć na aktualizacje i pomoc techniczną.
               </>
             ) : (
               <>
-                <strong className="text-white">Support and maintenance</strong> – make sure you can count on updates and technical support after launch.
+                <strong className="text-ink">Support and maintenance</strong> – make sure you can count on updates and technical support after launch.
               </>
             )}
           </li>
@@ -95,7 +95,7 @@ export default function StronaInternetowaDlaFirmyContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Ile kosztuje strona internetowa?" : "How Much Does a Business Website Cost?"}
         </h2>
         <p>
@@ -106,12 +106,12 @@ export default function StronaInternetowaDlaFirmyContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Często zadawane pytania" : "Frequently Asked Questions"}
         </h2>
         <div className="space-y-6">
           <div>
-            <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-lg font-semibold text-ink mb-2">
               {isPl ? "Czy mała firma potrzebuje strony internetowej?" : "Does a small business need a website?"}
             </h3>
             <p>
@@ -121,7 +121,7 @@ export default function StronaInternetowaDlaFirmyContent({ lang }: Props) {
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-lg font-semibold text-ink mb-2">
               {isPl ? "Jak długo trwa stworzenie strony internetowej?" : "How long does it take to create a website?"}
             </h3>
             <p>
@@ -131,7 +131,7 @@ export default function StronaInternetowaDlaFirmyContent({ lang }: Props) {
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-lg font-semibold text-ink mb-2">
               {isPl ? "Czym różni się dobra strona od słabej?" : "What makes a good website different from a bad one?"}
             </h3>
             <p>
@@ -144,7 +144,7 @@ export default function StronaInternetowaDlaFirmyContent({ lang }: Props) {
       </section>
 
       <section className="card-accent">
-        <h2 className="text-xl font-bold text-white mb-4">
+        <h2 className="text-xl font-bold text-ink mb-4">
           {isPl ? "Potrzebujesz strony internetowej dla swojej firmy?" : "Need a Website for Your Business?"}
         </h2>
         <p className="mb-4">
@@ -155,7 +155,7 @@ export default function StronaInternetowaDlaFirmyContent({ lang }: Props) {
         <div className="flex flex-wrap gap-4">
           <Link
             href={isPl ? "/uslugi/strony-internetowe" : "/en/services/web-development"}
-            className="btn-primary !text-[#03140b] !no-underline"
+            className="btn-primary !text-paper !no-underline"
           >
             {isPl ? "Zobacz ofertę stron internetowych" : "View web development offer"}
             <span aria-hidden="true">→</span>

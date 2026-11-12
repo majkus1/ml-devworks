@@ -12,7 +12,7 @@ interface SendToOwnerFormProps {
 }
 
 const inputClass =
-  "w-full px-4 py-3.5 text-base bg-background border border-primary/25 rounded-xl placeholder:text-gray-500 focus:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 transition-colors";
+  "w-full px-4 py-3.5 text-base bg-background border border-primary/25 rounded-xl placeholder:text-muted focus:border-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 transition-colors";
 
 export default function SendToOwnerForm({ onClose }: SendToOwnerFormProps) {
   const { lang, messages, markSent, sentEmail } = useAiAssistant();
@@ -97,7 +97,7 @@ export default function SendToOwnerForm({ onClose }: SendToOwnerFormProps) {
       initial={reduceMotion ? false : { opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-      className="absolute inset-0 z-10 bg-[#0a0e0c]/95 backdrop-blur-sm overflow-y-auto"
+      className="absolute inset-0 z-10 bg-paper overflow-y-auto"
       role="dialog"
       aria-modal="true"
       aria-labelledby="ai-send-title"
@@ -110,14 +110,14 @@ export default function SendToOwnerForm({ onClose }: SendToOwnerFormProps) {
                 <path d="M20 6 9 17l-5-5" />
               </svg>
             </div>
-            <h3 id="ai-send-title" className="text-2xl font-bold text-white mb-3">
+            <h3 id="ai-send-title" className="text-2xl font-bold text-ink mb-3">
               {t.form.successTitle}
             </h3>
-            <p className="text-gray-300 leading-relaxed mb-6">{t.form.successText(done)}</p>
+            <p className="text-ink-soft leading-relaxed mb-6">{t.form.successText(done)}</p>
             <button
               type="button"
               onClick={onClose}
-              className="px-6 py-3 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors"
+              className="px-6 py-3 bg-primary text-paper font-semibold rounded-lg hover:bg-primary-dark transition-colors"
             >
               {t.form.cancel}
             </button>
@@ -125,10 +125,10 @@ export default function SendToOwnerForm({ onClose }: SendToOwnerFormProps) {
         ) : (
           <form onSubmit={handleSubmit} noValidate className="space-y-4">
             <div>
-              <h3 id="ai-send-title" className="text-xl md:text-2xl font-bold text-white mb-2">
+              <h3 id="ai-send-title" className="text-xl md:text-2xl font-bold text-ink mb-2">
                 {t.form.title}
               </h3>
-              <p className="text-sm text-gray-400 leading-relaxed">{t.form.subtitle}</p>
+              <p className="text-sm text-muted leading-relaxed">{t.form.subtitle}</p>
             </div>
 
             <div>
@@ -212,7 +212,7 @@ export default function SendToOwnerForm({ onClose }: SendToOwnerFormProps) {
               />
             </div>
 
-            <label className="flex items-start gap-3 text-sm text-gray-300 cursor-pointer">
+            <label className="flex items-start gap-3 text-sm text-ink-soft cursor-pointer">
               <input
                 type="checkbox"
                 name="consent"
@@ -236,20 +236,20 @@ export default function SendToOwnerForm({ onClose }: SendToOwnerFormProps) {
               <button
                 type="submit"
                 disabled={submitting}
-                className="flex-1 px-6 py-3 bg-primary text-background font-semibold rounded-lg hover:bg-primary-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex-1 px-6 py-3 bg-primary text-paper font-semibold rounded-lg hover:bg-primary-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {submitting ? t.form.submitting : t.form.submit}
               </button>
               <button
                 type="button"
                 onClick={onClose}
-                className="px-6 py-3 bg-background border border-primary/30 rounded-lg hover:border-primary transition-colors text-white"
+                className="px-6 py-3 bg-background border border-primary/30 rounded-lg hover:border-primary transition-colors text-ink"
               >
                 {t.form.cancel}
               </button>
             </div>
 
-            <p className="text-xs text-gray-500 leading-relaxed">{t.form.privacyNote}</p>
+            <p className="text-xs text-muted leading-relaxed">{t.form.privacyNote}</p>
           </form>
         )}
       </div>

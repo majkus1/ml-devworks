@@ -174,34 +174,25 @@ export default function Services({ lang = "pl", showAllLink = true, title }: Ser
         }
       />
 
-      <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" role="list">
-        {list.map((service) => {
-          const Icon = service.icon;
-          return (
-            <li key={service.href} className={service.featured ? "sm:col-span-2" : ""}>
-              <Link
-                href={service.href}
-                className={`group flex h-full flex-col rounded-2xl border p-6 transition duration-200 hover:-translate-y-0.5 md:p-7 ${
-                  service.featured
-                    ? "border-primary/35 bg-gradient-to-br from-primary/[0.12] via-white/[0.02] to-accent/[0.06] hover:border-primary/60"
-                    : "border-white/[0.08] bg-white/[0.025] hover:border-primary/35 hover:bg-white/[0.04]"
-                }`}
-              >
-                <span className="icon-tile">
-                  <Icon className="h-5 w-5" />
-                </span>
-                <h3 className={`mt-5 font-sans font-semibold text-white ${service.featured ? "text-2xl" : "text-lg"}`}>{service.title}</h3>
-                <p className="mt-2 text-[0.95rem] leading-relaxed text-gray-400">{service.description}</p>
-                <span className="mt-auto flex items-center justify-between pt-6 text-sm">
-                  <span className="font-semibold text-white">
-                    {service.price} <span className="font-normal text-gray-500">{isPl ? "netto" : "net"}</span>
-                  </span>
-                  <ArrowRightIcon size={18} className="text-gray-500 transition-transform group-hover:translate-x-1 group-hover:text-primary" />
-                </span>
-              </Link>
-            </li>
-          );
-        })}
+      {/* Lista jak cennik w tabeli: nazwa, co daje, cena — bez siatki identycznych kart. */}
+      <ul className="border-b border-ink/15" role="list">
+        {list.map((service) => (
+          <li key={service.href} className="border-t border-ink/15">
+            <Link
+              href={service.href}
+              className="group grid gap-x-8 gap-y-2 py-6 transition-colors hover:bg-ink/[0.02] md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)_10rem_1.5rem] md:items-baseline md:py-7"
+            >
+              <h3 className="font-display text-xl font-semibold tracking-tight text-ink transition-colors group-hover:text-primary md:text-[1.35rem]">
+                {service.title}
+              </h3>
+              <p className="text-[0.98rem] leading-relaxed text-muted">{service.description}</p>
+              <p className="font-display text-base font-semibold text-ink md:text-right">
+                {service.price} <span className="font-sans text-sm font-normal text-muted">{isPl ? "netto" : "net"}</span>
+              </p>
+              <ArrowRightIcon size={18} className="hidden text-faint transition-transform group-hover:translate-x-1 group-hover:text-primary md:block" />
+            </Link>
+          </li>
+        ))}
       </ul>
     </Section>
   );

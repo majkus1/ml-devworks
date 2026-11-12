@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { IBM_Plex_Mono, IBM_Plex_Sans, Schibsted_Grotesk } from "next/font/google";
 import Script from "next/script";
 import CookieBanner from "@/components/CookieBanner";
 import HashNavigationHandler from "@/components/HashNavigationHandler";
@@ -10,9 +10,12 @@ import { headers } from "next/headers";
 import { MOBILE_MENU_BOOT_SCRIPT } from "@/lib/mobile-menu";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin", "latin-ext"], variable: "--font-sans", display: "swap" });
-// Nagłówki: geometryczny krój z charakterem „tech”, pasujący do logo.
-const display = Space_Grotesk({ subsets: ["latin", "latin-ext"], variable: "--font-display", display: "swap", weight: ["500", "600", "700"] });
+// Tekst: IBM Plex Sans — czytelny, rzeczowy, z charakterem „inżynierskim”, pełne polskie znaki.
+const sans = IBM_Plex_Sans({ subsets: ["latin", "latin-ext"], variable: "--font-sans", display: "swap", weight: ["400", "500", "600"] });
+// Nagłówki: Schibsted Grotesk — zwarty krój prasowy, mniej oklepany niż Inter czy Space Grotesk.
+const display = Schibsted_Grotesk({ subsets: ["latin", "latin-ext"], variable: "--font-display", display: "swap", weight: ["500", "600", "700", "800"] });
+// Liczby, ceny i drobne etykiety.
+const mono = IBM_Plex_Mono({ subsets: ["latin", "latin-ext"], variable: "--font-mono", display: "swap", weight: ["400", "500"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ml-devworks.com"),
@@ -95,7 +98,7 @@ export default async function RootLayout({
   const aiAssistantEnabled = isAiAssistantEnabled();
   
   return (
-    <html lang={lang} className={`${inter.variable} ${display.variable} scroll-smooth overflow-x-hidden`} suppressHydrationWarning>
+    <html lang={lang} className={`${sans.variable} ${display.variable} ${mono.variable} scroll-smooth overflow-x-hidden`} suppressHydrationWarning>
       <body className="font-sans overflow-x-hidden">
         {/* Zwykły skrypt w HTML (nie next/script): burger działa, zanim wczyta się reszta skryptów strony. */}
         <script dangerouslySetInnerHTML={{ __html: MOBILE_MENU_BOOT_SCRIPT }} />

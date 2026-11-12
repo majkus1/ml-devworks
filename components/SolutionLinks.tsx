@@ -27,8 +27,8 @@ export default function SolutionLinks({ lang }: { lang: SiteLang }) {
           return (
             <Link key={solution.id} href={solution.href[lang]} className="card-interactive group flex flex-col">
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary">{content.eyebrow}</p>
-              <h3 className="mt-3 font-sans text-2xl font-semibold text-white">{content.breadcrumb}</h3>
-              <p className="mt-3 flex-1 leading-relaxed text-gray-400">{content.lead}</p>
+              <h3 className="mt-3 font-sans text-2xl font-semibold text-ink">{content.breadcrumb}</h3>
+              <p className="mt-3 flex-1 leading-relaxed text-muted">{content.lead}</p>
               <span className="btn-link mt-6">
                 {isEnglish ? "See how it works" : "Zobacz, jak to działa"}
                 <ArrowRightIcon size={16} className="transition-transform group-hover:translate-x-1" />

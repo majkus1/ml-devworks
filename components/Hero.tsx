@@ -32,19 +32,14 @@ export default function Hero({ lang = "pl" }: HeroProps) {
 
   return (
     <header className="relative overflow-hidden pb-16 pt-28 md:pb-24 md:pt-36" role="banner">
-      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-        <div className="bg-grid absolute inset-0" />
-        <div className="absolute -top-48 left-[10%] h-[36rem] w-[50rem] rounded-full bg-primary/[0.10] blur-[130px]" />
-        <div className="absolute right-[-10rem] top-32 h-[28rem] w-[28rem] rounded-full bg-accent/[0.08] blur-[120px]" />
-      </div>
 
       <div className="container-site relative grid items-center gap-14 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-16">
         <div>
-          <h1 className="font-display text-[2.5rem] font-semibold leading-[1.04] tracking-tight text-white text-balance sm:text-6xl lg:text-[3.7rem] xl:text-[4rem]">
+          <h1 className="font-display text-[2.5rem] font-semibold leading-[1.04] tracking-tight text-ink text-balance sm:text-6xl lg:text-[3.7rem] xl:text-[4rem]">
             {t.titleStart}
-            <span className="text-gradient">{t.titleHighlight}</span>
+            <span className="text-primary">{t.titleHighlight}</span>
           </h1>
-          <p className="mt-7 max-w-xl text-lg leading-relaxed text-gray-300 text-pretty md:text-xl">{t.lead}</p>
+          <p className="mt-7 max-w-xl text-lg leading-relaxed text-ink-soft text-pretty md:text-xl">{t.lead}</p>
 
           <nav aria-label={isPl ? "Główne wezwania do działania" : "Primary calls to action"} className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a href="#contact" className="btn-primary !px-7 !py-4">
@@ -59,14 +54,14 @@ export default function Hero({ lang = "pl" }: HeroProps) {
 
           <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2.5">
             {t.points.map((point) => (
-              <li key={point} className="flex items-center gap-2 text-sm text-gray-300">
+              <li key={point} className="flex items-center gap-2 text-sm text-ink-soft">
                 <CheckIcon size={16} className="text-primary" />
                 {point}
               </li>
             ))}
           </ul>
 
-          <div className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-3 border-t border-white/[0.07] pt-6 text-sm text-gray-400">
+          <div className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-3 border-t border-ink/[0.07] pt-6 text-sm text-muted">
             <span className="flex items-center gap-2">
               <span className="flex text-amber-400">
                 {[0, 1, 2, 3, 4].map((index) => (
@@ -75,7 +70,7 @@ export default function Hero({ lang = "pl" }: HeroProps) {
               </span>
               {t.rating}
             </span>
-            <span className="hidden h-4 w-px bg-white/10 sm:block" aria-hidden="true" />
+            <span className="hidden h-4 w-px bg-ink/10 sm:block" aria-hidden="true" />
             <span>{t.person}</span>
           </div>
         </div>

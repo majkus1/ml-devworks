@@ -8,7 +8,7 @@ export default function SocialMediaVsStronaFirmowaContent({ lang }: Props) {
   const isPl = lang === "pl";
 
   return (
-    <div className="space-y-10 text-gray-300 leading-relaxed">
+    <div className="space-y-10 text-ink-soft leading-relaxed">
       <p className="text-lg">
         {isPl
           ? "Wiele firm opiera marketing wyłącznie na Instagramie, Facebooku lub TikToku, bo to kanały \"za darmo\". Problem pojawia się wtedy, gdy algorytm obcina zasięgi, konto zostaje zablokowane albo klient chce sprawdzić ofertę i nie znajduje profesjonalnej strony. Social media są ważne, ale bez własnej strony internetowej budujesz biznes na cudzym gruncie."
@@ -16,7 +16,7 @@ export default function SocialMediaVsStronaFirmowaContent({ lang }: Props) {
       </p>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Social media vs strona internetowa - co daje lepszy efekt?" : "Social media vs website - what works better?"}
         </h2>
         <p className="mb-4">
@@ -44,7 +44,7 @@ export default function SocialMediaVsStronaFirmowaContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Dlaczego sama obecność na Instagramie/TikToku to ryzyko?" : "Why relying only on Instagram/TikTok is risky"}
         </h2>
         <ul className="list-disc list-inside space-y-2 ml-2">
@@ -72,7 +72,7 @@ export default function SocialMediaVsStronaFirmowaContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Co daje dobra strona firmowa oprócz \"bycia wizytówką\"?" : "What does a good business website provide beyond a digital brochure?"}
         </h2>
         <ul className="list-disc list-inside space-y-2 ml-2">
@@ -115,7 +115,7 @@ export default function SocialMediaVsStronaFirmowaContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Ile kosztuje brak strony internetowej?" : "What is the hidden cost of not having a website?"}
         </h2>
         <p>
@@ -126,10 +126,10 @@ export default function SocialMediaVsStronaFirmowaContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">{isPl ? "FAQ" : "FAQ"}</h2>
+        <h2 className="text-2xl font-bold text-ink mb-4">{isPl ? "FAQ" : "FAQ"}</h2>
         <div className="space-y-6">
           <div>
-            <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-lg font-semibold text-ink mb-2">
               {isPl ? "Czy social media bez strony internetowej mogą wystarczyć?" : "Can social media alone be enough without a website?"}
             </h3>
             <p>
@@ -139,7 +139,7 @@ export default function SocialMediaVsStronaFirmowaContent({ lang }: Props) {
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-lg font-semibold text-ink mb-2">
               {isPl ? "Czy mała firma też potrzebuje strony www?" : "Does a small business also need a website?"}
             </h3>
             <p>
@@ -149,7 +149,7 @@ export default function SocialMediaVsStronaFirmowaContent({ lang }: Props) {
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-lg font-semibold text-ink mb-2">
               {isPl ? "Co najpierw: social media czy strona?" : "What should come first: social media or website?"}
             </h3>
             <p>
@@ -162,7 +162,7 @@ export default function SocialMediaVsStronaFirmowaContent({ lang }: Props) {
       </section>
 
       <section className="card-accent">
-        <h2 className="text-xl font-bold text-white mb-4">
+        <h2 className="text-xl font-bold text-ink mb-4">
           {isPl ? "Chcesz połączyć social media z mocną stroną firmową?" : "Want to combine social media with a high-converting website?"}
         </h2>
         <p className="mb-4">
@@ -173,7 +173,7 @@ export default function SocialMediaVsStronaFirmowaContent({ lang }: Props) {
         <div className="flex flex-wrap gap-4">
           <Link
             href={isPl ? "/uslugi/strony-internetowe" : "/en/services/web-development"}
-            className="btn-primary !text-[#03140b] !no-underline"
+            className="btn-primary !text-paper !no-underline"
           >
             {isPl ? "Zobacz ofertę stron internetowych" : "View web development services"}
             <span aria-hidden="true">→</span>

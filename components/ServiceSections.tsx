@@ -50,12 +50,12 @@ export function FeatureGrid({
           const content = (
             <>
               {item.tag && <span className="mb-4 inline-flex rounded-full border border-primary/30 bg-primary/10 px-2.5 py-0.5 text-xs font-semibold text-primary">{item.tag}</span>}
-              <h3 className="font-sans text-xl font-semibold text-white">{item.title}</h3>
-              <p className="mt-3 text-[0.97rem] leading-relaxed text-gray-400">{item.text}</p>
+              <h3 className="font-sans text-xl font-semibold text-ink">{item.title}</h3>
+              <p className="mt-3 text-[0.97rem] leading-relaxed text-muted">{item.text}</p>
               {item.points && item.points.length > 0 && (
                 <ul className="mt-5 space-y-2.5">
                   {item.points.map((point) => (
-                    <li key={point} className="flex items-start gap-2.5 text-sm text-gray-300">
+                    <li key={point} className="flex items-start gap-2.5 text-sm text-ink-soft">
                       <CheckIcon size={16} className="mt-0.5 shrink-0 text-primary" />
                       {point}
                     </li>
@@ -71,7 +71,7 @@ export function FeatureGrid({
             </>
           );
           const className = item.highlight
-            ? "rounded-2xl border border-primary/35 bg-gradient-to-br from-primary/[0.10] via-white/[0.02] to-accent/[0.05] p-6 md:p-7"
+            ? "rounded-2xl border border-primary/35 bg-primary/[0.05] p-6 md:p-7"
             : "card";
           return item.href ? (
             <Link key={item.title} href={item.href} className={`${className} block transition hover:-translate-y-0.5 hover:border-primary/40`}>
@@ -104,22 +104,22 @@ export function ServiceOverview({ serviceId, lang }: { serviceId: ServiceDetailI
 
       <div className="grid gap-5 md:grid-cols-2">
         <div className="card">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">{isPl ? "Dziś w wielu firmach" : "Today in many companies"}</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">{isPl ? "Dziś w wielu firmach" : "Today in many companies"}</p>
           <ul className="mt-5 space-y-4">
             {detail.pains.map((pain) => (
-              <li key={pain} className="flex items-start gap-3 text-[0.97rem] leading-relaxed text-gray-300">
+              <li key={pain} className="flex items-start gap-3 text-[0.97rem] leading-relaxed text-ink-soft">
                 <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gray-500" aria-hidden="true" />
                 {pain}
               </li>
             ))}
           </ul>
         </div>
-        <div className="rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/[0.09] to-white/[0.02] p-6 md:p-7">
+        <div className="rounded-2xl border border-primary/30 bg-primary/[0.05] p-6 md:p-7">
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary">{isPl ? "Co dostajesz" : "What you get"}</p>
           <ul className="mt-5 space-y-4">
             {detail.deliverables.map((item) => (
-              <li key={item} className="flex items-start gap-3 text-[0.97rem] leading-relaxed text-gray-100">
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary text-[#03140b]">
+              <li key={item} className="flex items-start gap-3 text-[0.97rem] leading-relaxed text-ink">
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary text-paper">
                   <CheckIcon size={12} strokeWidth={3} />
                 </span>
                 {item}
@@ -129,25 +129,25 @@ export function ServiceOverview({ serviceId, lang }: { serviceId: ServiceDetailI
         </div>
       </div>
 
-      <dl className="mt-5 grid gap-px overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.06] md:grid-cols-3">
+      <dl className="mt-5 grid gap-px overflow-hidden rounded-2xl border border-ink/[0.08] bg-ink/[0.06] md:grid-cols-3">
         <div className="bg-background px-6 py-5">
-          <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">{isPl ? "Dla kogo" : "For whom"}</dt>
-          <dd className="mt-2 text-[0.95rem] leading-relaxed text-gray-200">{detail.industries.join(", ")}</dd>
+          <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">{isPl ? "Dla kogo" : "For whom"}</dt>
+          <dd className="mt-2 text-[0.95rem] leading-relaxed text-ink">{detail.industries.join(", ")}</dd>
         </div>
         <div className="bg-background px-6 py-5">
-          <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">{isPl ? "Budżet" : "Budget"}</dt>
-          <dd className="mt-2 text-[0.95rem] leading-relaxed text-gray-200">{detail.price}</dd>
+          <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">{isPl ? "Budżet" : "Budget"}</dt>
+          <dd className="mt-2 text-[0.95rem] leading-relaxed text-ink">{detail.price}</dd>
         </div>
         <div className="bg-background px-6 py-5">
-          <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">{isPl ? "Czas realizacji" : "Timeline"}</dt>
-          <dd className="mt-2 text-[0.95rem] leading-relaxed text-gray-200">{detail.timeline}</dd>
+          <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">{isPl ? "Czas realizacji" : "Timeline"}</dt>
+          <dd className="mt-2 text-[0.95rem] leading-relaxed text-ink">{detail.timeline}</dd>
         </div>
       </dl>
 
-      <p className="mt-5 flex items-start gap-3 rounded-2xl border border-white/[0.08] bg-white/[0.02] px-6 py-5 text-[0.95rem] leading-relaxed text-gray-300">
+      <p className="mt-5 flex items-start gap-3 rounded-2xl border border-ink/[0.08] bg-ink/[0.02] px-6 py-5 text-[0.95rem] leading-relaxed text-ink-soft">
         <CheckIcon size={18} className="mt-0.5 shrink-0 text-primary" />
         <span>
-          <span className="font-semibold text-white">{isPl ? "Efekt dla firmy: " : "What it means for you: "}</span>
+          <span className="font-semibold text-ink">{isPl ? "Efekt dla firmy: " : "What it means for you: "}</span>
           {detail.proof}
         </span>
       </p>
@@ -172,11 +172,11 @@ export function ServiceFaq({ serviceId, lang }: { serviceId: ServiceDetailId; la
           />
           {detail.relatedPosts.length > 0 && (
             <div>
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">{isPl ? "Warto przeczytać" : "Worth reading"}</p>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-muted">{isPl ? "Warto przeczytać" : "Worth reading"}</p>
               <ul className="space-y-2">
                 {detail.relatedPosts.map((post) => (
                   <li key={post.href}>
-                    <Link href={post.href} className="group flex items-start gap-3 rounded-xl border border-white/[0.08] bg-white/[0.02] px-4 py-3 text-sm text-gray-300 transition-colors hover:border-primary/35 hover:text-white">
+                    <Link href={post.href} className="group flex items-start gap-3 rounded-xl border border-ink/[0.08] bg-ink/[0.02] px-4 py-3 text-sm text-ink-soft transition-colors hover:border-primary/35 hover:text-ink">
                       <DocIcon size={17} className="mt-0.5 shrink-0 text-primary" />
                       {post.title}
                     </Link>
@@ -213,12 +213,12 @@ export function BeforeAfter({
       <div className="grid gap-3">
         {rows.map(([area, before, after]) => (
           <article key={area} className="card grid items-start gap-3 !p-5 md:grid-cols-[1fr_1.4fr_1.4fr] md:gap-6 md:!p-6">
-            <h3 className="font-sans text-lg font-semibold text-white">{area}</h3>
-            <p className="text-[0.95rem] text-gray-500">
-              <span className="mb-1 block text-xs font-semibold uppercase tracking-[0.12em] text-gray-600">{isPl ? "Przed" : "Before"}</span>
+            <h3 className="font-sans text-lg font-semibold text-ink">{area}</h3>
+            <p className="text-[0.95rem] text-muted">
+              <span className="mb-1 block text-xs font-semibold uppercase tracking-[0.12em] text-faint">{isPl ? "Przed" : "Before"}</span>
               {before}
             </p>
-            <p className="text-[0.95rem] text-gray-200">
+            <p className="text-[0.95rem] text-ink">
               <span className="mb-1 block text-xs font-semibold uppercase tracking-[0.12em] text-primary">{isPl ? "Po wdrożeniu" : "After"}</span>
               {after}
             </p>
@@ -251,7 +251,7 @@ export default function ServiceLanding({ serviceId, lang, children }: { serviceI
         title={
           <>
             {page.title}
-            <span className="text-gradient">{page.highlight}</span>
+            <span className="text-primary">{page.highlight}</span>
           </>
         }
         lead={page.lead}

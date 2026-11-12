@@ -14,7 +14,7 @@ export default function BlogCardList({ posts, lang, featureFirst = false }: Blog
   if (posts.length === 0) {
     return (
       <div className="px-4 py-16 text-center">
-        <p className="text-xl text-gray-400">{lang === "pl" ? "Wkrótce pojawią się tu nowe wpisy." : "New posts coming soon."}</p>
+        <p className="text-xl text-muted">{lang === "pl" ? "Wkrótce pojawią się tu nowe wpisy." : "New posts coming soon."}</p>
       </div>
     );
   }
@@ -38,8 +38,8 @@ function BlogCard({ post, lang, featured }: { post: BlogPost; lang: "pl" | "en";
         href={href}
         className={`group flex h-full flex-col overflow-hidden rounded-2xl border transition duration-200 hover:-translate-y-0.5 ${
           featured
-            ? "border-primary/30 bg-gradient-to-br from-primary/[0.10] via-white/[0.02] to-accent/[0.05] hover:border-primary/55"
-            : "border-white/[0.08] bg-white/[0.025] hover:border-primary/35"
+            ? "border-primary/30 bg-primary/[0.05] hover:border-primary/55"
+            : "border-ink/[0.08] bg-ink/[0.025] hover:border-primary/35"
         }`}
       >
         <article className="flex h-full flex-col">
@@ -56,8 +56,8 @@ function BlogCard({ post, lang, featured }: { post: BlogPost; lang: "pl" | "en";
             </div>
           )}
           <div className={`flex h-full flex-col ${featured ? "p-7 md:p-9" : "p-6"}`}>
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
-              {featured && <span className="rounded-full bg-primary px-2.5 py-0.5 font-semibold text-[#03140b]">{lang === "pl" ? "Najnowszy" : "Latest"}</span>}
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted">
+              {featured && <span className="rounded-full bg-primary px-2.5 py-0.5 font-semibold text-paper">{lang === "pl" ? "Najnowszy" : "Latest"}</span>}
               <time dateTime={post.publishedAt}>{date}</time>
               {post.readingTime && (
                 <span className="flex items-center gap-1">
@@ -66,10 +66,10 @@ function BlogCard({ post, lang, featured }: { post: BlogPost; lang: "pl" | "en";
                 </span>
               )}
             </div>
-            <h2 className={`mt-3 font-sans font-semibold leading-snug text-white transition-colors group-hover:text-primary ${featured ? "text-2xl md:text-3xl" : "text-lg"}`}>
+            <h2 className={`mt-3 font-sans font-semibold leading-snug text-ink transition-colors group-hover:text-primary ${featured ? "text-2xl md:text-3xl" : "text-lg"}`}>
               {post.title[lang]}
             </h2>
-            <p className={`mt-3 leading-relaxed text-gray-400 ${featured ? "text-base md:text-lg" : "line-clamp-3 text-sm"}`}>{post.excerpt[lang]}</p>
+            <p className={`mt-3 leading-relaxed text-muted ${featured ? "text-base md:text-lg" : "line-clamp-3 text-sm"}`}>{post.excerpt[lang]}</p>
             <span className="btn-link mt-auto pt-5 text-sm">
               {lang === "pl" ? "Czytaj" : "Read"}
               <ArrowRightIcon size={15} className="transition-transform group-hover:translate-x-1" />

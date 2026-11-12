@@ -11,7 +11,7 @@ export default function CoMoznaZautomatyzowacContent({ lang }: Props) {
   const contactHref = isPl ? "/kontakt#ai-advisor" : "/en/contact#ai-advisor";
 
   return (
-    <div className="space-y-10 text-gray-300 leading-relaxed">
+    <div className="space-y-10 text-ink-soft leading-relaxed">
       <p className="text-lg">
         {isPl
           ? "Automatyzacje AI dla firm to nie „wdrożenie sztucznej inteligencji w organizacji”, tylko zdjęcie z ludzi konkretnych, powtarzalnych czynności: odpowiadania na te same pytania, przepisywania danych, składania raportów i pilnowania statusów. W tym artykule pokazuję 12 procesów, które w małych i średnich firmach automatyzuję najczęściej, z typowym problemem, rozwiązaniem, efektem i orientacyjnym budżetem."
@@ -19,7 +19,7 @@ export default function CoMoznaZautomatyzowacContent({ lang }: Props) {
       </p>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Czym są automatyzacje AI dla firm (i czym nie są)" : "What AI automation for companies is (and is not)"}
         </h2>
         <p className="mb-4">
@@ -43,7 +43,7 @@ export default function CoMoznaZautomatyzowacContent({ lang }: Props) {
       />
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Jak wybrać pierwszy proces do automatyzacji" : "How to choose the first process to automate"}
         </h2>
         <p className="mb-4">
@@ -64,7 +64,7 @@ export default function CoMoznaZautomatyzowacContent({ lang }: Props) {
                 ["Painful", "It delays sales, annoys customers, or blocks one person without whom the process stops."],
               ]
           ).map(([title, description]) => (
-            <article key={title} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
+            <article key={title} className="rounded-xl border border-ink/[0.08] bg-ink/[0.025] p-5">
               <h3 className="text-xl font-bold text-primary mb-2">{title}</h3>
               <p>{description}</p>
             </article>
@@ -78,7 +78,7 @@ export default function CoMoznaZautomatyzowacContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Ile kosztują automatyzacje AI dla firm" : "How much AI automation for companies costs"}
         </h2>
         <div className="grid gap-4 md:grid-cols-3">
@@ -94,9 +94,9 @@ export default function CoMoznaZautomatyzowacContent({ lang }: Props) {
                 ["Multi-system integration or app", "estimated after analysis", "CRM, ERP, payments, inventory, admin panel, and reports. Delivered in stages, the first stage usually 2-6 weeks."],
               ]
           ).map(([title, price, description]) => (
-            <article key={title} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
+            <article key={title} className="rounded-xl border border-ink/[0.08] bg-ink/[0.025] p-5">
               <h3 className="text-xl font-bold text-primary mb-2">{title}</h3>
-              <p className="font-semibold text-white mb-2">{price}</p>
+              <p className="font-semibold text-ink mb-2">{price}</p>
               <p>{description}</p>
             </article>
           ))}
@@ -121,7 +121,7 @@ export default function CoMoznaZautomatyzowacContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Automatyzacja z użyciem agentów AI: co zmienia w praktyce" : "Automation with AI agents: what changes in practice"}
         </h2>
         <p className="mb-4">
@@ -151,7 +151,7 @@ export default function CoMoznaZautomatyzowacContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Najczęstsze błędy przy automatyzacji firmy" : "Common mistakes when automating a company"}
         </h2>
         <ul className="list-disc list-inside space-y-2 ml-2">
@@ -164,7 +164,7 @@ export default function CoMoznaZautomatyzowacContent({ lang }: Props) {
       </section>
 
       <section className="card-accent">
-        <h2 className="text-xl font-bold text-white mb-4">
+        <h2 className="text-xl font-bold text-ink mb-4">
           {isPl ? "Sprawdź, które z tych 12 procesów są w Twojej firmie" : "Check which of these 12 processes exist in your company"}
         </h2>
         <p className="mb-4">
@@ -173,7 +173,7 @@ export default function CoMoznaZautomatyzowacContent({ lang }: Props) {
             : "Describe to the AI advisor what you do and what takes the most of your time. You get 2-3 directions with an indicative budget, and you can send the conversation to me with one click - I come back within 2-5 days with a free prototype."}
         </p>
         <div className="flex flex-wrap gap-4">
-          <Link href={contactHref} className="btn-primary !text-[#03140b] !no-underline">
+          <Link href={contactHref} className="btn-primary !text-paper !no-underline">
             {isPl ? "Zapytaj asystenta AI" : "Ask the AI advisor"}
             <span aria-hidden="true">→</span>
           </Link>

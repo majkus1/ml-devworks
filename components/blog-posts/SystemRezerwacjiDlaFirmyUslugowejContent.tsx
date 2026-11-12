@@ -8,7 +8,7 @@ export default function SystemRezerwacjiDlaFirmyUslugowejContent({ lang }: Props
   const isPl = lang === "pl";
 
   return (
-    <div className="space-y-10 text-gray-300 leading-relaxed">
+    <div className="space-y-10 text-ink-soft leading-relaxed">
       <p className="text-lg">
         {isPl
           ? "System rezerwacji dla firmy usługowej powinien robić więcej niż tylko pokazywać wolne terminy. Dobry system porządkuje kalendarz, pobiera płatności lub zaliczki, przypomina klientom o wizycie i daje właścicielowi dane o obłożeniu oraz sprzedaży."
@@ -16,7 +16,7 @@ export default function SystemRezerwacjiDlaFirmyUslugowejContent({ lang }: Props
       </p>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Najważniejsze funkcje systemu rezerwacji" : "Core booking system features"}
         </h2>
         <ul className="list-disc list-inside space-y-2 ml-2">
@@ -29,7 +29,7 @@ export default function SystemRezerwacjiDlaFirmyUslugowejContent({ lang }: Props
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Integracje, które robią różnicę" : "Integrations that make a difference"}
         </h2>
         <p className="mb-4">
@@ -52,7 +52,7 @@ export default function SystemRezerwacjiDlaFirmyUslugowejContent({ lang }: Props
                 "Google Calendar, notifications, and automated follow-ups.",
               ]
           ).map((item) => (
-            <article key={item} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
+            <article key={item} className="rounded-xl border border-ink/[0.08] bg-ink/[0.025] p-5">
               <p>{item}</p>
             </article>
           ))}
@@ -60,7 +60,7 @@ export default function SystemRezerwacjiDlaFirmyUslugowejContent({ lang }: Props
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Gotowa platforma czy dedykowany system?" : "Ready platform or custom system?"}
         </h2>
         <p className="mb-4">
@@ -71,7 +71,7 @@ export default function SystemRezerwacjiDlaFirmyUslugowejContent({ lang }: Props
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Jak wygląda wdrożenie?" : "What does implementation look like?"}
         </h2>
         <ol className="list-decimal list-inside space-y-2 ml-2">
@@ -83,7 +83,7 @@ export default function SystemRezerwacjiDlaFirmyUslugowejContent({ lang }: Props
       </section>
 
       <section className="card-accent">
-        <h2 className="text-xl font-bold text-white mb-4">
+        <h2 className="text-xl font-bold text-ink mb-4">
           {isPl ? "Budujesz system rezerwacji dla firmy usługowej?" : "Building a booking system for a service business?"}
         </h2>
         <p className="mb-4">
@@ -93,7 +93,7 @@ export default function SystemRezerwacjiDlaFirmyUslugowejContent({ lang }: Props
         </p>
         <Link
           href={isPl ? "/uslugi/systemy-rezerwacji-online" : "/en/services/online-booking-systems"}
-          className="btn-primary !text-[#03140b] !no-underline"
+          className="btn-primary !text-paper !no-underline"
         >
           {isPl ? "Zobacz systemy rezerwacji online" : "View online booking systems"}
           <span aria-hidden="true">→</span>

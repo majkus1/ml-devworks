@@ -8,7 +8,7 @@ export default function CzyAIWystarczyDoStronyContent({ lang }: Props) {
   const isPl = lang === "pl";
 
   return (
-    <div className="space-y-10 text-gray-300 leading-relaxed">
+    <div className="space-y-10 text-ink-soft leading-relaxed">
       <p className="text-lg">
         {isPl
           ? "Coraz więcej firm pyta: \"po co płacić za stronę lub aplikację, skoro AI wygeneruje to w kilka minut?\" To dobre pytanie - ale tylko na poziomie prototypu. W realnym biznesie liczy się stabilność, bezpieczeństwo, skalowalność i koszty utrzymania. Bez tego szybko pojawia się dług technologiczny, który bywa droższy niż profesjonalne wdrożenie od początku."
@@ -16,7 +16,7 @@ export default function CzyAIWystarczyDoStronyContent({ lang }: Props) {
       </p>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "AI zrobi kod. Ale czy zrobi odpowiednią architekturę?" : "AI can generate code. But can it design the right architecture?"}
         </h2>
         <p>
@@ -27,7 +27,7 @@ export default function CzyAIWystarczyDoStronyContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Najczęstszy problem: AI nie zna Twojego kontekstu biznesowego" : "Most common issue: AI does not know your business context"}
         </h2>
         <ul className="list-disc list-inside space-y-2 ml-2">
@@ -55,7 +55,7 @@ export default function CzyAIWystarczyDoStronyContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Dług technologiczny: dlaczego \"taniej teraz\" bywa drożej później?" : "Technical debt: why \"cheaper now\" is often more expensive later"}
         </h2>
         <p className="mb-4">
@@ -72,7 +72,7 @@ export default function CzyAIWystarczyDoStronyContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Bezpieczeństwo: największe ryzyko przy \"AI-only\"" : "Security: the biggest risk in \"AI-only\" builds"}
         </h2>
         <p>
@@ -83,7 +83,7 @@ export default function CzyAIWystarczyDoStronyContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Jak używać AI mądrze w projekcie IT?" : "How to use AI wisely in software projects"}
         </h2>
         <p className="mb-4">
@@ -100,10 +100,10 @@ export default function CzyAIWystarczyDoStronyContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">{isPl ? "FAQ" : "FAQ"}</h2>
+        <h2 className="text-2xl font-bold text-ink mb-4">{isPl ? "FAQ" : "FAQ"}</h2>
         <div className="space-y-6">
           <div>
-            <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-lg font-semibold text-ink mb-2">
               {isPl ? "Czy AI może całkowicie zastąpić doświadczonego programistę?" : "Can AI fully replace an experienced software developer?"}
             </h3>
             <p>
@@ -113,7 +113,7 @@ export default function CzyAIWystarczyDoStronyContent({ lang }: Props) {
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-lg font-semibold text-ink mb-2">
               {isPl ? "Kiedy warto zapłacić za profesjonalne wdrożenie?" : "When is professional implementation worth paying for?"}
             </h3>
             <p>
@@ -123,7 +123,7 @@ export default function CzyAIWystarczyDoStronyContent({ lang }: Props) {
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-lg font-semibold text-ink mb-2">
               {isPl ? "Czy AI w ogóle jest przydatne przy tworzeniu stron i aplikacji?" : "Is AI useful in website and app development at all?"}
             </h3>
             <p>
@@ -136,7 +136,7 @@ export default function CzyAIWystarczyDoStronyContent({ lang }: Props) {
       </section>
 
       <section className="card-accent">
-        <h2 className="text-xl font-bold text-white mb-4">
+        <h2 className="text-xl font-bold text-ink mb-4">
           {isPl ? "Chcesz zbudować produkt bez długu technologicznego?" : "Want to build without technical debt?"}
         </h2>
         <p className="mb-4">
@@ -147,7 +147,7 @@ export default function CzyAIWystarczyDoStronyContent({ lang }: Props) {
         <div className="flex flex-wrap gap-4">
           <Link
             href={isPl ? "/uslugi/aplikacje-internetowe-i-mobilne" : "/en/services/web-and-mobile-applications"}
-            className="btn-primary !text-[#03140b] !no-underline"
+            className="btn-primary !text-paper !no-underline"
           >
             {isPl ? "Zobacz ofertę aplikacji" : "View app development services"}
             <span aria-hidden="true">→</span>

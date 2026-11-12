@@ -8,7 +8,7 @@ export default function KompleksoweUslugiProgramistyczneContent({ lang }: Props)
   const isPl = lang === "pl";
 
   return (
-    <div className="space-y-10 text-gray-300 leading-relaxed">
+    <div className="space-y-10 text-ink-soft leading-relaxed">
       <p className="text-lg">
         {isPl
           ? "Kompleksowe uslugi programistyczne dla firm to nie tylko \"zrobienie strony\". To projektowanie rozwiazan, ktore wspieraja konkretne procesy biznesowe: pozyskiwanie klientow, obsluge zlecen, automatyzacje pracy i raportowanie. W praktyce najwieksza wartosc powstaje wtedy, gdy technologia jest dopasowana do branzy i modelu dzialania firmy."
@@ -16,7 +16,7 @@ export default function KompleksoweUslugiProgramistyczneContent({ lang }: Props)
       </p>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl
             ? "Dlaczego ogolna strona firmowa to za malo?"
             : "Why is a generic business website often not enough?"}
@@ -35,7 +35,7 @@ export default function KompleksoweUslugiProgramistyczneContent({ lang }: Props)
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Przyklady rozwiazan dopasowanych do branzy" : "Examples of industry-tailored software solutions"}
         </h2>
         <ul className="list-disc list-inside space-y-2 ml-2">
@@ -68,7 +68,7 @@ export default function KompleksoweUslugiProgramistyczneContent({ lang }: Props)
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl
             ? "Jakie funkcje warto wdrozyc, zeby technologia wspierala biznes?"
             : "Which features should you implement to support business growth?"}
@@ -83,7 +83,7 @@ export default function KompleksoweUslugiProgramistyczneContent({ lang }: Props)
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "SEO long-tail: jak zdobywac lepszy ruch z Google?" : "Long-tail SEO: how to attract better Google traffic?"}
         </h2>
         <p>
@@ -94,10 +94,10 @@ export default function KompleksoweUslugiProgramistyczneContent({ lang }: Props)
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">{isPl ? "FAQ" : "FAQ"}</h2>
+        <h2 className="text-2xl font-bold text-ink mb-4">{isPl ? "FAQ" : "FAQ"}</h2>
         <div className="space-y-6">
           <div>
-            <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-lg font-semibold text-ink mb-2">
               {isPl
                 ? "Czy mala firma potrzebuje dedykowanej aplikacji?"
                 : "Does a small business need a custom app?"}
@@ -109,7 +109,7 @@ export default function KompleksoweUslugiProgramistyczneContent({ lang }: Props)
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-lg font-semibold text-ink mb-2">
               {isPl
                 ? "Jak wybrać wykonawcę technicznego dla projektu branżowego?"
                 : "How to choose a software partner for an industry-specific project?"}
@@ -121,7 +121,7 @@ export default function KompleksoweUslugiProgramistyczneContent({ lang }: Props)
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-lg font-semibold text-ink mb-2">
               {isPl
                 ? "Czy SEO i rozwoj aplikacji mozna laczyc?"
                 : "Can SEO and software development be combined?"}
@@ -136,7 +136,7 @@ export default function KompleksoweUslugiProgramistyczneContent({ lang }: Props)
       </section>
 
       <section className="card-accent">
-        <h2 className="text-xl font-bold text-white mb-4">
+        <h2 className="text-xl font-bold text-ink mb-4">
           {isPl
             ? "Potrzebujesz rozwiazania dopasowanego do Twojej branzy?"
             : "Need software tailored to your industry?"}
@@ -149,7 +149,7 @@ export default function KompleksoweUslugiProgramistyczneContent({ lang }: Props)
         <div className="flex flex-wrap gap-4">
           <Link
             href={isPl ? "/uslugi/aplikacje-internetowe-i-mobilne" : "/en/services/web-and-mobile-applications"}
-            className="btn-primary !text-[#03140b] !no-underline"
+            className="btn-primary !text-paper !no-underline"
           >
             {isPl ? "Zobacz uslugi programistyczne" : "View software services"}
             <span aria-hidden="true">→</span>

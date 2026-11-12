@@ -23,7 +23,7 @@ export default function Section({
   ariaLabel,
 }: SectionProps) {
   const padding = spacing === "default" ? "section-y" : spacing === "tight" ? "py-12 md:py-16" : "";
-  const background = tone === "muted" ? "bg-background-light border-y border-white/[0.06]" : "";
+  const background = tone === "muted" ? "bg-background-light border-y border-ink/[0.06]" : "";
 
   return (
     <section

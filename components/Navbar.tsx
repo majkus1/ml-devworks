@@ -226,7 +226,7 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
           isMobileMenuOpen
             ? "border-b border-transparent bg-background"
             : isScrolled
-              ? "border-b border-white/[0.07] bg-background/80 backdrop-blur-xl"
+              ? "border-b border-ink/[0.07] bg-paper/95"
               : "border-b border-transparent bg-transparent"
         }`}
         role="navigation"
@@ -241,12 +241,12 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
               aria-label={lang === "pl" ? "Przejdź do strony głównej" : "Go to homepage"}
             >
               <Image
-                src="/primary-on-transparent-logo.webp"
+                src="/logo-light.webp"
                 alt="ML DevWorks Logo"
                 width={190}
-                height={53}
+                height={35}
                 priority
-                className="h-auto w-[178px] transition-opacity hover:opacity-80 sm:w-[184px] lg:w-[180px]"
+                className="h-auto w-[164px] transition-opacity hover:opacity-80 sm:w-[172px]"
               />
             </Link>
 
@@ -255,7 +255,7 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
                 const isPageLink = item.href.startsWith("/");
                 const isActive = activeSection === item.key || (item.key === "contact-page" && activeSection === "#contact");
                 const className = `relative rounded-lg px-3.5 py-2 text-[0.92rem] font-medium transition-colors ${
-                  isActive ? "text-white" : "text-gray-400 hover:text-white"
+                  isActive ? "text-ink" : "text-muted hover:text-ink"
                 }`;
                 const indicator = isActive ? (
                   <span className="absolute inset-x-3.5 -bottom-[1px] h-px bg-gradient-to-r from-primary/0 via-primary to-primary/0" aria-hidden="true" />
@@ -288,7 +288,7 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
             <div className="flex items-center gap-2">
               <Link
                 href={getAlternateLangPath(pathname || "/")}
-                className="hidden rounded-lg px-3 py-2 text-xs font-semibold tracking-wider text-gray-400 transition-colors hover:text-white sm:inline-flex"
+                className="hidden rounded-lg px-3 py-2 text-xs font-semibold tracking-wider text-muted transition-colors hover:text-ink sm:inline-flex"
                 aria-label={isEnglish ? "Przełącz na język polski" : "Switch to English"}
                 hrefLang={isEnglish ? "pl" : "en"}
               >
@@ -300,7 +300,7 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
               </Link>
 
               <button
-                className="relative z-50 flex h-10 w-10 touch-manipulation select-none items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] transition-[transform,background-color] duration-100 [-webkit-tap-highlight-color:transparent] active:scale-[0.92] active:bg-white/[0.12] lg:hidden"
+                className="relative z-50 flex h-10 w-10 touch-manipulation select-none items-center justify-center rounded-lg border border-ink/10 bg-ink/[0.04] transition-[transform,background-color] duration-100 [-webkit-tap-highlight-color:transparent] active:scale-[0.92] active:bg-ink/[0.12] lg:hidden"
                 onClick={() => setIsMobileMenuOpen((isOpen) => !isOpen)}
                 data-menu-toggle
                 aria-label={isMobileMenuOpen ? (lang === "pl" ? "Zamknij menu" : "Close menu") : lang === "pl" ? "Otwórz menu" : "Open menu"}
@@ -308,9 +308,9 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
               >
                 {/* Trzy kreski → „X”: transformacje w CSS (.burger-line), sterowane atrybutem data-menu na <html>. */}
                 <span className="relative block h-3.5 w-5" aria-hidden="true">
-                  <span className="burger-line burger-line-top absolute left-0 top-0 block h-0.5 w-5 rounded-full bg-white" />
-                  <span className="burger-line burger-line-middle absolute left-0 top-1.5 block h-0.5 w-5 rounded-full bg-white" />
-                  <span className="burger-line burger-line-bottom absolute left-0 top-3 block h-0.5 w-5 rounded-full bg-white" />
+                  <span className="burger-line burger-line-top absolute left-0 top-0 block h-0.5 w-5 rounded-full bg-ink" />
+                  <span className="burger-line burger-line-middle absolute left-0 top-1.5 block h-0.5 w-5 rounded-full bg-ink" />
+                  <span className="burger-line burger-line-bottom absolute left-0 top-3 block h-0.5 w-5 rounded-full bg-ink" />
                 </span>
               </button>
             </div>
@@ -330,20 +330,20 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
             {items.map((item, index) => {
               const isPageLink = item.href.startsWith("/");
               const isActive = activeSection === item.key || (item.key === "contact-page" && activeSection === "#contact");
-              const className = `flex items-center justify-between border-b border-white/[0.07] py-4 font-display text-2xl font-medium transition-colors ${
-                isActive ? "text-primary" : "text-white active:text-primary"
+              const className = `flex items-center justify-between border-b border-ink/[0.07] py-4 font-display text-2xl font-medium transition-colors ${
+                isActive ? "text-primary" : "text-ink active:text-primary"
               }`;
               return (
                 <li key={item.href} className="mobile-menu-item" style={menuRevealDelay(index)}>
                   {isPageLink ? (
                     <Link href={item.href} onClick={() => setIsMobileMenuOpen(false)} className={className} aria-current={isActive ? "page" : undefined} tabIndex={isMobileMenuOpen ? 0 : -1}>
                       {item.label}
-                      <ArrowRightIcon size={20} className="text-gray-600" />
+                      <ArrowRightIcon size={20} className="text-faint" />
                     </Link>
                   ) : (
                     <a href={resolveHref(item.href)} onClick={(e) => handleLinkClick(e, item.href)} className={className} tabIndex={isMobileMenuOpen ? 0 : -1}>
                       {item.label}
-                      <ArrowRightIcon size={20} className="text-gray-600" />
+                      <ArrowRightIcon size={20} className="text-faint" />
                     </a>
                   )}
                 </li>
@@ -356,15 +356,15 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
               {ctaLabel}
               <ArrowRightIcon size={18} />
             </Link>
-            <div className="flex items-center justify-between text-sm text-gray-400">
-              <a href="tel:+48516598792" className="hover:text-white" tabIndex={isMobileMenuOpen ? 0 : -1}>
+            <div className="flex items-center justify-between text-sm text-muted">
+              <a href="tel:+48516598792" className="hover:text-ink" tabIndex={isMobileMenuOpen ? 0 : -1}>
                 +48 516 598 792
               </a>
               <Link
                 href={getAlternateLangPath(pathname || "/")}
                 hrefLang={isEnglish ? "pl" : "en"}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="rounded-lg border border-white/10 px-3 py-1.5 font-semibold text-gray-300 hover:text-white"
+                className="rounded-lg border border-ink/10 px-3 py-1.5 font-semibold text-ink-soft hover:text-ink"
                 aria-label={isEnglish ? "Przełącz na język polski" : "Switch to English"}
                 tabIndex={isMobileMenuOpen ? 0 : -1}
               >

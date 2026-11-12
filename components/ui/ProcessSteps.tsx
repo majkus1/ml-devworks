@@ -45,14 +45,15 @@ export default function ProcessSteps({ lang = "pl", title, lead, steps, tone = "
             : "You don't buy an 'IT project' blindly. We start with one process, you see the effect, and only then we move on.")
         }
       />
-      <ol className="relative grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+      {/* Kroki jako oś: duża cyfra w kroju nagłówków i linia nad każdym krokiem, bez kart. */}
+      <ol className="grid gap-x-10 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
         {list.map(([stepTitle, text], index) => (
-          <li key={stepTitle} className="card relative">
-            <span className="font-display text-sm font-semibold text-primary" aria-hidden="true">
-              {String(index + 1).padStart(2, "0")}
+          <li key={stepTitle} className="border-t-2 border-ink pt-5">
+            <span className="block font-display text-5xl font-bold leading-none tracking-tight text-primary" aria-hidden="true">
+              {index + 1}
             </span>
-            <h3 className="mt-3 text-xl font-semibold text-white">{stepTitle}</h3>
-            <p className="mt-2 text-[0.95rem] leading-relaxed text-gray-400">{text}</p>
+            <h3 className="mt-5 text-xl font-semibold text-ink">{stepTitle}</h3>
+            <p className="mt-2 text-[0.98rem] leading-relaxed text-muted">{text}</p>
           </li>
         ))}
       </ol>

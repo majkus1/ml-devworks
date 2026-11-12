@@ -8,7 +8,7 @@ export default function AutomatyzacjaProcesowAIContent({ lang }: Props) {
   const isPl = lang === "pl";
 
   return (
-    <div className="space-y-10 text-gray-300 leading-relaxed">
+    <div className="space-y-10 text-ink-soft leading-relaxed">
       <p className="text-lg">
         {isPl
           ? "Automatyzacja procesów z AI opłaca się wtedy, gdy firma regularnie wykonuje powtarzalne zadania, które zabierają czas zespołu i spowalniają obsługę klienta. Dobrze zaprojektowana automatyzacja nie zastępuje ludzi - usuwa powtarzalną pracę, dzięki czemu zespół może skupić się na sprzedaży, jakości i rozwoju."
@@ -16,7 +16,7 @@ export default function AutomatyzacjaProcesowAIContent({ lang }: Props) {
       </p>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Kiedy automatyzacja AI naprawdę ma sens?" : "When does AI automation actually make sense?"}
         </h2>
         <ul className="list-disc list-inside space-y-2 ml-2">
@@ -49,7 +49,7 @@ export default function AutomatyzacjaProcesowAIContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Przykłady procesów, które najczęściej opłaca się automatyzować" : "Processes that are usually worth automating first"}
         </h2>
         <ul className="list-disc list-inside space-y-2 ml-2">
@@ -77,7 +77,7 @@ export default function AutomatyzacjaProcesowAIContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Jak policzyć, czy automatyzacja się opłaca?" : "How to estimate if automation is profitable?"}
         </h2>
         <p className="mb-4">
@@ -94,7 +94,7 @@ export default function AutomatyzacjaProcesowAIContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Ile trwa wdrożenie automatyzacji AI?" : "How long does AI automation implementation take?"}
         </h2>
         <p>
@@ -105,7 +105,7 @@ export default function AutomatyzacjaProcesowAIContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Najczęstsze błędy firm przy automatyzacji AI" : "Most common AI automation mistakes"}
         </h2>
         <ul className="list-disc list-inside space-y-2 ml-2">
@@ -133,10 +133,10 @@ export default function AutomatyzacjaProcesowAIContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">{isPl ? "FAQ" : "FAQ"}</h2>
+        <h2 className="text-2xl font-bold text-ink mb-4">{isPl ? "FAQ" : "FAQ"}</h2>
         <div className="space-y-6">
           <div>
-            <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-lg font-semibold text-ink mb-2">
               {isPl ? "Czy mała firma też skorzysta na automatyzacji AI?" : "Can small businesses also benefit from AI automation?"}
             </h3>
             <p>
@@ -146,7 +146,7 @@ export default function AutomatyzacjaProcesowAIContent({ lang }: Props) {
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-lg font-semibold text-ink mb-2">
               {isPl ? "Od czego zacząć wdrożenie?" : "Where should we start?"}
             </h3>
             <p>
@@ -156,7 +156,7 @@ export default function AutomatyzacjaProcesowAIContent({ lang }: Props) {
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-lg font-semibold text-ink mb-2">
               {isPl ? "Czy AI zastąpi pracowników?" : "Will AI replace employees?"}
             </h3>
             <p>
@@ -169,7 +169,7 @@ export default function AutomatyzacjaProcesowAIContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Czy automatyzacja AI opłaca się dla małej firmy?" : "Is AI automation worth it for a small company?"}
         </h2>
         <p className="mb-4">
@@ -206,7 +206,7 @@ export default function AutomatyzacjaProcesowAIContent({ lang }: Props) {
       </section>
 
       <section className="card-accent">
-        <h2 className="text-xl font-bold text-white mb-4">
+        <h2 className="text-xl font-bold text-ink mb-4">
           {isPl ? "Sprawdźmy, które procesy warto zautomatyzować u Ciebie" : "Let's identify which workflows to automate first"}
         </h2>
         <p className="mb-4">
@@ -217,7 +217,7 @@ export default function AutomatyzacjaProcesowAIContent({ lang }: Props) {
         <div className="flex flex-wrap gap-4">
           <Link
             href={isPl ? "/uslugi/automatyzacja-i-ai" : "/en/services/automation-and-ai"}
-            className="btn-primary !text-[#03140b] !no-underline"
+            className="btn-primary !text-paper !no-underline"
           >
             {isPl ? "Zobacz ofertę automatyzacji AI" : "View AI automation services"}
             <span aria-hidden="true">→</span>

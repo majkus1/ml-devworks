@@ -52,7 +52,7 @@ export default function AutomatyzacjaObslugiZgloszenContent({ lang }: Props) {
       ];
 
   return (
-    <div className="space-y-10 text-gray-300 leading-relaxed">
+    <div className="space-y-10 text-ink-soft leading-relaxed">
       <p className="text-lg">
         {isPl
           ? "Automatyzacja obsługi zgłoszeń to proces, w którym AI odbiera zgłoszenie klienta (mail, formularz, czat, telefon), rozpoznaje, o co chodzi, odpowiada na sprawy powtarzalne i przekazuje trudniejsze do zespołu z gotowym kontekstem. Dotyczy tak samo helpdesku w firmie IT, contact center w e-commerce, jak i biura, które obsługuje zamówienia mailem. Poniżej pokazuję, gdzie ginie czas, trzy poziomy automatyzacji, przykładowy przepływ, integracje, koszty i ryzyka."
@@ -60,7 +60,7 @@ export default function AutomatyzacjaObslugiZgloszenContent({ lang }: Props) {
       </p>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Gdzie ginie czas w obsłudze zgłoszeń i klientów" : "Where time is lost in ticket and customer handling"}
         </h2>
         <ul className="list-disc list-inside space-y-2 ml-2">
@@ -73,15 +73,15 @@ export default function AutomatyzacjaObslugiZgloszenContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Trzy poziomy automatyzacji obsługi klienta" : "Three levels of customer service automation"}
         </h2>
         <div className="space-y-4">
           {levels.map(([title, description, price]) => (
-            <article key={title} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
+            <article key={title} className="rounded-xl border border-ink/[0.08] bg-ink/[0.025] p-5">
               <div className="flex flex-wrap items-baseline justify-between gap-2 mb-2">
                 <h3 className="text-xl font-bold text-primary">{title}</h3>
-                <span className="text-sm font-semibold text-white">{price}</span>
+                <span className="text-sm font-semibold text-ink">{price}</span>
               </div>
               <p>{description}</p>
             </article>
@@ -95,17 +95,17 @@ export default function AutomatyzacjaObslugiZgloszenContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Jak wygląda automatyzacja procesów w contact center krok po kroku" : "How contact center process automation works step by step"}
         </h2>
         <ol className="space-y-4">
           {flow.map(([title, description], index) => (
             <li key={title} className="flex gap-4">
-              <span className="shrink-0 w-9 h-9 rounded-full bg-primary text-background font-bold flex items-center justify-center" aria-hidden="true">
+              <span className="shrink-0 w-9 h-9 rounded-full bg-primary text-paper font-bold flex items-center justify-center" aria-hidden="true">
                 {index + 1}
               </span>
               <div>
-                <h3 className="text-lg font-semibold text-white mb-1">{title}</h3>
+                <h3 className="text-lg font-semibold text-ink mb-1">{title}</h3>
                 <p>{description}</p>
               </div>
             </li>
@@ -114,7 +114,7 @@ export default function AutomatyzacjaObslugiZgloszenContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Automatyzacja obsługi zamówień: przykład z e-commerce i B2B" : "Order handling automation: an e-commerce and B2B example"}
         </h2>
         <p className="mb-4">
@@ -130,7 +130,7 @@ export default function AutomatyzacjaObslugiZgloszenContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Integracje: z czym agent musi się połączyć" : "Integrations: what the agent must connect to"}
         </h2>
         <div className="grid gap-4 md:grid-cols-2">
@@ -148,7 +148,7 @@ export default function AutomatyzacjaObslugiZgloszenContent({ lang }: Props) {
                 ["Knowledge base", "FAQ, terms, instructions, price lists, the team's reply history - this is what the agent 'learns' to answer in the company's style."],
               ]
           ).map(([title, description]) => (
-            <article key={title} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
+            <article key={title} className="rounded-xl border border-ink/[0.08] bg-ink/[0.025] p-5">
               <h3 className="text-lg font-bold text-primary mb-2">{title}</h3>
               <p>{description}</p>
             </article>
@@ -170,12 +170,12 @@ export default function AutomatyzacjaObslugiZgloszenContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Co mierzyć po wdrożeniu" : "What to measure after implementation"}
         </h2>
         <div className="grid gap-4 md:grid-cols-2">
           {metrics.map(([title, description]) => (
-            <article key={title} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
+            <article key={title} className="rounded-xl border border-ink/[0.08] bg-ink/[0.025] p-5">
               <h3 className="text-lg font-bold text-primary mb-2">{title}</h3>
               <p>{description}</p>
             </article>
@@ -184,7 +184,7 @@ export default function AutomatyzacjaObslugiZgloszenContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Koszt i czas wdrożenia" : "Cost and implementation time"}
         </h2>
         <p className="mb-4">
@@ -200,7 +200,7 @@ export default function AutomatyzacjaObslugiZgloszenContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Ryzyka i jak ich uniknąć" : "Risks and how to avoid them"}
         </h2>
         <ul className="list-disc list-inside space-y-2 ml-2">
@@ -212,7 +212,7 @@ export default function AutomatyzacjaObslugiZgloszenContent({ lang }: Props) {
       </section>
 
       <section className="card-accent">
-        <h2 className="text-xl font-bold text-white mb-4">
+        <h2 className="text-xl font-bold text-ink mb-4">
           {isPl ? "Chcesz zautomatyzować obsługę zgłoszeń w swojej firmie?" : "Want to automate ticket handling in your company?"}
         </h2>
         <p className="mb-4">
@@ -221,7 +221,7 @@ export default function AutomatyzacjaObslugiZgloszenContent({ lang }: Props) {
             : "Describe which channels requests come through, how many per month, and which questions repeat most often. The AI advisor on the contact page will immediately suggest an automation level, and I will come back within 2-5 days with an agent prototype built on your sample requests."}
         </p>
         <div className="flex flex-wrap gap-4">
-          <Link href={contactHref} className="btn-primary !text-[#03140b] !no-underline">
+          <Link href={contactHref} className="btn-primary !text-paper !no-underline">
             {isPl ? "Zapytaj asystenta AI" : "Ask the AI advisor"}
             <span aria-hidden="true">→</span>
           </Link>

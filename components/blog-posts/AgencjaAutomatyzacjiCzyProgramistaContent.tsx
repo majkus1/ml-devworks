@@ -50,7 +50,7 @@ export default function AgencjaAutomatyzacjiCzyProgramistaContent({ lang }: Prop
     : ["A promise to 'automate the whole company' without asking about a specific process and numbers.", "No conversation about escalation to a human - the agent is supposed to 'handle everything'.", "An estimate without process analysis and without metrics.", "Tool accounts and API keys created for the vendor, not your company.", "A maintenance subscription without a defined scope and response time.", "Reluctance to show a prototype before signing a contract."];
 
   return (
-    <div className="space-y-10 text-gray-300 leading-relaxed">
+    <div className="space-y-10 text-ink-soft leading-relaxed">
       <p className="text-lg">
         {isPl
           ? "Szukając wykonawcy automatyzacji, trafisz na agencje automatyzacji AI, freelancerów od narzędzi no-code, programistów i oferty budowy zespołu wewnętrznego. Różnią się nie tylko ceną, ale przede wszystkim tym, do kogo należy rozwiązanie, jak rośnie koszt razem ze skalą i kto odpowiada, gdy coś przestaje działać. W tym artykule porównuję cztery modele współpracy, podaję 10 pytań, które warto zadać przed podpisaniem umowy, i listę sygnałów ostrzegawczych."
@@ -58,12 +58,12 @@ export default function AgencjaAutomatyzacjiCzyProgramistaContent({ lang }: Prop
       </p>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Cztery modele współpracy przy automatyzacji" : "Four cooperation models for automation"}
         </h2>
         <div className="space-y-4">
           {models.map(([title, description, points]) => (
-            <article key={title as string} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
+            <article key={title as string} className="rounded-xl border border-ink/[0.08] bg-ink/[0.025] p-5">
               <h3 className="text-xl font-bold text-primary mb-2">{title as string}</h3>
               <p className="mb-3">{description as string}</p>
               <ul className="list-disc list-inside space-y-1 text-sm">
@@ -77,12 +77,12 @@ export default function AgencjaAutomatyzacjiCzyProgramistaContent({ lang }: Prop
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Agencja automatyzacji czy programista: porównanie w 6 kryteriach" : "Automation agency or developer: comparison in 6 criteria"}
         </h2>
         <div className="grid gap-4 md:grid-cols-2">
           {criteria.map(([title, description]) => (
-            <article key={title} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
+            <article key={title} className="rounded-xl border border-ink/[0.08] bg-ink/[0.025] p-5">
               <h3 className="text-lg font-bold text-primary mb-2">{title}</h3>
               <p>{description}</p>
             </article>
@@ -96,7 +96,7 @@ export default function AgencjaAutomatyzacjiCzyProgramistaContent({ lang }: Prop
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Ile kosztują usługi automatyzacji procesów w każdym modelu" : "What process automation services cost in each model"}
         </h2>
         <div className="grid gap-4 md:grid-cols-3">
@@ -112,9 +112,9 @@ export default function AgencjaAutomatyzacjiCzyProgramistaContent({ lang }: Prop
                 ["AI-assisted developer", "from PLN 2,500 net", "for a simple automation as code; AI agents and integrations from about PLN 8,000; model usage usually tens to a few hundred PLN/month."],
               ]
           ).map(([title, price, description]) => (
-            <article key={title} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
+            <article key={title} className="rounded-xl border border-ink/[0.08] bg-ink/[0.025] p-5">
               <h3 className="text-xl font-bold text-primary mb-2">{title}</h3>
-              <p className="font-semibold text-white mb-2">{price}</p>
+              <p className="font-semibold text-ink mb-2">{price}</p>
               <p className="text-sm">{description}</p>
             </article>
           ))}
@@ -135,7 +135,7 @@ export default function AgencjaAutomatyzacjiCzyProgramistaContent({ lang }: Prop
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "10 pytań do wykonawcy automatyzacji" : "10 questions for an automation vendor"}
         </h2>
         <ol className="list-decimal list-inside space-y-2 ml-2">
@@ -146,7 +146,7 @@ export default function AgencjaAutomatyzacjiCzyProgramistaContent({ lang }: Prop
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Czerwone flagi" : "Red flags"}
         </h2>
         <ul className="list-disc list-inside space-y-2 ml-2">
@@ -157,7 +157,7 @@ export default function AgencjaAutomatyzacjiCzyProgramistaContent({ lang }: Prop
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Jak wygląda współpraca ze mną" : "How working with me looks"}
         </h2>
         <ol className="space-y-3">
@@ -176,11 +176,11 @@ export default function AgencjaAutomatyzacjiCzyProgramistaContent({ lang }: Prop
               ]
           ).map(([title, description], index) => (
             <li key={title} className="flex gap-4">
-              <span className="shrink-0 w-9 h-9 rounded-full bg-primary text-background font-bold flex items-center justify-center" aria-hidden="true">
+              <span className="shrink-0 w-9 h-9 rounded-full bg-primary text-paper font-bold flex items-center justify-center" aria-hidden="true">
                 {index + 1}
               </span>
               <div>
-                <h3 className="text-lg font-semibold text-white mb-1">{title}</h3>
+                <h3 className="text-lg font-semibold text-ink mb-1">{title}</h3>
                 <p>{description}</p>
               </div>
             </li>
@@ -189,7 +189,7 @@ export default function AgencjaAutomatyzacjiCzyProgramistaContent({ lang }: Prop
       </section>
 
       <section className="card-accent">
-        <h2 className="text-xl font-bold text-white mb-4">
+        <h2 className="text-xl font-bold text-ink mb-4">
           {isPl ? "Porównaj na własnym procesie" : "Compare on your own process"}
         </h2>
         <p className="mb-4">
@@ -198,7 +198,7 @@ export default function AgencjaAutomatyzacjiCzyProgramistaContent({ lang }: Prop
             : "Instead of choosing a vendor based on a proposal, test them on a prototype. Describe one process and I will come back with a working draft and an estimate - no obligation. You can also start with the AI advisor, which points out what has the biggest potential in your company."}
         </p>
         <div className="flex flex-wrap gap-4">
-          <Link href={automationHref} className="btn-primary !text-[#03140b] !no-underline">
+          <Link href={automationHref} className="btn-primary !text-paper !no-underline">
             {isPl ? "Automatyzacje AI dla firm" : "AI automation for companies"}
             <span aria-hidden="true">→</span>
           </Link>

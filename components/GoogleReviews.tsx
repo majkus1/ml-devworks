@@ -93,7 +93,7 @@ export default function GoogleReviews({ lang = "pl", googleMapsUrl }: GoogleRevi
       <section id="reviews" className="py-20 px-4 relative scroll-mt-[20px]" ref={sectionRef}>
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <p className="text-gray-400">{t.loading}</p>
+            <p className="text-muted">{t.loading}</p>
           </div>
         </div>
       </section>
@@ -114,7 +114,7 @@ export default function GoogleReviews({ lang = "pl", googleMapsUrl }: GoogleRevi
           className="text-center mb-12"
         >
           <h2 className="section-heading mb-4">{t.title}</h2>
-          <p className="text-base md:text-lg text-gray-400 leading-relaxed mb-6">{t.subtitle}</p>
+          <p className="text-base md:text-lg text-muted leading-relaxed mb-6">{t.subtitle}</p>
           
           {overallRating && totalRatings && (
             <div className="flex items-center justify-center gap-4 mb-8">
@@ -126,14 +126,14 @@ export default function GoogleReviews({ lang = "pl", googleMapsUrl }: GoogleRevi
                       className={`w-6 h-6 ${
                         i < Math.round(overallRating)
                           ? "text-yellow-400"
-                          : "text-gray-600"
+                          : "text-faint"
                       }`}
                     />
                   ))}
                 </div>
                 <span className="text-xl font-bold">{overallRating.toFixed(1)}</span>
               </div>
-              <span className="text-gray-400">
+              <span className="text-muted">
                 ({totalRatings} {t.reviews})
               </span>
             </div>
@@ -193,7 +193,7 @@ function ReviewCard({
         delay: index * 0.1,
         ease: [0.16, 1, 0.3, 1],
       }}
-      className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-6 hover:border-primary/40 transition-colors flex-1 min-w-[280px] max-w-[380px]"
+      className="rounded-xl border border-ink/[0.08] bg-ink/[0.025] p-6 hover:border-primary/40 transition-colors flex-1 min-w-[280px] max-w-[380px]"
     >
       <div className="flex items-start gap-4 mb-4">
         {review.profilePhotoUrl ? (
@@ -212,23 +212,23 @@ function ReviewCard({
           </div>
         )}
         <div className="flex-1">
-          <h3 className="font-semibold text-white mb-1">{review.authorName}</h3>
+          <h3 className="font-semibold text-ink mb-1">{review.authorName}</h3>
           <div className="flex items-center gap-2 mb-2">
             <div className="flex">
               {[...Array(5)].map((_, i) => (
                 <StarIcon
                   key={i}
                   className={`w-4 h-4 ${
-                    i < review.rating ? "text-yellow-400" : "text-gray-600"
+                    i < review.rating ? "text-yellow-400" : "text-faint"
                   }`}
                 />
               ))}
             </div>
-            <span className="text-sm text-gray-400">{review.relativeTime}</span>
+            <span className="text-sm text-muted">{review.relativeTime}</span>
           </div>
         </div>
       </div>
-      <p className="text-gray-300 leading-relaxed">{review.text}</p>
+      <p className="text-ink-soft leading-relaxed">{review.text}</p>
       {review.authorUrl && (
         <a
           href={review.authorUrl}

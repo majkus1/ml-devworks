@@ -55,11 +55,11 @@ export default function LocalDeveloperContent({ lang }: { lang: "pl" | "en" }) {
         title={
           isPl ? (
             <>
-              Programista z Krakowa, który <span className="text-gradient">rozumie technologię i biznes</span>
+              Programista z Krakowa, który <span className="text-primary">rozumie technologię i biznes</span>
             </>
           ) : (
             <>
-              A Krakow software developer who <span className="text-gradient">understands technology and business</span>
+              A Krakow software developer who <span className="text-primary">understands technology and business</span>
             </>
           )
         }
@@ -120,16 +120,16 @@ export default function LocalDeveloperContent({ lang }: { lang: "pl" | "en" }) {
             </div>
           </div>
           <div className="card">
-            <h3 className="font-sans text-lg font-semibold text-white">{isPl ? "Najczęściej dla firm z Krakowa" : "Most often for Krakow companies"}</h3>
+            <h3 className="font-sans text-lg font-semibold text-ink">{isPl ? "Najczęściej dla firm z Krakowa" : "Most often for Krakow companies"}</h3>
             <ul className="mt-5 space-y-3">
               {localList.map((item) => (
-                <li key={item} className="flex items-start gap-2.5 text-[0.95rem] text-gray-300">
+                <li key={item} className="flex items-start gap-2.5 text-[0.95rem] text-ink-soft">
                   <CheckIcon size={16} className="mt-1 shrink-0 text-primary" />
                   {item}
                 </li>
               ))}
             </ul>
-            <p className="mt-6 border-t border-white/[0.08] pt-5 text-sm leading-relaxed text-gray-400">
+            <p className="mt-6 border-t border-ink/[0.08] pt-5 text-sm leading-relaxed text-muted">
               {isPl
                 ? "Mogę spotkać się na miejscu w Krakowie, żeby przejść przez proces z zespołem, a wdrożenie i utrzymanie prowadzić zdalnie."
                 : "I can meet on site in Krakow to walk through the process with your team, and run delivery and maintenance remotely."}

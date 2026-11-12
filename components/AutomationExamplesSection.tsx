@@ -88,24 +88,24 @@ export default function AutomationExamplesSection({
   };
 
   const grid = (
-    <div className={`grid ${compact ? "gap-4 md:grid-cols-2" : "gap-5 md:grid-cols-2 lg:grid-cols-3"}`}>
+    <div className={`grid ${compact ? "gap-x-8 gap-y-8 md:grid-cols-2" : "gap-x-10 gap-y-10 md:grid-cols-2 lg:grid-cols-3"}`}>
       {examples.map((example) => {
         const Icon = ICONS[example.id] ?? SparkIcon;
         return (
-          <article key={example.id} className="card-interactive flex flex-col !p-6">
+          <article key={example.id} className="flex flex-col border-t border-ink/15 pt-5">
             <div className="flex items-center gap-3">
               <span className="icon-tile">
                 <Icon size={20} />
               </span>
-              <h3 className="font-sans text-lg font-semibold leading-snug text-white">{example.title}</h3>
+              <h3 className="font-sans text-lg font-semibold leading-snug text-ink">{example.title}</h3>
             </div>
             {!condensed && (
-              <p className="mt-4 text-sm leading-relaxed text-gray-500">
-                <span className="font-medium text-gray-400">{labels.problem}: </span>
+              <p className="mt-4 text-sm leading-relaxed text-muted">
+                <span className="font-medium text-muted">{labels.problem}: </span>
                 {example.problem}
               </p>
             )}
-            <p className="mt-4 text-[0.95rem] leading-relaxed text-gray-300">{example.solution}</p>
+            <p className="mt-4 text-[0.95rem] leading-relaxed text-ink-soft">{example.solution}</p>
             <p className="mt-auto flex items-start gap-2 pt-5 text-sm font-semibold leading-snug text-primary">
               <CheckIcon size={16} className="mt-0.5 shrink-0" />
               <span>
@@ -129,8 +129,8 @@ export default function AutomationExamplesSection({
   const cta = showCta && (
     <div className={`card-accent ${compact ? "mt-6" : "mt-10"} flex flex-col gap-6 md:flex-row md:items-center`}>
       <div className="flex-1">
-        <p className="font-display text-xl font-semibold text-white md:text-2xl">{labels.ctaTitle}</p>
-        <p className="mt-2 leading-relaxed text-gray-300">{labels.ctaText}</p>
+        <p className="font-display text-xl font-semibold text-ink md:text-2xl">{labels.ctaTitle}</p>
+        <p className="mt-2 leading-relaxed text-ink-soft">{labels.ctaText}</p>
       </div>
       <OpenAssistantButton fallbackHref={isPl ? "/kontakt#ai-advisor" : "/en/contact#ai-advisor"} className="btn-primary shrink-0 !no-underline">
         <SparkIcon size={18} />
@@ -142,10 +142,10 @@ export default function AutomationExamplesSection({
   if (compact) {
     return (
       <section id={id} aria-labelledby={`${id}-heading`}>
-        <Heading id={`${id}-heading`} className="mb-4 text-2xl font-bold text-white">
+        <Heading id={`${id}-heading`} className="mb-4 text-2xl font-bold text-ink">
           {title}
         </Heading>
-        <p className="mb-6 leading-relaxed text-gray-400">{labels.intro}</p>
+        <p className="mb-6 leading-relaxed text-muted">{labels.intro}</p>
         {grid}
         {cta}
       </section>

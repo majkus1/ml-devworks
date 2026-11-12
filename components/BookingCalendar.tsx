@@ -181,7 +181,7 @@ export default function BookingCalendar({ lang = "pl" }: BookingCalendarProps) {
       className="mt-12 rounded-xl border border-primary/25 bg-primary/[0.06] p-6 md:p-8"
     >
       <div>
-        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-left text-white">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-left text-ink">
           {lang === "pl"
             ? "Wolisz porozmawiać online?"
             : "Prefer to talk online?"}
@@ -189,7 +189,7 @@ export default function BookingCalendar({ lang = "pl" }: BookingCalendarProps) {
         <h3 className="text-2xl md:text-3xl font-bold mb-2 text-left text-primary">
           {t.title}
         </h3>
-        <p className="text-base text-gray-400 text-left mb-6" style={{ fontSize: "16px" }}>
+        <p className="text-base text-muted text-left mb-6" style={{ fontSize: "16px" }}>
           {COMING_SOON ? t.comingSoon : t.subtitle}
         </p>
 
@@ -211,14 +211,14 @@ export default function BookingCalendar({ lang = "pl" }: BookingCalendarProps) {
             <button
               type="button"
               onClick={resetFlow}
-              className="px-4 py-2 bg-primary text-background rounded-lg hover:opacity-90 transition-opacity"
+              className="px-4 py-2 bg-primary text-paper rounded-lg hover:opacity-90 transition-opacity"
             >
               {lang === "pl" ? "Zarezerwuj inny termin" : "Book another slot"}
             </button>
           </motion.div>
         ) : (
           <>
-            <p className="text-sm font-medium text-gray-400 mb-3">{t.pickDate}</p>
+            <p className="text-sm font-medium text-muted mb-3">{t.pickDate}</p>
             <div className="flex flex-wrap gap-2 mb-6">
               {weekdays.map((d) => {
                 const key = formatDateKey(d);
@@ -230,8 +230,8 @@ export default function BookingCalendar({ lang = "pl" }: BookingCalendarProps) {
                     onClick={() => handleDateClick(key)}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       isSelected
-                        ? "bg-primary text-background"
-                        : "bg-background/50 border border-primary/30 text-white hover:border-primary"
+                        ? "bg-primary text-paper"
+                        : "bg-background/50 border border-primary/30 text-ink hover:border-primary"
                     }`}
                   >
                     {formatDateDisplay(d, lang)}
@@ -242,11 +242,11 @@ export default function BookingCalendar({ lang = "pl" }: BookingCalendarProps) {
 
             {selectedDate && (
               <>
-                <p className="text-sm font-medium text-gray-400 mb-3">{t.pickTime}</p>
+                <p className="text-sm font-medium text-muted mb-3">{t.pickTime}</p>
                 {loadingSlots ? (
-                  <p className="text-gray-400 mb-6">{lang === "pl" ? "Ładowanie..." : "Loading..."}</p>
+                  <p className="text-muted mb-6">{lang === "pl" ? "Ładowanie..." : "Loading..."}</p>
                 ) : slots.length === 0 ? (
-                  <p className="text-gray-500 mb-6">{t.noSlots}</p>
+                  <p className="text-muted mb-6">{t.noSlots}</p>
                 ) : (
                   <div className="flex flex-wrap gap-2 mb-6">
                     {slots.map((slot) => {
@@ -258,8 +258,8 @@ export default function BookingCalendar({ lang = "pl" }: BookingCalendarProps) {
                           onClick={() => handleSlotClick(slot)}
                           className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                             isSelected
-                              ? "bg-primary text-background"
-                              : "bg-background/50 border border-primary/30 text-white hover:border-primary"
+                              ? "bg-primary text-paper"
+                              : "bg-background/50 border border-primary/30 text-ink hover:border-primary"
                           }`}
                         >
                           {formatTime(slot, lang)}
@@ -272,7 +272,7 @@ export default function BookingCalendar({ lang = "pl" }: BookingCalendarProps) {
                 {selectedSlot && (
                   <form onSubmit={handleSubmit} className="space-y-4 max-w-md">
                     <div>
-                      <label htmlFor="booking-email" className="block text-sm font-medium mb-2 text-gray-300">
+                      <label htmlFor="booking-email" className="block text-sm font-medium mb-2 text-ink-soft">
                         {t.yourEmail}
                       </label>
                       <input
@@ -281,12 +281,12 @@ export default function BookingCalendar({ lang = "pl" }: BookingCalendarProps) {
                         required
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="w-full px-4 py-3 bg-background border border-primary/20 rounded-lg text-white focus:border-primary focus:outline-none"
+                        className="w-full px-4 py-3 bg-background border border-primary/20 rounded-lg text-ink focus:border-primary focus:outline-none"
                         placeholder="twoj@email.com"
                       />
                     </div>
                     <div>
-                      <label htmlFor="booking-name" className="block text-sm font-medium mb-2 text-gray-300">
+                      <label htmlFor="booking-name" className="block text-sm font-medium mb-2 text-ink-soft">
                         {t.yourName}
                       </label>
                       <input
@@ -294,7 +294,7 @@ export default function BookingCalendar({ lang = "pl" }: BookingCalendarProps) {
                         type="text"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="w-full px-4 py-3 bg-background border border-primary/20 rounded-lg text-white focus:border-primary focus:outline-none"
+                        className="w-full px-4 py-3 bg-background border border-primary/20 rounded-lg text-ink focus:border-primary focus:outline-none"
                         placeholder={lang === "pl" ? "Jan Kowalski" : "John Doe"}
                       />
                     </div>
@@ -304,7 +304,7 @@ export default function BookingCalendar({ lang = "pl" }: BookingCalendarProps) {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full px-6 py-3 bg-primary text-background font-semibold rounded-lg hover:opacity-90 disabled:opacity-50 transition-opacity"
+                      className="w-full px-6 py-3 bg-primary text-paper font-semibold rounded-lg hover:opacity-90 disabled:opacity-50 transition-opacity"
                     >
                       {isSubmitting ? t.submitting : t.book}
                     </button>

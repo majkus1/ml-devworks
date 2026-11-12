@@ -114,13 +114,13 @@ export default function SolutionPage({ id, lang }: { id: SolutionId; lang: SiteL
           eyebrow={t.eyebrow}
           title={
             <>
-              {t.h1} <span className="text-gradient">{t.h1Highlight}</span>
+              {t.h1} <span className="text-primary">{t.h1Highlight}</span>
             </>
           }
           lead={t.lead}
           primaryCta={{ label: t.ctaPrimary, href: contactHref }}
         >
-          <p className="mt-8 flex items-start gap-2.5 text-[0.95rem] leading-relaxed text-gray-400">
+          <p className="mt-8 flex items-start gap-2.5 text-[0.95rem] leading-relaxed text-muted">
             <CheckIcon size={18} className="mt-0.5 shrink-0 text-primary" />
             {t.priceLine}
           </p>
@@ -135,7 +135,7 @@ export default function SolutionPage({ id, lang }: { id: SolutionId; lang: SiteL
                 <span className="font-display text-sm font-semibold text-primary" aria-hidden="true">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <p className="mt-3 leading-relaxed text-gray-200">{pain}</p>
+                <p className="mt-3 leading-relaxed text-ink">{pain}</p>
               </article>
             ))}
           </div>
@@ -151,8 +151,8 @@ export default function SolutionPage({ id, lang }: { id: SolutionId; lang: SiteL
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <h3 className="font-sans text-lg font-semibold text-white">{step.title}</h3>
-                  <p className="mt-2 leading-relaxed text-gray-400">{step.text}</p>
+                  <h3 className="font-sans text-lg font-semibold text-ink">{step.title}</h3>
+                  <p className="mt-2 leading-relaxed text-muted">{step.text}</p>
                 </div>
               </li>
             ))}
@@ -165,8 +165,8 @@ export default function SolutionPage({ id, lang }: { id: SolutionId; lang: SiteL
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {t.features.map((feature) => (
               <article key={feature.title} className="card-interactive">
-                <h3 className="font-sans text-lg font-semibold text-white">{feature.title}</h3>
-                <p className="mt-2 leading-relaxed text-gray-400">{feature.text}</p>
+                <h3 className="font-sans text-lg font-semibold text-ink">{feature.title}</h3>
+                <p className="mt-2 leading-relaxed text-muted">{feature.text}</p>
               </article>
             ))}
           </div>
@@ -186,20 +186,20 @@ export default function SolutionPage({ id, lang }: { id: SolutionId; lang: SiteL
               </ul>
             </div>
             <div className="card-accent">
-              <h2 className="font-sans text-xl font-semibold text-white">{t.integrationsHeading}</h2>
-              <p className="mt-3 leading-relaxed text-gray-300">{t.integrations}</p>
+              <h2 className="font-sans text-xl font-semibold text-ink">{t.integrationsHeading}</h2>
+              <p className="mt-3 leading-relaxed text-ink-soft">{t.integrations}</p>
             </div>
           </div>
         </Section>
 
         {/* Przykład */}
         <Section id="example" labelledBy="solution-example-heading">
-          <div className="relative overflow-hidden rounded-3xl border border-primary/25 bg-gradient-to-br from-primary/[0.08] via-white/[0.02] to-accent/[0.05] p-7 md:p-12">
+          <div className="relative overflow-hidden rounded-2xl border border-primary/25 bg-primary/[0.05] p-7 md:p-12">
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary">{t.example.label}</p>
             <h2 id="solution-example-heading" className="section-heading mt-3 max-w-3xl">
               {t.example.title}
             </h2>
-            <p className="mt-5 max-w-3xl text-lg leading-relaxed text-gray-300">{t.example.text}</p>
+            <p className="mt-5 max-w-3xl text-lg leading-relaxed text-ink-soft">{t.example.text}</p>
             {t.example.linkHref && t.example.linkLabel ? (
               <Link href={t.example.linkHref} className="btn-link mt-6">
                 {t.example.linkLabel}
@@ -216,11 +216,11 @@ export default function SolutionPage({ id, lang }: { id: SolutionId; lang: SiteL
             {t.pricing.map((item, index) => (
               <article
                 key={item.title}
-                className={`flex flex-col rounded-2xl border p-7 ${index === 0 ? "border-primary/40 bg-gradient-to-b from-primary/[0.10] to-white/[0.02]" : "border-white/[0.08] bg-white/[0.025]"}`}
+                className={`flex flex-col rounded-2xl border p-7 ${index === 0 ? "border-primary/40 bg-primary/[0.05]" : "border-ink/[0.08] bg-ink/[0.025]"}`}
               >
-                <h3 className="font-sans text-base font-semibold text-gray-300">{item.title}</h3>
-                <p className="mt-3 font-display text-3xl font-semibold tracking-tight text-white">{item.value}</p>
-                <p className="mt-3 leading-relaxed text-gray-400">{item.text}</p>
+                <h3 className="font-sans text-base font-semibold text-ink-soft">{item.title}</h3>
+                <p className="mt-3 font-display text-3xl font-semibold tracking-tight text-ink">{item.value}</p>
+                <p className="mt-3 leading-relaxed text-muted">{item.text}</p>
               </article>
             ))}
           </div>
@@ -231,13 +231,13 @@ export default function SolutionPage({ id, lang }: { id: SolutionId; lang: SiteL
           <div className="grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
             <div className="lg:sticky lg:top-28 lg:self-start">
               <SectionHeader id="solution-faq-heading" eyebrow="FAQ" title={t.faqHeading} className="!mb-8" />
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">{t.relatedHeading}</p>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-muted">{t.relatedHeading}</p>
               <ul className="space-y-2">
                 {t.related.map((item) => (
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="flex items-center justify-between gap-3 rounded-xl border border-white/[0.08] bg-white/[0.02] px-4 py-3 text-sm text-gray-300 transition-colors hover:border-primary/35 hover:text-white"
+                      className="flex items-center justify-between gap-3 rounded-xl border border-ink/[0.08] bg-ink/[0.02] px-4 py-3 text-sm text-ink-soft transition-colors hover:border-primary/35 hover:text-ink"
                     >
                       {item.label}
                       <ArrowRightIcon size={15} className="text-primary" />

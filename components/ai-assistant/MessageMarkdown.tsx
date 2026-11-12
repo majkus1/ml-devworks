@@ -20,7 +20,7 @@ function renderInline(text: string, keyPrefix: string): ReactNode[] {
     const token = match[0];
     if (token.startsWith("**")) {
       nodes.push(
-        <strong key={`${keyPrefix}-b${index++}`} className="font-semibold text-white">
+        <strong key={`${keyPrefix}-b${index++}`} className="font-semibold text-ink">
           {token.slice(2, -2)}
         </strong>,
       );

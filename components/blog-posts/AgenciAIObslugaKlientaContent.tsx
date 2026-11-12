@@ -8,7 +8,7 @@ export default function AgenciAIObslugaKlientaContent({ lang }: Props) {
   const isPl = lang === "pl";
 
   return (
-    <div className="space-y-10 text-gray-300 leading-relaxed">
+    <div className="space-y-10 text-ink-soft leading-relaxed">
       <p className="text-lg">
         {isPl
           ? "Agent AI w obsłudze klienta ma sens wtedy, gdy firma regularnie odpowiada na podobne pytania, kwalifikuje zapytania albo traci sprzedaż przez zbyt wolny czas reakcji. Nie każdy przypadek wymaga jednak agenta - czasem wystarczy lepszy formularz, baza wiedzy albo prosty chatbot."
@@ -16,7 +16,7 @@ export default function AgenciAIObslugaKlientaContent({ lang }: Props) {
       </p>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Agent AI, chatbot i automatyzacja - różnice" : "AI agent, chatbot, and automation - the differences"}
         </h2>
         <ul className="list-disc list-inside space-y-2 ml-2">
@@ -27,7 +27,7 @@ export default function AgenciAIObslugaKlientaContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Kiedy agent AI się opłaca?" : "When is an AI agent worth it?"}
         </h2>
         <div className="grid gap-4 md:grid-cols-2">
@@ -45,7 +45,7 @@ export default function AgenciAIObslugaKlientaContent({ lang }: Props) {
                 "You need fast responses, but also escalation to humans.",
               ]
           ).map((item) => (
-            <article key={item} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
+            <article key={item} className="rounded-xl border border-ink/[0.08] bg-ink/[0.025] p-5">
               <p>{item}</p>
             </article>
           ))}
@@ -53,7 +53,7 @@ export default function AgenciAIObslugaKlientaContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Co powinien robić agent AI w firmie?" : "What should a business AI agent do?"}
         </h2>
         <ul className="list-disc list-inside space-y-2 ml-2">
@@ -65,7 +65,7 @@ export default function AgenciAIObslugaKlientaContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Ryzyka, które trzeba kontrolować" : "Risks that need control"}
         </h2>
         <p>
@@ -76,7 +76,7 @@ export default function AgenciAIObslugaKlientaContent({ lang }: Props) {
       </section>
 
       <section className="card-accent">
-        <h2 className="text-xl font-bold text-white mb-4">
+        <h2 className="text-xl font-bold text-ink mb-4">
           {isPl ? "Chcesz sprawdzić, czy agent AI ma sens u Ciebie?" : "Want to check if an AI agent makes sense for your company?"}
         </h2>
         <p className="mb-4">
@@ -86,7 +86,7 @@ export default function AgenciAIObslugaKlientaContent({ lang }: Props) {
         </p>
         <Link
           href={isPl ? "/uslugi/automatyzacja-i-ai" : "/en/services/automation-and-ai"}
-          className="btn-primary !text-[#03140b] !no-underline"
+          className="btn-primary !text-paper !no-underline"
         >
           {isPl ? "Zobacz automatyzację i AI" : "View automation and AI"}
           <span aria-hidden="true">→</span>

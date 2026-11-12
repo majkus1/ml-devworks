@@ -48,11 +48,11 @@ export function AgencyComparison({ lang }: { lang: Lang }) {
             <ArrowRightIcon size={16} />
           </Link>
           <div className="card mt-8 !p-5">
-            <p className="flex items-center gap-2 font-semibold text-white">
+            <p className="flex items-center gap-2 font-semibold text-ink">
               <PinIcon size={17} className="text-primary" />
               {isPl ? "Automatyzacja AI w Krakowie i zdalnie" : "AI automation in Krakow and remotely"}
             </p>
-            <p className="mt-2 text-sm leading-relaxed text-gray-400">
+            <p className="mt-2 text-sm leading-relaxed text-muted">
               {isPl
                 ? "Biuro przy Rynku Głównym 34/15 w Krakowie. Pracuję zdalnie z firmami z całej Polski — spotkanie, wideo albo e-mail, proces jest ten sam."
                 : "Office at Rynek Główny 34/15 in Krakow. I work remotely with companies across Poland and the EU — meeting, video, or email, the process is the same."}
@@ -64,18 +64,18 @@ export function AgencyComparison({ lang }: { lang: Lang }) {
           </div>
         </div>
 
-        <div className="overflow-x-auto rounded-2xl border border-white/[0.08]">
+        <div className="overflow-x-auto rounded-2xl border border-ink/[0.08]">
           <div className="min-w-[560px]">
-          <div className="grid grid-cols-[1fr_1fr_1fr] bg-white/[0.04] text-xs font-semibold uppercase tracking-[0.1em] text-gray-400">
+          <div className="grid grid-cols-[1fr_1fr_1fr] bg-ink/[0.04] text-xs font-semibold uppercase tracking-[0.1em] text-muted">
             <span className="px-4 py-3" />
             <span className="px-4 py-3">{isPl ? "Typowa agencja" : "Typical agency"}</span>
             <span className="px-4 py-3 text-primary">ML DevWorks</span>
           </div>
           {rows.map(([label, agency, me]) => (
-            <div key={label} className="grid grid-cols-[1fr_1fr_1fr] border-t border-white/[0.06] text-sm">
-              <span className="px-4 py-4 font-medium text-white">{label}</span>
-              <span className="px-4 py-4 text-gray-500">{agency}</span>
-              <span className="flex items-start gap-2 bg-primary/[0.05] px-4 py-4 text-gray-200">
+            <div key={label} className="grid grid-cols-[1fr_1fr_1fr] border-t border-ink/[0.06] text-sm">
+              <span className="px-4 py-4 font-medium text-ink">{label}</span>
+              <span className="px-4 py-4 text-muted">{agency}</span>
+              <span className="flex items-start gap-2 bg-primary/[0.05] px-4 py-4 text-ink">
                 <CheckIcon size={15} className="mt-0.5 shrink-0 text-primary" />
                 {me}
               </span>

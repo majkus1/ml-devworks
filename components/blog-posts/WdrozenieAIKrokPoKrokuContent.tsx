@@ -114,10 +114,10 @@ export default function WdrozenieAIKrokPoKrokuContent({ lang }: Props) {
   const contactHref = isPl ? "/kontakt" : "/en/contact";
 
   return (
-    <div className="space-y-12 leading-relaxed text-gray-300">
+    <div className="space-y-12 leading-relaxed text-ink-soft">
       <div className="rounded-2xl border border-primary/30 bg-primary/[0.06] p-6 md:p-7">
         <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-primary">{isPl ? "Krótka odpowiedź" : "Short answer"}</p>
-        <p className="text-lg text-gray-100">
+        <p className="text-lg text-ink">
           {isPl
             ? "Wdrożenie AI w małej lub średniej firmie najlepiej zacząć od jednego procesu i przejść 6 kroków: wybór procesu, pomiar stanu „przed”, prototyp na prawdziwych przykładach, pilotaż z człowiekiem zatwierdzającym wynik, wdrożenie i pomiar efektu. Pierwszy proces zajmuje zwykle 2–4 tygodnie i kosztuje od 2 500 zł netto, a agent AI z bazą wiedzy firmy od ok. 8 000 zł netto. Do tego modele AI — najczęściej kilkadziesiąt do kilkuset złotych miesięcznie."
             : "AI implementation in a small or mid-sized company works best when it starts with one process and follows 6 steps: choosing the process, measuring the “before” state, a prototype on real examples, a pilot with a person approving the output, rollout, and measuring the result. The first process usually takes 2–4 weeks and costs from PLN 2,500 net, and an AI agent with a company knowledge base from about PLN 8,000 net. Add AI model usage — usually tens to a few hundred PLN per month."}
@@ -125,8 +125,8 @@ export default function WdrozenieAIKrokPoKrokuContent({ lang }: Props) {
       </div>
 
       <section>
-        <h2 className="mb-6 text-2xl font-semibold text-white md:text-3xl">{isPl ? "Plan wdrożenia AI w 6 krokach" : "AI implementation plan in 6 steps"}</h2>
-        <ol className="relative space-y-4 border-l border-white/10 pl-6 md:pl-8">
+        <h2 className="mb-6 text-2xl font-semibold text-ink md:text-3xl">{isPl ? "Plan wdrożenia AI w 6 krokach" : "AI implementation plan in 6 steps"}</h2>
+        <ol className="relative space-y-4 border-l border-ink/10 pl-6 md:pl-8">
           {steps.map((step, index) => (
             <li key={step.title} className="relative">
               <span
@@ -135,12 +135,12 @@ export default function WdrozenieAIKrokPoKrokuContent({ lang }: Props) {
               >
                 {index + 1}
               </span>
-              <div className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-5 md:p-6">
+              <div className="rounded-2xl border border-ink/[0.08] bg-ink/[0.025] p-5 md:p-6">
                 <p className="text-xs font-semibold uppercase tracking-[0.12em] text-primary">{step.when}</p>
-                <h3 className="mt-1 font-display text-xl font-semibold text-white">{step.title}</h3>
+                <h3 className="mt-1 font-display text-xl font-semibold text-ink">{step.title}</h3>
                 <p className="mt-2">{step.text}</p>
-                <p className="mt-3 border-t border-white/[0.06] pt-3 text-sm text-gray-400">
-                  <span className="font-semibold text-gray-200">{isPl ? "Wynik: " : "Outcome: "}</span>
+                <p className="mt-3 border-t border-ink/[0.06] pt-3 text-sm text-muted">
+                  <span className="font-semibold text-ink">{isPl ? "Wynik: " : "Outcome: "}</span>
                   {step.output}
                 </p>
               </div>
@@ -150,22 +150,22 @@ export default function WdrozenieAIKrokPoKrokuContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="mb-4 text-2xl font-semibold text-white md:text-3xl">{isPl ? "Ile trwa i ile kosztuje wdrożenie AI" : "How long AI implementation takes and what it costs"}</h2>
+        <h2 className="mb-4 text-2xl font-semibold text-ink md:text-3xl">{isPl ? "Ile trwa i ile kosztuje wdrożenie AI" : "How long AI implementation takes and what it costs"}</h2>
         {/* Telefon: karty zamiast tabeli przewijanej w bok. */}
         <ul className="space-y-3 sm:hidden">
           {costs.map(([scope, price, time]) => (
-            <li key={scope} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-4">
-              <p className="font-semibold text-white">{scope}</p>
+            <li key={scope} className="rounded-xl border border-ink/[0.08] bg-ink/[0.025] p-4">
+              <p className="font-semibold text-ink">{scope}</p>
               <p className="mt-1.5 flex flex-wrap items-baseline justify-between gap-x-3 text-[0.95rem]">
                 <span className="font-semibold text-primary">{price}</span>
-                <span className="text-gray-400">{time}</span>
+                <span className="text-muted">{time}</span>
               </p>
             </li>
           ))}
         </ul>
-        <div className="hidden overflow-x-auto rounded-2xl border border-white/[0.08] sm:block">
+        <div className="hidden overflow-x-auto rounded-2xl border border-ink/[0.08] sm:block">
           <table className="w-full min-w-[580px] text-left text-[0.95rem]">
-            <thead className="bg-white/[0.04] text-xs uppercase tracking-[0.1em] text-gray-400">
+            <thead className="bg-ink/[0.04] text-xs uppercase tracking-[0.1em] text-muted">
               <tr>
                 <th className="px-5 py-3 font-semibold">{isPl ? "Zakres" : "Scope"}</th>
                 <th className="px-5 py-3 font-semibold">{isPl ? "Koszt" : "Cost"}</th>
@@ -174,10 +174,10 @@ export default function WdrozenieAIKrokPoKrokuContent({ lang }: Props) {
             </thead>
             <tbody>
               {costs.map(([scope, price, time]) => (
-                <tr key={scope} className="border-t border-white/[0.06]">
-                  <td className="px-5 py-3.5 font-semibold text-white">{scope}</td>
+                <tr key={scope} className="border-t border-ink/[0.06]">
+                  <td className="px-5 py-3.5 font-semibold text-ink">{scope}</td>
                   <td className="whitespace-nowrap px-5 py-3.5 font-semibold text-primary">{price}</td>
-                  <td className="whitespace-nowrap px-5 py-3.5 text-gray-300">{time}</td>
+                  <td className="whitespace-nowrap px-5 py-3.5 text-ink-soft">{time}</td>
                 </tr>
               ))}
             </tbody>
@@ -190,7 +190,7 @@ export default function WdrozenieAIKrokPoKrokuContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="mb-4 text-2xl font-semibold text-white md:text-3xl">{isPl ? "Od jakiego procesu zacząć" : "Which process to start with"}</h2>
+        <h2 className="mb-4 text-2xl font-semibold text-ink md:text-3xl">{isPl ? "Od jakiego procesu zacząć" : "Which process to start with"}</h2>
         <p className="mb-4">
           {isPl
             ? "Najszybciej zwracają się procesy tekstowe i powtarzalne, w których AI czyta, porządkuje i przygotowuje szkic, a człowiek decyduje:"
@@ -223,7 +223,7 @@ export default function WdrozenieAIKrokPoKrokuContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="mb-4 text-2xl font-semibold text-white md:text-3xl">{isPl ? "Bezpieczeństwo danych i RODO" : "Data security and GDPR"}</h2>
+        <h2 className="mb-4 text-2xl font-semibold text-ink md:text-3xl">{isPl ? "Bezpieczeństwo danych i RODO" : "Data security and GDPR"}</h2>
         <ul className="ml-2 list-inside list-disc space-y-2">
           {(isPl
             ? [
@@ -245,7 +245,7 @@ export default function WdrozenieAIKrokPoKrokuContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="mb-4 text-2xl font-semibold text-white md:text-3xl">{isPl ? "5 błędów, przez które wdrożenia AI nie działają" : "5 mistakes that make AI rollouts fail"}</h2>
+        <h2 className="mb-4 text-2xl font-semibold text-ink md:text-3xl">{isPl ? "5 błędów, przez które wdrożenia AI nie działają" : "5 mistakes that make AI rollouts fail"}</h2>
         <div className="grid gap-4 md:grid-cols-2">
           {(isPl
             ? [
@@ -263,8 +263,8 @@ export default function WdrozenieAIKrokPoKrokuContent({ lang }: Props) {
                 ["No process owner", "Someone in the company must decide on rules and report fixes — otherwise the rollout stalls."],
               ]
           ).map(([title, text]) => (
-            <div key={title} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
-              <h3 className="font-semibold text-white">{title}</h3>
+            <div key={title} className="rounded-xl border border-ink/[0.08] bg-ink/[0.025] p-5">
+              <h3 className="font-semibold text-ink">{title}</h3>
               <p className="mt-1.5 text-[0.95rem]">{text}</p>
             </div>
           ))}
@@ -272,7 +272,7 @@ export default function WdrozenieAIKrokPoKrokuContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="mb-4 text-2xl font-semibold text-white md:text-3xl">{isPl ? "Co przygotować przed startem" : "What to prepare before you start"}</h2>
+        <h2 className="mb-4 text-2xl font-semibold text-ink md:text-3xl">{isPl ? "Co przygotować przed startem" : "What to prepare before you start"}</h2>
         <ul className="space-y-2.5">
           {(isPl
             ? [
@@ -299,17 +299,17 @@ export default function WdrozenieAIKrokPoKrokuContent({ lang }: Props) {
       </section>
 
       <section className="card-accent">
-        <h2 className="mb-3 text-2xl font-semibold text-white">{isPl ? "Zacznij od prototypu" : "Start with a prototype"}</h2>
-        <p className="mb-5 text-gray-300">
+        <h2 className="mb-3 text-2xl font-semibold text-ink">{isPl ? "Zacznij od prototypu" : "Start with a prototype"}</h2>
+        <p className="mb-5 text-ink-soft">
           {isPl
             ? "Opisz jeden proces, który zabiera Twojemu zespołowi najwięcej czasu. W 2–5 dni pokażę działający prototyp na Twoich przykładach i podam dokładną cenę wdrożenia — za darmo i bez zobowiązań."
             : "Describe the one process that takes your team the most time. Within 2–5 days I'll show a working prototype on your examples and give an exact implementation price — free and with no commitment."}
         </p>
         <div className="flex flex-wrap gap-3">
-          <Link href={contactHref} className="btn-primary !text-[#03140b] !no-underline">
+          <Link href={contactHref} className="btn-primary !text-paper !no-underline">
             {isPl ? "Opisz swój proces" : "Describe your process"}
           </Link>
-          <Link href={serviceHref} className="btn-secondary !text-white !no-underline">
+          <Link href={serviceHref} className="btn-secondary !text-ink !no-underline">
             {isPl ? "Automatyzacje AI dla firm — usługa" : "AI automation for companies — service"}
           </Link>
         </div>

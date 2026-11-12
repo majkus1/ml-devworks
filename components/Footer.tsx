@@ -56,22 +56,21 @@ export default function Footer({ lang = "pl" }: FooterProps) {
   const localHref = isEnglish ? "/en/software-developer-krakow" : "/programista-krakow";
   const contactHref = isEnglish ? "/en/contact" : "/kontakt";
   const alternateHref = isEnglish ? "/" : "/en";
-  const linkClass = "text-[0.92rem] text-gray-400 transition-colors hover:text-white";
-  const headingClass = "mb-4 font-sans text-xs font-semibold uppercase tracking-[0.14em] text-gray-500";
+  const linkClass = "text-[0.92rem] text-muted transition-colors hover:text-ink";
+  const headingClass = "mb-4 font-sans text-xs font-semibold uppercase tracking-[0.14em] text-muted";
 
   return (
-    <footer className="relative border-t border-white/[0.07] bg-background-light" role="contentinfo">
+    <footer className="relative border-t border-ink/[0.07] bg-background-light" role="contentinfo">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" aria-hidden="true" />
 
       <div className="container-site py-14 md:py-16">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <Link href={homeHref} aria-label={isEnglish ? "Go to homepage" : "Przejdź do strony głównej"} className="inline-flex">
-              <Image src="/primary-on-transparent-logo.webp" alt="ML DevWorks" width={200} height={56} className="h-auto w-[180px]" />
+              <Image src="/logo-light.webp" alt="ML DevWorks" width={200} height={37} className="h-auto w-[170px]" />
             </Link>
-            <p className="mt-5 max-w-xs text-[0.95rem] leading-relaxed text-gray-400">{t.tagline}</p>
+            <p className="mt-5 max-w-xs text-[0.95rem] leading-relaxed text-muted">{t.tagline}</p>
             <p className="mt-3 flex items-center gap-2 text-sm font-medium text-primary">
-              <span className="eyebrow-dot" aria-hidden="true" />
               {t.promise}
             </p>
             <Link href={contactHref} className="btn-primary mt-6 !px-5 !py-3 !text-sm">
@@ -143,17 +142,17 @@ export default function Footer({ lang = "pl" }: FooterProps) {
             <h2 className={headingClass}>{t.contact}</h2>
             <ul className="space-y-4 text-[0.95rem]">
               <li>
-                <a href="tel:+48516598792" className="text-white transition-colors hover:text-primary">
+                <a href="tel:+48516598792" className="text-ink transition-colors hover:text-primary">
                   +48 516 598 792
                 </a>
               </li>
               <li>
-                <a href="mailto:office@ml-devworks.com" className="text-white transition-colors hover:text-primary">
+                <a href="mailto:office@ml-devworks.com" className="text-ink transition-colors hover:text-primary">
                   office@ml-devworks.com
                 </a>
               </li>
               <li>
-                <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="text-gray-400 transition-colors hover:text-white">
+                <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="text-muted transition-colors hover:text-ink">
                   Rynek Główny 34/15
                   <br />
                   31-010 Kraków
@@ -163,7 +162,7 @@ export default function Footer({ lang = "pl" }: FooterProps) {
           </address>
         </div>
 
-        <div className="mt-12 flex flex-col gap-2 border-t border-white/[0.07] pt-6 text-sm text-gray-500 md:flex-row md:items-center md:justify-between">
+        <div className="mt-12 flex flex-col gap-2 border-t border-ink/[0.07] pt-6 text-sm text-muted md:flex-row md:items-center md:justify-between">
           <p>
             © {currentYear} ML DevWorks. {t.rights}
           </p>

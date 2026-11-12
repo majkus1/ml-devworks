@@ -54,7 +54,7 @@ export default function PanelZapisowSzkolaJezykowaContent({ lang }: Props) {
       ];
 
   return (
-    <div className="space-y-10 text-gray-300 leading-relaxed">
+    <div className="space-y-10 text-ink-soft leading-relaxed">
       <p className="text-lg">
         {isPl
           ? "Szkoła językowa prowadzi kilkanaście grup dla dzieci i młodzieży. Zapisy szły przez formularz na stronie, a dalej wszystko działo się w mailach, telefonach i pamięci sekretariatu. Poniżej opisuję, jak zaprojektowałem panel zapisów, który porządkuje drogę od zgłoszenia do zapisu, i czego ten projekt uczy przy automatyzacji w małej firmie."
@@ -62,7 +62,7 @@ export default function PanelZapisowSzkolaJezykowaContent({ lang }: Props) {
       </p>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Punkt wyjścia: gdzie uciekały zapisy" : "Starting point: where enrollments were slipping"}
         </h2>
         <ul className="space-y-3">
@@ -81,12 +81,12 @@ export default function PanelZapisowSzkolaJezykowaContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Co robi panel zapisów" : "What the enrollment panel does"}
         </h2>
         <div className="grid gap-4 sm:grid-cols-2">
           {modules.map(([title, text]) => (
-            <article key={title} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
+            <article key={title} className="rounded-xl border border-ink/[0.08] bg-ink/[0.025] p-5">
               <h3 className="text-lg font-bold text-primary mb-2">{title}</h3>
               <p>{text}</p>
             </article>
@@ -95,7 +95,7 @@ export default function PanelZapisowSzkolaJezykowaContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Jak wygląda droga rodzica" : "The parent's journey"}
         </h2>
         <ol className="space-y-4">
@@ -126,13 +126,13 @@ export default function PanelZapisowSzkolaJezykowaContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Decyzje projektowe, które warto skopiować" : "Design decisions worth copying"}
         </h2>
         <div className="space-y-4">
           {lessons.map(([title, text]) => (
             <div key={title} className="border-l-2 border-primary/50 pl-4">
-              <h3 className="text-lg font-bold text-white mb-1">{title}</h3>
+              <h3 className="text-lg font-bold text-ink mb-1">{title}</h3>
               <p>{text}</p>
             </div>
           ))}
@@ -140,7 +140,7 @@ export default function PanelZapisowSzkolaJezykowaContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Technologia i koszty" : "Technology and cost"}
         </h2>
         <p className="mb-4">
@@ -156,7 +156,7 @@ export default function PanelZapisowSzkolaJezykowaContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Dla kogo sprawdzi się podobne rozwiązanie" : "Who a similar solution works for"}
         </h2>
         <p>
@@ -167,7 +167,7 @@ export default function PanelZapisowSzkolaJezykowaContent({ lang }: Props) {
       </section>
 
       <section className="card-accent">
-        <h2 className="text-xl font-bold text-white mb-4">
+        <h2 className="text-xl font-bold text-ink mb-4">
           {isPl ? "Prowadzisz szkołę lub akademię?" : "Running a school or academy?"}
         </h2>
         <p className="mb-4">
@@ -177,7 +177,7 @@ export default function PanelZapisowSzkolaJezykowaContent({ lang }: Props) {
         </p>
         <Link
           href={isPl ? "/uslugi/system-zapisow-na-zajecia" : "/en/services/class-enrollment-system"}
-          className="btn-primary !text-[#03140b] !no-underline"
+          className="btn-primary !text-paper !no-underline"
         >
           {isPl ? "Zobacz system zapisów na zajęcia" : "See the class enrollment system"}
           <span aria-hidden="true">→</span>

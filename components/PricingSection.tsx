@@ -110,24 +110,24 @@ export default function PricingSection({ lang = "pl" }: PricingSectionProps) {
           <article
             key={tier.name}
             className={`relative flex flex-col rounded-2xl border p-7 ${
-              tier.featured ? "border-primary/40 bg-gradient-to-b from-primary/[0.10] to-white/[0.02] shadow-glow" : "border-white/[0.08] bg-white/[0.025]"
+              tier.featured ? "border-primary/40 bg-primary/[0.05]" : "border-ink/[0.08] bg-ink/[0.025]"
             }`}
           >
             {tier.featured && (
-              <span className="absolute -top-3 left-7 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-[#03140b]">
+              <span className="absolute -top-3 left-7 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-paper">
                 {isPl ? "Najczęściej wybierane" : "Most popular"}
               </span>
             )}
-            <h3 className="font-sans text-lg font-semibold text-white">{tier.name}</h3>
+            <h3 className="font-sans text-lg font-semibold text-ink">{tier.name}</h3>
             <p className="mt-4 flex items-baseline gap-2">
-              <span className="font-display text-4xl font-semibold tracking-tight text-white">{tier.price}</span>
-              <span className="text-sm text-gray-500">{isPl ? "netto" : "net"}</span>
+              <span className="font-display text-4xl font-semibold tracking-tight text-ink">{tier.price}</span>
+              <span className="text-sm text-muted">{isPl ? "netto" : "net"}</span>
             </p>
-            <p className="mt-1 text-sm text-gray-400">{tier.time}</p>
-            <p className="mt-5 text-[0.95rem] leading-relaxed text-gray-300">{tier.text}</p>
+            <p className="mt-1 text-sm text-muted">{tier.time}</p>
+            <p className="mt-5 text-[0.95rem] leading-relaxed text-ink-soft">{tier.text}</p>
             <ul className="mt-5 space-y-2.5">
               {tier.points.map((point) => (
-                <li key={point} className="flex items-start gap-2.5 text-sm text-gray-300">
+                <li key={point} className="flex items-start gap-2.5 text-sm text-ink-soft">
                   <CheckIcon size={16} className="mt-0.5 shrink-0 text-primary" />
                   {point}
                 </li>
@@ -143,14 +143,14 @@ export default function PricingSection({ lang = "pl" }: PricingSectionProps) {
 
       <div className="mt-6 grid gap-3 sm:grid-cols-3">
         {extras.map(([label, price, href]) => (
-          <Link key={href} href={href} className="group flex items-center justify-between rounded-xl border border-white/[0.08] bg-white/[0.02] px-5 py-4 transition-colors hover:border-primary/30">
-            <span className="text-sm text-gray-300 group-hover:text-white">{label}</span>
-            <span className="text-sm font-semibold text-white">{price}</span>
+          <Link key={href} href={href} className="group flex items-center justify-between rounded-xl border border-ink/[0.08] bg-ink/[0.02] px-5 py-4 transition-colors hover:border-primary/30">
+            <span className="text-sm text-ink-soft group-hover:text-ink">{label}</span>
+            <span className="text-sm font-semibold text-ink">{price}</span>
           </Link>
         ))}
       </div>
 
-      <p className="mt-8 text-sm text-gray-400">
+      <p className="mt-8 text-sm text-muted">
         {isPl ? "Chcesz policzyć, czy to się opłaca? " : "Want to check whether it pays off? "}
         <Link
           href={

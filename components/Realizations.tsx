@@ -232,10 +232,10 @@ function PlanopiaReviews({ lang }: { lang: "pl" | "en" }) {
   return (
     <div className="mt-12">
       <div className="mb-6 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-        <h3 className="font-display text-xl font-semibold text-white md:text-2xl">
+        <h3 className="font-display text-xl font-semibold text-ink md:text-2xl">
           {isPl ? "Opinie klientów aplikacji Planopia" : "Reviews from Planopia customers"}
         </h3>
-        <a href="https://planopia.pl" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 transition-colors hover:text-primary">
+        <a href="https://planopia.pl" target="_blank" rel="noopener noreferrer" className="text-sm text-muted transition-colors hover:text-primary">
           {isPl ? "Opinie z planopia.pl" : "Reviews from planopia.pl"} ↗
         </a>
       </div>
@@ -245,14 +245,14 @@ function PlanopiaReviews({ lang }: { lang: "pl" | "en" }) {
             <svg className="h-7 w-7 text-primary" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M9.6 6C6.5 7.4 4.5 10.2 4.5 13.6V18h5.3v-5.3H7.2c.1-2 1.3-3.6 3.2-4.5L9.6 6Zm9 0c-3.1 1.4-5.1 4.2-5.1 7.6V18h5.3v-5.3h-2.6c.1-2 1.3-3.6 3.2-4.5L18.6 6Z" />
             </svg>
-            <blockquote className="mt-4 flex-1 text-[0.98rem] leading-relaxed text-gray-200">{review.text[lang]}</blockquote>
-            <figcaption className="mt-5 flex items-center gap-3 border-t border-white/[0.07] pt-4">
+            <blockquote className="mt-4 flex-1 text-[0.98rem] leading-relaxed text-ink">{review.text[lang]}</blockquote>
+            <figcaption className="mt-5 flex items-center gap-3 border-t border-ink/[0.07] pt-4">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/15 text-sm font-semibold text-primary" aria-hidden="true">
                 {review.company.charAt(0)}
               </span>
               <span className="min-w-0">
-                <span className="block text-sm font-semibold text-white">{review.author}</span>
-                <span className="block text-xs text-gray-400">
+                <span className="block text-sm font-semibold text-ink">{review.author}</span>
+                <span className="block text-xs text-muted">
                   {review.role[lang]}, {review.company}
                 </span>
               </span>
@@ -346,14 +346,14 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
                   className={`w-5 h-5 ${
                     i < Math.round(overallRating)
                       ? "text-amber-400"
-                      : "text-gray-600"
+                      : "text-faint"
                   }`}
                 />
               ))}
             </div>
             <span className="text-lg md:text-xl font-bold">{overallRating.toFixed(1)}</span>
           </div>
-          <span className="text-gray-400">
+          <span className="text-muted">
             ({totalRatings} {t.reviews})
           </span>
         </div>
@@ -382,21 +382,21 @@ function GoogleReviewsInline({ lang }: { lang: "pl" | "en" }) {
                 </div>
               )}
               <div className="flex-1">
-                <h3 className="font-semibold text-white text-sm mb-1">{review.authorName}</h3>
+                <h3 className="font-semibold text-ink text-sm mb-1">{review.authorName}</h3>
                 <div className="flex items-center gap-1">
                   {[...Array(5)].map((_, i) => (
                     <StarIcon
                       key={i}
                       className={`w-3 h-3 ${
-                        i < review.rating ? "text-amber-400" : "text-gray-600"
+                        i < review.rating ? "text-amber-400" : "text-faint"
                       }`}
                     />
                   ))}
                 </div>
               </div>
             </div>
-            <p className="text-[0.95rem] leading-relaxed text-gray-300">„{review.text}”</p>
-            <span className="text-xs text-gray-500 mt-2 block">{review.relativeTime}</span>
+            <p className="text-[0.95rem] leading-relaxed text-ink-soft">„{review.text}”</p>
+            <span className="text-xs text-muted mt-2 block">{review.relativeTime}</span>
           </article>
         ))}
       </div>
@@ -465,10 +465,6 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
       <section id="realizations" className="section-y relative scroll-mt-24" aria-labelledby="realizations-heading">
         <div className="container-site">
           <div className="mb-10 max-w-3xl md:mb-14">
-            <p className="eyebrow mb-5">
-              <span className="eyebrow-dot" aria-hidden="true" />
-              {lang === "pl" ? "Realizacje" : "Work"}
-            </p>
             <h2 id="realizations-heading" className="section-heading">
               {lang === "pl" ? "Projekty, które działają u klientów" : "Projects running for real clients"}
             </h2>
@@ -522,23 +518,23 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 8 }}
                 transition={{ duration: 0.2, ease: [0.2, 0.8, 0.2, 1] }}
-                className="bg-background-light border border-white/10 rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] w-full max-w-3xl flex flex-col pointer-events-auto"
+                className="bg-background-light border border-ink/10 rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] w-full max-w-3xl flex flex-col pointer-events-auto"
                 onClick={(e) => e.stopPropagation()}
               >
               {/* Modal Header */}
-              <div className="flex items-start justify-between gap-4 border-b border-white/[0.08] p-5 md:p-6">
+              <div className="flex items-start justify-between gap-4 border-b border-ink/[0.08] p-5 md:p-6">
                 <div className="min-w-0 flex-1">
                   <div className="mb-2 flex flex-wrap gap-2">
                     <span className="rounded-full border border-primary/30 bg-primary/10 px-2.5 py-0.5 text-xs font-semibold text-primary">
                       {selectedProject.projectType[lang]}
                     </span>
                     {selectedProject.inDevelopment && (
-                      <span className="rounded-full border border-white/15 px-2.5 py-0.5 text-xs font-semibold text-gray-300">
+                      <span className="rounded-full border border-ink/15 px-2.5 py-0.5 text-xs font-semibold text-ink-soft">
                         {lang === "pl" ? "W rozwoju" : "In development"}
                       </span>
                     )}
                   </div>
-                  <h3 className="font-display text-2xl font-semibold text-white md:text-3xl">{selectedProject.name[lang]}</h3>
+                  <h3 className="font-display text-2xl font-semibold text-ink md:text-3xl">{selectedProject.name[lang]}</h3>
                   <a
                     href={selectedProject.url}
                     target="_blank"
@@ -553,7 +549,7 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
                 </div>
                 <button
                   onClick={closeModal}
-                  className="text-gray-400 hover:text-white transition-colors p-2"
+                  className="text-muted hover:text-ink transition-colors p-2"
                   aria-label={lang === "pl" ? "Zamknij" : "Close"}
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -574,7 +570,7 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
                           type="button"
                           key={image}
                           onClick={() => openImageModal(image)}
-                          className={`relative h-44 shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 bg-background-lighter transition-colors hover:border-primary/50 md:h-52 ${
+                          className={`relative h-44 shrink-0 snap-start overflow-hidden rounded-xl border border-ink/10 bg-background-lighter transition-colors hover:border-primary/50 md:h-52 ${
                             isMobileShot ? "aspect-[9/16]" : "aspect-[16/10]"
                           }`}
                           aria-label={`${selectedProject.name[lang]} - ${lang === "pl" ? "powiększ zrzut ekranu" : "enlarge screenshot"} ${index + 1}`}
@@ -600,7 +596,7 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
 
                 <ul className="mt-5 grid gap-2.5 sm:grid-cols-2">
                   {selectedProject.highlights[lang].map((item) => (
-                    <li key={item} className="flex items-start gap-2.5 text-sm text-gray-200">
+                    <li key={item} className="flex items-start gap-2.5 text-sm text-ink">
                       <svg className="mt-0.5 shrink-0 text-primary" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                         <path d="M20 6 9 17l-5-5" />
                       </svg>
@@ -610,16 +606,16 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
                 </ul>
 
                 {selectedProject.quote && (
-                  <figure className="mt-6 rounded-xl border border-white/[0.08] bg-white/[0.025] p-4">
-                    <blockquote className="text-[0.95rem] leading-relaxed text-gray-200">„{selectedProject.quote.text[lang]}”</blockquote>
-                    <figcaption className="mt-2 text-xs text-gray-500">{selectedProject.quote.author}</figcaption>
+                  <figure className="mt-6 rounded-xl border border-ink/[0.08] bg-ink/[0.025] p-4">
+                    <blockquote className="text-[0.95rem] leading-relaxed text-ink">„{selectedProject.quote.text[lang]}”</blockquote>
+                    <figcaption className="mt-2 text-xs text-muted">{selectedProject.quote.author}</figcaption>
                   </figure>
                 )}
 
-                <div className="mt-6 flex flex-wrap items-center gap-2 border-t border-white/[0.08] pt-5">
-                  <span className="mr-1 text-xs text-gray-500">{lang === "pl" ? "Technologie:" : "Technologies:"}</span>
+                <div className="mt-6 flex flex-wrap items-center gap-2 border-t border-ink/[0.08] pt-5">
+                  <span className="mr-1 text-xs text-muted">{lang === "pl" ? "Technologie:" : "Technologies:"}</span>
                   {selectedProject.technologies.map((tech) => (
-                    <span key={tech.name} className="rounded-md border border-white/[0.08] bg-white/[0.03] px-2.5 py-1 text-xs text-gray-400">
+                    <span key={tech.name} className="rounded-md border border-ink/[0.08] bg-ink/[0.03] px-2.5 py-1 text-xs text-muted">
                       {tech.name}
                     </span>
                   ))}
@@ -665,7 +661,7 @@ export default function Realizations({ lang = "pl" }: RealizationsProps) {
                 />
                 <button
                   onClick={closeImageModal}
-                  className="absolute top-4 right-4 text-white hover:text-primary transition-colors p-2 bg-black/50 rounded-full"
+                  className="absolute top-4 right-4 text-ink hover:text-primary transition-colors p-2 bg-black/50 rounded-full"
                   aria-label={lang === "pl" ? "Zamknij" : "Close"}
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -690,7 +686,7 @@ function ResultTiles({ project, lang, className = "" }: { project: Project; lang
           <dt className="sr-only">{result.label[lang]}</dt>
           <dd>
             <span className="block font-display text-xl font-semibold text-primary">{result.value[lang]}</span>
-            <span className="mt-1 block text-xs leading-snug text-gray-400">{result.label[lang]}</span>
+            <span className="mt-1 block text-xs leading-snug text-muted">{result.label[lang]}</span>
           </dd>
         </div>
       ))}
@@ -704,10 +700,10 @@ function ProblemSolution({ text }: { text: string }) {
   const pairs: [string, string][] = [];
   for (let i = 0; i < parts.length; i += 2) pairs.push([parts[i], (parts[i + 1] ?? "").trim()]);
   return (
-    <div className="space-y-2.5 text-[0.98rem] leading-relaxed text-gray-300">
+    <div className="space-y-2.5 text-[0.98rem] leading-relaxed text-ink-soft">
       {pairs.map(([label, body]) => (
         <p key={label}>
-          <span className="font-semibold text-white">{label} </span>
+          <span className="font-semibold text-ink">{label} </span>
           {body}
         </p>
       ))}
@@ -729,12 +725,12 @@ function ProjectCard({
   const cover = project.images?.[0];
 
   return (
-    <li className="group flex flex-col overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.025] transition duration-200 hover:-translate-y-0.5 hover:border-primary/35">
+    <li className="group flex flex-col overflow-hidden rounded-2xl border border-ink/[0.08] bg-ink/[0.025] transition duration-200 hover:-translate-y-0.5 hover:border-primary/35">
       {cover && (
         <button
           type="button"
           onClick={onOpenModal}
-          className="relative block aspect-[16/9] w-full overflow-hidden border-b border-white/[0.06] bg-background-lighter"
+          className="relative block aspect-[16/9] w-full overflow-hidden border-b border-ink/[0.06] bg-background-lighter"
           aria-label={lang === "pl" ? `Szczegóły projektu ${project.name[lang]}` : `Project details: ${project.name[lang]}`}
         >
           <Image
@@ -746,11 +742,11 @@ function ProjectCard({
           />
           <span className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" aria-hidden="true" />
           <span className="absolute left-4 top-4 flex flex-wrap gap-2">
-            <span className="rounded-full border border-white/15 bg-background/80 px-3 py-1 text-xs font-semibold text-white backdrop-blur">
+            <span className="rounded-full border border-ink/15 bg-paper/95 px-3 py-1 text-xs font-semibold text-ink">
               {project.projectType[lang]}
             </span>
             {project.inDevelopment && (
-              <span className="rounded-full border border-primary/30 bg-background/80 px-3 py-1 text-xs font-semibold text-primary backdrop-blur">
+              <span className="rounded-full border border-primary/30 bg-paper/95 px-3 py-1 text-xs font-semibold text-primary">
                 {lang === "pl" ? "W rozwoju" : "In development"}
               </span>
             )}
@@ -760,12 +756,12 @@ function ProjectCard({
 
       <div className="flex flex-1 flex-col p-6 md:p-7">
         <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
-          <h3 className="font-sans text-xl font-semibold text-white">{project.name[lang]}</h3>
+          <h3 className="font-sans text-xl font-semibold text-ink">{project.name[lang]}</h3>
           <a
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex shrink-0 items-center gap-1.5 text-sm font-medium text-gray-400 transition-colors hover:text-primary"
+            className="inline-flex shrink-0 items-center gap-1.5 text-sm font-medium text-muted transition-colors hover:text-primary"
           >
             {project.url.replace("https://", "")}
             <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -774,7 +770,7 @@ function ProjectCard({
           </a>
         </div>
 
-        <p className="mt-3 text-[0.95rem] leading-relaxed text-gray-300">{project.shortDescription[lang]}</p>
+        <p className="mt-3 text-[0.95rem] leading-relaxed text-ink-soft">{project.shortDescription[lang]}</p>
 
         <ResultTiles project={project} lang={lang} className="mt-5" />
 

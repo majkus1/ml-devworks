@@ -25,10 +25,6 @@ export default function BlogPostLayout({ lang, post, content, related }: BlogPos
     <>
       <article itemScope itemType="https://schema.org/BlogPosting">
         <header className="relative overflow-hidden pt-28 md:pt-36">
-          <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-            <div className="bg-grid absolute inset-0" />
-            <div className="absolute -top-40 left-1/2 h-[28rem] w-[52rem] -translate-x-1/2 rounded-full bg-primary/[0.08] blur-[120px]" />
-          </div>
           <div className="container-site relative pb-10 md:pb-14">
             <div className="mx-auto max-w-3xl">
               <Breadcrumbs
@@ -39,7 +35,7 @@ export default function BlogPostLayout({ lang, post, content, related }: BlogPos
                   { label: post.metaTitle?.[lang] ?? post.title[lang] },
                 ]}
               />
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-400">
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted">
                 <time dateTime={post.publishedAt} itemProp="datePublished">
                   {date}
                 </time>
@@ -50,16 +46,16 @@ export default function BlogPostLayout({ lang, post, content, related }: BlogPos
                   </span>
                 )}
               </div>
-              <h1 className="mt-4 font-display text-[2.1rem] font-semibold leading-[1.1] tracking-tight text-white text-balance md:text-5xl" itemProp="headline">
+              <h1 className="mt-4 font-display text-[2.1rem] font-semibold leading-[1.1] tracking-tight text-ink text-balance md:text-5xl" itemProp="headline">
                 {post.title[lang]}
               </h1>
-              <p className="mt-6 text-lg leading-relaxed text-gray-300 md:text-xl" itemProp="description">
+              <p className="mt-6 text-lg leading-relaxed text-ink-soft md:text-xl" itemProp="description">
                 {post.excerpt[lang]}
               </p>
-              <div className="mt-8 flex items-center gap-3 border-t border-white/[0.07] pt-6" itemProp="author" itemScope itemType="https://schema.org/Person">
-                <Image src="/ja-avatar.webp" alt="Michał Lipka" width={44} height={44} className="h-11 w-11 rounded-full border border-white/15 object-cover" />
+              <div className="mt-8 flex items-center gap-3 border-t border-ink/[0.07] pt-6" itemProp="author" itemScope itemType="https://schema.org/Person">
+                <Image src="/ja-avatar.webp" alt="Michał Lipka" width={44} height={44} className="h-11 w-11 rounded-full border border-ink/15 object-cover" />
                 <div className="text-sm">
-                  <p className="flex items-center gap-2 font-semibold text-white">
+                  <p className="flex items-center gap-2 font-semibold text-ink">
                     <span itemProp="name">Michał Lipka</span>
                     <a
                       href={LINKEDIN_URL}
@@ -73,7 +69,7 @@ export default function BlogPostLayout({ lang, post, content, related }: BlogPos
                       <LinkedInIcon size={15} />
                     </a>
                   </p>
-                  <p className="text-gray-400">{isPl ? "Programista i analityk biznesowy, ML DevWorks" : "Developer and business analyst, ML DevWorks"}</p>
+                  <p className="text-muted">{isPl ? "Programista i analityk biznesowy, ML DevWorks" : "Developer and business analyst, ML DevWorks"}</p>
                 </div>
               </div>
             </div>
@@ -81,7 +77,7 @@ export default function BlogPostLayout({ lang, post, content, related }: BlogPos
         </header>
 
         <div className="container-site pb-6">
-          <div className="prose-site mx-auto max-w-3xl [&_a]:text-primary [&_a]:underline-offset-4 hover:[&_a]:text-primary-light [&_a]:underline [&_h2]:mt-2 [&_h2]:font-display [&_h2]:tracking-tight [&_strong]:text-white">
+          <div className="prose-site mx-auto max-w-3xl [&_a]:text-primary [&_a]:underline-offset-4 hover:[&_a]:text-primary-light [&_a]:underline [&_h2]:mt-2 [&_h2]:font-display [&_h2]:tracking-tight [&_strong]:text-ink">
             {content ?? <p>{post.excerpt[lang]}</p>}
           </div>
 
@@ -99,7 +95,7 @@ export default function BlogPostLayout({ lang, post, content, related }: BlogPos
               <Link href={related.href} className="card-accent group flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <span>
                   <span className="block text-xs font-semibold uppercase tracking-[0.14em] text-primary">{isPl ? "Powiązana usługa" : "Related service"}</span>
-                  <span className="mt-2 block font-display text-xl font-semibold text-white">{related.title}</span>
+                  <span className="mt-2 block font-display text-xl font-semibold text-ink">{related.title}</span>
                 </span>
                 <span className="btn-secondary shrink-0 group-hover:border-primary/50">
                   {related.label}

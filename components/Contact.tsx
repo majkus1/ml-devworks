@@ -107,7 +107,7 @@ export default function Contact({ lang = "pl", compact = false }: ContactProps) 
   };
 
   const inputClass =
-    "w-full rounded-xl border border-white/10 bg-background/70 px-4 py-3 text-base text-white placeholder:text-gray-500 transition-colors focus:border-primary/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40";
+    "w-full rounded-xl border border-ink/10 bg-background/70 px-4 py-3 text-base text-ink placeholder:text-muted transition-colors focus:border-primary/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40";
 
   const nextSteps =
     lang === "pl"
@@ -116,31 +116,26 @@ export default function Contact({ lang = "pl", compact = false }: ContactProps) 
 
   return (
     <section id="contact" className="section-y relative scroll-mt-24 overflow-hidden" style={{ scrollMarginTop: "100px" }} aria-labelledby="contact-heading">
-      <div className="pointer-events-none absolute bottom-0 left-0 h-[28rem] w-[36rem] rounded-full bg-primary/[0.06] blur-[120px]" aria-hidden="true" />
       <div className="container-site relative">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-14">
           <div>
-            <p className="eyebrow mb-5">
-              <span className="eyebrow-dot" aria-hidden="true" />
-              {lang === "pl" ? "Kontakt" : "Contact"}
-            </p>
             <h2 id="contact-heading" className="section-heading">
               {t.title}
             </h2>
             <p className="section-lead mt-4">{t.subtitle}</p>
 
             <address className="card mt-8 not-italic">
-              <div className="flex items-center gap-4 border-b border-white/[0.08] pb-5">
-                <Image src="/ja-avatar.webp" alt="Michał Lipka" width={56} height={56} className="h-14 w-14 rounded-full border border-white/15 object-cover" />
+              <div className="flex items-center gap-4 border-b border-ink/[0.08] pb-5">
+                <Image src="/ja-avatar.webp" alt="Michał Lipka" width={56} height={56} className="h-14 w-14 rounded-full border border-ink/15 object-cover" />
                 <div className="min-w-0 flex-1">
-                  <p className="font-semibold text-white">Michał Lipka</p>
-                  <p className="text-sm text-gray-400">{t.role}</p>
+                  <p className="font-semibold text-ink">Michał Lipka</p>
+                  <p className="text-sm text-muted">{t.role}</p>
                 </div>
                 <a
                   href={LINKEDIN_URL}
                   target="_blank"
                   rel="noopener noreferrer me"
-                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] text-[#0a66c2] transition-colors hover:border-[#0a66c2]/60 hover:bg-[#0a66c2]/10"
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-ink/10 bg-ink/[0.04] text-[#0a66c2] transition-colors hover:border-[#0a66c2]/60 hover:bg-paper"
                   aria-label={lang === "pl" ? "Profil Michała Lipki na LinkedIn" : "Michał Lipka on LinkedIn"}
                   title="LinkedIn"
                 >
@@ -151,7 +146,7 @@ export default function Contact({ lang = "pl", compact = false }: ContactProps) 
                 <li>
                   <a
                     href="mailto:office@ml-devworks.com"
-                    className="flex items-center gap-3 text-gray-200 transition-colors hover:text-primary"
+                    className="flex items-center gap-3 text-ink transition-colors hover:text-primary"
                     aria-label={lang === "pl" ? "Wyślij email do ML DevWorks" : "Send email to ML DevWorks"}
                   >
                     <span className="icon-tile !h-9 !w-9 !rounded-lg">
@@ -166,7 +161,7 @@ export default function Contact({ lang = "pl", compact = false }: ContactProps) 
                 <li>
                   <a
                     href="tel:+48516598792"
-                    className="flex items-center gap-3 text-gray-200 transition-colors hover:text-primary"
+                    className="flex items-center gap-3 text-ink transition-colors hover:text-primary"
                     aria-label={lang === "pl" ? "Zadzwoń do ML DevWorks" : "Call ML DevWorks"}
                   >
                     <span className="icon-tile !h-9 !w-9 !rounded-lg">
@@ -177,7 +172,7 @@ export default function Contact({ lang = "pl", compact = false }: ContactProps) 
                     +48 516 598 792
                   </a>
                 </li>
-                <li className="flex items-center gap-3 text-gray-300">
+                <li className="flex items-center gap-3 text-ink-soft">
                   <span className="icon-tile !h-9 !w-9 !rounded-lg">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                       <path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z" />
@@ -190,11 +185,11 @@ export default function Contact({ lang = "pl", compact = false }: ContactProps) 
             </address>
 
             <div className="mt-8">
-              <h3 className="font-sans text-base font-semibold text-white">{lang === "pl" ? "Co dzieje się po wysłaniu" : "What happens next"}</h3>
+              <h3 className="font-sans text-base font-semibold text-ink">{lang === "pl" ? "Co dzieje się po wysłaniu" : "What happens next"}</h3>
               <ol className="mt-4 space-y-3">
                 {nextSteps.map((step, index) => (
-                  <li key={step} className="flex items-start gap-3 text-[0.95rem] text-gray-300">
-                    <span className="font-display text-sm font-semibold text-primary">{String(index + 1).padStart(2, "0")}</span>
+                  <li key={step} className="flex items-start gap-3 text-[0.95rem] text-ink-soft">
+                    <span className="font-display text-base font-bold text-primary">{index + 1}.</span>
                     {step}
                   </li>
                 ))}
@@ -203,20 +198,20 @@ export default function Contact({ lang = "pl", compact = false }: ContactProps) 
 
             {!compact && (
               <div className="card-accent mt-8">
-                <h3 className="font-sans text-lg font-semibold text-white">{t.form.prototypeTitle}</h3>
-                <p className="mt-2 text-[0.95rem] leading-relaxed text-gray-300">{t.form.prototypeText}</p>
+                <h3 className="font-sans text-lg font-semibold text-ink">{t.form.prototypeTitle}</h3>
+                <p className="mt-2 text-[0.95rem] leading-relaxed text-ink-soft">{t.form.prototypeText}</p>
               </div>
             )}
           </div>
 
           <form
             onSubmit={handleSubmit}
-            className="h-fit space-y-5 rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-card md:p-8"
+            className="h-fit space-y-5 rounded-2xl border border-ink/10 bg-ink/[0.03] p-6 shadow-card md:p-8"
             aria-label={lang === "pl" ? "Formularz kontaktowy" : "Contact form"}
             noValidate
           >
             <div>
-              <label htmlFor="email" className="mb-2 block text-sm font-medium text-gray-200">
+              <label htmlFor="email" className="mb-2 block text-sm font-medium text-ink">
                 {t.form.email}
               </label>
               <input
@@ -237,7 +232,7 @@ export default function Contact({ lang = "pl", compact = false }: ContactProps) 
             </div>
 
             <div>
-              <label htmlFor="description" className="mb-2 block text-sm font-medium text-gray-200">
+              <label htmlFor="description" className="mb-2 block text-sm font-medium text-ink">
                 {t.form.description}
               </label>
               <textarea
@@ -258,7 +253,7 @@ export default function Contact({ lang = "pl", compact = false }: ContactProps) 
             </div>
 
             <div>
-              <label htmlFor="budget" className="mb-2 block text-sm font-medium text-gray-200">
+              <label htmlFor="budget" className="mb-2 block text-sm font-medium text-ink">
                 {t.form.budget}
               </label>
               <input
@@ -310,7 +305,7 @@ export default function Contact({ lang = "pl", compact = false }: ContactProps) 
             >
               {isSubmitting ? t.form.submitting : t.form.submit}
             </button>
-            <p className="text-sm leading-relaxed text-gray-500">{t.form.responseTime}</p>
+            <p className="text-sm leading-relaxed text-muted">{t.form.responseTime}</p>
           </form>
         </div>
 

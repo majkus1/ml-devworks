@@ -10,42 +10,56 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Zieleń z logo: akcent marki, używany oszczędnie (przyciski, wyróżnienia, stany aktywne).
+        // Jasny motyw: grafit na bieli, jeden akcent (głęboka zieleń z logo). Bez drugiej barwy i bez neonów.
+        ink: {
+          DEFAULT: "#131715",
+          soft: "#363c39",
+        },
+        muted: "#58605c",
+        faint: "#8b928e",
+        paper: "#ffffff",
         primary: {
-          DEFAULT: "#00ff88",
-          dark: "#00d874",
-          light: "#6dffb8",
+          DEFAULT: "#0e7a4e",
+          dark: "#0a6140",
+          light: "#0a6140",
         },
-        // Druga barwa „AI”: tylko w gradientach i drobnych akcentach, nigdy jako kolor tekstu długich treści.
+        // Dawny drugi kolor „AI” — teraz ten sam akcent, żeby nie mieszać barw.
         accent: {
-          DEFAULT: "#3ee7ff",
-          soft: "#9af3ff",
+          DEFAULT: "#0e7a4e",
+          soft: "#7fbf9f",
         },
-        // Tło: głęboki grafit z lekkim chłodnym odcieniem zamiast czystej czerni.
         background: {
-          DEFAULT: "#07090c",
-          light: "#0b0e12",
-          lighter: "#12161b",
+          DEFAULT: "#ffffff",
+          light: "#f4f5f3",
+          lighter: "#eceeeb",
         },
         surface: {
-          DEFAULT: "rgba(255,255,255,0.03)",
-          strong: "rgba(255,255,255,0.05)",
+          DEFAULT: "rgba(19,23,21,0.03)",
+          strong: "rgba(19,23,21,0.05)",
         },
         line: {
-          DEFAULT: "rgba(255,255,255,0.08)",
-          strong: "rgba(255,255,255,0.14)",
+          DEFAULT: "rgba(19,23,21,0.10)",
+          strong: "rgba(19,23,21,0.18)",
         },
       },
       fontFamily: {
         sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
         display: ["var(--font-display)", "var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "SFMono-Regular", "monospace"],
       },
       maxWidth: {
         site: "76rem",
       },
+      // Mniejsze zaokrąglenia: rzeczowy, „redakcyjny” charakter zamiast miękkich kafli.
+      borderRadius: {
+        lg: "0.4rem",
+        xl: "0.55rem",
+        "2xl": "0.75rem",
+        "3xl": "0.9rem",
+      },
       boxShadow: {
-        glow: "0 10px 40px -12px rgba(0, 255, 136, 0.55)",
-        card: "0 1px 0 0 rgba(255,255,255,0.04) inset, 0 20px 50px -30px rgba(0,0,0,0.8)",
+        glow: "none",
+        card: "none",
       },
       animation: {
         "fade-in": "fadeIn 0.6s ease-in-out",

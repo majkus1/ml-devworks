@@ -54,10 +54,10 @@ export default function AutomatyzacjaSprzedazyKosztContent({ lang }: Props) {
       ];
 
   return (
-    <div className="space-y-12 leading-relaxed text-gray-300">
+    <div className="space-y-12 leading-relaxed text-ink-soft">
       <div className="rounded-2xl border border-primary/30 bg-primary/[0.06] p-6 md:p-7">
         <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-primary">{isPl ? "Krótka odpowiedź" : "Short answer"}</p>
-        <p className="text-lg text-gray-100">
+        <p className="text-lg text-ink">
           {isPl
             ? "Automatyzacja procesu sprzedażowego w małej lub średniej firmie kosztuje zwykle od 2 500 zł netto (zapytania prosto do CRM) przez 6 000–12 000 zł netto (kwalifikacja leadów z AI i automatyczne follow-upy) do ok. 12 000 zł netto i więcej za pełny lejek z ofertami, fakturami i raportami. Do tego dochodzi koszt CRM i modeli AI — najczęściej kilkadziesiąt do kilkuset złotych miesięcznie."
             : "Sales process automation in a small or mid-sized company usually costs from PLN 2,500 net (enquiries straight to the CRM), through PLN 6,000–12,000 net (AI lead qualification and automatic follow-ups), to about PLN 12,000 net and more for a full funnel with quotes, invoices, and reports. Add the cost of the CRM and AI models — usually tens to a few hundred PLN per month."}
@@ -65,10 +65,10 @@ export default function AutomatyzacjaSprzedazyKosztContent({ lang }: Props) {
       </div>
 
       <section>
-        <h2 className="mb-5 text-2xl font-semibold text-white md:text-3xl">{isPl ? "Cennik: trzy typowe zakresy" : "Pricing: three typical scopes"}</h2>
-        <div className="overflow-x-auto rounded-2xl border border-white/[0.08]">
+        <h2 className="mb-5 text-2xl font-semibold text-ink md:text-3xl">{isPl ? "Cennik: trzy typowe zakresy" : "Pricing: three typical scopes"}</h2>
+        <div className="overflow-x-auto rounded-2xl border border-ink/[0.08]">
           <table className="w-full min-w-[620px] text-left text-[0.95rem]">
-            <thead className="bg-white/[0.04] text-xs uppercase tracking-[0.1em] text-gray-400">
+            <thead className="bg-ink/[0.04] text-xs uppercase tracking-[0.1em] text-muted">
               <tr>
                 <th className="px-5 py-3 font-semibold">{isPl ? "Zakres" : "Scope"}</th>
                 <th className="px-5 py-3 font-semibold">{isPl ? "Cena" : "Price"}</th>
@@ -77,19 +77,19 @@ export default function AutomatyzacjaSprzedazyKosztContent({ lang }: Props) {
             </thead>
             <tbody>
               {tiers.map((tier) => (
-                <tr key={tier.name} className="border-t border-white/[0.06] align-top">
+                <tr key={tier.name} className="border-t border-ink/[0.06] align-top">
                   <td className="px-5 py-4">
-                    <p className="font-semibold text-white">{tier.name}</p>
-                    <p className="mt-1 text-sm text-gray-400">{tier.scope}</p>
+                    <p className="font-semibold text-ink">{tier.name}</p>
+                    <p className="mt-1 text-sm text-muted">{tier.scope}</p>
                   </td>
                   <td className="whitespace-nowrap px-5 py-4 font-semibold text-primary">{tier.price}</td>
-                  <td className="whitespace-nowrap px-5 py-4 text-gray-300">{tier.time}</td>
+                  <td className="whitespace-nowrap px-5 py-4 text-ink-soft">{tier.time}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-        <p className="mt-4 text-sm text-gray-500">
+        <p className="mt-4 text-sm text-muted">
           {isPl
             ? "Ceny orientacyjne dla projektów, które realizuję. Dokładną kwotę podaję po bezpłatnym prototypie, przed startem prac."
             : "Indicative prices for projects I deliver. I give the exact amount after the free prototype, before work starts."}
@@ -97,7 +97,7 @@ export default function AutomatyzacjaSprzedazyKosztContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="mb-4 text-2xl font-semibold text-white md:text-3xl">{isPl ? "Od czego zależy cena" : "What drives the price"}</h2>
+        <h2 className="mb-4 text-2xl font-semibold text-ink md:text-3xl">{isPl ? "Od czego zależy cena" : "What drives the price"}</h2>
         <ul className="ml-2 list-inside list-disc space-y-2">
           {(isPl
             ? [
@@ -121,7 +121,7 @@ export default function AutomatyzacjaSprzedazyKosztContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="mb-4 text-2xl font-semibold text-white md:text-3xl">{isPl ? "Przykładowe wyliczenie zwrotu" : "Example payback calculation"}</h2>
+        <h2 className="mb-4 text-2xl font-semibold text-ink md:text-3xl">{isPl ? "Przykładowe wyliczenie zwrotu" : "Example payback calculation"}</h2>
         <p>
           {isPl
             ? "Firma usługowa dostaje 120 zapytań miesięcznie. Przepisanie zapytania do CRM, dopytanie o szczegóły i przygotowanie wstępnej odpowiedzi zajmuje handlowcowi średnio 10 minut — to 20 godzin miesięcznie. Przy koszcie godziny pracy 60 zł daje to 1 200 zł miesięcznie samej pracy ręcznej, nie licząc zapytań, na które odpowiedź przyszła za późno."
@@ -140,10 +140,10 @@ export default function AutomatyzacjaSprzedazyKosztContent({ lang }: Props) {
                 ["Payback", "about 5 months", "not counting recovered customers"],
               ]
           ).map(([label, value, note]) => (
-            <div key={label} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-gray-500">{label}</p>
-              <p className="mt-2 text-xl font-semibold text-white">{value}</p>
-              <p className="mt-1 text-sm text-gray-400">{note}</p>
+            <div key={label} className="rounded-xl border border-ink/[0.08] bg-ink/[0.025] p-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted">{label}</p>
+              <p className="mt-2 text-xl font-semibold text-ink">{value}</p>
+              <p className="mt-1 text-sm text-muted">{note}</p>
             </div>
           ))}
         </div>
@@ -159,7 +159,7 @@ export default function AutomatyzacjaSprzedazyKosztContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="mb-4 text-2xl font-semibold text-white md:text-3xl">{isPl ? "Co zautomatyzować najpierw" : "What to automate first"}</h2>
+        <h2 className="mb-4 text-2xl font-semibold text-ink md:text-3xl">{isPl ? "Co zautomatyzować najpierw" : "What to automate first"}</h2>
         <ol className="ml-2 list-inside list-decimal space-y-2">
           {(isPl
             ? [
@@ -181,7 +181,7 @@ export default function AutomatyzacjaSprzedazyKosztContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="mb-4 text-2xl font-semibold text-white md:text-3xl">{isPl ? "Kiedy to się nie opłaca" : "When it doesn't pay off"}</h2>
+        <h2 className="mb-4 text-2xl font-semibold text-ink md:text-3xl">{isPl ? "Kiedy to się nie opłaca" : "When it doesn't pay off"}</h2>
         <p>
           {isPl
             ? "Jeśli dostajesz kilka zapytań miesięcznie i każde wymaga długiej, indywidualnej rozmowy, automatyzacja sprzedaży zwróci się wolno. Wtedy lepiej zacząć od jednej rzeczy: automatycznego potwierdzenia i zapisu zapytań w CRM, a resztę zostawić człowiekowi."
@@ -190,13 +190,13 @@ export default function AutomatyzacjaSprzedazyKosztContent({ lang }: Props) {
       </section>
 
       <section className="card-accent">
-        <h2 className="mb-3 text-2xl font-semibold text-white">{isPl ? "Sprawdź na swoim procesie" : "Check it on your own process"}</h2>
-        <p className="mb-5 text-gray-300">
+        <h2 className="mb-3 text-2xl font-semibold text-ink">{isPl ? "Sprawdź na swoim procesie" : "Check it on your own process"}</h2>
+        <p className="mb-5 text-ink-soft">
           {isPl
             ? "Opisz, skąd przychodzą zapytania i co dzieje się z nimi dalej. W 2–5 dni pokażę działający prototyp i podam dokładną cenę — za darmo i bez zobowiązań."
             : "Describe where enquiries come from and what happens to them next. Within 2–5 days I'll show a working prototype and give an exact price — free and with no commitment."}
         </p>
-        <Link href={isPl ? "/kontakt" : "/en/contact"} className="btn-primary !text-[#03140b] !no-underline">
+        <Link href={isPl ? "/kontakt" : "/en/contact"} className="btn-primary !text-paper !no-underline">
           {isPl ? "Opisz swój proces sprzedaży" : "Describe your sales process"}
         </Link>
       </section>

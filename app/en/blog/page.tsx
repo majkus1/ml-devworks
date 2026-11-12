@@ -90,7 +90,7 @@ export default function BlogPageEn() {
           eyebrow="Blog"
           title={
             <>
-              Blog about AI automation, <span className="text-gradient">apps, and websites for companies</span>
+              Blog about AI automation, <span className="text-primary">apps, and websites for companies</span>
             </>
           }
           lead="Practical guides for business owners: what automation costs, what can be automated, how to choose a vendor, and how to calculate the return."

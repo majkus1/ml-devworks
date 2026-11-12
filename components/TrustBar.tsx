@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ClockIcon, PrototypeIcon, StarIcon, WalletIcon } from "@/components/ui/icons";
+import { StarIcon } from "@/components/ui/icons";
 
 interface TrustBarProps {
   lang?: "pl" | "en";
@@ -41,17 +41,14 @@ export default function TrustBar({ lang = "pl" }: TrustBarProps) {
 
   const stats = [
     {
-      icon: PrototypeIcon,
       value: isPl ? "2–5 dni" : "2–5 days",
       label: isPl ? "do bezpłatnego prototypu" : "to a free prototype",
     },
     {
-      icon: ClockIcon,
       value: isPl ? "3–14 dni" : "3–14 days",
       label: isPl ? "do pierwszej działającej automatyzacji" : "to the first working automation",
     },
     {
-      icon: WalletIcon,
       value: isPl ? "od 2 500 zł" : "from PLN 2,500",
       label: isPl ? "netto, cena znana przed startem" : "net, price agreed before we start",
     },
@@ -60,44 +57,44 @@ export default function TrustBar({ lang = "pl" }: TrustBarProps) {
   return (
     <section className="relative" aria-label={isPl ? "Najważniejsze fakty" : "Key facts"}>
       <div className="container-site">
-        <div className="grid overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.06] sm:grid-cols-2 lg:grid-cols-4" style={{ gap: "1px" }}>
-          {stats.map((stat) => {
-            const Icon = stat.icon;
-            return (
-              <div key={stat.label} className="flex items-center gap-4 bg-background-light px-6 py-6">
-                <span className="icon-tile">
-                  <Icon size={20} />
-                </span>
-                <div>
-                  <p className="font-display text-2xl font-semibold leading-none text-white">{stat.value}</p>
-                  <p className="mt-1.5 text-sm leading-snug text-gray-400">{stat.label}</p>
-                </div>
-              </div>
-            );
-          })}
-          <a
-            href={GOOGLE_MAPS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex items-center gap-4 bg-background-light px-6 py-6 transition-colors hover:bg-background-lighter"
-            aria-label={isPl ? "Zobacz opinie ML DevWorks w Google" : "See ML DevWorks reviews on Google"}
-          >
-            <span className="icon-tile !border-amber-400/30 !bg-amber-400/10 !text-amber-400">
-              <StarIcon size={18} />
-            </span>
-            <div>
-              <p className="flex items-center gap-2 font-display text-2xl font-semibold leading-none text-white">
-                {ratingValue}
-                <span className="flex text-amber-400" aria-hidden="true">
-                  {[0, 1, 2, 3, 4].map((index) => (
-                    <StarIcon key={index} size={13} />
-                  ))}
-                </span>
-              </p>
-              <p className="mt-1.5 text-sm leading-snug text-gray-400 transition-colors group-hover:text-primary">{reviewsLabel}</p>
+        <dl className="grid grid-cols-2 border-y border-ink/15 lg:grid-cols-4">
+          {stats.map((stat, index) => (
+            <div
+              key={stat.label}
+              className={`py-6 pr-4 lg:py-7 ${index % 2 === 1 ? "pl-4 border-l border-ink/10 lg:pl-6" : ""} ${index === 2 ? "border-t border-ink/10 lg:border-l lg:border-t-0 lg:pl-6" : ""}`}
+            >
+              <dt className="sr-only">{stat.label}</dt>
+              <dd>
+                <span className="block font-display text-[1.75rem] font-bold leading-none tracking-tight text-ink">{stat.value}</span>
+                <span className="mt-2 block text-sm leading-snug text-muted">{stat.label}</span>
+              </dd>
             </div>
-          </a>
-        </div>
+          ))}
+          <div className="border-l border-t border-ink/10 py-6 pl-4 lg:border-t-0 lg:py-7 lg:pl-6">
+            <dt className="sr-only">{reviewsLabel}</dt>
+            <dd>
+              <a
+                href={GOOGLE_MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block"
+                aria-label={isPl ? "Zobacz opinie ML DevWorks w Google" : "See ML DevWorks reviews on Google"}
+              >
+                <span className="flex items-center gap-2 font-display text-[1.75rem] font-bold leading-none tracking-tight text-ink">
+                  {ratingValue}
+                  <span className="flex text-amber-500" aria-hidden="true">
+                    {[0, 1, 2, 3, 4].map((index) => (
+                      <StarIcon key={index} size={14} />
+                    ))}
+                  </span>
+                </span>
+                <span className="mt-2 block text-sm leading-snug text-muted underline decoration-ink/20 underline-offset-4 transition-colors group-hover:text-primary">
+                  {reviewsLabel}
+                </span>
+              </a>
+            </dd>
+          </div>
+        </dl>
       </div>
     </section>
   );

@@ -8,7 +8,7 @@ export default function SystemRezerwacjiDlaSalonuContent({ lang }: Props) {
   const isPl = lang === "pl";
 
   return (
-    <div className="space-y-10 text-gray-300 leading-relaxed">
+    <div className="space-y-10 text-ink-soft leading-relaxed">
       <p className="text-lg">
         {isPl
           ? "System rezerwacji online dla salonu kosmetycznego to dzisiaj jeden z najszybszych sposobów na zwiększenie liczby wizyt i ograniczenie chaosu w grafiku. Dobrze wdrożony system pozwala klientkom rezerwować terminy 24/7, zmniejsza liczbę telefonów i ogranicza liczbę nieodwołanych wizyt dzięki automatycznym przypomnieniom SMS/e-mail."
@@ -16,62 +16,62 @@ export default function SystemRezerwacjiDlaSalonuContent({ lang }: Props) {
       </p>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Co powinien mieć dobry system rezerwacji?" : "What should a good booking system include?"}
         </h2>
         <ul className="list-disc list-inside space-y-2 ml-2">
           <li>
             {isPl ? (
               <>
-                <strong className="text-white">Rezerwacje 24/7</strong> - klientka może umówić wizytę poza godzinami pracy salonu.
+                <strong className="text-ink">Rezerwacje 24/7</strong> - klientka może umówić wizytę poza godzinami pracy salonu.
               </>
             ) : (
               <>
-                <strong className="text-white">24/7 online bookings</strong> - clients can schedule appointments outside business hours.
+                <strong className="text-ink">24/7 online bookings</strong> - clients can schedule appointments outside business hours.
               </>
             )}
           </li>
           <li>
             {isPl ? (
               <>
-                <strong className="text-white">Automatyczne przypomnienia</strong> - SMS/e-mail redukują no-show i puste okienka.
+                <strong className="text-ink">Automatyczne przypomnienia</strong> - SMS/e-mail redukują no-show i puste okienka.
               </>
             ) : (
               <>
-                <strong className="text-white">Automated reminders</strong> - SMS/email notifications reduce no-shows and empty slots.
+                <strong className="text-ink">Automated reminders</strong> - SMS/email notifications reduce no-shows and empty slots.
               </>
             )}
           </li>
           <li>
             {isPl ? (
               <>
-                <strong className="text-white">Płatności online i zadatki</strong> - większa przewidywalność przychodów.
+                <strong className="text-ink">Płatności online i zadatki</strong> - większa przewidywalność przychodów.
               </>
             ) : (
               <>
-                <strong className="text-white">Online payments and deposits</strong> - more predictable revenue and better commitment.
+                <strong className="text-ink">Online payments and deposits</strong> - more predictable revenue and better commitment.
               </>
             )}
           </li>
           <li>
             {isPl ? (
               <>
-                <strong className="text-white">Integracja z kalendarzem zespołu</strong> - łatwe zarządzanie grafikiem wielu specjalistek.
+                <strong className="text-ink">Integracja z kalendarzem zespołu</strong> - łatwe zarządzanie grafikiem wielu specjalistek.
               </>
             ) : (
               <>
-                <strong className="text-white">Team calendar integration</strong> - simple schedule management across multiple specialists.
+                <strong className="text-ink">Team calendar integration</strong> - simple schedule management across multiple specialists.
               </>
             )}
           </li>
           <li>
             {isPl ? (
               <>
-                <strong className="text-white">Integracja z witryną i social media</strong> - ten sam system na stronie, Instagramie i Facebooku.
+                <strong className="text-ink">Integracja z witryną i social media</strong> - ten sam system na stronie, Instagramie i Facebooku.
               </>
             ) : (
               <>
-                <strong className="text-white">Website and social integration</strong> - one booking flow across website, Instagram, and Facebook.
+                <strong className="text-ink">Website and social integration</strong> - one booking flow across website, Instagram, and Facebook.
               </>
             )}
           </li>
@@ -79,7 +79,7 @@ export default function SystemRezerwacjiDlaSalonuContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Jak wybrać system rezerwacji do salonu kosmetycznego?" : "How to choose a booking system for a beauty salon?"}
         </h2>
         <p className="mb-4">
@@ -97,7 +97,7 @@ export default function SystemRezerwacjiDlaSalonuContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Ile trwa wdrożenie systemu rezerwacji?" : "How long does booking system implementation take?"}
         </h2>
         <p>
@@ -108,7 +108,7 @@ export default function SystemRezerwacjiDlaSalonuContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-ink mb-4">
           {isPl ? "Najczęstsze błędy przy wdrożeniu" : "Most common implementation mistakes"}
         </h2>
         <ul className="list-disc list-inside space-y-2 ml-2">
@@ -120,10 +120,10 @@ export default function SystemRezerwacjiDlaSalonuContent({ lang }: Props) {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-white mb-4">{isPl ? "FAQ" : "FAQ"}</h2>
+        <h2 className="text-2xl font-bold text-ink mb-4">{isPl ? "FAQ" : "FAQ"}</h2>
         <div className="space-y-6">
           <div>
-            <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-lg font-semibold text-ink mb-2">
               {isPl ? "Czy salon kosmetyczny potrzebuje płatności online?" : "Does a beauty salon need online payments?"}
             </h3>
             <p>
@@ -133,7 +133,7 @@ export default function SystemRezerwacjiDlaSalonuContent({ lang }: Props) {
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-lg font-semibold text-ink mb-2">
               {isPl ? "Czy można uruchomić system bez nowej strony internetowej?" : "Can we launch a booking system without a new website?"}
             </h3>
             <p>
@@ -143,7 +143,7 @@ export default function SystemRezerwacjiDlaSalonuContent({ lang }: Props) {
             </p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-lg font-semibold text-ink mb-2">
               {isPl ? "Jaki budżet przygotować?" : "What budget should we plan?"}
             </h3>
             <p>
@@ -156,7 +156,7 @@ export default function SystemRezerwacjiDlaSalonuContent({ lang }: Props) {
       </section>
 
       <section className="card-accent">
-        <h2 className="text-xl font-bold text-white mb-4">
+        <h2 className="text-xl font-bold text-ink mb-4">
           {isPl ? "Chcesz wdrożyć system rezerwacji w salonie?" : "Want to launch a booking system for your salon?"}
         </h2>
         <p className="mb-4">
@@ -167,7 +167,7 @@ export default function SystemRezerwacjiDlaSalonuContent({ lang }: Props) {
         <div className="flex flex-wrap gap-4">
           <Link
             href={isPl ? "/uslugi/systemy-rezerwacji-online" : "/en/services/online-booking-systems"}
-            className="btn-primary !text-[#03140b] !no-underline"
+            className="btn-primary !text-paper !no-underline"
           >
             {isPl ? "Zobacz ofertę wdrożeń" : "View implementation services"}
             <span aria-hidden="true">→</span>

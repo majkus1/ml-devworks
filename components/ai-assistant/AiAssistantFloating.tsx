@@ -122,7 +122,7 @@ export default function AiAssistantFloating() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={reduceMotion ? { opacity: 0 } : { opacity: 0, scale: 0.85, y: 12 }}
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed bottom-5 right-4 md:bottom-6 md:right-6 z-[60] inline-flex items-center gap-2.5 pl-3.5 pr-4 py-3 rounded-full bg-primary text-background font-semibold shadow-[0_0_30px_rgba(0,255,136,0.35)] hover:bg-primary-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+            className="fixed bottom-5 right-4 md:bottom-6 md:right-6 z-[60] inline-flex items-center gap-2.5 pl-3.5 pr-4 py-3 rounded-full bg-primary text-paper font-semibold hover:bg-primary-light transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink"
           >
             <span className="relative flex w-7 h-7 items-center justify-center rounded-full bg-background/15" aria-hidden="true">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -145,7 +145,7 @@ export default function AiAssistantFloating() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
               onClick={handleClose}
-              className="fixed inset-0 z-[65] bg-black/60 backdrop-blur-[2px]"
+              className="fixed inset-0 z-[65] bg-black/60-[2px]"
               aria-hidden="true"
             />
             <motion.aside
@@ -159,7 +159,7 @@ export default function AiAssistantFloating() {
               animate={reduceMotion ? { opacity: 1 } : { x: 0 }}
               exit={reduceMotion ? { opacity: 0 } : { x: "100%" }}
               transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="fixed inset-y-0 right-0 z-[70] w-full sm:w-[480px] h-[100dvh] sm:border-l border-primary/25 shadow-2xl bg-[#0a0e0c]"
+              className="fixed inset-y-0 right-0 z-[70] w-full sm:w-[480px] h-[100dvh] sm:border-l border-primary/25 shadow-2xl bg-paper"
             >
               <AiAssistantChat variant="panel" onClose={handleClose} autoFocus />
             </motion.aside>

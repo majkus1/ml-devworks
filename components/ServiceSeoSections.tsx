@@ -102,25 +102,25 @@ export default function ServiceSeoSections({ serviceId, lang = "pl" }: ServiceSe
           <h2 id="service-business-heading" className="section-heading mb-5">
             {isEnglish ? "What this service covers" : "Co obejmuje ta usługa"}
           </h2>
-          <p className="text-lg text-gray-300 leading-relaxed">{detail.definition}</p>
+          <p className="text-lg text-ink-soft leading-relaxed">{detail.definition}</p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
-          <div className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-6">
+          <div className="rounded-xl border border-ink/[0.08] bg-ink/[0.025] p-6">
             <h3 className="text-2xl font-bold text-primary mb-4">
               {isEnglish ? "Problems I solve" : "Problemy, które rozwiązuję"}
             </h3>
-            <ul className="space-y-3 text-gray-300">
+            <ul className="space-y-3 text-ink-soft">
               {detail.pains.map((pain) => (
                 <li key={pain}>- {pain}</li>
               ))}
             </ul>
           </div>
-          <div className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-6">
+          <div className="rounded-xl border border-ink/[0.08] bg-ink/[0.025] p-6">
             <h3 className="text-2xl font-bold text-primary mb-4">
               {isEnglish ? "What you receive" : "Co dostajesz"}
             </h3>
-            <ul className="space-y-3 text-gray-300">
+            <ul className="space-y-3 text-ink-soft">
               {detail.deliverables.map((item) => (
                 <li key={item}>- {item}</li>
               ))}
@@ -131,30 +131,30 @@ export default function ServiceSeoSections({ serviceId, lang = "pl" }: ServiceSe
         <div className="grid gap-6 md:grid-cols-3">
           <div>
             <h3 className="text-xl font-bold mb-3">{isEnglish ? "For whom" : "Dla kogo"}</h3>
-            <p className="text-gray-300">{detail.industries.join(", ")}.</p>
+            <p className="text-ink-soft">{detail.industries.join(", ")}.</p>
           </div>
           <div>
             <h3 className="text-xl font-bold mb-3">{isEnglish ? "Typical budget" : "Typowy budżet"}</h3>
-            <p className="text-gray-300">{detail.price}</p>
+            <p className="text-ink-soft">{detail.price}</p>
           </div>
           <div>
             <h3 className="text-xl font-bold mb-3">{isEnglish ? "Timeline" : "Czas realizacji"}</h3>
-            <p className="text-gray-300">{detail.timeline}</p>
+            <p className="text-ink-soft">{detail.timeline}</p>
           </div>
         </div>
 
         <div className="rounded-xl border border-primary/25 bg-primary/[0.06] p-6">
           <h2 className="text-2xl font-bold mb-3">{isEnglish ? "How I prove value" : "Jak pokazuję wartość"}</h2>
-          <p className="text-gray-300 leading-relaxed">{detail.proof}</p>
+          <p className="text-ink-soft leading-relaxed">{detail.proof}</p>
         </div>
 
         <div>
           <h2 className="section-heading mb-6">{isEnglish ? "FAQ" : "Najczęstsze pytania"}</h2>
           <div className="space-y-4">
             {detail.faq.map((item) => (
-              <article key={item.q} className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-6">
+              <article key={item.q} className="rounded-xl border border-ink/[0.08] bg-ink/[0.025] p-6">
                 <h3 className="text-xl font-bold text-primary mb-3">{item.q}</h3>
-                <p className="text-gray-300 leading-relaxed">{item.a}</p>
+                <p className="text-ink-soft leading-relaxed">{item.a}</p>
               </article>
             ))}
           </div>
@@ -167,7 +167,7 @@ export default function ServiceSeoSections({ serviceId, lang = "pl" }: ServiceSe
             </h2>
             <div className="flex flex-wrap gap-3">
               {detail.relatedPosts.map((post) => (
-                <Link key={post.href} href={post.href} className="px-4 py-3 rounded-lg border border-white/[0.08] bg-white/[0.025] text-primary hover:border-primary transition-colors">
+                <Link key={post.href} href={post.href} className="px-4 py-3 rounded-lg border border-ink/[0.08] bg-ink/[0.025] text-primary hover:border-primary transition-colors">
                   {post.title}
                 </Link>
               ))}

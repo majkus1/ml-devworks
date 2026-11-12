@@ -18,11 +18,11 @@ export default function ServicesHubContent({ lang }: { lang: "pl" | "en" }) {
         title={
           isPl ? (
             <>
-              Usługi programistyczne dla firm: <span className="text-gradient">automatyzacje AI, aplikacje i strony</span>
+              Usługi programistyczne dla firm: <span className="text-primary">automatyzacje AI, aplikacje i strony</span>
             </>
           ) : (
             <>
-              Software development for companies: <span className="text-gradient">AI automation, apps, and websites</span>
+              Software development for companies: <span className="text-primary">AI automation, apps, and websites</span>
             </>
           )
         }
