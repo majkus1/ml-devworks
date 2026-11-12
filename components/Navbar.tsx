@@ -241,12 +241,12 @@ export default function Navbar({ lang = "pl" }: NavbarProps) {
               aria-label={lang === "pl" ? "Przejdź do strony głównej" : "Go to homepage"}
             >
               <Image
-                src="/logo-light.webp"
+                src="/primary-on-transparent-logo.webp"
                 alt="ML DevWorks Logo"
                 width={190}
-                height={35}
+                height={53}
                 priority
-                className="h-auto w-[164px] transition-opacity hover:opacity-80 sm:w-[172px]"
+                className="h-auto w-[172px] transition-opacity hover:opacity-80 sm:w-[178px]"
               />
             </Link>
 

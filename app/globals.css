@@ -32,12 +32,12 @@
   }
 
   ::selection {
-    background: rgba(14, 122, 78, 0.16);
-    color: #131715;
+    background: rgba(63, 214, 138, 0.28);
+    color: #ffffff;
   }
 
   :focus-visible {
-    outline: 2px solid #0e7a4e;
+    outline: 2px solid #3fd68a;
     outline-offset: 3px;
     border-radius: 4px;
   }
@@ -63,7 +63,7 @@
     @apply hidden;
   }
 
-  /* Nagłówki sekcji: duże, zwarte, grafitowe — hierarchię robi rozmiar i waga, nie kolor. */
+  /* Nagłówki sekcji: duże i zwarte — hierarchię robi rozmiar i waga, nie kolor. */
   .section-heading {
     @apply font-display text-[2rem] font-bold tracking-tight text-ink md:text-[2.6rem] lg:text-[2.9rem];
     line-height: 1.06;
@@ -92,7 +92,7 @@
     @apply inline-flex items-center gap-1.5 font-semibold text-primary underline decoration-primary/30 underline-offset-4 transition-colors hover:decoration-primary;
   }
 
-  /* Karta: biała z cienką linią, bez cieni i poświat. */
+  /* Karta: lekko uniesiona powierzchnia z cienką linią, bez cieni i poświat. */
   .card {
     @apply rounded-xl border border-ink/[0.1] bg-paper p-6 md:p-7;
   }
@@ -188,17 +188,17 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f4f5f3;
+  background: #0a0c0b;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #c9cdca;
+  background: #232a26;
   border-radius: 5px;
-  border: 2px solid #f4f5f3;
+  border: 2px solid #0a0c0b;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #8b928e;
+  background: #3a443f;
 }
 
 /* Hide native video play button and controls */
@@ -287,7 +287,7 @@ html[data-menu="open"] main * {
 /* Przy otwartym menu górny pasek zawsze widoczny i pełny (bez rozmycia, które na telefonie spowalnia animację). */
 html[data-menu="open"] .site-nav {
   transform: none;
-  background-color: #ffffff;
+  background-color: #0a0c0b;
   border-color: transparent;
   -webkit-backdrop-filter: none;
   backdrop-filter: none;

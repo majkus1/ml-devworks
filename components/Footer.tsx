@@ -67,7 +67,7 @@ export default function Footer({ lang = "pl" }: FooterProps) {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <Link href={homeHref} aria-label={isEnglish ? "Go to homepage" : "Przejdź do strony głównej"} className="inline-flex">
-              <Image src="/logo-light.webp" alt="ML DevWorks" width={200} height={37} className="h-auto w-[170px]" />
+              <Image src="/primary-on-transparent-logo.webp" alt="ML DevWorks" width={200} height={56} className="h-auto w-[176px]" />
             </Link>
             <p className="mt-5 max-w-xs text-[0.95rem] leading-relaxed text-muted">{t.tagline}</p>
             <p className="mt-3 flex items-center gap-2 text-sm font-medium text-primary">

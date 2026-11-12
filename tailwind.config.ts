@@ -10,36 +10,36 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Jasny motyw: grafit na bieli, jeden akcent (głęboka zieleń z logo). Bez drugiej barwy i bez neonów.
+        // Ciemny motyw: grafit z lekką zielonością, jasny tekst i jeden spokojny akcent z logo — bez neonu i poświat.
+        // „ink” = kolor tekstu i linii (tu jasny), „paper” = powierzchnia kart i tekst na przyciskach akcentu (tu ciemny).
         ink: {
-          DEFAULT: "#131715",
-          soft: "#363c39",
+          DEFAULT: "#eceeeb",
+          soft: "#c4c9c5",
         },
-        muted: "#58605c",
-        faint: "#8b928e",
-        paper: "#ffffff",
+        muted: "#9aa19d",
+        faint: "#6f7672",
+        paper: "#0e1210",
         primary: {
-          DEFAULT: "#0e7a4e",
-          dark: "#0a6140",
-          light: "#0a6140",
+          DEFAULT: "#3fd68a",
+          dark: "#66e2a5",
+          light: "#66e2a5",
         },
-        // Dawny drugi kolor „AI” — teraz ten sam akcent, żeby nie mieszać barw.
         accent: {
-          DEFAULT: "#0e7a4e",
-          soft: "#7fbf9f",
+          DEFAULT: "#3fd68a",
+          soft: "#9fe8c3",
         },
         background: {
-          DEFAULT: "#ffffff",
-          light: "#f4f5f3",
-          lighter: "#eceeeb",
+          DEFAULT: "#0a0c0b",
+          light: "#101412",
+          lighter: "#171c19",
         },
         surface: {
-          DEFAULT: "rgba(19,23,21,0.03)",
-          strong: "rgba(19,23,21,0.05)",
+          DEFAULT: "rgba(236,238,235,0.03)",
+          strong: "rgba(236,238,235,0.05)",
         },
         line: {
-          DEFAULT: "rgba(19,23,21,0.10)",
-          strong: "rgba(19,23,21,0.18)",
+          DEFAULT: "rgba(236,238,235,0.10)",
+          strong: "rgba(236,238,235,0.18)",
         },
       },
       fontFamily: {
