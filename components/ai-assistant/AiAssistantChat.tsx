@@ -212,7 +212,7 @@ export default function AiAssistantChat({ variant, onClose, autoFocus = false }:
       >
         <div className="flex gap-3">
           <AssistantAvatar />
-          <div className="max-w-[90%] rounded-2xl rounded-tl-md bg-ink/[0.04] border border-ink/10 px-4 py-3.5 text-ink text-base leading-relaxed">
+          <div className="max-w-[90%] rounded-2xl rounded-tl-md bg-ink/[0.05] px-4 py-3.5 text-ink text-base leading-relaxed">
             {t.welcome}
           </div>
         </div>
@@ -257,7 +257,7 @@ export default function AiAssistantChat({ variant, onClose, autoFocus = false }:
         {messages.map((message) =>
           message.role === "user" ? (
             <motion.div key={message.id} {...bubbleMotion} className="flex justify-end">
-              <div className="max-w-[90%] rounded-2xl rounded-tr-md bg-primary/10 border border-primary/40 px-4 py-3.5 text-ink text-base leading-relaxed whitespace-pre-wrap">
+              <div className="max-w-[90%] rounded-2xl rounded-tr-md bg-primary/[0.14] px-4 py-3.5 text-ink text-base leading-relaxed whitespace-pre-wrap">
                 <span className="sr-only">{t.a11y.userLabel}: </span>
                 {message.content}
               </div>
@@ -265,7 +265,7 @@ export default function AiAssistantChat({ variant, onClose, autoFocus = false }:
           ) : (
             <motion.div key={message.id} {...bubbleMotion} className="flex gap-3">
               <AssistantAvatar />
-              <div className="max-w-[90%] rounded-2xl rounded-tl-md bg-ink/[0.04] border border-ink/10 px-4 py-3.5 text-ink">
+              <div className="max-w-[90%] rounded-2xl rounded-tl-md bg-ink/[0.05] px-4 py-3.5 text-ink">
                 <span className="sr-only">{t.a11y.assistantLabel}: </span>
                 <MessageMarkdown text={message.content} />
               </div>
@@ -276,7 +276,7 @@ export default function AiAssistantChat({ variant, onClose, autoFocus = false }:
         {isStreaming && (
           <div className="flex gap-3">
             <AssistantAvatar />
-            <div className="max-w-[90%] rounded-2xl rounded-tl-md bg-ink/[0.04] border border-ink/10 px-4 py-3.5 text-ink">
+            <div className="max-w-[90%] rounded-2xl rounded-tl-md bg-ink/[0.05] px-4 py-3.5 text-ink">
               {streamingText ? (
                 <>
                   <MessageMarkdown text={streamingText} />

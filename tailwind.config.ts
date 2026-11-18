@@ -17,7 +17,7 @@ const config: Config = {
           soft: "#c4c9c5",
         },
         muted: "#9aa19d",
-        faint: "#6f7672",
+        faint: "#878e8a",
         paper: "#0e1210",
         primary: {
           DEFAULT: "#3fd68a",
